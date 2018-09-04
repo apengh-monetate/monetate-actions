@@ -1,5 +1,5 @@
 {
-  "id": 353496,
+  "id": 353499,
   "title": "Header Countdown Timer",
   "description": "Header Countdown Timer",
   "op": "htmlCountdown",
@@ -19,23 +19,23 @@
       },
       "widget": {
         "label": "Relative Element Selector",
-        "type": "StringSelectField",
-        "description": "Selector to find the relative element.",
-        "action_visible": true,
         "options": [
           {
-            "name": "body > main > header.main-header.main-header-md > div.bottom-header-wrapper.text-center > div.text-center-menu > div.bottom-header-inner > div.content:eq(0) > p.first-promo-banner",
+            "name": "body > main > header > div.bottom-header-wrapper > div.text-center-menu > div.bottom-header-inner > div.content:eq(0) > p.first-promo-banner",
             "label": "Slot 1"
           },
           {
-            "name": "body > main > header.main-header.main-header-md > div.bottom-header-wrapper.text-center > div.text-center-menu > div.bottom-header-inner > div.content:eq(1) > p.first-promo-banner",
+            "name": "body > main > header > div.bottom-header-wrapper > div.text-center-menu > div.bottom-header-inner > div.content:eq(1) > p.first-promo-banner",
             "label": "Slot 2"
           },
           {
-            "name": "body > main > header.main-header.main-header-md > div.bottom-header-wrapper.text-center > div.text-center-menu > div.bottom-header-inner > div.content:eq(2) > p.first-promo-banner",
+            "name": "body > main > header > div.bottom-header-wrapper > div.text-center-menu > div.bottom-header-inner > div.content:eq(2) > p.first-promo-banner",
             "label": "Slot 3"
           }
-        ]
+        ],
+        "type": "StringSelectField",
+        "description": "Selector to find the relative element.",
+        "action_visible": true
       },
       "required": true
     },
