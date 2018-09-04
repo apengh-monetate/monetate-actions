@@ -1,0 +1,31 @@
+.mob-pick-up-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 10px;
+  background: #eceaeb;
+  color: #454545;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+@media screen and (min-width: 1025px) {
+  .mob-pick-up-banner {
+    display: none;
+  }
+}
+
+.mob-pick-up-banner span {
+  margin-left: 5px;
+  margin-right: 5px;
+}

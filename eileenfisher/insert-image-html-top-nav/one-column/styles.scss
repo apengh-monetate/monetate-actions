@@ -1,0 +1,20 @@
+ul.one-column-single-img {
+  li {
+    width: 100%;
+    
+    img {
+      width: 100%;
+    }
+    
+    .uppercase {
+      text-transform: uppercase;
+    }
+    
+    .align-right {
+      text-align: right;
+    }
+    .align-left {
+      text-align: left;
+    }
+  }
+} 

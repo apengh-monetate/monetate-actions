@@ -1,0 +1,99 @@
+<style media="screen">
+.mt-fixed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: fixed;
+  background: #fff;
+  border: 2px solid #e90606;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 9999;
+  text-align: center;
+  width: 240px;
+  padding: 30px 10px; }
+  .mt-fixed__close {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+    color: #999;
+    font-weight: 100; }
+  .mt-fixed__logo {
+    margin-bottom: 15px; }
+  .mt-fixed__intro {
+    display: block;
+    position: relative; }
+    .mt-fixed__intro p {
+      margin-top: 14px;
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 20px; }
+  .mt-fixed__message p {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .mt-fixed__message-heading {
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: 700; }
+  .mt-fixed__message-details {
+    margin-top: 15px; }
+  .mt-fixed .btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    margin-top: 40px; }
+    .mt-fixed .btn a {
+      color: #fff;
+      background: #282f2f;
+      border: 2px solid #282f2f;
+      border-radius: 6px;
+      padding: 14px 10px;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .mt-fixed .btn a:hover, .mt-fixed .btn a:focus, .mt-fixed .btn a:active {
+        color: #282f2f;
+        background: #fff; }
+</style>
+
+<section class="mt-fixed">
+  <button class="mt-fixed__close">x</button>
+
+  <div class="mt-fixed__logo">
+    <svg itemprop="logo" width="90px" height="100%" preserveaspectratio="xMinYMin meet" viewbox="0 0 98 32"><path fill="#e90606" d="M3 2.36h23.67v5.4h-.43l.05-3.46h-9.35v24.36h2.7v.8H10.4v-.8h2.5V4.3H3.45v3.46H3v-5.4zM27.8 2.36h9.3v.75h-2.65v25.56h2.64v.8h-9.3v-.8h2.7V3.1h-2.7v-.74zM45.3 2.3h1.78l8.7 20.9 8.64-20.9h1.73L71 28.66h2.44v.8h-9.6v-.8h2.47l-3-16.85-7.68 17.67h-1.8l-7.6-17.66-3.2 16.86h2.33l-.05.8h-7.07l.05-.8h2.16L45.3 2.3zM74.25 2.36h20.47l.05 5.35h-.37l-.17-3.3-13.4-.15v10.7h11.4l.27-2.5h.5c-.12 2.28-.12 4.5 0 6.76h-.5l-.27-2.58h-11.4V27.7h13.9l.04-3.68h.38v5.45h-20.9v-.76l2.7-.04V3.16l-2.7-.05v-.74z"></path></svg>
+  </div>
+
+  <div class="mt-fixed__intro">
+    <p class="style-uppercase font-weight-bold">Get Time Magainze For As Low As...</p>
+  </div>
+
+  <div class="mt-fixed__message">
+    <p class="mt-fixed__message-heading font-weight-bold branding-accent">58&cent;</p>
+    <p class="mt-fixed__message-details style-uppercase font-weight-bold">Per Issue</p>
+  </div>
+
+  <p class="btn">
+    <a class="style-uppercase" href="#">Redeem My Offer</a>
+  </p>
+</section>

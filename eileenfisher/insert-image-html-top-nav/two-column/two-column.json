@@ -1,0 +1,165 @@
+{
+  "id": 352534,
+  "title": "Top Nav - Two Column Image Takeover",
+  "description": "Top Nav - Two Column Image Takeover",
+  "op": "selectorInsertHtmlString",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Top Nav",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<ul class=\"two-column-same-size-img\">\n  <li>\n    <a href=\"#\">\n      <img src=\"https://placehold.it/435x287?text=SLOT-1\" alt=\"\">\n      <p class=\"align-left uppercase\">Shop New Arrivals</p>\n    </a>\n  </li>\n  <li>\n    <a href=\"#\">\n      <img src=\"https://placehold.it/435x287?text=SLOT-2\" alt=\"\">\n      <p class=\"align-left uppercase\">Shop Clothing</p>\n    </a>\n  </li>\n</ul>\n"
+      },
+      "widget": {
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": null
+      },
+      "widget": {
+        "label": "Top Nav Menu",
+        "options": [
+          {
+            "name": "div.megamenu-wrapper-inner:has(div.marketing-block.NEW.ARRIVALS) > div.menu-img-wrap",
+            "label": "NEW ARRIVALS"
+          },
+          {
+            "name": "div.megamenu-wrapper-inner:has(div.marketing-block.SHOES) > div.menu-img-wrap",
+            "label": "SHOES & ACCESSORIES"
+          },
+          {
+            "name": "div.megamenu-wrapper-inner:has(div.marketing-block.SALE) > div.menu-img-wrap",
+            "label": "SALE"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Top Nav Menu for Image Replace.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "replace"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": false,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "label": "Banner Div Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "ul.two-column-same-size-img {\n  display: none;\n}\n\n@media screen and (min-width: 1045px) {\n  ul.two-column-same-size-img {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-wrap: nowrap;\n        flex-wrap: nowrap;\n    float: right;\n    margin-top: 20px;\n    max-width: 75%;\n  }\n}\n\nul.two-column-same-size-img li {\n  width: 100%;\n}\n\nul.two-column-same-size-img li:first-child {\n  margin-right: 12px;\n}\n\nul.two-column-same-size-img li img {\n  width: 100%;\n}\n\nul.two-column-same-size-img li .uppercase {\n  text-transform: uppercase;\n}\n\nul.two-column-same-size-img li .align-right {\n  text-align: right;\n}\n\nul.two-column-same-size-img li .align-left {\n  text-align: left;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

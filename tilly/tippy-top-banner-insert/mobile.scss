@@ -1,0 +1,19 @@
+.mob-pick-up-banner {
+  align-items: center;
+  background: #eceaeb;
+  color: #454545;
+  display: flex;
+  flex-direction: row;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  padding: 15px 10px;
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
+
+  span {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}

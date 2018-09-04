@@ -1,0 +1,41 @@
+@media screen and (min-width: 1025px) {
+  .header-top-section {
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .header-top-section .header-banner {
+    width: 60% !important;
+  }
+}
+
+#MONETATE-ID {
+  display: none;
+}
+
+@media screen and (min-width: 1025px) {
+  #MONETATE-ID {
+    color: #fff;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+#MONETATE-ID span > img {
+  margin-right: 10px;
+}

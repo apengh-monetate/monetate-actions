@@ -1,0 +1,13 @@
+
+@mixin red-bg() {
+  background: rgba(red, 0.1);
+  border: 1px solid rgba(red, 0.3);
+}
+@mixin green-bg() {
+  background: rgba(green, 0.1);
+  border: 1px solid rgba(green, 0.3);
+}
+@mixin blue-bg() {
+  background: rgba(blue, 0.1);
+  border: 1px solid rgba(blue, 0.3);
+}

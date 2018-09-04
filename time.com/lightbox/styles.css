@@ -1,0 +1,129 @@
+.mt-lightbox {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  border: 15px solid #e90606;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 50%;
+  min-width: 320px;
+  padding: 30px 10px;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: auto;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-lightbox {
+    min-width: 480px;
+    padding: 80px 10px;
+  }
+}
+
+.mt-lightbox__close {
+  background: none;
+  border: none;
+  color: #999;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 100;
+  height: 24px;
+  line-height: 24px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 24px;
+}
+
+.mt-lightbox__logo {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-lightbox__logo {
+    margin-bottom: 30px;
+  }
+}
+
+.mt-lightbox__intro {
+  display: block;
+  position: relative;
+}
+
+.mt-lightbox__intro::after {
+  background: #e90606;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+}
+
+.mt-lightbox__intro p {
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+
+.mt-lightbox__message {
+  padding-top: 14px;
+}
+
+.mt-lightbox__message p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.mt-lightbox__message-heading {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.mt-lightbox__message-subheading {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.mt-lightbox__message-details {
+  margin-top: 15px;
+}
+
+.mt-lightbox .btn {
+  background: none;
+  border: none;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.mt-lightbox .btn a {
+  background: #282f2f;
+  border: 2px solid #282f2f;
+  border-radius: 6px;
+  color: #fff;
+  padding: 20px 40px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.mt-lightbox .btn a:hover, .mt-lightbox .btn a:focus, .mt-lightbox .btn a:active {
+  background: #fff;
+  color: #282f2f;
+}
