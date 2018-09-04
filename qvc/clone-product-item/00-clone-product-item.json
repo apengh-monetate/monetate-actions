@@ -1,0 +1,197 @@
+{
+  "id": 353501,
+  "title": "Clone Product Item in Index Page",
+  "description": "Clone Product Item in Index Page",
+  "op": "cloneNode",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Index pages",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selToClone",
+        "value": "#plModule > div.row > div.col-md-9.col-sm-8.plWrapper > div.qComponent > div.plContent > div.qComponent:eq(1) > div.productInfo.productGallery > div.row > div.col-tn-6.col-lg-4.galleryItem:eq(0)"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Element to clone.",
+        "label": "Element To Clone"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selToPlace",
+        "value": "#plModule > div.row > div.col-md-9.col-sm-8.plWrapper > div.qComponent > div.plContent > div.qComponent:eq(1) > div.productInfo.productGallery > div.row > div.col-tn-6.col-lg-4.galleryItem:eq(1)"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Place Cloned element in relation to this element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "before"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the cloned element in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_newID",
+        "value": "mt_cloned_galleryItem"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "Optional ID to assign to the cloned element.",
+        "label": "Cloned Element ID"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_wrap",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "Optionally wrap the cloned element in a div.",
+        "label": "Wrap Cloned Element"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_useLibClone",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "Should jQuery's clone function be used to clone the events of the selected element?  If client site has jQuery 1.5+, the events of the children elements will also be cloned.",
+        "label": "Use jQuery For Cloning"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.  To refer to the container DIV (or the clone itself if a wrapper isn't being used) you can use the \"<CLONE_SELECTOR>\" pseudo-selector to refer to it (eg. \"<CLONE_SELECTOR> a:hover{ color:#F00; }\").",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "indexs"
+        ],
+        "id": 203249,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      },
+      {
+        "values": [
+          "navSrc=REFINE"
+        ],
+        "id": 203250,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": false,
+          "verb": "doesn't contain",
+          "label": "URL",
+          "rule_name": "page_url",
+          "rule_op": "icontains",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  }
+}

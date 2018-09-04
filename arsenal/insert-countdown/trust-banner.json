@@ -1,0 +1,167 @@
+{
+  "id": 334341,
+  "title": "Trust Banner",
+  "description": "Inserts the HTML and icon into one of the trust banner slots.",
+  "op": "trustBanner",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Any page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<p class=\"first-promo-banner\"><span>Authentic 100%</span> Guaranteed (Monetate)</p>\n"
+      },
+      "widget": {
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative",
+        "value": {
+          "extension": ".png",
+          "height": 23,
+          "width": 23,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "2154614c84f6eea184b80115930192c8fb6cb375",
+          "id": 580752
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload an open image creative.",
+        "label": "Icon Image"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": ".main-header .bottom-header-inner .content:eq(0)"
+      },
+      "widget": {
+        "description": "Selector to find the relative node.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": ".main-header .bottom-header-inner .content:eq(0)",
+            "label": "Slot 1"
+          },
+          {
+            "name": ".main-header .bottom-header-inner .content:eq(1)",
+            "label": "Slot 2"
+          },
+          {
+            "name": ".main-header .bottom-header-inner .content:eq(2)",
+            "label": "Slot 3"
+          }
+        ],
+        "label": "CSS3 Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "replace-x"
+      },
+      "widget": {
+        "description": "Function to use when inserting the banner relative to the selected node",
+        "action_visible": false,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          },
+          {
+            "name": "replace-x",
+            "label": "Remove & Replace"
+          }
+        ],
+        "label": "Insert Function"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_css",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "/* Required for Mobile - Tells site code about the new elements to hook into existing animations */\njQuery(document).ready(function() {\n  window.$elem = $(\".bottom-header-wrapper .content\"), window.l = $elem.length, window.i = 0;\n});",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "label": "Script",
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  }
+}
