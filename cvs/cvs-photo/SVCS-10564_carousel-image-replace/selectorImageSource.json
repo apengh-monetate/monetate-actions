@@ -1,0 +1,113 @@
+{
+  "id": 353731,
+  "title": "Homepage - Replace Image Source",
+  "description": "Replaces the source of a selected image using a creative.",
+  "op": "setImageSource",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "image",
+  "subcategory": "Modifications",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "raw_img_creative",
+        "name": "creative",
+        "value": {
+          "discriminator": "raw_img_creative",
+          "dyntexts": [],
+          "creative": {
+            "last_updated": "2018-09-05T14:20:03",
+            "tags": {
+              "builtin": [
+                "image"
+              ],
+              "custom": []
+            },
+            "height": 400,
+            "generated": true,
+            "id": 1710718,
+            "archived": false,
+            "name": "628-400.png",
+            "extension": ".png",
+            "sha": "0eb12cacd9ebdacecfc72f37b4bf983c6e2e6733",
+            "ref": "306/1710718.png",
+            "notes": "",
+            "width": 628,
+            "image_url": "https://dev-apengh-1.monetate.org/img/1/306/1710718.png",
+            "type": "image"
+          }
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "RawImageCreative",
+        "description": "Upload an image creative",
+        "label": "New Image"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#owl-prom1 > div.owl-wrapper-outer > div.owl-wrapper > div.owl-item:nth-child(1) > div.item > a > img"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Supports CSS3 and Sizzle syntax.",
+        "label": "Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "setDimensions",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If checked, sets the dimensions of the selected image to that of the image provided",
+        "label": "Set Dimensions?"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If more than one element matches the Element Selector, should the change apply to all elements or just the first one?",
+        "label": "Select All Elements"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  }
+}
