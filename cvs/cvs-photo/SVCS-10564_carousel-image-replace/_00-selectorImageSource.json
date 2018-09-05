@@ -1,6 +1,6 @@
 {
-  "id": 353731,
-  "title": "Homepage - Replace Image Source",
+  "id": 353772,
+  "title": "Homepage - Carousel - Replace Image Source",
   "description": "Replaces the source of a selected image using a creative.",
   "op": "setImageSource",
   "slot": "none",
@@ -17,7 +17,7 @@
           "discriminator": "raw_img_creative",
           "dyntexts": [],
           "creative": {
-            "last_updated": "2018-09-05T14:20:03",
+            "last_updated": "2018-09-05T18:59:28",
             "tags": {
               "builtin": [
                 "image"
@@ -25,16 +25,16 @@
               "custom": []
             },
             "height": 400,
-            "generated": true,
-            "id": 1710718,
+            "generated": false,
+            "id": 1711119,
             "archived": false,
-            "name": "628-400.png",
+            "name": "Hero.png",
             "extension": ".png",
-            "sha": "0eb12cacd9ebdacecfc72f37b4bf983c6e2e6733",
-            "ref": "306/1710718.png",
+            "sha": "875cfc000f81016ccd9b4c3c739539afcd805c40",
+            "ref": "306/1711119.png",
             "notes": "",
             "width": 628,
-            "image_url": "https://dev-apengh-1.monetate.org/img/1/306/1710718.png",
+            "image_url": "https://dev-apengh-1.monetate.org/img/1/306/1711119.png",
             "type": "image"
           }
         }
@@ -51,12 +51,22 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "#owl-prom1 > div.owl-wrapper-outer > div.owl-wrapper > div.owl-item:nth-child(1) > div.item > a > img"
+        "value": null
       },
       "widget": {
+        "description": "CSS Selector to find the relative element.",
         "action_visible": true,
-        "type": "CssSelectorField",
-        "description": "Supports CSS3 and Sizzle syntax.",
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "#owl-prom1 > div.owl-wrapper-outer > div.owl-wrapper > div.owl-item:eq(0) > div.item > a > img",
+            "label": "Image 1"
+          },
+          {
+            "name": "#owl-prom1 > div.owl-wrapper-outer > div.owl-wrapper > div.owl-item:eq(1) > div.item > a > img",
+            "label": "Image 2"
+          }
+        ],
         "label": "Element Selector"
       },
       "required": true
@@ -68,12 +78,12 @@
         "value": false
       },
       "widget": {
-        "action_visible": true,
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If checked, sets the dimensions of the selected image to that of the image provided",
         "label": "Set Dimensions?"
       },
-      "required": true
+      "required": false
     },
     {
       "input": {
@@ -107,7 +117,25 @@
   "masks": [],
   "rule_operator": "and",
   "rules": {
-    "builtin": [],
+    "builtin": [
+      {
+        "values": [
+          "main"
+        ],
+        "id": 203361,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
     "required": []
   }
 }

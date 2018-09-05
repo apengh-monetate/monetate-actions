@@ -1,27 +1,36 @@
 {
-  "id": 353768,
-  "title": "Photo Prints - Update HTML of Cloned Print Items",
-  "description": "Photo Prints - Update HTML of Cloned Print Items",
-  "op": "selectorInsertHtmlString",
+  "id": 353743,
+  "title": "MONETATE - Insert Image Banner Under Nav",
+  "description": "Insert Image Banner Under Nav",
+  "op": "selectorBanner",
   "slot": "actionbuilder_ag_0",
   "slot_type": "page",
-  "category": "html",
-  "subcategory": "Prints page",
+  "category": "image",
+  "subcategory": "Image",
   "action_events": [
+    "op_click",
     "op_impression"
   ],
   "inputs": [
     {
       "input": {
-        "type": "str",
-        "name": "htmlString",
-        "value": "<div class=\"top-padding\" id=\"\">&nbsp;</div>\n\n<div class=\"tile-3 text-center\"><a class=\"imagehover hide-for-small-only\" href=\"https://www.cvs.com/photo/posters?icid=mt_Desktop180311_categoryphoto_posterstile\"><img alt=\"Poster Prints\" class=\"img-responsive alt-from-tile-title\" onerror=\"this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);\" src=\"https://via.placeholder.com/470x470\" title=\"Poster Prints\" /> </a> <a class=\"imagehover show-for-small-only\" href=\"https://www.cvs.com/photo/posters?icid=mt_mweb180312_categoryphoto_posters_tile\"> <img alt=\"Poster Prints\" class=\"img-responsive alt-from-tile-title\" onerror=\"this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);\" src=\"https://via.placeholder.com/470x470\" title=\"Poster Prints\" /> </a></div>\n\n<div class=\"text-center no-border\">\n<div class=\"row-gutter-1\">&nbsp;</div>\n\n<div class=\"tile-title\"><a class=\"link-01 hide-for-small-only\" href=\"https://www.cvs.com/photo/posters?icid=mt_Desktop180311_categoryphoto_posterstile\">Poster Prints</a> <a class=\"link-01 show-for-small-only\" href=\"https://www.cvs.com/photo/posters?icid=mt_mweb180312_categoryphoto_posters_tile\">Poster Prints</a></div>\n\n<div class=\"row-gutter-05\">&nbsp;</div>\n\n<div class=\"tile-price info-2b gwc4a\">From $10.99</div>\n\n<div class=\"row-gutter-2\">&nbsp;</div>\n</div>\n"
+        "type": "img_creative",
+        "name": "creative",
+        "value": {
+          "extension": ".png",
+          "height": 200,
+          "width": 738,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "76a8d154160e856bcdea4c597e1791648dff79d7",
+          "id": 602399
+        }
       },
       "widget": {
         "action_visible": true,
-        "type": "HtmlField",
-        "description": "HTML to be inserted",
-        "label": "HTML String"
+        "type": "ImageCreative",
+        "description": "Upload an image creative",
+        "label": "Image Creative"
       },
       "required": true
     },
@@ -29,7 +38,7 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "#mt-cloned_poster-prints"
+        "value": "#page-content-wrapper"
       },
       "widget": {
         "action_visible": true,
@@ -43,7 +52,7 @@
       "input": {
         "type": "str",
         "name": "imeth",
-        "value": "takeover"
+        "value": "first"
       },
       "widget": {
         "label": "Insert Method",
@@ -83,13 +92,27 @@
       "input": {
         "type": "str",
         "name": "opt_divStyle",
-        "value": "font-size: 0;"
+        "value": "display: block;\nmax-width: 100%;\nmargin: 0 auto;"
       },
       "widget": {
         "action_visible": true,
         "type": "TextField",
         "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
         "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_imgStyle",
+        "value": "display: block;\nmax-width: 100%;\nmargin: 0 auto;"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
+        "label": "Image Element Inline Style"
       },
       "required": false
     },
@@ -105,7 +128,7 @@
         }
       },
       "widget": {
-        "action_visible": true,
+        "action_visible": false,
         "type": "CSSCodeField",
         "description": "CSS appended to the DOM in a <style> or <link> element.",
         "label": "CSS"
@@ -119,7 +142,7 @@
         "value": false
       },
       "widget": {
-        "action_visible": true,
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
         "label": "Select multiple elements, if matched?"
@@ -130,10 +153,10 @@
       "input": {
         "type": "bool",
         "name": "opt_poll",
-        "value": true
+        "value": false
       },
       "widget": {
-        "action_visible": true,
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
         "label": "Re-check for Elements"

@@ -1,7 +1,7 @@
 {
-  "id": 353512,
-  "title": "Homepage - Modify Attribute - Image Src",
-  "description": "Homepage - Modify Attribute - Image Src",
+  "id": 353747,
+  "title": "Homepage - Carousel - Modify Image Attributes",
+  "description": "Homepage - Modify Image Attributes",
   "op": "modifyAttribute",
   "slot": "actionbuilder_ag_0",
   "slot_type": "none",
@@ -13,12 +13,22 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "#owl-prom1 > div.owl-wrapper-outer > div.owl-wrapper > div.owl-item:eq(0) > div.item > a > img.alt-from-tile-dcr"
+        "value": null
       },
       "widget": {
-        "action_visible": true,
-        "type": "CssSelectorField",
         "description": "CSS Selector to find the relative element.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "#owl-prom1 > div.owl-wrapper-outer > div.owl-wrapper > div.owl-item:eq(0) > div.item > a > img",
+            "label": "Image 1"
+          },
+          {
+            "name": "#owl-prom1 > div.owl-wrapper-outer > div.owl-wrapper > div.owl-item:eq(1) > div.item > a > img",
+            "label": "Image 2"
+          }
+        ],
         "label": "Relative Element Selector"
       },
       "required": true
@@ -27,13 +37,23 @@
       "input": {
         "type": "str",
         "name": "attr",
-        "value": "src"
+        "value": null
       },
       "widget": {
+        "description": "Attribute to modify",
         "action_visible": true,
-        "type": "CharField",
-        "description": "The element attribute (e.g. 'href', 'title' or 'src') you wish to add, replace or remove (if 'Remove Attribute' is set true).",
-        "label": "Attribute"
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "alt",
+            "label": "alt"
+          },
+          {
+            "name": "title",
+            "label": "title"
+          }
+        ],
+        "label": "Attribute to modify"
       },
       "required": true
     },
@@ -41,7 +61,7 @@
       "input": {
         "type": "str",
         "name": "opt_mod",
-        "value": "https://via.placeholder.com/628x400"
+        "value": null
       },
       "widget": {
         "action_visible": true,
@@ -49,7 +69,7 @@
         "description": "Replaces the current value of specified attribute.  If not set, this defaults to an empty string.  If 'Remove Attribute' is set true, this can be left blank.",
         "label": "Replacement Value"
       },
-      "required": false
+      "required": true
     },
     {
       "input": {
@@ -58,7 +78,7 @@
         "value": false
       },
       "widget": {
-        "action_visible": true,
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
         "label": "Select multiple elements, if matched?"
@@ -77,7 +97,7 @@
         }
       },
       "widget": {
-        "action_visible": true,
+        "action_visible": false,
         "type": "CSSCodeField",
         "description": "CSS appended to the DOM in a <style> or <link> element.",
         "label": "CSS"
@@ -91,7 +111,7 @@
         "value": false
       },
       "widget": {
-        "action_visible": true,
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
         "label": "Re-check for Elements"
@@ -105,7 +125,7 @@
         "value": false
       },
       "widget": {
-        "action_visible": true,
+        "action_visible": false,
         "type": "BooleanField",
         "description": "Set true if you want to remove the attribute and value rather than set it.",
         "label": "Remove Attribute and Value"
@@ -116,7 +136,25 @@
   "masks": [],
   "rule_operator": "and",
   "rules": {
-    "builtin": [],
+    "builtin": [
+      {
+        "values": [
+          "main"
+        ],
+        "id": 203357,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
     "required": []
   }
 }
