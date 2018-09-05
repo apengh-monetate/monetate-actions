@@ -1,0 +1,248 @@
+{
+  "id": 353515,
+  "title": "Insert closable HTML banner above nav (all)",
+  "description": "Insert closable HTML banner above nav (all)",
+  "op": "statefulHTML",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Closable HTML",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<section class=\"mt-clsbl-banner\">\n<div class=\"mt-clsbl-banner__content\">\n<p><span class=\"hiden-mobile\">The Men&#39;s Event: Up to 50% off, discount shown in cart </span> <span class=\"hiden-desktop\">Take up to 50% off, discount shown in cart </span></p>\n\n<p class=\"link\"><a href=\"https://www.nautica.com/current-promotions-special-offers.html\"><span class=\"text\">LEARN MORE</span>&gt;</a></p>\n</div>\n<button class=\"mt-clsbl-banner__close\" type=\"button\">&nbsp;</button></section>\n"
+      },
+      "widget": {
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "id",
+        "value": 2
+      },
+      "widget": {
+        "label": "Lightbox ID",
+        "type": "IntegerField",
+        "description": "This ID can be any number between zero and 31, and determines the grouping of this lightbox to differentiate it from other lightboxes.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "showInterval",
+        "value": "session"
+      },
+      "widget": {
+        "label": "How often (per user) should this banner be shown?",
+        "options": [
+          {
+            "name": "page",
+            "label": "Every page"
+          },
+          {
+            "name": "session",
+            "label": "Once per session"
+          },
+          {
+            "name": "once",
+            "label": "Once, ever"
+          },
+          {
+            "name": "custominterval",
+            "label": "Once every 'X' days"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "How long until the this banner is shown again. Based on ID.",
+        "action_visible": false
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "stateApp",
+        "value": "close"
+      },
+      "widget": {
+        "description": "If 'Every page' is selected this will not matter. For the other intervals, this setting determines when to stop showing the banner.",
+        "action_visible": false,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "first",
+            "label": "After the banner is first loaded"
+          },
+          {
+            "name": "close",
+            "label": "After the user closes the banner"
+          }
+        ],
+        "label": "When should the display interval be applied?"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#header"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "before"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "closeButtonClass",
+        "value": "mt-clsbl-banner__close"
+      },
+      "widget": {
+        "label": "Close Button Class",
+        "type": "CharField",
+        "description": "All elements in the HTML creative with this class will act as a close button for the lightbox.",
+        "action_visible": false
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "label": "Banner Div Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".mt-clsbl-banner {\n  background: #041c2c;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  display: block;\n  min-height: 40px;\n  padding-bottom: 10px;\n  padding-left: 10px;\n  padding-right: 30px;\n  padding-top: 10px;\n  position: relative;\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n  width: 100%;\n}\n\n@media screen and (min-width: 700px) {\n  .mt-clsbl-banner {\n    background: #001745;\n    padding: 10px 0;\n  }\n}\n\n.mt-clsbl-banner > * {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.mt-clsbl-banner__content {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  color: #fff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  font-family: \"BrandonGrotesque-Regular\";\n  font-size: 13px;\n  font-weight: bold;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  letter-spacing: 1px;\n  margin: 0 auto;\n  max-width: 1100px;\n  position: relative;\n  text-align: center;\n  width: 100%;\n}\n\n.mt-clsbl-banner p {\n  margin: 0;\n  margin-left: 12px;\n  margin-right: 12px;\n  text-transform: uppercase;\n}\n\n.mt-clsbl-banner .link {\n  display: block;\n}\n\n.mt-clsbl-banner .link a {\n  color: #fff;\n  text-decoration: none;\n}\n\n.mt-clsbl-banner .text {\n  font-size: 12px;\n}\n\n@media screen and (min-width: 700px) {\n  .mt-clsbl-banner .text {\n    font-size: 10.5px;\n  }\n}\n\n.mt-clsbl-banner__close {\n  background-color: transparent;\n  background-image: url(\"https://dev-apengh-1.monetate.org/img/1/305/1707738.png\");\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: 40% 40%;\n  cursor: pointer;\n  display: inline-block;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  top: 0;\n  width: 40px;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_customInterval",
+        "value": null
+      },
+      "widget": {
+        "label": "Days until expiration",
+        "type": "IntegerField",
+        "description": "Days until the banner expires. Only to be used when 'Once every 'X' days' is selected from the frequency.",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  }
+}
