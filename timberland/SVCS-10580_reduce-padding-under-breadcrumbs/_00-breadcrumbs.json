@@ -1,21 +1,19 @@
 {
-  "id": 353882,
-  "title": "Update HTML of Cloned Product Item",
-  "description": "Update HTML of Cloned Product Item",
-  "op": "selectorEditHtml",
+  "id": 353888,
+  "title": "Reduce Breadcrumb Links on PDP (Mobile) - V2",
+  "description": "Hides some of the links in the breadcrumbs on product detail pages for mobile",
+  "op": "selectorHideElement",
   "slot": "actionbuilder_ag_0",
   "slot_type": "page",
-  "category": "html",
-  "subcategory": "Index pages",
-  "action_events": [
-    "op_impression"
-  ],
+  "category": "hide-show-content",
+  "subcategory": "Product detail page",
+  "action_events": [],
   "inputs": [
     {
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "#mt_cloned_galleryItem"
+        "value": ".page-breadcrumb-list:has(.page-breadcrumb-cat-top) > .page-breadcrumb-list-item:eq(0), .page-breadcrumb-list:has(.page-breadcrumb-cat-top) > .page-breadcrumb-list-item:eq(2), .page-breadcrumb-list:has(.page-breadcrumb-cat-top) > .breadcrumb-product-name"
       },
       "widget": {
         "action_visible": true,
@@ -27,24 +25,10 @@
     },
     {
       "input": {
-        "type": "str",
-        "name": "edithtml",
-        "value": "<h3>Placeholder HTML</h3>\n"
-      },
-      "widget": {
-        "action_visible": true,
-        "type": "HtmlField",
-        "description": "HTML of the selected node.",
-        "label": "Edit HTML"
-      },
-      "required": true
-    },
-    {
-      "input": {
         "type": "flexible_creative",
         "name": "opt_styleSheet",
         "value": {
-          "content": "#mt_cloned_galleryItem {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: rgba(255, 0, 0, 0.1);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  text-align: center;\n}\n",
+          "content": ".page-breadcrumb-list > .page-breadcrumb-list-item:nth-of-type(2):before {\n  display: none !important;\n}\n.page-breadcrumb-list {\n  margin-bottom: 0 !important;\n}",
           "discriminator": "content",
           "ref": null,
           "type": "css"
@@ -62,7 +46,7 @@
       "input": {
         "type": "bool",
         "name": "opt_multiSel",
-        "value": false
+        "value": true
       },
       "widget": {
         "action_visible": false,
@@ -76,7 +60,7 @@
       "input": {
         "type": "bool",
         "name": "opt_poll",
-        "value": false
+        "value": true
       },
       "widget": {
         "action_visible": false,
@@ -87,15 +71,21 @@
       "required": false
     }
   ],
-  "masks": [],
+  "masks": [
+    {
+      "selector": "#pdp-header-content .page-breadcrumb-list",
+      "value": "/shop/",
+      "op": "path_iprefix"
+    }
+  ],
   "rule_operator": "and",
   "rules": {
     "builtin": [
       {
         "values": [
-          "indexs"
+          "product"
         ],
-        "id": 203437,
+        "id": 203447,
         "rule_tmpl": {
           "widget": "itemlist",
           "description": null,
@@ -104,24 +94,6 @@
           "label": "Page type",
           "rule_name": "page_type",
           "rule_op": "equal",
-          "value_type": "string",
-          "filter_name": "page_filter"
-        }
-      },
-      {
-        "values": [
-          "navSrc=REFINE",
-          "currentPage"
-        ],
-        "id": 203438,
-        "rule_tmpl": {
-          "widget": "itemlist",
-          "description": null,
-          "is_included": false,
-          "verb": "doesn't contain",
-          "label": "URL",
-          "rule_name": "page_url",
-          "rule_op": "icontains",
           "value_type": "string",
           "filter_name": "page_filter"
         }

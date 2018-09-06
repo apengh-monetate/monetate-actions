@@ -1,5 +1,5 @@
 {
-  "id": 353499,
+  "id": 353865,
   "title": "Header Countdown Timer",
   "description": "Header Countdown Timer",
   "op": "htmlCountdown",
@@ -83,7 +83,7 @@
       "input": {
         "type": "str",
         "name": "htmlString",
-        "value": "<p class=\"first-promo-banner\"><span>Order in the next {{DAYS}d:}{{HOURS}h:}{{MINUTES}m:}{{SECONDS}s} for next day delivery</span></p>\n"
+        "value": "<p class=\"first-promo-banner\">Order in the next <span>{{DAYS}d:}{{HOURS}h:}{{MINUTES}m:}{{SECONDS}s}</span> for next day delivery</p>\n"
       },
       "widget": {
         "label": "HTML String",
@@ -181,7 +181,7 @@
           "discriminator": "raw_img_creative",
           "dyntexts": [],
           "creative": {
-            "last_updated": "2018-09-04T13:42:35",
+            "last_updated": "2018-09-06T12:46:32",
             "tags": {
               "builtin": [
                 "image"
@@ -190,15 +190,15 @@
             },
             "height": 24,
             "generated": true,
-            "id": 1707732,
+            "id": 1712288,
             "archived": false,
             "name": "24-24.png",
             "extension": ".png",
             "sha": "4654e2424ab9b8818aa5589a033e8645057f507d",
-            "ref": "771/1707732.png",
+            "ref": "771/1712288.png",
             "notes": "",
             "width": 24,
-            "image_url": "https://dev-apengh-1.monetate.org/img/1/771/1707732.png",
+            "image_url": "https://dev-apengh-1.monetate.org/img/1/771/1712288.png",
             "type": "image"
           }
         }

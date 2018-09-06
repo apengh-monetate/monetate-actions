@@ -1,7 +1,7 @@
 {
-  "id": 353501,
-  "title": "Clone Product Item in Index Page",
-  "description": "Clone Product Item in Index Page",
+  "id": 353881,
+  "title": "Clone Product Item on Index Page",
+  "description": "Clone Product Item on Index Page",
   "op": "cloneNode",
   "slot": "actionbuilder_ag_0",
   "slot_type": "none",
@@ -13,13 +13,13 @@
       "input": {
         "type": "str",
         "name": "selToClone",
-        "value": "#plModule > div.row > div.col-md-9.col-sm-8.plWrapper > div.qComponent > div.plContent > div.qComponent:eq(1) > div.productInfo.productGallery > div.row > div.col-tn-6.col-lg-4.galleryItem:eq(0)"
+        "value": ".productGallery > .row > .galleryItem:nth-of-type(1)"
       },
       "widget": {
-        "action_visible": true,
+        "label": "Element To Clone",
         "type": "CssSelectorField",
         "description": "Element to clone.",
-        "label": "Element To Clone"
+        "action_visible": true
       },
       "required": true
     },
@@ -27,13 +27,13 @@
       "input": {
         "type": "str",
         "name": "selToPlace",
-        "value": "#plModule > div.row > div.col-md-9.col-sm-8.plWrapper > div.qComponent > div.plContent > div.qComponent:eq(1) > div.productInfo.productGallery > div.row > div.col-tn-6.col-lg-4.galleryItem:eq(1)"
+        "value": ".productGallery > .row > .galleryItem:nth-of-type(2)"
       },
       "widget": {
-        "action_visible": true,
+        "label": "Relative Element Selector",
         "type": "CssSelectorField",
         "description": "Place Cloned element in relation to this element.",
-        "label": "Relative Element Selector"
+        "action_visible": true
       },
       "required": true
     },
@@ -44,7 +44,9 @@
         "value": "before"
       },
       "widget": {
-        "label": "Insert Method",
+        "description": "Where to insert the cloned element in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
         "options": [
           {
             "name": "after",
@@ -71,9 +73,7 @@
             "label": "Takeover"
           }
         ],
-        "type": "StringSelectField",
-        "description": "Where to insert the cloned element in relation to the Relative Element Selector.",
-        "action_visible": true
+        "label": "Insert Method"
       },
       "required": true
     },
@@ -84,10 +84,10 @@
         "value": "mt_cloned_galleryItem"
       },
       "widget": {
-        "action_visible": true,
+        "label": "Cloned Element ID",
         "type": "CharField",
         "description": "Optional ID to assign to the cloned element.",
-        "label": "Cloned Element ID"
+        "action_visible": true
       },
       "required": false
     },
@@ -98,10 +98,10 @@
         "value": false
       },
       "widget": {
-        "action_visible": false,
+        "label": "Wrap Cloned Element",
         "type": "BooleanField",
         "description": "Optionally wrap the cloned element in a div.",
-        "label": "Wrap Cloned Element"
+        "action_visible": false
       },
       "required": false
     },
@@ -112,10 +112,10 @@
         "value": false
       },
       "widget": {
-        "action_visible": false,
+        "label": "Use jQuery For Cloning",
         "type": "BooleanField",
         "description": "Should jQuery's clone function be used to clone the events of the selected element?  If client site has jQuery 1.5+, the events of the children elements will also be cloned.",
-        "label": "Use jQuery For Cloning"
+        "action_visible": false
       },
       "required": false
     },
@@ -131,10 +131,10 @@
         }
       },
       "widget": {
-        "action_visible": false,
+        "label": "CSS",
         "type": "CSSCodeField",
         "description": "CSS appended to the DOM in a <style> or <link> element.  To refer to the container DIV (or the clone itself if a wrapper isn't being used) you can use the \"<CLONE_SELECTOR>\" pseudo-selector to refer to it (eg. \"<CLONE_SELECTOR> a:hover{ color:#F00; }\").",
-        "label": "CSS"
+        "action_visible": false
       },
       "required": false
     },
@@ -145,10 +145,10 @@
         "value": false
       },
       "widget": {
-        "action_visible": true,
+        "label": "Re-check for Elements",
         "type": "BooleanField",
         "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
-        "label": "Re-check for Elements"
+        "action_visible": false
       },
       "required": false
     }
@@ -161,7 +161,7 @@
         "values": [
           "indexs"
         ],
-        "id": 203249,
+        "id": 203441,
         "rule_tmpl": {
           "widget": "itemlist",
           "description": null,
@@ -176,9 +176,10 @@
       },
       {
         "values": [
-          "navSrc=REFINE"
+          "navSrc=REFINE",
+          "currentPage"
         ],
-        "id": 203250,
+        "id": 203442,
         "rule_tmpl": {
           "widget": "itemlist",
           "description": null,
@@ -193,5 +194,6 @@
       }
     ],
     "required": []
-  }
+  },
+  "manage_impressions": false
 }

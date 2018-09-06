@@ -1,25 +1,41 @@
 {
-  "id": 353885,
-  "title": "MONETATE - Hide Tippy Top Banner",
-  "description": "MONETATE - Hide Tippy Top Banner",
-  "op": "selectorHideElement",
+  "id": 353887,
+  "title": "MONETATE - Update Runway Verbiage under Eyewear Menu",
+  "description": "MONETATE - Update Runway Verbiage under Eyewear Menu",
+  "op": "selectorEditHtml",
   "slot": "actionbuilder_ag_0",
   "slot_type": "page",
-  "category": "hide-show-content",
-  "subcategory": "Hide",
-  "action_events": [],
+  "category": "html",
+  "subcategory": "Edit Content",
+  "action_events": [
+    "op_impression"
+  ],
   "inputs": [
     {
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "#wrapper > div.post-header-banner > div.content-asset > div.blue-header-banner"
+        "value": "#main-navigation > ul.header__primary__links.header__primary__links2 > li.js-header-entry:eq(0) > div.header__secondary.js-header-nav-secondary > div.header__secondary__wrapper > div.header__columns > div.header__column:eq(1) > div.header__category > ul.header__category__links > li:eq(1) > a"
       },
       "widget": {
-        "label": "Relative Element Selector",
+        "action_visible": false,
         "type": "CssSelectorField",
         "description": "CSS Selector to find the relative element.",
-        "action_visible": true
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "edithtml",
+        "value": "As Seen on the Runway"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML of the selected node.",
+        "label": "Edit HTML"
       },
       "required": true
     },
@@ -35,10 +51,10 @@
         }
       },
       "widget": {
-        "label": "CSS",
+        "action_visible": false,
         "type": "CSSCodeField",
         "description": "CSS appended to the DOM in a <style> or <link> element.",
-        "action_visible": false
+        "label": "CSS"
       },
       "required": false
     },
@@ -49,10 +65,10 @@
         "value": false
       },
       "widget": {
-        "label": "Select multiple elements, if matched?",
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
-        "action_visible": false
+        "label": "Select multiple elements, if matched?"
       },
       "required": false
     },
@@ -63,10 +79,10 @@
         "value": false
       },
       "widget": {
-        "label": "Re-check for Elements",
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
-        "action_visible": false
+        "label": "Re-check for Elements"
       },
       "required": false
     }
