@@ -1,0 +1,39 @@
+{
+  "id": 353897,
+  "title": "MONETATE - CSS to change product grid sizing",
+  "description": "MONETATE - CSS to change product grid sizing",
+  "op": "insertCSS",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "css",
+  "subcategory": "CSS",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "styleSheet",
+        "value": {
+          "content": ".search-result-items .grid-tile {\n  margin-right: 0 !important;\n  width: 100% !important;\n}\n\n@media screen and (min-width: 768px) {\n  .search-result-items .grid-tile {\n    margin-left: 1% !important;\n    margin-right: 1% !important;\n    width: 23% !important;\n  }\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": true
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

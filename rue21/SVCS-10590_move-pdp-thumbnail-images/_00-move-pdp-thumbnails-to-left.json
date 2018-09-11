@@ -1,0 +1,57 @@
+{
+  "id": 353907,
+  "title": "MONETATE - Move PDP thumbnail images to left of main image",
+  "description": "Move PDP thumbnail images to left of main image",
+  "op": "insertCSS",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "css",
+  "subcategory": "CSS",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "styleSheet",
+        "value": {
+          "content": "@media screen and (min-width: 1025px) {\n  #product-image_swatches.s7swatches {\n    float: left !important;\n    height: 100% !important;\n    left: -96px;\n    position: absolute !important;\n    top: 0;\n    width: 96px !important;\n  }\n  #product-image_swatches.s7swatches > div {\n    height: auto !important;\n    left: initial !important;\n    overflow: visible !important;\n    position: relative !important;\n    top: initial !important;\n    width: 100% !important;\n  }\n  #product-image_swatches.s7swatches > div > div {\n    height: auto !important;\n    left: 0 !important;\n    position: relative !important;\n    width: 100% !important;\n  }\n  #product-image_swatches.s7swatches .s7thumbcell {\n    display: block;\n    float: left;\n    left: initial !important;\n    margin-bottom: 10px !important;\n    position: relative !important;\n    top: initial !important;\n  }\n  #product-image_swatches.s7swatches .s7thumb {\n    background-size: contain;\n    display: block;\n    height: 96px !important;\n    width: 96px !important;\n  }\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": true
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 203467,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

@@ -1,0 +1,63 @@
+{
+  "id": 353895,
+  "title": "MONETATE - Change Product Grid Size 5-to-4",
+  "description": "MONETATE - Change Product Grid Size 5-to-4",
+  "op": "insertCSS",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "css",
+  "subcategory": "CSS",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "styleSheet",
+        "value": {
+          "content": ".product_list_sub li {\n  text-align: center !important;\n  width: calc(100% / 4) !important;\n}\n\n.product_list_sub li .sub_img {\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.product_list_sub li a {\n  display: inline-block;\n  max-width: 170px;\n  text-align: center;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": true
+    }
+  ],
+  "masks": [
+    {
+      "selector": "#skiptarget > div > ul",
+      "value": "/category",
+      "op": "path_iprefix"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "index"
+        ],
+        "id": 203450,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

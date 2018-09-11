@@ -4,6 +4,7 @@ $max-width: 1100px;
 
 @import "../../mixins";
 
+
 .mt-clsbl-banner {
   background: #041c2c;
   box-sizing: border-box;
@@ -47,9 +48,13 @@ $max-width: 1100px;
 
   p {
     margin: 0;
-    margin-left: 12px;
-    margin-right: 12px;
+    margin-left: 6px;
+    margin-right: 6px;
     text-transform: uppercase;
+    @media screen and (min-width: $breakpoint) {
+      margin-left: 12px;
+      margin-right: 12px;
+    }
   }
 
   .link {
@@ -69,13 +74,10 @@ $max-width: 1100px;
 
 
   &__close {
-    background-color: transparent;
-    background-image: url("https://dev-apengh-1.monetate.org/img/1/305/1707738.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 40% 40%;
+    background: none;
     cursor: pointer;
     display: inline-block;
+    font-size: 16px;
     height: 40px;
     position: absolute;
     right: 0;
@@ -83,5 +85,17 @@ $max-width: 1100px;
     width: 40px;
   }
 
-  
+}
+
+
+.pinHeader section.mt-clsbl-banner {
+  display: none;
+}
+
+/* Adjust padding-top of body for mobile due to other experience
+that makes the header sticky/fixed */
+@media screen and (orientation: portrait) {
+  html > body {
+    padding-top: 172px !important;
+  }
 }

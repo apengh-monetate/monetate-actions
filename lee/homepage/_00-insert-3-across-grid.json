@@ -1,0 +1,169 @@
+{
+  "id": 353893,
+  "title": "MONETATE - Insert HTML for Grid on HP",
+  "description": "MONETATE - Insert HTML for Grid on HP",
+  "op": "selectorInsertHtmlString",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Homepage",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<div class=\"grid_row section\">\n<div class=\"row collapse\">\n<div class=\"grid_column small-12 medium-12 large-12 end columns section\">\n<div class=\"column-content parsys\">\n<div class=\"grid_row section\">\n<div class=\"row collapse\">\n<div class=\"grid_column section small-12 medium-4 columns\">\n<div class=\"column-content parsys\">\n<div class=\"image_with_overlay2 parbase section\">\n<div class=\"medium-inner-middle large-inner-middle image-with-overlay-wrapper\" style=\"\">\n<div class=\"media  \"><a href=\"#\"><img alt=\"\" src=\"https://via.placeholder.com/600x300/333/555?text=IMAGE+1\" /> </a>\n<div class=\"overlay\">\n<div class=\"wrapper\">\n<div class=\"inner\">\n<div class=\"row overlay-content\">\n<div class=\"small-text-center small-12 columns small-centered medium-uncentered medium-offset-0 large-uncentered large-offset-0\">\n<h6 style=\"color: #FFF;\">&nbsp;</h6>\n\n<h4 style=\"color: #FFF;\">TEXT 1</h4>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n<div class=\"grid_column section small-12 medium-4 columns\">\n<div class=\"column-content parsys\">\n<div class=\"image_with_overlay2 parbase section\">\n<div class=\"medium-inner-middle large-inner-middle image-with-overlay-wrapper\" style=\"\">\n<div class=\"media  \"><a href=\"#\"><img alt=\"\" src=\"https://via.placeholder.com/600x300/333/555?text=IMAGE+2\" /> </a>\n\n<div class=\"overlay\">\n<div class=\"wrapper\">\n<div class=\"inner\">\n<div class=\"row overlay-content\">\n<div class=\"small-text-center small-12 columns small-centered medium-uncentered medium-offset-0 large-uncentered large-offset-0\">\n<h6 style=\"color: #FFF;\">&nbsp;</h6>\n\n<h4 style=\"color: #FFF;\">TEXT 2</h4>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n<div class=\"grid_column section small-12 medium-4 columns\">\n<div class=\"column-content parsys\">\n<div class=\"image_with_overlay2 parbase section\">\n<div class=\"medium-inner-middle large-inner-middle image-with-overlay-wrapper\" style=\"\">\n<div class=\"media  \"><a href=\"#\"><img alt=\"\" src=\"https://via.placeholder.com/600x300/333/555?text=IMAGE+3\" /> </a>\n\n<div class=\"overlay\">\n<div class=\"wrapper\">\n<div class=\"inner\">\n<div class=\"row overlay-content\">\n<div class=\"small-text-center small-12 columns small-centered medium-uncentered medium-offset-0 large-uncentered large-offset-0\">\n<h6 style=\"color: #FFF;\">&nbsp;</h6>\n\n<h4 style=\"color: #FFF;\">TEXT 3</h4>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#body-container > div.content > div.grid_row:eq(4)"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "takeover"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "main"
+        ],
+        "id": 203452,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

@@ -1,0 +1,63 @@
+{
+  "id": 353901,
+  "title": "MONETATE - Collapse Details & Specs on PDP",
+  "description": "Collapse Details & Specs on PDP",
+  "op": "insertCSS",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "css",
+  "subcategory": "CSS",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "styleSheet",
+        "value": {
+          "content": "@media screen and (min-width: 768px) {\n  .page .product-details .default-accordion__header {\n    border-bottom: 1px solid #ccc;\n    display: block !important;\n  }\n  .page .product-details .default-accordion__header[aria-expanded=true] {\n    border-bottom: 0;\n  }\n  .default-accordion__panel[aria-hidden=true],\n  .js-accordion__panel[aria-hidden=true] {\n    display: none !important;\n  }\n}\n\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": true
+    }
+  ],
+  "masks": [
+    {
+      "selector": "#main-content > div.row.product-row",
+      "value": "/en/product/",
+      "op": "path_iprefix"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 203460,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

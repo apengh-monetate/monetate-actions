@@ -1,7 +1,7 @@
 {
-  "id": 353515,
-  "title": "Insert closable HTML banner above nav (all)",
-  "description": "Insert closable HTML banner above nav (all)",
+  "id": 353889,
+  "title": "MONETATE - Insert closable HTML banner above nav (all)",
+  "description": "MONETATE - Insert closable HTML banner above nav (all)",
   "op": "statefulHTML",
   "slot": "actionbuilder_ag_0",
   "slot_type": "page",
@@ -15,13 +15,13 @@
       "input": {
         "type": "str",
         "name": "htmlString",
-        "value": "<section class=\"mt-clsbl-banner\">\n<div class=\"mt-clsbl-banner__content\">\n<p><span class=\"hiden-mobile\">The Men&#39;s Event: Up to 50% off, discount shown in cart </span> <span class=\"hiden-desktop\">Take up to 50% off, discount shown in cart </span></p>\n\n<p class=\"link\"><a href=\"https://www.nautica.com/current-promotions-special-offers.html\"><span class=\"text\">LEARN MORE</span>&gt;</a></p>\n</div>\n<button class=\"mt-clsbl-banner__close\" type=\"button\">&nbsp;</button></section>\n"
+        "value": "<section class=\"mt-clsbl-banner\">\n<div class=\"mt-clsbl-banner__content\">\n<p><span class=\"hiden-mobile\">The Men&#39;s Event: Take Up to 50% off! <span class=\"smaller_text\">Discount shown in cart</span> </span> <span class=\"hiden-desktop\">Take up to 50% off! </span></p>\n\n<p class=\"link\"><a href=\"https://www.nautica.com/current-promotions-special-offers.html\"><span class=\"text\">LEARN MORE</span>&nbsp;&gt;</a></p>\n</div>\n<button class=\"mt-clsbl-banner__close\" id=\"mt-clsbl-banner__close\" type=\"button\">x</button></section>\n"
       },
       "widget": {
-        "label": "HTML String",
+        "action_visible": true,
         "type": "HtmlField",
         "description": "HTML to be inserted",
-        "action_visible": true
+        "label": "HTML String"
       },
       "required": true
     },
@@ -29,13 +29,13 @@
       "input": {
         "type": "int",
         "name": "id",
-        "value": 2
+        "value": 1
       },
       "widget": {
-        "label": "Lightbox ID",
+        "action_visible": true,
         "type": "IntegerField",
         "description": "This ID can be any number between zero and 31, and determines the grouping of this lightbox to differentiate it from other lightboxes.",
-        "action_visible": true
+        "label": "Lightbox ID"
       },
       "required": true
     },
@@ -46,7 +46,9 @@
         "value": "session"
       },
       "widget": {
-        "label": "How often (per user) should this banner be shown?",
+        "description": "How long until the this banner is shown again. Based on ID.",
+        "action_visible": false,
+        "type": "StringSelectField",
         "options": [
           {
             "name": "page",
@@ -65,9 +67,7 @@
             "label": "Once every 'X' days"
           }
         ],
-        "type": "StringSelectField",
-        "description": "How long until the this banner is shown again. Based on ID.",
-        "action_visible": false
+        "label": "How often (per user) should this banner be shown?"
       },
       "required": true
     },
@@ -78,9 +78,7 @@
         "value": "close"
       },
       "widget": {
-        "description": "If 'Every page' is selected this will not matter. For the other intervals, this setting determines when to stop showing the banner.",
-        "action_visible": false,
-        "type": "StringSelectField",
+        "label": "When should the display interval be applied?",
         "options": [
           {
             "name": "first",
@@ -91,7 +89,9 @@
             "label": "After the user closes the banner"
           }
         ],
-        "label": "When should the display interval be applied?"
+        "type": "StringSelectField",
+        "description": "If 'Every page' is selected this will not matter. For the other intervals, this setting determines when to stop showing the banner.",
+        "action_visible": false
       },
       "required": true
     },
@@ -99,13 +99,13 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "#header"
+        "value": "header"
       },
       "widget": {
-        "label": "Relative Element Selector",
+        "action_visible": true,
         "type": "CssSelectorField",
         "description": "CSS Selector to find the relative element.",
-        "action_visible": true
+        "label": "Relative Element Selector"
       },
       "required": true
     },
@@ -113,12 +113,10 @@
       "input": {
         "type": "str",
         "name": "imeth",
-        "value": "before"
+        "value": "first"
       },
       "widget": {
-        "description": "Where to insert the banner in relation to the Relative Element Selector.",
-        "action_visible": true,
-        "type": "StringSelectField",
+        "label": "Insert Method",
         "options": [
           {
             "name": "after",
@@ -145,7 +143,9 @@
             "label": "Takeover"
           }
         ],
-        "label": "Insert Method"
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
       },
       "required": true
     },
@@ -156,10 +156,10 @@
         "value": "mt-clsbl-banner__close"
       },
       "widget": {
-        "label": "Close Button Class",
+        "action_visible": false,
         "type": "CharField",
         "description": "All elements in the HTML creative with this class will act as a close button for the lightbox.",
-        "action_visible": false
+        "label": "Close Button Class"
       },
       "required": true
     },
@@ -170,10 +170,10 @@
         "value": null
       },
       "widget": {
-        "label": "Banner Div Inline Style",
+        "action_visible": false,
         "type": "TextField",
         "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
-        "action_visible": false
+        "label": "Banner Div Inline Style"
       },
       "required": false
     },
@@ -182,17 +182,17 @@
         "type": "flexible_creative",
         "name": "opt_styleSheet",
         "value": {
-          "content": ".mt-clsbl-banner {\n  background: #041c2c;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  display: block;\n  min-height: 40px;\n  padding-bottom: 10px;\n  padding-left: 10px;\n  padding-right: 30px;\n  padding-top: 10px;\n  position: relative;\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n  width: 100%;\n}\n\n@media screen and (min-width: 700px) {\n  .mt-clsbl-banner {\n    background: #001745;\n    padding: 10px 0;\n  }\n}\n\n.mt-clsbl-banner > * {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.mt-clsbl-banner__content {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  color: #fff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  font-family: \"BrandonGrotesque-Regular\";\n  font-size: 13px;\n  font-weight: bold;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  letter-spacing: 1px;\n  margin: 0 auto;\n  max-width: 1100px;\n  position: relative;\n  text-align: center;\n  width: 100%;\n}\n\n.mt-clsbl-banner p {\n  margin: 0;\n  margin-left: 12px;\n  margin-right: 12px;\n  text-transform: uppercase;\n}\n\n.mt-clsbl-banner .link {\n  display: block;\n}\n\n.mt-clsbl-banner .link a {\n  color: #fff;\n  text-decoration: none;\n}\n\n.mt-clsbl-banner .text {\n  font-size: 12px;\n}\n\n@media screen and (min-width: 700px) {\n  .mt-clsbl-banner .text {\n    font-size: 10.5px;\n  }\n}\n\n.mt-clsbl-banner__close {\n  background-color: transparent;\n  background-image: url(\"https://dev-apengh-1.monetate.org/img/1/305/1707738.png\");\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: 40% 40%;\n  cursor: pointer;\n  display: inline-block;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  top: 0;\n  width: 40px;\n}\n",
+          "content": ".mt-clsbl-banner {\n  background: #041c2c;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  display: block;\n  min-height: 40px;\n  padding-bottom: 10px;\n  padding-left: 10px;\n  padding-right: 30px;\n  padding-top: 10px;\n  position: relative;\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n  width: 100%;\n}\n\n@media screen and (min-width: 700px) {\n  .mt-clsbl-banner {\n    background: #001745;\n    padding: 10px 0;\n  }\n}\n\n.mt-clsbl-banner > * {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.mt-clsbl-banner__content {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  color: #fff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  font-family: \"BrandonGrotesque-Regular\";\n  font-size: 13px;\n  font-weight: bold;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  letter-spacing: 1px;\n  margin: 0 auto;\n  max-width: 1100px;\n  position: relative;\n  text-align: center;\n  width: 100%;\n}\n\n.mt-clsbl-banner p {\n  margin: 0;\n  margin-left: 6px;\n  margin-right: 6px;\n  text-transform: uppercase;\n}\n\n@media screen and (min-width: 700px) {\n  .mt-clsbl-banner p {\n    margin-left: 12px;\n    margin-right: 12px;\n  }\n}\n\n.mt-clsbl-banner .link {\n  display: block;\n}\n\n.mt-clsbl-banner .link a {\n  color: #fff;\n  text-decoration: none;\n}\n\n.mt-clsbl-banner .text {\n  font-size: 12px;\n}\n\n@media screen and (min-width: 700px) {\n  .mt-clsbl-banner .text {\n    font-size: 10.5px;\n  }\n}\n\n.mt-clsbl-banner__close {\n  background: none;\n  cursor: pointer;\n  display: inline-block;\n  font-size: 16px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  top: 0;\n  width: 40px;\n}\n\n.pinHeader section.mt-clsbl-banner {\n  display: none;\n}\n\n/* Adjust padding-top of body for mobile due to other experience\nthat makes the header sticky/fixed */\n@media screen and (orientation: portrait) {\n  html > body {\n    padding-top: 172px !important;\n  }\n}\n",
           "discriminator": "content",
           "ref": null,
           "type": "css"
         }
       },
       "widget": {
-        "label": "CSS",
+        "action_visible": true,
         "type": "CSSCodeField",
         "description": "CSS appended to the DOM in a <style> or <link> element.",
-        "action_visible": true
+        "label": "CSS"
       },
       "required": false
     },
@@ -203,10 +203,10 @@
         "value": false
       },
       "widget": {
-        "label": "Select multiple elements, if matched?",
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
-        "action_visible": false
+        "label": "Select multiple elements, if matched?"
       },
       "required": false
     },
@@ -217,10 +217,10 @@
         "value": false
       },
       "widget": {
-        "label": "Re-check for Elements",
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
-        "action_visible": false
+        "label": "Re-check for Elements"
       },
       "required": false
     },
@@ -231,10 +231,10 @@
         "value": null
       },
       "widget": {
-        "label": "Days until expiration",
+        "action_visible": false,
         "type": "IntegerField",
         "description": "Days until the banner expires. Only to be used when 'Once every 'X' days' is selected from the frequency.",
-        "action_visible": false
+        "label": "Days until expiration"
       },
       "required": false
     }
@@ -244,5 +244,6 @@
   "rules": {
     "builtin": [],
     "required": []
-  }
+  },
+  "manage_impressions": false
 }

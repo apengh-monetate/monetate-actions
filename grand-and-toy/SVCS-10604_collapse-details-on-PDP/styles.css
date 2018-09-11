@@ -1,0 +1,14 @@
+@media screen and (min-width: 768px) {
+  .page .product-details .default-accordion__header {
+    border-bottom: 1px solid #ccc;
+    display: block !important;
+  }
+  .page .product-details .default-accordion__header[aria-expanded=true] {
+    border-bottom: 0;
+  }
+  .default-accordion__panel[aria-hidden=true],
+  .js-accordion__panel[aria-hidden=true] {
+    display: none !important;
+  }
+}
+

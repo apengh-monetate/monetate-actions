@@ -1,0 +1,411 @@
+/**
+* DEFAULT SLIDER STYLES
+* Edit at your own risk!
+*/
+#MONETATE-ID {
+  position: relative;
+}
+
+#MONETATE-ID [data-slider-mask] {
+  margin: 0!important;
+  overflow: hidden!important;
+  padding: 0!important;
+  position: relative!important;
+}
+
+#MONETATE-ID li {
+  list-style: none;
+}
+
+#MONETATE-ID [data-slider] {
+  display: block;
+  margin: 0!important;
+  padding: 0!important;
+}
+
+#MONETATE-ID [data-slide] {
+  float: none;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider] {
+  white-space: nowrap!important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slide] {
+  display: inline-block!important;
+  vertical-align: top;
+  white-space: normal;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slide] {
+  display: block!important;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+
+}
+
+#MONETATE-ID [data-pagination]{
+  height: 18px;
+  margin: 10px;
+  padding: 0; 
+}
+
+#MONETATE-ID [data-pagination-slide],
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button]{
+  cursor: pointer;
+  z-index: 1;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  -ms-touch-action: pan-x;
+  touch-action: pan-x;
+}
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider-mask],
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slider-mask] {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+#MONETATE-ID [data-pagination-slide] * {
+  pointer-events: none;
+}
+
+/** ----END DEFAULT STYLES---- */
+
+
+/**
+* CUSTOM SLIDER STYLING
+*/
+#MONETATE-ID [data-pagination="thumbnails"] [data-pagination-slide] {
+  background: none;
+  border-radius: 0;
+  height: auto;
+  width: 40px;
+}
+
+#MONETATE-ID [disabled] {
+  opacity: 0.5;
+}
+
+#MONETATE-ID [data-pagination-slide] {
+  background: #d8d8d8;
+  border-radius: 6px;
+  display: inline-block;
+  height: 10px;
+  margin: 4px;
+  width: 10px;
+}
+
+#MONETATE-ID [data-pagination-slide][data-slide-active] {
+  background-color: #00669e;
+  opacity: 1;
+}
+
+#MONETATE-ID [data-slide] > div {
+  height: 100%;
+  padding: 24px 20px;
+}
+
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-prev-button] {
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-next-button]{
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  bottom: 0;
+  left: 50%;
+  right: auto;
+  top: auto;
+  transform: translateX(-50%);
+}
+
+#MONETATE-ID [data-slider-mask] {
+  display: inline-block;
+  width: 100%;
+}
+
+#MONETATE-ID {
+  text-align: center;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  height: 400px!important;
+}
+
+#MONETATE-ID [data-slide] img {
+  max-height: 100%;
+}
+
+#MONETATE-ID [data-slide] a {
+  -ms-flex-direction: column;
+  -ms-flex-pack: distribute;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  color: #404041;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+#MONETATE-ID [data-pagination*="dots"] [data-pagination-slide] {
+  /* remove below for pagination numbers */
+  text-indent: -9999px;
+}
+
+
+#MONETATE-ID img{
+  max-width: 100%;
+}
+
+#MONETATE-ID .mt-productinfo{
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+#MONETATE-ID [data-slide]:hover > div {
+  -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Flexbox for making the slider items all the same height */
+#MONETATE-ID [data-slider-mask] {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+}
+#MONETATE-ID [data-slider] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#MONETATE-ID [data-slide] {
+  -ms-flex-negative: 0;
+  display: inline-block !important;
+  flex-shrink: 0;
+  float: none;
+  padding: 5px;
+  text-align: left;
+}
+#MONETATE-ID [data-slide] > div{
+  height: 100%;
+}
+
+#MONETATE-ID .mt-slide-controls{
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin: 10px 0 20px;
+}
+#MONETATE-ID .mt-pricewrap {
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  justify-content: space-between;
+}
+
+#MONETATE-ID span.mt-pricenote {
+  color: #c3122f!important;
+  display: block;
+  display: none;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left;
+}
+
+#MONETATE-ID .mt-memberprice {
+  color: #c3122f!important;
+  font-weight: bold;
+}
+#MONETATE-ID .mt-memberprice .mt-price {
+  color: #c3122f!important;
+  font-weight: bold;
+}
+#MONETATE-ID [data-mapstatus="map"] .mt-memberprice .mt-price {
+  text-decoration: line-through;
+}
+
+#MONETATE-ID .mt-pricenote-modal{
+  background: #fff;
+  border: 4px solid rgba(0,0,0,.2);
+  display: none;
+  left: calc(50% - 225px);
+  padding: 10px;
+  position: absolute;
+  top: 10%;
+  width: 450px;
+}
+#MONETATE-ID .mt-pricenote-close{
+  color: rgb(147, 149, 151);
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+}
+#MONETATE-ID .mt-pricenote-close:hover{
+  text-decoration: none;
+}
+#MONETATE-ID .mt-pricenote-modal h3{
+  font-size: 18px !important;
+  font-weight: 700;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+#MONETATE-ID .mt-pricenote-modal p{
+  font-size: .875rem;
+  padding-bottom: .75rem!important;
+  padding-top: .75rem!important;
+}
+
+#MONETATE-ID .mt-pricewrap {
+  font-size: 14px;
+}
+
+#MONETATE-ID span.mt-pricenote {
+  font-size: 12px;
+}
+
+#MONETATE-ID p.mt-showdetails {
+  -ms-flex-negative: 0;
+  -ms-flex-positive: 0;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-box-flex: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  border: 2px solid #E3E3E5;
+  color: #00669E;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  height: 48px;
+  line-height: 1.7;
+  margin: 10px 0 0;
+  padding: .6875rem 1.375rem .625rem;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+#MONETATE-ID .map-question{
+  background: rgb(64,64,64);
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  height: 17px;
+  margin-left: 5px;
+  margin-top: 20px;
+  text-align: center;
+  width: 17px;
+}
+
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  background-color: #00669e;
+  border: none;
+  border-radius: 50%;
+  color: transparent;
+  cursor: pointer;
+  font-size: 0;
+  height: 30px;
+  line-height: 0;
+  min-width: 30px !important;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  width: 30px;
+  z-index: 1;
+}
+
+@media (min-width: 992px) {
+  #MONETATE-ID [data-prev-button],
+  #MONETATE-ID [data-next-button] {
+    height:38px;
+    width: 38px
+  }
+}
+
+#MONETATE-ID [data-prev-button]:focus,
+#MONETATE-ID [data-next-button]:focus,
+#MONETATE-ID [data-prev-button]:hover,
+#MONETATE-ID [data-next-button]:hover {
+  background-color: #53b7e7;
+  color: transparent;
+  outline: 0
+}
+#MONETATE-ID [data-prev-button]::before,#MONETATE-ID [data-next-button]::before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 8px 12px;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2
+}
+
+#MONETATE-ID [data-prev-button]::before {
+  background-image: url(https://www.ganderoutdoors.com/assets/images/arrow-left-white.svg)
+}
+#MONETATE-ID [data-next-button]::before {
+  background-image: url(https://www.ganderoutdoors.com/assets/images/arrow-right-white.svg)
+}
+
+
+/* ---------------------------------------------------------
+HEADER STYLING
+--------------------------------------------------------- */
+
+#MONETATE-ID .mt-sliderTop {
+  border-bottom: 2px solid #E3E3E5;
+  margin-bottom: 1.25rem !important;
+  padding: 0 0 .75rem;
+  text-align: left;
+}
+#MONETATE-ID .mt-sliderTop h3 {
+  display: inline-block !important;
+}
+#MONETATE-ID .mt-sliderTop .ml-3 {
+  display: inline-block;
+}
+
+@media screen and (min-width: 992px) {
+  #MONETATE-ID .mt-sliderTop {
+    padding: 0 1.875rem .75rem;
+  }
+}

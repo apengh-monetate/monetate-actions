@@ -58,9 +58,16 @@
 
 .mt-clsbl-banner p {
   margin: 0;
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 6px;
+  margin-right: 6px;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 700px) {
+  .mt-clsbl-banner p {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 }
 
 .mt-clsbl-banner .link {
@@ -83,16 +90,25 @@
 }
 
 .mt-clsbl-banner__close {
-  background-color: transparent;
-  background-image: url("https://dev-apengh-1.monetate.org/img/1/305/1707738.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 40% 40%;
+  background: none;
   cursor: pointer;
   display: inline-block;
+  font-size: 16px;
   height: 40px;
   position: absolute;
   right: 0;
   top: 0;
   width: 40px;
+}
+
+.pinHeader section.mt-clsbl-banner {
+  display: none;
+}
+
+/* Adjust padding-top of body for mobile due to other experience
+that makes the header sticky/fixed */
+@media screen and (orientation: portrait) {
+  html > body {
+    padding-top: 172px !important;
+  }
 }

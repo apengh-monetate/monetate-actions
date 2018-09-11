@@ -1,0 +1,21 @@
+$breakpoint: 768px;
+
+.page .product-details .default-accordion__header {
+  @media screen and (min-width: $breakpoint) {
+    border-bottom: 1px solid #ccc;
+    display: block !important;
+    &[aria-expanded=true] {
+      border-bottom: 0;
+    }
+  }
+}
+
+
+.default-accordion__panel[aria-hidden=true], 
+.js-accordion__panel[aria-hidden=true] {
+  @media screen and (min-width: $breakpoint) {
+    display: none !important;
+  }
+}
+
+
