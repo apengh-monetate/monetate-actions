@@ -1,0 +1,228 @@
+{
+  "id": 353915,
+  "title": "Show Bracelet Size Lightbox V2",
+  "description": "Shows bracelet size lightbox on click",
+  "op": "htmlLightboxStringOnClick",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "lightbox",
+  "subcategory": "Product detail page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "a.guide-link.pandora-icon-size"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<section class=\"t120-bracelet-container\">\n<h2 class=\"t120-titlebar\">FINDE DEINE ARMBANDGR&Ouml;SSE</h2>\n\n<article class=\"t120-exit-button lightboxClose\">\n<p>X</p>\n</article>\n\n<article class=\"t120-bracelet1-wrapper\">\n<h3 class=\"t120-img-subtitle\">ARMBAND</h3>\n<img alt=\"Bracelet1\" class=\"t120-bracelet-img\" id=\"bracelet1\" src=\"//dd6zx4ibq538k.cloudfront.net/static/images/4605/18c3205b6fbbe4605eb9f3be5dc6d584_297_141.png\" /></article>\n\n<table class=\"t120-size-table\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<th>Handgelenk</th>\n\t\t\t<th>Armbandgr&ouml;&szlig;e</th>\n\t\t</tr>\n\t\t<tr style=\"height:10px\">\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>14 cm</td>\n\t\t\t<td>16 cm</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>15 cm</td>\n\t\t\t<td>17 cm</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>16 cm</td>\n\t\t\t<td>18 cm</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>17 cm</td>\n\t\t\t<td>19 cm</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>18 cm</td>\n\t\t\t<td>20 cm</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>19 cm</td>\n\t\t\t<td>21 cm</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>20 cm</td>\n\t\t\t<td>23 cm</td>\n\t\t</tr>\n\t\t<tr class=\"t120-table-spacer\">\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>15-16 cm</td>\n\t\t\t<td>17 cm</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>16-18 cm</td>\n\t\t\t<td>19 cm</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>19-20 cm</td>\n\t\t\t<td>21 cm</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<article class=\"t120-bracelet2-wrapper\">\n<h3 class=\"t120-img-subtitle\">ARMREIF</h3>\n<img alt=\"Bracelet2\" class=\"t120-bracelet-img\" id=\"bracelet2\" src=\"//dd6zx4ibq538k.cloudfront.net/static/images/4605/d6c036783703aa5b3aecc7c70fdea913_705_354.png\" /></article>\n</section>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted.  Close buttons classes should correspond to the optional 'Close Button Class' input or use the default class of 'lightboxClose'.  You may also use a link with an href of '#close'.",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "lightboxWidth",
+        "value": 424
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Width of the lightbox (in pixels). If you set to zero, the width will be calculated automatically.",
+        "label": "Lightbox Width"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "lightboxHeight",
+        "value": 324
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Height of the lightbox (in pixels).  If you set to zero, the height will be calculated automatically.",
+        "label": "Lightbox Height"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_pinned",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Is the lightbox pinned to its position on screen, or does it scroll with the page?",
+        "label": "Pin Lightbox Position?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_left",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "The left offset of the lightbox (in pixels).",
+        "label": "Left Position"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_top",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "The top offset of the lightbox (in pixels).",
+        "label": "Top Position"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_color",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "Color of the lightbox overlay. Defaults to \"#000\".",
+        "label": "Overlay Color"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "float",
+        "name": "opt_opacity",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "FloatField",
+        "description": "Opacity of the lightbox overlay. Defaults to '0.6'.",
+        "label": "Overlay Opacity"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "#monetate_lightbox_mask {\n  display: none;\n}\n.t120-remove{\n    display:none\n}\n.t120-appear{\n    display:visible\n}\n.t120-bracelet-container{\n    position:absolute;\n    top:50%;\n    -webkit-transform:translateY(-50%);\n    transform:translateY(-50%);\n    margin:0 auto;\n    left:0!important;\n    right:0;\n    height:320px!important;\n    width:420px!important;\n    border:2px solid #b3b3b7;\n    background-color:#e0e0e0!important;\n    z-index:99\n}\n.t120-titlebar{\n    position:relative;\n    left:20px;\n    width:95%;\n    margin-top:15px!important\n}\n.t120-bracelet1-wrapper{\n    margin-left:20px;\n    width:40%;\n    height:200px\n}\n.t120-bracelet1-wrapper img{\n    top:100px\n}\n.t120-bracelet1-wrapper h3{\n    position:absolute;\n    top:60px\n}\n.t120-bracelet2-wrapper{\n    margin-left:20px\n}\n.t120-bracelet2-wrapper img{\n    top:220px\n}\n.t120-bracelet2-wrapper h3{\n    position:absolute;\n    top:180px\n}\n.t120-bracelet-img{\n    position:absolute;\n    height:60px;\n    width:110px;\n    border:1px solid grey\n}\n.t120-size-table{\n    position:absolute;\n    font-family:inherit;\n    font-size:14px;\n    top:70px;\n    left:170px;\n    width:65%;\n    border-collapse:separate;\n    border-spacing:15px 0\n}\n.t120-size-table th{\n    font-weight:900\n}\n.t120-size-table td{\n    padding:0\n}\n.t120-table-spacer{\n    height:10px\n}\n.t120-necklace-container{\n    position:absolute;\n    top:50%;\n    -webkit-transform:translateY(-50%);\n    transform:translateY(-50%);\n    margin:0 auto;\n    left:0!important;\n    right:0;\n    height:470px!important;\n    width:390px!important;\n    border:2px solid #b3b3b7;\n    background-color:#e0e0e0!important;\n    z-index:99\n}\n.t120-necklace-img{\n    position:absolute;\n    left:20px;\n    width:260px;\n    height:370px;\n    border:1px solid grey\n}\n.t120-ring-container{\n    position:absolute;\n    top:50%;\n    -webkit-transform:translateY(-50%);\n    transform:translateY(-50%);\n    margin:0 auto;\n    left:0!important;\n    right:0;\n    height:360px!important;\n    width:450px!important;\n    border:2px solid #b3b3b7;\n    background-color:#e0e0e0!important;\n    z-index:99\n}\n.t120-ring-img{\n    position:absolute;\n    margin:0 auto;\n    left:0;\n    right:0;\n    width:420px;\n    height:230px;\n    border:1px solid grey;\n    top:110px\n}\n.t120-exit-button{\n    position:absolute;\n    top:5px;\n    right:5px;\n    height:40px;\n    width:40px;\n    border-radius:20px;\n    color:#000;\n    background-color:#fff;\n    cursor:pointer;\n    box-shadow:1px 1px 6px #888\n}\n.t120-exit-button p{\n    text-align:center;\n    font-weight:900;\n    font-size:32px;\n    -webkit-transform:translateY(-75%);\n    transform:translateY(-75%)\n}\n.subHeadline{\n    margin-left:20px;\n    width:90%\n}\n@media screen and (max-width:512px){\n    .t120-titlebar{\n        position:relative;\n        left:20px;\n        width:95%;\n        margin-top:20px!important;\n        font-size:15px\n    }\n    .t120-ring-container{\n        position:absolute;\n        top:50%;\n        -webkit-transform:translateY(-50%);\n        transform:translateY(-50%);\n        margin:0 auto;\n        left:0!important;\n        right:0;\n        height:310px!important;\n        width:310px!important;\n        border:2px solid #b3b3b7;\n        background-color:#e0e0e0!important;\n        z-index:99;\n        position:fixed\n    }\n    .t120-ring-img{\n        position:absolute;\n        margin:0 auto;\n        left:0;\n        right:0;\n        width:280px;\n        height:170px;\n        border:1px solid grey;\n        top:120px\n    }\n    .subHeadline{\n        font-size:11px\n    }\n    .t120-necklace-container{\n        position:absolute;\n        top:50%;\n        -webkit-transform:translateY(-50%);\n        transform:translateY(-50%);\n        margin:0 auto;\n        left:0!important;\n        right:0;\n        height:470px!important;\n        width:310px!important;\n        border:2px solid #b3b3b7;\n        background-color:#e0e0e0!important;\n        z-index:99;\n        position:fixed\n    }\n    .t120-bracelet-container{\n        position:absolute;\n        top:50%;\n        -webkit-transform:translateY(-50%);\n        transform:translateY(-50%);\n        margin:0 auto;\n        left:0!important;\n        right:0;\n        height:320px!important;\n        width:340px!important;\n        border:2px solid #b3b3b7;\n        background-color:#e0e0e0!important;\n        z-index:99;\n        position:fixed\n    }\n    .t120-size-table{\n        left:130px;\n        font-size:13px;\n        border-spacing:11px 0\n    }\n    .t120-size-table th{\n        font-weight:900\n    }\n    .t120-size-table td{\n        padding:0\n    }\n    .t120-table-spacer{\n        height:20px\n    }\n}\n@media screen and (max-width:340px){\n    .t120-bracelet-container{\n        position:absolute;\n        top:50%;\n        -webkit-transform:translateY(-50%);\n        transform:translateY(-50%);\n        margin:0 auto;\n        left:0!important;\n        right:0;\n        height:320px!important;\n        width:310px!important;\n        border:2px solid #b3b3b7;\n        background-color:#e0e0e0!important;\n        z-index:99;\n        position:fixed\n    }\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "label": "Script"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_closeButtonClass",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "All elements in the HTML creative with this class will act as a close button for the lightbox.",
+        "label": "Close Button Class"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_closeable",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Is the lightbox closeable by clicking on the overlay?",
+        "label": "Click Overlay to Close?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

@@ -1,0 +1,254 @@
+{
+  "id": 353925,
+  "title": "Sticky Closable HTML Banner (with Display Frequency)",
+  "description": "Inserts an HTML Banner that can be closed with a click and offers the option to specify an interval at which the image is displayed.",
+  "op": "statefulHTML",
+  "slot": "statefulHTML",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Any Page",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlstring",
+        "value": "<div class=\"stickypromofooter\">\n  <div style=\"text-align:center;line-height:76px;width:100%;height:100px;\">\n    <font style=\"letter-spacing:3px;\">\n      <strong>GET 15% OFF (THIS IS A INTERNAL TEST, DON&#39;T FREAK OUT)</strong>\n    </font>\n    <p style=\"margin-top:-55px;\">\n      <a href=\"https://www.offbroadwayshoes.com/women-shoes.cat\" style=\"color:#fff;\">SHOP WOMEN&#39;S &rsaquo;</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href=\"https://www.offbroadwayshoes.com/men-shoes.cat\" style=\"color:#fff;\">SHOP MEN&#39;S &rsaquo;</a>\n      &nbsp;&nbsp;| &nbsp;&nbsp;<a href=\"https://www.offbroadwayshoes.com/boys-shoes.cat\" style=\"color:#fff;\">SHOP BOYS&#39; &rsaquo;</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href=\"https://www.offbroadwayshoes.com/girls-shoes.cat\" style=\"color:#fff;\">SHOP GIRLS&#39; &rsaquo;</a>\n    </p>\n  </div>\n  <button class=\"closebtn\" onclick=\"this.parentNode.parentNode.style.display = 'none'\">&times;</button>\n</div>\n"
+      },
+      "widget": {
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "id",
+        "value": 2
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Enter a number from 0-31 only. If you want to group the display frequency of this banner with past/current Monetate banners and lightboxes, choose an ID that matches those banners and lightboxes. Otherwise, make sure the ID for this banner is unique from all other Monetate banners and lightboxes.",
+        "label": "ID"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "showInterval",
+        "value": "page"
+      },
+      "widget": {
+        "label": "How often (per user) should this lightbox be shown?",
+        "options": [
+          {
+            "name": "page",
+            "label": "Every page"
+          },
+          {
+            "name": "session",
+            "label": "Once per session"
+          },
+          {
+            "name": "30days",
+            "label": "Once per thirty days"
+          },
+          {
+            "name": "once",
+            "label": "Once, ever"
+          },
+          {
+            "name": "custominterval",
+            "label": "Once every 'X' days"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "How long until the this lightbox is shown again. Based on lightboxId.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "stateApp",
+        "value": "first"
+      },
+      "widget": {
+        "description": " For \"Every page\", it won't matter. For the other intervals, this setting determines when to stop showing the banner.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "first",
+            "label": "After the banner is first loaded"
+          },
+          {
+            "name": "close",
+            "label": "After the user closes the banner"
+          }
+        ],
+        "label": "When should the interval be applied?"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "sel",
+        "value": "main"
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "CssSelectorField",
+        "description": "Supports CSS3 and Sizzle syntax",
+        "label": "Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "last"
+      },
+      "widget": {
+        "description": "",
+        "action_visible": false,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "first",
+            "label": "First"
+          },
+          {
+            "name": "last",
+            "label": "Last"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Placement"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "closeClass",
+        "value": "closebtn"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "Enter the class of any close buttons in the banner html.",
+        "label": "Close Button Class"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_containerStyle",
+        "value": "background-color:#000;\ncolor:#fff;\nwidth:100%;\ntext-align:center;\nbottom:0;\nposition:fixed;\nz-index:995;\nheight:95px;"
+      },
+      "widget": {
+        "label": "Banner Container Style",
+        "type": "TextField",
+        "description": "Sets the cssText value of the banner container element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".closebtn {\n  -webkit-text-stroke: 1px #000;\n  background: transparent;\n  border: transparent;\n  color: #7B827F;\n  display: block;\n  font-family: \"Segoe UI\", \"Source Sans Pro\", Calibri, Candara, Arial, sans-serif;\n  font-size: 48px;\n  line-height: 48px;\n  margin: 0;\n  padding: 0 10px;\n  position: absolute;\n  right: 10px;\n  text-transform: none;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If more than one element matches the Element Selector, should the change apply to all elements or just the first one?",
+        "label": "Select All Elements"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_customInterval",
+        "value": null
+      },
+      "widget": {
+        "label": "Days until expiration",
+        "type": "IntegerField",
+        "description": "Days until the lightbox expires. Only to be used when 'Once every 'X' days' is selected from the frequency.",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

@@ -1,0 +1,31 @@
+.mt-promo-block {
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 30px;
+  position: relative;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    max-width: 480px;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  &__content {
+    display: inline-block;
+    margin: 0 auto;
+    width: auto;
+  }
+
+  &__heading {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 0;
+    text-align: left;
+  }
+
+  img {
+    padding-top: 5px !important;
+  }
+}

@@ -1,0 +1,18 @@
+.closebtn {
+  -webkit-text-stroke: 1px #000;
+  background: transparent;
+  //background: rgba(255, 0, 0, 0.4);
+  border: transparent;
+  color: #7B827F;
+  display: block;
+  font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  margin: 0;
+  padding: 0 10px;
+  position: absolute;
+  right: 10px;
+  text-transform: none;
+  top: 50%;
+  transform: translateY(-50%);
+}

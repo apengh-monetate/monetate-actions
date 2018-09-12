@@ -1,0 +1,91 @@
+// ==================================================================
+// SELECTORS
+// ==================================================================
+
+// CARTERS
+// #nav > li.baby-girl > div.subnav > div > div.column.promo
+// #nav > li.baby-boy > div.subnav > div > div.column.promo
+// #nav > li.toddler-girl > div.subnav > div > div.column.promo
+// #nav > li.toddler-boy > div.subnav > div > div.column.promo
+// #nav > li.kid-girl > div.subnav > div > div.column.promo
+// #nav > li.kid-boy > div.subnav > div > div.column.promo
+
+// OSHKOSH
+// #nav > li.baby-girl > div.subnav > div > div.column.promo
+// #nav > li.baby-boy > div.subnav > div > div.column.promo
+// #nav > li.toddler-girl > div.subnav > div > div.column.promo
+// #nav > li.toddler-boy > div.subnav > div > div.column.promo
+// #nav > li.girl-kid > div.subnav > div > div.column.promo
+// #nav > li.boy-kid > div.subnav > div > div.column.promo
+
+@import "../../mixins";
+
+$breakpoint: 1300px;
+
+// DEVELOPMENT
+// .baby-girl .subnav {
+//   display: block !important;
+// }
+// DEVELOPMENT
+
+.subnav .column.slots {
+  display: none !important;
+}
+
+.topCat:not(.shoes):not(.clearance) .subnav .column.first,
+.topCat:not(.shoes):not(.clearance) .subnav .column.firstRight {
+  @media screen and (min-width: $breakpoint) {
+    padding-left: 91px !important;
+    width: 251px !important;
+  }
+}
+
+.mt-menu {
+  //@include red-bg();
+  display: none;
+  @media screen and (min-width: $breakpoint) {
+    display: block;
+    // min-width: 475px;
+    //padding-left: 0 !important;
+    padding-right: 91px !important;
+    width: auto !important;
+  }
+
+  .sizelist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-family: Arial, sans-serif;
+    justify-content: flex-start;
+    margin: 0 auto;
+    margin-top: 12px;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    &__pod {
+      align-content: center;
+      align-items: center;
+      color: #444 !important;
+      display: inline-flex;
+      font-size: 14px;
+      height: 45px;
+      justify-content: center;
+      margin: 0 6px;
+      outline: 1px solid #444;
+      text-align: center;
+      text-decoration: none !important;
+      width: 45px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+
+
+  &__image {
+    display: block;
+    margin-top: 36px;
+  }
+}
+
