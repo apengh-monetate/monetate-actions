@@ -1,0 +1,8 @@
+.item-detail-qty[mt-qty="1"]:first-letter { font-size: 0px !important; }
+
+.mini-cart-item-qty[data-qty="1"] { color: red; }
+
+
+@media screen and (max-width: 639px) {
+  .item-detail-qty[mt-qty="1"] ~ .item-detail-total {text-align: left !important;}
+}

@@ -18,10 +18,10 @@
         "value": "<div class=\"column mt-menu\">\n  <h3 class=\"menuTitle\">Shop by Size</h3>\n\n  <div class=\"sizelist-wrapper\">\n    <div class=\"sizelist\">\n      <a href=\"#\" class=\"sizelist__pod\">P</a>\n      <a href=\"#\" class=\"sizelist__pod\">NB</a>\n      <a href=\"#\" class=\"sizelist__pod\">3M</a>\n      <a href=\"#\" class=\"sizelist__pod\">6M</a>\n      <a href=\"#\" class=\"sizelist__pod\">9M</a>\n      <a href=\"#\" class=\"sizelist__pod\">12M</a>\n      <a href=\"#\" class=\"sizelist__pod\">18M</a>\n      <a href=\"#\" class=\"sizelist__pod\">24M</a>\n    </div>\n  </div>\n\n  <div class=\"mt-menu__image\">\n    <a href=\"#\">\n      <img src=\"https://via.placeholder.com/415x200\" alt=\"\">\n    </a>\n  </div>\n\n</div>\n"
       },
       "widget": {
-        "action_visible": true,
+        "label": "HTML String",
         "type": "HtmlField",
         "description": "HTML to be inserted",
-        "label": "HTML String"
+        "action_visible": true
       },
       "required": true
     },
@@ -29,12 +29,10 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": null
+        "value": "#nav > li.kid-boy > div.subnav > div.subnav-categories"
       },
       "widget": {
-        "description": "CSS Selector to find the relative element.",
-        "action_visible": true,
-        "type": "StringSelectField",
+        "label": "Relative Element Selector",
         "options": [
           {
             "name": "#nav > li.baby-girl > div.subnav > div.subnav-categories",
@@ -69,7 +67,9 @@
             "label": "Oshkosh: Kid Boy"
           }
         ],
-        "label": "Relative Element Selector"
+        "type": "StringSelectField",
+        "description": "CSS Selector to find the relative element.",
+        "action_visible": true
       },
       "required": true
     },
@@ -80,7 +80,9 @@
         "value": "last"
       },
       "widget": {
-        "label": "Insert Method",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
         "options": [
           {
             "name": "after",
@@ -107,9 +109,7 @@
             "label": "Takeover"
           }
         ],
-        "type": "StringSelectField",
-        "description": "Where to insert the banner in relation to the Relative Element Selector.",
-        "action_visible": true
+        "label": "Insert Method"
       },
       "required": true
     },
@@ -120,10 +120,10 @@
         "value": null
       },
       "widget": {
-        "action_visible": false,
+        "label": "Banner Div Inline Style",
         "type": "TextField",
         "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
-        "label": "Banner Div Inline Style"
+        "action_visible": false
       },
       "required": false
     },
@@ -132,17 +132,17 @@
         "type": "flexible_creative",
         "name": "opt_styleSheet",
         "value": {
-          "content": ".subnav .column.slots {\n  display: none !important;\n}\n\n@media screen and (min-width: 1300px) {\n  .topCat:not(.shoes):not(.clearance) .subnav .column.first,\n  .topCat:not(.shoes):not(.clearance) .subnav .column.firstRight {\n    padding-left: 91px !important;\n    width: 251px !important;\n  }\n}\n\n.mt-menu {\n  display: none;\n}\n\n@media screen and (min-width: 1300px) {\n  .mt-menu {\n    display: block;\n    padding-right: 91px !important;\n    width: auto !important;\n  }\n}\n\n.mt-menu .sizelist {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: nowrap;\n      flex-wrap: nowrap;\n  font-family: Arial, sans-serif;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  margin: 0 auto;\n  margin-top: 12px;\n  padding: 0;\n  text-align: left;\n  width: 100%;\n}\n\n.mt-menu .sizelist__pod {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  color: #444 !important;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-size: 14px;\n  height: 45px;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin: 0 6px;\n  outline: 1px solid #444;\n  text-align: center;\n  text-decoration: none !important;\n  width: 45px;\n}\n\n.mt-menu .sizelist__pod:first-child {\n  margin-left: 0;\n}\n\n.mt-menu__image {\n  display: block;\n  margin-top: 36px;\n}\n",
+          "content": ".subnav .column.slots {\n  display: none !important;\n}\n\n@media screen and (min-width: 1300px) {\n  .topCat:not(.shoes):not(.clearance) .subnav .column.first,\n  .topCat:not(.shoes):not(.clearance) .subnav .column.firstRight {\n    padding-left: 91px !important;\n    width: 251px !important;\n  }\n}\n\n@media screen and (min-width: 1300px) {\n  .topCat:not(.shoes):not(.clearance) .subnav .column.promo {\n    border-right: 1px solid #f2f2f2 !important;\n  }\n}\n\n.mt-menu {\n  display: none;\n}\n\n@media screen and (min-width: 1300px) {\n  .mt-menu {\n    display: block;\n    padding-right: 91px !important;\n    width: auto !important;\n  }\n}\n\n.mt-menu .sizelist {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: nowrap;\n      flex-wrap: nowrap;\n  font-family: Arial, sans-serif;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  margin: 0 auto;\n  margin-top: 12px;\n  padding: 0;\n  text-align: left;\n  width: 100%;\n}\n\n.mt-menu .sizelist__pod {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  color: #444 !important;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-size: 14px;\n  height: 45px;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin: 0 6px;\n  outline: 1px solid #444;\n  text-align: center;\n  text-decoration: none !important;\n  width: 45px;\n}\n\n.mt-menu .sizelist__pod:first-child {\n  margin-left: 0;\n}\n\n.mt-menu__image {\n  display: block;\n  margin-top: 36px;\n}\n",
           "discriminator": "content",
           "ref": null,
           "type": "css"
         }
       },
       "widget": {
-        "action_visible": true,
+        "label": "CSS",
         "type": "CSSCodeField",
         "description": "CSS appended to the DOM in a <style> or <link> element.",
-        "label": "CSS"
+        "action_visible": true
       },
       "required": false
     },
@@ -153,10 +153,10 @@
         "value": false
       },
       "widget": {
-        "action_visible": false,
+        "label": "Select multiple elements, if matched?",
         "type": "BooleanField",
         "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
-        "label": "Select multiple elements, if matched?"
+        "action_visible": false
       },
       "required": false
     },
@@ -167,10 +167,10 @@
         "value": false
       },
       "widget": {
-        "action_visible": false,
+        "label": "Re-check for Elements",
         "type": "BooleanField",
         "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
-        "label": "Re-check for Elements"
+        "action_visible": false
       },
       "required": false
     }

@@ -1,5 +1,5 @@
 {
-  "id": 353883,
+  "id": 353884,
   "title": "MONETATE TEMPLATE - Move elements within mobile nav",
   "description": "MONETATE TEMPLATE - Move elements within mobile nav",
   "op": "moveNode",
@@ -13,7 +13,7 @@
       "input": {
         "type": "str",
         "name": "selA",
-        "value": "#navigation > nav > div.items-navigation > ul.items-navigation-links > li.baby-girl > div.subnav > div.subnav-categories > div.column.promo"
+        "value": "li.baby-girl div.column.promo"
       },
       "widget": {
         "action_visible": true,
@@ -27,7 +27,7 @@
       "input": {
         "type": "str",
         "name": "selB",
-        "value": "#navigation > nav > div.items-navigation > ul.items-navigation-links > li.baby-girl > div.subnav > div.subnav-categories > div.column.first > ul > li.menuTitle"
+        "value": "li.baby-girl li.mobilevisible.subcatheading"
       },
       "widget": {
         "action_visible": true,
@@ -41,7 +41,7 @@
       "input": {
         "type": "str",
         "name": "imeth",
-        "value": "before"
+        "value": "after"
       },
       "widget": {
         "label": "Insert Method",

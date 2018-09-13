@@ -40,6 +40,12 @@ $breakpoint: 1300px;
   }
 }
 
+.topCat:not(.shoes):not(.clearance) .subnav .column.promo {
+  @media screen and (min-width: $breakpoint) {
+    border-right: 1px solid #f2f2f2 !important;
+  }
+}
+
 .mt-menu {
   //@include red-bg();
   display: none;

@@ -10,6 +10,12 @@
   }
 }
 
+@media screen and (min-width: 1300px) {
+  .topCat:not(.shoes):not(.clearance) .subnav .column.promo {
+    border-right: 1px solid #f2f2f2 !important;
+  }
+}
+
 .mt-menu {
   display: none;
 }
