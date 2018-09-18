@@ -1,0 +1,1303 @@
+
+#shopping-cart-totals-table tbody tr td:first-of-type {
+  text-align: left !important
+}
+
+#shopping-cart-totals-table tbody tr td:last-of-type {
+  text-align: right !important
+}
+
+#shopping-cart-totals-table tbody tr td {
+  display: inline-block !important
+}
+
+.cart .discount form#discount-coupon-form label.required, .cart .discount>h2, .cart .giftcard form#ebay-enterprise-giftcard-form label.required, .cart .giftcard>h2, .cart div.validation-advice {
+  display: none !important
+}
+
+.checkout-cart-index .main .col-main .cart .cart-collaterals {
+  padding: 0 !important
+}
+
+.cart .deals {
+  padding: 20px 10px 0 !important
+}
+
+.checkout-cart-index .main .col-main .cart .checkout-types .button.btn-proceed-checkout {
+  margin-left: 0 !important
+}
+
+.cart .deals .input-text {
+  font-family: "Trade Gothic W01 Light" !important;
+  font-size: 10px !important;
+  margin: 0 !important;
+  text-align: center !important
+}
+
+.cart .ixisCartItem>.ixisCartItem_Table input {
+  background: #fff !important;
+  border: 1px solid #000 !important;
+  height: 20px !important;
+  line-height: 20px !important;
+  padding: 0 2px !important
+}
+
+.cart .totals .ixisCreditCards {
+  display: none !important;
+  margin: 10px 0 !important
+}
+
+.cart #ixisCreditCardsLine, .ixisCreditCardsImageWrapper {
+  display: flex !important;
+  justify-content: space-between !important
+}
+
+.cart #ixisCreditCardsLine {
+  align-items: center !important;
+  padding: 0 20px !important;
+  width: 100% !important
+}
+
+.ixisCreditCardsImageWrapper {
+  flex: 1 1 75% !important
+}
+
+.cart #ixisCreditCardsLine img {
+  height: 100% !important;
+  max-width: 40px !important;
+  width: 20% !important
+}
+
+@media only screen and (min-width:768px) {
+  .cart .totals>div.ixisCreditCards.we-accept {
+    display: inherit !important
+  }
+
+  .cart #ixisCreditCardsLine {
+    padding: 0 !important
+  }
+}
+
+.cart .totals ul.checkout-types {
+  float: right !important;
+  padding: 0 10px 10px !important
+}
+
+.cart .totals ul.checkout-types button {
+  background-color: #000 !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  width: 48% !important
+}
+
+.cart .totals ul.checkout-types button span {
+  width: 100% !important
+}
+
+.cart .totals ul.checkout-types button.btn-continue {
+  background-color: grey !important;
+  color: #fff !important
+}
+
+.checkout-cart-index .cart .totals .checkout-types li {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important
+}
+
+@media only screen and (min-width:768px) {
+  .checkout-cart-index .cart .totals .checkout-types li {
+    flex-direction: column !important
+  }
+
+  .cart .totals ul.checkout-types {
+    float: none !important
+  }
+
+  .cart .totals ul.checkout-types button {
+    margin: 10px 0 !important;
+    width: 100% !important
+  }
+
+  .cart .totals ul.checkout-types>li:first-of-type button:first-of-type {
+    order: 2 !important
+  }
+}
+
+@media only screen and (min-width:1045px) {
+  .cart .totals ul.checkout-types>li:first-of-type button:first-of-type {
+    order: inherit !important
+  }
+
+  .checkout-cart-index .cart .totals .checkout-types li {
+    flex-direction: row !important
+  }
+
+  .cart .totals ul.checkout-types button {
+    background-color: inherit !important;
+    margin: 0 !important;
+    text-align: center !important;
+    width: 49% !important
+  }
+
+  .cart .totals ul.checkout-types .btn-proceed-checkout span {
+    background-color: #000 !important
+  }
+
+  .cart .totals ul.checkout-types .btn-continue {
+    min-width: inherit !important
+  }
+
+  .cart .checkout-types button.button span span {
+    font-size: 11px !important
+  }
+}
+
+.cart form#ebay-enterprise-giftcard-form>div {
+  display: flex !important;
+  justify-content: space-between !important
+}
+
+.cart form#ebay-enterprise-giftcard-form>div ul {
+  align-items: center !important;
+  display: flex !important;
+  flex: 1 1 75% !important;
+  margin-right: 10px !important
+}
+
+.cart form#ebay-enterprise-giftcard-form .buttons-set, .cart form#ebay-enterprise-giftcard-form .form-list li {
+  margin: 0 !important
+}
+
+.cart form#ebay-enterprise-giftcard-form .form-list {
+  display: flex !important;
+  min-width: inherit !important;
+  width: 75% !important
+}
+
+.cart form#ebay-enterprise-giftcard-form input.input-text {
+  padding: 0 !important
+}
+
+.cart form#ebay-enterprise-giftcard-form .buttons-set button span span {
+  color: grey !important;
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 10px !important
+}
+
+.cart form#ebay-enterprise-giftcard-form label:first-of-type {
+  color: grey !important;
+  font-family: "Trade Gothic W01 Roman" !important;
+  font-size: 12px !important;
+  margin-bottom: 0 !important
+}
+
+.cart form#ebay-enterprise-giftcard-form .form-list li:first-of-type {
+  flex: 1 1 75% !important
+}
+
+.cart form#ebay-enterprise-giftcard-form .form-list li:last-of-type {
+  flex: 1 1 25% !important
+}
+
+.cart .deals form#ebay-enterprise-giftcard-form .form-list {
+  min-width: inherit !important
+}
+
+.cart form#ebay-enterprise-giftcard-form .buttons-set button.button span span {
+  background-color: grey !important;
+  color: #fff !important;
+  height: 30px !important;
+  min-width: inherit !important
+}
+
+@media only screen and (min-width:768px) {
+  .cart .deals form#ebay-enterprise-giftcard-form .buttons-set button span span {
+    padding: 9px 4px !important
+  }
+}
+
+.cart form#discount-coupon-form .v-fix {
+  align-items: center !important;
+  display: flex !important;
+  justify-content: space-between !important
+}
+
+.cart form#discount-coupon-form .v-fix .button span {
+  width: 100% !important
+}
+
+.cart form#discount-coupon-form .v-fix input {
+  flex: 1 1 60% !important;
+  padding: 0 !important;
+  width: 77% !important
+}
+
+.cart form#discount-coupon-form .v-fix .button {
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+  width: 75px !important
+}
+
+.cart .cart-collaterals .giftcard .buttons-set .button {
+  width: 75px !important
+}
+
+.cart form#discount-coupon-form fieldset label:first-of-type {
+  color: grey !important;
+  font-family: "Trade Gothic W01 Roman" !important;
+  font-size: 12px !important;
+  margin-bottom: 0 !important
+}
+
+.cart form#discount-coupon-form button {
+  margin-left: 10px !important
+}
+
+@media only screen and (min-width:768px) {
+  .cart form#discount-coupon-form .v-fix input {
+    width: 75% !important
+  }
+
+  .cart .deals form#discount-coupon-form .v-fix button span span {
+    font-size: 10px !important;
+    padding: 9px 4px !important
+  }
+}
+
+.ixisStandardShippingTableItem:hover {
+  text-decoration: underline !important
+}
+
+.cart .ixisCartItem {
+  border-bottom: solid 11px #f8f8f8 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  padding: 25px 0 !important
+}
+
+.cart .ixisCartItem:last-of-type {
+  border-bottom: none !important
+}
+
+.cart .ixisCartItem .ixisCartItem_Mobile .placeHolder {
+  display: none !important
+}
+
+.cart .ixisCartItem .ixisCartItem_Header_ButtonWrapper {
+  align-items: flex-end !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  max-width: 50px !important
+}
+
+.cart .ixisCartItem>.ixisCartItem_Table {
+  display: flex !important
+}
+
+.cart .ixisCartItem_Desktop {
+  display: none !important
+}
+
+.cart .ixisCartItem_Mobile {
+  display: flex !important;
+  flex: 1 1 50% !important;
+  flex-direction: column !important
+}
+
+.cart .ixisCartItem a.product-image, .owl-item a.product-image {
+  flex: 0 1 45% !important;
+  max-width: 180px !important;
+  padding-right: 10px !important
+}
+
+.cart .ixisCartItem .btn-edit, .cart .ixisCartItem .ixisCartItem_Header_ButtonWrapper a.btn-edit.btn-mob {
+  max-width: 50px !important;
+  text-align: center !important;
+  width: 100% !important
+}
+
+.cart .ixisCartItem_Header {
+  display: flex !important;
+  flex: 1 1 80% !important;
+  justify-content: space-between !important
+}
+
+.cart .ixisCartItem_Header .ixisCartItem_Header_ButtonWrapper a.btn-remove2 {
+  border: 0 !important;
+  color: grey !important;
+  font-family: "Trade Gothic W01 Roman" !important;
+  font-size: 15px !important;
+  margin: -6px 0 3px !important;
+  min-width: inherit !important;
+  padding: 0 10px 0 0 !important
+}
+
+.cart .ixisCartItem .placeHolder, .ixisCartItem_Table label {
+  border-bottom: solid 1px #f2f2f2 !important;
+  height: 21px !important
+}
+
+.cart .ixisCartItem_Details {
+  display: flex !important;
+  flex: 1 1 50% !important;
+  flex-direction: column !important;
+  justify-content: center !important
+}
+
+.cart .ixisCartItem_Mobile .ixisCartItem_Details {
+  flex: 1 1 40% !important
+}
+
+.cart .ixisCartItem_Details span.btn-edit {
+  display: none !important
+}
+
+@media only screen and (min-width:768px) {
+  .cart .ixisCartItem_Details span.btn-edit {
+    display: inline-block !important
+  }
+}
+
+.ixisCartItem_Mobile .ixisCartItem_Details, .ixisCartItem_Mobile .ixisCartItem_Header {
+  flex: none !important
+}
+
+.cart .ixisCartItem .ixisCartItem_Details .item-options {
+  margin: 0 0 5px !important
+}
+
+.cart .ixisCartItem .ixisCartItem_Details .item-options dt {
+  color: #6a6a6a !important;
+  font-size: 11px !important;
+  margin-right: 5px !important;
+  padding: 0 !important;
+  text-transform: lowercase !important
+}
+
+.cart .ixisCartItem .ixisCartItem_Details .item-options dd {
+  color: #000 !important;
+  font-size: 11px !important;
+  padding: 0 !important;
+  text-transform: lowercase !important
+}
+
+.cart .ixisCartItem .ixisCartItem_Header_ButtonWrapper a.btn-edit.btn-mob {
+  background-color: grey !important;
+  color: #fff !important;
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 10px !important;
+  margin-left: 0 !important;
+  min-width: inherit !important;
+  padding: 5px !important
+}
+
+.cart .ixisCartItem .ixisCartItem_Table {
+  display: flex !important;
+  flex: 0 1 100% !important;
+  flex-wrap: wrap !important;
+  margin-top: 10px !important
+}
+
+.cart .ixisCartItem .ixisCartItem_Desktop .ixisCartItem_Table {
+  flex: 0 1 60% !important;
+  justify-content: space-between !important
+}
+
+.ixisCartItem_Table label {
+  flex: 0 1 30% !important;
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 11px !important;
+  margin-bottom: 7px !important;
+  min-height: 20px !important;
+  padding-bottom: 2px !important;
+  text-align: center !important
+}
+
+.ixisCartItem_Table label:first-of-type {
+  flex: 1 1 30% !important;
+  text-align: left !important
+}
+
+.ixisCartItem_Table label:last-of-type {
+  flex: 0 1 40% !important;
+  text-align: right !important
+}
+
+.cart .ixisCartItem_Table .cart-price {
+  flex: 0 1 30% !important;
+  text-align: center !important
+}
+
+.cart .ixisCartItem_Table .cart-price:last-of-type {
+  flex: 0 1 40% !important;
+  text-align: right !important
+}
+
+.cart .ixisCartItem_Table div {
+  align-items: center !important;
+  display: flex !important;
+  flex: 0 1 30% !important;
+  justify-content: flex-start !important
+}
+
+.cart .ixisCartItem .placeHolder {
+  width: 100% !important
+}
+
+.cart .ixisCartItem_Table div a.btn-remove, .cart .ixisCartItem_Table div button span span {
+  border: none !important;
+  color: grey !important;
+  font-family: "Trade Gothic W01 Light" !important;
+  padding: 0 !important;
+  text-decoration: underline !important;
+  text-transform: lowercase !important
+}
+
+.cart .ixisCartItem_Table div button span span {
+  font-size: 10px !important
+}
+
+.cart .ixisCartItem_Table div a.btn-remove {
+  font-size: 11px !important;
+  margin: 0 !important;
+  min-width: inherit !important
+}
+
+.cart .ixisCartItem_Table div a.btn-remove, .cart .ixisCartItem_Table div button {
+  flex: 0 1 40% !important
+}
+
+.cart .ixisCartItem_Table div input {
+  padding: 0 !important;
+  text-align: center !important;
+  width: inherit !important
+}
+
+.cart .ixisCartItem .ixisCartItem_Header_NameWrapper {
+  flex: 1 1 90% !important;
+  padding-right: 0 !important
+}
+
+@media only screen and (min-width:768px) {
+  .cart .ixisCartItem {
+    flex-wrap: nowrap !important
+  }
+
+  .cart .ixisCartItem .ixisCartItem_Header_ButtonWrapper {
+    flex: 1 1 10% !important
+  }
+
+  .cart .ixisCartItem:last-of-type {
+    border-bottom: solid 11px #f8f8f8 !important
+  }
+
+  .cart .ixisCartItem a.product-image, .owl-item a.product-image {
+    flex: 1 1 31% !important;
+    padding-right: 18px !important
+  }
+
+  .cart .ixisCartItem_Desktop {
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    display: flex !important;
+    flex: 1 1 71%;
+    flex-wrap: wrap !important
+  }
+
+  .cart .ixisCartItem_Desktop .ixisCartItem_Header {
+    flex: 0 1 100% !important
+  }
+
+  .cart .ixisCartItem_Header h2.product-name {
+    width: 90% !important
+  }
+
+  .cart .ixisCartItem_Header .ixisCartItem_Header_ButtonWrapper a.btn-remove2 {
+    font-size: 18px !important
+  }
+
+  .cart .ixisCartItem .ixisCartItem_Details {
+    display: flex !important;
+    flex: 0 1 50% !important;
+    flex-direction: column !important
+  }
+
+  .cart .ixisCartItem .ixisCartItem_Desktop .ixisCartItem_Details {
+    flex: 0 1 40% !important
+  }
+
+  .cart .ixisCartItem_Desktop .ixisCartItem_Table {
+    align-items: flex-start !important;
+    align-self: flex-start !important;
+    display: flex !important;
+    flex: 0 1 50% !important;
+    height: 30% !important;
+    margin: 0 !important
+  }
+
+  .cart .ixisCartItem_Details h3.style-number {
+    font-family: "Trade Gothic W01 Light" !important;
+    font-size: 12px !important;
+    padding-bottom: 5px !important
+  }
+
+  .cart .ixisCartItem_Details dd, .cart .ixisCartItem_Details dt, .cart .ixisCartItem_Table button span span, .cart .ixisCartItem_Table label {
+    font-size: 12px !important
+  }
+
+  .cart .ixisCartItem_Table .cart-price, .cart .ixisCartItem_Table>div {
+    flex: 0 1 30% !important
+  }
+
+  .cart .ixisCartItem_Table>div {
+    align-items: flex-start !important;
+    display: flex !important;
+    flex-direction: column !important
+  }
+}
+
+@media only screen and (min-width:960px) {
+  .cart .ixisCartItem .ixisCartItem_Details span.cart-price .price {
+    font-size: 15px !important
+  }
+
+  .cart .ixisCartItem .ixisCartItem_Details .item-options dd, .cart .ixisCartItem .ixisCartItem_Details .item-options dt, .cart .ixisCartItem_Table div button span span {
+    font-size: 13px !important
+  }
+
+  .cart .ixisCartItem_Table .cart-price .price {
+    font-size: 15px !important
+  }
+}
+
+.ixisCartItem .ixisCartItem_Header_NameWrapper h2 a, .owl-item .product-name-wrapper a {
+  font-family: "Trade Gothic W01 Light" !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important
+}
+
+.ixisCartItem .ixisCartItem_Header_NameWrapper h3, .owl-item h4 {
+  color: #b3b3b3 !important;
+  font-family: "Trade Gothic W01 Light" !important;
+  font-size: 11px !important
+}
+
+.ixisCartItem .ixisCartItem_Details .item-options dd, .ixisCartItem .ixisCartItem_Details .item-options dt {
+  font-family: "Trade Gothic W01 Light" !important;
+  font-size: 11px !important
+}
+
+.ixisCartItem .ixisCartItem_Table label, .owl-item .table-wrapper label {
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 11px !important
+}
+
+.ixisCartItem .ixisCartItem_Table input.input-text {
+  font-family: "Trade Gothic W01 Bold" !important;
+  font-size: 12px !important;
+  max-width: 45px !important
+}
+
+.ixisCartItem .ixisCartItem_Table button span span {
+  font-family: "Trade Gothic W01 Light" !important;
+  font-size: 12px !important
+}
+
+.ixisCartItem .btn-remove.btn-edit {
+  background-color: grey !important;
+  color: #fff !important;
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 10px !important;
+  margin: 0 !important;
+  min-width: inherit !important;
+  padding: 4px 5px !important;
+  width: inherit !important
+}
+
+.ixisCartItem .ixisCartItem_Table .cart-price .price, .owl-item .table-wrapper .price {
+  font-family: "Trade Gothic W01 Light" !important;
+  font-size: 13px !important
+}
+
+.ixisCartItem .ixisCartItem_Table .cart-price:last-of-type .price {
+  font-family: "Trade Gothic W01 Bold 2" !important
+}
+
+.cart #shopping-cart-totals-table tbody h1 {
+  font-family: "Trade Gothic W01 Roman" !important;
+  font-size: 20px !important
+}
+
+.cart #shopping-cart-totals-table tbody tr h1 {
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 18px !important
+}
+
+.cart #shopping-cart-totals-table tbody tr td:first-of-type {
+  font-family: "Trade Gothic W01 Roman" !important;
+  font-size: 12px !important
+}
+
+.cart #shopping-cart-totals-table tbody tr td:last-of-type span {
+  font-family: "Trade Gothic W01 Roman" !important;
+  font-size: 13px !important
+}
+
+.cart .discount label, .cart .giftcard label {
+  font-family: "Trade Gothic W01 Roman" !important;
+  font-size: 12px !important
+}
+
+.cart .buttons-set button.button span span, .cart .v-fix .button span span {
+  background-color: grey !important;
+  color: #fff !important;
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 9px !important;
+  min-width: inherit !important;
+  width: 75px !important
+}
+
+.cart .totals>div:not(.we-accept) h2, .cart .totals>div:not(.we-accept) p {
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 19px !important
+}
+
+.cart .totals ul.checkout-types button span span {
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 10px !important;
+  padding: 0 !important
+}
+
+#ebay-enterprise-giftcard-form .buttons-set button * {
+  width: 100% !important
+}
+
+@media only screen and (min-width:768px) {
+  .ixisCartItem .ixisCartItem_Header_NameWrapper h2 a, .owl-item .product-name-wrapper a {
+    font-size: 13px !important;
+    text-decoration: none !important
+  }
+
+  .ixisCartItem .ixisCartItem_Details .item-options dd, .ixisCartItem .ixisCartItem_Details .item-options dt, .ixisCartItem .ixisCartItem_Table label, .owl-item .table-wrapper label {
+    font-size: 12px !important
+  }
+
+  .ixisCartItem .ixisCartItem_Table input.input-text {
+    font-size: 13px !important
+  }
+
+  .cart #shopping-cart-totals-table tbody h1 {
+    font-size: 19px !important
+  }
+
+  .cart .totals ul.checkout-types button span span {
+    font-size: 11px !important
+  }
+}
+
+@media only screen and (min-width:960px) {
+  .ixisCartItem .ixisCartItem_Header_NameWrapper h2 a, .owl-item .product-name-wrapper a {
+    font-size: 16px !important;
+    text-decoration: none !important
+  }
+
+  .ixisCartItem .ixisCartItem_Details .item-options dd, .ixisCartItem .ixisCartItem_Details .item-options dt, .ixisCartItem .ixisCartItem_Header_NameWrapper h3, .owl-item h4 {
+    font-size: 13px !important
+  }
+
+  .ixisCartItem .ixisCartItem_Table input.input-text {
+    font-size: 16px !important
+  }
+
+  .ixisCartItem .ixisCartItem_Table button span span {
+    font-size: 13px !important
+  }
+
+  .ixisCartItem .btn-remove.btn-edit {
+    font-size: 11px !important
+  }
+
+  .ixisCartItem .ixisCartItem_Table .cart-price .price, .owl-item .table-wrapper .price {
+    font-size: 15px !important
+  }
+
+  .cart #shopping-cart-totals-table tbody h1 {
+    font-size: 22px !important
+  }
+
+  .cart #shopping-cart-totals-table tbody tr td:last-of-type span {
+    font-size: 15px !important
+  }
+
+  .cart .totals>div:not(.we-accept) h2, .cart .totals>div:not(.we-accept) p {
+    font-size: 20px !important
+  }
+}
+
+.cart .ixisHelp {
+  display: none !important
+}
+
+.cart .ixisHelpMobile {
+  float: left !important;
+  margin-bottom: 20px !important;
+  padding: 0 20px !important;
+  width: 100% !important
+}
+
+.cart .ixisHelpMobile a {
+  text-align: left !important;
+  text-decoration: none !important
+}
+
+.cart .ixisHelpMobile a:nth-of-type(2) {
+  text-align: right !important;
+  text-decoration: none !important
+}
+
+.cart .ixisHelpMobile h1 {
+  font-family: "Trade Gothic W01 Roman" !important;
+  font-size: 20px !important
+}
+
+.cart .ixisHelp p a, .cart .ixisHelpMobile p, .cart .ixisHelpMobile p a {
+  font-family: "Trade Gothic W01 Light" !important;
+  font-size: 16px !important
+}
+
+.cart .ixisHelp p a, .cart .ixisHelpMobile p a {
+  font-weight: 700
+}
+
+.cart #ixisCreditCardsLine p.we-accept, .cart .ixisHelpMobile>div>a {
+  font-family: "Trade Gothic W01 Light" !important;
+  font-size: 11px !important
+}
+
+.cart .ixisHelpMobile div {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  margin: 20px 0 !important
+}
+
+.cart .ixisHelpMobile>div>a {
+  flex: 1 1 50% !important
+}
+
+.cart #ixisCreditCardsLine p.we-accept {
+  flex: 1 1 25% !important
+}
+
+.cart .ixisHelp br {
+  display: inherit !important
+}
+
+@media only screen and (min-width:768px) {
+  .cart .ixisHelpMobile {
+    display: none !important
+  }
+
+  .cart .ixisHelp {
+    background-color: #fff !important;
+    clear: right !important;
+    display: inherit !important;
+    float: right !important;
+    margin-top: 31px !important;
+    padding: 0 10px !important;
+    width: 100% !important
+  }
+
+  .cart .ixisHelp h1 {
+    font-family: "Trade Gothic W01 Roman" !important;
+    font-size: 22px !important
+  }
+
+  .cart .ixisHelp p, .cart .ixisHelp>div>a {
+    font-family: "Trade Gothic W01 Light" !important
+  }
+
+  .cart .ixisHelp p {
+    font-size: 15px !important
+  }
+
+  .cart .ixisHelp a {
+    text-align: center !important;
+    text-decoration: none !important
+  }
+
+  .cart .ixisHelp>div {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    margin-top: 25px !important
+  }
+
+  .cart .ixisHelp>div>a {
+    flex: 1 1 50% !important;
+    font-size: 12px !important
+  }
+}
+
+@media only screen and (min-width:960px) {
+  .cart .ixisHelp p {
+    font-size: 17px !important
+  }
+
+  .cart .ixisHelp div a {
+    font-size: 13px !important
+  }
+
+  .cart .ixisHelp br {
+    display: none !important
+  }
+}
+
+.cart .owl-controls {
+  display: none !important
+}
+
+.cart .owl-item>.item, .cart .owl-item>.item div>ul, .cart .owl-wrapper {
+  display: flex !important
+}
+
+.cart .owl-wrapper {
+  flex-direction: column !important;
+  width: inherit !important
+}
+
+.cart .owl-item[style] {
+  border-bottom: solid 11px #f8f8f8 !important;
+  height: 50% !important;
+  margin: 12px 0 !important;
+  padding: 17px 0 !important;
+  width: inherit !important
+}
+
+.cart .owl-item .item .owl-item_placeholder {
+  display: none !important
+}
+
+.cart .owl-item .item div>ul li, .cart .owl-item .item div>ul li:last-of-type {
+  display: flex !important;
+  flex: 1 1 25% !important;
+  flex-direction: column !important
+}
+
+.cart .owl-item>.item .product-name-wrapper {
+  margin-bottom: 20px !important
+}
+
+.cart .owl-item .item>div>div ul li div, .cart .owl-item .price-block {
+  border-top: solid 1px #f2f2f2 !important;
+  padding-top: 5px !important;
+  text-align: left !important
+}
+
+.cart .owl-item .item>div {
+  display: flex !important;
+  flex: 0 1 75% !important;
+  flex-direction: column !important;
+  padding-left: 15px !important
+}
+
+.cart .owl-item div label {
+  margin-bottom: 5px !important;
+  min-height: 20px !important;
+  text-align: left !important;
+  text-transform: uppercase !important
+}
+
+.cart .cart-banner, .cart>.page-title {
+  margin-bottom: 0 !important
+}
+
+.cart .ixisItemsInCartPageTitle, .cart>.page-title, .cart>.page-title h1, .opc-wrapper .page-title {
+  text-align: center !important
+}
+
+.cart .owl-item div span:not(.price) {
+  display: none !important
+}
+
+.ixisSuggestedProductMobileAddToCart {
+  background-color: grey !important;
+  color: #fff !important;
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 10px !important;
+  max-width: 110px !important;
+  padding: 5px 10px !important;
+  text-align: center !important;
+  text-decoration: none !important
+}
+
+@media only screen and (min-width:768px) {
+  .cart .owl-item .item>div>div ul li div, .cart .owl-item .price-block, .cart .owl-item div label {
+    text-align: center !important
+  }
+
+  .cart .owl-item .item .owl-item_placeholder {
+    display: flex !important;
+    flex: 1 1 64% !important;
+    flex-direction: column !important
+  }
+
+  .cart .owl-item div span:not(.price) {
+    background-color: grey !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    display: block !important;
+    font-family: "Trade Gothic W01 Bold 2" !important;
+    font-size: 10px !important;
+    max-width: 110px !important;
+    padding: 5px 0 !important;
+    text-align: center !important
+  }
+}
+
+.cart #shopping-cart-table tfoot {
+  display: none !important
+}
+
+.checkout-cart-index .main {
+  padding: 0 !important
+}
+
+.cart>.page-title {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  margin-top: 0 !important;
+  min-height: 70px !important
+}
+
+.cart>.page-title h1 {
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 20px !important;
+  margin-top: 10px !important
+}
+
+.cart .totals .ixisCreditCardWrapper, .cart .totals>div:first-of-type {
+  display: none !important
+}
+
+.cart .ixisItemsInCartPageTitle {
+  font-family: "Trade Gothic W01 Light" !important;
+  font-size: 14px !important
+}
+
+.cart .ixisEstimatedTotalHeader {
+  align-items: flex-start !important;
+  background-color: #f8f8f8 !important;
+  border-bottom: solid 3px #000 !important;
+  display: flex !important;
+  height: 62px !important;
+  justify-content: space-between !important;
+  padding: 0 20px !important;
+  text-align: left !important
+}
+
+.cart .ixisEstimatedTotalHeader h3 {
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 20px !important
+}
+
+.cart .ixisEstimatedTotalHeader p {
+  color: grey !important;
+  font-family: "Trade Gothic W01 Light" !important;
+  font-size: 11px !important
+}
+
+.ixisStickyCheckout p, .ixisStickyCheckout_FirstWord {
+  font-size: 12px !important
+}
+
+.ixisCartNav {
+  display: none !important
+}
+
+.cart .cart-collaterals .v-fix .validation-advice {
+  text-transform: capitalize !important;
+  width: inherit !important
+}
+
+.cart .cart-collaterals .deals #shopping-cart-totals-table, .ixisStickyCheckout {
+  width: 100% !important
+}
+
+.cart .input.input-text {
+  height: inherit !important
+}
+
+.ixisStickyCheckout {
+  border-top: solid 2px #000 !important;
+  bottom: 0 !important;
+  position: fixed !important;
+  text-align: left !important;
+  z-index: 33 !important
+}
+
+.ixisStickyCheckout p {
+  background-color: #fff !important;
+  font-family: "Trade Gothic W01 Light" !important;
+  padding: 3px 20px !important
+}
+
+.ixisStickyCheckout div a, .ixisStickyCheckout div span, .ixisStickyCheckout_FirstWord {
+  font-family: "Trade Gothic W01 Bold 2" !important
+}
+
+.ixisStickyCheckout div {
+  align-items: center !important;
+  background-color: #f8f8f8 !important;
+  display: flex !important;
+  height: 48px !important;
+  justify-content: space-between !important;
+  padding: 0 20px !important
+}
+
+.ixisStickyCheckout div span {
+  font-size: 20px !important
+}
+
+.ixisStickyCheckout div a {
+  background-color: #000 !important;
+  color: #fff !important;
+  font-size: 10px !important;
+  padding: 10px 20px !important;
+  text-decoration: none !important
+}
+
+.cart .totals #shopping-cart-totals-table tbody tr:first-of-type td, .cart .totals #shopping-cart-totals-table tbody tr:first-of-type td span {
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 20px !important
+}
+
+.cart .cart-collaterals #ebay_enterprise_giftcard_code, .cart .cart-collaterals #ebay_enterprise_giftcard_pin {
+  text-align: center !important
+}
+
+.cart .cart-collaterals {
+  border-top: solid 1px #727070 !important
+}
+
+.cart form#cart-form tbody {
+  padding: 0 20px !important
+}
+
+.cart .totals #shopping-cart-totals-table {
+  margin-right: 0 !important
+}
+
+.cart .totals #shopping-cart-totals-table tbody tr, .cart .totals #shopping-cart-totals-table tfoot {
+  display: none !important
+}
+
+.cart .totals #shopping-cart-totals-table tbody tr:first-of-type {
+  display: flex !important;
+  justify-content: space-between !important;
+  padding-left: 10px !important
+}
+
+.cart .totals #shopping-cart-totals-table tbody tr:first-of-type td {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  text-align: left !important
+}
+
+.cart .totals #shopping-cart-totals-table tbody tr:first-of-type td span:not(.price) {
+  color: grey !important;
+  font-family: "Trade Gothic W01 Light" !important;
+  font-size: 11px !important
+}
+
+.cart .cart-collaterals .deals #shopping-cart-totals-table tbody tr {
+  display: flex !important;
+  justify-content: space-between !important;
+  margin: 12px 0 !important
+}
+
+.cart .cart-collaterals .deals #shopping-cart-totals-table tfoot {
+  display: none !important
+}
+
+.cart .cart-collaterals, .cart .totals {
+  background-color: #f8f8f8 !important
+}
+
+.totals .desktopDetails {
+  margin-bottom: 20px !important
+}
+
+.cart .giftcard {
+  border-bottom: solid #000 !important;
+  padding-bottom: 13px !important;
+  z-index: inherit !important
+}
+
+.cart .checkout-types button.button span span {
+  color: #fff !important;
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 10px !important
+}
+
+.cart .checkout-types button.btn-checkout span span {
+  color: #fff !important
+}
+
+.cart .crosssell {
+  margin-bottom: 50px !important;
+  margin-top: 40px !important;
+  padding: 0 20px !important
+}
+
+.cart .crosssell h2 {
+  font-family: "Trade Gothic W01 Bold 2" !important;
+  font-size: 12px !important
+}
+
+@media only screen and (min-width:768px) {
+  .cart .ixisCartItem>.ixisCartItem_Table, .cart .ixisCartItem_Mobile, .cart .ixisCustomerServiceHeader, .cart .ixisEstimatedTotalHeader, .cart>.ixisCreditCards, .ixisStickyCheckout, .ixisSuggestedProductMobileAddToCart, .totals #shopping-cart-totals-table {
+    display: none !important
+  }
+
+  .checkout-cart-index .main {
+    padding: 0 20px !important
+  }
+
+  .ixisCartNav {
+    clear: both !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-bottom: 35px !important
+  }
+
+  .ixisCartNav_ContinueShopping {
+    font-family: TradeGothicW01-LightObl !important;
+    font-size: 11px !important;
+    padding-right: 40px !important;
+    text-decoration: none !important
+  }
+
+  .cart .cart-collaterals h1, .cart .totals {
+    padding: 0 !important
+  }
+
+  .cart .giftcard .buttons-set button.button span span, .cart .v-fix .button span span {
+    width: inherit !important
+  }
+
+  .cart .cart-collaterals, .cart .totals {
+    border-left: 0 !important;
+    border-top: 0 !important;
+    float: right !important;
+    width: 100% !important
+  }
+
+  .cart form#cart-form tfoot tr {
+    display: flex !important;
+    justify-content: space-between !important
+  }
+
+  .cart .cart .totals table tfoot strong {
+    font-size: 19px !important;
+    text-align: left !important
+  }
+
+  .cart .orderSumamryWrapper>div h3 {
+    font-family: "Trade Gothic W01 Roman" !important;
+    font-size: 12px !important
+  }
+
+  .cart .orderSumamryWrapper>div p {
+    font-family: "Trade Gothic W01 Roman" !important;
+    font-size: 13px !important
+  }
+
+  .cart .totals div.ixisCreditCards, .cart .totals>div:first-of-type {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 0 10px !important
+  }
+
+  #ixisStickyOrderSummary {
+    float: right !important;
+    position: sticky !important;
+    top: 119px !important;
+    width: 35% !important
+  }
+
+  .cart .crosssell {
+    clear: left !important;
+    float: none !important;
+    margin: 50px 0 !important;
+    padding: 0 !important;
+    width: 62% !important
+  }
+
+  .checkout-cart-index .main .col-main .cart-outer {
+    margin-bottom: 40px !important;
+    min-height: 330px !important;
+    width: 62% !important
+  }
+}
+
+@media only screen and (min-width:960px) {
+  .cart .deals .input-text {
+    font-size: 12px !important;
+    margin: 0 !important
+  }
+
+  .cart .cart-collaterals h1 {
+    font-size: 22px !important
+  }
+
+  .cart .orderSumamryWrapper>div p {
+    font-size: 15px !important
+  }
+}
+
+.footer-container {
+  margin-top: 20px !important
+}
+
+@media only screen and (min-width:768px) {
+  .footer-container {
+    margin-bottom: inherit !important;
+    margin-top: inherit !important
+  }
+}
+
+.cart .cart-table .cart-backorderdate {
+  margin-top: 0 !important
+}
+
+.cart .crosssell h2 {
+  border-bottom: 2px solid #000 !important;
+  display: inline-block !important;
+  margin-bottom: -2px !important;
+  margin-top: 3px !important
+}
+
+.cart .crosssell>div:first-of-type {
+  border-bottom: 2px solid #939598 !important
+}
+
+.footer-container {
+  margin-bottom: 103px !important;
+}
+
+.LPMcontainer.LPMoverlay {
+  bottom: 74px !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .LPMcontainer.LPMoverlay {
+    bottom: inherit !important;
+  }
+}

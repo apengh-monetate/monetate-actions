@@ -1,5 +1,5 @@
 {
-  "id": 353907,
+  "id": 355385,
   "title": "MONETATE - Move PDP thumbnail images to left of main image",
   "description": "Move PDP thumbnail images to left of main image",
   "op": "insertCSS",
@@ -14,7 +14,7 @@
         "type": "flexible_creative",
         "name": "styleSheet",
         "value": {
-          "content": "@media screen and (min-width: 1025px) {\n  #product-image_imageViewContainer[style*=\"relative\"] ~ #product-image_swatches.s7swatches {\n    float: left !important;\n    height: 100% !important;\n    left: -96px;\n    position: absolute !important;\n    top: 0;\n    width: 96px !important;\n  }\n  #product-image_imageViewContainer[style*=\"relative\"] ~ #product-image_swatches.s7swatches > div {\n    height: auto !important;\n    left: initial !important;\n    overflow: visible !important;\n    position: relative !important;\n    top: initial !important;\n    width: 100% !important;\n  }\n  #product-image_imageViewContainer[style*=\"relative\"] ~ #product-image_swatches.s7swatches > div > div {\n    height: auto !important;\n    left: 0 !important;\n    position: relative !important;\n    width: 100% !important;\n  }\n  #product-image_imageViewContainer[style*=\"relative\"] ~ #product-image_swatches.s7swatches .s7thumbcell {\n    display: block;\n    float: left;\n    left: initial !important;\n    margin-bottom: 10px !important;\n    position: relative !important;\n    top: initial !important;\n  }\n  #product-image_imageViewContainer[style*=\"relative\"] ~ #product-image_swatches.s7swatches .s7thumb {\n    background-size: contain;\n    display: block;\n    width: 96px !important;\n  }\n}\n",
+          "content": "@media screen and (min-width: 1025px) {\n  #product-image_imageViewContainer[style*=\"relative\"] ~ #product-image_swatches.s7swatches {\n    float: left !important;\n    height: 100% !important;\n    left: -96px;\n    position: absolute !important;\n    top: 0;\n    width: 96px !important;\n  }\n  #product-image_imageViewContainer[style*=\"relative\"] ~ #product-image_swatches.s7swatches > div {\n    height: auto !important;\n    left: 0 !important;\n    overflow: visible !important;\n    position: relative !important;\n    top: 0 !important;\n    width: 100% !important;\n  }\n  #product-image_imageViewContainer[style*=\"relative\"] ~ #product-image_swatches.s7swatches > div > div {\n    height: auto !important;\n    left: 0 !important;\n    position: relative !important;\n    width: 100% !important;\n  }\n  #product-image_imageViewContainer[style*=\"relative\"] ~ #product-image_swatches.s7swatches .s7thumbcell {\n    display: block;\n    float: left;\n    left: 0 !important;\n    margin-bottom: 10px !important;\n    position: relative !important;\n    top: 0 !important;\n  }\n  #product-image_imageViewContainer[style*=\"relative\"] ~ #product-image_swatches.s7swatches .s7thumb {\n    background-size: contain;\n    display: block;\n    width: 96px !important;\n  }\n}\n",
           "discriminator": "content",
           "ref": null,
           "type": "css"
@@ -37,7 +37,7 @@
         "values": [
           "product"
         ],
-        "id": 203485,
+        "id": 204104,
         "rule_tmpl": {
           "widget": "itemlist",
           "description": null,

@@ -1,0 +1,29 @@
+.mt-image {
+  margin-top: 0.5rem;
+  max-height: 31.5rem;
+  max-width: 15.25rem;
+  min-height: 31.5rem;
+  min-width: 14.25rem;
+  z-index: 1;
+}
+
+
+nav > ul > li > ul[aria-label="Accessories"] > div  {
+  display: none;
+  z-index: 1;
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-top: 8px;
+    max-height: 1200px;
+    max-width: 244px;
+    min-height: 600px;
+    min-width: 228px;
+  }
+  @media screen and (min-width: 1025px) {
+    max-height: 504px;
+    max-width: 244px;
+    min-height: 504px;
+    min-width: 228px;
+  }
+}
+

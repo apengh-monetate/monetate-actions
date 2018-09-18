@@ -28,6 +28,29 @@ $breakpoint: 1300px;
 // }
 // DEVELOPMENT
 
+#navigation {
+  .subnav-categories {
+    @media screen and (min-width: $breakpoint) {
+      padding: 0 !important;
+      width: 100% !important;
+    }
+    
+    & > * {
+      @media screen and (min-width: $breakpoint) {
+        padding: 0 20px !important;
+        width: auto !important;
+      }
+    }
+  }
+} 
+
+
+#navigation nav .subnav .column.first ul {
+  @media screen and (min-width: $breakpoint) {
+    column-gap: 0;
+  }
+}
+
 .subnav .column.slots {
   display: none !important;
 }
@@ -35,7 +58,7 @@ $breakpoint: 1300px;
 .topCat:not(.shoes):not(.clearance) .subnav .column.first,
 .topCat:not(.shoes):not(.clearance) .subnav .column.firstRight {
   @media screen and (min-width: $breakpoint) {
-    padding-left: 91px !important;
+    padding-left: 20px !important;
     width: 251px !important;
   }
 }
@@ -53,7 +76,7 @@ $breakpoint: 1300px;
     display: block;
     // min-width: 475px;
     //padding-left: 0 !important;
-    padding-right: 91px !important;
+    padding: 0 !important;
     width: auto !important;
   }
 

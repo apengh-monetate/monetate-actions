@@ -1,5 +1,6 @@
 @media screen and (min-width: 1025px) {
   #product-image_imageViewContainer[style*="relative"] ~ #product-image_swatches.s7swatches {
+    bottom: auto;
     float: left !important;
     height: 100% !important;
     left: -96px;
@@ -9,10 +10,10 @@
   }
   #product-image_imageViewContainer[style*="relative"] ~ #product-image_swatches.s7swatches > div {
     height: auto !important;
-    left: initial !important;
+    left: 0 !important;
     overflow: visible !important;
     position: relative !important;
-    top: initial !important;
+    top: 0 !important;
     width: 100% !important;
   }
   #product-image_imageViewContainer[style*="relative"] ~ #product-image_swatches.s7swatches > div > div {
@@ -24,10 +25,12 @@
   #product-image_imageViewContainer[style*="relative"] ~ #product-image_swatches.s7swatches .s7thumbcell {
     display: block;
     float: left;
-    left: initial !important;
-    margin-bottom: 10px !important;
+    left: 0 !important;
     position: relative !important;
-    top: initial !important;
+    top: 0 !important;
+  }
+  #product-image_imageViewContainer[style*="relative"] ~ #product-image_swatches.s7swatches .s7thumbcell:not(:last-child) {
+    margin-bottom: 10px !important;
   }
   #product-image_imageViewContainer[style*="relative"] ~ #product-image_swatches.s7swatches .s7thumb {
     background-size: contain;

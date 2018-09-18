@@ -1,0 +1,88 @@
+// ==================================================================
+// Header
+// ==================================================================
+div.cart > div.page-title {
+  margin: 14px 0 60px 0 !important;
+}
+.page-title {
+  display: flex!important;
+  flex-direction: column!important;
+  justify-content: center!important;
+  margin-top: 0!important;
+  min-height: 70px!important;
+  text-align: center!important; 
+  
+  h1 {
+    float: none !important;
+    font-family: "Trade Gothic W01 Bold 2" !important;
+    font-size: 20px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 10px!important;
+    text-align: center!important;
+  }
+
+  &__items {
+    font-family: "Trade Gothic W01 Light";
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
+
+
+// ==================================================================
+// Need Help
+// ==================================================================
+  
+.mt_need-help {
+  display: none;
+  @media screen and (min-width: 768px) {
+    background: #fff;
+    clear: right;
+    display: block;
+    float: right;
+    margin-top: 31px;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  &__heading {
+    font-family: "Trade Gothic W01 Roman";
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-family: "Trade Gothic W01 Roman";
+    font-size: 17px;
+    a {
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+
+  br {
+    @media screen and (min-width: 960px) {
+      display: none;
+    }
+  }
+
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+    a {
+      flex: 1 1 50%;
+      font-size: 13px;
+    }
+  }
+}

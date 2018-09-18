@@ -1,0 +1,57 @@
+{
+  "id": 353962,
+  "title": "MONETATE - Hide images at top of index pages",
+  "description": "Hide any images at top of index pages",
+  "op": "insertCSS",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "css",
+  "subcategory": "CSS",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "styleSheet",
+        "value": {
+          "content": "/* hide sections */\n.plp > .hero,\n.plp > .hero ~ .separator,\n.plp > .hero ~ section.section {\n  display: none !important;\n}\n\n/* show sections below product listings */\n.plp > .hero ~ .plp-filter-bar ~ .separator,\n.plp > .hero ~ .plp-filter-bar ~ section.section {\n  display: block !important;\n}",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": true
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "index"
+        ],
+        "id": 203516,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

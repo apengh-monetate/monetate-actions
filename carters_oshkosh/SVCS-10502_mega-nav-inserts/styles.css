@@ -1,3 +1,24 @@
+@media screen and (min-width: 1300px) {
+  #navigation .subnav-categories {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #navigation .subnav-categories > * {
+    padding: 0 20px !important;
+    width: auto !important;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #navigation nav .subnav .column.first ul {
+    -webkit-column-gap: 0;
+            column-gap: 0;
+  }
+}
+
 .subnav .column.slots {
   display: none !important;
 }
@@ -5,7 +26,7 @@
 @media screen and (min-width: 1300px) {
   .topCat:not(.shoes):not(.clearance) .subnav .column.first,
   .topCat:not(.shoes):not(.clearance) .subnav .column.firstRight {
-    padding-left: 91px !important;
+    padding-left: 20px !important;
     width: 251px !important;
   }
 }
@@ -23,7 +44,7 @@
 @media screen and (min-width: 1300px) {
   .mt-menu {
     display: block;
-    padding-right: 91px !important;
+    padding: 0 !important;
     width: auto !important;
   }
 }

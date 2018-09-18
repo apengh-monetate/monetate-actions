@@ -1,0 +1,150 @@
+<div id="ixisStickyOrderSummary">
+  <div class="cart-collaterals">
+    <div class="deals">
+
+      <table id="shopping-cart-totals-table">
+        <colgroup>
+          <col>
+          <col width="1">
+        </colgroup>
+        <tfoot>
+          <tr>
+            <td style="" class="a-right" colspan="1">
+              <strong>Grand Total:</strong>
+            </td>
+            <td style="" class="a-right">
+              <strong><span class="price">$796.00</span></strong>
+            </td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <h1>ORDER SUMMARY</h1>
+          <tr>
+            <td style="" class="a-right" colspan="1">
+              Subtotal: </td>
+            <td style="" class="a-right">
+              <span class="price">$796.00</span> </td>
+          </tr>
+          <tr>
+            <td colspan="1" style="" class="a-right"><a class="ixisStandardShippingTableItem" target="_blank" style="text-decoration:none;" href="/customer-care/us-customers/#Shipping">Standard Shipping*</a></td>
+            <td style="" class="a-right"><span class="price">$0.00</span></td>
+          </tr>
+
+        </tbody>
+      </table>
+      <div class="discount">
+        <h2>Have A Promo Code?</h2>
+        <form id="discount-coupon-form" action="https://www.eileenfisher.com/checkout/cart/couponPost/" method="post">
+          <fieldset>
+
+            <input type="hidden" name="remove" id="remove-coupone" value="0">
+            <label>PROMO CODE</label><label for="ebay_enterprise_giftcard_code" class="required"><em>*</em>Promo Code</label>
+            <div class="v-fix"><input class="input-text" id="coupon_code" name="coupon_code" value="">
+              <button class="button" onclick="discountForm.submit(false)" type="button" value="APPLY CODE"><span><span>APPLY</span></span></button>
+            </div>
+          </fieldset>
+        </form>
+        <script type="text/javascript">
+          //<![CDATA[
+          var discountForm = new VarienForm('discount-coupon-form');
+          discountForm.submit = function(isRemove) {
+            if (isRemove) {
+              $('coupon_code').removeClassName('required-entry');
+              $('remove-coupone').value = "1";
+            } else {
+              $('coupon_code').addClassName('required-entry');
+              $('remove-coupone').value = "0";
+            }
+            return VarienForm.prototype.submit.bind(discountForm)();
+          }
+          //]]>
+        </script>
+      </div>
+
+      <div class="giftcard">
+        <h2 class="page-title">Have A Gift Card?</h2>
+
+        <div id="ebay-enterprise-giftcard-balance-lookup">
+        </div>
+        <span id="ebay-enterprise-giftcard-please-wait" class="please-wait" style="display:none;">
+		<img src="https://www.eileenfisher.com/skin/frontend/enterprise/elf/images/opc-ajax-loader.gif" alt="" class="v-middle"> Please wait, loading...	</span>
+
+        <form id="ebay-enterprise-giftcard-form" action="https://www.eileenfisher.com/ebayenterprise_giftcard/cart/add/" method="post">
+          <input type="hidden" name="form_key" id="form_key" value="iZOrXsUY4KSXtvoi">
+          <label>GIFT CARD</label>
+          <div>
+            <p class="required">* Required Fields</p>
+            <ul class="form-list">
+              <li>
+                <label for="ebay_enterprise_giftcard_code" class="required"><em>*</em>Card Number</label>
+                <input type="text" class="required-entry input-text validate-digits validate-length maximum-length-19 minimum-length-14" id="ebay_enterprise_giftcard_code" name="ebay_enterprise_giftcard_code" value="" placeholder="XXXX XXXX XXXX XXXX">
+
+				</li>
+              <li>
+                <label for="ebay_enterprise_giftcard_pin" class="required"><em>*</em>Personal Identification Number (PIN)</label>
+                <input type="text" class="required-entry input-text validate-digits validate-length maximum-length-4 minimum-length-4" id="ebay_enterprise_giftcard_pin" name="ebay_enterprise_giftcard_pin" value="" placeholder="PIN #">
+
+				</li>
+            </ul>
+            <div class="buttons-set">
+              <button class="button" onclick="ebayEnterpriseGiftcardForm.submit()" type="button" value="APPLY GIFT CARD"><span><span>APPLY</span></span></button>
+            </div>
+          </div>
+        </form>
+
+
+        <script type="text/javascript">
+          var ebayEnterpriseGiftcardForm = new VarienForm('ebay-enterprise-giftcard-form');
+        </script>
+
+      </div>
+    </div>
+  </div>
+  <div class="totals">
+    <div class="desktopDetails"><h2>TOTAL</h2>
+      <p>$796.00</p>
+    </div>
+    <table id="shopping-cart-totals-table">
+      <colgroup>
+        <col>
+        <col width="1">
+      </colgroup>
+      <tfoot>
+        <tr>
+          <td style="" class="a-right" colspan="1">
+            <strong>TOTAL</strong>
+          </td>
+          <td style="" class="a-right">
+            <strong><span class="price">$796.00</span></strong>
+          </td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td style="" class="a-right" colspan="1"><h1>ESTIMATED TOTAL</h1><span>Tax calculated on checkout</span></td>
+          <td style="" class="a-right">
+            <span class="price">$796.00</span> </td>
+        </tr>
+      </tbody>
+    </table>
+    <ul class="checkout-types">
+      <li>
+        <button type="button" title="Continue Shopping" class="button btn-continue" onclick="setLocation('http://www.eileenfisher.com/')"><span><span>Continue Shopping</span></span></button>
+        <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout btn-checkout" onclick="window.location='https://www.eileenfisher.com/checkout/onepage/';"><span><span>Proceed to Checkout</span></span></button>
+      </li>
+      <li>
+      </li>
+    </ul>
+  </div>
+  <div class="ixisHelp">
+    <h1>NEED HELP?</h1>
+    <p>Call customer service at <br><a href="tel:8004451603">(800) 445-1603</a> or email <a href="mailto:onlinesupport@eileenfisher.com">onlinesupport@eileenfisher.com</a></p>
+    <div><a href="/customer-care/us-customers/#Shipping">Shipping + Returns</a><a href="/customer-care/us-customers#privacypolicy">Privacy Policy</a>
+      <div class="mcafee" style="margin:10px !important;display: flex !important;justify-content: center !important;align-items: center !important;">
+        <a target="_blank" href="https://www.mcafeesecure.com/verify?host=eileenfisher.com">
+      <img class="mfes-trustmark" border="0" src="//cdn.ywxi.net/meter/eileenfisher.com/102.gif?w=90" width="90" height="37" title="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" alt="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams">
+    </a><a href="https://www.mcafeesecure.com/verify?host=eileenfisher.com" style="margin:10px !important;">Secure Checkout</a>
+      </div>
+    </div>
+  </div>
+</div>
