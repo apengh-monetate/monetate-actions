@@ -17,12 +17,6 @@ div.cart > div.page-title {
   margin-bottom: 15px !important;
 }
 
-@media screen and (min-width: 768px) {
-  div.cart > div.page-title {
-    margin-bottom: 50px !important;
-  }
-}
-
 .page-title h1 {
   float: none !important;
   font-family: "Trade Gothic W01 Bold 2" !important;
@@ -62,6 +56,7 @@ div.cart > div.page-title {
 @media screen and (min-width: 768px) {
   #shopping-cart-table tbody {
     display: inline-block !important;
+    width: 100%;
   }
 }
 
@@ -124,6 +119,7 @@ div.cart > div.page-title {
   max-width: calc(100% - 110px);
   padding: 0;
   padding-left: 10px;
+  position: relative;
   width: auto;
 }
 
@@ -137,7 +133,7 @@ div.cart > div.page-title {
 
 @media screen and (min-width: 960px) {
   #shopping-cart-table .product-wrapper {
-    width: 82%;
+    width: calc(100% - 130px);
   }
 }
 
@@ -175,8 +171,10 @@ div.cart > div.page-title {
 @media screen and (min-width: 768px) {
   #shopping-cart-table .item-options {
     border-top: 1px solid #f2f2f2;
-    margin-top: 15px !important;
-    padding-top: 5px;
+    margin-top: 0 !important;
+    padding-top: 10px;
+    position: absolute !important;
+    top: 48px;
     width: 100%;
   }
 }
@@ -443,20 +441,24 @@ div.cart > div.page-title {
   color: #fff;
   font-family: "Trade Gothic W01 Bold 2" !important;
   font-size: 10px;
+  left: 0;
   margin: 0;
-  margin-left: 112px;
+  margin-left: 120px;
   margin-top: -96px;
   max-width: 50px !important;
-  min-width: auto !important;
+  min-width: 0 !important;
   padding: 4px 5px;
-  position: relative;
+  position: absolute;
+  top: 90%;
   width: 50px !important;
 }
 
 @media screen and (min-width: 768px) {
   #shopping-cart-table .btn-edit {
+    left: 110px;
     margin-left: 10px;
     margin-top: 0;
+    top: 75%;
   }
 }
 
@@ -466,15 +468,15 @@ div.cart > div.page-title {
 
 .cart-collaterals {
   background: #f8f8f8 !important;
-  border-top: 1px solid #727070 !important;
-  padding: 20px 10px 0 !important;
+  border: none !important;
+  float: none !important;
+  padding: 20px 0 0 !important;
+  width: 100% !important;
 }
 
 @media screen and (min-width: 768px) {
   .cart-collaterals {
     border: none !important;
-    float: right !important;
-    width: 35% !important;
   }
 }
 
@@ -522,10 +524,7 @@ div.cart > div.page-title {
 }
 
 .cart-collaterals .discount h2 {
-  font-family: "Trade Gothic W01 Roman" !important;
-  font-size: 20px;
-  font-weight: normal;
-  margin-bottom: 10px;
+  display: none;
 }
 
 .cart-collaterals .discount .v-fix {
@@ -545,12 +544,40 @@ div.cart > div.page-title {
 }
 
 .cart-collaterals .discount .v-fix .button {
+  height: 30px !important;
   width: auto !important;
 }
 
 .cart-collaterals .discount .v-fix .button span span {
-  min-width: auto !important;
+  font-size: 0 !important;
+  height: 30px !important;
+  min-width: 0 !important;
+  padding: 0 !important;
   width: 75px !important;
+}
+
+.cart-collaterals .discount .v-fix .button span span::before {
+  background-color: grey !important;
+  color: #fff;
+  content: "APPLY";
+  display: block;
+  font-size: 10px !important;
+  padding-bottom: 9px;
+  padding-top: 9px;
+}
+
+.cart-collaterals .discount .v-fix .button + .button span span::before {
+  content: "REMOVE" !important;
+}
+
+.cart-collaterals .discount form#discount-coupon-form[cancel-btn] .v-fix button span span {
+  width: 55px !important;
+}
+
+@media screen and (min-width: 960px) {
+  .cart-collaterals .discount form#discount-coupon-form[cancel-btn] .v-fix button span span {
+    width: 75px !important;
+  }
 }
 
 .cart-collaterals .giftcard h2 {
@@ -566,6 +593,10 @@ div.cart > div.page-title {
 
 .cart-collaterals .giftcard fieldset {
   display: block !important;
+}
+
+.cart-collaterals .giftcard .form-list .validation-advice {
+  display: none;
 }
 
 .cart-collaterals .giftcard label {
@@ -626,15 +657,26 @@ div.cart > div.page-title {
 }
 
 .cart-collaterals .giftcard .buttons-set .button {
+  height: 30px !important;
   width: 75px !important;
 }
 
 .cart-collaterals .giftcard .buttons-set .button span span {
+  font-size: 0 !important;
+  height: 30px !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  width: 75px !important;
+}
+
+.cart-collaterals .giftcard .buttons-set .button span span::before {
   background-color: grey !important;
   color: #fff;
+  content: "APPLY";
+  display: block;
   font-size: 10px !important;
-  height: 30px !important;
-  min-width: inherit !important;
+  padding-bottom: 9px;
+  padding-top: 9px;
 }
 
 .cart-collaterals .giftcard .buttons-set button * {
@@ -643,6 +685,7 @@ div.cart > div.page-title {
 
 .cart .totals {
   background: #f8f8f8;
+  border-top: 1px solid #727070;
   margin-top: 0 !important;
   padding-bottom: 30px;
   padding-left: 10px !important;
@@ -660,6 +703,7 @@ div.cart > div.page-title {
 @media screen and (min-width: 768px) {
   .cart .totals {
     border-left: none !important;
+    border-top: none;
     float: right !important;
     padding-bottom: 20px !important;
     width: 35% !important;
@@ -667,6 +711,13 @@ div.cart > div.page-title {
 }
 
 .cart .totals #shopping-cart-totals-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-right: 0 !important;
   margin-top: 10px;
 }
@@ -688,17 +739,49 @@ div.cart > div.page-title {
   text-transform: uppercase;
 }
 
+.cart .totals #shopping-cart-totals-table td:first-child strong {
+  font-size: 0 !important;
+}
+
+.cart .totals #shopping-cart-totals-table td:first-child strong::before {
+  content: "Total";
+  display: block;
+  font-size: 20px !important;
+}
+
+.cart .totals #shopping-cart-totals-table tbody tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .cart .totals #shopping-cart-totals-table tbody tr td {
   font-family: "Trade Gothic W01 Roman" !important;
   font-size: 12px !important;
   text-transform: uppercase;
+  width: 100%;
 }
 
-.cart .totals #shopping-cart-totals-table tfoot td.a-right:first-of-type {
+.cart .totals #shopping-cart-totals-table tfoot {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.cart .totals #shopping-cart-totals-table tfoot tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
 }
 
-.cart .totals #shopping-cart-totals-table tfoot td.a-right:first-of-type:after {
+.cart .totals #shopping-cart-totals-table tfoot tr:after {
   bottom: 0;
   color: grey;
   content: "Tax calculated on checkout";
@@ -706,6 +789,14 @@ div.cart > div.page-title {
   font-size: 11px;
   left: 0;
   position: absolute;
+}
+
+.cart .totals #shopping-cart-totals-table tfoot tr td {
+  width: 100% !important;
+}
+
+.cart .totals #shopping-cart-totals-table tfoot td.a-right:first-of-type {
+  position: relative;
 }
 
 .cart .totals .checkout-types {
@@ -730,6 +821,15 @@ div.cart > div.page-title {
   }
 }
 
+@media screen and (min-width: 960px) {
+  .cart .totals .checkout-types li:first-child {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .cart .totals .button {
   background: #000 !important;
 }
@@ -737,6 +837,12 @@ div.cart > div.page-title {
 @media screen and (min-width: 768px) {
   .cart .totals .button {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .cart .totals .button:first-child {
+    margin-right: 5px;
   }
 }
 
@@ -753,6 +859,15 @@ div.cart > div.page-title {
   }
 }
 
+@media screen and (min-width: 960px) {
+  .cart .totals .button.btn-continue {
+    margin-top: 0;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .cart .totals .button span {
     width: 100%;
@@ -766,5 +881,134 @@ div.cart > div.page-title {
 @media screen and (min-width: 768px) {
   .cart .totals .button.btn-proceed-checkout {
     margin-left: 0 !important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .cart .totals .button.btn-proceed-checkout {
+    margin-left: 5px !important;
+  }
+}
+
+.mt_need-help {
+  background: #fff;
+  clear: right;
+  display: block;
+  float: right;
+  margin-top: 31px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_need-help {
+    padding: 0 10px;
+    width: 35%;
+  }
+}
+
+.mt_need-help__heading {
+  font-family: "Trade Gothic W01 Roman";
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.mt_need-help p {
+  font-family: "Trade Gothic W01 Roman";
+  font-size: 17px;
+}
+
+.mt_need-help p a {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 960px) {
+  .mt_need-help br {
+    display: none;
+  }
+}
+
+.mt_need-help__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_need-help__links {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.mt_need-help__links a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_need-help__links a {
+    text-align: center !important;
+  }
+}
+
+.mt_need-help__links a:last-of-type {
+  text-align: right;
+}
+
+.mt_need-help .mcafee {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.mt_need-help .mcafee a {
+  -webkit-box-flex: initial;
+      -ms-flex: initial;
+          flex: initial;
+  width: auto;
+}
+
+@media only screen and (max-width: 767px), all {
+  .cart .cart-collaterals .v-fix .button {
+    width: 75px !important;
+  }
+  .cart .cart-collaterals .v-fix .cancel-btn {
+    margin-right: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 479px), all {
+  .checkout-cart-index .main .col-main .cart .cart-collaterals .v-fix .input-text {
+    width: calc(100% - 85px) !important;
   }
 }

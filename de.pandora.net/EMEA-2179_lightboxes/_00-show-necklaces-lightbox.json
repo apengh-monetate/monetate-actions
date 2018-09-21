@@ -1,5 +1,5 @@
 {
-  "id": 353917,
+  "id": 355439,
   "title": "Show Necklaces Size Lightbox V2",
   "description": "Shows necklaces size lightbox on click",
   "op": "htmlLightboxStringOnClick",
@@ -15,7 +15,7 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "a.guide-link.pandora-icon-size"
+        "value": "#mtGuideLink"
       },
       "widget": {
         "label": "Relative Element Selector",
@@ -71,7 +71,7 @@
       "input": {
         "type": "bool",
         "name": "opt_pinned",
-        "value": false
+        "value": true
       },
       "widget": {
         "label": "Pin Lightbox Position?",
@@ -221,7 +221,42 @@
   "masks": [],
   "rule_operator": "and",
   "rules": {
-    "builtin": [],
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 204204,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      },
+      {
+        "values": [
+          "/halsketten/"
+        ],
+        "id": 204205,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "contains",
+          "label": "URL",
+          "rule_name": "page_url",
+          "rule_op": "icontains",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
     "required": []
   },
   "manage_impressions": false

@@ -1,0 +1,57 @@
+{
+  "id": 355443,
+  "title": "AnyPage JavaScript - ExtraCare Trigger Sign-In Modal",
+  "description": "Insert JavaScript",
+  "op": "insertJavascript",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "javascript",
+  "subcategory": "Any Page",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "javascript",
+        "value": {
+          "content": "function mteShowSignIn(){document.getElementsByClassName('block_signin')[0].click();}",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "label": "Script"
+      },
+      "required": true
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "ExtraCare_HP"
+        ],
+        "id": 204210,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

@@ -1,5 +1,5 @@
 {
-  "id": 353916,
+  "id": 355438,
   "title": "Show Rings Size Lightbox V2",
   "description": "Shows rings size lightbox on click",
   "op": "htmlLightboxStringOnClick",
@@ -15,7 +15,7 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "a.guide-link.pandora-icon-size"
+        "value": "#mtGuideLink"
       },
       "widget": {
         "action_visible": true,
@@ -29,7 +29,7 @@
       "input": {
         "type": "str",
         "name": "htmlString",
-        "value": "<section class=\"t120-necklace-container\">\n<h2 class=\"t120-titlebar\">FINDE DEINE KETTENL&Auml;NGE</h2>\n\n<article class=\"t120-exit-button lightboxClose\">\n<p>X</p>\n</article>\n\n<p class=\"subHeadline\">In der Darstellung kannst Du sehen wie die unterschiedlichen Kettenl&auml;ngen ausfallen.</p>\n<img alt=\"Ketten\" class=\"t120-necklace-img\" src=\"//dd6zx4ibq538k.cloudfront.net/static/images/4605/bba71b29ca0e877a59efb4ccc1d2f99b_688_844.jpeg\" /></section>\n"
+        "value": "<section class=\"t120-ring-container\">\n<h1 class=\"t120-titlebar\">FINDE DEINE RINGGR&Ouml;SSE</h1>\n\n<article class=\"t120-exit-button lightboxClose\">\n<p>X</p>\n</article>\n\n<p class=\"subHeadline\">Miss bitte die Breite Deines Fingers mit einem Lineal und vergleiche den abgelesenen Wert (in Millimetern) mit den Zahlen in der Mitte der Kreise. Die Ringgr&ouml;&szlig;e ist die Zahl &uuml;ber den Kreisen.</p>\n<img alt=\"Ring\" class=\"t120-ring-img\" src=\"https://sb.monetate.net/img/1/1047/1616782.jpg\" /></section>\n"
       },
       "widget": {
         "action_visible": true,
@@ -71,7 +71,7 @@
       "input": {
         "type": "bool",
         "name": "opt_pinned",
-        "value": false
+        "value": true
       },
       "widget": {
         "action_visible": true,
@@ -210,7 +210,7 @@
         "value": false
       },
       "widget": {
-        "action_visible": true,
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
         "label": "Select multiple elements, if matched?"
@@ -221,7 +221,42 @@
   "masks": [],
   "rule_operator": "and",
   "rules": {
-    "builtin": [],
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 204211,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      },
+      {
+        "values": [
+          "/ringe/"
+        ],
+        "id": 204212,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "contains",
+          "label": "URL",
+          "rule_name": "page_url",
+          "rule_op": "icontains",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
     "required": []
   },
   "manage_impressions": false

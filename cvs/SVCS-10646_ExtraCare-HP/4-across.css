@@ -1,0 +1,259 @@
+div#anonymousbcc_1 {
+  margin-top: 10px;
+}
+
+#ec-slot1 > div.row {
+  display: none;
+}
+
+#ec-slot1 > div.row.bah {
+  display: block;
+}
+
+.mt180910 {
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  max-width: 960px;
+  padding-top: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+@media screen and (min-width: 641px) {
+  .mt180910 {
+    margin-top: 5px;
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mt180910 {
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+}
+
+.mt180910 .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .mt180910 .column {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 25%;
+  }
+}
+
+.mt180910 .column > * {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .mt180910 .column > * {
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px !important;
+    padding-top: 5px;
+  }
+}
+
+.mt180910 h2 {
+  font-family: 'Helvetica-Bold';
+  font-size: 24px;
+  margin-bottom: 16px;
+  padding-top: 6px !important;
+}
+
+.mt180910 p {
+  font-size: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.mt180910 p.glyphicon {
+  font-size: 18px;
+  height: 16px;
+  margin-bottom: 0;
+  top: 4px;
+  width: 8px;
+}
+
+.mt180910 a {
+  color: #000 !important;
+  font-family: 'Helvetica-Bold';
+  font-size: 14px;
+  margin-bottom: 16px;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.mt180910 a:hover, .mt180910 a:focus {
+  color: #000 !important;
+  text-decoration: underline !important;
+}
+
+.mt180910 a + p {
+  margin-top: 16px;
+}
+
+.mt180910 strong {
+  font-family: 'Helvetica-Bold';
+}
+
+.mt180910 .white-space__pre {
+  white-space: pre;
+}
+
+.mt180910 .blackText {
+  color: #000 !important;
+}
+
+.mt180910 .blackText > a {
+  color: #000 !important;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.mt180910 .blackText > a:hover, .mt180910 .blackText > a:focus {
+  color: #000 !important;
+  text-decoration: underline !important;
+}
+
+.mt180910 .whiteText {
+  color: #fff !important;
+}
+
+.mt180910 .whiteText > a {
+  color: #fff !important;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.mt180910 .whiteText > a:hover, .mt180910 .whiteText > a:focus {
+  color: #fff !important;
+  text-decoration: underline !important;
+}
+
+.mt180910 .earn {
+  background: #37BAAB;
+  background-image: url("http://dev-apengh-1.monetate.org/img/1/306/1727980.png");
+  background-position-x: center;
+  background-position-y: 95%;
+  background-repeat: no-repeat;
+  background-size: 320px 78px;
+  height: 240px;
+  padding-right: 0;
+}
+
+@media screen and (min-width: 769px) {
+  .mt180910 .earn {
+    background-position-x: 30%;
+    background-position-y: 90%;
+    background-size: 120% auto;
+    height: auto;
+  }
+}
+
+.mt180910 .earn p.text {
+  padding-right: 50px;
+}
+
+@media screen and (min-width: 641px) {
+  .mt180910 .earn p.text {
+    padding-right: 0;
+  }
+}
+
+.mt180910 .no-card {
+  background: #B8E3EB;
+  background-image: url("http://dev-apengh-1.monetate.org/img/1/306/1727979.png");
+  background-position-x: 108%;
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  background-size: 108px 174px;
+  height: 270px;
+  padding-right: 90px;
+}
+
+@media screen and (min-width: 641px) {
+  .mt180910 .no-card {
+    background-position-x: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mt180910 .no-card {
+    background-image: none;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .mt180910 .no-card p a {
+    pointer-events: none;
+  }
+}
+
+.mt180910 .phone-number {
+  background: #CC0000;
+  background-image: url("http://dev-apengh-1.monetate.org/img/1/306/1727981.png");
+  background-position-x: 105%;
+  background-position-y: 110%;
+  background-repeat: no-repeat;
+  background-size: 101px 157px;
+  height: 240px;
+  padding-right: 110px;
+}
+
+@media screen and (min-width: 769px) {
+  .mt180910 .phone-number {
+    background-size: 81px 127px;
+    height: auto;
+  }
+}
+
+.mt180910 .faqs {
+  background: #00344A;
+  background-image: url("http://dev-apengh-1.monetate.org/img/1/306/1727982.png");
+  background-position-x: 90%;
+  background-position-y: 90%;
+  background-repeat: no-repeat;
+  background-size: 109px 123px;
+  height: 240px;
+}
+
+@media screen and (min-width: 769px) {
+  .mt180910 .faqs {
+    background-position-x: 60%;
+    height: auto;
+  }
+}

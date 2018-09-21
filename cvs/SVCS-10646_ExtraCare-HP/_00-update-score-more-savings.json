@@ -1,36 +1,27 @@
 {
-  "id": 355395,
-  "title": "MONETATE - Takeover cloned product item on index/search",
-  "description": "Takeover cloned product item on index/search",
-  "op": "selectorBanner",
+  "id": 355445,
+  "title": "180909_180910 Update Score More Savings text on EC Homepage",
+  "description": "Update Score More Savings text on EC Homepage",
+  "op": "selectorInsertHtmlString",
   "slot": "actionbuilder_ag_0",
   "slot_type": "page",
-  "category": "image",
-  "subcategory": "PLP",
+  "category": "html",
+  "subcategory": "180909_180910",
   "action_events": [
-    "op_click",
     "op_impression"
   ],
   "inputs": [
     {
       "input": {
-        "type": "img_creative",
-        "name": "creative",
-        "value": {
-          "extension": ".png",
-          "height": 512,
-          "width": 304,
-          "discriminator": "layered_content",
-          "alt": "",
-          "static_sha": "5cd32eb75151cba00d1dff1248c29c75bc4954af",
-          "id": 604469
-        }
+        "type": "str",
+        "name": "htmlString",
+        "value": "<h2 class=\"promoBold promoTextred box fs-hlevel3\">Score more savings!</h2>\n  <p class=\"fontsize16 margin1x-bottom\">Sign up for CVS Pharmacy email and save 3x more with inbox-only deals.**</p>"
       },
       "widget": {
         "action_visible": true,
-        "type": "ImageCreative",
-        "description": "Upload an image creative",
-        "label": "Image Creative"
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
       },
       "required": true
     },
@@ -38,7 +29,7 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "#mtClonedProduct1"
+        "value": "#ec-slot2 > div.row > div.col-xs-24.col-sm-12.col-sm-pull-12 > div.row.img-box > div.col-xs-24.col-sm-11.col-md-8"
       },
       "widget": {
         "action_visible": true,
@@ -55,7 +46,9 @@
         "value": "takeover"
       },
       "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
         "label": "Insert Method",
+        "type": "StringSelectField",
         "options": [
           {
             "name": "after",
@@ -82,8 +75,6 @@
             "label": "Takeover"
           }
         ],
-        "type": "StringSelectField",
-        "description": "Where to insert the banner in relation to the Relative Element Selector.",
         "action_visible": true
       },
       "required": true
@@ -95,24 +86,10 @@
         "value": null
       },
       "widget": {
-        "action_visible": true,
+        "action_visible": false,
         "type": "TextField",
         "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
         "label": "Banner Div Inline Style"
-      },
-      "required": false
-    },
-    {
-      "input": {
-        "type": "str",
-        "name": "opt_imgStyle",
-        "value": null
-      },
-      "widget": {
-        "action_visible": true,
-        "type": "TextField",
-        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
-        "label": "Image Element Inline Style"
       },
       "required": false
     },
@@ -153,10 +130,10 @@
       "input": {
         "type": "bool",
         "name": "opt_poll",
-        "value": false
+        "value": true
       },
       "widget": {
-        "action_visible": false,
+        "action_visible": true,
         "type": "BooleanField",
         "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
         "label": "Re-check for Elements"
@@ -164,16 +141,21 @@
       "required": false
     }
   ],
-  "masks": [],
+  "masks": [
+    {
+      "selector": "#ec-slot2 > div.row > div.col-xs-24.col-sm-12.col-sm-pull-12 > div.row.img-box > div.col-xs-24.col-sm-11.col-md-8",
+      "value": "/extracare/home",
+      "op": "path_iprefix"
+    }
+  ],
   "rule_operator": "and",
   "rules": {
     "builtin": [
       {
         "values": [
-          "index",
-          "search"
+          "ExtraCare_HP"
         ],
-        "id": 204193,
+        "id": 204217,
         "rule_tmpl": {
           "widget": "itemlist",
           "description": null,

@@ -1,0 +1,156 @@
+{
+  "id": 355454,
+  "title": "Edit Text of Link in Nav",
+  "description": "Edit the text of the main nav",
+  "op": "replaceNodeText",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Modifications",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "li.l1.topnav-accordion-item > a[title=\"BACKPACKS\"]"
+      },
+      "widget": {
+        "label": "CSS3 Selector",
+        "type": "CharField",
+        "description": "Selector for the element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_searchString",
+        "value": "Backpacks"
+      },
+      "widget": {
+        "label": "Search String",
+        "type": "CharField",
+        "description": "The string (or regular expression) to be found in the child text nodes.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_replacement",
+        "value": "Placeholder"
+      },
+      "widget": {
+        "label": "Replacement String",
+        "type": "CharField",
+        "description": "The string that will be used to replace the found search string.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_searchType",
+        "value": "string"
+      },
+      "widget": {
+        "label": "Search Type",
+        "options": [
+          {
+            "name": "regexp",
+            "label": "Regular Expression"
+          },
+          {
+            "name": "string",
+            "label": "String"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "The type of search string used to match up against the child text nodes.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_ignoreCase",
+        "value": true
+      },
+      "widget": {
+        "label": "Ignore Casing",
+        "type": "BooleanField",
+        "description": "Specifies whether or not casing of the characters should be ignored when trying to match the text in the text node.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_replaceAll",
+        "value": false
+      },
+      "widget": {
+        "label": "Replace All Matches",
+        "type": "BooleanField",
+        "description": "Specifies whether or not to replace all of the matching substrings in the child text nodes or just the first one.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleSheet",
+        "value": null
+      },
+      "widget": {
+        "label": "CSS Style",
+        "type": "TextField",
+        "description": "CSS style to append as stylesheet",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

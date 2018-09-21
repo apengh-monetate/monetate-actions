@@ -1,36 +1,27 @@
 {
-  "id": 355395,
-  "title": "MONETATE - Takeover cloned product item on index/search",
-  "description": "Takeover cloned product item on index/search",
-  "op": "selectorBanner",
+  "id": 355405,
+  "title": "MONETATE - Add Continue Shopping Link",
+  "description": "Add Continue Shopping Link on Cart",
+  "op": "selectorInsertHtmlString",
   "slot": "actionbuilder_ag_0",
   "slot_type": "page",
-  "category": "image",
-  "subcategory": "PLP",
+  "category": "html",
+  "subcategory": "Cart",
   "action_events": [
-    "op_click",
     "op_impression"
   ],
   "inputs": [
     {
       "input": {
-        "type": "img_creative",
-        "name": "creative",
-        "value": {
-          "extension": ".png",
-          "height": 512,
-          "width": 304,
-          "discriminator": "layered_content",
-          "alt": "",
-          "static_sha": "5cd32eb75151cba00d1dff1248c29c75bc4954af",
-          "id": 604469
-        }
+        "type": "str",
+        "name": "htmlString",
+        "value": "<div class=\"mt-continue-shopping\">\n  <a href=\"/\">&lt;&ndash;&nbsp;Continue Shopping</a>\n</div>"
       },
       "widget": {
-        "action_visible": true,
-        "type": "ImageCreative",
-        "description": "Upload an image creative",
-        "label": "Image Creative"
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "action_visible": true
       },
       "required": true
     },
@@ -38,13 +29,13 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "#mtClonedProduct1"
+        "value": "div.cart > div.page-title"
       },
       "widget": {
-        "action_visible": true,
+        "label": "Relative Element Selector",
         "type": "CssSelectorField",
         "description": "CSS Selector to find the relative element.",
-        "label": "Relative Element Selector"
+        "action_visible": true
       },
       "required": true
     },
@@ -52,10 +43,12 @@
       "input": {
         "type": "str",
         "name": "imeth",
-        "value": "takeover"
+        "value": "after"
       },
       "widget": {
-        "label": "Insert Method",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
         "options": [
           {
             "name": "after",
@@ -82,9 +75,7 @@
             "label": "Takeover"
           }
         ],
-        "type": "StringSelectField",
-        "description": "Where to insert the banner in relation to the Relative Element Selector.",
-        "action_visible": true
+        "label": "Insert Method"
       },
       "required": true
     },
@@ -95,24 +86,10 @@
         "value": null
       },
       "widget": {
-        "action_visible": true,
+        "label": "Banner Div Inline Style",
         "type": "TextField",
         "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
-        "label": "Banner Div Inline Style"
-      },
-      "required": false
-    },
-    {
-      "input": {
-        "type": "str",
-        "name": "opt_imgStyle",
-        "value": null
-      },
-      "widget": {
-        "action_visible": true,
-        "type": "TextField",
-        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
-        "label": "Image Element Inline Style"
+        "action_visible": false
       },
       "required": false
     },
@@ -121,17 +98,17 @@
         "type": "flexible_creative",
         "name": "opt_styleSheet",
         "value": {
-          "content": "",
+          "content": ".mt-continue-shopping {\n  display: none;\n}\n\n@media screen and (min-width: 768px) {\n  .mt-continue-shopping {\n    clear: both;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    margin-bottom: 35px;\n  }\n}\n\n.mt-continue-shopping a {\n  font-family: 'TradeGothicW01-LightObl' !important;\n  font-size: 11px;\n  text-decoration: none;\n}\n",
           "discriminator": "content",
           "ref": null,
           "type": "css"
         }
       },
       "widget": {
-        "action_visible": true,
+        "label": "CSS",
         "type": "CSSCodeField",
         "description": "CSS appended to the DOM in a <style> or <link> element.",
-        "label": "CSS"
+        "action_visible": true
       },
       "required": false
     },
@@ -142,10 +119,10 @@
         "value": false
       },
       "widget": {
-        "action_visible": false,
+        "label": "Select multiple elements, if matched?",
         "type": "BooleanField",
         "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
-        "label": "Select multiple elements, if matched?"
+        "action_visible": false
       },
       "required": false
     },
@@ -156,10 +133,10 @@
         "value": false
       },
       "widget": {
-        "action_visible": false,
+        "label": "Re-check for Elements",
         "type": "BooleanField",
         "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
-        "label": "Re-check for Elements"
+        "action_visible": false
       },
       "required": false
     }
@@ -170,10 +147,9 @@
     "builtin": [
       {
         "values": [
-          "index",
-          "search"
+          "cart"
         ],
-        "id": 204193,
+        "id": 204125,
         "rule_tmpl": {
           "widget": "itemlist",
           "description": null,

@@ -1,0 +1,221 @@
+@import "../variables";
+div#anonymousbcc_1 {
+  margin-top: 10px;
+}
+
+#ec-slot1 > div.row {
+  display: none;
+}
+#ec-slot1 > div.row.bah {
+  display: block;
+}
+
+.mt180910 {
+  align-content: stretch;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  max-width: 960px;
+  padding-top: 10px;
+  text-align: left;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-top: 5px;
+    padding-top: 0;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+
+
+  .column {
+    display: flex;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-lg) {
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 25%;
+    }
+
+    & > * {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      width: 100%;
+      @media screen and (min-width: $breakpoint-lg) {
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px !important;
+        padding-top: 5px;
+      }
+    }
+  }
+
+  h2 {
+    font-family: 'Helvetica-Bold';
+    font-size: 24px;
+    margin-bottom: 16px;
+    padding-top: 6px !important;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 16px;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    &.glyphicon {
+      font-size: 18px;
+      height: 16px;
+      margin-bottom: 0;
+      top: 4px;
+      width: 8px;
+    }
+  }
+
+  a {
+    color: #000 !important;
+    font-family: 'Helvetica-Bold';
+    font-size: 14px;
+    margin-bottom: 16px;
+    position: relative;
+    text-decoration: none !important;
+    &:hover,
+    &:focus {
+      color: #000 !important;
+      text-decoration: underline !important;
+    }
+  }
+
+  a + p {
+    margin-top: 16px;
+  }
+
+  strong {
+    font-family: 'Helvetica-Bold';
+  }
+
+  .white-space__pre {
+    white-space: pre;
+  }
+
+
+  .blackText {
+    color: #000 !important;
+    & > a {
+      color: #000 !important;
+      font-weight: 700;
+      text-decoration: none !important;
+      &:hover,
+      &:focus {
+        color: #000 !important;
+        text-decoration: underline !important;
+      }
+    }
+  }
+
+  .whiteText {
+    color: #fff !important;
+    & > a {
+      color: #fff !important;
+      font-weight: 700;
+      text-decoration: none !important;
+      &:hover,
+      &:focus {
+        color: #fff !important;
+        text-decoration: underline !important;
+      }
+    }
+  }
+
+
+  .earn {
+    background: #37BAAB;
+    //background-image: url('https://via.placeholder.com/301x72');
+    background-image: url('http://dev-apengh-1.monetate.org/img/1/306/1727980.png');
+    background-position-x: center;
+    background-position-y: 95%;
+    background-repeat: no-repeat;
+    background-size: 320px 78px;
+    height: 240px;
+    padding-right: 0;
+    @media screen and (min-width: $breakpoint-lg) {
+      background-position-x: 30%;
+      background-position-y: 90%;
+      background-size: 120% auto;
+      height: auto;
+    }
+    p.text {
+      padding-right: 50px;
+      @media screen and (min-width: $breakpoint-md) {
+        padding-right: 0;
+      }
+    }
+  }
+
+
+  .no-card {
+    background: #B8E3EB;
+    background-image: url('http://dev-apengh-1.monetate.org/img/1/306/1727979.png');
+    background-position-x: 108%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    background-size: 108px 174px;
+    height: 270px;
+    padding-right: 90px;
+    @media screen and (min-width: $breakpoint-md) {
+      background-position-x: 100%;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      background-image: none;
+      height: auto;
+    }
+
+    p a {
+      @media screen and (min-width: $breakpoint-md) {
+        pointer-events: none;
+      }
+    }
+  }
+
+
+  .phone-number {
+    background: #CC0000;
+    background-image: url('http://dev-apengh-1.monetate.org/img/1/306/1727981.png');
+    background-position-x: 105%;
+    background-position-y: 110%;
+    background-repeat: no-repeat;
+    background-size: 101px 157px;
+    height: 240px;
+    padding-right: 110px;
+    @media screen and (min-width: $breakpoint-lg) {
+      background-size: 81px 127px;
+      height: auto;
+    }
+  }
+
+
+  .faqs {
+    background: #00344A;
+    background-image: url('http://dev-apengh-1.monetate.org/img/1/306/1727982.png');
+    background-position-x: 90%;
+    background-position-y: 90%;
+    background-repeat: no-repeat;
+    background-size: 109px 123px;
+    height: 240px;
+    @media screen and (min-width: $breakpoint-lg) {
+      background-position-x: 60%;
+      height: auto;
+    }
+  }
+
+}

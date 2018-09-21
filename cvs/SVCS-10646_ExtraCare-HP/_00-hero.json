@@ -1,0 +1,169 @@
+{
+  "id": 355451,
+  "title": "180909_180910: EC Sign In+Create Account Hero",
+  "description": "180909_180910: EC Sign In+Create Account Hero",
+  "op": "selectorInsertHtmlString",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "180909_180910",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<h1 class=\"block_title\">Savings are coming your way!</h1>\n\n<p class=\"block_subtitle\">Create a CVS.com<sup>&reg;</sup> account or sign in if you already have one. Link it to your ExtraCare<sup>&reg;</sup> card so you can send deals straight to your card and shop online or in store.</p>\n\n<div class=\"block_links\">\n  <button class=\"block_signin\" onclick=\"mteShowSignIn();s.tl(this,'o','Custom:Monetate_180909_180910:dt:ec:signin');\">Sign in</button>\n  <a class=\"block_link\" href=\"https://www.cvs.com/account/creation?page=/account/signup.jsp&amp;screenname=/extracare/home&amp;icid=mt_dt_EC_createaccount__180909_180910\">Create account</a>\n</div>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "div.anonymous_user div.signin_block"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "takeover"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".master-wrapper .hero_img {\n  display: none;\n}\n\n@media screen and (min-width: 769px) {\n  .master-wrapper .hero_img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: calc(100% - 20px);\n  }\n}\n\n@media screen and (min-width: 993px) {\n  .master-wrapper .hero_img {\n    background-position-y: center !important;\n    height: 320px;\n    width: 100%;\n  }\n}\n\n.master-wrapper .signin_block {\n  background: #00334B !important;\n  display: block;\n  height: 100%;\n  padding-bottom: 30px;\n  padding-left: 20px;\n  padding-right: 20px;\n  padding-top: 20px;\n  position: relative;\n  top: -44px;\n  width: 100%;\n}\n\n@media screen and (min-width: 641px) {\n  .master-wrapper .signin_block {\n    margin-left: 0;\n    min-height: 320px;\n    top: 0;\n  }\n}\n\n@media screen and (min-width: 769px) {\n  .master-wrapper .signin_block {\n    -ms-flex-line-pack: center;\n        align-content: center;\n    background: transparent !important;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n    height: 320px;\n    margin-left: 0;\n    margin-top: 0;\n    max-width: 940px;\n    min-height: 0;\n    padding-left: 34px;\n    padding-top: 0;\n    position: absolute !important;\n    width: 100%;\n  }\n}\n\n.master-wrapper .signin_block .block_title {\n  font-size: 36px;\n  padding: 17px 0 10px 0;\n  text-align: left;\n  width: 100%;\n}\n\n@media screen and (min-width: 769px) {\n  .master-wrapper .signin_block .block_title {\n    max-width: 100%;\n  }\n}\n\n.master-wrapper .signin_block .block_subtitle {\n  display: block;\n  padding: 0 0 20px;\n}\n\n@media screen and (min-width: 769px) {\n  .master-wrapper .signin_block .block_subtitle {\n    max-width: 505px;\n  }\n}\n\n.master-wrapper .signin_block .block_links {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  margin-left: 0;\n  margin-top: 0;\n  width: 100% !important;\n}\n\n@media screen and (min-width: 769px) {\n  .master-wrapper .signin_block .block_links {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -ms-flex-wrap: nowrap;\n        flex-wrap: nowrap;\n    max-width: 100%;\n  }\n}\n\n.master-wrapper .signin_block .block_links a {\n  font-weight: bold;\n}\n\n.master-wrapper .signin_block .block_signin {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  margin-left: 0;\n  width: 100% !important;\n}\n\n@media screen and (min-width: 769px) {\n  .master-wrapper .signin_block .block_signin {\n    width: 160px !important;\n  }\n}\n\n.master-wrapper .signin_block .block_link {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  color: #fff;\n  font-size: 18px;\n  font-weight: normal !important;\n  margin-top: 20px;\n  text-align: left;\n  text-decoration: underline;\n}\n\n@media screen and (min-width: 769px) {\n  .master-wrapper .signin_block .block_link {\n    margin-left: 40px;\n    margin-top: 0;\n  }\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "ExtraCare_HP"
+        ],
+        "id": 204229,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

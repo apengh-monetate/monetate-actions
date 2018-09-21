@@ -1,5 +1,5 @@
 {
-  "id": 355399,
+  "id": 355400,
   "title": "MONETATE - Insert image into nav",
   "description": "Insert banner image into nav",
   "op": "selectorBanner",
@@ -27,10 +27,10 @@
         }
       },
       "widget": {
-        "label": "Image Creative",
+        "action_visible": true,
         "type": "ImageCreative",
         "description": "Upload an image creative",
-        "action_visible": true
+        "label": "Image Creative"
       },
       "required": true
     },
@@ -38,13 +38,13 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "nav > ul > li > ul[aria-label=\"Accessories\"]"
+        "value": "ul[aria-label=\"Accessories\"]"
       },
       "widget": {
-        "label": "Nav Menu",
+        "action_visible": true,
         "type": "CssSelectorField",
         "description": "CSS Selector to find the relative element.",
-        "action_visible": true
+        "label": "Nav Menu"
       },
       "required": true
     },
@@ -55,9 +55,7 @@
         "value": "last"
       },
       "widget": {
-        "description": "Where to insert the banner in relation to the Relative Element Selector.",
-        "action_visible": true,
-        "type": "StringSelectField",
+        "label": "Insert Method",
         "options": [
           {
             "name": "after",
@@ -84,7 +82,9 @@
             "label": "Takeover"
           }
         ],
-        "label": "Insert Method"
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
       },
       "required": true
     },
@@ -95,10 +95,10 @@
         "value": null
       },
       "widget": {
-        "label": "Banner Div Inline Style",
+        "action_visible": true,
         "type": "TextField",
         "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
-        "action_visible": true
+        "label": "Banner Div Inline Style"
       },
       "required": false
     },
@@ -109,10 +109,10 @@
         "value": null
       },
       "widget": {
-        "label": "Image Element Inline Style",
+        "action_visible": true,
         "type": "TextField",
         "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
-        "action_visible": true
+        "label": "Image Element Inline Style"
       },
       "required": false
     },
@@ -121,17 +121,17 @@
         "type": "flexible_creative",
         "name": "opt_styleSheet",
         "value": {
-          "content": "nav > ul > li > ul[aria-label=\"Accessories\"] > div {\n  display: none;\n  z-index: 1;\n}\n\n@media screen and (min-width: 768px) {\n  nav > ul > li > ul[aria-label=\"Accessories\"] > div {\n    display: block;\n    margin-top: 8px;\n    max-height: 1200px;\n    max-width: 244px;\n    min-height: 600px;\n    min-width: 228px;\n  }\n}\n\n@media screen and (min-width: 1025px) {\n  nav > ul > li > ul[aria-label=\"Accessories\"] > div {\n    max-height: 504px;\n    max-width: 244px;\n    min-height: 504px;\n    min-width: 228px;\n  }\n}",
+          "content": "ul[aria-label=\"Accessories\"] div { /* UPDATE SELECTOR TO MATCH MENU */\n  display: none;\n  position: relative;\n  z-index: 1;\n}\n\n@media screen and (min-width: 768px) {\n  ul[aria-label=\"Accessories\"] div { /* UPDATE SELECTOR TO MATCH MENU */\n    display: block;\n    margin-top: 8px;\n    max-height: 1200px;\n    max-width: 228px; /* UPDATE WIDTH TO MATCH CREATIVE WIDTH */\n    min-height: 600px;\n    min-width: 228px; /* UPDATE WIDTH TO MATCH CREATIVE WIDTH */\n  }\n}\n\n@media screen and (min-width: 1025px) {\n  ul[aria-label=\"Accessories\"] div { /* UPDATE SELECTOR TO MATCH MENU */\n    max-height: 504px;\n    min-height: 504px;\n  }\n}\n\nul[aria-label=\"Accessories\"] area { /* UPDATE SELECTOR TO MATCH MENU */\n  display: block;\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n}",
           "discriminator": "content",
           "ref": null,
           "type": "css"
         }
       },
       "widget": {
-        "label": "CSS",
+        "action_visible": true,
         "type": "CSSCodeField",
         "description": "CSS appended to the DOM in a <style> or <link> element.",
-        "action_visible": true
+        "label": "CSS"
       },
       "required": false
     },
@@ -142,10 +142,10 @@
         "value": false
       },
       "widget": {
-        "label": "Select multiple elements, if matched?",
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
-        "action_visible": false
+        "label": "Select multiple elements, if matched?"
       },
       "required": false
     },
@@ -156,10 +156,10 @@
         "value": false
       },
       "widget": {
-        "label": "Re-check for Elements",
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
-        "action_visible": false
+        "label": "Re-check for Elements"
       },
       "required": false
     }

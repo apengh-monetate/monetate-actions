@@ -1,5 +1,5 @@
 {
-  "id": 353915,
+  "id": 355440,
   "title": "Show Bracelet Size Lightbox V2",
   "description": "Shows bracelet size lightbox on click",
   "op": "htmlLightboxStringOnClick",
@@ -15,7 +15,7 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "a.guide-link.pandora-icon-size"
+        "value": "#mtGuideLink"
       },
       "widget": {
         "action_visible": true,
@@ -71,7 +71,7 @@
       "input": {
         "type": "bool",
         "name": "opt_pinned",
-        "value": false
+        "value": true
       },
       "widget": {
         "action_visible": true,
@@ -221,7 +221,43 @@
   "masks": [],
   "rule_operator": "and",
   "rules": {
-    "builtin": [],
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 204200,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      },
+      {
+        "values": [
+          "/armbander/",
+          "/armbaender/"
+        ],
+        "id": 204201,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "contains",
+          "label": "URL",
+          "rule_name": "page_url",
+          "rule_op": "icontains",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
     "required": []
   },
   "manage_impressions": false

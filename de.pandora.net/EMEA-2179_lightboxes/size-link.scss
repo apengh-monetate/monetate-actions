@@ -1,0 +1,28 @@
+/* Hide default size chart link */
+.size .guide-container a.guide-link {
+  display: none !important;
+}
+
+
+.mt-guide-link {
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  
+  .guide-link {
+    color: #333;
+    font-family: 'optima lt w01 roman', 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+    font-size: 12px;
+    
+    &:hover {
+      text-decoration: none;
+    }
+    
+    &::before {
+      font-size: 16px;
+      left: 2px;
+      position: relative;
+    }
+  }
+}

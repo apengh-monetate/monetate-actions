@@ -1,0 +1,126 @@
+@import "../variables";
+
+
+.master-wrapper {
+  .hero_img {
+    display:none;
+  }
+
+  .signin_block {
+    display: block !important;
+    height: auto !important;
+    margin: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    width: 100% !important;
+  }  
+}
+
+div#anonymousbcc_1,
+div#promolp {
+  display: flex;
+  width: 100%;
+}
+
+
+
+
+
+
+.mte180909-hero {
+  align-content: center;
+  background-color: #00334B;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -16px;
+  padding: 30px 15px;
+  @media screen and (min-width: $breakpoint-md) {
+    background-image: url('/bizcontent/extracare/HERO_EC_burst.png') !important;
+    background-position-x: 94%;
+    background-position-y: top;
+    background-repeat: no-repeat !important;
+    height: 300px;
+    margin-top: 0;
+    padding: 30px 20px;
+  }
+  @media screen and (min-width: 961px) {
+    max-width: 920px;
+    padding: 30px;
+  }
+  @media screen and (min-width: $breakpoint-xl) {
+    max-width: 940px;
+  }
+
+
+  .block_title {
+    font-size: 24px !important;
+    padding: 0 40px 10px 0 !important;
+    text-align: left;
+    width: 100% !important;
+    @media screen and (min-width: $breakpoint-lg) {
+      font-size: 36px !important;
+      max-width: 100%;
+    }
+  }
+  
+  .block_subtitle {
+    display: block;
+    font-size: 14px;
+    padding: 0 0 20px;
+    @media screen and (min-width: $breakpoint-md) {
+      max-width: 415px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      font-size: 18px;
+    }
+  }
+
+
+
+
+  .block_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-top: 0;
+    width: 100% !important;
+    @media screen and (min-width: $breakpoint-md) {
+      align-items: center;
+      flex-wrap: nowrap;
+      max-width: 100%;
+    }
+    a {
+      font-weight: bold;
+    }
+  }
+
+  .block_signin {
+    box-sizing: border-box;
+    margin-left: 0;
+    width: 100% !important;
+    @media screen and (min-width: $breakpoint-md) {
+      width: 160px !important;
+    }
+  }
+
+  .block_link {
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal !important;
+    margin-top: 20px;
+    text-align: left;
+    text-decoration: underline;
+    @media screen and (min-width: $breakpoint-md) {
+      margin-left: 40px;
+      margin-top: 0;
+    }
+  }
+
+
+}

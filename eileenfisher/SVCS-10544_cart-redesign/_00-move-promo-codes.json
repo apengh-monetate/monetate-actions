@@ -1,49 +1,38 @@
 {
-  "id": 355395,
-  "title": "MONETATE - Takeover cloned product item on index/search",
-  "description": "Takeover cloned product item on index/search",
-  "op": "selectorBanner",
+  "id": 355418,
+  "title": "MONETATE - Move promo codes into Order Summary table on cart",
+  "description": "Move promo codes into Order Summary table on cart",
+  "op": "moveNode",
   "slot": "actionbuilder_ag_0",
-  "slot_type": "page",
-  "category": "image",
-  "subcategory": "PLP",
-  "action_events": [
-    "op_click",
-    "op_impression"
-  ],
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Page Modification",
+  "action_events": [],
   "inputs": [
     {
       "input": {
-        "type": "img_creative",
-        "name": "creative",
-        "value": {
-          "extension": ".png",
-          "height": 512,
-          "width": 304,
-          "discriminator": "layered_content",
-          "alt": "",
-          "static_sha": "5cd32eb75151cba00d1dff1248c29c75bc4954af",
-          "id": 604469
-        }
+        "type": "str",
+        "name": "selA",
+        "value": "div.cart > div.cart-collaterals"
       },
       "widget": {
         "action_visible": true,
-        "type": "ImageCreative",
-        "description": "Upload an image creative",
-        "label": "Image Creative"
+        "type": "CssSelectorField",
+        "description": "Selector to find the element that is being moved.",
+        "label": "Element to Move"
       },
       "required": true
     },
     {
       "input": {
         "type": "str",
-        "name": "selector",
-        "value": "#mtClonedProduct1"
+        "name": "selB",
+        "value": "#shopping-cart-totals-table > tbody"
       },
       "widget": {
         "action_visible": true,
         "type": "CssSelectorField",
-        "description": "CSS Selector to find the relative element.",
+        "description": "Place the Moved Element in relation to this element.",
         "label": "Relative Element Selector"
       },
       "required": true
@@ -52,10 +41,12 @@
       "input": {
         "type": "str",
         "name": "imeth",
-        "value": "takeover"
+        "value": "last"
       },
       "widget": {
+        "description": "Where to insert the Moved Element in relation to the Relative Element Selector.",
         "label": "Insert Method",
+        "type": "StringSelectField",
         "options": [
           {
             "name": "after",
@@ -82,8 +73,6 @@
             "label": "Takeover"
           }
         ],
-        "type": "StringSelectField",
-        "description": "Where to insert the banner in relation to the Relative Element Selector.",
         "action_visible": true
       },
       "required": true
@@ -91,28 +80,28 @@
     {
       "input": {
         "type": "str",
-        "name": "opt_divStyle",
+        "name": "opt_styleA",
         "value": null
       },
       "widget": {
         "action_visible": true,
         "type": "TextField",
-        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
-        "label": "Banner Div Inline Style"
+        "description": "Adds inline CSS style to Moved Element.",
+        "label": "Style for Moved Element"
       },
       "required": false
     },
     {
       "input": {
         "type": "str",
-        "name": "opt_imgStyle",
+        "name": "opt_styleB",
         "value": null
       },
       "widget": {
         "action_visible": true,
         "type": "TextField",
-        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
-        "label": "Image Element Inline Style"
+        "description": "Adds inline CSS style to the Relative Element.",
+        "label": "Style for Relative Element"
       },
       "required": false
     },
@@ -138,20 +127,6 @@
     {
       "input": {
         "type": "bool",
-        "name": "opt_multiSel",
-        "value": false
-      },
-      "widget": {
-        "action_visible": false,
-        "type": "BooleanField",
-        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
-        "label": "Select multiple elements, if matched?"
-      },
-      "required": false
-    },
-    {
-      "input": {
-        "type": "bool",
         "name": "opt_poll",
         "value": false
       },
@@ -170,10 +145,9 @@
     "builtin": [
       {
         "values": [
-          "index",
-          "search"
+          "cart"
         ],
-        "id": 204193,
+        "id": 204141,
         "rule_tmpl": {
           "widget": "itemlist",
           "description": null,

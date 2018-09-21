@@ -1,0 +1,19 @@
+.mt-continue-shopping {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-continue-shopping {
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 35px;
+  }
+}
+
+.mt-continue-shopping a {
+  font-family: 'TradeGothicW01-LightObl' !important;
+  font-size: 11px;
+  text-decoration: none;
+}

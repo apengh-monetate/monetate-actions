@@ -28,9 +28,6 @@ $breakpoint-lg: 960px;
 div.cart > div.page-title {
   margin: 0 !important;
   margin-bottom: 15px !important;
-  @media screen and (min-width: $breakpoint-md) {
-    margin-bottom: 50px !important;
-  }
 }
 .page-title {
   h1 {
@@ -73,7 +70,8 @@ div.cart > div.page-title {
 
   tbody {
     @media screen and (min-width: $breakpoint-md) {
-      display: inline-block !important;;
+      display: inline-block !important;
+      width: 100%;
     }
   }
 
@@ -138,6 +136,7 @@ div.cart > div.page-title {
     max-width: calc(100% - 110px);
     padding: 0;
     padding-left: 10px;
+    position: relative;
     width: auto;
     @media screen and (min-width: $breakpoint-md) {
       display: inline-block;
@@ -145,7 +144,7 @@ div.cart > div.page-title {
       width: 75%;
     }
     @media screen and (min-width: $breakpoint-lg) {
-      width: 82%;
+      width: calc(100% - 130px);
     }
 
     .product-name {
@@ -177,13 +176,16 @@ div.cart > div.page-title {
     text-transform: lowercase !important;
     @media screen and (min-width: $breakpoint-md) {
       border-top: 1px solid #f2f2f2;
-      margin-top: 15px !important;
-      padding-top: 5px;
+      margin-top: 0 !important;
+      padding-top: 10px;
+      position: absolute !important;
+      top: 48px;
       width: 100%;
     }
     @media screen and (min-width: $breakpoint-lg) {
       font-size: 13px !important;
     }
+    
     dt {
       color: #6a6a6a !important;
       margin-right: 5px !important;
@@ -406,20 +408,24 @@ div.cart > div.page-title {
     color: #fff;
     font-family: "Trade Gothic W01 Bold 2" !important;
     font-size: 10px;
+    left: 0;
     margin: 0;
-    margin-left: 112px;
+    margin-left: 120px;
     margin-top: -96px;
     max-width: 50px !important;
-    min-width: auto !important;
+    min-width: 0 !important;
     padding: 4px 5px;
-    position: relative;
+    position: absolute;
+    top: 90%;
     // position: absolute;
     // right: calc(100% - 162px);
     //top: 50%;
     width: 50px !important;
     @media screen and (min-width: $breakpoint-md) {
+      left: 110px;
       margin-left: 10px;
       margin-top: 0;
+      top: 75%;
     }
   }
 
@@ -439,12 +445,12 @@ div.cart > div.page-title {
 
 .cart-collaterals {
   background: #f8f8f8 !important;
-  border-top: 1px solid #727070 !important;
-  padding: 20px 10px 0 !important;
+  border: none !important;
+  float: none !important;
+  padding: 20px 0 0 !important;
+  width: 100% !important;
   @media screen and (min-width: $breakpoint-md) {
     border: none !important;
-    float: right !important;
-    width: 35% !important;
   }
 
 
@@ -494,12 +500,9 @@ div.cart > div.page-title {
 
   .discount {
     h2 {
-      font-family: "Trade Gothic W01 Roman" !important;
-      font-size: 20px;
-      font-weight: normal;
-      margin-bottom: 10px;
+      display: none;
     }
-    
+
     .v-fix {
       display: flex;
       flex-direction: row;
@@ -509,12 +512,40 @@ div.cart > div.page-title {
         width: 100%;
       }
       .button {
+        height: 30px !important;
         width: auto !important;
         span {
           span {
-            min-width: auto !important;
+            font-size: 0 !important;
+            height: 30px !important;
+            min-width: 0 !important;
+            padding: 0 !important;
             width: 75px !important;
+            &::before {
+              background-color: grey !important;
+              color: #fff;
+              content: "APPLY";
+              display: block;
+              font-size: 10px !important;
+              padding-bottom: 9px;
+              padding-top: 9px;
+            }
           }
+        }
+      }
+
+      .button + .button span span {
+        &::before {
+          content: "REMOVE" !important;
+        }
+      }
+    }
+
+    form#discount-coupon-form[cancel-btn] .v-fix {
+      button span span {
+        width: 55px !important;
+        @media screen and (min-width: $breakpoint-lg) {
+          width: 75px !important;
         }
       }
     }
@@ -534,6 +565,10 @@ div.cart > div.page-title {
     }
     fieldset {
       display: block !important;
+    }
+
+    .form-list .validation-advice {
+      display: none;
     }
 
     label {
@@ -582,14 +617,24 @@ div.cart > div.page-title {
       max-width: 75px;
       width: 100% !important;
       .button {
+        height: 30px !important;
         width: 75px !important;
         span {
           span {
-            background-color: grey !important;
-            color: #fff;
-            font-size: 10px !important;
+            font-size: 0 !important;
             height: 30px !important;
-            min-width: inherit !important;
+            min-width: 0 !important;
+            padding: 0 !important;
+            width: 75px !important;
+            &::before {
+              background-color: grey !important;
+              color: #fff;
+              content: "APPLY";
+              display: block;
+              font-size: 10px !important;
+              padding-bottom: 9px;
+              padding-top: 9px;
+            }
           }
         }
       }
@@ -605,6 +650,7 @@ div.cart > div.page-title {
 .cart {
   .totals {
     background: #f8f8f8;
+    border-top: 1px solid #727070;
     margin-top: 0 !important;
     padding-bottom: 30px;
     padding-left: 10px !important;
@@ -618,6 +664,7 @@ div.cart > div.page-title {
     }
     @media screen and (min-width: $breakpoint-md) {
       border-left: none !important;
+      border-top: none;
       float: right !important;
       padding-bottom: 20px !important;
       width: 35% !important;
@@ -625,6 +672,8 @@ div.cart > div.page-title {
 
 
     #shopping-cart-totals-table {
+      display: flex;
+      flex-direction: column;
       margin-right: 0 !important;
       margin-top: 10px;
       td.a-right {
@@ -642,27 +691,54 @@ div.cart > div.page-title {
         text-transform: uppercase;
       }
 
+      td:first-child {
+        strong {
+          font-size: 0 !important;
+          &::before {
+            content: "Total";
+            display: block;
+            font-size: 20px !important;
+          }
+        }
+      }
+
       tbody {
-        tr td {
-          font-family: "Trade Gothic W01 Roman"!important;
-          font-size: 12px !important;
-          text-transform: uppercase;
+        tr {
+          display: flex;
+          justify-content: space-between;
+          td {
+            font-family: "Trade Gothic W01 Roman"!important;
+            font-size: 12px !important;
+            text-transform: uppercase;
+            width: 100%;
+          }
         }
       }
 
       tfoot {
+        order: 1;
+        tr {
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          &:after {
+            bottom: 0;
+            color: grey;
+            content: "Tax calculated on checkout";
+            font-family: "Trade Gothic W01 Light"!important;
+            font-size: 11px;
+            left: 0;
+            position: absolute;
+          }
+          td {
+            width: 100% !important; 
+          }
+        }
+        
         td.a-right {
           &:first-of-type {
             position: relative;
-            &:after {
-              bottom: 0;
-              color: grey;
-              content: "Tax calculated on checkout";
-              font-family: "Trade Gothic W01 Light"!important;
-              font-size: 11px;
-              left: 0;
-              position: absolute;
-            }
+            
           }
         }
       }
@@ -680,6 +756,9 @@ div.cart > div.page-title {
             display: flex;
             flex-direction: column;
           }
+          @media screen and (min-width: $breakpoint-lg) {
+            flex-direction: row;
+          }
         }
       }
     }
@@ -688,11 +767,20 @@ div.cart > div.page-title {
       @media screen and (min-width: $breakpoint-md) {
         width: 100%;
       }
+      @media screen and (min-width: $breakpoint-lg) {
+        &:first-child {
+          margin-right: 5px;
+        }
+      }
       &.btn-continue {
         background: grey !important;
         @media screen and (min-width: $breakpoint-md) {
           margin-top: 20px;
           order: 1;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+          margin-top: 0;
+          order: 0;
         }
       }
       span {
@@ -708,6 +796,9 @@ div.cart > div.page-title {
         @media screen and (min-width: $breakpoint-md) {
           margin-left: 0 !important;
         }
+        @media screen and (min-width: $breakpoint-lg) {
+          margin-left: 5px !important;
+        }
       }
     }
   }
@@ -719,5 +810,102 @@ div.cart > div.page-title {
 
 
 
+
+
+// ==================================================================
+// Need Help
+// ==================================================================
+.mt_need-help {
+  background: #fff;
+  clear: right;
+  display: block;
+  float: right;
+  margin-top: 31px;
+  padding: 0 20px;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 0 10px;
+    width: 35%;
+  }
+
+  &__heading {
+    font-family: "Trade Gothic W01 Roman";
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-family: "Trade Gothic W01 Roman";
+    font-size: 17px;
+    a {
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+
+  br {
+    @media screen and (min-width: 960px) {
+      display: none;
+    }
+  }
+
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 25px;
+    @media screen and (min-width: $breakpoint-md) {
+      justify-content: center;
+    }
+    a {
+      flex: 1 1 50%;
+      font-size: 13px;
+      text-decoration: none;
+      @media screen and (min-width: $breakpoint-md) {
+        text-align: center !important;
+      }
+      
+      &:last-of-type {
+        text-align: right;
+      }
+    }
+  }
+
+
+  .mcafee {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 20px 0;
+    width: 100%;
+    a {
+      flex: initial;
+      width: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px), all {
+  .cart .cart-collaterals .v-fix .button {
+    width: 75px !important;
+  }
+  .cart .cart-collaterals .v-fix .cancel-btn {
+    margin-right: 0 !important;
+  }
+}
+
+
+@media only screen and (max-width: 479px), all {
+  .checkout-cart-index .main .col-main .cart .cart-collaterals .v-fix .input-text {
+    width: calc(100% - 85px) !important;
+  }
+}
 
 

@@ -1,36 +1,27 @@
 {
-  "id": 355395,
-  "title": "MONETATE - Takeover cloned product item on index/search",
-  "description": "Takeover cloned product item on index/search",
-  "op": "selectorBanner",
+  "id": 355406,
+  "title": "MONETATE - Add Standard Shipping Link in Cart",
+  "description": "Add Standard Shipping Link in Cart",
+  "op": "selectorInsertHtmlString",
   "slot": "actionbuilder_ag_0",
   "slot_type": "page",
-  "category": "image",
-  "subcategory": "PLP",
+  "category": "html",
+  "subcategory": "Cart",
   "action_events": [
-    "op_click",
     "op_impression"
   ],
   "inputs": [
     {
       "input": {
-        "type": "img_creative",
-        "name": "creative",
-        "value": {
-          "extension": ".png",
-          "height": 512,
-          "width": 304,
-          "discriminator": "layered_content",
-          "alt": "",
-          "static_sha": "5cd32eb75151cba00d1dff1248c29c75bc4954af",
-          "id": 604469
-        }
+        "type": "str",
+        "name": "htmlString",
+        "value": "<div class=\"mt-shipping-link\">\n  <a target=\"_blank\" href=\"/customer-care/us-customers/#Shipping\">Standard Shipping*</a>\n  <span class=\"mt-shipping-price price\">$0.00</span>\n</div>"
       },
       "widget": {
         "action_visible": true,
-        "type": "ImageCreative",
-        "description": "Upload an image creative",
-        "label": "Image Creative"
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
       },
       "required": true
     },
@@ -38,7 +29,7 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "#mtClonedProduct1"
+        "value": "#shopping-cart-totals-table > tbody"
       },
       "widget": {
         "action_visible": true,
@@ -52,7 +43,7 @@
       "input": {
         "type": "str",
         "name": "imeth",
-        "value": "takeover"
+        "value": "last"
       },
       "widget": {
         "label": "Insert Method",
@@ -95,7 +86,7 @@
         "value": null
       },
       "widget": {
-        "action_visible": true,
+        "action_visible": false,
         "type": "TextField",
         "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
         "label": "Banner Div Inline Style"
@@ -104,24 +95,10 @@
     },
     {
       "input": {
-        "type": "str",
-        "name": "opt_imgStyle",
-        "value": null
-      },
-      "widget": {
-        "action_visible": true,
-        "type": "TextField",
-        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
-        "label": "Image Element Inline Style"
-      },
-      "required": false
-    },
-    {
-      "input": {
         "type": "flexible_creative",
         "name": "opt_styleSheet",
         "value": {
-          "content": "",
+          "content": ".mt-shipping-link {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  font-family: \"Trade Gothic W01 Roman\";\n  font-size: 12px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding-top: 20px;\n  text-transform: uppercase;\n}\n\n.mt-shipping-link a {\n  text-decoration: none;\n}\n\n.mt-shipping-link a:hover {\n  text-decoration: underline;\n}\n\n.mt-shipping-price {\n  text-align: right;\n}\n",
           "discriminator": "content",
           "ref": null,
           "type": "css"
@@ -170,10 +147,9 @@
     "builtin": [
       {
         "values": [
-          "index",
-          "search"
+          "cart"
         ],
-        "id": 204193,
+        "id": 204144,
         "rule_tmpl": {
           "widget": "itemlist",
           "description": null,

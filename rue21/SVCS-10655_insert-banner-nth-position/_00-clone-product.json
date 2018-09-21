@@ -1,5 +1,5 @@
 {
-  "id": 355392,
+  "id": 355396,
   "title": "MONETATE - Clone product item index/search",
   "description": "Clone product item on index/search page",
   "op": "cloneNode",
@@ -13,7 +13,7 @@
       "input": {
         "type": "str",
         "name": "selToClone",
-        "value": "#featureCat > ul.gridRowPLP > li.column:nth-child(1)"
+        "value": "#featureCat > ul.gridRowPLP > li.column:not([class*=\"monetate_cloneNode\"]):nth-child(1)"
       },
       "widget": {
         "action_visible": true,
@@ -27,7 +27,7 @@
       "input": {
         "type": "str",
         "name": "selToPlace",
-        "value": "#featureCat > ul.gridRowPLP > li.column:nth-child(2)"
+        "value": "#featureCat > ul.gridRowPLP > li.column:nth-child(4)"
       },
       "widget": {
         "action_visible": true,
@@ -41,12 +41,10 @@
       "input": {
         "type": "str",
         "name": "imeth",
-        "value": "before"
+        "value": "after"
       },
       "widget": {
-        "description": "Where to insert the cloned element in relation to the Relative Element Selector.",
         "label": "Insert Method",
-        "type": "StringSelectField",
         "options": [
           {
             "name": "after",
@@ -73,6 +71,8 @@
             "label": "Takeover"
           }
         ],
+        "type": "StringSelectField",
+        "description": "Where to insert the cloned element in relation to the Relative Element Selector.",
         "action_visible": true
       },
       "required": true
@@ -81,7 +81,7 @@
       "input": {
         "type": "str",
         "name": "opt_newID",
-        "value": "mtClonedProduct"
+        "value": "mtClonedProduct1"
       },
       "widget": {
         "action_visible": true,
@@ -162,7 +162,7 @@
           "index",
           "search"
         ],
-        "id": 204105,
+        "id": 204192,
         "rule_tmpl": {
           "widget": "itemlist",
           "description": null,

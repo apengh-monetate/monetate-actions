@@ -1,36 +1,27 @@
 {
-  "id": 355395,
-  "title": "MONETATE - Takeover cloned product item on index/search",
-  "description": "Takeover cloned product item on index/search",
-  "op": "selectorBanner",
+  "id": 355456,
+  "title": "Takeover Homepage Hero",
+  "description": "Takeover Homepage Hero",
+  "op": "selectorInsertHtmlString",
   "slot": "actionbuilder_ag_0",
   "slot_type": "page",
-  "category": "image",
-  "subcategory": "PLP",
+  "category": "html",
+  "subcategory": "Home page",
   "action_events": [
-    "op_click",
     "op_impression"
   ],
   "inputs": [
     {
       "input": {
-        "type": "img_creative",
-        "name": "creative",
-        "value": {
-          "extension": ".png",
-          "height": 512,
-          "width": 304,
-          "discriminator": "layered_content",
-          "alt": "",
-          "static_sha": "5cd32eb75151cba00d1dff1248c29c75bc4954af",
-          "id": 604469
-        }
+        "type": "str",
+        "name": "htmlString",
+        "value": "<h1>\n  <em>Placeholder heading<br>\n  <span class=\"red\">Trustworthy Trucks. Ryder Reliability.</span></em>\n</h1>"
       },
       "widget": {
         "action_visible": true,
-        "type": "ImageCreative",
-        "description": "Upload an image creative",
-        "label": "Image Creative"
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
       },
       "required": true
     },
@@ -38,7 +29,7 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": "#mtClonedProduct1"
+        "value": ".hero .main-headline"
       },
       "widget": {
         "action_visible": true,
@@ -55,7 +46,9 @@
         "value": "takeover"
       },
       "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
         "label": "Insert Method",
+        "type": "StringSelectField",
         "options": [
           {
             "name": "after",
@@ -82,8 +75,6 @@
             "label": "Takeover"
           }
         ],
-        "type": "StringSelectField",
-        "description": "Where to insert the banner in relation to the Relative Element Selector.",
         "action_visible": true
       },
       "required": true
@@ -95,24 +86,10 @@
         "value": null
       },
       "widget": {
-        "action_visible": true,
+        "action_visible": false,
         "type": "TextField",
         "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
         "label": "Banner Div Inline Style"
-      },
-      "required": false
-    },
-    {
-      "input": {
-        "type": "str",
-        "name": "opt_imgStyle",
-        "value": null
-      },
-      "widget": {
-        "action_visible": true,
-        "type": "TextField",
-        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
-        "label": "Image Element Inline Style"
       },
       "required": false
     },
@@ -164,24 +141,29 @@
       "required": false
     }
   ],
-  "masks": [],
+  "masks": [
+    {
+      "selector": ".hero .main-headline",
+      "value": "https://usedtrucks.ryder.com/en",
+      "op": "path_iprefix"
+    }
+  ],
   "rule_operator": "and",
   "rules": {
     "builtin": [
       {
         "values": [
-          "index",
-          "search"
+          "https://usedtrucks.ryder.com/en"
         ],
-        "id": 204193,
+        "id": 204230,
         "rule_tmpl": {
           "widget": "itemlist",
           "description": null,
           "is_included": true,
-          "verb": "=",
-          "label": "Page type",
-          "rule_name": "page_type",
-          "rule_op": "equal",
+          "verb": "starts with",
+          "label": "URL",
+          "rule_name": "page_url",
+          "rule_op": "iprefix",
           "value_type": "string",
           "filter_name": "page_filter"
         }

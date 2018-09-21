@@ -1,0 +1,28 @@
+.mt-shipping-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: "Trade Gothic W01 Roman";
+  font-size: 12px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 20px;
+  text-transform: uppercase;
+}
+
+.mt-shipping-link a {
+  text-decoration: none;
+}
+
+.mt-shipping-link a:hover {
+  text-decoration: underline;
+}
+
+.mt-shipping-price {
+  text-align: right;
+}

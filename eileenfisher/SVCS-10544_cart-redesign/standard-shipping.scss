@@ -1,0 +1,21 @@
+.mt-shipping-link {
+  display: flex;
+  flex-direction: row;
+  font-family: "Trade Gothic W01 Roman";
+  font-size: 12px;
+  justify-content: space-between;
+  padding-top: 20px;
+  text-transform: uppercase;
+}
+
+.mt-shipping-link a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.mt-shipping-price {
+  text-align: right;
+}
