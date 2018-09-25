@@ -1,0 +1,166 @@
+#MONETATE-ID {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 2.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  #MONETATE-ID {
+    padding: 0 8% 2.5rem 15%;
+  }
+}
+
+#MONETATE-ID [data-slider-mask] {
+  width: 100%;
+}
+
+#MONETATE-ID [data-slide] > div {
+  padding: 0 5px;
+}
+
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  border: none;
+  height: 1.875rem;
+  margin: 0;
+  text-align: center;
+  top: 38%;
+  -webkit-transform: translateY(-38%);
+          transform: translateY(-38%);
+  width: 1.875rem;
+}
+
+#MONETATE-ID [data-prev-button] {
+  left: 0;
+}
+
+#MONETATE-ID [data-next-button] {
+  right: 0;
+}
+
+#MONETATE-ID .mt-horizontal-carousel-main {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  #MONETATE-ID .mt-horizontal-carousel-main {
+    padding: 6.25rem 0 0 !important;
+  }
+}
+
+#MONETATE-ID .mt-horizontal-carousel-title h2 {
+  color: #474747;
+  font-family: didot w01 italic;
+  font-size: 1.5rem;
+  font-style: Normal;
+  font-weight: 400;
+  letter-spacing: .05rem;
+  line-height: 1em;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  text-align: center;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  #MONETATE-ID .mt-horizontal-carousel-title h2 {
+    margin: 0 0 4.375rem;
+  }
+}
+
+#MONETATE-ID .mt-horizontal-carousel-container {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+#MONETATE-ID .mt-merch-item {
+  padding: 0;
+}
+
+#MONETATE-ID .mt-slider-image {
+  width: 100%;
+}
+
+#MONETATE-ID .mt-brand-name {
+  -webkit-font-smoothing: auto;
+  color: #041e3a;
+  display: block;
+  font-family: "hco didot 96";
+  font-style: normal;
+  font-weight: 600;
+  margin: 1.4375rem auto 0.625rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+@media screen and (min-width: 960px) {
+  #MONETATE-ID .mt-brand-name {
+    font-size: .875rem;
+    letter-spacing: .125rem;
+    line-height: 1rem;
+    margin-bottom: .1875rem;
+    margin-top: 2.75rem;
+    max-width: 80%;
+  }
+}
+
+#MONETATE-ID .mt-product-name {
+  -webkit-font-smoothing: auto;
+  color: #041e3a;
+  display: inline-block;
+  font-family: hco gotham book;
+  font-size: .625rem;
+  font-style: Normal;
+  font-weight: 400;
+  letter-spacing: .01875rem;
+  line-height: .6875rem;
+  margin: 0 0 .375rem;
+  max-width: 14.375rem;
+  overflow: visible;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@media screen and (min-width: 960px) {
+  #MONETATE-ID .mt-product-name {
+    font-size: .75rem;
+    line-height: .875rem;
+    margin: 0 0 .25rem;
+    max-width: 80%;
+  }
+}
+
+#MONETATE-ID .mt-product-sales-price, #MONETATE-ID .mt-product-standard-price {
+  color: #041e3a;
+  display: block;
+  font-family: hco gotham bold;
+  font-size: .625rem;
+  font-style: Normal;
+  font-weight: 500;
+  letter-spacing: .003125rem;
+  line-height: .75rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 960px) {
+  #MONETATE-ID .mt-product-sales-price, #MONETATE-ID .mt-product-standard-price {
+    font-size: .75rem;
+    line-height: 1.25rem;
+  }
+}
+
+#MONETATE-ID .mt-product-standard-price {
+  color: #b6b6b6;
+  text-decoration: line-through;
+}

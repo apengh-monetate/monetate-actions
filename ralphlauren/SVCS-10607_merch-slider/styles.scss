@@ -1,0 +1,169 @@
+$breakpoint-lg: 960px;
+
+#MONETATE-ID {
+  // #mt-slider-2529177-0 {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 2.5rem;
+  text-align: center;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-lg) {
+    padding: 0 8% 2.5rem 15%;
+  }
+
+
+
+  [data-slider-mask] {
+    width: 100%;
+  }
+
+  [data-slide] > div {
+    padding: 0 5px;
+  }
+
+
+  [data-prev-button],
+  [data-next-button] {
+    border: none;
+    height: 1.875rem;
+    margin: 0;
+    text-align: center;
+    top: 38%;
+    transform: translateY(-38%);
+    width: 1.875rem;
+  }
+  [data-prev-button] {
+    left: 0;
+  }
+  [data-next-button] {
+    right: 0;
+  }
+
+
+  .mt {
+
+    &-horizontal-carousel {
+      &-main {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        @media screen and (min-width: $breakpoint-lg) {
+          padding: 6.25rem 0 0 !important;
+        }
+      }
+
+      &-title h2 {
+        color: #474747;
+        font-family: didot w01 italic;
+        font-size: 1.5rem;
+        font-style: Normal;
+        font-weight: 400;
+        letter-spacing: .05rem;
+        line-height: 1em;
+        margin: 0 0 2.5rem;
+        padding: 0;
+        text-align: center;
+        text-transform: capitalize;
+        width: 100%;
+        @media screen and (min-width: $breakpoint-lg) {
+          margin: 0 0 4.375rem;
+        }
+      }
+
+
+      &-container {
+        display: block;
+        position: relative;
+        width: 100%;
+      }
+
+    }
+
+
+    &-merch-item {
+      padding: 0;
+    }
+
+
+    // &-product-image {
+    //   background-color: #F0efed;
+    //   font-size: 0;
+    // }
+    &-slider-image {
+      width: 100%;
+    }
+
+
+    &-brand-name {
+      -webkit-font-smoothing: auto;
+      color: #041e3a;
+      display: block;
+      font-family: "hco didot 96";
+      font-style: normal;
+      font-weight: 600;
+      margin: 1.4375rem auto 0.625rem;
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+      word-wrap: break-word;
+      @media screen and (min-width: $breakpoint-lg) {
+        font-size: .875rem;
+        letter-spacing: .125rem;
+        line-height: 1rem;
+        margin-bottom: .1875rem;
+        margin-top: 2.75rem;
+        max-width: 80%;
+      }
+    }
+
+    &-product-name {
+      -webkit-font-smoothing: auto;
+      color: #041e3a;
+      display: inline-block;
+      font-family: hco gotham book;
+      font-size: .625rem;
+      font-style: Normal;
+      font-weight: 400;
+      letter-spacing: .01875rem;
+      line-height: .6875rem;
+      margin: 0 0 .375rem;
+      max-width: 14.375rem;
+      overflow: visible;
+      padding: 0;
+      text-align: center;
+      text-decoration: none;
+      text-transform: none;
+      @media screen and (min-width: $breakpoint-lg) {
+        font-size: .75rem;
+        line-height: .875rem;
+        margin: 0 0 .25rem;
+        max-width: 80%;
+      }
+    }
+
+
+    &-product-sales-price,
+    &-product-standard-price {
+      color: #041e3a;
+      display: block;
+      font-family: hco gotham bold;
+      font-size: .625rem;
+      font-style: Normal;
+      font-weight: 500;
+      letter-spacing: .003125rem;
+      line-height: .75rem;
+      text-align: center;
+      @media screen and (min-width: $breakpoint-lg) {
+        font-size: .75rem;
+        line-height: 1.25rem;
+      }
+    }
+    &-product-standard-price {
+      color: #b6b6b6;
+      text-decoration: line-through;
+    }
+
+
+  }
+}

@@ -1,0 +1,45 @@
+// ==================================================================
+// Move Sticky ATC to Bottom
+// ==================================================================
+.sticky-add-to-cart.top {
+  bottom: 0 !important;
+  top: auto !important;
+}
+
+footer .footer-content-wrap .footer-util {
+  @media screen and (max-width: 639px) {
+    padding-bottom: 90px !important;
+  }
+}
+
+
+
+
+
+// ==================================================================
+// Suppress Sticky Header/Banner
+// ==================================================================
+.sticky .topnav .sticky.sticky-small {
+  position: relative !important;
+}
+body.sticky.sticky-small {
+  @media screen and (max-width: 639px) {
+    padding-top: 0 !important;
+  }
+}
+
+
+
+// ==================================================================
+// Suppress Sticky Banner
+// ==================================================================
+body.sticky.sticky-small {
+  @media screen and (max-width: 639px) {
+    padding-top: 60px !important;
+  }
+}
+
+
+.sticky .topnav .sticky.sticky-medium {
+  z-index: 9999;
+}

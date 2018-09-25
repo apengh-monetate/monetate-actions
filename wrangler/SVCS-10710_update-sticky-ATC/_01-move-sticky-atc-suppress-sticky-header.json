@@ -1,0 +1,57 @@
+{
+  "id": 355472,
+  "title": "PDP - Move Sticky ATC to Bottom AND suppress sticky header/banner",
+  "description": "Move Sticky ATC to Bottom on Product Pages",
+  "op": "insertCSS",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "css",
+  "subcategory": "CSS",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "styleSheet",
+        "value": {
+          "content": "/* Move sticky add to cart to bottom */\n.sticky-add-to-cart.top {\n  bottom: 0 !important;\n  top: auto !important;\n}\n\n/* Add extra space at bottom of page */\n@media screen and (max-width: 639px) {\n  footer .footer-content-wrap .footer-util {\n    padding-bottom: 90px !important;\n  }\n}\n\n/* Make header/banner non-sticky */\n.sticky .topnav .sticky.sticky-small {\n  position: relative !important;\n}\n\n/* Remove padding at top of page */\nbody.sticky.sticky-small {\n  padding-top: 0 !important;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": true
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 204259,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

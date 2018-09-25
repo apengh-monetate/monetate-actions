@@ -1,0 +1,22 @@
+@media screen and (max-width: 767px) {
+  .support-details-container {
+    border-top: 2px solid #ccc;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 19px;
+  }
+
+  .support-details {
+    padding-left: 0;
+    padding-right: 0;
+
+    h3 {
+      margin-bottom: 0;
+    }
+    
+    .icon.icon--icon-outgoing-call {
+      top: 0;
+    }
+  }
+}
+

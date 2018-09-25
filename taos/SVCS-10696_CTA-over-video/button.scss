@@ -1,0 +1,14 @@
+.mt-hero-button {
+  display: none;
+  @media screen and (min-width: 1025px) {
+    bottom: 12.5%;
+    display: block;
+    position: absolute;
+    right: calc(21% - 128px);
+  }
+
+  a {
+    padding-bottom: 24px !important;
+    padding-top: 24px !important;
+  }
+}

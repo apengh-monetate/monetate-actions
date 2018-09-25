@@ -1,0 +1,30 @@
+.sticky-add-to-cart.top {
+  bottom: 0 !important;
+  top: auto !important;
+}
+
+@media screen and (max-width: 639px) {
+  footer .footer-content-wrap .footer-util {
+    padding-bottom: 90px !important;
+  }
+}
+
+.sticky .topnav .sticky.sticky-small {
+  position: relative !important;
+}
+
+@media screen and (max-width: 639px) {
+  body.sticky.sticky-small {
+    padding-top: 0 !important;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  body.sticky.sticky-small {
+    padding-top: 60px !important;
+  }
+}
+
+.sticky .topnav .sticky.sticky-medium {
+  z-index: 9999;
+}

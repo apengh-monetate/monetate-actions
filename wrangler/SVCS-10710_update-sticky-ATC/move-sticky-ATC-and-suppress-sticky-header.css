@@ -1,0 +1,22 @@
+/* Move sticky add to cart to bottom */
+.sticky-add-to-cart.top {
+  bottom: 0 !important;
+  top: auto !important;
+}
+
+/* Add extra space at bottom of page */
+@media screen and (max-width: 639px) {
+  footer .footer-content-wrap .footer-util {
+    padding-bottom: 90px !important;
+  }
+}
+
+/* Make header/banner non-sticky */
+.sticky .topnav .sticky.sticky-small {
+  position: relative !important;
+}
+
+/* Remove padding at top of page */
+body.sticky.sticky-small {
+  padding-top: 0 !important;
+}

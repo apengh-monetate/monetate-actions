@@ -1,0 +1,186 @@
+{
+  "id": 355480,
+  "title": "180903 - Simplify sign in page",
+  "description": "Simplify sign in page",
+  "op": "selectorInsertHtmlString",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "180903",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<h3 class=\"heading--quaternary\"><span aria-hidden=\"true\" class=\"icon icon--icon-outgoing-call\">&nbsp;</span> Contact us</h3>\n\n<div class=\"support-details_content\">\n<div class=\"support-details_content_site-support\">\n<p>Website support 1-855-264-3239</p>\n</div>\n</div>"
+      },
+      "widget": {
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "body > div.view-container.ng-scope > div.container.app-container.content.ng-scope > section.register-login > div.row.support-details-container > support-details > aside.support-details.col-sm-5"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "takeover"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "label": "Banner Div Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "@media screen and (min-width: 768px) {\n  .register-login {\n    margin-top: 30px;\n  }\n  .register-login .row {\n    max-width: 338px;\n  }\n  .register-login .row:nth-child(1), .register-login .row:nth-child(2) {\n    display: none;\n  }\n  .register-login .row.support-details-container {\n    max-width: 100%;\n  }\n  .register-login .sign-in h2 {\n    font-family: \"Helvetica-Bold\";\n    font-size: 21px;\n    line-height: 25px;\n    margin-bottom: 20px;\n  }\n  .srx-header_list {\n    border: none !important;\n  }\n  .srx-header_icon {\n    background-size: contain;\n    height: 40px !important;\n    width: 304px !important;\n  }\n  .srx-header a {\n    display: block !important;\n    margin-bottom: 16px;\n    margin-left: auto !important;\n    margin-right: auto !important;\n    max-width: 338px;\n    width: 100% !important;\n  }\n  .container.app-container.content.ng-scope {\n    margin-left: auto;\n    margin-right: auto;\n  }\n  .register-login {\n    margin-top: 0;\n  }\n  .sign-in-container {\n    padding-left: 0 !important;\n    padding-right: 0 !important;\n    width: 100% !important;\n  }\n  .sign-in-container:before {\n    display: none;\n  }\n  .register-container {\n    display: none;\n  }\n  input, textarea {\n    border-color: #CCC;\n  }\n  .form_fieldset_checkbox {\n    padding-top: 12px;\n  }\n  .login-form_remember-me_recommendation {\n    color: #000 !important;\n  }\n  #sign-in {\n    width: 100%;\n  }\n  .support-details-container {\n    border-top: 2px solid #ccc;\n    margin-left: 0;\n    margin-right: 0;\n    margin-top: 19px;\n  }\n  .support-details {\n    float: none !important;\n    margin-left: auto;\n    margin-right: auto;\n    max-width: 338px;\n    padding-left: 0 !important;\n    padding-right: 0 !important;\n    padding-top: 36px !important;\n  }\n  .support-details h3 {\n    margin-bottom: 0;\n  }\n  .support-details .icon.icon--icon-outgoing-call {\n    top: 0;\n  }\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "unknown"
+        ],
+        "id": 204277,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      },
+      {
+        "values": [
+          "/authentication/#/login"
+        ],
+        "id": 204278,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "contains",
+          "label": "URL",
+          "rule_name": "page_url",
+          "rule_op": "icontains",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}
