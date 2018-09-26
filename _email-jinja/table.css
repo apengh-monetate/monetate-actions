@@ -1,0 +1,64 @@
+body {
+  color: #1a1a1a;
+  font-family: BrandonGrotesque-Regular, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  letter-spacing: 3px;
+  line-height: 23px;
+  margin: 0 auto;
+  max-width: 600px;
+  padding-top: 20px;
+  text-transform: uppercase;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+table {
+  display: block;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.mt-heading {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mt-product {
+  display: block;
+  font-weight: 200;
+  max-width: 300px;
+  padding: 10px 10px 20px;
+  text-align: center;
+  vertical-align: top;
+  width: 50%;
+}
+
+.mt-product__link {
+  color: #333;
+  text-decoration: none;
+}
+
+.mt-product__img {
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.mt-product__title {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.mt-product__desc {
+  display: none;
+}
+
+.mt-product__price {
+  display: none;
+  font-weight: 700;
+}

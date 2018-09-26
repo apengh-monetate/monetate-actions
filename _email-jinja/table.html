@@ -1,0 +1,43 @@
+<!-- <h3 class="mt-heading">You May Also Like</h3>
+<div class="mt-product__grid">
+
+{% for product in recommended_products %}
+<div class="mt-product">
+
+  <a class="mt-product__link" href="{{ product.link }}&test=true">
+    <img class="mt-product__img" src={{ product.image_link }} />
+    <div class="mt-product__title">{{ product.title }}</div>
+  </a>
+  <div class="mt-product__desc">{{ product.description|truncate(30) }}</div>
+  <div class="mt-product__price">{{ product.price|round(2, 'floor') }}</div>
+
+</div>
+{% endfor %}
+
+</div> -->
+
+
+
+<table class="mt-product__grid" width="600px" style="display:block; max-width:600px; margin:0 auto;">
+  <thead>
+    <tr>
+      <th>
+        <h3 class="mt-heading">You May Also Like</h3>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for product in recommended_products %}
+    <tr>
+      <td class="mt-product">
+        <a class="mt-product__link" href="{{ product.link }}&test=true">
+          <img class="mt-product__img" src={{ product.image_link }} />
+          <div class="mt-product__title">{{ product.title }}</div>
+        </a>
+        <div class="mt-product__desc">{{ product.description|truncate(30) }}</div>
+        <div class="mt-product__price">{{ product.price|round(2, 'floor') }}</div>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

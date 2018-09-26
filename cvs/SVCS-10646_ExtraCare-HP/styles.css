@@ -48,7 +48,7 @@ div#promolp {
     background-position-y: top;
     background-repeat: no-repeat !important;
     height: 300px;
-    margin-top: 0;
+    margin-top: 30px;
     padding: 30px 20px;
   }
 }
@@ -88,7 +88,7 @@ div#promolp {
 
 @media screen and (min-width: 641px) {
   .mte180909-hero .block_subtitle {
-    max-width: 415px;
+    max-width: 545px;
   }
 }
 

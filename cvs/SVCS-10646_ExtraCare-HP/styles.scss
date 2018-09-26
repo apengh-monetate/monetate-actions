@@ -44,7 +44,7 @@ div#promolp {
     background-position-y: top;
     background-repeat: no-repeat !important;
     height: 300px;
-    margin-top: 0;
+    margin-top: 30px;
     padding: 30px 20px;
   }
   @media screen and (min-width: 961px) {
@@ -72,7 +72,7 @@ div#promolp {
     font-size: 14px;
     padding: 0 0 20px;
     @media screen and (min-width: $breakpoint-md) {
-      max-width: 415px;
+      max-width: 545px;
     }
     @media screen and (min-width: $breakpoint-lg) {
       font-size: 18px;

@@ -1,0 +1,23 @@
+.mt-hp-banner {
+  display: block;
+  margin-bottom: -12px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  max-width: 1272px;
+  padding: 0 12px;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+  .mt-hp-banner {
+    padding: 0;
+  }
+}
+
+.mt-hp-banner img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}

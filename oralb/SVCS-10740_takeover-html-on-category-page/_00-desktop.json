@@ -1,0 +1,121 @@
+{
+  "id": 356746,
+  "title": "Category Page - Edit HTML (Desktop)",
+  "description": "Edit HTML on /en-us/products/compare/electric-toothbrushes",
+  "op": "selectorEditHtml",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Edit Content",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": ".ET-Promo1-desk > .flexible-promo-container > .flexible-content-container > .text-alignment"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "edithtml",
+        "value": "<div class=\"text-container text-item-1 ETPDT_FTI_1_1\" id=\"phdesktopbody_0_phdesktopbrandexperiencecontentarea_0_phbrandexperiencecontentareaa42aefa419c64eb69f9bf20e41e146bf_0_rptFlexiblecontent_pnlFlexibleText_0\">Oral-B Electric Toothbrushes<br />\n<strong>Remove 100% More Plaque*</strong></div>\n\n<div class=\"text-container text-item-2 ETPDT_FTI_1_2\" id=\"phdesktopbody_0_phdesktopbrandexperiencecontentarea_0_phbrandexperiencecontentareaa42aefa419c64eb69f9bf20e41e146bf_0_rptFlexiblecontent_pnlFlexibleText_1\">When you brush with an Oral-B, you&rsquo;ll see and feel the difference. For individual tooth-by-tooth cleaning and a dentist-like clean feeling every day, make a power move to Oral-B. The first electric toothbrush brand accepted by the American Dental Association for effectiveness and safety.</div>\n\n<div class=\"text-container text-item-3\" id=\"phdesktopbody_0_phdesktopbrandexperiencecontentarea_0_phbrandexperiencecontentareaa42aefa419c64eb69f9bf20e41e146bf_0_rptFlexiblecontent_pnlFlexibleText_2\"><span>*vs. a manual toothbrush</span></div>\n"
+      },
+      "widget": {
+        "label": "Edit HTML",
+        "type": "HtmlField",
+        "description": "HTML of the selected node.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "/* Fix element height issue on tablet */\n.span12.position-relative.fixing.Quadruple-wide-4-column {\n  min-height: 100% !important;\n}",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [
+    {
+      "selector": ".ET-Promo1-desk > .flexible-promo-container > .flexible-content-container > .text-alignment",
+      "value": "/en-us/products/compare/electric-toothbrushes",
+      "op": "path_iprefix"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "/en-us/products/compare/electric-toothbrushes"
+        ],
+        "id": 204623,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "contains",
+          "label": "URL",
+          "rule_name": "page_url",
+          "rule_op": "icontains",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

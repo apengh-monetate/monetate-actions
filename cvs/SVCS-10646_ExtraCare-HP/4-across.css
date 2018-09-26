@@ -165,11 +165,11 @@ div#anonymousbcc_1 {
 
 .mt180910 .earn {
   background: #37BAAB;
-  background-image: url("http://dev-apengh-1.monetate.org/img/1/306/1727980.png");
+  background-image: url("https://sb.monetate.net/img/1/306/1734288.png");
   background-position-x: center;
   background-position-y: 95%;
   background-repeat: no-repeat;
-  background-size: 320px 78px;
+  background-size: 107% 35%;
   height: 240px;
   padding-right: 0;
 }
@@ -195,7 +195,7 @@ div#anonymousbcc_1 {
 
 .mt180910 .no-card {
   background: #B8E3EB;
-  background-image: url("http://dev-apengh-1.monetate.org/img/1/306/1727979.png");
+  background-image: url("https://sb.monetate.net/img/1/306/1734287.png");
   background-position-x: 108%;
   background-position-y: 100%;
   background-repeat: no-repeat;
@@ -219,13 +219,14 @@ div#anonymousbcc_1 {
 
 @media screen and (min-width: 641px) {
   .mt180910 .no-card p a {
+    font-family: "Helvetica";
     pointer-events: none;
   }
 }
 
 .mt180910 .phone-number {
   background: #CC0000;
-  background-image: url("http://dev-apengh-1.monetate.org/img/1/306/1727981.png");
+  background-image: url("https://sb.monetate.net/img/1/306/1734290.png");
   background-position-x: 105%;
   background-position-y: 110%;
   background-repeat: no-repeat;
@@ -243,7 +244,7 @@ div#anonymousbcc_1 {
 
 .mt180910 .faqs {
   background: #00344A;
-  background-image: url("http://dev-apengh-1.monetate.org/img/1/306/1727982.png");
+  background-image: url("https://sb.monetate.net/img/1/306/1734291.png");
   background-position-x: 90%;
   background-position-y: 90%;
   background-repeat: no-repeat;
