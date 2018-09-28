@@ -10,11 +10,6 @@ body {
   text-transform: uppercase;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .mt-heading {
   font-size: 18px;
   font-weight: 700;
@@ -23,8 +18,9 @@ body {
 }
 
 .mt-product {
-  display: block;
+  display: inline-block;
   font-weight: 200;
+  height: 400px;
   max-width: 300px;
   padding: 10px 10px 20px;
   text-align: center;
@@ -33,15 +29,7 @@ body {
 }
 
 .mt-product__grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: block;
 }
 
 .mt-product__link {

@@ -1,0 +1,129 @@
+{
+  "id": 357127,
+  "title": "Expand Search Bar (Desktop)",
+  "description": "Expand Search Bar (Desktop)",
+  "op": "modifyAttribute",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "css",
+  "subcategory": "CSS",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#txtSiteSearchNav"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "attr",
+        "value": "placeholder"
+      },
+      "widget": {
+        "label": "Attribute",
+        "type": "CharField",
+        "description": "The element attribute (e.g. 'href', 'title' or 'src') you wish to add, replace or remove (if 'Remove Attribute' is set true).",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_mod",
+        "value": "Search"
+      },
+      "widget": {
+        "label": "Replacement Value",
+        "type": "TextField",
+        "description": "Replaces the current value of specified attribute.  If not set, this defaults to an empty string.  If 'Remove Attribute' is set true, this can be left blank.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "@media screen and (min-width: 1024px) {\n  #mobileSearchTrigger {\n    display: none !important;\n  }\n  .minor-nav-right-wrapper {\n    min-width: 112px !important;\n    position: relative !important;\n    z-index: 2 !important;\n  }\n  form#siteSearchForm {\n    background: rgba(255, 0, 0, 0.1);\n    display: block !important;\n    left: auto;\n    margin: 0;\n    padding: 0;\n    right: 110px;\n    top: -1px;\n    width: 180px;\n  }\n  form#siteSearchForm .site-search {\n    border: 1px solid #00263d;\n    margin: 0;\n    padding: 0;\n  }\n  form#siteSearchForm .site-search button {\n    background: none;\n    display: block !important;\n    height: 24px;\n    padding: 0;\n    position: absolute;\n    right: 5px;\n    top: 75%;\n    -webkit-transform: translateY(-75%);\n            transform: translateY(-75%);\n    width: 24px;\n  }\n  form#siteSearchForm .site-search button .icon-lb-search {\n    display: block;\n    font-size: 1.25em;\n    font-size: 20px;\n    height: 24px;\n    top: 0;\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    width: 24px;\n  }\n  form#siteSearchForm label[for=\"txtSiteSearchNav\"] {\n    margin: 0;\n    padding: 0;\n  }\n  form#siteSearchForm input#txtSiteSearchNav {\n    border: none;\n    color: #00263d;\n    font-size: 12px;\n    line-height: 14px;\n    margin: 0;\n    max-width: 100%;\n    padding: 0;\n    padding-left: 5px;\n    padding-top: 3px;\n  }\n  form#siteSearchForm input#txtSiteSearchNav::-webkit-input-placeholder {\n    color: #00263d;\n  }\n  form#siteSearchForm input#txtSiteSearchNav:-ms-input-placeholder {\n    color: #00263d;\n  }\n  form#siteSearchForm input#txtSiteSearchNav::-ms-input-placeholder {\n    color: #00263d;\n  }\n  form#siteSearchForm input#txtSiteSearchNav::placeholder {\n    color: #00263d;\n  }\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_remove",
+        "value": false
+      },
+      "widget": {
+        "label": "Remove Attribute and Value",
+        "type": "BooleanField",
+        "description": "Set true if you want to remove the attribute and value rather than set it.",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [
+    {
+      "selector": "#siteSearchForm",
+      "value": "/",
+      "op": "path_iprefix"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

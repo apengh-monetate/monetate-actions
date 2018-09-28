@@ -25,10 +25,10 @@ body {
   padding-top: 20px;
   text-transform: uppercase;
 }
-
-* {
-  box-sizing: border-box;
-}
+// 
+// * {
+//   box-sizing: border-box;
+// }
 
 .mt-heading {
   font-size: 18px;
@@ -39,8 +39,9 @@ body {
 
 
 .mt-product {
-  display: block;
+  display: inline-block;
   font-weight: 200;
+  height: 400px;
   max-width: 300px;
   padding: 10px 10px 20px;
   text-align: center;
@@ -48,9 +49,7 @@ body {
   width: 50%;
 
   &__grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: block;
   }
 
   &__link {

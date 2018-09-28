@@ -1,0 +1,120 @@
+$breakpoint: 769px;
+
+#_SR, ._SR {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+._SR {
+  div,
+  span,
+  strong,
+  a {
+    -moz-appearance: none;
+    -moz-box-sizing: content-box;
+    -moz-text-shadow: none;
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+    -webkit-box-sizing: content-box;
+    -webkit-text-shadow: none;
+    -webkit-text-size-adjust: none;
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    color: inherit;
+    float: none;
+    font-family: inherit !important;
+    font-size: inherit;
+    font-style: normal;
+    font-weight: normal;
+    height: auto;
+    line-height: inherit;
+    list-style: none;
+    margin: 0;
+    max-height: none;
+    max-width: none;
+    outline: 0;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    text-shadow: none;
+    text-size-adjust: none;
+    text-transform: none;
+    vertical-align: baseline;
+    width: auto;
+  }
+  
+  a {
+    cursor: pointer;
+  }
+  
+  strong {
+    font-weight: bold;
+    span {
+      font-weight: bold;
+    }
+  }
+  
+  .src_nowrap {
+    white-space: nowrap;
+  }
+}
+
+._SRD {
+  background-color: transparent;
+  color: #000;
+  font-family: Arial;
+  font-size: 10px;
+  letter-spacing: 0.2px;
+  text-indent: 0px;
+  @media screen and (min-width: $breakpoint) {
+    font-size: 12px;
+  }
+  
+  .srd_iconline {
+    color: inherit;
+    line-height: 20px;
+    
+    .srd_logo {
+      float: left;
+      margin: 0;
+      padding: 0 5px 0 0;
+    }
+    
+    .srd_msg {
+      padding-left: 20px;
+    }
+  }
+  
+  .srd_logo {
+    background-image: url('https://content.shoprunner.com/assets/pik_images/v4/_sr_logo_19.png');
+    background-repeat: no-repeat;
+    background-size: 106px 19px;
+    height: 20px;
+    width: 106px;
+  }
+  
+  .srd_a_wrap {
+    white-space: nowrap;
+  }
+  
+  .srd_a {
+    color: #000 !important;
+    cursor: pointer;
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+}
+
+#srd_h {
+  background-color: #f7f7f7;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+  padding: 5px;
+  @media screen and (min-width: $breakpoint) {
+    border-top: 1px solid #b6bbbf;
+  }
+}
+
+

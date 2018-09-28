@@ -1,0 +1,83 @@
+$blue: #00263d;
+$breakpoint: 1024px;
+
+
+
+
+@media screen and (min-width: $breakpoint) {
+  // ul#navTopCategory {
+  //   background: none !important;
+  // }
+
+  #mobileSearchTrigger {
+    display: none !important;
+  }
+
+  .minor-nav-right-wrapper {
+    min-width: 112px !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  form#siteSearchForm {
+    background: rgba(255, 0, 0, 0.1);
+    display: block !important;
+    left: auto;
+    margin: 0;
+    padding: 0;
+    right: 110px;
+    top: -1px;
+    width: 180px;
+
+    .site-search {
+      border: 1px solid $blue;
+      margin: 0;
+      padding: 0;
+
+      button {
+        background: none;
+        display: block !important;
+        height: 24px;
+        padding: 0;
+        position: absolute;
+        right: 5px;
+        top: 75%;
+        transform: translateY(-75%);
+        width: 24px;
+
+        .icon-lb-search {
+          display: block;
+          font-size: 1.25em;
+          font-size: 20px;
+          height: 24px;
+          top: 0;
+          transform: scale(1);
+          width: 24px;
+        }
+      }
+    }
+
+    label[for="txtSiteSearchNav"] {
+      margin: 0;
+      padding: 0;
+    }
+
+    input#txtSiteSearchNav {
+      border: none;
+      color: $blue;
+      font-size: 12px;
+      line-height: 14px;
+      margin: 0;
+      max-width: 100%;
+      padding: 0;
+      padding-left: 5px;
+      padding-top: 3px;
+      &::placeholder {
+        color: $blue;
+      }
+    }
+    
+  }
+
+  
+}
