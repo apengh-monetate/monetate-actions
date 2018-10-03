@@ -29,19 +29,34 @@ $breakpoint: 1300px;
 // DEVELOPMENT
 
 #navigation {
+  .subnav {
+    overflow-x: hidden;
+  }
   .subnav-categories {
     @media screen and (min-width: $breakpoint) {
+      max-width: $breakpoint;
       padding: 0 !important;
       width: 100% !important;
     }
     
     & > * {
       @media screen and (min-width: $breakpoint) {
-        padding: 0 20px !important;
+        padding: 0 15px !important;
         width: auto !important;
       }
     }
   }
+
+  // .shoes,
+  // .clearance {
+  //   .subnav-categories {
+  //     & > * {
+  //       @media screen and (min-width: $breakpoint) {
+  //         padding: 0 !important;
+  //       }
+  //     }
+  //   }
+  // }
 } 
 
 
@@ -106,6 +121,9 @@ $breakpoint: 1300px;
       width: 45px;
       &:first-child {
         margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
       }
     }
   }

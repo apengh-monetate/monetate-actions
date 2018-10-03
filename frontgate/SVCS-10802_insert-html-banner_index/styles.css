@@ -1,0 +1,29 @@
+.monetateHtmlBanner {
+  align-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  border: 1px solid blue;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin: 0 auto 10px;
+  max-width: 1224px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .monetateHtmlBanner {
+    margin-top: 10px;
+  }
+}
+
+.monetateHtmlBanner h3 {
+  color: blue;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}

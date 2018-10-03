@@ -1,0 +1,75 @@
+@media screen and (min-width: 1024px) {
+  #mobileSearchTrigger {
+    display: none !important;
+  }
+  .minor-nav-right-wrapper {
+    min-width: 112px !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+  form#siteSearchForm {
+    background: rgba(255, 0, 0, 0.1);
+    display: block !important;
+    left: auto;
+    margin: 0;
+    padding: 0;
+    right: 110px;
+    top: -1px;
+    width: 180px;
+  }
+  form#siteSearchForm .site-search {
+    border: none;
+    border-bottom: 1px solid #00263d;
+    margin: 0;
+    padding: 0;
+  }
+  form#siteSearchForm .site-search button {
+    background: none;
+    display: block !important;
+    height: 24px;
+    padding: 0;
+    position: absolute;
+    right: 5px;
+    top: 75%;
+    -webkit-transform: translateY(-75%);
+            transform: translateY(-75%);
+    width: 24px;
+  }
+  form#siteSearchForm .site-search button .icon-lb-search {
+    display: block;
+    font-size: 1.25em;
+    font-size: 20px;
+    height: 24px;
+    top: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    width: 24px;
+  }
+  form#siteSearchForm label[for="txtSiteSearchNav"] {
+    margin: 0;
+    padding: 0;
+  }
+  form#siteSearchForm input#txtSiteSearchNav {
+    border: none;
+    color: #00263d;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    padding-left: 5px;
+    padding-top: 3px;
+  }
+  form#siteSearchForm input#txtSiteSearchNav::-webkit-input-placeholder {
+    color: #00263d;
+  }
+  form#siteSearchForm input#txtSiteSearchNav:-ms-input-placeholder {
+    color: #00263d;
+  }
+  form#siteSearchForm input#txtSiteSearchNav::-ms-input-placeholder {
+    color: #00263d;
+  }
+  form#siteSearchForm input#txtSiteSearchNav::placeholder {
+    color: #00263d;
+  }
+}

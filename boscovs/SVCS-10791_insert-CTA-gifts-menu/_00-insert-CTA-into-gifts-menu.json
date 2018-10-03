@@ -1,0 +1,157 @@
+{
+  "id": 357137,
+  "title": "Insert CTA for Christmas Shop into Gift Menu",
+  "description": "Insert CTA for Christmas Shop into Gift Menu",
+  "op": "selectorInsertHtmlString",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "HTML",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<a href=\"/ast/holiday-shop-1?prnt=WebDEALS&chld=Christmas%20Shop\" onclick=\"linkParamsSubmit(this, event, '/shop', false);\" data-bos-params=\"/ast/holiday-shop-1?prnt=WebDEALS&chld=Christmas%20Shop\" title=\"Gift Cards\" class=\"no-underline\"> Christmas Shop</a>"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#gift_menu > ul.dark"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "last"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "label": "Insert Method",
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": "display: list-item;\nfloat: left;\nmargin-left: 12px;"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "#gift_menu .postpush-6 {\n  margin-right: 12px;\n}",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [
+    {
+      "selector": "#gift_menu > ul.dark",
+      "value": "/",
+      "op": "path_iprefix"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

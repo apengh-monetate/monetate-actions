@@ -1,123 +1,56 @@
-#_SR, ._SR {
+.shoprunner {
   -webkit-tap-highlight-color: transparent !important;
-}
-
-._SR div,
-._SR span,
-._SR strong,
-._SR a {
-  -moz-appearance: none;
-  -moz-box-sizing: content-box;
-  -moz-text-shadow: none;
-  -webkit-appearance: none;
-  -webkit-box-shadow: none;
-  -webkit-box-sizing: content-box;
-  -webkit-text-shadow: none;
-  -webkit-text-size-adjust: none;
-  appearance: none;
+  align-content: center;
+  align-items: center;
   background-color: transparent;
-  border: 0;
-  box-shadow: none;
-  box-sizing: content-box;
-  color: inherit;
-  float: none;
-  font-family: inherit !important;
-  font-size: inherit;
-  font-style: normal;
-  font-weight: normal;
-  height: auto;
-  line-height: inherit;
-  list-style: none;
-  margin: 0;
-  max-height: none;
-  max-width: none;
-  outline: 0;
-  padding: 0;
-  text-align: left;
-  text-decoration: none;
-  text-shadow: none;
-  -moz-text-size-adjust: none;
-   -ms-text-size-adjust: none;
-       text-size-adjust: none;
-  text-transform: none;
-  vertical-align: baseline;
-  width: auto;
-}
-
-._SR a {
-  cursor: pointer;
-}
-
-._SR strong {
-  font-weight: bold;
-}
-
-._SR strong span {
-  font-weight: bold;
-}
-
-._SR .src_nowrap {
-  white-space: nowrap;
-}
-
-._SRD {
-  background-color: transparent;
+  background-color: #f7f7f7;
   color: #000;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   font-family: Arial;
   font-size: 10px;
+  justify-content: flex-start;
   letter-spacing: 0.2px;
+  margin-bottom: 10px;
+  padding: 5px;
   text-indent: 0px;
 }
 
 @media screen and (min-width: 769px) {
-  ._SRD {
+  .shoprunner {
+    border-top: 1px solid #b6bbbf;
     font-size: 12px;
   }
 }
 
-._SRD .srd_iconline {
-  color: inherit;
-  line-height: 20px;
+.shoprunner strong {
+  font-weight: bold;
 }
 
-._SRD .srd_iconline .srd_logo {
-  float: left;
-  margin: 0;
-  padding: 0 5px 0 0;
+.shoprunner strong span {
+  font-weight: bold;
 }
 
-._SRD .srd_iconline .srd_msg {
-  padding-left: 20px;
+.shoprunner .nowrap {
+  white-space: nowrap;
 }
 
-._SRD .srd_logo {
+.shoprunner__logo {
   background-image: url("https://content.shoprunner.com/assets/pik_images/v4/_sr_logo_19.png");
   background-repeat: no-repeat;
   background-size: 106px 19px;
   height: 20px;
-  width: 106px;
+  min-width: 116px;
 }
 
-._SRD .srd_a_wrap {
-  white-space: nowrap;
+.shoprunner__message {
+  text-align: center;
 }
 
-._SRD .srd_a {
+.shoprunner__link {
   color: #000 !important;
   cursor: pointer;
   text-decoration: underline;
   white-space: nowrap;
-}
-
-#srd_h {
-  background-color: #f7f7f7;
-  letter-spacing: 0;
-  margin-bottom: 10px;
-  padding: 5px;
-}
-
-@media screen and (min-width: 769px) {
-  #srd_h {
-    border-top: 1px solid #b6bbbf;
-  }
 }

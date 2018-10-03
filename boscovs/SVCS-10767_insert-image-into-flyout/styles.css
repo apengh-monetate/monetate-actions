@@ -1,0 +1,11 @@
+inline {
+  left: 170px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+a.flyoutParent {
+  position: relative;
+}

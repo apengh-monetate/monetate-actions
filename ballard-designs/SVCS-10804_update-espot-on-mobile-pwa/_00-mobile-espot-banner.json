@@ -1,0 +1,195 @@
+{
+  "id": 357146,
+  "title": "E-spot mobile banner (PWA)",
+  "description": "mobile banner",
+  "op": "selectorBanner",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "image",
+  "subcategory": "Images",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative",
+        "value": {
+          "extension": ".png",
+          "height": 165,
+          "width": 345,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "dea4844b098a9d0c7ec0936cee8e6955bbf3acd7",
+          "id": 606814
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload an image creative",
+        "label": "Image Creative"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": ".c-product-list-products > .c-card:eq(6)"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "before"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": "clear: both;\ndisplay: inline-block;\nmargin-bottom: 24px;\ntext-align: left;\nwidth: 100%;\nvertical-align: top;"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_imgStyle",
+        "value": "height: auto;\nwidth: 100%;"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
+        "label": "Image Element Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "index",
+          "collections",
+          "search",
+          "category"
+        ],
+        "id": 204769,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

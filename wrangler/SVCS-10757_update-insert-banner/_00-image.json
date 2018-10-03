@@ -1,0 +1,185 @@
+{
+  "id": 357130,
+  "title": "Insert Rotating Banner Under Nav - Image - Unlimited Slides - New Nav",
+  "description": "Insert a rotating banner under the nav using CSS3 style selector.",
+  "op": "rotatingBannerImageV2",
+  "slot": "bannerUnderNav",
+  "slot_type": "page",
+  "category": "image",
+  "subcategory": "Any page",
+  "action_events": [
+    "op_impression",
+    "op_click"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "sel",
+        "value": "header.topnav-header"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Supports CSS3 and Sizzle syntax.",
+        "label": "Sizzle selector to find the relative node.."
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "after"
+      },
+      "widget": {
+        "description": "Function to use when inserting the banner relative to the selected node",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Function"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "delay",
+        "value": 4
+      },
+      "widget": {
+        "label": "Rotation Delay",
+        "type": "IntegerField",
+        "description": "Time (in seconds) between each rotation.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imetrotateDirh",
+        "value": "left"
+      },
+      "widget": {
+        "description": "Which direction should the slides rotate?",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "left",
+            "label": "Left"
+          },
+          {
+            "name": "right",
+            "label": "Right"
+          }
+        ],
+        "label": "Rotation Direction"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Sets the cssText value of the created Banner Div element",
+        "label": "Banner Div Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_css",
+        "value": "[id*=mtRotating] img {\n    margin: 0 auto;\n    display: block;\n}"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "CSS stylesheet to append.",
+        "label": "CSS Styles"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative1",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload the first image creative",
+        "label": "Image Creative"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative2",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload the second image creative",
+        "label": "Image Creative"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative3",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload the third image creative",
+        "label": "Image Creative"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

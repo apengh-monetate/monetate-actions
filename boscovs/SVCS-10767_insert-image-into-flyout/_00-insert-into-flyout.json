@@ -1,0 +1,174 @@
+{
+  "id": 357132,
+  "title": "Insert Image Into Flyout Next to Link",
+  "description": "Insert Image Into Flyout Next to Link",
+  "op": "selectorBanner",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "image",
+  "subcategory": "Flyout",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative",
+        "value": {
+          "extension": ".png",
+          "height": 15,
+          "width": 15,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "3de5b9db081f72be6a40b83af33a87fe7eae9ae8",
+          "id": 606812
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload an image creative",
+        "label": "Image Creative"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": ".submenu a[title=\"Halloween & Harvest Shop\"]"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "last"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "label": "Insert Method",
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": "left: 170px;\nposition: absolute;\ntop: 50%;\n-webkit-transform: translateY(-50%);\n        transform: translateY(-50%);"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_imgStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
+        "label": "Image Element Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "a.flyoutParent { \n  position: relative;\n}",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

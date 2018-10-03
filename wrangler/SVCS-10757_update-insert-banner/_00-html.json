@@ -1,0 +1,185 @@
+{
+  "id": 357129,
+  "title": "Insert Rotating Banner Under Nav - HTML - Unlimited Slides - New Nav",
+  "description": "Insert a rotating banner under the nav using CSS3 style selector.",
+  "op": "rotatingBannerHtmlV2",
+  "slot": "bannerUnderNav",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Any page",
+  "action_events": [
+    "op_impression",
+    "op_click"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "sel",
+        "value": "header.topnav-header"
+      },
+      "widget": {
+        "label": "Sizzle selector to find the relative node.",
+        "type": "CssSelectorField",
+        "description": "Supports CSS3 and Sizzle syntax.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "after"
+      },
+      "widget": {
+        "label": "Insert Function",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Function to use when inserting the banner relative to the selected node",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "delay",
+        "value": 4
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Time (in seconds) between each rotation.",
+        "label": "Rotation Delay"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "rotateDir",
+        "value": "left"
+      },
+      "widget": {
+        "label": "Rotation Direction",
+        "options": [
+          {
+            "name": "left",
+            "label": "Left"
+          },
+          {
+            "name": "right",
+            "label": "Right"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Which direction should the slides rotate?",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "label": "Banner Div Style",
+        "type": "TextField",
+        "description": "Sets the cssText value of the created Banner Div element",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_css",
+        "value": "[id*=mtRotating] img {\n    text-align: center;\n}"
+      },
+      "widget": {
+        "label": "CSS Styles",
+        "type": "TextField",
+        "description": "CSS stylesheet to append.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "creative1",
+        "value": null
+      },
+      "widget": {
+        "label": "Html Creative",
+        "type": "HtmlField",
+        "description": "Upload the first html creative",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "creative2",
+        "value": null
+      },
+      "widget": {
+        "label": "Html Creative",
+        "type": "HtmlField",
+        "description": "Upload the second html creative",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "creative3",
+        "value": null
+      },
+      "widget": {
+        "label": "Html Creative",
+        "type": "HtmlField",
+        "description": "Upload the third html creative",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

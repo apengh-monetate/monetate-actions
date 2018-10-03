@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i');
+
+$border-radius: 4px;
+$font: "Open Sans", "Helvetica", "Arial", sans-serif !important;
+
+$width: 67px;
+$height: 94px;
+
+$light: rgba(254, 47, 0, 1);
+$dark: rgba(109, 14, 0, 1);
+
+// $light: rgba(2, 194, 255, 1);
+// $dark: rgba(0, 92, 134, 1);
+
+* {
+  box-sizing: border-box;
+}
+
+
+// ==================================================================
+// Black Friday Countdown Timer
+// ==================================================================
+.mt-countdown {
+  display: block;
+  margin: 30px auto;
+  max-width: 933px;
+  position: relative;
+
+  .active {
+    display: block !important;
+  }
+  .expired {
+    display: none !important;
+  }
+
+  .show {
+    display: block !important;
+  }
+  .hide {
+    display: none !important;
+  }
+
+
+
+  .days {
+    display: none;
+  }
+  .hours {
+    display: block;
+  }
+  .minutes {
+    display: block;
+  }
+  .seconds {
+    display: block;
+  }
+
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  // Countdown
+  .countdown {
+    display: block;
+    font-family: $font;
+    margin: 0 auto;
+    position: relative;
+
+    &__img {
+      display: block;
+      position: relative;
+    }
+
+ 
+    &__timer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      position: absolute;
+      right: 5%;
+      top: 75%;
+      transform: translateY(-75%);
+    }
+
+    &__block {
+      margin-left: 8px;
+      margin-right: 8px;
+      text-align: center;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__title {
+      color: $light;
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .figure {
+      background-color: none;
+      border-radius: $border-radius;
+      box-shadow:
+      0 3px 4px 0 rgba(0, 0, 0, 0.2),
+      inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+      float: left;
+      height: $height;
+      margin-bottom: 5px;
+      margin-left: 4px;
+      margin-right: 4px;
+      position: relative;
+      text-align: center;
+      width: $width;
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &:before {
+        background: #999;
+        box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+        content: "";
+        display: block;
+        height: 6px;
+        left: 5px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transform-style: preserve-3d;
+        width: 1px;
+        z-index: 9999;
+      }
+      &:after {
+        background: #999;
+        box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+        content: "";
+        display: block;
+        height: 6px;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        transform-style: preserve-3d;
+        width: 1px;
+        z-index: 9999;
+      }
+
+      > span {
+        color: #fff;
+        font-size: 72px;
+        font-weight: normal;
+        font-weight: 700;
+        left: 0;
+        line-height: $height;
+        margin: auto;
+        position: absolute;
+        right: 0;
+      }
+
+
+      // ------------------------------------------------------------------
+      // Top
+      // ------------------------------------------------------------------
+      .top {
+        background-color: $dark;
+        background-image: linear-gradient(to bottom, $light 0%, $light 30%, $dark 100%);
+        border-bottom: 1px solid black;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        box-shadow: inset 0px 2px 4px rgba(255, 255, 255, 0.2);
+        transform: perspective(200px) rotateX(0deg);
+        transform-origin: 50% 100%;
+        transform-style: preserve-3d;
+        z-index: 3;
+
+        &.flipTop {
+          animation: flipTop 0.8s cubic-bezier(0.37, 0.01, 0.94, 0.35) !important;
+        }
+
+        &-back {
+          background-color: $dark;
+          background-image: linear-gradient(to bottom, lighten($dark, 10%) 0%, $light 100%);
+          border-bottom-left-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+          border-top: 1px solid black;
+          bottom: 0;
+          box-shadow: inset 0px 2px 4px rgba(255, 255, 255, 0.2);
+          transform: perspective(200px) rotateX(180deg);
+          transform-origin: 50% 0;
+          transform-style: preserve-3d;
+          z-index: 4;
+
+          &.flipTopBack {
+            animation: flipTopBack 0.8s cubic-bezier(0.37, 0.01, 0.94, 0.35) !important;
+          }
+
+          span {
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: -100%;
+          }
+        }
+      } // .top
+
+      .top, .top-back {
+        backface-visibility: hidden;
+        height: 50%;
+        overflow: hidden;
+      }
+
+
+
+      // ------------------------------------------------------------------
+      // Bottom
+      // ------------------------------------------------------------------
+      .bottom {
+        background-color: black;
+        background-image: linear-gradient(to bottom, transparent 0%, lighten($dark, 10%) 50%, lighten($dark, 10%) 50%, $light 100%);
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        z-index: 1;
+
+
+        &-back {
+          background-color: $dark;
+          background-image: linear-gradient(to bottom, $light 30%, $dark 100%);
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+          height: 50%;
+          overflow: hidden;
+          top: 0;
+          z-index: 2;
+
+          span {
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+      } // .bottom
+
+    } // .figure
+
+
+    &__expired {
+      align-content: center;
+      align-items: center;
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      font-family: $font;
+      font-weight: 300;
+      justify-content: center;
+      min-height: 200px;
+
+    }
+
+  } // .countdown
+}
+
+
+
+
+@keyframes flipTop {
+  0% {
+    transform: perspective(200px) rotateX(0deg);
+    transform-style: preserve-3d;
+  }
+  100% {
+    transform: perspective(300px) rotateX(-180deg);
+    transform-style: preserve-3d;
+  }
+}
+
+
+
+
+@keyframes flipTopBack {
+  0% {
+    transform: perspective(200px) rotateX(180deg);
+    transform-style: preserve-3d;
+  }
+  100% {
+    transform: perspective(200px) rotateX(0deg);
+    transform-style: preserve-3d;
+  }
+}

@@ -1,3 +1,38 @@
+{% set columns = 3 %}
+{% set rows = 8 %}
+
+
+{# CLIENTS / MONICA, DON'T TOUCH BELOW #}
+{% set maxProducts = columns * rows %}
+{% set products = recommended_products | length %}
+
+{# CALCULATE # OF PRODUCTS TO RETURN #}
+{% if products < maxProducts %}
+  {% set results = (products / columns) | round(0,'floor') | int %}
+  {{ results * columns }}
+  {% set fetch = results * columns %}
+{% else %}
+  {% set fetch = maxProducts %}
+{% endif %}
+
+{# CSS CALCULATIONS #}
+{% set maxWidth = 600 %} {# in percentage #}
+{% set columnWidth = 100 / columns | round(5) %}
+
+{% if columns == 2 %}
+  {% set paddingBottom = 80 %} {# in percentage #}
+  {% set fontSize = 1 %} {# in em #}
+{% elif columns == 3 %}
+  {% set paddingBottom = 66.67 %} {# in percentage #}
+  {% set fontSize = 0.8 %} {# in em #}
+{% elif columns == 4 %}
+  {% set paddingBottom = 50 %} {# in percentage #}
+  {% set fontSize = 0.7 %} {# in em #}
+{% endif %}
+
+{% set lineHeight = fontSize * 1.5 | round(2) %} {# in em #}
+
+
 <style>
 body {margin:0; padding:0;}
 </style>
@@ -5,7 +40,8 @@ body {margin:0; padding:0;}
 <div class="mt-container" style="
   box-sizing: border-box;
   color:#1a1a1a;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 2vw;
   letter-spacing: 3px;
   line-height: 18px;
   margin: 0 auto;
@@ -16,17 +52,16 @@ body {margin:0; padding:0;}
 
   <h3 class="mt-heading" style="font-size:18px; font-weight:400; text-align:center; text-transform:uppercase;">You May Also Like</h3>
 
-
-  <div class="mt-product__grid" style="box-sizing:border-box; display:block; max-width:600px; margin:0 auto;">
-    {% for product in recommended_products[:8] %}
-    <div class="mt-product__wrapper" style="box-sizing:border-box; display:inline-block; float:left; position:relative; height:0; padding-bottom:80%; max-width:300px; width:50%;">
+  <div class="mt-product__grid" style="box-sizing:border-box; display:block; max-width:{{maxWidth}}px; margin:0 auto;">
+    {% for product in recommended_products[:fetch] %}
+    <div class="mt-product__wrapper" style="box-sizing:border-box; display:inline-block; float:left; position:relative; height:0; padding-bottom:{{paddingBottom}}%; width:{{columnWidth}}%;">
       <div class="mt-product" style="box-sizing:border-box; display:block; font-weight:200; padding:10px 10px 20px; text-align:center; position:absolute; height:100%; width:100%; top:0; left:0;">
         <a class="mt-product__link" href="{{ product.link }}&test=true" style="color:#333; display:block; text-decoration:none;">
           <img class="mt-product__img" src="{{product.image_link }}" style="display:block; margin-bottom:10px; text-align:center; width:100%;">
-          <div class="mt-product__title" style="display:block; margin-bottom:6px; font-size: 12px; line-height:18px;">{{ product.title|truncate(40) }}</div>
+          <div class="mt-product__title" style="display:block; margin-bottom:6px; font-size: {{fontSize}}em; line-height:{{lineHeight}}em;">{{ product.title | truncate(40, False, '') }}</div>
         </a>
-        <div class="mt-product__desc" style="display:none;">{{ product.description|truncate(30) }}</div>
-        <div class="mt-product__price" style="display:none; font-weight:700;">{{ product.price|round(2, 'floor') }}</div>
+        <div class="mt-product__desc" style="display:none;">{{ product.description | truncate(30, False, '') }}</div>
+        <div class="mt-product__price" style="display:none; font-weight:700;">{{ "$%.2f"|format(product.price|float) }}</div>
       </div>
     </div>
     {% endfor %}

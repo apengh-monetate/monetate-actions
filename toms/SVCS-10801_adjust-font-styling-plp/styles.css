@@ -1,0 +1,40 @@
+.search-results-grid-copy h5 {
+  color: #323232 !important;
+  font-family: "proxima" !important;
+  font-size: 0.7125rem !important;
+  margin-bottom: 0 !important;
+  margin-top: 10px !important;
+}
+
+@media screen and (min-width: 641px) {
+  .search-results-grid-copy h5 {
+    font-size: 0.8125rem !important;
+  }
+}
+
+.search-results-grid-copy .price {
+  color: #59c485 !important;
+  font-family: 'proxima' !important;
+  font-size: 0.8125rem !important;
+  line-height: 1 !important;
+  padding-top: 3px !important;
+}
+
+@media screen and (max-width: 47.9375em) {
+  .search-results-grid-copy .price {
+    padding-top: 12px !important;
+  }
+}
+
+.search-results-grid-copy .price .oldPrice {
+  color: #949290 !important;
+  font-weight: normal !important;
+  line-height: 1 !important;
+  text-decoration: line-through !important;
+}
+
+.search-results-grid-copy .price .salePrice {
+  color: #d03728 !important;
+  line-height: 1 !important;
+  margin-left: 5px !important;
+}

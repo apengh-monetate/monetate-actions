@@ -1,0 +1,57 @@
+{
+  "id": 357148,
+  "title": "Update Font Styling on PLP",
+  "description": "Update Font Styling on PLP for Products",
+  "op": "insertCSS",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "css",
+  "subcategory": "CSS",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "styleSheet",
+        "value": {
+          "content": "/* PRODUCT TITLE */\n.search-results-grid-copy h5 {\n  color: #323232 !important;\n  font-family: \"proxima\" !important;\n  font-size: 0.7125rem !important;\n  margin-bottom: 0 !important;\n  margin-top: 10px !important;\n}\n\n@media screen and (min-width: 641px) {\n  .search-results-grid-copy h5 {\n    font-size: 0.8125rem !important;\n  }\n}\n\n/* PRICE */\n.search-results-grid-copy .price {\n  color: #59c485 !important;\n  font-family: 'proxima' !important;\n  font-size: 0.8125rem !important;\n  line-height: 1 !important;\n  padding-top: 3px !important;\n}\n\n@media screen and (max-width: 47.9375em) {\n  .search-results-grid-copy .price {\n    padding-top: 12px !important;\n  }\n}\n\n/* SALE: REGULAR PRICE */\n.search-results-grid-copy .price .oldPrice {\n  color: #949290 !important;\n  font-weight: normal !important;\n  line-height: 1 !important;\n  text-decoration: line-through !important;\n}\n\n/* SALE: SALE PRICE */\n.search-results-grid-copy .price .salePrice {\n  color: #d03728 !important;\n  line-height: 1 !important;\n  margin-left: 5px !important;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": true
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "index"
+        ],
+        "id": 204771,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}
