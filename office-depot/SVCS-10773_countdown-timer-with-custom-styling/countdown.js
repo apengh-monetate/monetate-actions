@@ -2,7 +2,7 @@
 var Countdown = {
 
   // Backbone-like structure
-  $el: $('#mte-countdown'),
+  $el: document.querySelector('#mte-countdown'),
 
   // Params
   countdown_interval: null,
@@ -13,17 +13,18 @@ var Countdown = {
   init: function() {
 
     // End Date
-    this.end_date = new Date( this.$el.attr('data-end-date') ).getTime();
+    this.end_date = new Date( this.$el.getAttribute('data-end-date') ).getTime();
     this.today = new Date().getTime();
 
     // Total seconds between the times
     this.delta = Math.floor(this.end_date - this.today) / 1000;
 
     if(this.delta > 0) {
-      $('.countdown').addClass('active');
+      document.querySelector('.countdown').classList.add('active');
     } else {
-      $('.countdown').removeClass('active').addClass('expired');
-      $('.countdown__expired').addClass('active');
+      document.querySelector('.countdown').classList.remove('active');
+      document.querySelector('.countdown').classList.add('expired');
+      document.querySelector('.countdown__expired').classList.remove('active');
     }
 
     // Days
@@ -44,10 +45,10 @@ var Countdown = {
 
     // DOM
     this.$ = {
-      days  : this.$el.find('.countdown__block.days .figure'),
-      hours  : this.$el.find('.countdown__block.hours .figure'),
-      minutes: this.$el.find('.countdown__block.minutes .figure'),
-      seconds: this.$el.find('.countdown__block.seconds .figure')
+      days  : this.$el.querySelectorAll('.countdown__block.days .figure'),
+      hours  : this.$el.querySelectorAll('.countdown__block.hours .figure'),
+      minutes: this.$el.querySelectorAll('.countdown__block.minutes .figure'),
+      seconds: this.$el.querySelectorAll('.countdown__block.seconds .figure')
     };
 
     // Init countdown values
@@ -68,14 +69,14 @@ var Countdown = {
   count: function() {
 
     var that    = this,
-    $day_1      = this.$.days.eq(0),
-    $day_2      = this.$.days.eq(1),
-    $hour_1 = this.$.hours.eq(0),
-    $hour_2 = this.$.hours.eq(1),
-    $min_1  = this.$.minutes.eq(0),
-    $min_2  = this.$.minutes.eq(1),
-    $sec_1  = this.$.seconds.eq(0),
-    $sec_2  = this.$.seconds.eq(1);
+    $day_1      = this.$.days[0],
+    $day_2      = this.$.days[1],
+    $hour_1     = this.$.hours[0],
+    $hour_2     = this.$.hours[1],
+    $min_1      = this.$.minutes[0],
+    $min_2      = this.$.minutes[1],
+    $sec_1      = this.$.seconds[0],
+    $sec_2      = this.$.seconds[1];
 
     this.countdown_interval = setInterval(function() {
 
@@ -119,8 +120,9 @@ var Countdown = {
       }
       else {
         clearInterval(that.countdown_interval);
-        $('.countdown').removeClass('active').addClass('expired');
-        $('.countdown__expired').addClass('active');
+        document.querySelector('.countdown').classList.remove('active');
+        document.querySelector('.countdown').classList.add('expired');
+        document.querySelector('.countdown__expired').classList.add('active');
       }
     }, 1000);
   },
@@ -128,28 +130,28 @@ var Countdown = {
   animateFigure: function($el, value) {
 
     var that         = this,
-    $top         = $el.find('.top'),
-    $bottom      = $el.find('.bottom'),
-    $back_top    = $el.find('.top-back'),
-    $back_bottom = $el.find('.bottom-back');
+    $top             = $el.querySelector('.top'),
+    $bottom          = $el.querySelector('.bottom'),
+    $back_top        = $el.querySelector('.top-back'),
+    $back_bottom     = $el.querySelector('.bottom-back');
 
     // Before we begin, change the back value
-    $back_top.find('span').html(value);
+    $back_top.querySelector('span').innerHTML = value;
 
     // Also change the back bottom value
-    $back_bottom.find('span').html(value);
+    $back_bottom.querySelector('span').innerHTML = value;
 
     // Animate
-    $top.addClass('flipTop');
+    $top.classList.add('flipTop');
     setTimeout(function() {
-      $top.removeClass('flipTop');
-      $top.html(value);
+      $top.classList.remove('flipTop');
+      $top.innerHTML = value;
     }, 750);
 
-    $back_top.addClass('flipTopBack');
+    $back_top.classList.add('flipTopBack');
     setTimeout(function() {
-      $back_top.removeClass('flipTopBack');
-      $bottom.html(value);
+      $back_top.classList.remove('flipTopBack');
+      $bottom.innerHTML = value;
     }, 750);
 
   },
@@ -158,8 +160,9 @@ var Countdown = {
 
     var val_1   = value.toString().charAt(0),
     val_2       = value.toString().charAt(1),
-    fig_1_value = $el_1.find('.top').html(),
-    fig_2_value = $el_2.find('.top').html();
+    fig_1_value = $el_1.querySelector('.top').innerHTML,
+    fig_2_value = $el_2.querySelector('.top').innerHTML;
+
 
     if(value >= 10) {
 
