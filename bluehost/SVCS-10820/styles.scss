@@ -1,0 +1,65 @@
+// https://www.bluehost.com/web-hosting/signup
+#pro-package {
+
+  @media screen and (min-width: 768px) {
+
+    .column-wrap {
+      margin-right: 0 !important;
+    }
+
+    .checkmark {
+      background: url('/image/2fbdd1f83aa87bba912cf86d24350584/tick_12_13.jpg') no-repeat bottom center;
+      color: transparent !important;
+      display: inline-block;
+      height: 16px;
+      margin-right: 5px;
+      width: 12px;
+    }
+
+    > ul {
+      column-count: 2;
+      column-gap: 0;
+      margin-left: -10px !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      li {
+        font-size: 12.5px !important;
+        padding-left: 0 !important;
+      }
+    }
+
+    div ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+
+// https://www.bluehost.com/products/shared
+.go-pro {
+  @media screen and (min-width: 768px) {
+    .column-wrap {
+      margin-right: 0 !important;
+    }
+
+    > ul {
+      column-count: 2;
+      column-gap: 0;
+      li {
+        font-size: 9.5px !important;
+        padding-left: 0 !important;
+      }
+    }
+
+    div ul {
+      line-height: 20px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+  }
+}

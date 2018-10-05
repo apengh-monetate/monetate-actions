@@ -1,0 +1,90 @@
+.search-result-items .grid-tile {
+  max-width: 100% !important;
+}
+
+.search-result-items .grid-tile:nth-child(n).mt-plp-node {
+  float: left;
+}
+
+@media screen and (min-width: 768px) {
+  .search-result-items .grid-tile:nth-child(n).mt-plp-node {
+    float: left;
+  }
+}
+
+.search-result-items .grid-tile:nth-child(2n).mt-plp-node {
+  float: right;
+}
+
+@media screen and (min-width: 768px) {
+  .search-result-items .grid-tile:nth-child(2n).mt-plp-node {
+    float: left;
+  }
+}
+
+.search-result-items .grid-tile:nth-child(3n).mt-plp-node {
+  float: left;
+}
+
+@media screen and (min-width: 768px) {
+  .search-result-items .grid-tile:nth-child(3n).mt-plp-node {
+    float: right;
+  }
+}
+
+.search-result-items .grid-tile:nth-child(4n).mt-plp-node {
+  float: right;
+}
+
+@media screen and (min-width: 768px) {
+  .search-result-items .grid-tile:nth-child(4n).mt-plp-node {
+    float: right;
+  }
+}
+
+.search-result-items .grid-tile.mt-plp-node {
+  margin-bottom: 0 !important;
+  max-height: 636px;
+  padding-left: 0 !important;
+  padding-right: 10px !important;
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
+  .search-result-items .grid-tile.mt-plp-node {
+    max-height: 636px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search-result-items .grid-tile.mt-plp-node {
+    max-height: 834px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search-result-items .grid-tile.mt-plp-node {
+    max-height: calc(200% + 46px);
+  }
+}
+
+.search-result-items .grid-tile.mt-plp-node img {
+  max-height: 636px;
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
+  .search-result-items .grid-tile.mt-plp-node img {
+    max-height: 636px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search-result-items .grid-tile.mt-plp-node img {
+    max-height: 834px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search-result-items .grid-tile.mt-plp-node img {
+    max-height: calc(200% + 46px);
+  }
+}

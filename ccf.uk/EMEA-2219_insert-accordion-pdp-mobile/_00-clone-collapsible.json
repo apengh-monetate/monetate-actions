@@ -1,0 +1,181 @@
+{
+  "id": 357154,
+  "title": "Clone Collapsible Element - Mobile PDP",
+  "description": "Clone Collapsible Element - Mobile PDP",
+  "op": "cloneNode",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Clone",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selToClone",
+        "value": ".tp_detSpec"
+      },
+      "widget": {
+        "label": "Element To Clone",
+        "type": "CssSelectorField",
+        "description": "Element to clone.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selToPlace",
+        "value": ".tp_detSpec"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "Place Cloned element in relation to this element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "after"
+      },
+      "widget": {
+        "description": "Where to insert the cloned element in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_newID",
+        "value": "mtClonedTab"
+      },
+      "widget": {
+        "label": "Cloned Element ID",
+        "type": "CharField",
+        "description": "Optional ID to assign to the cloned element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_wrap",
+        "value": false
+      },
+      "widget": {
+        "label": "Wrap Cloned Element",
+        "type": "BooleanField",
+        "description": "Optionally wrap the cloned element in a div.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_useLibClone",
+        "value": false
+      },
+      "widget": {
+        "label": "Use jQuery For Cloning",
+        "type": "BooleanField",
+        "description": "Should jQuery's clone function be used to clone the events of the selected element?  If client site has jQuery 1.5+, the events of the children elements will also be cloned.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.  To refer to the container DIV (or the clone itself if a wrapper isn't being used) you can use the \"<CLONE_SELECTOR>\" pseudo-selector to refer to it (eg. \"<CLONE_SELECTOR> a:hover{ color:#F00; }\").",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 204779,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

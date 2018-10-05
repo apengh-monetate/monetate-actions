@@ -1,0 +1,53 @@
+@import "../variables";
+
+
+@media screen and (max-width: ($breakpoint - 1)) {
+  // div[id*="product_layout"] > div.container-default:nth-child(3) {
+  //   // padding-left: 0;
+  //   // padding-right: 0;
+  //   & > div.row > div.col-xs-12 {
+  //     padding-left: 0px !important;
+  //     padding-right: 0px !important;
+  //   }
+  // }
+
+
+
+  #MONETATE-ID {
+    // margin-left: -15px;
+    // margin-right: -15px;
+    // width: initial !important;
+
+    [disabled] {
+      opacity: 1 !important;
+    }
+
+    // Hide buttons
+    [data-prev-button],
+    [data-next-button] {
+      display: none !important;
+    }
+
+    [data-slider-mask] {
+      max-width: 95% !important;
+    }
+
+    li[data-slide] {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      // &[data-slide-active] + li[data-slide][aria-hidden="true"] {
+      //   opacity: 1 !important;
+      // }
+      &[aria-hidden] {
+        opacity: 1 !important;
+      }
+      &:not([aria-hidden]) + li[data-slide][aria-hidden] {
+        opacity: 1 !important;
+        .mt-merch-item {
+          border: 1px solid #585858 !important;
+        }
+      }
+    }
+
+  }
+}

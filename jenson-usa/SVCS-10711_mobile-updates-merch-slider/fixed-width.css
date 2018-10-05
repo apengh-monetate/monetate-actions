@@ -1,0 +1,30 @@
+@media screen and (max-width: 767px) {
+  #MONETATE-ID {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: initial !important;
+  }
+  #MONETATE-ID [disabled] {
+    opacity: 1 !important;
+  }
+  #MONETATE-ID [data-prev-button],
+  #MONETATE-ID [data-next-button] {
+    display: none !important;
+  }
+  #MONETATE-ID [data-slider-mask] {
+    max-width: 100% !important;
+  }
+  #MONETATE-ID li[data-slide] {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  #MONETATE-ID li[data-slide] .mt-merch-item {
+    border: none !important;
+  }
+  #MONETATE-ID li[data-slide][aria-hidden] {
+    opacity: 1 !important;
+  }
+  #MONETATE-ID li[data-slide]:not([aria-hidden]) + li[data-slide][aria-hidden] {
+    opacity: 1 !important;
+  }
+}

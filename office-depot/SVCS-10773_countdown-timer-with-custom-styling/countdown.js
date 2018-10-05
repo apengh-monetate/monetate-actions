@@ -41,11 +41,10 @@ var Countdown = {
 
     // Seconds
     this.seconds = Math.floor(this.delta % 60);  // in theory the modulus is not required
-    console.log(this.days, this.hours, this.minutes, this.seconds);
 
     // DOM
     this.$ = {
-      days  : this.$el.querySelectorAll('.countdown__block.days .figure'),
+      days   : this.$el.querySelectorAll('.countdown__block.days .figure'),
       hours  : this.$el.querySelectorAll('.countdown__block.hours .figure'),
       minutes: this.$el.querySelectorAll('.countdown__block.minutes .figure'),
       seconds: this.$el.querySelectorAll('.countdown__block.seconds .figure')
@@ -53,11 +52,11 @@ var Countdown = {
 
     // Init countdown values
     this.values = {
-      days: this.days,
-      hours: this.hours,
+      days:    this.days,
+      hours:   this.hours,
       minutes: this.minutes,
       seconds: this.seconds
-    }
+    };
 
     // Initialize total seconds
     this.total_seconds = this.values.days * 24 * 60 * 60 + (this.values.minutes * 60) + this.values.seconds;
@@ -129,8 +128,8 @@ var Countdown = {
 
   animateFigure: function($el, value) {
 
-    var that         = this,
-    $top             = $el.querySelector('.top'),
+    //var that         = this,
+    var $top         = $el.querySelector('.top'),
     $bottom          = $el.querySelector('.bottom'),
     $back_top        = $el.querySelector('.top-back'),
     $back_bottom     = $el.querySelector('.bottom-back');
@@ -142,17 +141,25 @@ var Countdown = {
     $back_bottom.querySelector('span').innerHTML = value;
 
     // Animate
-    $top.classList.add('flipTop');
-    setTimeout(function() {
-      $top.classList.remove('flipTop');
+    if(navigator.userAgent.indexOf('MSIE')!==-1 || navigator.appVersion.indexOf('Trident/') > -1){
+      /* Microsoft Internet Explorer detected in. */
       $top.innerHTML = value;
-    }, 750);
-
-    $back_top.classList.add('flipTopBack');
-    setTimeout(function() {
-      $back_top.classList.remove('flipTopBack');
       $bottom.innerHTML = value;
-    }, 750);
+    } else {
+      $top.classList.add('flipTop');
+      setTimeout(function() {
+        $top.classList.remove('flipTop');
+        $top.innerHTML = value;
+      }, 750);
+
+      $back_top.classList.add('flipTopBack');
+      setTimeout(function() {
+        $back_top.classList.remove('flipTopBack');
+        $bottom.innerHTML = value;
+      }, 750);
+    }
+
+
 
   },
 
@@ -165,12 +172,10 @@ var Countdown = {
 
 
     if(value >= 10) {
-
       // Animate only if the figure has changed
       if(fig_1_value !== val_1) this.animateFigure($el_1, val_1);
       if(fig_2_value !== val_2) this.animateFigure($el_2, val_2);
     } else {
-
       // If we are under 10, replace first figure with 0
       if(fig_1_value !== '0') this.animateFigure($el_1, 0);
       if(fig_2_value !== val_1) this.animateFigure($el_2, val_1);

@@ -1,0 +1,82 @@
+@import "../variables";
+
+.search-result-items {
+
+
+  .grid-tile {
+    max-width: 100% !important;
+
+    &:nth-child(n) {
+      &.mt-plp-node {
+        //background: red !important;
+        float: left;
+        @media screen and (min-width: $breakpoint-md) {
+          float: left;
+        }
+      }
+    }
+    &:nth-child(2n) {
+      &.mt-plp-node {
+        //background: orange !important;
+        float: right;
+        @media screen and (min-width: $breakpoint-md) {
+          float: left;
+        }
+      }
+    }
+    &:nth-child(3n) {
+      &.mt-plp-node {
+        //background: yellow !important;
+        float: left;
+        @media screen and (min-width: $breakpoint-md) {
+          float: right;
+        }
+      }
+    }
+    &:nth-child(4n) {
+      &.mt-plp-node {
+        //background: green !important;
+        float: right;
+        @media screen and (min-width: $breakpoint-md) {
+          float: right;
+        }
+      }
+    }
+
+
+    &.mt-plp-node {
+      margin-bottom: 0 !important;
+      max-height: 636px;
+      padding-left: 0 !important;
+      padding-right: 10px !important;
+      @media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
+        max-height: 636px;
+      }
+      @media screen and (min-width: $breakpoint-md) {
+        max-height: 834px;
+      }
+      @media screen and (min-width: $breakpoint-md) {
+        max-height: calc(200% + 46px);
+      }
+      img {
+        max-height: 636px;
+        @media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
+          max-height: 636px;
+        }
+        @media screen and (min-width: $breakpoint-md) {
+          max-height: 834px;
+        }
+        @media screen and (min-width: $breakpoint-md) {
+          max-height: calc(200% + 46px);
+        }
+      }
+      // & + .grid-tile {
+      //   margin-top: -23px !important;
+      //   @media screen and (min-width: $breakpoint-md) {
+      //     margin-top: 0 !important;
+      //   }
+      // }
+    }
+
+  }
+}

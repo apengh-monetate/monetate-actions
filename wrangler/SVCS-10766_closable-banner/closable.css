@@ -1,0 +1,101 @@
+div#master-container div.topnav header ~ div[class^="monetate_selector"] {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+div#master-container div.topnav div[class^="monetate_selector"] ~ header.sticky-small {
+  top: 90px !important;
+}
+
+div#master-container div.topnav div[class^="monetate_selector"] ~ header.sticky-medium {
+  top: 80px !important;
+}
+
+div#master-container div.topnav div[class^="monetate_selector"] ~ header.sticky-large {
+  top: 70px !important;
+}
+
+div#master-container div.topnav div[class^="monetate_selector"] ~ header.sticky-xlarge {
+  top: 60px !important;
+}
+
+.mt-closable-banner {
+  -webkit-transition: all 0.5s ease;
+  background: #213d79;
+  display: block;
+  min-height: 40px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 30px;
+  padding-top: 10px;
+  position: relative;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-closable-banner {
+    padding: 10px 0;
+  }
+}
+
+.mt-closable-banner__content {
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  align-content: center;
+          align-items: center;
+  color: #fff;
+  display: -webkit-box;
+  display: flex;
+          flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 1.07692em;
+  font-weight: 700;
+          justify-content: center;
+  letter-spacing: 0.35px;
+  line-height: 1.1em;
+  margin: 0 auto;
+  max-width: 1300px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.mt-closable-banner p {
+  font-weight: 700;
+  margin: 0;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.mt-closable-banner a {
+  color: #fff !important;
+  text-decoration: underline !important;
+}
+
+.mt-closable-banner a:hover, .mt-closable-banner a:active {
+  color: #fff !important;
+  text-decoration: underline !important;
+}
+
+.mt-closable-banner__close {
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+}
+
+.mt-closable-banner__close:hover, .mt-closable-banner__close:focus, .mt-closable-banner__close:active {
+  background: none;
+}

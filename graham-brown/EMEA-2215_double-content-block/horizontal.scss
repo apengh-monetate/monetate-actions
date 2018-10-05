@@ -1,0 +1,64 @@
+@import "../variables";
+
+.search-result-items {
+
+
+  .grid-tile {
+    max-width: 100% !important;
+    @media screen and (min-width: $breakpoint-lg) {
+      &.new-row {
+        clear: none !important;
+      }
+    }
+
+    &:nth-child(n) {
+      &.mt-plp-node {
+        //background: red !important;
+
+      }
+    }
+    &:nth-child(2n) {
+      &.mt-plp-node {
+        //background: orange !important;
+        float: right;
+        @media screen and (min-width: $breakpoint-md) {
+          float: none;
+        }
+      }
+    }
+    &:nth-child(3n) {
+      &.mt-plp-node {
+        //background: yellow !important;
+        @media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
+          float: left;
+        }
+      }
+    }
+    &:nth-child(4n) {
+      &.mt-plp-node {
+        //background: green !important;
+        @media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
+          float: left;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+          float: left;
+        }
+      }
+    }
+
+
+    &.mt-plp-node {
+      max-width: 100% !important;
+      width: 100% !important;
+      @media screen and (min-width: $breakpoint-md) {
+        width: 50% !important;
+      }
+      @media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
+        width: 66.66667% !important;
+      }
+
+    }
+
+
+  }
+}

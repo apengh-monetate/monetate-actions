@@ -1,0 +1,111 @@
+$blue: #213d79;
+$breakpoint-sm: 640px;
+$breakpoint-md: 640px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1380px;
+
+@import "../../mixins";
+
+
+div#master-container {
+  div.topnav {
+    header ~ div[class^="monetate_selector"] {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 9999;
+    }
+
+    div[class^="monetate_selector"] ~ header {
+      &.sticky-small {
+        top: 90px !important;
+      }
+      &.sticky-medium {
+        top: 80px !important;
+      }
+      &.sticky-large {
+        top: 70px !important;
+      }
+      &.sticky-xlarge {
+        top: 60px !important;
+      }
+    }
+  }
+}
+
+
+.mt-closable-banner {
+  background: $blue;
+  display: block;
+  min-height: 40px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 30px;
+  padding-top: 10px;
+  position: relative;
+  transition: all 0.5s ease;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-lg) {
+    padding: 10px 0;
+  }
+
+
+
+  &__content {
+    align-content: center;
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.07692em;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: 0.35px;
+    line-height: 1.1em;
+    margin: 0 auto;
+    max-width: 1300px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+
+  p {
+    font-weight: 700;
+    margin: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  a {
+    color: #fff !important;
+    text-decoration: underline !important;
+    &:hover,
+    &:active {
+      color: #fff !important;
+      text-decoration: underline !important;
+    }
+  }
+
+
+
+  &__close {
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    &:hover,
+    &:focus,
+    &:active {
+      background: none;
+    }
+  }
+
+}

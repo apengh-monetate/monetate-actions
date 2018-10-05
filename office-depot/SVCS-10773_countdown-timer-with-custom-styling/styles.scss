@@ -1,20 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i');
 
-$border-radius: 4px;
-$font: "Open Sans", "Helvetica", "Arial", sans-serif !important;
+$border-radius:      5px;
+$font:               "Open Sans", "Helvetica", "Arial", sans-serif !important;
 
-$width: 67px;
-$height: 94px;
+$breakpoint-xs:      320px;
+$breakpoint-sm:      414px;
+$breakpoint-int:     600px;
+$breakpoint-md:      768px;
+$breakpoint-lg:      930px;
 
-$light: rgba(254, 47, 0, 1);
-$dark: rgba(109, 14, 0, 1);
 
-// $light: rgba(2, 194, 255, 1);
-// $dark: rgba(0, 92, 134, 1);
+$light:              rgba(254, 47, 0, 1);
+$dark:               rgba(109, 14, 0, 1);
 
-* {
-  box-sizing: border-box;
-}
+// $light:              rgba(2, 194, 255, 1);
+// $dark:               rgba(0, 92, 134, 1);
+
+
+// * {
+//   box-sizing: border-box;
+// }
 
 
 // ==================================================================
@@ -33,17 +38,8 @@ $dark: rgba(109, 14, 0, 1);
     display: none !important;
   }
 
-  .show {
-    display: block !important;
-  }
-  .hide {
-    display: none !important;
-  }
-
-
-
   .days {
-    display: none;
+    display: block;
   }
   .hours {
     display: block;
@@ -68,27 +64,58 @@ $dark: rgba(109, 14, 0, 1);
     margin: 0 auto;
     position: relative;
 
+
+
     &__img {
       display: block;
       position: relative;
+      text-align: center;
     }
 
- 
+
+    // ------------------------------------------------------------------
+    // Timer Container
+    // ------------------------------------------------------------------
     &__timer {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: flex-end;
       position: absolute;
-      right: 5%;
-      top: 75%;
-      transform: translateY(-75%);
+      right: calc(30% - 88px);
+      top: 66.66667%;
+      transform: translateY(-66.66667%);
+      @media screen and (min-width: $breakpoint-sm) {
+        right: calc(30% - 105px);
+      }
+      @media screen and (min-width: $breakpoint-int) {
+        right: calc(30% - 129px);
+      }
+      @media screen and (min-width: $breakpoint-md) {
+        right: calc(30% - 176px);
+      }
+      @media screen and (min-width: $breakpoint-lg) {
+        right: calc(30% - 224px);
+      }
     }
 
+
+    // ------------------------------------------------------------------
+    // Countdown Block
+    // ------------------------------------------------------------------
     &__block {
-      margin-left: 8px;
-      margin-right: 8px;
+      margin-left: 4px;
+      margin-right: 4px;
       text-align: center;
+      @media screen and (min-width: $breakpoint-sm) {
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+      @media screen and (min-width: $breakpoint-md) {
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+
       &:first-child {
         margin-left: 0;
       }
@@ -97,13 +124,25 @@ $dark: rgba(109, 14, 0, 1);
       }
     }
 
+
+    // ------------------------------------------------------------------
+    // Title (Days, Hrs, Mins, Secs)
+    // ------------------------------------------------------------------
     &__title {
+      clear: both;
       color: $light;
       display: block;
-      font-size: 14px;
+      font-size: 10px;
       font-weight: 700;
-      margin-bottom: 15px;
+      margin-bottom: 0;
       text-transform: uppercase;
+      width: 100%;
+      @media screen and (min-width: $breakpoint-sm) {
+        font-size: 11px;
+      }
+      @media screen and (min-width: $breakpoint-md) {
+        font-size: 14px;
+      }
     }
 
     .figure {
@@ -113,58 +152,87 @@ $dark: rgba(109, 14, 0, 1);
       0 3px 4px 0 rgba(0, 0, 0, 0.2),
       inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
       float: left;
-      height: $height;
-      margin-bottom: 5px;
-      margin-left: 4px;
-      margin-right: 4px;
+      height: 36px;
+      margin-bottom: 5%;
+      margin-left: 2px;
+      margin-right: 2px;
       position: relative;
       text-align: center;
-      width: $width;
+      width: 24px;
+      @media screen and (min-width: $breakpoint-sm) {
+        height: 42px;
+        width: 28px;
+      }
+      @media screen and (min-width: $breakpoint-int) {
+        height: 54px;
+        width: 36px;
+      }
+      @media screen and (min-width: $breakpoint-md) {
+        height: 72px;
+        margin-left: 4px;
+        margin-right: 4px;
+        width: 48px;
+      }
+      @media screen and (min-width: $breakpoint-lg) {
+        height: 96px;
+        width: 64px;
+      }
+
       &:first-of-type {
         margin-left: 0;
       }
       &:last-of-type {
         margin-right: 0;
       }
+      &:after,
       &:before {
         background: #999;
         box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
         content: "";
         display: block;
         height: 6px;
-        left: 5px;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 51%;
+        transform: translateY(-51%);
         transform-style: preserve-3d;
         width: 1px;
-        z-index: 9999;
+        z-index: 4;
+      }
+      &:before {
+        left: 10%;
       }
       &:after {
-        background: #999;
-        box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-        content: "";
-        display: block;
-        height: 6px;
-        position: absolute;
-        right: 5px;
-        top: 50%;
-        transform: translateY(-50%);
-        transform-style: preserve-3d;
-        width: 1px;
-        z-index: 9999;
+        right: 10%;
       }
 
-      > span {
+      & > span {
         color: #fff;
-        font-size: 72px;
+        font-size: 24px;
         font-weight: normal;
         font-weight: 700;
         left: 0;
-        line-height: $height;
+        line-height: 36px;
         margin: auto;
         position: absolute;
         right: 0;
+        text-shadow:
+          -1px -1px #999;
+        @media screen and (min-width: $breakpoint-sm) {
+          font-size: 28px;
+          line-height: 42px;
+        }
+        @media screen and (min-width: $breakpoint-int) {
+          font-size: 36px;
+          line-height: 54px;
+        }
+        @media screen and (min-width: $breakpoint-md) {
+          font-size: 64px;
+          line-height: 72px;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+          font-size: 72px;
+          line-height: 96px;
+        }
       }
 
 
@@ -172,7 +240,7 @@ $dark: rgba(109, 14, 0, 1);
       // Top
       // ------------------------------------------------------------------
       .top {
-        background-color: $dark;
+        background-color: transparent;
         background-image: linear-gradient(to bottom, $light 0%, $light 30%, $dark 100%);
         border-bottom: 1px solid black;
         border-top-left-radius: $border-radius;
@@ -187,8 +255,9 @@ $dark: rgba(109, 14, 0, 1);
           animation: flipTop 0.8s cubic-bezier(0.37, 0.01, 0.94, 0.35) !important;
         }
 
+
         &-back {
-          background-color: $dark;
+          background-color: transparent;
           background-image: linear-gradient(to bottom, lighten($dark, 10%) 0%, $light 100%);
           border-bottom-left-radius: $border-radius;
           border-bottom-right-radius: $border-radius;
@@ -226,18 +295,15 @@ $dark: rgba(109, 14, 0, 1);
       // Bottom
       // ------------------------------------------------------------------
       .bottom {
-        background-color: black;
-        background-image: linear-gradient(to bottom, transparent 0%, lighten($dark, 10%) 50%, lighten($dark, 10%) 50%, $light 100%);
-        border-bottom-left-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, transparent 0%, $dark 50%, $dark 50%, $light 100%);
+        border-radius: $border-radius;
         z-index: 1;
 
-
         &-back {
-          background-color: $dark;
+          background-color: transparent;
           background-image: linear-gradient(to bottom, $light 30%, $dark 100%);
-          border-top-left-radius: $border-radius;
-          border-top-right-radius: $border-radius;
+          border-radius: $border-radius;
           height: 50%;
           overflow: hidden;
           top: 0;
@@ -257,18 +323,7 @@ $dark: rgba(109, 14, 0, 1);
 
 
     &__expired {
-      align-content: center;
-      align-items: center;
-      background: black;
-      color: white;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      font-family: $font;
-      font-weight: 300;
-      justify-content: center;
-      min-height: 200px;
-
+      display: block;
     }
 
   } // .countdown
@@ -279,10 +334,12 @@ $dark: rgba(109, 14, 0, 1);
 
 @keyframes flipTop {
   0% {
+    -ms-transform: none;
     transform: perspective(200px) rotateX(0deg);
     transform-style: preserve-3d;
   }
   100% {
+    -ms-transform: none;
     transform: perspective(300px) rotateX(-180deg);
     transform-style: preserve-3d;
   }
@@ -293,10 +350,12 @@ $dark: rgba(109, 14, 0, 1);
 
 @keyframes flipTopBack {
   0% {
+    -ms-transform: none;
     transform: perspective(200px) rotateX(180deg);
     transform-style: preserve-3d;
   }
   100% {
+    -ms-transform: none;
     transform: perspective(200px) rotateX(0deg);
     transform-style: preserve-3d;
   }

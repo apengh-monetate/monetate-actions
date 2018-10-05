@@ -1,0 +1,81 @@
+{
+  "id": 357152,
+  "title": "Insert PLP Content - Double block horizontal",
+  "description": "Inserts a product grid html block - double wide",
+  "op": "insertPLPContent",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Index pages",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<img src=\"https://via.placeholder.com/1160x580\" />"
+      },
+      "widget": {
+        "label": "Edit HTML",
+        "type": "HtmlField",
+        "description": "HTML of the selected node.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "index",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "The product grid index where the html will be inserted. NOTE: NUMBERING STARTS AT 0",
+        "label": "Insert Index"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_css",
+        "value": ".search-result-items .grid-tile {\n  max-width: 100% !important;\n}\n\n@media screen and (min-width: 1024px) {\n  .search-result-items .grid-tile.new-row {\n    clear: none !important;\n  }\n}\n\n.search-result-items .grid-tile:nth-child(2n).mt-plp-node {\n  float: right;\n}\n\n@media screen and (min-width: 768px) {\n  .search-result-items .grid-tile:nth-child(2n).mt-plp-node {\n    float: none;\n  }\n}\n\n@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {\n  .search-result-items .grid-tile:nth-child(3n).mt-plp-node {\n    float: left;\n  }\n}\n\n@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {\n  .search-result-items .grid-tile:nth-child(4n).mt-plp-node {\n    float: left;\n  }\n}\n\n@media screen and (min-width: 1024px) {\n  .search-result-items .grid-tile:nth-child(4n).mt-plp-node {\n    float: left;\n  }\n}\n\n.search-result-items .grid-tile.mt-plp-node {\n  max-width: 100% !important;\n  width: 100% !important;\n}\n\n@media screen and (min-width: 768px) {\n  .search-result-items .grid-tile.mt-plp-node {\n    width: 50% !important;\n  }\n}\n\n@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {\n  .search-result-items .grid-tile.mt-plp-node {\n    width: 66.66667% !important;\n  }\n}"
+      },
+      "widget": {
+        "label": "Css style properties",
+        "type": "TextField",
+        "description": "A string of css properties that will be appended to a stylesheet in <head />.",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "index",
+          "search"
+        ],
+        "id": 204787,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

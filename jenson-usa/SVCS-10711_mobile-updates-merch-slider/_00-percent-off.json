@@ -1,0 +1,497 @@
+{
+  "id": 357151,
+  "title": "Merch Slider - % Off - V2 (mobile updates)",
+  "description": "Inserts a slider with merch items.",
+  "op": "merchSlider",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "endcap",
+  "subcategory": "other",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": ".mt-tab-content .tab_0"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Selector to find the node where the slider will be inserted.",
+        "label": "Insert Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "first"
+      },
+      "widget": {
+        "description": "Method to use when inserting the slider relative to the selected node.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "first",
+            "label": "First"
+          },
+          {
+            "name": "last",
+            "label": "Last"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "insertOptions",
+        "value": "RecheckForElement"
+      },
+      "widget": {
+        "description": "RecheckForElement: If the selector is not found, wait up to 3 seconds for it to show up. SelectMultipleElements: If the selector matches multiple places, do you want to insert at each of them?",
+        "label": "Insert Options",
+        "action_visible": true,
+        "hiddenMenu": true,
+        "allIsValid": true,
+        "type": "CheckboxArrayAsString",
+        "options": [
+          "RecheckForElement",
+          "SelectMultipleElements"
+        ]
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "productfeed",
+        "name": "product_feed",
+        "value": "{\"args\": {\"feed_id\": [\"26792\"], \"pid\": [\"LI173D00\", \"JE172B10\", \"JE172B09\", \"JE172B08\", \"JE172B07\", \"JE172B06\", \"HE204I00\", \"HB257A00\", \"EY172E01\", \"BI174B08\"], \"version\": [\"0\"]}, \"subject\": \"products\"}"
+      },
+      "widget": {
+        "description": "Group of products to put in the slider.",
+        "action_visible": true,
+        "type": "ProductFeedSelectField",
+        "options": [],
+        "label": "Merch Set"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "minItems",
+        "value": 4
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Minimum number of items before triggering the fallback set, if applicable.",
+        "label": "Minimum Number of Items"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "maxItems",
+        "value": 40
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Maximum number of merch items to have in the slider.",
+        "label": "Maximum Number of Items"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "sliderTemplate",
+        "value": "<button data-prev-button></button>\n{{SLIDER}}\n{{PAGINATION}}\n<button data-next-button></button>"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Include an HTML template to build the slider structure. Placeholder example: '{{slider}}'. Possible placeholders: slider, pagination. Optionally, add the attributes 'data-prev-button' and 'data-next-button' to add previous and next slide buttons. If optional arrow images are included, elements with the attribute 'data-prev-button' and 'data-next-button' are required for them to display.",
+        "label": "Slider Container Template"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "itemTemplate",
+        "value": "<a href=\"{{product_url}}\" data-pid=\"{{pid}}\">\n        <div>\n            <img src=\"{{thumbnail_image}}\" alt=\"{{pid}} - {{name}}\" />\n        </div>\n        <div>\n            <h3 class=\"item-name\">{{name}}</h3>\n            <div>\n                <span class=\"mt-price\">{{price|priceFormat: $1,000.00}}</span>\n                <span class=\"mt-percent-off\">SAVE {{alternate_price|discount: percent}}%</span>\n                <span class=\"mt-alt-price\">{{alternate_price|priceFormat: $1,000.00}}</span>\n            </div>\n        </div>\n    </a>"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Placeholder example: '{{price}}'. Possible placeholders: alternate_price, brand_name, description, name, out_of_stock, pid, price, product_url, purchase_count, secure_thumbnail_image, thumbnail_image.",
+        "label": "Slide Template"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "css",
+        "value": {
+          "content": "/**\n* DEFAULT SLIDER STYLES\n* Edit at your own risk!\n*/\n#MONETATE-ID {\n  position: relative;\n  max-width: 100% !important;\n  overflow: hidden;\n}\n\n#MONETATE-ID [data-slide][aria-hidden=\"true\"] {\n  opacity: 0 !important;\n}\n\n#MONETATE-ID [data-prev-button] {\n    left: 16%;\n  }\n\n  #MONETATE-ID [data-next-button] {\n    right: 16%;\n  }\n@media (min-width: 1300px){\n  #MONETATE-ID [data-slide][aria-hidden=\"true\"]:nth-child(4n){\n    opacity: 0.3 !important;\n  }\n\n  #MONETATE-ID li[data-slide]:not([aria-hidden]) + li[data-slide][aria-hidden]{\n    opacity: 0.3 !important;\n  }\n\n  #MONETATE-ID [data-prev-button] {\n    left: 16%;\n  }\n\n  #MONETATE-ID [data-next-button] {\n    right: 16%;\n  }\n\n  #MONETATE-ID [data-slider-mask] {\n    display: inline-flex;\n    margin: 0 auto;\n    max-width: 66%;\n  }\n}\n\n@media (min-width: 768px) and (max-width: 1299px){\n  #MONETATE-ID [data-slide][aria-hidden=\"true\"]:nth-child(2n){\n    opacity: 0.3 !important;\n  }\n\n  #MONETATE-ID li[data-slide]:not([aria-hidden]) + li[data-slide][aria-hidden]{\n    opacity: 0.3 !important;\n  }\n  #MONETATE-ID li[data-slide]:not([aria-hidden]) + li[data-slide][aria-hidden] + li[data-slide][aria-hidden]{\n    opacity: 0 !important;\n  }\n\n  #MONETATE-ID [data-prev-button] {\n    left: 23.5%;\n  }\n\n  #MONETATE-ID [data-next-button] {\n    right: 23.5%;\n  }\n\n  #MONETATE-ID [data-slider-mask] {\n    display: inline-flex;\n    margin: 0 auto;\n    max-width: 50%;\n  }\n}\n@media (min-width: 414px) and (max-width: 767px){\n  #MONETATE-ID li[data-slide][aria-hidden] + li[data-slide][aria-hidden],\n  #MONETATE-ID li[data-slide]:not([aria-hidden]) + li[data-slide][aria-hidden]{\n    opacity: 0.3 !important;\n  }\n  #MONETATE-ID li[data-slide]:not([aria-hidden]) + li[data-slide][aria-hidden] + li[data-slide][aria-hidden]{\n    opacity: 0 !important;\n  }\n\n  #MONETATE-ID [data-prev-button] {\n    left: 31%;\n  }\n\n  #MONETATE-ID [data-next-button] {\n    right: 31%;\n  }\n\n  #MONETATE-ID [data-slider-mask] {\n    display: inline-flex;\n    margin: 0 auto;\n    max-width: 33%;\n  }\n  #MONETATE-ID [data-pagination] li {\n    display:none !important;\n  }\n}\n@media (max-width: 413px){\n  #MONETATE-ID li[data-slide][aria-hidden]{\n    opacity: 0 !important;\n  }\n\n  #MONETATE-ID [data-prev-button] {\n    left: 1px;\n  }\n\n  #MONETATE-ID [data-next-button] {\n    right: 1px;\n  }\n\n  #MONETATE-ID [data-slider-mask] {\n    display: inline-flex;\n    margin: 0 auto;\n    max-width: 90%;\n  }\n  #MONETATE-ID [data-pagination] li {\n    display:none !important;\n  }\n}\n\n#MONETATE-ID [data-slider-mask] {\n  overflow: visible!important;\n  position: relative!important;\n  padding: 0!important;\n  margin: 0!important;\n}\n\n#MONETATE-ID li {\n  list-style: none;\n}\n\n#MONETATE-ID [data-slider] {\n  padding: 0!important;\n  margin: 0!important;\n  display: flex;\n}\n\n#MONETATE-ID [data-slide] {\n  float: none;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider] {\n  white-space: nowrap!important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slide] {\n  display: inline-block!important;\n  white-space: normal;\n  vertical-align: top;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slide] {\n  display: block!important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide] {\n  position: absolute;\n  top: 0;\n  opacity: 0;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide][data-slide-active] {\n  position: relative;\n  z-index: 1;\n  opacity: 1;\n}\n\n#MONETATE-ID [data-pagination] {\n    padding: 0;\n}\n\n#MONETATE-ID [data-pagination-slide],\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button]{\n  cursor: pointer;\n  z-index: 1;\n}\n\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button]{\n  padding: 0 4px !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  touch-action: pan-x;\n}\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider-mask],\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slider-mask] {\n  touch-action: pan-y;\n}\n\n#MONETATE-ID [data-pagination-slide] * {\n  pointer-events: none;\n}\n\n/** ----END DEFAULT STYLES---- */\n\n\n/**\n* CUSTOM SLIDER STYLING\n*/\n#MONETATE-ID [data-pagination=\"thumbnails\"] [data-pagination-slide] {\n  border-radius: 0;\n  background: none;\n  width: 40px;\n  height: auto;\n}\n\n#MONETATE-ID [disabled] {\n  opacity: 0.5;\n}\n\n#MONETATE-ID [data-pagination-slide] {\n    display: inline-block;\n    width: 12px;\n    height: 12px;\n    background: #fff;\n    margin: 4px;\n    border-radius: 6px;\n    opacity: 1;\n    border: 1px solid #000;\n}\n\n#MONETATE-ID [data-pagination-slide][data-slide-active] {\n    border: 1px solid transparent;\n    background: #666;\n}\n#MONETATE-ID [data-slide] {\n  padding: 10px 12px;\n}\n\n#MONETATE-ID [data-slide][aria-hidden=\"true\"] .mt-merch-item{\n  border: 0;\n}\n#MONETATE-ID [data-slide] > div {\n  padding: 10px;\n  height: 100%;\n}\n\n\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n  top: 45%;\n  position: absolute;\n  width: 25px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -o-user-select: none;\n  user-select: none;\n  padding: 0;\n  background: none;\n  color: #000;\n  border: none !important;\n}\n\n#MONETATE-ID img {\n    max-width: 100%;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-prev-button] {\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-next-button]{\n  top: auto;\n  bottom: 0;\n  left: 50%;\n  right: auto;\n  transform: translateX(-50%);\n}\n\n\n\n#MONETATE-ID {\n  text-align: center;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  height: 400px!important;\n}\n\n#MONETATE-ID [data-slide] img {\n  max-height: 100%;\n  max-width: 100%;\n}\n\n#MONETATE-ID [data-slide] a {\n  text-decoration: none;\n  color: #bb020a;\n}\n\n#MONETATE-ID [data-pagination*=\"dots\"] [data-pagination-slide] {\n  /* remove below for pagination numbers */\n  text-indent: -9999px;\n}\n\n#MONETATE-ID .mt-merch-item {\n  border: 1px solid #585858;\n  background: #fff;\n}\n#MONETATE-ID .item-name{\n  text-transform: uppercase;\n  font-size: 1.4rem;\n  color: #333;\n}\n#MONETATE-ID [data-prev-button], #MONETATE-ID [data-next-button] {\n  max-width: 20px;\n  border: none;\n}\n\n#MONETATE-ID [data-prev-button] img, #MONETATE-ID [data-next-button] img {\n  max-width: 100%;\n}\n\n#MONETATE-ID [data-slide] { flex-shrink: 0; }\n\n#MONETATE-ID .mt-merch-item[data-missing-keys*=\"alternate_price\"] .mt-percent-off {\n    display: none;\n}\n\n#MONETATE-ID .mt-merch-item a:hover {\n    color: #333;\n}\n\n#MONETATE-ID .mt-merch-item a:hover .mt-percent-off {\n    color: #BB0203;\n}\n\n#MONETATE-ID .mt-merch-item .mt-price {\n    color: #333; \n    display: block;\n}\n\n#MONETATE-ID .mt-merch-item .mt-alt-price {\n    text-decoration: line-through;\n    color: #333;\n}\n\n\n\n@media screen and (max-width: 767px) {\n  #MONETATE-ID [disabled] {\n    opacity: 1 !important;\n  }\n  #MONETATE-ID [data-prev-button],\n  #MONETATE-ID [data-next-button] {\n    display: none !important;\n  }\n  #MONETATE-ID [data-slider-mask] {\n    max-width: 95% !important;\n  }\n  #MONETATE-ID li[data-slide] {\n    padding-left: 10px !important;\n    padding-right: 10px !important;\n  }\n  #MONETATE-ID li[data-slide][aria-hidden] {\n    opacity: 1 !important;\n  }\n  #MONETATE-ID li[data-slide]:not([aria-hidden]) + li[data-slide][aria-hidden] {\n    opacity: 1 !important;\n  }\n  #MONETATE-ID li[data-slide]:not([aria-hidden]) + li[data-slide][aria-hidden] .mt-merch-item {\n    border: 1px solid #585858 !important;\n  }\n}",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "orientation",
+        "value": "horizontal"
+      },
+      "widget": {
+        "description": "Orientation of the slider.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "horizontal",
+            "label": "Horizontal"
+          },
+          {
+            "name": "vertical",
+            "label": "Vertical"
+          }
+        ],
+        "label": "Orientation"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "infiniteSlide",
+        "value": true
+      },
+      "widget": {
+        "label": "Infinite Slide",
+        "type": "BooleanField",
+        "description": "Should this slide infinitely or stop at the end of the slider?",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "json",
+        "name": "slidesVisible",
+        "value": "{\n  \"Infinity\": {\n    \"visible\": 4\n  },\n  \"1300\":{\n    \"visible\": 2\n  },\n  \"768\": {\n    \"visible\": 1,\n    \"peekLeft\": 0,\n    \"peekRight\": 0.5\n  },\n  \"414\": {\n    \"visible\": 1,\n    \"peekLeft\": 0,\n    \"peekRight\": 0.5\n  }\n}"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "JsonCodeField",
+        "description": "Slides visible by browser width. 'Infinity' breakpoint is required. Example: {\"Infinity\": {\"peekLeft\": 0.5, \"visible\": 5, \"peekRight\": 0.5}}",
+        "label": "Slides Visible"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "slideInc",
+        "value": "page"
+      },
+      "widget": {
+        "description": "Number of items to slide on navigation button click.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "page",
+            "label": "Page"
+          },
+          {
+            "name": "single",
+            "label": "Single"
+          }
+        ],
+        "label": "Slide By Increment"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "raw_img_creative",
+        "name": "opt_prev",
+        "value": {
+          "discriminator": "raw_img_creative",
+          "dyntexts": [],
+          "creative": {
+            "last_updated": "2018-09-17T18:50:42",
+            "tags": {
+              "builtin": [
+                "image"
+              ],
+              "custom": []
+            },
+            "height": 95,
+            "generated": false,
+            "id": 1583091,
+            "archived": false,
+            "name": "jensonarrow-back.png",
+            "extension": ".png",
+            "sha": "4d6aa3dfa570cb0947f1cc785871ad36cb2fb6ca",
+            "ref": "857/1583091.png",
+            "notes": "",
+            "width": 65,
+            "image_url": "https://dev-apengh-1.monetate.org/img/1/857/1583091.png",
+            "type": "image"
+          }
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "RawImageCreative",
+        "description": "Previous button creative. Must include element with the attribute [data-prev-button] Slider Container Template.",
+        "label": "Previous Button Creative"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "raw_img_creative",
+        "name": "opt_next",
+        "value": {
+          "discriminator": "raw_img_creative",
+          "dyntexts": [],
+          "creative": {
+            "last_updated": "2018-09-17T18:50:42",
+            "tags": {
+              "builtin": [
+                "image"
+              ],
+              "custom": []
+            },
+            "height": 95,
+            "generated": false,
+            "id": 1583092,
+            "archived": false,
+            "name": "jensonarrow-forwards.png",
+            "extension": ".png",
+            "sha": "1fb727945959072df1181372e6d29430e884c9b9",
+            "ref": "857/1583092.png",
+            "notes": "",
+            "width": 65,
+            "image_url": "https://dev-apengh-1.monetate.org/img/1/857/1583092.png",
+            "type": "image"
+          }
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "RawImageCreative",
+        "description": "Next button creative. Must include element with the attribute [data-next-button] Slider Container Template.",
+        "label": "Next Button Creative"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_gridSize",
+        "value": null
+      },
+      "widget": {
+        "label": "Rows/Comumns",
+        "type": "IntegerField",
+        "description": "How many rows (horizontal) or columns (vertical) should the slider have?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_autoRotateDuration",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Number of milliseconds before auto rotating to the next slide. Leave blank or use 0 to prevent auto rotate.",
+        "label": "Auto Rotate Duration"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_pauseOnHover",
+        "value": false
+      },
+      "widget": {
+        "label": "Pause Auto Rotate on Hover",
+        "type": "BooleanField",
+        "description": "Should auto rotation pause on slider hover?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_stopOnInteraction",
+        "value": false
+      },
+      "widget": {
+        "label": "Stop Auto Rotate on Interaction",
+        "type": "BooleanField",
+        "description": "Should auto rotation stop on slider interaction?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_transitionDuration",
+        "value": 250
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Duration in milliseconds of slide animation. Leave blank or use 0 to prevent animations.",
+        "label": "Animation Transition Duration"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_transitionAnimation",
+        "value": "push"
+      },
+      "widget": {
+        "description": "Type of slide transition animation to use.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "push",
+            "label": "Push"
+          },
+          {
+            "name": "fade",
+            "label": "Fade"
+          },
+          {
+            "name": "none",
+            "label": "None"
+          }
+        ],
+        "label": "Transition Animation"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_pagination",
+        "value": "dots-page"
+      },
+      "widget": {
+        "description": "Type of slide pagination to use.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "dots",
+            "label": "Dots"
+          },
+          {
+            "name": "dots-page",
+            "label": "Dots - Page"
+          },
+          {
+            "name": "thumbnails",
+            "label": "Slide thumbnails"
+          },
+          {
+            "name": "none",
+            "label": "None"
+          }
+        ],
+        "label": "Pagination"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "list",
+        "name": "opt_pinnedPids",
+        "value": null
+      },
+      "widget": {
+        "label": "Pinned Products",
+        "type": "ProductList",
+        "description": "Products 'pinned' to the beginning of the merch set.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_urlParam",
+        "value": null
+      },
+      "widget": {
+        "label": "URL Parameter",
+        "type": "CharField",
+        "description": "URL Parameter to be appended to item links. ex: name=value. To add multiple, just put '&' between them. ex: name=value&nameTwo=valueTwo.",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}
