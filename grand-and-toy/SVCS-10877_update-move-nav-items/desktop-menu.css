@@ -1,0 +1,51 @@
+.mt-nav__list {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .mt-nav__list {
+    align-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: nowrap;
+    height: 42px;
+    -webkit-box-pack: center;
+            justify-content: center;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 84px;
+    width: 100%;
+  }
+}
+
+.mt-nav__list-item {
+  border-right: 1px solid #007000;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 1300px) {
+  .mt-nav__list-item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.mt-nav__list-item:last-child {
+  border-right: none;
+}
+
+.mt-nav__list-link {
+  color: #fff;
+}

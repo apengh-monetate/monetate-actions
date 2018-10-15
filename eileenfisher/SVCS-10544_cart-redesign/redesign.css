@@ -78,9 +78,13 @@ div.cart > div.page-title {
 }
 
 #shopping-cart-table tbody tr.jq-cart-item {
-  padding-bottom: 0 !important;
+  padding-bottom: 5px !important;
   padding-top: 25px;
   position: relative;
+}
+
+#shopping-cart-table tbody tr.jq-cart-item:not(:last-child) {
+  border-bottom: 11px solid #f8f8f8;
 }
 
 @media screen and (min-width: 768px) {
@@ -89,7 +93,7 @@ div.cart > div.page-title {
     clear: none;
     display: inline-block;
     float: left;
-    padding-bottom: 30px !important;
+    padding-bottom: 25px !important;
     width: 100% !important;
   }
 }
@@ -185,7 +189,8 @@ div.cart > div.page-title {
   font-family: "Trade Gothic W01 Light" !important;
   font-size: 11px !important;
   letter-spacing: 0.025em !important;
-  margin-top: 7px !important;
+  line-height: 1.5 !important;
+  margin-top: 15px !important;
   position: relative !important;
   text-transform: lowercase !important;
 }
@@ -492,7 +497,7 @@ div.cart > div.page-title {
   min-width: 0 !important;
   padding: 4px 5px;
   position: absolute;
-  top: 130px;
+  top: 140px;
   width: 50px !important;
 }
 
@@ -575,6 +580,10 @@ div.cart > div.page-title {
   text-align: center !important;
 }
 
+.cart-collaterals .discount {
+  margin: 0 0 10px 0;
+}
+
 .cart-collaterals .discount h2 {
   display: none;
 }
@@ -594,7 +603,7 @@ div.cart > div.page-title {
 }
 
 .cart-collaterals .discount .v-fix .button {
-  height: 30px !important;
+  height: 31px !important;
   width: auto !important;
 }
 
@@ -628,6 +637,10 @@ div.cart > div.page-title {
   .cart-collaterals .discount form#discount-coupon-form[cancel-btn] .v-fix button span span {
     width: 75px !important;
   }
+}
+
+.cart-collaterals .giftcard {
+  margin: 0 0 10px 0 !important;
 }
 
 .cart-collaterals .giftcard h2 {
@@ -707,7 +720,7 @@ div.cart > div.page-title {
 }
 
 .cart-collaterals .giftcard .buttons-set .button {
-  height: 30px !important;
+  height: 31px !important;
   width: 75px !important;
 }
 
@@ -826,6 +839,21 @@ div.cart > div.page-title {
   font-size: 12px !important;
   text-transform: uppercase;
   width: 100%;
+}
+
+.cart .totals #shopping-cart-totals-table tbody tr:nth-child(2) td.a-right:nth-child(2) {
+  font-family: "Trade Gothic W01 Bold" !important;
+  font-size: 12px !important;
+}
+
+.cart .totals #shopping-cart-totals-table tbody tr:nth-child(2) td.a-right:nth-child(2) span.price {
+  font-family: "Trade Gothic W01 Roman" !important;
+}
+
+@media screen and (min-width: 960px) {
+  .cart .totals #shopping-cart-totals-table tbody tr:nth-child(2) td.a-right:nth-child(2) span.price {
+    font-size: 15px !important;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -957,8 +985,14 @@ div.cart > div.page-title {
 .cart .totals .button span span {
   color: #fff !important;
   font-family: "Trade Gothic W01 Bold 2" !important;
-  font-size: 11px !important;
+  font-size: 10px !important;
   line-height: 11px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .cart .totals .button span span {
+    font-size: 11px !important;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -990,7 +1024,7 @@ div.cart > div.page-title {
 .cart .crosssell h2 {
   border-bottom: none !important;
   display: inline-block !important;
-  font-family: "Trade Gothic W01 Light" !important;
+  font-family: "Trade Gothic W01 Bold 2" !important;
   font-size: 12px !important;
   line-height: 10px;
   margin-bottom: 0px !important;
@@ -1014,13 +1048,20 @@ div.cart > div.page-title {
 }
 
 .cart .crosssell .owl-wrapper {
+  cursor: default !important;
   display: -webkit-box !important;
   display: flex !important;
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
           flex-direction: column !important;
   padding-top: 0 !important;
-  width: inherit !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+  width: 100% !important;
+}
+
+.cart .crosssell .owl-controls {
+  display: none !important;
 }
 
 .cart .crosssell .owl-item {
@@ -1035,7 +1076,7 @@ div.cart > div.page-title {
   float: left;
   max-width: 180px !important;
   padding-right: 10px !important;
-  width: 45%;
+  width: 40%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1049,7 +1090,7 @@ div.cart > div.page-title {
 .cart .crosssell .owl-item .price-block {
   clear: right;
   float: right;
-  width: 55%;
+  width: 60%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1071,6 +1112,7 @@ div.cart > div.page-title {
   font-family: "Trade Gothic W01 Light" !important;
   font-size: 12px !important;
   font-weight: 700 !important;
+  padding-right: 0 !important;
   text-decoration: none !important;
   text-transform: uppercase !important;
 }

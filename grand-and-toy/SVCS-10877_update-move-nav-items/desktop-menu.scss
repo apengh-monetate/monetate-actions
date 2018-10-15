@@ -1,0 +1,49 @@
+@import "../variables";
+
+
+.mt-nav {
+
+  &__list {
+    display: none;
+    @media screen and (min-width: $breakpoint-lg) {
+      align-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      height: 42px;
+      justify-content: center;
+      left: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 84px;
+      width: 100%;
+    }
+    
+  
+    &-item {
+      border-right: 1px solid #007000;
+      display: block;
+      margin: 0;
+      padding: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+      @media screen and (min-width: 1300px) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    &-link {
+      color: #fff;
+    }
+
+    
+  }
+}
