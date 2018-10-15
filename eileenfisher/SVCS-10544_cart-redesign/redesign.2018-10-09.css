@@ -1,31 +1,14 @@
-.checkout-cart-index .main {
-  padding: 0 !important;
-}
-
 @media screen and (min-width: 768px) {
-  .checkout-cart-index .main {
-    padding: 0 20px !important;
+  .cart {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .cart .cart-outer {
-    padding-right: 0;
-    width: 100% !important;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  form#cart-form {
-    float: left;
     padding-right: 20px;
     width: 65% !important;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  form#cart-form {
-    padding-right: 30px;
   }
 }
 
@@ -85,13 +68,16 @@ div.cart > div.page-title {
 
 @media screen and (min-width: 768px) {
   #shopping-cart-table tbody tr.jq-cart-item {
-    border-bottom: 11px solid #f8f8f8;
     clear: none;
     display: inline-block;
     float: left;
-    padding-bottom: 30px !important;
+    padding-bottom: 20px !important;
     width: 100% !important;
   }
+}
+
+#shopping-cart-table tbody tr.jq-cart-item:not(:first-of-type) {
+  border-top: 11px solid #f8f8f8;
 }
 
 #shopping-cart-table tbody tr.jq-cart-item:after {
@@ -108,52 +94,46 @@ div.cart > div.page-title {
 #shopping-cart-table .image-wrapper {
   clear: none;
   margin: 0;
-  max-width: 180px;
+  max-width: 110px;
   padding: 0;
-  width: 45%;
+  width: auto;
 }
 
 @media screen and (min-width: 768px) {
   #shopping-cart-table .image-wrapper {
     display: inline-block;
     float: left;
-    padding-right: 18px;
-    width: 31%;
+    width: 25%;
   }
 }
 
 #shopping-cart-table .product-image {
   max-width: 100%;
-  padding-right: 10px !important;
   width: auto !important;
-}
-
-@media screen and (min-width: 768px) {
-  #shopping-cart-table .product-image {
-    padding-right: 0 !important;
-  }
 }
 
 #shopping-cart-table .product-wrapper {
   clear: none;
   float: left;
   margin: 0;
+  max-width: calc(100% - 110px);
   padding: 0;
+  padding-left: 10px;
   position: relative;
-  width: 55%;
+  width: auto;
 }
 
 @media screen and (min-width: 768px) {
   #shopping-cart-table .product-wrapper {
     display: inline-block;
     max-width: 100%;
-    width: 69%;
+    width: 75%;
   }
 }
 
 @media screen and (min-width: 960px) {
   #shopping-cart-table .product-wrapper {
-    width: calc(100% - 180px);
+    width: calc(100% - 130px);
   }
 }
 
@@ -177,14 +157,12 @@ div.cart > div.page-title {
 @media screen and (min-width: 960px) {
   #shopping-cart-table .product-wrapper h3 {
     font-size: 13px !important;
-    line-height: 20px !important;
   }
 }
 
 #shopping-cart-table .item-options {
   font-family: "Trade Gothic W01 Light" !important;
   font-size: 11px !important;
-  letter-spacing: 0.025em !important;
   margin-top: 7px !important;
   position: relative !important;
   text-transform: lowercase !important;
@@ -196,7 +174,7 @@ div.cart > div.page-title {
     margin-top: 0 !important;
     padding-top: 10px;
     position: absolute !important;
-    top: 50px;
+    top: 48px;
     width: 100%;
   }
 }
@@ -204,18 +182,12 @@ div.cart > div.page-title {
 @media screen and (min-width: 960px) {
   #shopping-cart-table .item-options {
     font-size: 13px !important;
-    line-height: 1.5 !important;
-    top: 55px;
   }
 }
 
 #shopping-cart-table .item-options dt {
   color: #6a6a6a !important;
   margin-right: 5px !important;
-  padding: 0 !important;
-}
-
-#shopping-cart-table .item-options dd {
   padding: 0 !important;
 }
 
@@ -230,33 +202,26 @@ div.cart > div.page-title {
 }
 
 #shopping-cart-table td:nth-child(3) {
+  -webkit-transform: translateX(100%);
   clear: left;
   float: left;
   margin-top: 10px;
   padding: 0;
   padding-top: 36px;
   text-align: center !important;
-  -webkit-transform: translateX(100%);
           transform: translateX(100%);
   width: calc(100% / 3);
 }
 
 @media screen and (min-width: 768px) {
   #shopping-cart-table td:nth-child(3) {
-    left: 67%;
+    -webkit-transform: none;
+    left: 64%;
     padding-top: 24px;
     position: absolute;
-    top: 50px;
-    -webkit-transform: none;
+    top: 48px;
             transform: none;
     width: 20%;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  #shopping-cart-table td:nth-child(3) {
-    left: 65%;
-    top: 55px;
   }
 }
 
@@ -287,38 +252,35 @@ div.cart > div.page-title {
 }
 
 #shopping-cart-table td:nth-child(4) {
-  align-content: stretch;
+      -ms-flex-align: center;
+  -ms-flex-line-pack: stretch;
+  -ms-flex-wrap: wrap;
   -webkit-box-align: center;
+  -webkit-transform: translateX(-100%);
+      align-content: stretch;
           align-items: center;
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   float: left;
   margin-top: 10px;
   padding: 0;
   padding-top: 30px;
   text-align: left !important;
-  -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   width: calc(100% / 3);
 }
 
 @media screen and (min-width: 768px) {
   #shopping-cart-table td:nth-child(4) {
-    left: 60%;
+    -webkit-transform: none;
+    left: 54%;
     padding-top: 24px;
     position: absolute;
-    top: 50px;
-    -webkit-transform: none;
+    top: 48px;
             transform: none;
     width: 35px;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  #shopping-cart-table td:nth-child(4) {
-    left: 55%;
-    top: 55px;
   }
 }
 
@@ -402,19 +364,13 @@ div.cart > div.page-title {
 
 @media screen and (min-width: 768px) {
   #shopping-cart-table td:nth-child(5) {
+    -webkit-transform: none;
     left: 79%;
     padding-top: 24px;
     position: absolute;
-    top: 50px;
-    -webkit-transform: none;
+    top: 48px;
             transform: none;
     width: 20%;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  #shopping-cart-table td:nth-child(5) {
-    top: 55px;
   }
 }
 
@@ -487,35 +443,27 @@ div.cart > div.page-title {
   font-size: 10px;
   left: 0;
   margin: 0;
-  margin-left: 45%;
+  margin-left: 120px;
+  margin-top: -96px;
   max-width: 50px !important;
   min-width: 0 !important;
   padding: 4px 5px;
   position: absolute;
-  top: 130px;
+  top: 90%;
   width: 50px !important;
-}
-
-@media screen and (min-width: 440px) {
-  #shopping-cart-table .btn-edit {
-    margin-left: 180px;
-  }
 }
 
 @media screen and (min-width: 768px) {
   #shopping-cart-table .btn-edit {
-    left: 29%;
+    left: 110px;
     margin-left: 10px;
     margin-top: 0;
-    top: 70%;
+    top: 75%;
   }
 }
 
-@media screen and (min-width: 960px) {
-  #shopping-cart-table .btn-edit {
-    left: 170px;
-    top: 65%;
-  }
+.checkout-cart-index .main {
+  padding: 0 !important;
 }
 
 .cart-collaterals {
@@ -580,16 +528,18 @@ div.cart > div.page-title {
 }
 
 .cart-collaterals .discount .v-fix {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
+      -ms-flex-direction: row;
+  -ms-flex-wrap: nowrap;
   -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
           flex-direction: row;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .cart-collaterals .discount .v-fix input {
-  font-size: 12px !important;
   width: 100%;
 }
 
@@ -734,52 +684,42 @@ div.cart > div.page-title {
 }
 
 .cart .totals {
-  border-top: 1px solid #727070 !important;
+  background: #f8f8f8;
+  border-top: 1px solid #727070;
   margin-top: 0 !important;
   padding-bottom: 30px;
-  padding-top: 0 !important;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 120px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-top: 20px !important;
+}
+
+.cart .totals::before {
+  content: "ORDER SUMMARY";
+  font-family: "Trade Gothic W01 Roman" !important;
+  font-size: 20px;
+  font-weight: normal;
 }
 
 @media screen and (min-width: 768px) {
   .cart .totals {
     border-left: none !important;
-    border-top: none !important;
+    border-top: none;
     float: right !important;
     padding-bottom: 20px !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
     width: 35% !important;
   }
 }
 
 .cart .totals #shopping-cart-totals-table {
-  background: #f8f8f8;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
+      -ms-flex-direction: column;
   -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
           flex-direction: column;
   margin-right: 0 !important;
-  margin-top: 0;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 70px;
-  position: relative;
-}
-
-.cart .totals #shopping-cart-totals-table::before {
-  background: #f8f8f8;
-  content: "ORDER SUMMARY";
-  font-family: "Trade Gothic W01 Roman" !important;
-  font-size: 22px;
-  font-weight: normal;
-  left: 10px;
-  line-height: 33px;
-  position: absolute;
-  top: 20px;
+  margin-top: 10px;
 }
 
 .cart .totals #shopping-cart-totals-table td.a-right {
@@ -807,18 +747,15 @@ div.cart > div.page-title {
   content: "Total";
   display: block;
   font-size: 20px !important;
-  line-height: 23px !important;
 }
 
 .cart .totals #shopping-cart-totals-table tbody tr {
-  display: -webkit-box;
-  display: flex;
+      -ms-flex-pack: justify;
   -webkit-box-pack: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
           justify-content: space-between;
-}
-
-.cart .totals #shopping-cart-totals-table tbody tr:not(:first-child) {
-  padding-top: 10px;
 }
 
 .cart .totals #shopping-cart-totals-table tbody tr td {
@@ -828,24 +765,30 @@ div.cart > div.page-title {
   width: 100%;
 }
 
-@media screen and (min-width: 960px) {
-  .cart .totals #shopping-cart-totals-table .price {
-    font-size: 15px !important;
-    line-height: 23px !important;
-  }
-}
-
 .cart .totals #shopping-cart-totals-table tfoot {
+      -ms-flex-order: 1;
   -webkit-box-ordinal-group: 2;
           order: 1;
 }
 
 .cart .totals #shopping-cart-totals-table tfoot tr {
-  display: -webkit-box;
-  display: flex;
+      -ms-flex-pack: justify;
   -webkit-box-pack: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
           justify-content: space-between;
   position: relative;
+}
+
+.cart .totals #shopping-cart-totals-table tfoot tr:after {
+  bottom: 0;
+  color: grey;
+  content: "Tax calculated on checkout";
+  font-family: "Trade Gothic W01 Light" !important;
+  font-size: 11px;
+  left: 0;
+  position: absolute;
 }
 
 .cart .totals #shopping-cart-totals-table tfoot tr td {
@@ -856,35 +799,8 @@ div.cart > div.page-title {
   position: relative;
 }
 
-.cart .totals #shopping-cart-totals-table tfoot td.a-right:first-of-type:after {
-  bottom: 0;
-  color: grey;
-  content: "Tax calculated on checkout";
-  font-family: "Trade Gothic W01 Light" !important;
-  font-size: 11px;
-  left: 0;
-  position: absolute;
-}
-
-@media screen and (min-width: 960px) {
-  .cart .totals #shopping-cart-totals-table tfoot td.a-right {
-    font-size: 20px !important;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .cart .totals #shopping-cart-totals-table tfoot td.a-right .price {
-    font-size: 20px !important;
-  }
-}
-
 .cart .totals .checkout-types {
-  background: #f8f8f8;
-  margin-top: 0 !important;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 18px;
+  margin-top: 18px;
 }
 
 @media screen and (min-width: 768px) {
@@ -895,18 +811,21 @@ div.cart > div.page-title {
 
 @media screen and (min-width: 768px) {
   .cart .totals .checkout-types li:first-child {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
+        -ms-flex-direction: column;
     -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
             flex-direction: column;
   }
 }
 
-@media screen and (min-width: 1045px) {
+@media screen and (min-width: 960px) {
   .cart .totals .checkout-types li:first-child {
-    -webkit-box-orient: horizontal;
+        -ms-flex-direction: row;
     -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
             flex-direction: row;
   }
 }
@@ -921,7 +840,7 @@ div.cart > div.page-title {
   }
 }
 
-@media screen and (min-width: 1045px) {
+@media screen and (min-width: 960px) {
   .cart .totals .button:first-child {
     margin-right: 5px;
   }
@@ -933,18 +852,19 @@ div.cart > div.page-title {
 
 @media screen and (min-width: 768px) {
   .cart .totals .button.btn-continue {
-    margin-top: 20px;
+        -ms-flex-order: 1;
     -webkit-box-ordinal-group: 2;
+    margin-top: 20px;
             order: 1;
   }
 }
 
-@media screen and (min-width: 1045px) {
+@media screen and (min-width: 960px) {
   .cart .totals .button.btn-continue {
-    margin-top: 0;
+        -ms-flex-order: 0;
     -webkit-box-ordinal-group: 1;
+    margin-top: 0;
             order: 0;
-    width: 49% !important;
   }
 }
 
@@ -956,9 +876,6 @@ div.cart > div.page-title {
 
 .cart .totals .button span span {
   color: #fff !important;
-  font-family: "Trade Gothic W01 Bold 2" !important;
-  font-size: 11px !important;
-  line-height: 11px !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -967,128 +884,9 @@ div.cart > div.page-title {
   }
 }
 
-@media screen and (min-width: 1045px) {
+@media screen and (min-width: 960px) {
   .cart .totals .button.btn-proceed-checkout {
     margin-left: 5px !important;
-    width: 49% !important;
-  }
-}
-
-.page .cart .crosssell {
-  max-width: 100% !important;
-  padding: 0 20px !important;
-}
-
-@media screen and (min-width: 768px) {
-  .page .cart .crosssell {
-    margin: 50px 0 !important;
-    padding: 0 20px 0 0 !important;
-    width: 65% !important;
-  }
-}
-
-.cart .crosssell h2 {
-  border-bottom: none !important;
-  display: inline-block !important;
-  font-family: "Trade Gothic W01 Light" !important;
-  font-size: 12px !important;
-  line-height: 10px;
-  margin-bottom: 0px !important;
-  margin-top: 3px !important;
-  padding-bottom: 0 !important;
-}
-
-.cart .crosssell h2::after {
-  background: #000;
-  content: "";
-  display: inline-block;
-  height: 2px;
-  margin-bottom: -7px;
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-
-.cart .crosssell .owl-carousel {
-  border-top: 2px solid #939598 !important;
-}
-
-.cart .crosssell .owl-wrapper {
-  display: -webkit-box !important;
-  display: flex !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-          flex-direction: column !important;
-  padding-top: 0 !important;
-  width: inherit !important;
-}
-
-.cart .crosssell .owl-item {
-  border-bottom: solid 11px #f8f8f8 !important;
-  height: 50% !important;
-  margin: 12px 0 !important;
-  padding: 17px 0 !important;
-  width: inherit !important;
-}
-
-.cart .crosssell .owl-item .product-image {
-  float: left;
-  max-width: 180px !important;
-  padding-right: 10px !important;
-  width: 45%;
-}
-
-@media screen and (min-width: 768px) {
-  .cart .crosssell .owl-item .product-image {
-    padding-right: 18px !important;
-    width: 31%;
-  }
-}
-
-.cart .crosssell .owl-item .product-name,
-.cart .crosssell .owl-item .price-block {
-  clear: right;
-  float: right;
-  width: 55%;
-}
-
-@media screen and (min-width: 768px) {
-  .cart .crosssell .owl-item .product-name,
-  .cart .crosssell .owl-item .price-block {
-    padding-left: 15px;
-    width: 69%;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .cart .crosssell .owl-item .product-name,
-  .cart .crosssell .owl-item .price-block {
-    width: calc(100% - 180px);
-  }
-}
-
-.cart .crosssell .owl-item .product-name {
-  font-family: "Trade Gothic W01 Light" !important;
-  font-size: 12px !important;
-  font-weight: 700 !important;
-  text-decoration: none !important;
-  text-transform: uppercase !important;
-}
-
-@media screen and (min-width: 960px) {
-  .cart .crosssell .owl-item .product-name {
-    font-size: 16px !important;
-  }
-}
-
-.cart .crosssell .owl-item .price-block {
-  font-family: "Trade Gothic W01 Light" !important;
-  font-size: 13px !important;
-}
-
-@media screen and (min-width: 960px) {
-  .cart .crosssell .owl-item .price-block {
-    font-size: 15px !important;
   }
 }
 
@@ -1105,6 +903,7 @@ div.cart > div.page-title {
 @media screen and (min-width: 768px) {
   .mt_need-help {
     padding: 0 10px;
+    width: 35%;
   }
 }
 
@@ -1135,25 +934,31 @@ div.cart > div.page-title {
 }
 
 .mt_need-help__links {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
+      -ms-flex-direction: row;
+      -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
   -webkit-box-direction: normal;
-          flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
   -webkit-box-pack: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+          flex-direction: row;
+      flex-wrap: wrap;
           justify-content: space-between;
   margin-top: 25px;
 }
 
 @media screen and (min-width: 768px) {
   .mt_need-help__links {
+        -ms-flex-pack: center;
     -webkit-box-pack: center;
             justify-content: center;
   }
 }
 
 .mt_need-help__links a {
+      -ms-flex: 1 1 50%;
   -webkit-box-flex: 1;
           flex: 1 1 50%;
   font-size: 13px;
@@ -1171,24 +976,32 @@ div.cart > div.page-title {
 }
 
 .mt_need-help .mcafee {
+      -ms-flex-align: center;
+      -ms-flex-pack: center;
+  -ms-flex-wrap: nowrap;
   -webkit-box-align: center;
+  -webkit-box-pack: center;
           align-items: center;
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
+      flex-wrap: nowrap;
           justify-content: center;
   margin: 20px 0;
   width: 100%;
 }
 
 .mt_need-help .mcafee a {
+      -ms-flex: initial;
   -webkit-box-flex: initial;
           flex: initial;
   width: auto;
 }
 
 @media only screen and (max-width: 767px), all {
+  .cart .cart-collaterals .v-fix .button {
+    width: 75px !important;
+  }
   .cart .cart-collaterals .v-fix .cancel-btn {
     margin-right: 0 !important;
   }

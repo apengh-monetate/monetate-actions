@@ -1,0 +1,62 @@
+#mtClonedRatingStars {
+  display: inline-block;
+}
+
+#mtClonedRatingStars div {
+  vertical-align: middle;
+}
+
+#mtClonedRatingStars .pr-snippet-stars {
+  display: inline-block;
+}
+
+#mtClonedRatingStars .pr-rating-stars {
+  display: inline-block;
+  line-height: normal;
+  position: relative;
+  vertical-align: middle;
+}
+
+#mtClonedRatingStars .pr-star-v4 {
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  border-radius: 3px;
+  float: left;
+  font-family: boilerplate;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  height: 14px;
+  line-height: 1;
+  margin: 0 5px 0 0;
+  padding: 0;
+  speak: none;
+  text-transform: none;
+  width: 14px;
+}
+
+#mtClonedRatingStars .pr-star-v4:before {
+  content: "\e907";
+}
+
+#mtClonedRatingStars .pr-star-v4-0-filled:before, #mtClonedRatingStars .pr-star-v4-25-filled:before {
+  color: #d9d9d9;
+}
+
+#mtClonedRatingStars .pr-snippet-rating-decimal {
+  display: none;
+  font-size: 13px;
+  height: auto;
+  padding: 2px 4px;
+  text-align: center;
+}
+
+#mtClonedRatingStars .pr-accessible-text {
+  color: #404040;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+}

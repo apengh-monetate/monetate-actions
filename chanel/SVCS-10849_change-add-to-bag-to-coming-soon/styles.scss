@@ -1,0 +1,58 @@
+// Mask: div.product-details__ctas  button.button.is-primary
+// (\/)(fragrance|eyewear|makeup|skincare)(\/p\/)
+
+.product-details__ctas,
+.pdp-sticky__cta {
+  .js-addToBag {
+    p {
+      span {
+        span {
+          font-size: 0;
+          position: relative;
+          &:before {
+            content: "Coming Soon";
+            display: block;
+            font-size: .6875rem;
+            line-height: 1.2727272727;
+          }
+          &:after {
+            background-color: none;
+            bottom: -.25rem;
+            content: "";
+            height: 1px;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            transform: scaleX(.98);
+            transition: all .5s ease-out;
+            width: 100%;
+          }
+        }
+      }
+      
+      &:hover {
+        span {
+          span {
+            &:after {
+              animation: fadeIn .5s ease-out forwards;
+              background-color: #000;
+              opacity: 1;
+              transform: scaleX(1);
+              transition: all .5s ease-out;
+            }
+          }
+        }
+      }
+    }
+
+    button.is-primary {
+      background: #fff;
+      border: 1px solid #000 !important;
+      color: #1d1d1d;
+      outline: none;
+      pointer-events: none;
+    }
+
+
+  }
+}

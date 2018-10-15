@@ -1,0 +1,50 @@
+.product-details__ctas .js-addToBag p span span,
+.pdp-sticky__cta .js-addToBag p span span {
+  font-size: 0;
+  position: relative;
+}
+
+.product-details__ctas .js-addToBag p span span:before,
+.pdp-sticky__cta .js-addToBag p span span:before {
+  content: "Coming Soon";
+  display: block;
+  font-size: .6875rem;
+  line-height: 1.2727272727;
+}
+
+.product-details__ctas .js-addToBag p span span:after,
+.pdp-sticky__cta .js-addToBag p span span:after {
+  background-color: none;
+  bottom: -.25rem;
+  content: "";
+  height: 1px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  -webkit-transform: scaleX(0.98);
+          transform: scaleX(0.98);
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  width: 100%;
+}
+
+.product-details__ctas .js-addToBag p:hover span span:after,
+.pdp-sticky__cta .js-addToBag p:hover span span:after {
+  -webkit-animation: fadeIn .5s ease-out forwards;
+          animation: fadeIn .5s ease-out forwards;
+  background-color: #000;
+  opacity: 1;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.product-details__ctas .js-addToBag button.is-primary,
+.pdp-sticky__cta .js-addToBag button.is-primary {
+  background: #fff;
+  border: 1px solid #000 !important;
+  color: #1d1d1d;
+  outline: none;
+  pointer-events: none;
+}

@@ -1,0 +1,93 @@
+// ==================================================================
+// SELECTORS
+// ==================================================================
+
+// MOBILE
+body.careMobile .navbar {}
+
+// DESKTOP
+header.global-header-main {}
+
+
+
+$breakpoint: 768px;
+
+.mt-banner {
+  align-items: center;
+  background-color: #28CCAD;
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  &__message {
+    display: block;
+    width: 100%;
+    @media screen and (min-width: $breakpoint) {
+      width: auto;
+    }
+    
+    h3 {
+      color: #fff !important;
+      font-size: 18px !important;
+      font-weight: bold !important;
+      line-height: 22px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  } 
+
+  &__promo-code {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    @media screen and (min-width: $breakpoint) {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-left: 10px;
+      width: auto;
+    }
+    
+    p {
+      color: #123951;
+      margin-bottom: 0 !important;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-top: 0 !important;
+      padding: 0 !important;
+    }
+
+    .promo {
+      &-code {
+        font-size: 12px;
+        font-weight: 900;
+        @media screen and (min-width: $breakpoint) {
+          font-size: 14px;
+        }
+      }
+      &-expires {
+        font-size: 9px;
+      }
+    }
+    
+  }
+}
+
+.navbar + div[id^="monetate_"] {
+  display: block !important;
+}
+
+.navbar-fixed-top + div[id^="monetate_"] {
+  display: none !important;
+}

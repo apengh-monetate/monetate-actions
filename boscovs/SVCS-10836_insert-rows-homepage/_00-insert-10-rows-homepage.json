@@ -1,0 +1,211 @@
+{
+  "id": 290472,
+  "title": "Insert Additional Banner Rows in Homepage Main Column (up to 10 rows)",
+  "description": "Insert up to 10 additional 'Rows' with banners to the homepage main column.  Note: Row 1 must exist in order to insert Row 2; Row 2 must exist for Row 3 to insert, etc.",
+  "op": "selectorBanner",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "image",
+  "subcategory": "Home page",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative",
+        "value": {
+          "extension": ".png",
+          "height": 300,
+          "width": 1020,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "c2033219a2e76e477c7d85bb6b5c27e530dcd63a",
+          "id": 268421
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "",
+        "label": "Image"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": null
+      },
+      "widget": {
+        "description": "Select a row to insert with this action.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "#header + .suppend-2 > .subpend-2:last",
+            "label": "Insert Row One"
+          },
+          {
+            "name": "#header + .suppend-2 > .subpend-2:last + div[id^=\"monetate_\"]",
+            "label": "Insert Row Two"
+          },
+          {
+            "name": "#header + .suppend-2 > .subpend-2:last + div[id^=\"monetate_\"] + div[id^=\"monetate_\"]",
+            "label": "Insert Row Three"
+          },
+          {
+            "name": "#header + .suppend-2 > .subpend-2:last + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"]",
+            "label": "Insert Row Four"
+          },
+          {
+            "name": "#header + .suppend-2 > .subpend-2:last + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"]",
+            "label": "Insert Row Five"
+          },
+          {
+            "name": "#header + .suppend-2 > .subpend-2:last + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"]",
+            "label": "Insert Row Six"
+          },
+          {
+            "name": "#header + .suppend-2 > .subpend-2:last + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"]",
+            "label": "Insert Row Seven"
+          },
+          {
+            "name": "#header + .suppend-2 > .subpend-2:last + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"]",
+            "label": "Insert Row Eight"
+          },
+          {
+            "name": "#header + .suppend-2 > .subpend-2:last + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"]",
+            "label": "Insert Row Nine"
+          },
+          {
+            "name": "#header + .suppend-2 > .subpend-2:last + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"] + div[id^=\"monetate_\"]",
+            "label": "Insert Row Ten"
+          }
+        ],
+        "label": "row to insert"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "ifunc",
+        "value": "after"
+      },
+      "widget": {
+        "description": "",
+        "action_visible": false,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "first",
+            "label": "First"
+          },
+          {
+            "name": "last",
+            "label": "Last"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Placement"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssValueAsString",
+        "description": "CSS applied as an inline style on the <div> element containing the <img>",
+        "label": "Image Container Styles"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imgStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "CssValueAsString",
+        "description": "CSS applied as an inline style on the <img> element",
+        "label": "Image Styles"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleSheet",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "CSS style to append",
+        "label": "CSS Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If more than one element matches the Element Selector, should the change apply to all elements or just the first one?",
+        "label": "Select All Elements"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

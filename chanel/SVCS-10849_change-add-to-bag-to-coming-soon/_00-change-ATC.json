@@ -1,0 +1,63 @@
+{
+  "id": 359045,
+  "title": "Change Add to Bag to Coming Soon on Product Page",
+  "description": "Change Add to Bag to Coming Soon on Product Page",
+  "op": "insertCSS",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "css",
+  "subcategory": "CSS",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "styleSheet",
+        "value": {
+          "content": ".product-details__ctas p span span,\n.pdp-sticky__cta p span span {\n  font-size: 0;\n  position: relative;\n}\n\n.product-details__ctas p span span:before,\n.pdp-sticky__cta p span span:before {\n  content: \"Coming Soon\";\n  display: block;\n  font-size: .6875rem;\n  line-height: 1.2727272727;\n}\n\n.product-details__ctas p span span:after,\n.pdp-sticky__cta p span span:after {\n  background-color: none;\n  bottom: -.25rem;\n  content: \"\";\n  height: 1px;\n  left: 0;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: scaleX(0.98);\n          transform: scaleX(0.98);\n  -webkit-transition: all .5s ease-out;\n  transition: all .5s ease-out;\n  width: 100%;\n}\n\n.product-details__ctas p:hover span span:after,\n.pdp-sticky__cta p:hover span span:after {\n  -webkit-animation: fadeIn .5s ease-out forwards;\n          animation: fadeIn .5s ease-out forwards;\n  background-color: #000;\n  opacity: 1;\n  -webkit-transform: scaleX(1);\n          transform: scaleX(1);\n  -webkit-transition: all .5s ease-out;\n  transition: all .5s ease-out;\n}\n\n.product-details__ctas button.is-primary,\n.pdp-sticky__cta button.is-primary {\n  background: #fff;\n  border: 1px solid #000 !important;\n  color: #1d1d1d;\n  outline: none;\n  pointer-events: none;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": true
+    }
+  ],
+  "masks": [
+    {
+      "selector": "div.product-details__ctas  button.button.is-primary",
+      "value": "(\\/)(fragrance|eyewear|makeup|skincare)(\\/p\\/)",
+      "op": "path_iregex"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 205695,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

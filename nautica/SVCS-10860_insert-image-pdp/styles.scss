@@ -1,0 +1,25 @@
+$breakpoint: 1025px;
+
+// ==================================================================
+// Selectors
+// ==================================================================
+
+// MOBILE
+// #pdp-detail (after)
+// .product_recommender (before)
+div.product-col-1 > div[id^="monetate_selectorBanner"] {
+  display: none;
+  @media screen and (min-width: $breakpoint) {
+    display: block;
+  }
+}
+
+
+// DESKTOP
+// #pdp-main > div.productBody > div.product-col-1
+#pdp-main > div[id^="monetate_selectorBanner"] {
+  display: block;
+  @media screen and (min-width: $breakpoint) {
+    display: none;
+  }
+}

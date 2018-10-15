@@ -1,0 +1,100 @@
+.mt-banner {
+  -webkit-box-align: center;
+          align-items: center;
+  background-color: #28CCAD;
+  display: -webkit-box !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.mt-banner__message {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-banner__message {
+    width: auto;
+  }
+}
+
+.mt-banner__message h3 {
+  color: #fff !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  line-height: 22px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.mt-banner__promo-code {
+  -webkit-box-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+  text-align: left;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-banner__promo-code {
+    -webkit-box-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    margin-left: 10px;
+    width: auto;
+  }
+}
+
+.mt-banner__promo-code p {
+  color: #123951;
+  margin-bottom: 0 !important;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+
+.mt-banner__promo-code .promo-code {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-banner__promo-code .promo-code {
+    font-size: 14px;
+  }
+}
+
+.mt-banner__promo-code .promo-expires {
+  font-size: 9px;
+}
+
+.navbar + div[id^="monetate_"] {
+  display: block !important;
+}
+
+.navbar-fixed-top + div[id^="monetate_"] {
+  display: none !important;
+}

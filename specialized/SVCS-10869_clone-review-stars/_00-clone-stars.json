@@ -1,0 +1,181 @@
+{
+  "id": 359051,
+  "title": "Product Page Redesign - Clone Review Stars",
+  "description": "Product Page Redesign - Clone Review Stars",
+  "op": "cloneNode",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Product page",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selToClone",
+        "value": "#pr-reviewsnippet div.pr-snippet-stars-container"
+      },
+      "widget": {
+        "label": "Element To Clone",
+        "type": "CssSelectorField",
+        "description": "Element to clone.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selToPlace",
+        "value": "#productDataOptions div.product__options"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "Place Cloned element in relation to this element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "before"
+      },
+      "widget": {
+        "description": "Where to insert the cloned element in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_newID",
+        "value": "mtClonedRatingStars"
+      },
+      "widget": {
+        "label": "Cloned Element ID",
+        "type": "CharField",
+        "description": "Optional ID to assign to the cloned element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_wrap",
+        "value": false
+      },
+      "widget": {
+        "label": "Wrap Cloned Element",
+        "type": "BooleanField",
+        "description": "Optionally wrap the cloned element in a div.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_useLibClone",
+        "value": false
+      },
+      "widget": {
+        "label": "Use jQuery For Cloning",
+        "type": "BooleanField",
+        "description": "Should jQuery's clone function be used to clone the events of the selected element?  If client site has jQuery 1.5+, the events of the children elements will also be cloned.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "#mtClonedRatingStars {\n  display: inline-block;\n}\n\n#mtClonedRatingStars div {\n  vertical-align: middle;\n}\n\n#mtClonedRatingStars .pr-snippet-stars {\n  display: inline-block;\n}\n\n#mtClonedRatingStars .pr-rating-stars {\n  display: inline-block;\n  line-height: normal;\n  position: relative;\n  vertical-align: middle;\n}\n\n#mtClonedRatingStars .pr-star-v4 {\n  -webkit-font-smoothing: antialiased;\n  background-image: none;\n  border-radius: 3px;\n  float: left;\n  font-family: boilerplate;\n  font-size: 14px;\n  font-style: normal;\n  font-variant: normal;\n  font-weight: 400;\n  height: 14px;\n  line-height: 1;\n  margin: 0 5px 0 0;\n  padding: 0;\n  speak: none;\n  text-transform: none;\n  width: 14px;\n}\n\n#mtClonedRatingStars .pr-star-v4:before {\n  content: \"\\e907\";\n}\n\n#mtClonedRatingStars .pr-star-v4-0-filled:before, #mtClonedRatingStars .pr-star-v4-25-filled:before {\n  color: #d9d9d9;\n}\n\n#mtClonedRatingStars .pr-snippet-rating-decimal {\n  display: none;\n  font-size: 13px;\n  height: auto;\n  padding: 2px 4px;\n  text-align: center;\n}\n\n#mtClonedRatingStars .pr-accessible-text {\n  color: #404040;\n  display: block;\n  height: 0;\n  overflow: hidden;\n  position: absolute;\n  width: 0;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.  To refer to the container DIV (or the clone itself if a wrapper isn't being used) you can use the \"<CLONE_SELECTOR>\" pseudo-selector to refer to it (eg. \"<CLONE_SELECTOR> a:hover{ color:#F00; }\").",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "pdp"
+        ],
+        "id": 205707,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

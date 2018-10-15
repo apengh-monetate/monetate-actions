@@ -1,0 +1,19 @@
+div.product-col-1 > div[id^="monetate_selectorBanner"] {
+  display: none;
+}
+
+@media screen and (min-width: 1025px) {
+  div.product-col-1 > div[id^="monetate_selectorBanner"] {
+    display: block;
+  }
+}
+
+#pdp-main > div[id^="monetate_selectorBanner"] {
+  display: block;
+}
+
+@media screen and (min-width: 1025px) {
+  #pdp-main > div[id^="monetate_selectorBanner"] {
+    display: none;
+  }
+}

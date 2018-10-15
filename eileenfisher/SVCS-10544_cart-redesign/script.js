@@ -26,4 +26,16 @@ giftcardPin.placeholder = 'PIN #';
   if(headerQuantity) {
     headerQuantity.innerText = quantity;
   }
+
+  // Format Product Titles
+  var productNames = document.querySelectorAll('h2.product-name a');
+  for (var i = 0; i < productNames.length; i++) {
+    productNames[i].textContent = productNames[i].textContent.split('-')[0];
+  }
+
+  // Remove Scene 7 Url Preset
+  var productImages = document.querySelectorAll('.jq-cart-item .image-wrapper img');
+  for (var i = 0; i < productImages.length; i++) {
+    productImages[i].src = productImages[i].src.split('$')[0];
+  }
 })();

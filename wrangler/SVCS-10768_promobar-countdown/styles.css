@@ -1,0 +1,50 @@
+.mt_countdown {
+  color: #fff;
+  height: 100%;
+}
+
+.mt_countdown p, .mt_countdown a {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.92308rem;
+  font-weight: bold;
+  line-height: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.mt_countdown a:hover {
+  text-decoration: underline;
+}
+
+.topnav-countdown {
+  background: #000;
+  display: block;
+  height: 100%;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.topnav-countdown__inner {
+  -webkit-box-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.topnav-countdown__message {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.topnav-countdown__timer {
+  margin-left: 10px;
+  margin-right: 10px;
+}
