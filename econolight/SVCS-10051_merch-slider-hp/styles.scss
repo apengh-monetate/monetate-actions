@@ -1,0 +1,329 @@
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+/**
+ * DEFAULT SLIDER STYLES
+ * Edit at your own risk!
+ */
+#MONETATE-ID {
+  position: relative;
+}
+
+#MONETATE-ID [data-slider-mask] {
+  -webkit-box-shadow: 0 2px 4px 2px rgba(209,209,209,0.50);
+  box-shadow: 0 2px 4px 2px rgba(209,209,209,0.50);
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  margin: 0!important;
+  overflow: hidden!important;
+  padding: 0!important;
+  position: relative!important;
+}
+
+#MONETATE-ID li {
+  list-style: none;
+  padding: 0;
+}
+
+#MONETATE-ID [data-slider] {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0!important;
+  padding: 0!important;
+}
+
+#MONETATE-ID [data-slide] {
+  -ms-flex-negative: 0;
+  display: inline-block !important;
+  flex-shrink: 0;
+  float: none;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider] {
+  white-space: nowrap!important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slide] {
+  display: inline-block!important;
+  vertical-align: top;
+  white-space: normal;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide],
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button]{
+  cursor: pointer;
+  z-index: 1;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider-mask],
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slider-mask] {
+  touch-action: pan-y;
+}
+
+#MONETATE-ID [data-pagination-slide] * {
+  pointer-events: none;
+}
+
+/** ----END DEFAULT STYLES---- */
+
+
+
+
+
+/**
+ * CUSTOM SLIDER STYLING
+ */
+#MONETATE-ID {
+  box-sizing: border-box;
+  margin: 25px auto;
+  max-width: 1370px;
+  padding: 0 10px;
+  text-align: center;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 0 25px 40px;
+  }
+
+
+  .mt-slider-title {
+    text-align: left;
+  }
+
+  [data-pagination="thumbnails"] [data-pagination-slide] {
+    background: none;
+    border-radius: 0;
+    height: auto;
+    width: 40px;
+  }
+
+  [disabled] {
+    display: none;
+  }
+
+  [data-pagination-slide] {
+    background: #000;
+    border-radius: 6px;
+    display: inline-block;
+    height: 12px;
+    margin: 4px;
+    opacity: 0.5;
+    width: 12px;
+  }
+
+  [data-pagination-slide][data-slide-active] {
+    opacity: 1;
+  }
+
+  .mt-slider-container {
+    display: block;
+    position: relative;
+  }
+
+  .mt-merch-item {
+    -ms-flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 25px 35px 35px;
+    @media screen and (min-width: $breakpoint-md) {
+      border-right: 1px solid #c8c8c8;
+      padding: 45px 15px 15px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      padding: 63px 25px 25px;
+    }
+  }
+
+  [data-prev-button],
+  [data-next-button] {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    background-color: #004c97;
+    color: #fff;
+    font-size: 2rem;
+    height: 25px;
+    padding: 0;
+    padding-left: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    user-select: none;
+    width: 25px;
+    &:hover {
+      background-color: #ff6347;
+    }
+  }
+
+  [data-prev-button] {
+    left: 0;
+  }
+  [data-next-button] {
+    right: 0;
+  }
+
+  [data-slider-mask] {
+    display: inline-block;
+    width: calc(100% - 50px);
+  }
+
+  [data-slide] {
+    img {
+      max-height: 100%;
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+  }
+
+
+  [data-pagination*="dots"] [data-pagination-slide] {
+    /* remove below for pagination numbers */
+    text-indent: -9999px;
+  }
+
+
+  .mt-image-wrapper {
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+    img {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      max-height: 100%;
+      max-width: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .mt-text-wrapper {
+    align-content: stretch;
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+  }
+
+
+  .mt-product-name {
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: auto;
+  }
+
+  .mt-price {
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-decoration: line-through;
+  }
+
+  .mt-price-text {
+    align-self: flex-end;
+  }
+
+
+  [data-missing-keys*="alternate_price"] .mt-price {
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .mt-price,
+  .mt-alt-price {
+    display: block;
+  }
+
+  .mt-price {
+    &:before {
+      content: 'was';
+      display: inline-block;
+      margin-right: 4px;
+    }
+  }
+
+  .mt-alt-price {
+    color: #004C97;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    &:before {
+      content: 'now just';
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
+
+
+  [data-missing-keys*="alternate_price"] .mt-price:before,
+  [data-missing-keys*="alternate_price"] .mt-alt-price:before {
+    display: none;
+  }
+
+  [data-slide-active] + li + li + li .mt-merch-item {
+    @media screen and (min-width: $breakpoint-md) {
+      border-right: 0;
+    }
+  }
+
+
+  .mt-btn {
+    background-color: #0072ce;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: .107em;
+    line-height: 1;
+    margin: 0;
+    padding: 12px 15px 18px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      font-size: 1.4rem;
+      padding: 17px 20px 23px;
+    }
+    
+    &:hover,
+    &:focus {
+      background-color: #004c97;
+    }
+  }
+
+
+} // #MONETATE-ID

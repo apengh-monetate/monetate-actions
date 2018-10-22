@@ -1,0 +1,34 @@
+.s7swatches {
+  @media screen and (min-width: 640px) {
+    position: relative !important;
+  }
+  
+  & > div {
+    @media screen and (min-width: 640px) {
+      overflow: visible !important;
+      position: relative !important;
+    }
+  }
+
+
+}
+
+.mt-tangiblee {
+  display: none;
+  @media screen and (min-width: 640px) {
+    display: block;
+    padding: 5px;
+  }
+  
+  button.tangiblee-button {
+    display: none;
+    @media screen and (min-width: 640px) {
+      border: none !important;
+      cursor: pointer;
+      display: block;
+      margin: 0 5px !important;
+      padding: 0 !important;
+    }
+  }
+  
+}

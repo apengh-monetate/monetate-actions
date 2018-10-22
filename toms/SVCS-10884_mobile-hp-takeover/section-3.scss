@@ -1,0 +1,81 @@
+.mt-collections {
+  display: block;
+  padding: 20px 15px;
+  position: relative;
+  width: 100%;
+
+  &__heading {
+    border-bottom: 1px solid #000;
+    display: block;
+    position: relative;
+
+    h3 {
+      background: #fff;
+      bottom: -14px;
+      display: inline-block;
+      font-family: 'proximabold';
+      font-size: 16px;
+      left: 50%;
+      line-height: 16px;
+      padding: 5px;
+      position: absolute;
+      text-align: center;
+      text-transform: uppercase;
+      transform: translateX(-50%);
+      width: 160px;
+    }
+  }
+
+
+
+  &__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: 20px;
+    text-align: center;
+
+    .column {
+      display: block;
+      padding: 5px;
+      width: 50%;
+      &-image {
+        border-radius: 4px;
+        display: block;
+      }
+
+      &-text {
+        bottom: 5px;
+        color: #000;
+        display: block;
+        left: 10px;
+        position: absolute;
+        right: 10px;
+        text-align: center;
+        top: 55%;
+      }
+      
+      &-title {
+        display: inline-block;
+        font-family: 'proximabold';
+        font-size: 16px;
+        text-transform: uppercase;
+        width: 100%;
+      }
+      &-subtitle {
+        display: inline-block;
+        font-family: 'Georgia', serif;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        width: 100% 
+      }
+    }
+  }
+
+  
+  
+}

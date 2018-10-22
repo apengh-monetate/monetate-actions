@@ -1,0 +1,79 @@
+<div class="fancybox-overlay-fixed mt-login mt-login-overlay fade-in">
+  <div class="fancybox-wrap fancybox-desktop fancybox-type-inline fancybox-opened mt-login-wrap" tabindex="-1">
+    <div class="fancybox-skin mt-login-skin">
+      <div class="fancybox-outer mt-login-outer">
+        <div class="fancybox-inner mt-login-inner">
+          <div id="modal-login-register">
+            <header class="modal-header">
+              <span class="cv-ico-general-login ico-heading">Login to OfficeMax</span>
+            </header>
+            <section class="modal-content">
+              <div data-role="login" data-trigger-messages="true" data-clear-password-on-mismatch="true" data-use-cookie="true" data-text-password-change-required="You are required to change your password" data-text-password-changed="Password changed"
+                data-text-enter-password="Please enter a password" data-account-select-page-url="select-your-account" data-cart-page-url="cart" data-sap-migration-enabled="false">
+                <div data-view="true">
+                  <div class="grid-row spacing-bottom">
+                    <div class="grid-row" data-bind="invisible: changingPassword">
+                      <div class="col-1-2">
+                        <label class="form-label required">Username / Email</label>
+                        <input type="text" class="form-text" data-bind="value: userId, paste: true, events:{keydown: inputEventKeyUp}" data-value-update="keyup change" placeholder="eg: info@officemax.co.nz" name="username" autofocus="">
+                      </div>
+                      <div class="col-1-2">
+                        <label class="form-label required">Password</label>
+                        <a href="/forgot-password" class=" password-reset-link" tabindex="-1">Forgot Your Password?</a><input type="password" class="form-password" data-bind="value: password, events:{keydown: inputEventKeyUp}" data-value-update="keyup change input"
+                          placeholder="Your Password" name="current-password">
+                      </div>
+                    </div>
+                    <div class="grid-row" data-bind="visible: changingPassword" style="display: none;">
+                      <div class="col col-1-2">
+                        <label class="form-label required">New Password</label>
+                        <input class="form-password" type="password" placeholder="New Password" data-value-update="keyup change" data-bind="value: changePassword1, events:{ keydown: changePasswordKeyUp }">
+                      </div>
+                      <div class="col col-1-2">
+                        <label class="form-label required">Confirm Password</label>
+                        <input class="form-password" type="password" placeholder="Confirm Password" data-value-update="keyup change" data-bind="value: changePassword2, events:{ keydown: changePasswordKeyUp }">
+                      </div>
+                    </div>
+                    <div class="grid-row" data-bind="visible: notifyEmailRequired" style="display: none;">
+                      <div class="col col-1-2">
+                        <label class="form-label required">Notification Email Address</label>
+                        <input class="form-email" type="text" placeholder="Notification Email Address" data-value-update="keyup change" data-bind="value: notifyEmailAddress, events:{ keydown: changePasswordKeyUp }">
+                      </div>
+                    </div>
+                    <div class="grid-row" data-bind="invisible: changingPassword">
+                      <div class="col-1-1">
+                        <fieldset class="form-fieldset">
+                          <input id="remember-email" class="form-checkbox" type="checkbox" data-bind="checked: rememberMe, events:{keydown: inputEventKeyUp}">
+                          <span class="form-span">Remember Me</span>
+                        </fieldset>
+                      </div>
+                    </div>
+                    <div class="grid-row spacing-top">
+
+                      <button onclick="return false;" class="btn primary cv-ico-general-login" data-bind="click: login, invisible: changingPassword, addIsProcessingClass: isProcessing, disabled: isProcessing">Login</button>
+                      <button type="button" class="btn cv-confirm change-password cv-ico-general-cycle" data-bind="click: changePassword, visible: changingPassword, addIsProcessingClass: isProcessing, disabled: isProcessing" style="display: none;">Change
+                        Password</button>
+                    </div>
+                  </div>
+                  <div class="grey-box" data-bind="invisible: changingPassword">
+
+                    <div class="container">
+
+                      <div class="widget-html-snippet  ">
+                        <h4 class="cv-ico-general-user-add ico-heading">New Customer or New User?</h4>
+                        <p>There are a wide range of benefits by registering an account with OfficeMax.</p>
+                        <div class="grid-row"><a class="btn primary cv-ico-general-user" href="/whyregister">Register Now</a> </div>
+                        <div class="grid-row"><small>By registering you are agreeing to our <a href="/terms-and-conditions" target="_blank">Terms and Conditions</a> and our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</small> </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <footer class="modal-footer"></footer>
+          </div>
+        </div>
+      </div><a title="Close" class="fancybox-item fancybox-close" href="javascript:;">&nbsp;</a>
+    </div>
+  </div>
+</div>

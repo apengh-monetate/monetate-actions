@@ -1,0 +1,66 @@
+.mt-faves {
+  display: block;
+  padding: 20px 15px;
+  position: relative;
+  width: 100%;
+}
+
+.mt-faves__heading {
+  border-bottom: 1px solid #000;
+  display: block;
+  position: relative;
+}
+
+.mt-faves__heading h3 {
+  background: #fff;
+  bottom: -14px;
+  display: inline-block;
+  font-family: 'proximabold';
+  font-size: 16px;
+  left: 50%;
+  line-height: 16px;
+  padding: 5px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 160px;
+}
+
+.mt-faves__flex {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mt-faves__flex .column {
+  display: block;
+  padding: 5px;
+  width: 50%;
+}
+
+.mt-faves__flex .column-image {
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.mt-faves__flex .column-title {
+  color: #000;
+  display: inline-block;
+  font-family: 'proximabold';
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}

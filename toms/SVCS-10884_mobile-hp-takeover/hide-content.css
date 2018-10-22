@@ -1,0 +1,4 @@
+#site-main-content .container,
+#site-main-content .row.max-1400 {
+  display: none;
+}

@@ -1,0 +1,45 @@
+.mt-shop {
+  display: block;
+  padding: 20px 15px 25px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  &__buttons {
+    display: flex;
+    flex-direction: column
+  }
+  &__button {
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    font-family: 'proximabold';
+    margin: 4px auto;
+    padding: 18px 0 15px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    &.btn-light {
+      background: #fff;
+      color: #000;
+    }
+  }
+
+
+  &__give {
+    display: block;
+    padding: 24px 0 0;
+    position: relative;
+    &-msg {
+      font-family: 'Georgia', serif;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  sup {
+    font-size: 10px;
+  }
+}

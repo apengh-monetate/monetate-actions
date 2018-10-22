@@ -1,0 +1,10 @@
+li.men-feature span.has-sub-menu, li.men-feature .cat-name {}
+li.women-feature span.has-sub-menu, li.women-feature .cat-name {}
+
+
+span.has-sub-menu:contains('Featured'), a.cat-name:contains('Featured')
+
+li.men-feature span.has-sub-menu,
+li.women-feature span.has-sub-menu {
+  padding-right: 0;
+}

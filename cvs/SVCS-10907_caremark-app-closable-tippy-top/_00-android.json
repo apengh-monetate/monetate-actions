@@ -1,0 +1,269 @@
+{
+  "id": 360482,
+  "title": "181002 - Caremark App Tippy Top Banner (Android)",
+  "description": "181002 - Caremark App Tippy Top Banner (Android)",
+  "op": "statefulHTML",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "181002",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<section class=\"mte-1801002-ios\">\n      <div class=\"mte-1801002-ios__close\">\n        <button class=\"mte-1801002-ios__close-button\" type=\"button\">\n          <img src=\"https://via.placeholder.com/18x18/000\" alt=\"\">\n        </button>\n      </div>\n\n      <div class=\"mte-1801002-ios__icon\">\n        <img src=\"https://via.placeholder.com/120x120/02405F\" alt=\"\">\n      </div>\n\n      <div class=\"mte-1801002-ios__text\">\n        <div class=\"mte-1801002-ios__heading\">\n          <h4>CVS Caremark</h4>\n          <p>CVS Caremark</p>\n          <div class=\"mte-1801002-ios__stars\">\n            <span class=\"mte-1801002-ios__star\">\n              <img src=\"https://via.placeholder.com/40x40/000\">\n            </span>\n            <span class=\"mte-1801002-ios__star\">\n              <img src=\"https://via.placeholder.com/40x40/000\">\n            </span>\n            <span class=\"mte-1801002-ios__star\">\n              <img src=\"https://via.placeholder.com/40x40/000\">\n            </span>\n            <span class=\"mte-1801002-ios__star\">\n              <img src=\"https://via.placeholder.com/40x40/000\">\n            </span>\n            <span class=\"mte-1801002-ios__star\">\n              <img src=\"https://via.placeholder.com/40x40/000\">\n            </span>\n          </div>\n        </div>\n        <div class=\"mte-1801002-ios__free-msg\">\n          <p>FREE &mdash; On the Play Store</p>\n        </div>\n      </div>\n\n      <div class=\"mte-1801002-ios__link\">\n        <a href=\"https://play.google.com/store/apps/developer?id=CVS+Caremark&hl=en\">View</a>\n      </div>\n\n    </section>"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "id",
+        "value": 1
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "This ID can be any number between zero and 31, and determines the grouping of this lightbox to differentiate it from other lightboxes.",
+        "label": "Lightbox ID"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "showInterval",
+        "value": "page"
+      },
+      "widget": {
+        "description": "How long until the this banner is shown again. Based on ID.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "page",
+            "label": "Every page"
+          },
+          {
+            "name": "session",
+            "label": "Once per session"
+          },
+          {
+            "name": "once",
+            "label": "Once, ever"
+          },
+          {
+            "name": "custominterval",
+            "label": "Once every 'X' days"
+          }
+        ],
+        "label": "How often (per user) should this banner be shown?"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "stateApp",
+        "value": "first"
+      },
+      "widget": {
+        "label": "When should the display interval be applied?",
+        "options": [
+          {
+            "name": "first",
+            "label": "After the banner is first loaded"
+          },
+          {
+            "name": "close",
+            "label": "After the user closes the banner"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "If 'Every page' is selected this will not matter. For the other intervals, this setting determines when to stop showing the banner.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#bd"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "before"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "closeButtonClass",
+        "value": "mte-1801002-ios__close-button"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "All elements in the HTML creative with this class will act as a close button for the lightbox.",
+        "label": "Close Button Class"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".mte-1801002-ios {\n  align-items: stretch;\n  background: #f7f7f7;\n  display: flex;\n  flex-direction: row;\n  height: 110px;\n  justify-content: center;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n}\n\n.mte-1801002-ios__close {\n  align-items: center;\n  display: flex;\n  flex: 0 1 5%;\n  justify-content: center;\n  padding: 0 5px;\n  padding-left: 4%;\n  text-align: center;\n}\n\n.mte-1801002-ios__close-button {\n  background: none;\n  border: none;\n  margin: 0;\n  padding: 0;\n}\n\n.mte-1801002-ios__icon {\n  align-items: center;\n  display: flex;\n  flex: 0 1 18%;\n  justify-content: center;\n  padding: 0 5px;\n  text-align: center;\n}\n\n.mte-1801002-ios__icon img {\n  border-radius: 2px;\n  height: auto;\n  max-width: 60px;\n}\n\n.mte-1801002-ios__text {\n  display: flex;\n  flex: 1 1 60%;\n  padding: 0 0 0 5px;\n  text-align: left;\n}\n\n@media screen and (orientation: portrait) {\n  .mte-1801002-ios__text {\n    align-items: flex-start;\n    flex-direction: column;\n    justify-content: center;\n  }\n}\n\n@media screen and (orientation: landscape) {\n  .mte-1801002-ios__text {\n    align-items: center;\n    flex-direction: row;\n    justify-content: flex-start;\n  }\n}\n\n@media screen and (orientation: landscape) {\n  .mte-1801002-ios__heading {\n    width: 100%;\n  }\n}\n\n.mte-1801002-ios__heading h4 {\n  color: #000;\n  font-family: \"Helvetica-Bold\";\n  font-size: 16px;\n  line-height: 19px;\n}\n\n.mte-1801002-ios__heading p {\n  color: #000;\n  font-family: \"Helvetica\";\n  font-size: 12px;\n  line-height: 14px;\n}\n\n.mte-1801002-ios__free-msg {\n  color: #000;\n  font-family: \"Helvetica\";\n  font-size: 12px;\n  line-height: 14px;\n}\n\n@media screen and (orientation: landscape) {\n  .mte-1801002-ios__free-msg {\n    width: 100%;\n  }\n}\n\n.mte-1801002-ios__stars {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  padding-bottom: 5px;\n  padding-top: 6px;\n}\n\n.mte-1801002-ios__star {\n  display: inline-block;\n  margin-right: 7px;\n  width: 20px;\n}\n\n.mte-1801002-ios__star img {\n  height: auto;\n  max-width: 100%;\n}\n\n.mte-1801002-ios__link {\n  align-items: center;\n  display: flex;\n  flex: 1 1 20%;\n  justify-content: center;\n  padding: 0 5px;\n}\n\n.mte-1801002-ios__link a {\n  color: #069;\n  font-family: \"Helvetica\";\n  font-size: 14px;\n  line-height: 17px;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_customInterval",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Days until the banner expires. Only to be used when 'Once every 'X' days' is selected from the frequency.",
+        "label": "Days until expiration"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "/wps/myportal/DASHBOARD",
+          "/wps/myportal/ICE_VIEW_RX",
+          "/wps/myportal/ICE_RECENT_ORDER"
+        ],
+        "id": 206415,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "contains",
+          "label": "URL",
+          "rule_name": "page_url",
+          "rule_op": "icontains",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

@@ -1,0 +1,83 @@
+.mt-collections {
+  display: block;
+  padding: 20px 15px;
+  position: relative;
+  width: 100%;
+}
+
+.mt-collections__heading {
+  border-bottom: 1px solid #000;
+  display: block;
+  position: relative;
+}
+
+.mt-collections__heading h3 {
+  background: #fff;
+  bottom: -14px;
+  display: inline-block;
+  font-family: 'proximabold';
+  font-size: 16px;
+  left: 50%;
+  line-height: 16px;
+  padding: 5px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 160px;
+}
+
+.mt-collections__flex {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mt-collections__flex .column {
+  display: block;
+  padding: 5px;
+  width: 50%;
+}
+
+.mt-collections__flex .column-image {
+  border-radius: 4px;
+  display: block;
+}
+
+.mt-collections__flex .column-text {
+  bottom: 5px;
+  color: #000;
+  display: block;
+  left: 10px;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 55%;
+}
+
+.mt-collections__flex .column-title {
+  display: inline-block;
+  font-family: 'proximabold';
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.mt-collections__flex .column-subtitle {
+  display: inline-block;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  width: 100%;
+}

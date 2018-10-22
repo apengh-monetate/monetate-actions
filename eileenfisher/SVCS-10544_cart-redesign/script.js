@@ -38,4 +38,39 @@ giftcardPin.placeholder = 'PIN #';
   for (var i = 0; i < productImages.length; i++) {
     productImages[i].src = productImages[i].src.split('$')[0];
   }
+
+
+  // You May Also Like
+  var ymal = document.querySelectorAll('.crosssell .owl-item');
+  for (var i = 0; i < ymal.length; i++) {
+    // Add style number
+    var link = ymal[i].querySelector('.product-image');
+    var href = link.href;
+    var styleNum = href.replace(/\//g, '').split('-');
+    styleNum = styleNum[styleNum.length-2] + '-' + styleNum[styleNum.length-1];
+
+    var h4 = document.createElement('h4');
+    h4.classList.add('style-number');
+    h4.innerText = 'Style No. ' + styleNum.toUpperCase();
+    ymal[i].querySelector('.product-name').appendChild(h4);
+
+    // Add "Add to Cart" button
+    var productId = ymal[i].querySelector('.jq-product-img').id.split('-');
+    productId = productId[productId.length-1];
+    var dataHref = 'https://staging.eileenfisher.com/catalog/product/view/id/' + productId + '/?quickview=true';
+    var div = document.createElement('div');
+    div.classList.add('quickview');
+    var span = document.createElement('span');
+    span.classList.add('jq-qv');
+    span.setAttribute('data-href', dataHref);
+    span.innerText = 'ADD TO CART';
+    var a = document.createElement('a');
+    a.href = href;
+    a.innerText = 'ADD TO CART';
+
+    div.appendChild(span);
+    div.appendChild(a);
+    ymal[i].querySelector('.price-block').appendChild(div);
+  }
+
 })();

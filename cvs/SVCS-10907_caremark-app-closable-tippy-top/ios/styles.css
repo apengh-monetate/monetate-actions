@@ -1,0 +1,134 @@
+.mte-1801002-ios {
+  align-items: stretch;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  height: 110px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.mte-1801002-ios__close {
+  align-items: center;
+  display: flex;
+  flex: 0 1 5%;
+  justify-content: center;
+  padding: 0 5px;
+  padding-left: 4%;
+  text-align: center;
+}
+
+.mte-1801002-ios__close-button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mte-1801002-ios__icon {
+  align-items: center;
+  display: flex;
+  flex: 0 1 18%;
+  justify-content: center;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.mte-1801002-ios__icon img {
+  border-radius: 14px;
+  height: auto;
+  max-width: 60px;
+}
+
+.mte-1801002-ios__text {
+  display: flex;
+  flex: 1 1 60%;
+  padding: 0 0 0 5px;
+  text-align: left;
+}
+
+@media screen and (orientation: portrait) {
+  .mte-1801002-ios__text {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .mte-1801002-ios__text {
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .mte-1801002-ios__heading {
+    width: 100%;
+  }
+}
+
+.mte-1801002-ios__heading h4 {
+  color: #000;
+  font-family: "Helvetica-Bold";
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.mte-1801002-ios__heading p {
+  color: #000;
+  font-family: "Helvetica";
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.mte-1801002-ios__free-msg {
+  color: #000;
+  font-family: "Helvetica";
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@media screen and (orientation: landscape) {
+  .mte-1801002-ios__free-msg {
+    width: 100%;
+  }
+}
+
+.mte-1801002-ios__stars {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-bottom: 5px;
+  padding-top: 6px;
+}
+
+.mte-1801002-ios__star {
+  display: inline-block;
+  margin-right: 7px;
+  width: 20px;
+}
+
+.mte-1801002-ios__star img {
+  height: auto;
+  max-width: 100%;
+}
+
+.mte-1801002-ios__link {
+  align-items: center;
+  display: flex;
+  flex: 1 1 20%;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+.mte-1801002-ios__link a {
+  color: #069;
+  font-family: "Helvetica";
+  font-size: 14px;
+  line-height: 17px;
+}

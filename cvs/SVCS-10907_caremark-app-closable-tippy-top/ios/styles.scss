@@ -1,0 +1,155 @@
+// Selector
+// #bd   before
+
+@import "../../../mixins";
+
+.mte-1801002-ios  {
+  align-items: stretch;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  height: 110px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+
+  // ------------------------------------------------------------------
+  // Close Button
+  // ------------------------------------------------------------------
+  &__close {
+    //@include green-bg;
+    align-items: center;
+    display: flex;
+    flex: 0 1 5%;
+    justify-content: center;
+    padding: 0 5px;
+    padding-left: 4%;
+    text-align: center;
+    &-button {
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+
+  // ------------------------------------------------------------------
+  // Icon
+  // ------------------------------------------------------------------
+  &__icon {
+    //@include red-bg;
+    align-items: center;
+    display: flex;
+    flex: 0 1 18%;
+    justify-content: center;
+    padding: 0 5px;
+    text-align: center;
+    img {
+      border-radius: 14px;
+      height: auto;
+      max-width: 60px;
+    }
+  }
+
+
+
+  // ------------------------------------------------------------------
+  // Text
+  // ------------------------------------------------------------------
+  &__text {
+    //@include green-bg;
+    display: flex;
+    flex: 1 1 60%;
+    padding: 0 0 0 5px;
+    text-align: left;
+    @media screen and (orientation: portrait) {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+    }
+    @media screen and (orientation: landscape) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+
+
+
+  &__heading {
+    @media screen and (orientation: landscape) {
+      width: 100%;
+    }
+    h4 {
+      color: #000;
+      font-family: "Helvetica-Bold";
+      font-size: 16px;
+      line-height: 19px;
+    }
+    p {
+      color: #000;
+      font-family: "Helvetica";
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__free-msg {
+    @media screen and (orientation: landscape) {
+      width: 100%;
+    }
+    color: #000;
+    font-family: "Helvetica";
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+
+
+
+  &__stars {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+    padding-top: 6px;
+  }
+  &__star {
+    display: inline-block;
+    margin-right: 7px;
+    width: 20px;
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+
+
+
+
+
+
+
+  // ------------------------------------------------------------------
+  // Link
+  // ------------------------------------------------------------------
+  &__link {
+    //@include red-bg;
+    align-items: center;
+    display: flex;
+    flex: 1 1 20%;
+    justify-content: center;
+    padding: 0 5px;
+    a {
+      color: #069;
+      font-family: "Helvetica";
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+}

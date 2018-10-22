@@ -58,7 +58,7 @@ div.cart > div.page-title {
     margin-top: 10px!important;
     text-align: center!important;
   }
-  
+
   &__items {
     float: none !important;
     font-family: "Trade Gothic W01 Light";
@@ -81,19 +81,19 @@ div.cart > div.page-title {
     padding-left: 0;
     padding-right: 0;
   }
-  
+
   thead,
   tfoot {
     display: none;
   }
-  
+
   tbody {
     @media screen and (min-width: $breakpoint-md) {
       display: inline-block !important;
       width: 100%;
     }
   }
-  
+
   tbody tr.jq-cart-item {
     padding-bottom: 5px !important;
     padding-top: 25px;
@@ -115,7 +115,7 @@ div.cart > div.page-title {
       display: table;
     }
   }
-  
+
   // ------------------------------------------------------------------
   // Hide PRODUCT
   // ------------------------------------------------------------------
@@ -123,8 +123,8 @@ div.cart > div.page-title {
     content: "" !important;
     display: none;
   }
-  
-  
+
+
   // ------------------------------------------------------------------
   // Product Image
   // ------------------------------------------------------------------
@@ -140,7 +140,7 @@ div.cart > div.page-title {
       padding-right: 18px;
       width: 31%;
     }
-    
+
   }
   .product-image {
     max-width: 100%;
@@ -150,8 +150,8 @@ div.cart > div.page-title {
       padding-right: 0 !important;
     }
   }
-  
-  
+
+
   // ------------------------------------------------------------------
   // Product Info
   // ------------------------------------------------------------------
@@ -170,7 +170,7 @@ div.cart > div.page-title {
     @media screen and (min-width: $breakpoint-lg) {
       width: calc(100% - 180px);
     }
-    
+
     .product-name {
       padding-right: 20px;
       text-transform: uppercase;
@@ -178,18 +178,18 @@ div.cart > div.page-title {
         font-size: 16px !important;
       }
     }
-    
+
     h3 {
       color: #b3b3b3 !important;
       font-family: "Trade Gothic W01 Light" !important;
       font-size: 11px !important;
       @media screen and (min-width: $breakpoint-lg) {
         font-size: 13px !important;
-        line-height: 20px !important;
+        line-height: 1.5 !important;
       }
     }
   }
-  
+
   // ------------------------------------------------------------------
   // Item Options
   // ------------------------------------------------------------------
@@ -214,8 +214,8 @@ div.cart > div.page-title {
       line-height: 1.5 !important;
       top: 55px;
     }
-    
-    
+
+
     dt {
       color: #6a6a6a !important;
       margin-right: 5px !important;
@@ -225,8 +225,8 @@ div.cart > div.page-title {
       padding: 0 !important;
     }
   }
-  
-  
+
+
   // ------------------------------------------------------------------
   // Price, QTY, Subtotal
   // ------------------------------------------------------------------
@@ -238,7 +238,7 @@ div.cart > div.page-title {
       }
     }
   }
-  
+
   td {
     // price
     &:nth-child(3) {
@@ -262,7 +262,7 @@ div.cart > div.page-title {
         left: 65%;
         top: 55px;
       }
-      
+
       &::before {
         border-bottom: 1px solid #f2f2f2;
         content: "PRICE";
@@ -283,7 +283,7 @@ div.cart > div.page-title {
         }
       }
     }
-    
+
     // qty
     &:nth-child(4) {
       align-content: stretch;
@@ -328,7 +328,7 @@ div.cart > div.page-title {
           font-size: 12px;
         }
       }
-      
+
       input.input-text {
         background: #fff;
         border: 1px solid #000;
@@ -349,7 +349,7 @@ div.cart > div.page-title {
           font-size: 16px;
         }
       }
-      
+
       button span {
         color: grey;
         display: block;
@@ -363,7 +363,7 @@ div.cart > div.page-title {
         }
       }
     }
-    
+
     // subtotal
     &:nth-child(5) {
       float: right;
@@ -411,10 +411,10 @@ div.cart > div.page-title {
       }
     }
   }
-  
-  
-  
-  
+
+
+
+
   // ------------------------------------------------------------------
   // Change remove button to "x"
   // ------------------------------------------------------------------
@@ -422,7 +422,7 @@ div.cart > div.page-title {
     padding-bottom: 0 !important;
     position: initial !important;
   }
-  
+
   .btn-remove2 {
     background: transparent !important;
     border: 0 !important;
@@ -443,7 +443,7 @@ div.cart > div.page-title {
       pointer-events: all !important;
     }
   }
-  
+
   // ------------------------------------------------------------------
   // Move edit button
   // ------------------------------------------------------------------
@@ -479,7 +479,7 @@ div.cart > div.page-title {
       top: 65%;
     }
   }
-  
+
 }
 
 
@@ -499,15 +499,15 @@ div.cart > div.page-title {
   @media screen and (min-width: $breakpoint-md) {
     border: none !important;
   }
-  
-  
-  
+
+
+
   .deals {
     border-bottom: 3px solid #000 !important;
     @media screen and (min-width: $breakpoint-md) {
       padding-left: 0 !important;
     }
-    
+
     fieldset {
       label {
         color: grey !important;
@@ -519,7 +519,7 @@ div.cart > div.page-title {
           display: none !important;
         }
       }
-      
+
       button {
         margin-left: 10px !important;
         margin-top: 0 !important;
@@ -531,7 +531,7 @@ div.cart > div.page-title {
             padding: 9px 0 !important;
             text-align: center !important;
             width: 75px !important;
-            
+
           }
         }
       }
@@ -543,20 +543,20 @@ div.cart > div.page-title {
       }
     }
   }
-  
-  
+
+
   .discount {
     margin: 0 0 10px 0;
-        
+
     h2 {
       display: none;
     }
-    
+
     .v-fix {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      
+
       input {
         font-size: 12px !important;
         width: 100%;
@@ -583,14 +583,14 @@ div.cart > div.page-title {
           }
         }
       }
-      
+
       .button + .button span span {
         &::before {
           content: "REMOVE" !important;
         }
       }
     }
-    
+
     form#discount-coupon-form[cancel-btn] .v-fix {
       button span span {
         width: 55px !important;
@@ -600,9 +600,9 @@ div.cart > div.page-title {
       }
     }
   }
-  
-  
-  
+
+
+
   .giftcard {
     margin: 0 0 10px 0 !important;
     h2 {
@@ -617,11 +617,11 @@ div.cart > div.page-title {
     fieldset {
       display: block !important;
     }
-    
+
     .form-list .validation-advice {
       display: none;
     }
-    
+
     label {
       display: none !important;
     }
@@ -706,7 +706,7 @@ div.cart > div.page-title {
     padding-top: 0 !important;
     position: sticky;
     top: 120px;
-    
+
     @media screen and (min-width: $breakpoint-md) {
       border-left: none !important;
       border-top: none !important;
@@ -716,8 +716,8 @@ div.cart > div.page-title {
       padding-right: 0 !important;
       width: 35% !important;
     }
-    
-    
+
+
     #shopping-cart-totals-table {
       background: #f8f8f8;
       display: flex;
@@ -739,9 +739,9 @@ div.cart > div.page-title {
         position: absolute;
         top: 20px;
       }
-      
+
       td.a-right {
-        padding: 0 !important;    
+        padding: 0 !important;
         &:first-of-type {
           text-align: left !important;
         }
@@ -754,7 +754,7 @@ div.cart > div.page-title {
         margin-top: 15px !important;
         text-transform: uppercase;
       }
-      
+
       td:first-child {
         strong {
           font-size: 0 !important;
@@ -766,7 +766,7 @@ div.cart > div.page-title {
           }
         }
       }
-      
+
       tbody {
         tr {
           display: flex;
@@ -796,14 +796,14 @@ div.cart > div.page-title {
         }
 
       }
-      
+
       .price {
         @media screen and (min-width: $breakpoint-lg) {
           font-size: 15px !important;
           line-height: 23px !important;
         }
       }
-      
+
       tfoot {
         order: 1;
         tr {
@@ -814,7 +814,7 @@ div.cart > div.page-title {
             width: 100% !important;
           }
         }
-        
+
         td.a-right {
           &:first-of-type {
             position: relative;
@@ -839,8 +839,8 @@ div.cart > div.page-title {
         }
       }
     }
-    
-    
+
+
     .checkout-types {
       background: #f8f8f8;
       margin-top: 0 !important;
@@ -869,6 +869,7 @@ div.cart > div.page-title {
         width: 100%;
       }
       @media screen and (min-width: 1045px) {
+        margin-top: 0 !important;
         &:first-child {
           margin-right: 5px;
         }
@@ -899,7 +900,7 @@ div.cart > div.page-title {
           }
         }
       }
-      
+
       &.btn-proceed-checkout {
         @media screen and (min-width: $breakpoint-md) {
           margin-left: 0 !important;
@@ -925,7 +926,7 @@ div.cart > div.page-title {
   padding: 0 20px !important;
   @media screen and (min-width: $breakpoint-md) {
     margin: 50px 0 !important;
-    padding: 0 20px 0 0 !important;
+    padding: 0 30px 0 0 !important;
     width: 65% !important;
   }
 }
@@ -933,7 +934,7 @@ div.cart > div.page-title {
 
 .cart {
   .crosssell {
-    
+
     // Heading
     h2 {
       border-bottom: none !important;
@@ -955,11 +956,11 @@ div.cart > div.page-title {
         z-index: 1;
       }
     }
-    
+
     .owl-carousel {
       border-top: 2px solid #939598 !important;
     }
-    
+
     .owl-wrapper {
       cursor: default !important;
       display: flex !important;
@@ -972,18 +973,28 @@ div.cart > div.page-title {
     .owl-controls {
       display: none !important;
     }
-    
+
     .owl-item {
       border-bottom: solid 11px #f8f8f8 !important;
       height: 50% !important;
       margin: 12px 0 !important;
       padding: 17px 0 !important;
       width: inherit !important;
-      
+
       .item {
         //display: flex !important;
       }
-      
+
+      .style-number {
+        color: #b3b3b3 !important;
+        font-family: "Trade Gothic W01 Light"!important;
+        font-size: 11px !important;
+        text-transform: none !important;
+        @media screen and (min-width: $breakpoint-lg) {
+          font-size: 13px !important;
+        }
+      }
+
       .product-image {
         float: left;
         max-width: 180px !important;
@@ -994,12 +1005,15 @@ div.cart > div.page-title {
           width: 31%;
         }
       }
-      
+
       .product-name,
       .price-block {
         clear: right;
         float: right;
         width: 60%;
+        @media screen and (min-width: 500px) {
+          width: calc(100% - 195px);
+        }
         @media screen and (min-width: $breakpoint-md) {
           padding-left: 15px;
           width: 69%;
@@ -1008,7 +1022,7 @@ div.cart > div.page-title {
           width: calc(100% - 180px);
         }
       }
-      
+
       .product-name {
         font-family: "Trade Gothic W01 Light"!important;
         font-size: 12px!important;
@@ -1024,13 +1038,81 @@ div.cart > div.page-title {
       .price-block {
         font-family: "Trade Gothic W01 Light"!important;
         font-size: 13px !important;
+        padding-bottom: 5px;
+        padding-top: 40px;
+        position: relative;
         @media screen and (min-width: $breakpoint-lg) {
           font-size: 15px !important;
         }
+
+
+
+        .price {
+          border-top: 1px solid #f2f2f2;
+          display: block;
+          font-family: "Trade Gothic W01 Light"!important;
+          padding-top: 5px;
+          position: relative;
+          width: 100%;
+          @media screen and (min-width: $breakpoint-md) {
+            font-size: 15px !important;
+            padding-left: 25%;
+            text-align: center;
+          }
+          &:before {
+            content: "PRICE";
+            font-family: "Trade Gothic W01 Bold 2"!important;
+            font-size: 11px!important;
+            margin-bottom: 5px!important;
+            min-height: 20px!important;
+            position: absolute;
+            text-align: left!important;
+            text-transform: uppercase!important;
+            top: -25px;
+            @media screen and (min-width: $breakpoint-md) {
+              font-size: 12px !important;
+            }
+          }
+        }
+      }
+
+      .quickview {
+        bottom: 0;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        span,
+        a {
+          background-color: grey!important;
+          color: #fff!important;
+          cursor: pointer!important;
+          font-family: "Trade Gothic W01 Bold 2"!important;
+          font-size: 10px!important;
+          max-width: 110px!important;
+          padding: 5px 10px!important;
+          text-align: center!important;
+          text-decoration: none !important;
+          @media screen and (min-width: $breakpoint-lg) {
+            width: 110px;
+          }
+        }
+
+        a {
+          display: block;
+          @media screen and (min-width: $breakpoint-md) {
+            display: none;
+          }
+        }
+        span {
+          display: none;
+          @media screen and (min-width: $breakpoint-md) {
+            display: block;
+          }
+        }
       }
     }
-    
-    
+
+
   }
 }
 
@@ -1052,7 +1134,7 @@ div.cart > div.page-title {
   @media screen and (min-width: $breakpoint-md) {
     padding: 0 10px;
   }
-  
+
   &__heading {
     font-family: "Trade Gothic W01 Roman";
     font-size: 20px;
@@ -1060,7 +1142,7 @@ div.cart > div.page-title {
     margin: 0;
     padding: 0;
   }
-  
+
   p {
     font-family: "Trade Gothic W01 Roman";
     font-size: 17px;
@@ -1071,14 +1153,14 @@ div.cart > div.page-title {
       text-decoration: none;
     }
   }
-  
+
   br {
     @media screen and (min-width: 960px) {
       display: none;
     }
   }
-  
-  
+
+
   &__links {
     display: flex;
     flex-direction: row;
@@ -1095,14 +1177,14 @@ div.cart > div.page-title {
       @media screen and (min-width: $breakpoint-md) {
         text-align: center !important;
       }
-      
+
       &:last-of-type {
         text-align: right;
       }
     }
   }
-  
-  
+
+
   .mcafee {
     align-items: center;
     display: flex;

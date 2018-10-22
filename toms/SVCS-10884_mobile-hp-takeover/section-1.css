@@ -1,0 +1,50 @@
+.mt-shop {
+  display: block;
+  padding: 20px 15px 25px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.mt-shop__buttons {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.mt-shop__button {
+  background: #000;
+  border: 1px solid #000;
+  border-radius: 3px;
+  color: #fff;
+  display: block;
+  font-family: 'proximabold';
+  margin: 4px auto;
+  padding: 18px 0 15px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.mt-shop__button.btn-light {
+  background: #fff;
+  color: #000;
+}
+
+.mt-shop__give {
+  display: block;
+  padding: 24px 0 0;
+  position: relative;
+}
+
+.mt-shop__give-msg {
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.mt-shop sup {
+  font-size: 10px;
+}

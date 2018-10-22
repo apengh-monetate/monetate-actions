@@ -1,0 +1,10 @@
+#site-main-content .container, #site-main-content .row.max-1400, #olapic_specific_widget, #footer-container {}
+
+#site-main-content {
+  .container,
+  .row.max-1400 {
+    display: none;
+  }
+}
+#olapic_specific_widget,
+#footer-container {}

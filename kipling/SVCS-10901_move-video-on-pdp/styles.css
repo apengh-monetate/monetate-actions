@@ -1,0 +1,17 @@
+.image.video.slick-slide {
+  display: none !important;
+}
+
+.product-primary-image video {
+  border: 1px solid black;
+  display: block;
+  height: auto;
+  margin: 30px auto;
+  max-width: 550px;
+  position: relative;
+  width: 100%;
+}
+
+.product-gallery {
+  margin-bottom: 30px;
+}

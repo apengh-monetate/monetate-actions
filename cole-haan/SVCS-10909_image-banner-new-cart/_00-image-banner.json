@@ -1,0 +1,183 @@
+{
+  "id": 291739,
+  "title": "Image Banner Below Nav (All Devices) - Exclude Customer Groups - New Cart",
+  "description": "Inserts an image banner below the navigation",
+  "op": "employeeTargetSelectorBanner",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "image",
+  "subcategory": "Any Page",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative",
+        "value": {
+          "extension": ".png",
+          "height": 50,
+          "width": 960,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "7e01947735ebb7277b7b5a5fa57163e284e35225",
+          "id": 472693
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "",
+        "label": "Image"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": ".cart.cart-page > .row"
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "CssSelectorField",
+        "description": "Supports CSS3 and Sizzle syntax",
+        "label": "Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "ifunc",
+        "value": "first"
+      },
+      "widget": {
+        "description": "",
+        "action_visible": false,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "first",
+            "label": "First"
+          },
+          {
+            "name": "last",
+            "label": "Last"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Placement"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "divStyle",
+        "value": "text-align:center;"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssValueAsString",
+        "description": "CSS applied as an inline style on the <div> element containing the <img>",
+        "label": "Image Container Styles"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imgStyle",
+        "value": "vertical-align: bottom;"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssValueAsString",
+        "description": "CSS applied as an inline style on the <img> element",
+        "label": "Image Styles"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleSheet",
+        "value": "@media screen and (min-width: 768px) {\n    .pt_product-search-result.wrapper-padding {\n        padding-top: 100px!important;\n    }\n}\n\n@media only screen and (max-width: 1024px) and (min-width: 768px) {\n    /* adjust top position to 165 + height of banner */    \n    .side-nav-button {\n        top: 215px!important;\n    }\n    .wrapper-padding .side-nav-button {\n        top: 148px!important;\n    }\n}\n\n@media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {\n    /* adjust top position to 159 + height of banner */    \n    .side-nav-button {\n        top: 209px!important;\n    }\n     .wrapper-padding .side-nav-button {\n        top: 143px!important;\n    }\n}"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "CSS style to append",
+        "label": "CSS Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If more than one element matches the Element Selector, should the change apply to all elements or just the first one?",
+        "label": "Select All Elements"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_excludedGroups",
+        "value": null
+      },
+      "widget": {
+        "label": "Excluded Customer Groups",
+        "type": "CharField",
+        "description": "Comma separated list of customer groups to exclude. Example: 'Employee,VIP_Customers'",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

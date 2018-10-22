@@ -1,0 +1,37 @@
+@media screen and (min-width: 640px) {
+  .s7swatches {
+    position: relative !important;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .s7swatches > div {
+    overflow: visible !important;
+    position: relative !important;
+  }
+}
+
+.mt-tangiblee {
+  display: none;
+}
+
+@media screen and (min-width: 640px) {
+  .mt-tangiblee {
+    display: block;
+    padding: 5px;
+  }
+}
+
+.mt-tangiblee button.tangiblee-button {
+  display: none;
+}
+
+@media screen and (min-width: 640px) {
+  .mt-tangiblee button.tangiblee-button {
+    border: none !important;
+    cursor: pointer;
+    display: block;
+    margin: 0 5px !important;
+    padding: 0 !important;
+  }
+}
