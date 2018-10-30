@@ -1,0 +1,16 @@
+.mt-search-duplicate {
+  font-size: 14px;
+  margin: 32px auto;
+  max-width: 878px;
+}
+
+.mt-search-duplicate form {
+  background-color: #e6e6e6;
+  padding: 10px;
+}
+
+.mt-search-duplicate input {
+  font-size: 1.2em;
+  padding: 0.4em;
+  width: 100%;
+}

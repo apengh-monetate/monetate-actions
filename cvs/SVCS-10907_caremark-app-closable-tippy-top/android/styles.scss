@@ -3,7 +3,7 @@
 
 @import "../../../mixins";
 
-.mte-1801002-ios  {
+.mte-1801002-android  {
   align-items: stretch;
   background: #f7f7f7;
   display: flex;
@@ -48,7 +48,6 @@
     padding: 0 5px;
     text-align: center;
     img {
-      border-radius: 2px;
       height: auto;
       max-width: 60px;
     }

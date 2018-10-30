@@ -1,0 +1,19 @@
+// MOBILE
+
+// TABLET
+
+// DESKTOP
+
+
+.mt-banner {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  &-column {
+    padding: 0 5px;
+  }
+  
+}

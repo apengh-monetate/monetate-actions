@@ -1,0 +1,11 @@
+#icForm {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-right: 10px;
+}
+
+.checkout-buttons {
+  align-items: center;
+}

@@ -26,6 +26,9 @@
     width: calc(100% - 20px);
     z-index: 1000001;
   }
+  .mt-fixed-checkout div[aria-label*="Feedback"] {
+    bottom: 6.5em;
+  }
   body.checkout.cart.mt-fixed-checkout .grand-total .summary-title,
   body.checkout.cart.mt-fixed-checkout .grand-total .summary-value {
     font-size: 0.9em !important;

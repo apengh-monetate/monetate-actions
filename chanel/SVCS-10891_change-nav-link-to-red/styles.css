@@ -1,0 +1,3 @@
+.header__primary__button[data-aria-label="Fragrance"] ~ div.header__secondary div.header__column:nth-child(3) ul.header__category__links > li:nth-child(1) a {
+  color: #AA1029 !important;
+}

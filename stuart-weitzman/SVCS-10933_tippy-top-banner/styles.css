@@ -1,0 +1,32 @@
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .hdrLogo.mobileOnly {
+    padding-top: 33vw !important;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .hdrLogo.mobileOnly {
+    padding-top: 26vw !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sitebody {
+    /* padding-top: 105px; */
+    padding-top: 165px !important;
+  }
+}
+
+@media screen and (min-width: 861px) {
+  .sitebody {
+    /* padding-top: 110px; */
+    padding-top: 160px !important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .sitebody {
+    /* padding-top: 115px; */
+    padding-top: 165px !important;
+  }
+}

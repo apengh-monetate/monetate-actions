@@ -1,14 +1,12 @@
 /**
- * DEFAULT SLIDER STYLES
- * Edit at your own risk!
- */
+* DEFAULT SLIDER STYLES
+* Edit at your own risk!
+*/
 #MONETATE-ID {
   position: relative;
 }
 
 #MONETATE-ID [data-slider-mask] {
-  box-shadow: 0 2px 4px 2px rgba(209, 209, 209, 0.5);
-  display: inline-flex !important;
   margin: 0 !important;
   overflow: hidden !important;
   padding: 0 !important;
@@ -17,19 +15,15 @@
 
 #MONETATE-ID li {
   list-style: none;
-  padding: 0;
 }
 
 #MONETATE-ID [data-slider] {
   display: block;
-  display: flex;
   margin: 0 !important;
   padding: 0 !important;
 }
 
 #MONETATE-ID [data-slide] {
-  display: inline-block !important;
-  flex-shrink: 0;
   float: none;
 }
 
@@ -41,6 +35,10 @@
   display: inline-block !important;
   vertical-align: top;
   white-space: normal;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slide] {
+  display: block !important;
 }
 
 #MONETATE-ID[data-slider-wrapper="fade"] [data-slide] {
@@ -62,9 +60,15 @@
   z-index: 1;
 }
 
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  -ms-touch-action: pan-x;
+      touch-action: pan-x;
+}
+
 #MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider-mask],
 #MONETATE-ID[data-slider-wrapper="fade"] [data-slider-mask] {
-  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
 }
 
 #MONETATE-ID [data-pagination-slide] * {
@@ -73,12 +77,109 @@
 
 /** ----END DEFAULT STYLES---- */
 /**
- * CUSTOM SLIDER STYLING
- */
+* CUSTOM SLIDER STYLING
+*/
+#MONETATE-ID [data-pagination="thumbnails"] [data-pagination-slide] {
+  background: none;
+  border-radius: 0;
+  height: auto;
+  width: 40px;
+}
+
+#MONETATE-ID [disabled] {
+  opacity: 0.5;
+}
+
+#MONETATE-ID [data-pagination-slide] {
+  background: #000;
+  border-radius: 6px;
+  display: inline-block;
+  height: 12px;
+  margin: 4px;
+  opacity: 0.5;
+  width: 12px;
+}
+
+#MONETATE-ID [data-pagination-slide][data-slide-active] {
+  opacity: 1;
+}
+
+#MONETATE-ID [data-slide] > div {
+  height: 100%;
+}
+
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  background: none;
+  color: #000;
+  font-size: 25px;
+  padding: 0;
+  position: absolute;
+  top: 45%;
+  user-select: none;
+}
+
+#MONETATE-ID [data-prev-button] {
+  left: 10px;
+}
+
+#MONETATE-ID [data-next-button] {
+  right: 10px;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-prev-button] {
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-next-button] {
+  bottom: 0;
+  left: 50%;
+  right: auto;
+  top: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#MONETATE-ID [data-slider-mask] {
+  display: inline-block;
+  width: calc(100% - 106px);
+}
+
+#MONETATE-ID {
+  text-align: center;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  height: 400px !important;
+}
+
+#MONETATE-ID [data-slide] img {
+  max-height: 100%;
+}
+
+#MONETATE-ID [data-slide] a {
+  text-decoration: none;
+}
+
+#MONETATE-ID [data-pagination*="dots"] [data-pagination-slide] {
+  /* remove below for pagination numbers */
+  text-indent: -9999px;
+}
+
+/*
+* E-conolight Custom Styles
+*/
 #MONETATE-ID {
   box-sizing: border-box;
   margin: 25px auto;
-  max-width: 1370px;
+  max-width: 1420px;
   padding: 0 10px;
   text-align: center;
   width: 100%;
@@ -90,8 +191,20 @@
   }
 }
 
-#MONETATE-ID .mt-slider-title {
-  text-align: left;
+#MONETATE-ID [data-slider] {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#MONETATE-ID [data-slider-mask] {
+  box-shadow: 0 2px 4px 2px rgba(209, 209, 209, 0.5);
+}
+
+#MONETATE-ID [data-slide] {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 #MONETATE-ID [data-pagination="thumbnails"] [data-pagination-slide] {
@@ -119,38 +232,8 @@
   opacity: 1;
 }
 
-#MONETATE-ID .mt-slider-container {
-  display: block;
-  position: relative;
-}
-
-#MONETATE-ID .mt-merch-item {
-  -ms-flex-wrap: wrap;
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  padding: 25px 35px 35px;
-}
-
-@media screen and (min-width: 768px) {
-  #MONETATE-ID .mt-merch-item {
-    border-right: 1px solid #c8c8c8;
-    padding: 45px 15px 15px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #MONETATE-ID .mt-merch-item {
-    padding: 63px 25px 25px;
-  }
-}
-
 #MONETATE-ID [data-prev-button],
 #MONETATE-ID [data-next-button] {
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  -webkit-user-select: none;
   background-color: #004c97;
   color: #fff;
   font-size: 2rem;
@@ -161,7 +244,10 @@
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   width: 25px;
 }
 
@@ -183,19 +269,69 @@
   width: calc(100% - 50px);
 }
 
+#MONETATE-ID [data-slide] {
+  display: inline-block !important;
+}
+
 #MONETATE-ID [data-slide] img {
   max-height: 100%;
 }
 
 #MONETATE-ID [data-slide] a {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  max-width: 100%;
   text-decoration: none;
+  width: 100%;
 }
 
 #MONETATE-ID [data-pagination*="dots"] [data-pagination-slide] {
   /* remove below for pagination numbers */
   text-indent: -9999px;
+}
+
+#MONETATE-ID .mt-slider-title {
+  text-align: left;
+}
+
+#MONETATE-ID .mt-slider-container {
+  display: block;
+  position: relative;
+}
+
+#MONETATE-ID .mt-merch-item {
+  display: block;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 25px 35px 35px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt-merch-item {
+    border-right: 1px solid #c8c8c8;
+    padding: 45px 15px 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #MONETATE-ID .mt-merch-item {
+    padding: 63px 25px 25px;
+  }
 }
 
 #MONETATE-ID .mt-image-wrapper {
@@ -216,13 +352,26 @@
 }
 
 #MONETATE-ID .mt-text-wrapper {
-  align-content: stretch;
-  align-items: stretch;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 100%;
-  justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  max-width: 100%;
+  width: 100%;
 }
 
 #MONETATE-ID .mt-product-name {
@@ -230,7 +379,14 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 5px;
+  max-width: 100%;
+  width: 100%;
+}
+
+#MONETATE-ID .mt-price-text {
   margin-top: auto;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #MONETATE-ID .mt-price {
@@ -238,10 +394,6 @@
   font-size: 1.3rem;
   font-weight: 900;
   text-decoration: line-through;
-}
-
-#MONETATE-ID .mt-price-text {
-  align-self: flex-end;
 }
 
 #MONETATE-ID [data-missing-keys*="alternate_price"] .mt-price {
@@ -286,6 +438,8 @@
 }
 
 #MONETATE-ID .mt-btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   background-color: #0072ce;
   border: none;
   border-radius: 2px;
@@ -297,11 +451,13 @@
   font-weight: 700;
   letter-spacing: .107em;
   line-height: 1;
-  margin: 0;
-  padding: 12px 15px 18px;
+  margin: 0 auto;
+  max-width: 200px;
+  padding: 12px 15px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   width: 100%;
 }
@@ -309,7 +465,7 @@
 @media screen and (min-width: 768px) {
   #MONETATE-ID .mt-btn {
     font-size: 1.4rem;
-    padding: 17px 20px 23px;
+    padding: 17px 20px;
   }
 }
 

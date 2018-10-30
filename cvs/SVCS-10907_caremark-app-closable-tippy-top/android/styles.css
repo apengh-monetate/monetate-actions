@@ -1,4 +1,4 @@
-.mte-1801002-ios {
+.mte-1801002-android {
   align-items: stretch;
   background: #f7f7f7;
   display: flex;
@@ -10,7 +10,7 @@
   width: 100%;
 }
 
-.mte-1801002-ios__close {
+.mte-1801002-android__close {
   align-items: center;
   display: flex;
   flex: 0 1 5%;
@@ -20,14 +20,14 @@
   text-align: center;
 }
 
-.mte-1801002-ios__close-button {
+.mte-1801002-android__close-button {
   background: none;
   border: none;
   margin: 0;
   padding: 0;
 }
 
-.mte-1801002-ios__icon {
+.mte-1801002-android__icon {
   align-items: center;
   display: flex;
   flex: 0 1 18%;
@@ -36,13 +36,12 @@
   text-align: center;
 }
 
-.mte-1801002-ios__icon img {
-  border-radius: 2px;
+.mte-1801002-android__icon img {
   height: auto;
   max-width: 60px;
 }
 
-.mte-1801002-ios__text {
+.mte-1801002-android__text {
   display: flex;
   flex: 1 1 60%;
   padding: 0 0 0 5px;
@@ -50,7 +49,7 @@
 }
 
 @media screen and (orientation: portrait) {
-  .mte-1801002-ios__text {
+  .mte-1801002-android__text {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
@@ -58,7 +57,7 @@
 }
 
 @media screen and (orientation: landscape) {
-  .mte-1801002-ios__text {
+  .mte-1801002-android__text {
     align-items: center;
     flex-direction: row;
     justify-content: flex-start;
@@ -66,26 +65,26 @@
 }
 
 @media screen and (orientation: landscape) {
-  .mte-1801002-ios__heading {
+  .mte-1801002-android__heading {
     width: 100%;
   }
 }
 
-.mte-1801002-ios__heading h4 {
+.mte-1801002-android__heading h4 {
   color: #000;
   font-family: "Helvetica-Bold";
   font-size: 16px;
   line-height: 19px;
 }
 
-.mte-1801002-ios__heading p {
+.mte-1801002-android__heading p {
   color: #000;
   font-family: "Helvetica";
   font-size: 12px;
   line-height: 14px;
 }
 
-.mte-1801002-ios__free-msg {
+.mte-1801002-android__free-msg {
   color: #000;
   font-family: "Helvetica";
   font-size: 12px;
@@ -93,12 +92,12 @@
 }
 
 @media screen and (orientation: landscape) {
-  .mte-1801002-ios__free-msg {
+  .mte-1801002-android__free-msg {
     width: 100%;
   }
 }
 
-.mte-1801002-ios__stars {
+.mte-1801002-android__stars {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -107,18 +106,18 @@
   padding-top: 6px;
 }
 
-.mte-1801002-ios__star {
+.mte-1801002-android__star {
   display: inline-block;
   margin-right: 7px;
   width: 20px;
 }
 
-.mte-1801002-ios__star img {
+.mte-1801002-android__star img {
   height: auto;
   max-width: 100%;
 }
 
-.mte-1801002-ios__link {
+.mte-1801002-android__link {
   align-items: center;
   display: flex;
   flex: 1 1 20%;
@@ -126,7 +125,7 @@
   padding: 0 5px;
 }
 
-.mte-1801002-ios__link a {
+.mte-1801002-android__link a {
   color: #069;
   font-family: "Helvetica";
   font-size: 14px;

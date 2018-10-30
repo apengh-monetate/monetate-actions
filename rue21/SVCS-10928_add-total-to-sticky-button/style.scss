@@ -28,6 +28,12 @@
       width: calc(100% - 20px);
       z-index: 1000001;
     }
+
+
+    div[aria-label*="Feedback"] {
+      bottom: 6.5em;
+    }
+    
   }
   
   body.checkout.cart.mt-fixed-checkout .grand-total .summary-title, 

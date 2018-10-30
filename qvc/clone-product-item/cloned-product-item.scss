@@ -1,0 +1,13 @@
+#mt_cloned_galleryItem {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,40 @@
+$breakpoint-md: 500px;
+$breakpoint-lg: 980px;
+
+.mt_endcap-link {
+  display: inline-block !important;
+  position: absolute;
+
+  &.top {
+    bottom: -10px;
+    @media screen and (min-width: $breakpoint-md) {
+      top: 20px;
+    }
+
+    &.right {
+      right: 45px;
+    }
+  }
+
+
+  &.bottom {
+    bottom: -10px;
+  }
+
+
+  &.left {
+    left: 10px;
+    @media screen and (min-width: $breakpoint-lg) {
+      left: 0;
+    }
+  }
+
+
+  &.right {
+    right: 10px;
+    @media screen and (min-width: $breakpoint-lg) {
+      right: 0;
+    }
+  }
+  
+}

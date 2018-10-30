@@ -1,0 +1,156 @@
+@charset "UTF-8";
+@media (max-width: 767px) {
+  .medicare-info-container .enrollment span {
+    color: #000000 !important;
+    font-family: 'Helvetica-Bold' !important;
+    font-size: 18px !important;
+    padding: 8px 10px 0 !important;
+  }
+  #form1 #content .medicare-info-container h1.medicare-drug-plans {
+    background: none !important;
+    color: #000000 !important;
+    font-family: 'Helvetica-Bold' !important;
+    font-size: 14px !important;
+    line-height: 22px !important;
+    padding: 0 10px 8px !important;
+  }
+  .hero__content--bg {
+    margin-top: 2px !important;
+  }
+}
+
+#content .hero .hero__header {
+  color: #000000;
+  font-family: 'Helvetica-Bold';
+  font-size: 20px !important;
+  line-height: 24px !important;
+  margin: 19px 0 0px !important;
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 768px) {
+  #content .hero .hero__header {
+    font-size: 42px !important;
+    line-height: 50px !important;
+  }
+}
+
+#content .hero ul.hero__list {
+  color: #000000;
+  margin-bottom: 10px;
+  margin-left: 28px;
+  margin-top: 10px;
+  max-width: 260px;
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 768px) {
+  #content .hero ul.hero__list {
+    margin-bottom: 22px;
+    margin-top: 22px;
+    max-width: 280px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #content .hero ul.hero__list {
+    margin-left: 42px;
+    max-width: 100%;
+  }
+}
+
+#content .hero ul.hero__list li {
+  font-family: Helvetica;
+  font-size: 14px;
+  line-height: 26px;
+  list-style-type: none;
+  padding-left: 10px;
+  position: relative;
+}
+
+#content .hero ul.hero__list li:before {
+  content: "•";
+  display: block;
+  left: -15px;
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #content .hero ul.hero__list li {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+#content .hero ul.hero__list sup {
+  color: #000000;
+  font-family: 'Helvetica';
+  font-size: 10px;
+  line-height: 26px;
+}
+
+#content .hero #hero_desc {
+  color: #000000;
+  font-family: Helvetica;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #content .hero #hero_desc {
+    max-width: 360px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #content .hero #hero_desc {
+    margin: 22px 0 29px;
+  }
+}
+
+#content .hero .hero__content .buttonNew {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #cc0000;
+  border: 2px solid #cc0000;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  color: #fff !important;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 600;
+  height: 39px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 18px;
+  margin: 0 15px;
+  padding: 0;
+  text-align: center;
+  text-decoration: none !important;
+  width: calc(100vw - 35px);
+}
+
+#content .hero .hero__content .buttonNew:hover {
+  background: #D63232;
+}
+
+@media screen and (min-width: 768px) {
+  #content .hero .hero__content .buttonNew {
+    height: 30px;
+    padding: 5px 10px;
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #content .hero .hero__footer {
+    display: none !important;
+  }
+}

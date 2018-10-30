@@ -1,0 +1,5 @@
+.enlarge-thumb-image > .thumb:nth-child(2),
+.enlarge-thumb-image > .thumb:nth-child(3),
+.enlarge-thumb-image > .thumb:nth-child(4) {
+  display: none !important;
+}

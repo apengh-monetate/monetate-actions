@@ -1,0 +1,42 @@
+.mt_endcap-link {
+  display: inline-block !important;
+  position: absolute;
+}
+
+.mt_endcap-link.top {
+  bottom: -10px;
+}
+
+@media screen and (min-width: 500px) {
+  .mt_endcap-link.top {
+    top: 20px;
+  }
+}
+
+.mt_endcap-link.top.right {
+  right: 45px;
+}
+
+.mt_endcap-link.bottom {
+  bottom: -10px;
+}
+
+.mt_endcap-link.left {
+  left: 10px;
+}
+
+@media screen and (min-width: 980px) {
+  .mt_endcap-link.left {
+    left: 0;
+  }
+}
+
+.mt_endcap-link.right {
+  right: 10px;
+}
+
+@media screen and (min-width: 980px) {
+  .mt_endcap-link.right {
+    right: 0;
+  }
+}

@@ -1,0 +1,23 @@
+#lblBodyFooter {
+  display: block;
+  padding-bottom: 20px;
+}
+
+#lblBodyFooter p {
+  color: #000000;
+  font-family: 'Helvetica';
+  font-size: 12px !important;
+  line-height: 14px !important;
+  padding-left: 5px !important;
+  position: relative;
+}
+
+#lblBodyFooter p sup {
+  color: #000000;
+  font-family: 'Helvetica';
+  font-size: 6px;
+  left: 0;
+  line-height: 7px;
+  position: absolute;
+  top: 0;
+}
