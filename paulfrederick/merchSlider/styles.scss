@@ -1,0 +1,174 @@
+div.carousel-container[data-carousel="co-styles"] > .carousel-inner {}
+div.carousel-container[data-carousel="recent-viewed"] > .carousel-inner {}
+
+
+@import "../../_templates/merchSlider.scss";
+
+$font-family: 'Roboto', sans-serif;
+
+$breakpoint-md: 736px;
+$breakpoint-lg: 1024px;
+
+/* ====================================
+Custom Styles
+*==================================== */
+#MONETATE-ID {
+  display: inline-block;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  width: 95%;
+
+  img {
+    max-width: 100%;
+  }
+
+  // ------------------------------------------------------------------
+  // Container
+  // ------------------------------------------------------------------
+  // [data-slide-container] {
+  //   padding-left: 15px !important;
+  // }
+
+
+
+  // ------------------------------------------------------------------
+  // Buttons
+  // ------------------------------------------------------------------
+  [data-prev-button],
+  [data-next-button] {
+    top: 25%;
+    transform: translateY(-50%);
+    @media screen and (min-width: $breakpoint-lg) {
+      top: 40%;
+      transform: translateY(-40%);
+    }
+    &[disabled] {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  [data-prev-button] {
+    left: 0;
+  }
+  [data-next-button] {
+    right: 0;
+  }
+
+
+
+  // ------------------------------------------------------------------
+  // Mask
+  // ------------------------------------------------------------------
+  &[data-slider-wrapper="horizontal"] {
+    [data-slider-mask] {
+      width: 100%;
+    }
+  }
+
+
+
+  // ------------------------------------------------------------------
+  // Slide
+  // ------------------------------------------------------------------
+  [data-slide] {
+
+    [data-slide-img] {
+      background: #fff;
+      display: block;
+      margin-bottom: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 15px;
+      max-width: 125px;
+      position: relative;
+      width: 100%;
+      @media screen and (min-width: $breakpoint-md) {
+        max-width: 100%;
+        width: 80%;
+      }
+      // @media screen and (min-width: $breakpoint-md) {
+      //   padding: 0 10px;
+      // }
+      img {
+        display: inline;
+        margin: 0 auto 15px auto;
+        max-width: 125px;
+        padding: 10px 20px;
+        width: 100%;
+        @media screen and (min-width: $breakpoint-md) {
+          max-width: 180px;
+        }
+      }
+
+      &:hover {
+        [data-slide-quickview] {
+          display: block;
+          display: none; /* remove to show quickview on hover */
+        }
+      }
+    }
+
+    [data-slide-quickview] {
+      background-color: #e3e8fa;
+      color: #013668;
+      display: none;
+      font-family: "Roboto",sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      left: 0;
+      padding: 9px;
+      position: absolute;
+      text-align: center;
+      text-decoration: none;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+
+
+    [data-slide-text] {
+      color: #013668;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+
+    [data-slide-name] {
+
+    }
+
+    [data-slide-price] {
+      align-items: center;
+      color: #6c6a6a;
+      display: flex;
+      font-size: 14px;
+      font-weight: 700;
+      justify-content: center;
+      padding: 6px 0;
+    }
+    [data-slide-reg-price] {
+      color: #c60000;
+      &:after {
+        color: #b6b5b5;
+        content: "|";
+        font-weight: 300;
+        padding: 0 6px;
+        @media screen and (min-width: $breakpoint-lg) {
+          padding: 0 12px;
+        }
+      }
+    }
+    [data-missing-keys="alternate_price"] {
+      [data-slide-reg-price] {
+        color: #6c6a6a;
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+
+
+} // #MONETATE-ID

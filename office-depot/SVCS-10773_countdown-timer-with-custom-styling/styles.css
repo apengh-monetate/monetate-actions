@@ -1,7 +1,7 @@
 .mt-countdown {
   display: block;
   margin: 30px auto;
-  max-width: 933px;
+  max-width: 960px;
   position: relative;
 }
 
@@ -49,15 +49,19 @@
 
 .mt-countdown .countdown__timer {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+      -ms-flex-direction: row;
           flex-direction: row;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: end;
+      -ms-flex-pack: end;
           justify-content: flex-end;
   position: absolute;
-  right: calc(30% - 88px);
+  right: 2vw;
   top: 66.66667%;
   -webkit-transform: translateY(-66.66667%);
           transform: translateY(-66.66667%);
@@ -65,45 +69,26 @@
 
 @media screen and (min-width: 414px) {
   .mt-countdown .countdown__timer {
-    right: calc(30% - 105px);
+    right: 2vw;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 960px) {
   .mt-countdown .countdown__timer {
-    right: calc(30% - 129px);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .mt-countdown .countdown__timer {
-    right: calc(30% - 176px);
-  }
-}
-
-@media screen and (min-width: 930px) {
-  .mt-countdown .countdown__timer {
-    right: calc(30% - 224px);
+    right: 20px;
   }
 }
 
 .mt-countdown .countdown__block {
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 0.625vw;
+  margin-right: 0.625vw;
   text-align: center;
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 960px) {
   .mt-countdown .countdown__block {
     margin-left: 6px;
     margin-right: 6px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .mt-countdown .countdown__block {
-    margin-left: 8px;
-    margin-right: 8px;
   }
 }
 
@@ -117,24 +102,18 @@
 
 .mt-countdown .countdown__title {
   clear: both;
-  color: #fe2f00;
+  color: #02c2ff;
   display: block;
-  font-size: 10px;
+  font-size: 2.5vw;
   font-weight: 700;
   margin-bottom: 0;
   text-transform: uppercase;
   width: 100%;
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 960px) {
   .mt-countdown .countdown__title {
-    font-size: 11px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .mt-countdown .countdown__title {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -143,42 +122,21 @@
   border-radius: 5px;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
   float: left;
-  height: 36px;
+  height: 9.375vw;
   margin-bottom: 5%;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 0.3125vw;
+  margin-right: 0.3125vw;
   position: relative;
   text-align: center;
-  width: 24px;
+  width: 6.25vw;
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 960px) {
   .mt-countdown .countdown .figure {
-    height: 42px;
-    width: 28px;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .mt-countdown .countdown .figure {
-    height: 54px;
-    width: 36px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .mt-countdown .countdown .figure {
-    height: 72px;
-    margin-left: 4px;
-    margin-right: 4px;
-    width: 48px;
-  }
-}
-
-@media screen and (min-width: 930px) {
-  .mt-countdown .countdown .figure {
-    height: 96px;
-    width: 64px;
+    height: 90px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 60px;
   }
 }
 
@@ -216,49 +174,28 @@
 
 .mt-countdown .countdown .figure > span {
   color: #fff;
-  font-size: 24px;
+  font-size: 6.25vw;
   font-weight: normal;
   font-weight: 700;
   left: 0;
-  line-height: 36px;
+  line-height: 9.375vw;
   margin: auto;
   position: absolute;
   right: 0;
   text-shadow: -1px -1px #999;
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 960px) {
   .mt-countdown .countdown .figure > span {
-    font-size: 28px;
-    line-height: 42px;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .mt-countdown .countdown .figure > span {
-    font-size: 36px;
-    line-height: 54px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .mt-countdown .countdown .figure > span {
-    font-size: 64px;
-    line-height: 72px;
-  }
-}
-
-@media screen and (min-width: 930px) {
-  .mt-countdown .countdown .figure > span {
-    font-size: 72px;
-    line-height: 96px;
+    font-size: 60px;
+    line-height: 90px;
   }
 }
 
 .mt-countdown .countdown .figure .top {
   background-color: transparent;
-  background-image: -webkit-linear-gradient(top, #fe2f00 0%, #fe2f00 30%, #6d0e00 100%);
-  background-image: linear-gradient(to bottom, #fe2f00 0%, #fe2f00 30%, #6d0e00 100%);
+  background-image: -webkit-linear-gradient(top, #02c2ff 0%, #02c2ff 30%, #005c86 100%);
+  background-image: linear-gradient(to bottom, #02c2ff 0%, #02c2ff 30%, #005c86 100%);
   border-bottom: 1px solid black;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -279,8 +216,8 @@
 
 .mt-countdown .countdown .figure .top-back {
   background-color: transparent;
-  background-image: -webkit-linear-gradient(top, #a01500 0%, #fe2f00 100%);
-  background-image: linear-gradient(to bottom, #a01500 0%, #fe2f00 100%);
+  background-image: -webkit-linear-gradient(top, #007fb9 0%, #02c2ff 100%);
+  background-image: linear-gradient(to bottom, #007fb9 0%, #02c2ff 100%);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top: 1px solid black;
@@ -317,16 +254,16 @@
 
 .mt-countdown .countdown .figure .bottom {
   background-color: transparent;
-  background-image: -webkit-linear-gradient(top, transparent 0%, #6d0e00 50%, #6d0e00 50%, #fe2f00 100%);
-  background-image: linear-gradient(to bottom, transparent 0%, #6d0e00 50%, #6d0e00 50%, #fe2f00 100%);
+  background-image: -webkit-linear-gradient(top, transparent 0%, #005c86 50%, #005c86 50%, #02c2ff 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #005c86 50%, #005c86 50%, #02c2ff 100%);
   border-radius: 5px;
   z-index: 1;
 }
 
 .mt-countdown .countdown .figure .bottom-back {
   background-color: transparent;
-  background-image: -webkit-linear-gradient(top, #fe2f00 30%, #6d0e00 100%);
-  background-image: linear-gradient(to bottom, #fe2f00 30%, #6d0e00 100%);
+  background-image: -webkit-linear-gradient(top, #02c2ff 30%, #005c86 100%);
+  background-image: linear-gradient(to bottom, #02c2ff 30%, #005c86 100%);
   border-radius: 5px;
   height: 50%;
   overflow: hidden;

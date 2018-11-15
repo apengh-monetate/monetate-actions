@@ -1,0 +1,51 @@
+.hp--wrapper-3__left {
+  .hp-3--sub-legend,
+  .hp-3--sub-id {
+    display: none !important;
+  }
+}
+
+
+.mt-subspot {
+  display: block;
+  position: relative;
+  
+  &__heading {
+    font-size: 30px;
+    line-height: 23px;
+    margin: 10px 0 5px;
+    text-align: center;
+    @media screen and (max-width: 1600px) {
+      font-size: 1.9vw;
+      line-height: 1.5vw;
+    }
+    @media screen and (max-width: 960px) {
+      font-size: 3.45vw;
+      line-height: 2.8vw;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 4.45vw;
+      line-height: 3.8vw;
+    }
+    
+    
+  }
+  
+  
+  
+  &__subheading {
+    font-family: 'Kipling-ExtraBold', 'Futura', sans-serif;
+    font-size: 23px;
+    text-align: center;
+    text-decoration: underline;
+    @media screen and (max-width: 1600px) {
+      font-size: 1.44vw;
+    }
+    @media screen and (max-width: 960px) {
+      font-size: 2.61vw;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 3.61vw;
+    }
+  }
+}

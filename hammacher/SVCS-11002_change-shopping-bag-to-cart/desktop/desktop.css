@@ -1,0 +1,28 @@
+/* Header */
+.shopping_bag .shop_icon {
+  background: none;
+  background-image: url("https://dev-apengh-1.monetate.org/img/1/128/1753390.png");
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+}
+
+#shoppingbagtab strong {
+  font-size: 0;
+}
+
+#shoppingbagtab strong:before {
+  content: "Shopping Cart";
+  display: block;
+  font-size: 12px;
+}
+
+/* Cart */
+#ShoppingBagHeader {
+  font-size: 0;
+}
+
+#ShoppingBagHeader:before {
+  content: "Shopping Cart";
+  display: block;
+  font-size: 18px;
+}

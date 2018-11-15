@@ -1,0 +1,133 @@
+@import "../variables";
+
+.mt-module {
+  display: block;
+  font-family: $font-primary;
+  font-weight: 300;
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: $max-width;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-top: 40px;
+  }
+  
+  
+  img {
+    display: block;
+    max-width: 100%;
+    &.mobile-only {
+      display: block;
+      @media screen and (min-width: $breakpoint-md) {
+        display: none;
+      }
+    }
+    &.desktop-only {
+      display: none;
+      @media screen and (min-width: $breakpoint-md) {
+        display: block;
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  // ==================================================================
+  // Title
+  // ==================================================================
+  &__title {
+    
+    h3 {
+      @media screen and (min-width: $breakpoint-md) {
+        font-size: 30px;
+      }
+    }
+  }
+  &__link {
+    font-family: $font-secondary;
+    font-size: 12px;
+    font-weight: 600;
+    span {
+      position: relative;
+      &::after {
+        bottom: -.3rem;
+        content: "";
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transform: scaleX(.98);
+        transition: all .5s ease-out;
+        width: 100%;
+      }
+    }
+    
+    &:hover {
+      span {
+        &::after {
+          animation: fadeIn .5s ease-out forwards;
+          background-color: #1d1d1d;
+          filter: blur(0);
+          opacity: 1;
+          transform: scaleX(1);
+          transition: all .5s ease-out;
+        }
+      }
+    }
+  }
+  
+  
+  &__heading {
+    font-family: $font-secondary;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  
+  // ==================================================================
+  // Flex
+  // ==================================================================
+  &__flex {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  &__column {
+    display: block;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-md) {
+      padding: 15px 10px;
+      width: 33.33333%;
+    }
+  }
+  
+  
+  // ==================================================================
+  // Text
+  // ==================================================================
+  &__text {
+    display: block;
+    padding-top: 15px;
+    position: relative;
+    p {
+      display: block;
+      margin: 0 auto;
+      @media screen and (min-width: $breakpoint-md) {
+        padding: 0 10px;
+      }
+    }
+  }
+  
+} // .mt-module

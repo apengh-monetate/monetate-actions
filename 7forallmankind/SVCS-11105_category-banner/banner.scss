@@ -1,0 +1,78 @@
+@import "../variables";
+
+#page-title-heading + div[class^="monetate_selector"] {
+  margin-left: -10px;
+  margin-right: -10px;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+  }
+}
+
+.mt-cat-banner {
+  align-items: center;
+  background-color: #f4f4f4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 140px;
+  justify-content: center;
+  max-width: 1240px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-md) {
+    height: 240px;
+  }
+
+
+  &__heading {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 48px;
+    }
+  }
+
+
+  &__subcopy {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin: 0;
+    padding: 0;
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 30px;
+    }
+  }
+
+
+  &__code {
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 20px;
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 14px;
+      margin-top: 30px;
+    }
+    .promo-code {
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin: 0;
+      margin-left: 3px;
+      padding: 0;
+    }
+  }
+
+} // .mt-cat-banner

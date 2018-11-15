@@ -1,0 +1,98 @@
+#page-title-heading + div[class^="monetate_selector"] {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+@media screen and (min-width: 768px) {
+  #page-title-heading + div[class^="monetate_selector"] {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+  }
+}
+
+.mt-cat-banner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f4f4f4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 140px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1240px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-cat-banner {
+    height: 240px;
+  }
+}
+
+.mt-cat-banner__heading {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-cat-banner__heading {
+    font-size: 48px;
+  }
+}
+
+.mt-cat-banner__subcopy {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-cat-banner__subcopy {
+    font-size: 30px;
+  }
+}
+
+.mt-cat-banner__code {
+  font-size: 10px;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-cat-banner__code {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+}
+
+.mt-cat-banner__code .promo-code {
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-left: 3px;
+  padding: 0;
+}

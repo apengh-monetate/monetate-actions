@@ -1,0 +1,170 @@
+{
+  "id": 365616,
+  "title": "HTML Banner at bottom of Index/Search",
+  "description": "HTML Banner at bottom of Index/Search",
+  "op": "selectorInsertHtmlString",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Index page & Search page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<section class=\"mt-module\">\n<div class=\"mt-module__title\">\n<h3 class=\"mt-module__heading\">Gift the Unexpected</h3>\n<a class=\"mt-module__link\" href=\"https://www.chanel.com/us/the-art-of-details/\"><span>Discover</span> <svg aria-hidden=\"true\" class=\"icon is-xsmall is-next\" focusable=\"false\" viewbox=\"0 0 1 1\"> <use xlink:href=\"/_ui/responsive/theme-onechanel/assets/icons.svg#next\"></use> </svg> </a></div>\n\n<div class=\"mt-module__flex\">\n<div class=\"mt-module__column\">\n<div class=\"mt-module__img\"><img alt=\"Signature Touches\" class=\"mobile-only\" src=\"https://via.placeholder.com/1180x738\" /> <img alt=\"Signature Touches\" class=\"desktop-only\" src=\"https://via.placeholder.com/717x448\" /></div>\n\n<div class=\"mt-module__text\">\n<h3 class=\"mt-module__heading\">Signature Touches</h3>\n\n<p>CHANEL offers exclusive holiday packaging and invites you to personalize your gift with a special message.</p>\n</div>\n</div>\n\n<div class=\"mt-module__column\">\n<div class=\"mt-module__img\"><img alt=\"The Red Line\" class=\"mobile-only\" src=\"https://via.placeholder.com/1180x738\" /> <img alt=\"The Red Line\" class=\"desktop-only\" src=\"https://via.placeholder.com/717x448\" /></div>\n\n<div class=\"mt-module__text\">\n<h3 class=\"mt-module__heading\">The Red Line</h3>\n\n<p>CHANEL answers all your questions with 24-hour customer care.</p>\n</div>\n</div>\n\n<div class=\"mt-module__column\">\n<div class=\"mt-module__img\"><img alt=\"Complimentary Delivery\" class=\"mobile-only\" src=\"https://via.placeholder.com/1180x738\" /> <img alt=\"Complimentary Delivery\" class=\"desktop-only\" src=\"https://via.placeholder.com/717x448\" /></div>\n\n<div class=\"mt-module__text\">\n<h3 class=\"mt-module__heading\">Complimentary Delivery</h3>\n\n<p>CHANEL provides complimentary standard shipping with every order.</p>\n</div>\n</div>\n</div>\n</section>\n"
+      },
+      "widget": {
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "body > main"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "last"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "label": "Banner Div Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".mt-module {\n  display: block;\n  font-family: \"Helvetica\", \"Open-Sans\", \"sans-serif-light\", sans-serif;\n  font-weight: 300;\n  margin: 0 auto;\n  margin-top: 20px;\n  max-width: 1272px;\n  padding: 0 20px;\n  position: relative;\n  text-align: center;\n  width: 100%;\n}\n\n@media screen and (min-width: 45rem) {\n  .mt-module {\n    margin-top: 40px;\n  }\n}\n\n.mt-module img {\n  display: block;\n  max-width: 100%;\n}\n\n.mt-module img.mobile-only {\n  display: block;\n}\n\n@media screen and (min-width: 45rem) {\n  .mt-module img.mobile-only {\n    display: none;\n  }\n}\n\n.mt-module img.desktop-only {\n  display: none;\n}\n\n@media screen and (min-width: 45rem) {\n  .mt-module img.desktop-only {\n    display: block;\n  }\n}\n\n@media screen and (min-width: 45rem) {\n  .mt-module__title h3 {\n    font-size: 30px;\n  }\n}\n\n.mt-module__link {\n  font-family: \"abchanel-pb-s\", sans-serif;\n  font-size: 12px;\n  font-weight: 600;\n}\n\n.mt-module__link span {\n  position: relative;\n}\n\n.mt-module__link span::after {\n  bottom: -.3rem;\n  content: \"\";\n  height: 1px;\n  left: 0;\n  position: absolute;\n  -webkit-transform: scaleX(0.98);\n          transform: scaleX(0.98);\n  -webkit-transition: all .5s ease-out;\n  transition: all .5s ease-out;\n  width: 100%;\n}\n\n.mt-module__link:hover span::after {\n  -webkit-animation: fadeIn .5s ease-out forwards;\n          animation: fadeIn .5s ease-out forwards;\n  background-color: #1d1d1d;\n  -webkit-filter: blur(0);\n          filter: blur(0);\n  opacity: 1;\n  -webkit-transform: scaleX(1);\n          transform: scaleX(1);\n  -webkit-transition: all .5s ease-out;\n  transition: all .5s ease-out;\n}\n\n.mt-module__heading {\n  font-family: \"abchanel-pb-s\", sans-serif;\n  font-size: 20px;\n  font-weight: 600;\n  margin-bottom: 10px;\n  text-transform: uppercase;\n}\n\n.mt-module__flex {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin-top: 10px;\n}\n\n.mt-module__column {\n  display: block;\n  padding-bottom: 15px;\n  padding-top: 15px;\n  position: relative;\n  width: 100%;\n}\n\n@media screen and (min-width: 45rem) {\n  .mt-module__column {\n    padding: 15px 10px;\n    width: calc(100% / 3);\n  }\n}\n\n.mt-module__text {\n  display: block;\n  padding-top: 15px;\n  position: relative;\n}\n\n.mt-module__text p {\n  display: block;\n  margin: 0 auto;\n}\n\n@media screen and (min-width: 45rem) {\n  .mt-module__text p {\n    padding: 0 10px;\n  }\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "index",
+          "search"
+        ],
+        "id": 208305,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

@@ -1,0 +1,197 @@
+@import "../variables";
+
+$background: #f4f4f4;
+
+.mt_countdown {
+  display: block;
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+  z-index: 1;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+  }
+
+  
+}
+
+/*Hides the plural parameter on any suffixes when counting down.*/
+.mt_countdown .mt_hide_plural {
+  display: none;
+}
+
+
+.mt-cat-banner {
+  align-items: center;
+  background-color: $background;
+  background-image: url('{{BKG_URL}}');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #25315c;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 160px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1240px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-md) {
+    height: 200px;
+  }
+
+
+  &__countdown {
+    // background: rgba(255, 0, 0, 0.1);
+    display: block;
+    position: relative;
+    &::before,
+    &::after {
+      border: 1px solid #25315c;
+      content: "";
+      display: block;
+      height: 90%;
+      position: absolute;
+      top: 55%;
+      transform: translateY(-50%);
+      transform-style: preserve-3d;
+      width: 8px;
+      @media screen and (min-width: $breakpoint-md) {
+        height: 80%;
+      }
+    }
+    &::before {
+      border-right: none;
+      right: 105%;
+    }
+    &::after {
+      border-left: none;
+      left: 105%;
+    }
+    .mt_time {
+      font-family: 'MaisonNeueBook';
+      font-size: 22px;
+      font-weight: 400;
+      position: relative;
+      @media screen and (min-width: $breakpoint-md) {
+        font-size: 26px;
+      }
+    }
+    .mt_tickerElem {
+      display: inline-block;
+      min-width: 28px;
+      position: relative;
+      text-align: center;
+      @media screen and (min-width: $breakpoint-md) {
+        min-width: 34px;
+      }
+    }
+    .mt_suffix {
+      bottom: -4px;
+      display: block;
+      font-size: 6px;
+      font-weight: 700;
+      left: 50%;
+      position: absolute;
+      text-transform: uppercase;
+      transform: translateX(-50%);
+      transform-style: preserve-3d;
+      @media screen and (min-width: $breakpoint-md) {
+        bottom: -2px;
+      }
+    }
+    .mt_colon {
+      font-size: 12px;
+      font-weight: 400;
+      position: relative;
+      @media screen and (min-width: $breakpoint-md) {
+        
+      }
+    }
+  }
+  
+  &__pre-header {
+    display: block;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    top: -5px;
+    width: 100%;
+    z-index: 1;
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 10px;
+    }
+  }
+
+
+  &__heading {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    margin: 0;
+    margin-bottom: 0;
+    margin-top: 15px;
+    padding: 0;
+    text-transform: uppercase;
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 48px;
+    }
+  }
+
+
+  
+  
+  &__subcopy {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin: 0;
+    padding: 0;
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 15px;
+    }
+  }
+
+  &__message {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  &__code {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    &::before {
+      content: "|";
+      display: inline-block;
+      padding-left: 6px;
+      padding-right: 10px;
+      position: relative;
+    }
+    .promo-code {
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin: 0;
+      margin-left: 3px;
+      padding: 0;
+    }
+  }
+  
+} // .mt-cat-banner
+
+
+

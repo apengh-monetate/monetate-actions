@@ -1,0 +1,10 @@
+div.prescription-list ul.prescription button.primary-btn.prescription_item_add-to-cart-btn {
+  background: #fff !important;
+  border: 2px solid #CC0000 !important;
+  color: #CC0000 !important;
+}
+
+div.prescription-list ul.prescription button.primary-btn.prescription_item_add-to-cart-btn:hover, div.prescription-list ul.prescription button.primary-btn.prescription_item_add-to-cart-btn:focus, div.prescription-list ul.prescription button.primary-btn.prescription_item_add-to-cart-btn:active {
+  background: #CC0000 !important;
+  color: #fff !important;
+}

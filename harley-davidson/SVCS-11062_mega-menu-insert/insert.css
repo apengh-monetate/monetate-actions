@@ -1,0 +1,35 @@
+.mt-column-wrapper {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.mt-column {
+  display: block;
+  position: relative;
+  width: 240px;
+}
+
+.mt-column__link {
+  display: block;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-top: 10px;
+  position: relative;
+}
+
+.mt-column img {
+  max-width: 100%;
+}

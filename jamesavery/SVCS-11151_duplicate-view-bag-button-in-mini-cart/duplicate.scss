@@ -1,0 +1,11 @@
+// Element to clone
+div.drawer.drawer--cart div.cart-summary__checkout-action-group {}
+
+// Relative Element Selector (After)
+div.drawer.drawer--cart div.order-help-menu {}
+
+
+#clonedMiniCartButton {
+  margin-bottom: 0;
+  padding: 0 16px;
+}

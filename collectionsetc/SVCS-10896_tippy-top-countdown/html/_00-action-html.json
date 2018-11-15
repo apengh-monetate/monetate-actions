@@ -1,0 +1,255 @@
+{
+  "id": 363038,
+  "title": "Tippy Top HTML Countdown",
+  "description": "Tippy Top HTML Countdown",
+  "op": "htmlCountdown",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Tippy Top",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#SiteOuter"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "first"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<section class=\"mt-countdown\">\n<p class=\"mt-countdown__heading\">your 15% coupon expires in</p>\n\n<p>{{HOURS}:}{{MINUTES}:}{{SECONDS}}</p>\n</section>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted. Ticker elements placeholders: {{YEARS}}, {{WEEKS}}, {{DAYS}}, {{HOURS}}, {{MINUTES}}, {{SECONDS}}, {{TENTHS}}.  Suffixes may be included in the following format: {{INTERVAL} suffixText}.  An optional plural parameter may be added to the suffix in the following format: {{INTERVAL} suffixWithPlural[s]}.",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "end",
+        "value": "2018-11-09 00:00:00"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "DateTimeField",
+        "description": "The time we are counting down to",
+        "label": "End Time"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "time_mode",
+        "value": 1
+      },
+      "widget": {
+        "description": "GMT is based on client's server time and is recommended for most uses.",
+        "action_visible": true,
+        "type": "IntegerSelectField",
+        "options": [
+          {
+            "name": 2,
+            "label": "GMT - one deadline"
+          },
+          {
+            "name": 1,
+            "label": "User's Local - deadline local to timezone"
+          }
+        ],
+        "label": "Countdown mode"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "show_zero",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Shows zeros, i.e. 0 Hours 2 Minutes 0 Seconds",
+        "label": "Show Zero Values"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_up",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "Optional Html the banner will use if the time is expired.",
+        "label": "Expired Banner Html"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_hideExpired",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Hides the banner if the timer is expired.",
+        "label": "Hide banner if expired."
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "raw_img_creative",
+        "name": "opt_backgroundImage",
+        "value": {
+          "discriminator": "raw_img_creative",
+          "dyntexts": [],
+          "creative": {
+            "last_updated": "2018-11-06T16:20:44",
+            "tags": {
+              "builtin": [
+                "image"
+              ],
+              "custom": []
+            },
+            "height": 70,
+            "generated": true,
+            "id": 1789236,
+            "archived": false,
+            "name": "1000-70.png",
+            "extension": ".png",
+            "sha": "570f5965376bba5c8913defcc405de0f6956e0fd",
+            "ref": "494/1789236.png",
+            "notes": "",
+            "width": 1000,
+            "image_url": "https://dev-apengh-1.monetate.org/img/1/494/1789236.png",
+            "type": "image"
+          }
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "RawImageCreative",
+        "description": "Optional background image.",
+        "label": "Optional Background Image"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_css",
+        "value": {
+          "content": "/*---Default Styles---*/\n/* Wrapper */\n.mt_countdown {\n  position: relative;\n  display: block;\n  width: 100%;\n  height: auto;\n  padding: 0;\n  margin: 0 auto;\n  color: #000;\n  text-align: center;\n  background-image: url({{BKG_URL}});\n  background-repeat: no-repeat;\n  background-position: cover;\n}\n/*Hides the plural parameter on any suffixes when counting down.*/\n.mt_countdown .mt_hide_plural {\n  display: none;\n}\n\n\n\n/*---Optional Ticker Interval Styles---*/\n/*These may be altered to match the site's native styling or removed if not in use.*/\n/* Years Interval */\n.mt_countdown .mt_years {  }\n.mt_countdown .mt_years .mt_time {  } \n.mt_countdown .mt_years .mt_suffix {  } \n\n/* Weeks Interval */\n.mt_countdown .mt_weeks {  }\n.mt_countdown .mt_weeks .mt_time {  } \n.mt_countdown .mt_weeks .mt_suffix {  }\n\n/* Days Interval */\n.mt_countdown .mt_days {  }\n.mt_countdown .mt_days .mt_time {  } \n.mt_countdown .mt_days .mt_suffix {  }\n\n/* Hours Interval */\n.mt_countdown .mt_hours {  }\n.mt_countdown .mt_hours .mt_time {  } \n.mt_countdown .mt_hours .mt_suffix {  }\n\n/* Minutes Interval */\n.mt_countdown .mt_minutes {  }\n.mt_countdown .mt_minutes .mt_time {  } \n.mt_countdown .mt_minutes .mt_suffix {  }\n\n/* Minutes Interval */\n.mt_countdown .mt_minutes {  }\n.mt_countdown .mt_minutes .mt_time {  } \n.mt_countdown .mt_minutes .mt_suffix {  }\n\n/* Seconds Interval */\n.mt_countdown .mt_seconds {  }\n.mt_countdown .mt_seconds .mt_time {  } \n.mt_countdown .mt_seconds .mt_suffix {  }\n\n/* Seconds Interval */\n.mt_countdown .mt_seconds {  }\n.mt_countdown .mt_seconds .mt_time {  } \n.mt_countdown .mt_seconds .mt_suffix {  }\n\n/* Tenths of a Second Interval */\n.mt_countdown .mt_tenths {  }\n.mt_countdown .mt_tenths .mt_time {  } \n.mt_countdown .mt_tenths .mt_suffix {  }\n\n\n\n/*---Optional Responsive Layout Breakpoints---*/\n/*These may be altered to match the site's native breakpoints or removed if not in use.*/\n@media only screen \n  and (max-width: 1024px) {\n\n  }\n@media only screen \n  and (max-width: 768px) {\n\n  }\n@media only screen \n  and (max-width: 640px) {\n\n  }\n@media only screen \n  and (max-width: 568px) {\n\n  }\n\n\n\n\n\n.mt-countdown {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  color: #585858;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  font-family: 'Helvetica', 'Arial', sans-serif;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin: 0 auto;\n  max-width: 1000px;\n  padding-bottom: 15px !important;\n  padding-top: 5px !important;\n  width: 100%;\n}\n\n.mt-countdown p {\n  color: #585858;\n  margin: 0;\n}\n\n.mt-countdown__heading {\n  display: block;\n  font-size: 26px;\n  font-style: italic;\n  font-weight: 700;\n  line-height: 30px;\n  text-align: center;\n  width: 100%;\n}\n\n.mt-countdown .mt_suffix {\n  padding-left: 3px;\n  padding-right: 3px;\n}\n\n.mt-countdown .mt_tickerElem {\n  font-size: 16px;\n  font-style: italic;\n  font-weight: 700;\n  line-height: 20px;\n}\n\n.mt-countdown .mt_time {\n  position: relative;\n}\n\n.mt-countdown .mt_time:after {\n  bottom: -15px;\n  content: \"\";\n  display: block;\n  font-size: 9px;\n  font-style: italic;\n  font-weight: 700;\n  left: 0;\n  position: absolute;\n  right: 0;\n  text-align: center;\n  width: 100%;\n}\n\n.mt-countdown .mt_hours .mt_time:after {\n  content: \"H\";\n}\n\n.mt-countdown .mt_minutes .mt_time:after {\n  content: \"M\";\n}\n\n.mt-countdown .mt_seconds .mt_time:after {\n  content: \"S\";\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element. \"{{BKG_URL}}\" will be replaced by the url of the optional background image.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_padTime",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Pad single digit times with zeros. Example: \"8\" would be \"08\".",
+        "label": "Pad Single Digits"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

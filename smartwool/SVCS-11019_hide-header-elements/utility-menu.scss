@@ -1,0 +1,19 @@
+@import "../variables";
+
+
+// ==================================================================
+/* Utility Menu */
+// ==================================================================
+@media screen and (max-width: ($breakpoint - 1)) {
+  .topnav-smallheader,
+  .topnav-searchbutton,
+  .topnav-utility-cart-container,
+  .topnav-menubutton {
+    visibility: hidden !important;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .topnav-utility-cart-container {
+    visibility: hidden !important;
+  }
+}

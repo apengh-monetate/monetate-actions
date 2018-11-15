@@ -1,0 +1,15 @@
+/* SEARCH BOX */
+input#ctl00_HeaderControl_SearchTextBoxControl_searchTextBox {
+    height: 40px !important;
+}
+
+/* SEARCH ICON */
+header.mw-header .search_container:before {
+  top: 16px !important;
+}
+
+/* SEARCH BUTTON */
+header.mw-header #mw_search_btn {
+  height: 40px !important;
+  line-height: 40px !important;
+}

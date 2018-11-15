@@ -9,12 +9,14 @@ $breakpoint-int:     600px;
 $breakpoint-md:      768px;
 $breakpoint-lg:      930px;
 
+$max-width:          960px;
+
 
 $light:              rgba(254, 47, 0, 1);
 $dark:               rgba(109, 14, 0, 1);
 
-// $light:              rgba(2, 194, 255, 1);
-// $dark:               rgba(0, 92, 134, 1);
+$light:              rgba(2, 194, 255, 1);
+$dark:               rgba(0, 92, 134, 1);
 
 
 // * {
@@ -28,7 +30,7 @@ $dark:               rgba(109, 14, 0, 1);
 .mt-countdown {
   display: block;
   margin: 30px auto;
-  max-width: 933px;
+  max-width: $max-width;
   position: relative;
 
   .active {
@@ -82,20 +84,23 @@ $dark:               rgba(109, 14, 0, 1);
       flex-wrap: nowrap;
       justify-content: flex-end;
       position: absolute;
-      right: calc(30% - 88px);
+      right: 2vw;
       top: 66.66667%;
       transform: translateY(-66.66667%);
       @media screen and (min-width: $breakpoint-sm) {
-        right: calc(30% - 105px);
+        right: 2vw;
       }
-      @media screen and (min-width: $breakpoint-int) {
-        right: calc(30% - 129px);
-      }
-      @media screen and (min-width: $breakpoint-md) {
-        right: calc(30% - 176px);
-      }
-      @media screen and (min-width: $breakpoint-lg) {
-        right: calc(30% - 224px);
+      // @media screen and (min-width: $breakpoint-int) {
+      //   right: calc(30% - 129px);
+      // }
+      // @media screen and (min-width: $breakpoint-md) {
+      //   right: calc(30% - 176px);
+      // }
+      // @media screen and (min-width: $breakpoint-lg) {
+      //   right: calc(30% - 224px);
+      // }
+      @media screen and (min-width: $max-width) {
+        right: 20px;
       }
     }
 
@@ -104,16 +109,16 @@ $dark:               rgba(109, 14, 0, 1);
     // Countdown Block
     // ------------------------------------------------------------------
     &__block {
-      margin-left: 4px;
-      margin-right: 4px;
+      margin-left: 0.625vw;
+      margin-right: 0.625vw;
       text-align: center;
-      @media screen and (min-width: $breakpoint-sm) {
+      // @media screen and (min-width: $breakpoint-sm) {
+      //   margin-left: 6px;
+      //   margin-right: 6px;
+      // }
+      @media screen and (min-width: $max-width) {
         margin-left: 6px;
         margin-right: 6px;
-      }
-      @media screen and (min-width: $breakpoint-md) {
-        margin-left: 8px;
-        margin-right: 8px;
       }
 
       &:first-child {
@@ -132,16 +137,16 @@ $dark:               rgba(109, 14, 0, 1);
       clear: both;
       color: $light;
       display: block;
-      font-size: 10px;
+      font-size: 2.5vw;
       font-weight: 700;
       margin-bottom: 0;
       text-transform: uppercase;
       width: 100%;
-      @media screen and (min-width: $breakpoint-sm) {
-        font-size: 11px;
-      }
-      @media screen and (min-width: $breakpoint-md) {
-        font-size: 14px;
+      // @media screen and (min-width: $breakpoint-sm) {
+      //   font-size: 11px;
+      // }
+      @media screen and (min-width: $max-width) {
+        font-size: 12px;
       }
     }
 
@@ -152,30 +157,34 @@ $dark:               rgba(109, 14, 0, 1);
       0 3px 4px 0 rgba(0, 0, 0, 0.2),
       inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
       float: left;
-      height: 36px;
+      //height: 36px;
+      height: 9.375vw;
       margin-bottom: 5%;
-      margin-left: 2px;
-      margin-right: 2px;
+      margin-left: 0.3125vw;
+      margin-right: 0.3125vw;
       position: relative;
       text-align: center;
-      width: 24px;
-      @media screen and (min-width: $breakpoint-sm) {
-        height: 42px;
-        width: 28px;
-      }
-      @media screen and (min-width: $breakpoint-int) {
-        height: 54px;
-        width: 36px;
-      }
-      @media screen and (min-width: $breakpoint-md) {
-        height: 72px;
-        margin-left: 4px;
-        margin-right: 4px;
-        width: 48px;
-      }
-      @media screen and (min-width: $breakpoint-lg) {
-        height: 96px;
-        width: 64px;
+      //width: 24px;
+      width: 6.25vw;
+      // @media screen and (min-width: $breakpoint-sm) {
+      //   height: 42px;
+      //   width: 28px;
+      // }
+      // @media screen and (min-width: $breakpoint-int) {
+      //   height: 54px;
+      //   width: 36px;
+      // }
+      // @media screen and (min-width: $breakpoint-md) {
+      //   height: 72px;
+      //   margin-left: 4px;
+      //   margin-right: 4px;
+      //   width: 48px;
+      // }
+      @media screen and (min-width: $max-width) {
+        height: 90px;
+        margin-left: 2px;
+        margin-right: 2px;
+        width: 60px;
       }
 
       &:first-of-type {
@@ -207,31 +216,30 @@ $dark:               rgba(109, 14, 0, 1);
 
       & > span {
         color: #fff;
-        font-size: 24px;
+        font-size: 6.25vw;
         font-weight: normal;
         font-weight: 700;
         left: 0;
-        line-height: 36px;
+        line-height: 9.375vw;
         margin: auto;
         position: absolute;
         right: 0;
-        text-shadow:
-          -1px -1px #999;
-        @media screen and (min-width: $breakpoint-sm) {
-          font-size: 28px;
-          line-height: 42px;
-        }
-        @media screen and (min-width: $breakpoint-int) {
-          font-size: 36px;
-          line-height: 54px;
-        }
-        @media screen and (min-width: $breakpoint-md) {
-          font-size: 64px;
-          line-height: 72px;
-        }
-        @media screen and (min-width: $breakpoint-lg) {
-          font-size: 72px;
-          line-height: 96px;
+        text-shadow: -1px -1px #999;
+        // @media screen and (min-width: $breakpoint-sm) {
+        //   font-size: 28px;
+        //   line-height: 42px;
+        // }
+        // @media screen and (min-width: $breakpoint-int) {
+        //   font-size: 36px;
+        //   line-height: 54px;
+        // }
+        // @media screen and (min-width: $breakpoint-md) {
+        //   font-size: 64px;
+        //   line-height: 72px;
+        // }
+        @media screen and (min-width: $max-width) {
+          font-size: 60px;
+          line-height: 90px;
         }
       }
 

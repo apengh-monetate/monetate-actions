@@ -1,0 +1,85 @@
+.mt-countdown {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #585858;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-bottom: 15px !important;
+  padding-top: 5px !important;
+  width: 100%;
+}
+
+.mt-countdown p {
+  color: #585858;
+  margin: 0;
+}
+
+.mt-countdown__heading {
+  display: block;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.mt-countdown .mt_suffix {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.mt-countdown .mt_tickerElem {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.mt-countdown .mt_time {
+  position: relative;
+}
+
+.mt-countdown .mt_time:after {
+  bottom: -15px;
+  content: "";
+  display: block;
+  font-size: 9px;
+  font-style: italic;
+  font-weight: 700;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.mt-countdown .mt_days .mt_time:after {
+  content: "D";
+}
+
+.mt-countdown .mt_hours .mt_time:after {
+  content: "H";
+}
+
+.mt-countdown .mt_minutes .mt_time:after {
+  content: "M";
+}
+
+.mt-countdown .mt_seconds .mt_time:after {
+  content: "S";
+}

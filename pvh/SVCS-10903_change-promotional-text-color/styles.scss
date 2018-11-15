@@ -1,6 +1,8 @@
 $red: #c0151d;
 
-.price.offerPrice {
+.price.offerPrice,
+.promoAvailableInfo > span,
+.promoMessage > span {
   color: $red !important;
 }
 

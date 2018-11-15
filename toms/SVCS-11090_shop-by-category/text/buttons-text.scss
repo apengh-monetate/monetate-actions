@@ -1,0 +1,85 @@
+// ==================================================================
+// White Buttons
+// ==================================================================
+$background:  #fff;
+$border:      #000;
+$color:       #000;
+
+
+// ==================================================================
+// Black Buttons
+// ==================================================================
+$background:  #000;
+$border:      #000;
+$color:       #fff;
+
+.mt-shop-category {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 835px;
+  padding: 20px 25px;
+  position: relative;
+  width: 100%;
+
+  &__heading {
+    border-bottom: 1px solid #9b9b9b;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 350px;
+    position: relative;
+
+    h3 {
+      background: #fff;
+      bottom: -9px;
+      display: inline-block;
+      font-family: 'proximabold';
+      font-size: 17px;
+      font-weight: 700px;
+      left: 50%;
+      line-height: 1;
+      padding: 0 8px;
+      position: absolute;
+      text-align: center;
+      text-transform: uppercase;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+  }
+
+
+  &__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    text-align: center;
+
+    .column {
+      align-items: center;
+      background: $background;
+      border: 1px solid $border;
+      border-radius: 4px;
+      color: $color;
+      display: inline-flex;
+      font-family: 'proximabold';
+      font-size: 14px;
+      height: 48px;
+      justify-content: center;
+      margin-bottom: 10px;
+      padding: 5px;
+      text-align: center;
+      text-transform: uppercase;
+      width: calc(50% - 5px);
+      @media screen and (min-width: 641px) {
+        margin-bottom: 0;
+        width: calc(25% - 7.5px);
+      }
+    }
+  }
+}

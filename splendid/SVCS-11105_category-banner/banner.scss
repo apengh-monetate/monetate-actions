@@ -1,0 +1,91 @@
+@import "../variables";
+
+#page-title-heading + div[class^="monetate_selector"] {
+  margin-left: -10px;
+  margin-right: -10px;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+  }
+}
+
+.mt-cat-banner {
+  align-items: center;
+  background-color: #f4f4f4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #25315c;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 140px;
+  justify-content: center;
+  margin-bottom: 10px;
+  max-width: 1240px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-md) {
+    height: 240px;
+    margin-bottom: 20px;
+  }
+
+
+  &__heading {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 48px;
+    }
+  }
+
+
+  &__subcopy {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin: 0;
+    padding: 0;
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 15px;
+    }
+  }
+
+  &__message {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  &__code {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    &::before {
+      content: "|";
+      display: inline-block;
+      padding-left: 6px;
+      padding-right: 10px;
+      position: relative;
+    }
+    .promo-code {
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin: 0;
+      margin-left: 3px;
+      padding: 0;
+    }
+  }
+
+} // .mt-cat-banner

@@ -1,0 +1,522 @@
+
+// ==================================================================
+// VARIATION 1
+// ==================================================================
+$pink:           #EB5D5E;
+$pink-darker:    #D15354;
+$white:          #FFF;
+$off-white:      #EBEEEF;
+
+$gray:           #3C4350;
+$gray-light:     #D5D0D3;
+
+$breakpoint-sm: 668px;
+$breakpoint-md: 801px;
+
+$border-radius: 4px;
+$border-width: 2px;
+$font-size: 14px;
+$text-transform: uppercase;
+
+/* 
+ * PRIMARY BUTTON 
+ */
+%primary-button {
+  background-color: $pink !important;
+  border: 2px solid $pink !important;
+  border-radius: 4px !important;
+  color: $white !important;
+  &:hover {
+    background-color: $pink-darker !important;
+    border: 2px solid $pink-darker !important;
+    border-radius: 4px !important;
+    color: $white !important;
+  }
+}
+
+/* 
+ * SECONDARY BUTTON
+ */
+
+// Variation 1
+// %secondary-button {
+//   background-color: $white !important;
+//   border: $border-width solid $pink !important;
+//   border-radius: $border-radius !important;
+//   color: $pink !important;
+//   &:hover {
+//     background-color: $pink !important;
+//     border: $border-width solid $pink !important;
+//     border-radius: $border-radius !important;
+//     color: $white !important;
+//   }
+// }
+
+// Variation 2
+// %secondary-button {
+//   background-color: $white !important;
+//   border: $border-width solid $gray-light !important;
+//   border-radius: $border-radius !important;
+//   color: $gray !important;
+//   &:hover {
+//     background-color: $white !important;
+//     border: $border-width solid $pink !important;
+//     border-radius: $border-radius !important;
+//     color: $gray !important;
+//   }
+// }
+
+// Variation 3
+$border-radius: 2px;
+$border-width: 1px;
+$font-size: 13px;
+$text-transform: uppercase;
+%secondary-button {
+  background-color: $white !important;
+  border: $border-width solid $off-white !important;
+  border-radius: $border-radius !important;
+  color: $gray !important;
+  &:hover {
+    background-color: $white !important;
+    border: $border-width solid $gray !important;
+    border-radius: $border-radius !important;
+    color: $gray !important;
+  }
+}
+
+ 
+%primary {
+  input {
+    @extend %primary-button;
+  }
+}
+
+
+%secondary {
+  input {
+    @extend %secondary-button;
+  }
+}
+
+%input {
+  align-items: center !important;      
+  background-image: none !important;
+  box-sizing: border-box !important;
+  display: inline-flex;
+  font-family: 'Gotham SSm 5r', Arial, Helvetica, sans-serif;
+  font-size: $font-size !important;
+  font-weight: 500 !important;
+  height: 45px !important;
+  justify-content: center !important;
+  letter-spacing: 0px !important;
+  line-height: 17px !important;
+  opacity: 1;
+  padding: 0 !important;
+  text-align: center !important;
+  text-transform: $text-transform !important;
+  transition: all 0.3s ease;
+  width: 100% !important;
+}
+
+
+/*
+ * Button Styling
+ */
+%button {
+  background: none !important;
+  border: none !important;
+  padding: 15px 0 !important;
+  @media screen and (min-width: $breakpoint-sm) {
+    width: 100%;
+  }
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 0 !important;
+  }
+  span {
+    display: none !important;
+  }
+  input {
+    @extend %input;
+  }
+}
+
+%button-link {
+  @extend %input;
+  span {
+    background: none !important;
+    padding: 0 !important;
+  }
+}
+
+
+
+// ==================================================================
+/* CART */
+// ==================================================================
+body.shoppingCart {
+  #divShoppingCart {
+
+    .primaryWrapBtn.wrapBtnCheckout,
+    .primaryWrapBtn.wrapBtnSpeedBuy {
+      @extend %button;
+      @extend %primary;
+      display: block;
+      
+      input {
+        @media screen and (min-width: $breakpoint-md) {
+          width: 137.5px !important;
+        }
+      }
+    }
+
+    .wrapBtnSpeedBuy .btnCartIcon {
+      display: none !important;
+    }
+
+    .divButtons.divProductButtons {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      @media screen and (min-width: $breakpoint-sm) {
+        padding-bottom: 80px;
+      }
+      @media screen and (min-width: $breakpoint-md) {
+        padding-bottom: 0;
+      }
+      .col {
+        padding: 0 7.5px !important;
+        @media screen and (min-width: $breakpoint-md) {
+          width: 137px !important;
+        }
+      }
+    }
+
+    .btnDivider {
+      display: none !important;
+    }
+
+    .btnPayPalCheckout {
+      align-items: center !important;
+      display: flex !important;
+      height: 45px !important;
+      justify-content: center !important;
+      margin-top: 15px;
+      padding: 5px 8px 15px !important;
+      width: 100% !important;
+      @media screen and (min-width: $breakpoint-md) {
+        margin-top: 10px;
+        padding: 0 !important;
+        width: 290px !important;
+      }
+    }
+    
+  }
+
+
+  #divSavedItems .divProductButtons {
+
+    // Add To Cart
+    .primaryWrapBtn.wrapBtnaddtocart {
+      @extend %button;
+      @extend %primary;
+      input {
+        height: 35px !important;
+        @media screen and (min-width: $breakpoint-sm) {
+          width: 168px !important;
+        }
+      }
+    }
+
+    // Speed Buy
+    .primaryWrapBtn.wrapBtnspeedbuy {
+      display: none !important;
+    }
+
+    // Add to Wish List
+    .secondaryWrapBtn.wrapBtnaddtowishlist {
+      @extend %button;
+      @extend %secondary;
+      margin-bottom: 15px;
+      margin-top: 9px;
+      @media screen and (min-width: $breakpoint-md) {
+        display: block;
+        margin-top: 15px;
+      }
+      input {
+        height: 35px !important;
+        @media screen and (min-width: $breakpoint-sm) {
+          width: 168px !important;
+        }
+      }
+    }
+  }
+
+
+  #divSavedItems .divButtons.divProductButtons {
+    // Move All To Cart
+    .primaryWrapBtn.wrapBtnmovealltocart {
+      @extend %button;
+      @extend %primary;
+      input {
+        height: 35px !important;
+        @media screen and (min-width: $breakpoint-sm) {
+          width: 168px !important;
+        }
+      }
+    }
+
+    // Remove All
+    .secondaryWrapBtn.wrapBtnremoveall {
+      @extend %button;
+      @extend %secondary;
+      margin-top: 9px;
+      @media screen and (min-width: $breakpoint-md) {
+        display: block;
+        margin-top: 15px;
+      }
+      input {
+        height: 35px !important;
+        @media screen and (min-width: $breakpoint-sm) {
+          width: 168px !important;
+        }
+      }
+    }
+  }
+  
+}
+
+
+
+
+
+
+
+
+// ==================================================================
+/* SIGN IN */
+// ==================================================================
+body.pgSignIn #frmSignIn {
+  .primaryWrapBtn {
+    @extend %button;
+    @extend %primary;
+    input {
+      @media screen and (min-width: $breakpoint-sm) {
+        width: 108px !important;
+      }
+    }
+  }
+}
+
+
+
+// ==================================================================
+/* SHIPPING STEP #1 */
+// ==================================================================
+body.checkoutStep1 div#divContent {
+  .primaryWrapBtn {
+    @extend %button;
+    @extend %primary;
+    input {
+      @media screen and (min-width: $breakpoint-sm) {
+        width: 108px !important;
+      }
+    }
+  }
+}
+
+
+
+
+
+// ==================================================================
+/* SHIPPING STEP #2 */
+// ==================================================================
+body.checkoutStep2 {
+  // Continue Checkout
+  .primaryWrapBtn.wrapBtncontinuecheckout {
+    @extend %button;
+    @extend %primary;
+    input {
+      @media screen and (min-width: $breakpoint-sm) {
+        margin-top: 15px;
+        width: 195px !important;
+      }
+    }
+  }
+
+  // Edit Shopping Cart
+  .secondaryWrapBtn.wrapBtncancelorder {
+    @extend %button;
+    @extend %secondary;
+    margin-top: 15px;
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-top: 25px;
+    }
+    
+    input {
+      @media screen and (min-width: $breakpoint-sm) {      
+        width: 195px !important;
+      }
+    }
+  }
+}
+
+
+
+// ==================================================================
+/* SHIPPING STEP #3 */
+// ==================================================================
+body.checkoutStep3 {
+
+  .divQCardAcceptOffer {
+    .primaryButton {
+      @extend %button-link;
+      @extend %primary-button;
+      @media screen and (min-width: $breakpoint-sm) {
+        height: 35px !important;
+        margin-top: 10px;
+        width: 268px !important;
+      }
+    }
+    .secondaryButton {
+      @extend %button-link;
+      @extend %secondary-button;
+      margin-top: 4px;
+      @media screen and (min-width: $breakpoint-sm) {
+        height: 35px !important;
+        margin-top: 15px;
+        width: 268px !important;
+      }
+    }
+  }
+  
+
+  #voucherCode {
+    .btn-secondary {
+      @extend %button-link;
+      @extend %secondary-button;
+      height: 35px !important;
+      width: 126px !important;
+    }
+  }
+
+  #continueCheckout {
+    .primaryWrapBtn.wrapBtncontinuecheckout {
+      @extend %button;
+      @extend %primary;
+      input {
+        @media screen and (min-width: $breakpoint-sm) {
+          height: 45px !important;
+          width: 195px !important;
+        }
+      }
+    }
+
+    & ~ .secondaryWrapBtn.wrapBtncancelorder {
+      @extend %button;
+      @extend %secondary;
+      margin-top: 15px;
+      @media screen and (min-width: $breakpoint-sm) {
+        display: block;
+        margin-bottom: 30px !important;
+        width: 195px !important;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// ==================================================================
+/* SHIPPING STEP #4 */
+// ==================================================================
+body.checkoutStep4 {
+  div.divOrderTotalButtons {
+    .primaryWrapBtn.wrapBtnclickheretosubmitorder {
+      @extend %button;
+      @extend %primary;
+      input {
+        @media screen and (min-width: $breakpoint-sm) {
+          width: 195px !important;
+        }
+      }
+    }
+    .secondaryButton {
+      @extend %button-link;
+      @extend %secondary-button;
+      margin-top: 15px;
+      @media screen and (min-width: $breakpoint-sm) {
+        width: 195px !important;
+      }
+    }
+  }
+}
+
+
+
+// ==================================================================
+/* RECEIPT */
+// ==================================================================
+body.pg-your-receipt {
+  #frmSubmitOrder {
+    .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt {
+      @extend %button;
+      @extend %primary;
+      input {
+        @media screen and (min-width: $breakpoint-sm) {
+          height: 35px !important;
+          width: 305px !important;
+        }
+      }
+    }
+
+    div.divOrderTotalButtons {
+      @media screen and (min-width: $breakpoint-sm) {
+        width: 310px !important;
+      }
+    }
+  }
+}
+
+
+
+
+// ==================================================================
+/* ORDER CONFIRMATION */
+// ==================================================================
+body.pg-order-confirmation {
+  #orderConfirmIntroMiddle {
+    .primaryWrapBtn.wrapBtnsaveforlater {
+      @extend %button;
+      @extend %primary;
+      margin-top: 15px;
+      @media screen and (min-width: $breakpoint-sm) {
+        margin-top: 4px;
+      }
+      
+      input {
+        @media screen and (min-width: $breakpoint-sm) {
+          height: 35px !important;
+          width: 189px !important;
+        }
+      }
+    }
+    .secondaryWrapBtn.wrapBtnviewreceipt {
+      @extend %button;
+      @extend %secondary;
+      margin-top: 4px;
+      input {
+        @media screen and (min-width: $breakpoint-sm) {
+          height: 35px !important;
+          width: 189px !important;
+        }
+      }
+    }
+
+
+  }
+}

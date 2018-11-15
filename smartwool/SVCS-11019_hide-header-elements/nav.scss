@@ -1,0 +1,17 @@
+@import "../variables";
+
+
+
+// ==================================================================
+/* Navigation and Search */
+// ==================================================================
+@media screen and (min-width: $breakpoint) {
+  .topnav-search-container,
+  .topnav-accordion {
+    visibility: hidden !important;
+  }
+}
+
+
+
+

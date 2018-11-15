@@ -1,0 +1,44 @@
+/* ----------------------------------------------
+/ Index Pages
+/ -------------------------------------------- */
+/* Text Color (also changes the icon color) */
+.vto-button__wrapper button.vto-open span > span {
+  color: red;
+}
+
+/* Underline on Hover */
+.vto-button__wrapper button.vto-open:hover span > span:after {
+  background-color: green !important;
+}
+
+/* Icon Color */
+.vto-button__wrapper button.vto-open svg {
+  fill: purple;
+}
+
+
+/* ----------------------------------------------
+/ PDP
+/ -------------------------------------------- */
+/* Button Background */
+.vto-open__wrapper button.vto-open {
+  background: red;
+}
+
+/* Icon Color */
+.vto-open__wrapper button.vto-open .button__icon {
+  color: orange;
+}
+
+/* Text Color */
+.vto-open__wrapper button.vto-open .button__wrapper span + span {
+  color: blue;
+}
+.vto-open__wrapper button.vto-open .button__wrapper span + span:after {
+  opacity: 0 !important;
+}
+
+/* Underline on Hover */
+.vto-open__wrapper button.vto-open:hover .button__wrapper span + span:after {
+  background-color: green !important;
+}

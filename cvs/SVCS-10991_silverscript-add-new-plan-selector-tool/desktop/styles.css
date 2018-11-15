@@ -2,14 +2,14 @@
 @media (max-width: 767px) {
   .medicare-info-container .enrollment span {
     color: #000000 !important;
-    font-family: 'Helvetica-Bold' !important;
+    font-family: 'Helvetica' !important;
     font-size: 18px !important;
+    font-weight: 700;
     padding: 8px 10px 0 !important;
   }
   #form1 #content .medicare-info-container h1.medicare-drug-plans {
     background: none !important;
     color: #000000 !important;
-    font-family: 'Helvetica-Bold' !important;
     font-size: 14px !important;
     line-height: 22px !important;
     padding: 0 10px 8px !important;
@@ -21,8 +21,9 @@
 
 #content .hero .hero__header {
   color: #000000;
-  font-family: 'Helvetica-Bold';
+  font-family: 'Helvetica' !important;
   font-size: 20px !important;
+  font-weight: 700;
   line-height: 24px !important;
   margin: 19px 0 0px !important;
   padding: 0 15px;

@@ -1,0 +1,45 @@
+// ==================================================================
+/* Header */
+// ==================================================================
+
+.mw-shopping-bag-wrapper .sprites-shopping-bag {
+  background: none;
+  background-image: url('https://dev-apengh-1.monetate.org/img/1/128/1753390.png');
+  height: 27px;
+  width: 32px;
+}
+.mw-shopping-bag-wrapper .mw-bag-num {
+  bottom: 6px !important;
+  left: 3px !important;
+}
+// .mw-shopping-bag-wrapper .shopping_bag .shop_icon {
+//   background: none;
+// }
+
+
+
+// ==================================================================
+/* PDP */
+// ==================================================================
+.mw-add-to-bag span {
+  font-size: 0;
+  &:before {
+    content: "Add to Cart";
+    display: block;
+    font-size: 15px;
+  }
+}
+
+
+
+// ==================================================================
+/* Cart */
+// ==================================================================
+.mw-cart-heading {
+  font-size: 0;
+  &:before {
+    content: "Shopping Cart";
+    display: block;
+    font-size: 16px;
+  }
+}

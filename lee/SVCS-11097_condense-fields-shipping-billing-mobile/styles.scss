@@ -1,0 +1,46 @@
+@import "../../placeholders";
+
+@media screen and (max-width: 640px) {
+  #shippingAddressAddForm,
+  #billingAddressAddForm {
+    div.required-field-text-container {
+      display: none;
+    }
+    
+    .input-set-wrap {
+      margin-bottom: 10px;
+      position: relative;
+      
+      label {     
+        border: 0;
+        clip: rect(0,0,0,0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px; 
+      }
+      
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      select {
+        border: 1px solid #000;
+        display: block;
+        margin: 0;
+        padding-left: 5px;
+        position: relative;
+        width: 240px;
+        &.error {
+          border: 1px solid #e91e25;
+        }
+        
+        // Placeholder
+        &::placeholder {
+          color: #999;
+        }
+      }
+    }
+  }
+}

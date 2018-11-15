@@ -1,0 +1,56 @@
+// .mt-column-wrapper:after {
+//   clear: both;
+//   content: "";
+//   display: table;
+// }
+// .mt-column-wrapper,
+// .mt-column-wrapper * {
+//   box-sizing: border-box;
+// }
+// .mt-column {
+//   float: left;
+//   padding: 10px 10px 0;
+//   width: 240px;
+// }
+// .mt-column img {
+//   height: auto;
+//   max-width: 100%;
+// }
+
+// .mt-column-wrapper:after {
+//   clear: both;
+//   content: "";
+//   display: table;
+// }
+// 
+// .mt-column-wrapper,
+// .mt-column-wrapper * {
+//   box-sizing: border-box;
+// }
+
+.mt-column-wrapper {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.mt-column {
+  display: block;
+  //padding: 10px 10px 0;
+  position: relative;
+  width: 240px;
+
+  &__link {
+    display: block;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 10px;
+    position: relative;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

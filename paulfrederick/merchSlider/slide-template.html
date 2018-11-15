@@ -1,0 +1,38 @@
+<div data-slide-inner>
+  <div data-slide-img>
+    <a href="{{product_url}}" data-pid="{{pid}}" tabindex="0" onclick="trackGTMclick('recentlyViewedImageClick');tracksiteZone('crosssell'); false;">
+      <img src="{{thumbnail_image}}" alt="{{pid}} - {{name}}" />
+    </a>
+    <!-- <a data-slide-quickview qvsource="rece" class="quick-view baynoteqv" productid="{{pid}}" category="Suits" href="{{product_url}}" tabindex="0" onclick="trackGTMclick('qVRecentlyViewedDtlPage');tracksiteZone('crosssell')">QUICK VIEW</a> -->
+  </div>
+  <a data-slide-text href="{{product_url}}" tabindex="0" onclick="trackGTMclick('recommendedImageClick');tracksiteZone('crosssell');">
+    <div data-slide-name>{{name}}</div>
+    <div data-slide-price>
+      <span data-slide-reg-price>{{price|priceFormat: $1,000.00}}</span>
+      <span data-slide-alt-price>{{alternate_price|priceFormat: $1,000.00}}</span>
+    </div>
+  </a>
+</div>
+
+
+
+<div class="rec-viewed-product" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide10">
+  <div class="image-container">
+    <a onclick="trackGTMclick('recentlyViewedImageClick');tracksiteZone('crosssell')" href="/shop/suits/product=rhn130t" tabindex="0">
+      <img src="https://s7images.paulfredrick.com/is/image/PaulFredrick/RHN130T_199?wid-200">
+    </a>
+    <a qvsource="rece" onclick="trackGTMclick('qVRecentlyViewedDtlPage');tracksiteZone('crosssell')" class="quick-view baynoteqv" productid="RHN130T" category="Suits" href="/shop/suits/product=rhn130t" tabindex="0">QUICK VIEW
+    </a>
+  </div>
+
+  <a href="/shop/suits/product=rhn130t" onclick="trackGTMclick('recommendedImageClick');tracksiteZone('crosssell')');" tabindex="0">
+    <div class="product-title">Super 100's Wool Plaid Flat Front Suit Pants</div>
+    <div class="price-container">
+      <div class="price sale">$129.95</div>  <div class="price reg">$139.50</div>
+    </div>
+  </a>
+
+  <div class="promo">
+  </div>
+
+</div>

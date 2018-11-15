@@ -1,0 +1,16 @@
+#monetate_lightbox_content_container {
+  max-width: 100% !important;
+}
+
+#mt-ltbx-content {
+  max-width: 100% !important;
+  .form-group {
+    text-align: center;
+  }
+  input.form-control {
+    width: 100% !important;
+    @media screen and (min-width: 495px) {
+      width: 475px !important;
+    }
+  }
+}

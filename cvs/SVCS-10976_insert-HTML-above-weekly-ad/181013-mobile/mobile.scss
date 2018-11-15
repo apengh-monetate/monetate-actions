@@ -1,0 +1,138 @@
+$label: 181013;
+$max-width: 964px;
+
+
+// ==================================================================
+// Resets
+// ==================================================================
+// [_nghost-c1] {
+//   max-width: 100% !important;
+// }
+// 
+// .flipp[_ngcontent-c1],
+// cvs-blob[_ngcontent-c1] {
+//   margin-left: auto !important;
+//   margin-right: auto !important;
+//   max-width: $max-width !important;
+//   position: relative !important;
+//   width: 100% !important;
+// }
+
+
+// ==================================================================
+// HTML Above Weekly Ad
+// ==================================================================
+.mte-#{$label} {
+  align-content: center;
+  align-items: center;
+  background: #F7F7F7;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 218px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  width: 100%;
+
+
+  // ------------------------------------------------------------------
+  // Heading
+  // ------------------------------------------------------------------
+  &__heading {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-width;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    h2 {
+      color: #000000;
+      font-family: 'Helvetica';
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+
+
+
+
+  // ------------------------------------------------------------------
+  // Content
+  // ------------------------------------------------------------------
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-width;
+    width: 100%;
+
+    .column {
+      align-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 22px;
+      padding-top: 10px;
+      width: 100%;
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      &__icon {
+        display: flex;
+        flex: 0 0 37px;
+        margin-right: 10px;
+        img {
+          height: auto;
+          max-height: 32px;
+          max-width: 100%;
+        }
+      }
+
+      &__text {
+        display: flex;
+        flex: 0 1 100%;
+        flex-direction: column;
+        margin-left: 10px;
+        h3 {
+          color: #000000;
+          font-family: 'Helvetica';
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 22px;
+          margin-bottom: 5px;
+        }
+        p {
+          color: #000000;
+          font-family: 'Helvetica';
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 17px;
+        }
+        sup {
+          color: #000000;
+          font-family: 'Helvetica';
+          font-size: 7px;
+          font-weight: 400;
+          line-height: 1;
+        }
+      }
+    } // .column
+
+  }
+
+
+
+}

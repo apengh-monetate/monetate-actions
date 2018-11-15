@@ -1,4 +1,6 @@
-.price.offerPrice {
+.price.offerPrice,
+.promoAvailableInfo > span,
+.promoMessage > span {
   color: #c0151d !important;
 }
 

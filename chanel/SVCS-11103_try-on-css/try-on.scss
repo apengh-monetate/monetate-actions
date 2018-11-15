@@ -1,0 +1,64 @@
+/* ----------------------------------------------
+/ Index Pages
+/ -------------------------------------------- */ 
+
+/* Icon Color */
+/* Button Background */
+/* Text Color */
+/* Underline on Hover */
+
+.vto-button__wrapper {
+  button.vto-open {
+    //color: red;
+    span > span {
+      color: red;
+    }
+    svg {
+      fill: purple;
+    }
+
+    &:hover span > span:after {
+      background-color: green !important;
+    }
+  }
+  
+}
+
+/* ----------------------------------------------
+/ PDP
+/ -------------------------------------------- */ 
+.vto-open__wrapper {
+  button.vto-open {
+
+    // Button Background
+    background: red;
+
+    // Camera Icon Color
+    .button__icon {
+      color: orange;
+    }
+
+    
+
+    // Text Color
+    .button__wrapper {
+      //color: #000;
+      span + span {
+        color: blue;
+        &:after {
+          opacity: 0 !important;
+        }
+      }
+    }
+
+
+    
+
+    // Underline on Hover
+    &:hover .button__wrapper span + span:after {
+      background-color: green !important;
+    }
+
+    
+  }
+}

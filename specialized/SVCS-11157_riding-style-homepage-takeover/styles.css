@@ -1,0 +1,13 @@
+div#page header#header > .container-fluid,
+div#page #content,
+div#page footer.footer {
+  display: none !important;
+}
+
+body.page-homepage {
+  padding-top: 32px !important;
+}
+
+header#header {
+  height: 32px !important;
+}

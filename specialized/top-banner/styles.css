@@ -1,0 +1,19 @@
+@media screen and (max-width: 641px) {
+  .mt_countdown span {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .header .header-top {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .header-top .message {
+    padding: 0 16px !important;
+  }
+}

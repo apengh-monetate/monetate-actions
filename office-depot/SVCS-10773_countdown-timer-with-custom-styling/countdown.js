@@ -3,6 +3,10 @@ var Countdown = {
 
   // Backbone-like structure
   $el: document.querySelector('#mte-countdown'),
+  $days: document.querySelectorAll('.days'),
+  $hours: document.querySelectorAll('.hours'),
+  $minutes: document.querySelectorAll('.minutes'),
+  $seconds: document.querySelectorAll('.seconds'),
 
   // Params
   countdown_interval: null,
@@ -30,17 +34,37 @@ var Countdown = {
     // Days
     this.days = Math.floor(this.delta / 86400);
     this.delta -= this.days * 86400;
+    // if(this.days > 0) {
+    //   for(var i = 0; i < this.$days.length; i++) {
+    //     this.$days[i].classList.add('active');
+    //   }
+    // }
 
     // Hours
     this.hours = Math.floor(this.delta / 3600) % 24;
     this.delta -= this.hours * 3600;
+    // if(this.hours > 0) {
+    //   for(var i = 0; i < this.$hours.length; i++) {
+    //     this.$hours[i].classList.add('active');
+    //   }
+    // }
 
     // Minutes
     this.minutes = Math.floor(this.delta / 60) % 60;
     this.delta -= this.minutes * 60;
+    // if(this.minutes > 0) {
+    //   for(var i = 0; i < this.$minutes.length; i++) {
+    //     this.$minutes[i].classList.add('active');
+    //   }
+    // }
 
     // Seconds
     this.seconds = Math.floor(this.delta % 60);  // in theory the modulus is not required
+    // if(this.seconds > 0) {
+    //   for(var i = 0; i < this.$seconds.length; i++) {
+    //     this.$seconds[i].classList.add('active');
+    //   }
+    // }
 
     // DOM
     this.$ = {
@@ -101,8 +125,8 @@ var Countdown = {
           --that.values.days;
         }
 
-        // Update DOM values
 
+        // Update DOM values
         // Days
         that.checkValue(that.values.days, $day_1, $day_2);
 
@@ -116,8 +140,7 @@ var Countdown = {
         that.checkValue(that.values.seconds, $sec_1, $sec_2);
 
         --that.total_seconds;
-      }
-      else {
+      } else {
         clearInterval(that.countdown_interval);
         document.querySelector('.countdown').classList.remove('active');
         document.querySelector('.countdown').classList.add('expired');
@@ -158,18 +181,13 @@ var Countdown = {
         $bottom.innerHTML = value;
       }, 750);
     }
-
-
-
   },
 
   checkValue: function(value, $el_1, $el_2) {
-
     var val_1   = value.toString().charAt(0),
     val_2       = value.toString().charAt(1),
     fig_1_value = $el_1.querySelector('.top').innerHTML,
     fig_2_value = $el_2.querySelector('.top').innerHTML;
-
 
     if(value >= 10) {
       // Animate only if the figure has changed

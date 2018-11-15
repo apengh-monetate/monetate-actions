@@ -1,0 +1,163 @@
+{
+  "id": 365620,
+  "title": "Duplicate View Cart Button in Mini-Cart",
+  "description": "Duplicate View Cart Button in Mini-Cart",
+  "op": "cloneNode",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Mini-Cart",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selToClone",
+        "value": "div.drawer.drawer--cart div.cart-summary__checkout-action-group"
+      },
+      "widget": {
+        "label": "Element To Clone",
+        "type": "CssSelectorField",
+        "description": "Element to clone.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selToPlace",
+        "value": "div.drawer.drawer--cart div.order-help-menu"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "Place Cloned element in relation to this element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "after"
+      },
+      "widget": {
+        "description": "Where to insert the cloned element in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_newID",
+        "value": "clonedMiniCartButton"
+      },
+      "widget": {
+        "label": "Cloned Element ID",
+        "type": "CharField",
+        "description": "Optional ID to assign to the cloned element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_wrap",
+        "value": false
+      },
+      "widget": {
+        "label": "Wrap Cloned Element",
+        "type": "BooleanField",
+        "description": "Optionally wrap the cloned element in a div.",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_useLibClone",
+        "value": false
+      },
+      "widget": {
+        "label": "Use jQuery For Cloning",
+        "type": "BooleanField",
+        "description": "Should jQuery's clone function be used to clone the events of the selected element?  If client site has jQuery 1.5+, the events of the children elements will also be cloned.",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "#clonedMiniCartButton {\n  padding: 0 16px;\n  margin-bottom: 0;\n}",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.  To refer to the container DIV (or the clone itself if a wrapper isn't being used) you can use the \"<CLONE_SELECTOR>\" pseudo-selector to refer to it (eg. \"<CLONE_SELECTOR> a:hover{ color:#F00; }\").",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

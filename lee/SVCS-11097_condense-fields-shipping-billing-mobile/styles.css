@@ -1,0 +1,97 @@
+@media screen and (max-width: 640px) {
+  #shippingAddressAddForm div.required-field-text-container,
+  #billingAddressAddForm div.required-field-text-container {
+    display: none;
+  }
+  #shippingAddressAddForm .input-set-wrap,
+  #billingAddressAddForm .input-set-wrap {
+    margin-bottom: 10px;
+    position: relative;
+  }
+  #shippingAddressAddForm .input-set-wrap label,
+  #billingAddressAddForm .input-set-wrap label {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  #shippingAddressAddForm .input-set-wrap input[type="text"],
+  #shippingAddressAddForm .input-set-wrap input[type="tel"],
+  #shippingAddressAddForm .input-set-wrap input[type="email"],
+  #shippingAddressAddForm .input-set-wrap select,
+  #billingAddressAddForm .input-set-wrap input[type="text"],
+  #billingAddressAddForm .input-set-wrap input[type="tel"],
+  #billingAddressAddForm .input-set-wrap input[type="email"],
+  #billingAddressAddForm .input-set-wrap select {
+    border: 1px solid #000;
+    display: block;
+    margin: 0;
+    padding-left: 5px;
+    position: relative;
+    width: 240px;
+  }
+  #shippingAddressAddForm .input-set-wrap input[type="text"].error,
+  #shippingAddressAddForm .input-set-wrap input[type="tel"].error,
+  #shippingAddressAddForm .input-set-wrap input[type="email"].error,
+  #shippingAddressAddForm .input-set-wrap select.error,
+  #billingAddressAddForm .input-set-wrap input[type="text"].error,
+  #billingAddressAddForm .input-set-wrap input[type="tel"].error,
+  #billingAddressAddForm .input-set-wrap input[type="email"].error,
+  #billingAddressAddForm .input-set-wrap select.error {
+    border: 1px solid #e91e25;
+  }
+  #shippingAddressAddForm .input-set-wrap input[type="text"]::-webkit-input-placeholder,
+  #shippingAddressAddForm .input-set-wrap input[type="tel"]::-webkit-input-placeholder,
+  #shippingAddressAddForm .input-set-wrap input[type="email"]::-webkit-input-placeholder,
+  #shippingAddressAddForm .input-set-wrap select::-webkit-input-placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="text"]::-webkit-input-placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="tel"]::-webkit-input-placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="email"]::-webkit-input-placeholder,
+  #billingAddressAddForm .input-set-wrap select::-webkit-input-placeholder {
+    color: #999;
+  }
+  #shippingAddressAddForm .input-set-wrap input[type="text"]::-moz-placeholder,
+  #shippingAddressAddForm .input-set-wrap input[type="tel"]::-moz-placeholder,
+  #shippingAddressAddForm .input-set-wrap input[type="email"]::-moz-placeholder,
+  #shippingAddressAddForm .input-set-wrap select::-moz-placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="text"]::-moz-placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="tel"]::-moz-placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="email"]::-moz-placeholder,
+  #billingAddressAddForm .input-set-wrap select::-moz-placeholder {
+    color: #999;
+  }
+  #shippingAddressAddForm .input-set-wrap input[type="text"]:-ms-input-placeholder,
+  #shippingAddressAddForm .input-set-wrap input[type="tel"]:-ms-input-placeholder,
+  #shippingAddressAddForm .input-set-wrap input[type="email"]:-ms-input-placeholder,
+  #shippingAddressAddForm .input-set-wrap select:-ms-input-placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="text"]:-ms-input-placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="tel"]:-ms-input-placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="email"]:-ms-input-placeholder,
+  #billingAddressAddForm .input-set-wrap select:-ms-input-placeholder {
+    color: #999;
+  }
+  #shippingAddressAddForm .input-set-wrap input[type="text"]::-ms-input-placeholder,
+  #shippingAddressAddForm .input-set-wrap input[type="tel"]::-ms-input-placeholder,
+  #shippingAddressAddForm .input-set-wrap input[type="email"]::-ms-input-placeholder,
+  #shippingAddressAddForm .input-set-wrap select::-ms-input-placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="text"]::-ms-input-placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="tel"]::-ms-input-placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="email"]::-ms-input-placeholder,
+  #billingAddressAddForm .input-set-wrap select::-ms-input-placeholder {
+    color: #999;
+  }
+  #shippingAddressAddForm .input-set-wrap input[type="text"]::placeholder,
+  #shippingAddressAddForm .input-set-wrap input[type="tel"]::placeholder,
+  #shippingAddressAddForm .input-set-wrap input[type="email"]::placeholder,
+  #shippingAddressAddForm .input-set-wrap select::placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="text"]::placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="tel"]::placeholder,
+  #billingAddressAddForm .input-set-wrap input[type="email"]::placeholder,
+  #billingAddressAddForm .input-set-wrap select::placeholder {
+    color: #999;
+  }
+}
