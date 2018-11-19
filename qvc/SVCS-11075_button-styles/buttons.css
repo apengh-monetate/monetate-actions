@@ -1,7 +1,7 @@
 /* 
  * PRIMARY BUTTON 
  */
-body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnCheckout input, body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy input, body.shoppingCart #divSavedItems .divProductButtons .primaryWrapBtn.wrapBtnaddtocart input, body.shoppingCart #divSavedItems .divButtons.divProductButtons .primaryWrapBtn.wrapBtnmovealltocart input, body.pgSignIn #frmSignIn .primaryWrapBtn input, body.checkoutStep1 div#divContent .primaryWrapBtn input, body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout input, body.checkoutStep3 #continueCheckout .primaryWrapBtn.wrapBtncontinuecheckout input, body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder input, body.pg-your-receipt #frmSubmitOrder .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt input, body.pg-order-confirmation #orderConfirmIntroMiddle .primaryWrapBtn.wrapBtnsaveforlater input, body.checkoutStep3 .divQCardAcceptOffer .primaryButton {
+body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnCheckout input, body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy input, body.shoppingCart #divSavedItems .divProductButtons .primaryWrapBtn.wrapBtnaddtocart input, body.shoppingCart #divSavedItems .divButtons.divProductButtons .primaryWrapBtn.wrapBtnmovealltocart input, body.pgSignIn #frmSignIn .primaryWrapBtn input, body.checkoutStep1 div#divContent .primaryWrapBtn input, body.checkoutStep1 div#divContent .primaryWrapBtn.wrapBtncontinuecheckout input, body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout input, body.checkoutStep3 #continueCheckout .primaryWrapBtn.wrapBtncontinuecheckout input, body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder input, body.pg-your-receipt #frmSubmitOrder .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt input, body.pg-order-confirmation #orderConfirmIntroMiddle .primaryWrapBtn.wrapBtnsaveforlater input, body.checkoutStep3 .divQCardAcceptOffer .primaryButton {
   background-color: #EB5D5E !important;
   border: 2px solid #EB5D5E !important;
   border-radius: 4px !important;
@@ -18,21 +18,21 @@ body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnCheckout input:hover, 
 /* 
  * SECONDARY BUTTON
  */
-body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist input, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall input, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder input, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder input, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt input, body.checkoutStep3 .divQCardAcceptOffer .secondaryButton, body.checkoutStep3 #voucherCode .btn-secondary, body.checkoutStep4 div.divOrderTotalButtons .secondaryButton {
+body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist input, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall input, body.checkoutStep1 div#divContent .secondaryWrapBtn.wrapBtncancelorder input, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder input, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder input, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt input, body.checkoutStep3 .divQCardAcceptOffer .secondaryButton, body.checkoutStep3 #voucherCode .btn-secondary, body.checkoutStep4 div.divOrderTotalButtons .secondaryButton {
   background-color: #FFF !important;
   border: 1px solid #EBEEEF !important;
   border-radius: 2px !important;
   color: #3C4350 !important;
 }
 
-body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist input:hover, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall input:hover, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder input:hover, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder input:hover, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt input:hover, body.checkoutStep3 .divQCardAcceptOffer .secondaryButton:hover, body.checkoutStep3 #voucherCode .btn-secondary:hover, body.checkoutStep4 div.divOrderTotalButtons .secondaryButton:hover {
+body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist input:hover, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall input:hover, body.checkoutStep1 div#divContent .secondaryWrapBtn.wrapBtncancelorder input:hover, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder input:hover, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder input:hover, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt input:hover, body.checkoutStep3 .divQCardAcceptOffer .secondaryButton:hover, body.checkoutStep3 #voucherCode .btn-secondary:hover, body.checkoutStep4 div.divOrderTotalButtons .secondaryButton:hover {
   background-color: #FFF !important;
   border: 1px solid #3C4350 !important;
   border-radius: 2px !important;
   color: #3C4350 !important;
 }
 
-body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnCheckout input, body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy input, body.shoppingCart #divSavedItems .divProductButtons .primaryWrapBtn.wrapBtnaddtocart input, body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist input, body.shoppingCart #divSavedItems .divButtons.divProductButtons .primaryWrapBtn.wrapBtnmovealltocart input, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall input, body.pgSignIn #frmSignIn .primaryWrapBtn input, body.checkoutStep1 div#divContent .primaryWrapBtn input, body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout input, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder input, body.checkoutStep3 #continueCheckout .primaryWrapBtn.wrapBtncontinuecheckout input, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder input, body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder input, body.pg-your-receipt #frmSubmitOrder .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt input, body.pg-order-confirmation #orderConfirmIntroMiddle .primaryWrapBtn.wrapBtnsaveforlater input, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt input, body.checkoutStep3 .divQCardAcceptOffer .primaryButton, body.checkoutStep3 .divQCardAcceptOffer .secondaryButton, body.checkoutStep3 #voucherCode .btn-secondary, body.checkoutStep4 div.divOrderTotalButtons .secondaryButton {
+body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnCheckout input, body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy input, body.shoppingCart #divSavedItems .divProductButtons .primaryWrapBtn.wrapBtnaddtocart input, body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist input, body.shoppingCart #divSavedItems .divButtons.divProductButtons .primaryWrapBtn.wrapBtnmovealltocart input, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall input, body.pgSignIn #frmSignIn .primaryWrapBtn input, body.checkoutStep1 div#divContent .primaryWrapBtn input, body.checkoutStep1 div#divContent .primaryWrapBtn.wrapBtncontinuecheckout input, body.checkoutStep1 div#divContent .secondaryWrapBtn.wrapBtncancelorder input, body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout input, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder input, body.checkoutStep3 #continueCheckout .primaryWrapBtn.wrapBtncontinuecheckout input, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder input, body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder input, body.pg-your-receipt #frmSubmitOrder .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt input, body.pg-order-confirmation #orderConfirmIntroMiddle .primaryWrapBtn.wrapBtnsaveforlater input, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt input, body.checkoutStep3 .divQCardAcceptOffer .primaryButton, body.checkoutStep3 .divQCardAcceptOffer .secondaryButton, body.checkoutStep3 #voucherCode .btn-secondary, body.checkoutStep4 div.divOrderTotalButtons .secondaryButton {
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
           align-items: center !important;
@@ -63,7 +63,7 @@ body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnCheckout input, body.s
  * Button Styling
  */
 body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnCheckout,
-body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy, body.shoppingCart #divSavedItems .divProductButtons .primaryWrapBtn.wrapBtnaddtocart, body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist, body.shoppingCart #divSavedItems .divButtons.divProductButtons .primaryWrapBtn.wrapBtnmovealltocart, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall, body.pgSignIn #frmSignIn .primaryWrapBtn, body.checkoutStep1 div#divContent .primaryWrapBtn, body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep3 #continueCheckout .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder, body.pg-your-receipt #frmSubmitOrder .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt, body.pg-order-confirmation #orderConfirmIntroMiddle .primaryWrapBtn.wrapBtnsaveforlater, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt {
+body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy, body.shoppingCart #divSavedItems .divProductButtons .primaryWrapBtn.wrapBtnaddtocart, body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist, body.shoppingCart #divSavedItems .divButtons.divProductButtons .primaryWrapBtn.wrapBtnmovealltocart, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall, body.pgSignIn #frmSignIn .primaryWrapBtn, body.checkoutStep1 div#divContent .primaryWrapBtn, body.checkoutStep1 div#divContent .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep1 div#divContent .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep3 #continueCheckout .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder, body.pg-your-receipt #frmSubmitOrder .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt, body.pg-order-confirmation #orderConfirmIntroMiddle .primaryWrapBtn.wrapBtnsaveforlater, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt {
   background: none !important;
   border: none !important;
   padding: 15px 0 !important;
@@ -71,19 +71,19 @@ body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy, body.shoppin
 
 @media screen and (min-width: 668px) {
   body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnCheckout,
-  body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy, body.shoppingCart #divSavedItems .divProductButtons .primaryWrapBtn.wrapBtnaddtocart, body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist, body.shoppingCart #divSavedItems .divButtons.divProductButtons .primaryWrapBtn.wrapBtnmovealltocart, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall, body.pgSignIn #frmSignIn .primaryWrapBtn, body.checkoutStep1 div#divContent .primaryWrapBtn, body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep3 #continueCheckout .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder, body.pg-your-receipt #frmSubmitOrder .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt, body.pg-order-confirmation #orderConfirmIntroMiddle .primaryWrapBtn.wrapBtnsaveforlater, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt {
+  body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy, body.shoppingCart #divSavedItems .divProductButtons .primaryWrapBtn.wrapBtnaddtocart, body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist, body.shoppingCart #divSavedItems .divButtons.divProductButtons .primaryWrapBtn.wrapBtnmovealltocart, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall, body.pgSignIn #frmSignIn .primaryWrapBtn, body.checkoutStep1 div#divContent .primaryWrapBtn, body.checkoutStep1 div#divContent .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep1 div#divContent .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep3 #continueCheckout .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder, body.pg-your-receipt #frmSubmitOrder .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt, body.pg-order-confirmation #orderConfirmIntroMiddle .primaryWrapBtn.wrapBtnsaveforlater, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt {
     width: 100%;
   }
 }
 
 @media screen and (min-width: 801px) {
   body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnCheckout,
-  body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy, body.shoppingCart #divSavedItems .divProductButtons .primaryWrapBtn.wrapBtnaddtocart, body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist, body.shoppingCart #divSavedItems .divButtons.divProductButtons .primaryWrapBtn.wrapBtnmovealltocart, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall, body.pgSignIn #frmSignIn .primaryWrapBtn, body.checkoutStep1 div#divContent .primaryWrapBtn, body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep3 #continueCheckout .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder, body.pg-your-receipt #frmSubmitOrder .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt, body.pg-order-confirmation #orderConfirmIntroMiddle .primaryWrapBtn.wrapBtnsaveforlater, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt {
+  body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy, body.shoppingCart #divSavedItems .divProductButtons .primaryWrapBtn.wrapBtnaddtocart, body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist, body.shoppingCart #divSavedItems .divButtons.divProductButtons .primaryWrapBtn.wrapBtnmovealltocart, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall, body.pgSignIn #frmSignIn .primaryWrapBtn, body.checkoutStep1 div#divContent .primaryWrapBtn, body.checkoutStep1 div#divContent .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep1 div#divContent .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep3 #continueCheckout .primaryWrapBtn.wrapBtncontinuecheckout, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder, body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder, body.pg-your-receipt #frmSubmitOrder .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt, body.pg-order-confirmation #orderConfirmIntroMiddle .primaryWrapBtn.wrapBtnsaveforlater, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt {
     padding: 0 !important;
   }
 }
 
-body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnCheckout span, body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy span, body.shoppingCart #divSavedItems .divProductButtons .primaryWrapBtn.wrapBtnaddtocart span, body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist span, body.shoppingCart #divSavedItems .divButtons.divProductButtons .primaryWrapBtn.wrapBtnmovealltocart span, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall span, body.pgSignIn #frmSignIn .primaryWrapBtn span, body.checkoutStep1 div#divContent .primaryWrapBtn span, body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout span, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder span, body.checkoutStep3 #continueCheckout .primaryWrapBtn.wrapBtncontinuecheckout span, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder span, body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder span, body.pg-your-receipt #frmSubmitOrder .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt span, body.pg-order-confirmation #orderConfirmIntroMiddle .primaryWrapBtn.wrapBtnsaveforlater span, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt span {
+body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnCheckout span, body.shoppingCart #divShoppingCart .primaryWrapBtn.wrapBtnSpeedBuy span, body.shoppingCart #divSavedItems .divProductButtons .primaryWrapBtn.wrapBtnaddtocart span, body.shoppingCart #divSavedItems .divProductButtons .secondaryWrapBtn.wrapBtnaddtowishlist span, body.shoppingCart #divSavedItems .divButtons.divProductButtons .primaryWrapBtn.wrapBtnmovealltocart span, body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn.wrapBtnremoveall span, body.pgSignIn #frmSignIn .primaryWrapBtn span, body.checkoutStep1 div#divContent .primaryWrapBtn span, body.checkoutStep1 div#divContent .primaryWrapBtn.wrapBtncontinuecheckout span, body.checkoutStep1 div#divContent .secondaryWrapBtn.wrapBtncancelorder span, body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout span, body.checkoutStep2 .secondaryWrapBtn.wrapBtncancelorder span, body.checkoutStep3 #continueCheckout .primaryWrapBtn.wrapBtncontinuecheckout span, body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder span, body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder span, body.pg-your-receipt #frmSubmitOrder .primaryWrapBtn.wrapBtnclickheretoprintyourreceipt span, body.pg-order-confirmation #orderConfirmIntroMiddle .primaryWrapBtn.wrapBtnsaveforlater span, body.pg-order-confirmation #orderConfirmIntroMiddle .secondaryWrapBtn.wrapBtnviewreceipt span {
   display: none !important;
 }
 
@@ -255,6 +255,23 @@ body.shoppingCart #divSavedItems .divButtons.divProductButtons .secondaryWrapBtn
   }
 }
 
+@media screen and (min-width: 668px) {
+  body.checkoutStep1 div#divContent .primaryWrapBtn.wrapBtncontinuecheckout input {
+    width: 195px !important;
+  }
+}
+
+body.checkoutStep1 div#divContent .secondaryWrapBtn.wrapBtncancelorder {
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 668px) {
+  body.checkoutStep1 div#divContent .secondaryWrapBtn.wrapBtncancelorder input {
+    margin-top: 0;
+    width: 195px !important;
+  }
+}
+
 /* SHIPPING STEP #2 */
 @media screen and (min-width: 668px) {
   body.checkoutStep2 .primaryWrapBtn.wrapBtncontinuecheckout input {
@@ -327,6 +344,7 @@ body.checkoutStep3 #continueCheckout ~ .secondaryWrapBtn.wrapBtncancelorder {
 /* SHIPPING STEP #4 */
 @media screen and (min-width: 668px) {
   body.checkoutStep4 div.divOrderTotalButtons .primaryWrapBtn.wrapBtnclickheretosubmitorder input {
+    font-size: 10px !important;
     width: 195px !important;
   }
 }
@@ -337,6 +355,7 @@ body.checkoutStep4 div.divOrderTotalButtons .secondaryButton {
 
 @media screen and (min-width: 668px) {
   body.checkoutStep4 div.divOrderTotalButtons .secondaryButton {
+    font-size: 10px !important;
     width: 195px !important;
   }
 }

@@ -1,0 +1,193 @@
+#monetate_selectorHTML_1c9f49b7_0 {
+	-ms-flex-align: center;
+	-webkit-box-align: center;
+	align-items: center;
+	background-color: #2D2C2F!important;
+	color: #fff;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font: 0/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	height: 43px;
+}
+
+.mt_promobanner_content {
+  font-size: 10px;
+  padding-left: 10px;
+  padding-right: 40px;
+	text-align: center;
+	width: 100%;
+  @media screen and (min-width: 768px) {
+    font-size: 13px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.mt_flyout_opened .mt_flyoutbanner_toggle {
+  height: 31px !important;
+	position: absolute;
+	right: 0;
+	width: auto !important;
+}
+.mt_flyout_collapsed .mt_flyoutbanner_toggle {
+	background-color: #2D2C2F;
+	border: 10px solid #2D2C2F;
+	border-radius: 100px;
+	left: 10px;
+	max-height: 40px !important;
+	max-width: 40px !important;
+	position: fixed !important;
+	top: 35px;
+}
+
+.mt_flyout_collapsed {
+	top: -30px;
+}
+.mt_flyout_collapsed .mt_promobanner_content {
+	display: none;
+}
+.siteCallout>.container {
+	-ms-flex-align: center;
+	-ms-flex-pack: center;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 100% !important;
+	justify-content: center;
+}
+.mt_coupon_code_button {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 3px;
+	color: #fff;
+	font-weight: bold;
+	margin-left: 8px;
+	padding: 5px 8px;
+	text-transform: uppercase;
+}
+
+.mt_coupon_code {
+	font-weight: bold;
+}
+.mt_coupon_btn_wrap {
+	display: inline-block;
+	position: relative;
+}
+.mt_flyout_collapsed .post-header-banner.hidden-mobile>div {
+	height: 0 !important;
+}
+@media (max-width: 768px) {
+	.mt_coupon_code_button {
+		padding: 1px 6px;
+	}
+	#monetate_selectorHTML_1c9f49b7_0 {
+		font-size: 13px;
+	}
+}
+
+@media (min-width: 960px) {
+	.post-header-banner.hidden-mobile {
+		max-height: 43px !important;
+	}
+}
+@media (min-width: 960px) and (max-width: 1040px) {
+	.mt_flyout_collapsed .mt_flyoutbanner_toggle {
+		top: 70px;
+	}
+}
+@media screen and (max-width: 960px) {
+	.post-header-banner.hidden-mobile {
+		display: block !important;
+	}
+.mt_flyout_opened .post-header-banner.hidden-mobile > div{
+min-height: 43px !important;
+}
+	#navigation .mobile-pre-header-banner {
+		display: none !important;
+	}
+	.mobile-home-page-link {
+		margin-top: 0 !important;
+	}
+	.mt_flyout_collapsed .mt_flyoutbanner_toggle {
+		bottom: 56px !important;
+		height: 40px !important;
+		top: auto;
+		width: 40px !important;
+	}
+	div#header {
+		z-index: 1000000;
+	}
+}
+/* START TOOLTIP STYLES */
+
+[data-tooltip] {
+	position: relative;
+	/* opinion 1 */
+}
+/* Applies to all tooltips */
+
+[data-tooltip]:before, [data-tooltip]:after {
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	display: none;
+	/* opinion 2 */
+	font-size: .9em;
+	/* opinion 3 */
+	line-height: 1;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	text-transform: none;
+	user-select: none;
+}
+[data-tooltip]:before {
+	-ms-transform: translate(.5em, -50%);
+	-webkit-transform: translate(.5em, -50%);
+	border: 5px solid transparent;
+	border-left-width: 0;
+	border-right-color: #333;
+	content: '';
+	right: calc(0em - 5px);
+	/* absurdity 1 */
+	top: 50%;
+	transform: translate(.5em, -50%);
+	/* opinion 4 */
+	z-index: 1001;
+}
+[data-tooltip]:after {
+	-ms-transform: translate(.5em, -50%);
+	-o-text-overflow: ellipsis;
+	-webkit-box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+	-webkit-transform: translate(.5em, -50%);
+	background: #333;
+	border-radius: .3ch;
+	box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+	color: #fff;
+	content: attr(data-tooltip);
+	/* magic! */
+	/* most of the rest of this is opinion */
+	font-family: Helvetica, sans-serif;
+	left: calc(100% + 5px);
+	max-width: 21em;
+	/*Let the content set the size of the tooltipsbut this will also keep them from being obnoxious*/
+	min-width: 3em;
+	overflow: hidden;
+	padding: 1ch 1.5ch;
+	text-align: center;
+	text-overflow: ellipsis;
+	/* absurdity 2 */
+	top: 50%;
+	transform: translate(.5em, -50%);
+	white-space: nowrap;
+	z-index: 1000;
+}
+/* Make the tooltips respond to hover */
+
+[data-tooltip]:hover::before, [data-tooltip]:hover::after, [data-tooltip].copied::before, [data-tooltip].copied::after {
+	display: block;
+	opacity: 1;
+}

@@ -1,0 +1,14 @@
+@media screen and (min-width: 1024px) {
+  /* Show color swatches */
+  fieldset.swatchset .colorContainer {
+    height: 40px !important;
+    visibility: visible !important;
+  }
+
+  /* Adjust padding/height of product info */
+  .productCell .productInfo {
+    height: 162px !important;
+    padding-left: 15px !important;
+  }
+
+}

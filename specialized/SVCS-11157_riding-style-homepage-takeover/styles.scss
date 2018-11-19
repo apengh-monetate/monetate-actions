@@ -1,3 +1,6 @@
+$breakpoint-md: 641px;
+$breakpoint-md: 960px;
+
 div#page {
   header#header > .container-fluid,
   #content,
@@ -8,6 +11,7 @@ div#page {
 
 
 body.page-homepage {
+  background: #333;
   padding-top: 32px !important;
 }
 
@@ -15,3 +19,131 @@ body.page-homepage {
 header#header {
   height: 32px !important;
 }
+
+
+
+.mt_riding-style {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  height: calc(100% - 32px);
+  position: fixed;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-md) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  &__column {
+
+    border: none;
+    display: block;
+    height: 25%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-md) {
+      height: 100%;
+      width: 25%;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      .mt_riding-style__inner {
+        @media screen and (min-width: $breakpoint-md) {
+          transform: scale(1.2);
+        }
+      }
+      .mt_riding-style__overlay {
+        background: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+
+
+  &__inner {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    &.mountain {
+      background-image: url('https://via.placeholder.com/600x300/333F3F');
+      @media screen and (min-width: $breakpoint-md) {
+        background-image: url('https://via.placeholder.com/360x810/333F3F');
+      }
+    }
+    &.road {
+      background-image: url('https://via.placeholder.com/600x300/222F2F');
+      @media screen and (min-width: $breakpoint-md) {
+        background-image: url('https://via.placeholder.com/360x810/222F2F');
+      }
+    }
+    &.active {
+      background-image: url('https://via.placeholder.com/600x300/333F3F');
+      @media screen and (min-width: $breakpoint-md) {
+        background-image: url('https://via.placeholder.com/360x810/333F3F');
+      }
+    }
+    &.electric {
+      background-image: url('https://via.placeholder.com/600x300/222F2F');
+      @media screen and (min-width: $breakpoint-md) {
+        background-image: url('https://via.placeholder.com/360x810/222F2F');
+      }
+    }
+  }
+
+
+  &__overlay {
+    align-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  p {
+    color: #fff !important;
+    display: block;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  &__heading {
+    font-family: 'DIN W01 Cond Medium', sans-serif;
+    font-size: 16px;
+  }
+  &__category {
+    font-family: 'DIN Offc W01 Cond', sans-serif;
+    font-size: 28px;
+  }
+
+
+  //
+  //
+  // .mobile-only {
+  //   display: block;
+  //   @media screen and (min-width: $breakpoint-md) {
+  //     display: none;
+  //   }
+  // }
+  // .desktop-only {
+  //   display: none;
+  //   @media screen and (min-width: $breakpoint-md) {
+  //     display: block;
+  //   }
+  // }
+} // .mt_riding-style

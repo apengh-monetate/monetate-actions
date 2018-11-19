@@ -1,6 +1,20 @@
+.prescriptionsContainer .btn_all-to-cart {
+  display: block !important;
+  width: 100% !important;
+}
+
+.prescriptionsContainer .add-to-cart_div {
+  padding: 40px 10px !important;
+}
+
 .prescriptionsContainer .prescription-list .heading--tertiary {
-  margin-left: -10px !important;
-  padding-left: 0 !important;
+  float: none !important;
+  margin-bottom: 30px !important;
+  padding-left: 10px !important;
+}
+
+.prescriptionsContainer .prescription {
+  margin-top: 30px !important;
 }
 
 .prescriptionsContainer .prescription button.primary-btn.prescription_item_add-to-cart-btn {

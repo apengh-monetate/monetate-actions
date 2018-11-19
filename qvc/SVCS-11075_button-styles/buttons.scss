@@ -323,6 +323,29 @@ body.checkoutStep1 div#divContent {
       }
     }
   }
+
+  // Continue Checkout
+  .primaryWrapBtn.wrapBtncontinuecheckout {
+    @extend %button;
+    @extend %primary;
+    input {
+      @media screen and (min-width: $breakpoint-sm) {
+        width: 195px !important;
+      }
+    }
+  }
+
+  .secondaryWrapBtn.wrapBtncancelorder {
+    @extend %button;
+    @extend %secondary;
+    margin-top: 15px;
+    input {
+      @media screen and (min-width: $breakpoint-sm) {
+        margin-top: 0;
+        width: 195px !important;
+      }
+    }
+  }
 }
 
 
@@ -441,6 +464,7 @@ body.checkoutStep4 {
       @extend %primary;
       input {
         @media screen and (min-width: $breakpoint-sm) {
+          font-size: 10px !important;
           width: 195px !important;
         }
       }
@@ -450,6 +474,7 @@ body.checkoutStep4 {
       @extend %secondary-button;
       margin-top: 15px;
       @media screen and (min-width: $breakpoint-sm) {
+        font-size: 10px !important;
         width: 195px !important;
       }
     }
