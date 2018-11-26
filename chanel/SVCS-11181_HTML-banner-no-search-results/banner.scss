@@ -1,0 +1,167 @@
+@import "../variables";
+
+
+.mt-banner {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 1440px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-lg) {
+    margin-top: 100px;
+  }
+  
+  
+  
+  
+  &__text {
+    display: block;
+    margin-top: 18px;
+    position: relative;
+    @media screen and (min-width: $breakpoint-md) {
+      margin-top: 0;
+      max-width: 590px;
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50%;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      width: 100%;
+    }
+  }
+  
+  &__headline {
+    color: $black;
+    font-family: $font-secondary;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: 31px;
+    @media screen and (min-width: $breakpoint-md) {
+      color: #fff;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      font-size: 40px;
+      line-height: 45px;
+    }
+  }
+  
+  
+  &__message {
+    color: $black !important;
+    font-family: $font-primary;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 9px;
+    padding: 0 15px;
+    @media screen and (min-width: $breakpoint-md) {
+      color: #fff !important;
+    }
+  }
+  
+  
+  &__button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 18px;
+    position: relative;
+    & > a {
+      align-content: center;
+      align-items: center;
+      border: 1px solid #000;
+      border-radius: 0;
+      color: #000;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: 'abchanel-pb-s', sans-serif;
+      font-size: .6875rem;
+      font-weight: 600;
+      height: 3.125rem;
+      justify-content: center;
+      letter-spacing: normal;
+      line-height: 1.2727272727;
+      padding: 0 53.5px;
+      position: relative;
+      text-align: center;
+      text-transform: lowercase;
+      user-select: none;
+      vertical-align: middle;
+      @media screen and (min-width: $breakpoint-md) {
+        border: 1px solid #fff;
+        color: #fff;
+      }
+      & > span {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        & > span {
+          position: relative;
+          &::after {
+            @media screen and (min-width: $breakpoint-lg) {
+              bottom: -.3rem;
+              content: "";
+              height: 1px;
+              left: 0;
+              position: absolute;
+              transform: scaleX(.98);
+              transition: all .5s ease-out;
+              width: 100%;
+            }
+          }
+        }
+      }
+      
+      
+      &:hover {
+        & > span {
+          & > span {
+            &::after {
+              @media screen and (min-width: $breakpoint-lg) {
+                animation: fadeIn .5s ease-out forwards;
+                background-color: #fff;
+                filter: blur(0);
+                opacity: 1;
+                transform: scaleX(1);
+                transition: all .5s ease-out;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+} // .mt-banner
+
+
+
+/* If selector is .subfooter__container first child
+ * move padding/sizing from .subfooter__container
+ * to .subfooter__container > ul
+ * remove max-width from .subfooter__container to make full width
+ */
+.subfooter__container {
+  max-width: 100% !important;
+  padding: 0 !important;
+
+  & > ul {
+    margin: 0 auto !important;
+    max-width: 81.375rem !important;
+    padding: 3.375rem 5.3191489362% !important;
+    @media screen and (min-width: $breakpoint-md) {
+      padding-left: 5.2777777778% !important;
+      padding-right: 5.2777777778% !important;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      padding-bottom: 1.375rem !important;
+      padding-left: 1.875rem !important;
+      padding-right: 1.875rem !important;
+    }
+  }
+}

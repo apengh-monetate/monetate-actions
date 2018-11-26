@@ -1,0 +1,186 @@
+{
+  "id": 368194,
+  "title": "HTML Banner No Search Results Page",
+  "description": "HTML Banner for No Search Results Page",
+  "op": "selectorInsertHtmlString",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Search page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<section class=\"mt-banner\">\n  <div class=\"mt-banner__img\">\n    <picture>\n      <source srcset=\"https://via.placeholder.com/960x1025/000\" media=\"(max-width: 719px)\">\n      <source srcset=\"https://via.placeholder.com/2880x900/000\" media=\"(min-width: 720px)\">\n      <img src=\"https://via.placeholder.com/2880x900/000\" />\n    </picture>\n  </div>\n\n  <div class=\"mt-banner__text\">\n    <h3 class=\"mt-banner__headline\">The Gifted Lists</h3>\n    <p class=\"mt-banner__message\">Look no further for holiday inspiration. CHANEL offers unique fragrance, makeup and skincare gifts for women and men.</p>\n    <p class=\"mt-banner__button\">\n      <a href=\"#\" role=\"button\">\n        <span>\n          <span>Discover</span>\n        </span>\n      </a>\n    </p>\n  </div>\n</section>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "div.subfooter__container"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "first"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".mt-banner {\n  display: block;\n  margin: 0 auto;\n  margin-top: 30px;\n  max-width: 1440px;\n  position: relative;\n  text-align: center;\n  width: 100%;\n}\n\n@media screen and (min-width: 72.5rem) {\n  .mt-banner {\n    margin-top: 100px;\n  }\n}\n\n.mt-banner__text {\n  display: block;\n  margin-top: 18px;\n  position: relative;\n}\n\n@media screen and (min-width: 45rem) {\n  .mt-banner__text {\n    margin-top: 0;\n    max-width: 590px;\n    position: absolute;\n    right: 5%;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    width: 50%;\n  }\n}\n\n@media screen and (min-width: 72.5rem) {\n  .mt-banner__text {\n    width: 100%;\n  }\n}\n\n.mt-banner__headline {\n  color: #1d1d1d;\n  font-family: \"abchanel-pb-s\", sans-serif;\n  font-size: 25px;\n  letter-spacing: 0;\n  line-height: 31px;\n}\n\n@media screen and (min-width: 45rem) {\n  .mt-banner__headline {\n    color: #fff;\n  }\n}\n\n@media screen and (min-width: 72.5rem) {\n  .mt-banner__headline {\n    font-size: 40px;\n    line-height: 45px;\n  }\n}\n\n.mt-banner__message {\n  color: #1d1d1d !important;\n  font-family: \"Helvetica\", \"Open-Sans\", \"sans-serif-light\", sans-serif;\n  font-size: 14px;\n  line-height: 18px;\n  margin-top: 9px;\n  padding: 0 15px;\n}\n\n@media screen and (min-width: 45rem) {\n  .mt-banner__message {\n    color: #fff !important;\n  }\n}\n\n.mt-banner__button {\n  display: block;\n  margin: 0 auto;\n  margin-top: 18px;\n  position: relative;\n}\n\n.mt-banner__button > a {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  border: 1px solid #000;\n  border-radius: 0;\n  color: #000;\n  cursor: pointer;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-family: 'abchanel-pb-s', sans-serif;\n  font-size: .6875rem;\n  font-weight: 600;\n  height: 3.125rem;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  letter-spacing: normal;\n  line-height: 1.2727272727;\n  padding: 0 53.5px;\n  position: relative;\n  text-align: center;\n  text-transform: lowercase;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  vertical-align: middle;\n}\n\n@media screen and (min-width: 45rem) {\n  .mt-banner__button > a {\n    border: 1px solid #fff;\n    color: #fff;\n  }\n}\n\n.mt-banner__button > a > span {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  text-align: center;\n  width: 100%;\n}\n\n.mt-banner__button > a > span > span {\n  position: relative;\n}\n\n@media screen and (min-width: 72.5rem) {\n  .mt-banner__button > a > span > span::after {\n    bottom: -.3rem;\n    content: \"\";\n    height: 1px;\n    left: 0;\n    position: absolute;\n    -webkit-transform: scaleX(0.98);\n            transform: scaleX(0.98);\n    -webkit-transition: all .5s ease-out;\n    transition: all .5s ease-out;\n    width: 100%;\n  }\n}\n\n@media screen and (min-width: 72.5rem) {\n  .mt-banner__button > a:hover > span > span::after {\n    -webkit-animation: fadeIn .5s ease-out forwards;\n            animation: fadeIn .5s ease-out forwards;\n    background-color: #fff;\n    -webkit-filter: blur(0);\n            filter: blur(0);\n    opacity: 1;\n    -webkit-transform: scaleX(1);\n            transform: scaleX(1);\n    -webkit-transition: all .5s ease-out;\n    transition: all .5s ease-out;\n  }\n}\n\n\n\n\n/* If selector is .subfooter__container first child\n * move padding/sizing from .subfooter__container\n * to .subfooter__container > ul\n * remove max-width from .subfooter__container to make full width\n */\n.subfooter__container {\n  max-width: 100% !important;\n  padding: 0 !important;\n}\n\n.subfooter__container > ul {\n  margin: 0 auto !important;\n  max-width: 81.375rem !important;\n  padding: 3.375rem 5.3191489362% !important;\n}\n\n@media screen and (min-width: 45rem) {\n  .subfooter__container > ul {\n    padding-left: 5.2777777778% !important;\n    padding-right: 5.2777777778% !important;\n  }\n}\n\n@media screen and (min-width: 72.5rem) {\n  .subfooter__container > ul {\n    padding-bottom: 1.375rem !important;\n    padding-left: 1.875rem !important;\n    padding-right: 1.875rem !important;\n  }\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "unknown"
+        ],
+        "id": 209654,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      },
+      {
+        "values": [
+          "/us/search"
+        ],
+        "id": 209655,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "contains",
+          "label": "URL",
+          "rule_name": "page_url",
+          "rule_op": "icontains",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

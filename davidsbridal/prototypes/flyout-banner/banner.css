@@ -1,0 +1,56 @@
+.mt_nav-banner {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt_nav-banner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #f93777;
+    color: #fff;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__main-nav-topic-section {
+    -webkit-box-flex: 1 !important;
+        -ms-flex-positive: 1 !important;
+            flex-grow: 1 !important;
+  }
+}
+
+.header__main-nav-topic-section-list div[id^="monetate_selectorHTML"] {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__main-nav-topic-section-list div[id^="monetate_selectorHTML"] {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: -17px;
+    margin-top: 17px;
+    -webkit-box-ordinal-group: 10000;
+        -ms-flex-order: 9999;
+            order: 9999;
+    position: relative;
+    width: 100%;
+  }
+}

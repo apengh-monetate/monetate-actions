@@ -1,0 +1,38 @@
+.mt_nav-banner {
+  display: none;
+  @media screen and (min-width: 1024px) {
+    align-items: center;
+    background: #f93777;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    position: relative;
+    width: 100%;
+  }
+}
+
+
+.header__main-nav-topic-section {
+  @media screen and (min-width: 1024px) {
+    flex-grow: 1 !important;
+  }
+  
+}
+
+.header__main-nav-topic-section-list {
+  div[id^="monetate_selectorHTML"] {
+    display: none;
+    @media screen and (min-width: 1024px) {
+      align-items: center;
+      display: inline-flex;
+      justify-content: center;
+      margin-bottom: -17px;
+      margin-top: 17px;
+      order: 9999;
+      position: relative;
+      width: 100%;
+    }
+  }
+}

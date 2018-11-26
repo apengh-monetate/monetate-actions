@@ -1,4 +1,5 @@
 $breakpoint-md:    45rem;
+$breakpoint-lg:    72.5rem;
 
 $font-primary:     'Helvetica', 'Open-Sans', "sans-serif-light", sans-serif;
 $font-secondary:   'abchanel-pb-s', sans-serif;
@@ -6,14 +7,5 @@ $font-secondary:   'abchanel-pb-s', sans-serif;
 $max-width:        1272px;
 
 
-.mt_video-link {
-  display: block;
-  font-size: 0;
-  height: 100%;
-  left: 0;
-  line-height: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
+
+$black: #1d1d1d;

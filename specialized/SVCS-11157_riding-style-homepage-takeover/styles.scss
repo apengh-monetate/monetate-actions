@@ -71,27 +71,27 @@ header#header {
     position: relative;
     width: 100%;
     &.mountain {
-      background-image: url('https://via.placeholder.com/600x300/333F3F');
+      background-image: url('https://sb.monetate.net/img/1/917/1825065.jpg');
       @media screen and (min-width: $breakpoint-md) {
-        background-image: url('https://via.placeholder.com/360x810/333F3F');
+        background-image: url('https://sb.monetate.net/img/1/917/1825061.jpg');
       }
     }
     &.road {
-      background-image: url('https://via.placeholder.com/600x300/222F2F');
+      background-image: url('https://sb.monetate.net/img/1/917/1825066.jpg');
       @media screen and (min-width: $breakpoint-md) {
-        background-image: url('https://via.placeholder.com/360x810/222F2F');
+        background-image: url('https://sb.monetate.net/img/1/917/1825062.jpg');
       }
     }
     &.active {
-      background-image: url('https://via.placeholder.com/600x300/333F3F');
+      background-image: url('https://sb.monetate.net/img/1/917/1825063.jpg');
       @media screen and (min-width: $breakpoint-md) {
-        background-image: url('https://via.placeholder.com/360x810/333F3F');
+        background-image: url('https://sb.monetate.net/img/1/917/1825059.jpg');
       }
     }
     &.electric {
-      background-image: url('https://via.placeholder.com/600x300/222F2F');
+      background-image: url('https://sb.monetate.net/img/1/917/1825064.jpg');
       @media screen and (min-width: $breakpoint-md) {
-        background-image: url('https://via.placeholder.com/360x810/222F2F');
+        background-image: url('https://sb.monetate.net/img/1/917/1825060.jpg');
       }
     }
   }

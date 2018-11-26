@@ -11,4 +11,9 @@
     padding-left: 15px !important;
   }
 
+  /* Hide "More Colors Available" Text */
+  .productInfo .moreColors {
+    display: none !important;
+  }
+
 }
