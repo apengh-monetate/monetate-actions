@@ -1,0 +1,24 @@
+.mt_lightbox {
+  display: block;
+  position: relative;
+
+
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  &__close {
+    display: block;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+  }
+  
+}

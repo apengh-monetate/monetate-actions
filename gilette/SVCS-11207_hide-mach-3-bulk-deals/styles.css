@@ -1,0 +1,74 @@
+@media screen and (max-width: 541px) {
+  #search-result-items .slick-dots li {
+    width: 50% !important;
+  }
+  #search-result-items .slick-dots li.slick-active {
+    background: #151d66 !important;
+    border-bottom: 5px solid #0069aa !important;
+  }
+  #search-result-items .slick-dots li:nth-child(1) {
+    border-bottom: 5px solid #f3702e !important;
+  }
+  #search-result-items .slick-dots li:nth-child(2) {
+    border-bottom: 5px solid #ffd600 !important;
+  }
+}
+
+@media screen and (min-width: 542px) {
+  #search-result-items .slick-dots li {
+    width: 50% !important;
+  }
+  #search-result-items .slick-dots li:nth-child(1) {
+    border-color: #f3702e !important;
+  }
+  #search-result-items .slick-dots li:nth-child(2) {
+    border-color: #ffd600 !important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #search-result-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #search-result-items li[data-positionreset="1"] {
+    display: none !important;
+  }
+  #search-result-items .grid-tile .dont-want a,
+  #search-result-items .grid-tile .best-val-parrent .best-val-title,
+  #search-result-items .grid-tile .what-you-get .what-you-get-head {
+    left: 115% !important;
+  }
+  #search-result-items .grid-tile .rhombus-logo {
+    left: 50% !important;
+    position: absolute !important;
+    -webkit-transform: translateX(-50%) !important;
+            transform: translateX(-50%) !important;
+  }
+}
+
+@media screen and (min-width: 777px) {
+  div[data-monetate-pid="00020800922784"] .super-promotext {
+    visibility: visible !important;
+  }
+  div[data-monetate-pid="00020800922784"] .super-promotext .super-promo {
+    left: 50% !important;
+    text-align: center !important;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 777px) {
+  div[data-monetate-pid="00020800922784"] .super-promotext .super-promo {
+    left: 110% !important;
+  }
+}

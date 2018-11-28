@@ -1,0 +1,53 @@
+[id^='monetate_badge']{
+ pointer-events: none; 
+}
+
+div[id^="monetate_badge"][id$="container"] {
+  display: block;
+  height: 100% !important;
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 100% !important;
+}
+
+
+/* TOP LEFT */
+div[id^="monetate_badge"] > div[id^="monetate_badge"] {
+  bottom: auto !important;
+  left: 0% !important;
+  right: auto !important;
+  top: 0% !important;
+}
+
+
+/* TOP RIGHT */
+/*
+div[id^="monetate_badge"] > div[id^="monetate_badge"] {
+  top: 0% !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: 0% !important;
+}
+*/
+
+
+/* BOTTOM LEFT */
+/*
+div[id^="monetate_badge"] > div[id^="monetate_badge"] {
+  top: auto !important;
+  bottom: 0% !important;
+  left: 0% !important;
+  right: auto !important;
+}
+*/
+
+/* BOTTOM RIGHT */
+/*
+div[id^="monetate_badge"] > div[id^="monetate_badge"] {
+  top: auto !important;
+  bottom: 0% !important;
+  left: auto !important;
+  right: 0% !important;
+}
+*/

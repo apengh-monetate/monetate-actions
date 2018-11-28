@@ -1,0 +1,92 @@
+// Mobile
+@media screen and (max-width: 541px) {
+  #search-result-items {
+    .slick-dots {
+      li {
+        width: 50% !important;
+        &.slick-active {
+          background: #151d66 !important;
+          border-bottom: 5px solid #0069aa !important;
+        }
+        
+        &:nth-child(1) {
+          border-bottom: 5px solid #f3702e !important;
+        }
+        &:nth-child(2) {
+          border-bottom: 5px solid #ffd600 !important;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 542px) {
+  #search-result-items {
+    .slick-dots {
+      li {
+        width: 50% !important;
+        &:nth-child(1) {
+          border-color: #f3702e !important;
+        }
+        &:nth-child(2) {
+          border-color: #ffd600 !important;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// Desktop
+@media screen and (min-width: 960px) {
+  #search-result-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    li[data-positionreset="1"] {
+      display: none !important;
+    }
+    
+    .grid-tile {
+      .dont-want a,
+      .best-val-parrent .best-val-title,
+      .what-you-get .what-you-get-head {
+        left: 115% !important;
+      }
+      .rhombus-logo {
+        left: 50% !important;
+        position: absolute !important;
+        transform: translateX(-50%) !important;
+      }
+    }
+    
+    
+  }
+}
+
+
+@media screen and (min-width: 777px) {
+  div[data-monetate-pid="00020800922784"] {
+    .super-promotext {
+      visibility: visible !important;
+      .super-promo {
+        left: 50% !important;
+        text-align: center !important;
+        transform: translateX(-50%);
+      }
+    }
+  }  
+}
+@media screen and (min-width: 777px) {
+  div[data-monetate-pid="00020800922784"] {
+    .super-promotext {
+      .super-promo {
+        left: 110% !important;
+      }
+    }
+  }  
+}

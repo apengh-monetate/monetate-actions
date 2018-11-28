@@ -2,7 +2,8 @@
 
 @media screen and (max-width: 640px) {
   #shippingAddressAddForm,
-  #billingAddressAddForm {
+  #billingAddressAddForm,
+  #addresses-form-entry {
     div.required-field-text-container {
       display: none;
     }
@@ -29,9 +30,10 @@
         border: 1px solid #000;
         display: block;
         margin: 0;
+        max-width: 230px;
         padding-left: 5px;
         position: relative;
-        width: 240px;
+        width: 100%;
         &.error {
           border: 1px solid #e91e25;
         }
@@ -41,6 +43,14 @@
           color: #999;
         }
       }
+
+      .form-success-icon.valid,
+      .form-error-icon.valid {
+        display: inline-block;
+        margin-left: 3px;
+        width: 0;
+      }
+      
     }
   }
 }
