@@ -1,0 +1,116 @@
+.mt_countdown {
+  color: #000;
+  display: block;
+  float: right;
+  height: auto;
+  margin: 0 auto;
+  max-width: 270px;
+  min-width: 180px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+#holidaycountdown {
+  color: #666;
+  line-height: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-top {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header-right {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 30%;
+            flex: 1 1 30%;
+    float: none !important;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .header-left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 30%;
+            flex: 1 1 30%;
+    float: none !important;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .mt_countdown {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+  .hed {
+    color: #666;
+    font-size: 8px;
+    letter-spacing: .16em;
+    line-height: 10px;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  .dek {
+    font-size: 10px;
+    letter-spacing: .16em;
+    line-height: 12px;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  .dek2 {
+    color: #666;
+    font-size: 8px;
+    letter-spacing: .16em;
+    line-height: 10px;
+    margin: 0 auto;
+    max-width: 80%;
+    text-align: center;
+  }
+  .header-right .hdrShipNote {
+    display: none !important;
+  }
+  #storeLocatorDesktop {
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mt_countdown {
+    min-width: 200px;
+  }
+  .header-left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40%;
+            flex: 1 1 40%;
+  }
+  .hed {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .dek {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .dek2 {
+    font-size: 8px;
+    line-height: 10px;
+    max-width: 100%;
+  }
+}

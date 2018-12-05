@@ -1,0 +1,354 @@
+{
+  "id": 358897,
+  "title": "Banner with Open Inputs - All Devices v2",
+  "description": "Inserts open-input banner with media queries for desktop, mobile, and tablet.",
+  "op": "openBannerAllDevices",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Any page",
+  "action_events": [
+    "op_impression",
+    "op_click"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#wrapper"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Supports CSS3 and Sizzle syntax.",
+        "label": "Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "before"
+      },
+      "widget": {
+        "description": "How the banner should be inserted relative to the selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "first",
+            "label": "First"
+          },
+          {
+            "name": "last",
+            "label": "Last"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insertion Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "desktopImg",
+        "value": {
+          "clickzones": [],
+          "creative": {
+            "last_updated": "2018-10-31T12:58:11",
+            "tags": {
+              "builtin": [
+                "image"
+              ],
+              "custom": []
+            },
+            "height": 60,
+            "generated": false,
+            "id": 1758574,
+            "archived": false,
+            "name": "e38245cf407078ad0e5849ae02354f5899716559 (1).png",
+            "extension": ".png",
+            "sha": "d2491bc077c0eb8d37328c96e2c78636d0998759",
+            "ref": "690/1758574.png",
+            "notes": "",
+            "width": 768,
+            "image_url": "https://dev-apengh-1.monetate.org/img/1/690/1758574.png",
+            "type": "image"
+          },
+          "href": "",
+          "discriminator": "img_creative",
+          "alt": "",
+          "dyntexts": []
+        }
+      },
+      "widget": {
+        "label": "Desktop Creative",
+        "type": "ImageCreative",
+        "description": "Upload an image creative for the banner",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "tabletImg",
+        "value": {
+          "clickzones": [],
+          "creative": {
+            "last_updated": "2018-10-31T12:58:11",
+            "tags": {
+              "builtin": [
+                "image"
+              ],
+              "custom": []
+            },
+            "height": 60,
+            "generated": false,
+            "id": 1758574,
+            "archived": false,
+            "name": "e38245cf407078ad0e5849ae02354f5899716559 (1).png",
+            "extension": ".png",
+            "sha": "d2491bc077c0eb8d37328c96e2c78636d0998759",
+            "ref": "690/1758574.png",
+            "notes": "",
+            "width": 768,
+            "image_url": "https://dev-apengh-1.monetate.org/img/1/690/1758574.png",
+            "type": "image"
+          },
+          "href": "",
+          "discriminator": "img_creative",
+          "alt": "",
+          "dyntexts": []
+        }
+      },
+      "widget": {
+        "label": "Tablet Creative",
+        "type": "ImageCreative",
+        "description": "Upload an image creative for the banner",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "mobileImg",
+        "value": {
+          "clickzones": [],
+          "creative": {
+            "last_updated": "2018-10-31T12:58:11",
+            "tags": {
+              "builtin": [
+                "image"
+              ],
+              "custom": []
+            },
+            "height": 60,
+            "generated": false,
+            "id": 1758574,
+            "archived": false,
+            "name": "e38245cf407078ad0e5849ae02354f5899716559 (1).png",
+            "extension": ".png",
+            "sha": "d2491bc077c0eb8d37328c96e2c78636d0998759",
+            "ref": "690/1758574.png",
+            "notes": "",
+            "width": 768,
+            "image_url": "https://dev-apengh-1.monetate.org/img/1/690/1758574.png",
+            "type": "image"
+          },
+          "href": "",
+          "discriminator": "img_creative",
+          "alt": "",
+          "dyntexts": []
+        }
+      },
+      "widget": {
+        "label": "Mobile Creative",
+        "type": "ImageCreative",
+        "description": "Upload an image creative for the banner",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "id",
+        "value": 0
+      },
+      "widget": {
+        "label": "ID",
+        "type": "IntegerField",
+        "description": "Enter a number from 0-31 only. If you want to group the display frequency of this banner with past/current Monetate banners and lightboxes, choose an ID that matches those banners and lightboxes. Otherwise, make sure the ID for this banner is unique from all other Monetate banners and lightboxes.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "showInterval",
+        "value": "page"
+      },
+      "widget": {
+        "description": "How long until the this banner is shown again. Based on ID.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "page",
+            "label": "Every page"
+          },
+          {
+            "name": "session",
+            "label": "Once per session"
+          },
+          {
+            "name": "30days",
+            "label": "Once per thirty days"
+          },
+          {
+            "name": "once",
+            "label": "Once, ever"
+          },
+          {
+            "name": "custominterval",
+            "label": "Once every 'X' days"
+          }
+        ],
+        "label": "How often (per user) should this banner be shown?"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "stateApp",
+        "value": "first"
+      },
+      "widget": {
+        "label": "When should the interval be applied?",
+        "options": [
+          {
+            "name": "first",
+            "label": "After the banner is first loaded"
+          },
+          {
+            "name": "close",
+            "label": "After the user closes the banner"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": " For \"Every page\", it won't matter. For the other intervals, this setting determines when to stop showing the banner.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_htmlString",
+        "value": "<div class=\"mt-desktop\"><img src=\"{{DESKTOP_IMAGE_URL}}\" /></div>\n\n<div class=\"mt-tablet\"><img src=\"{{TABLET_IMAGE_URL}}\" /></div>\n\n<div class=\"mt-mobile\"><img src=\"{{MOBILE_IMAGE_URL}}\" /></div>\n\n<div class=\"mt-countdown\">{{HOURS} hour[s]} {{MINUTES} minute[s]} {{SECONDS} second[s]}</div>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML.",
+        "label": "HTML String. Format countdown timer {{HOURS} hour[s]} {{MINUTES} minute[s]} {{SECONDS} second[s]}"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_css",
+        "value": {
+          "content": ".mt-open-bnr {\n  width: 100%;\n  background-color: #ed008c;\n  transition: height .5s;\n  -webkit-transition: height .5s;\n}\n\n.mt-open-bnr img {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.mt-countdown {\n  width: 100%;\n  position: absolute;\n  margin-top: -22px;\n  text-align: center;\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 18px;\n  color: #FFF;\n}\n\n/* Desktop */\n@media only screen and (min-device-width : 1024px) {\n  .mt-open-bnr .mt-desktop {\n  \tdisplay: block;\n  }\n  .mt-open-bnr .mt-tablet, .mt-open-bnr .mt-mobile {\n  \tdisplay: none;\n  }\n}\n\n/* Tablet */\n@media only screen and (min-device-width : 768px) and (max-device-width : 1023px) {\n  .mt-open-bnr .mt-tablet {\n  \tdisplay: block;\n  }\n  .mt-open-bnr .mt-desktop, .mt-open-bnr .mt-mobile {\n  \tdisplay: none;\n  }\n}\n\n/* Mobile */\n@media only screen and (max-device-width : 767px) {\n  .mt-open-bnr .mt-mobile {\n  \tdisplay: block;\n  }\n  .mt-open-bnr .mt-desktop, .mt-open-bnr .mt-tablet {\n  \tdisplay: none;\n  }\n}",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_javascript",
+        "value": {
+          "content": "var mtChecks = 0;\n\nfunction mtCheckForToggle() {\n  if(document.querySelector('.menu-toggle')) {\n    document.querySelector('.menu-toggle').addEventListener('click', function() {\n      if(document.querySelector('.hamburger-toggle').className.match(/open/g)) {\n        document.querySelector('.mt-open-bnr').style.height = 'auto';\n      } else {\n        document.querySelector('.mt-open-bnr').style.height = '0px';\n      }\n    });\n  } else {\n    mtChecks++;\n    if(mtChecks<10) {\n      window.setTimeout(mtCheckForToggle, 250);   \n    }\n  }\n};\n\nmtCheckForToggle();",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "label": "Script"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_time",
+        "value": "2018-10-31 00:00:00"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "DateTimeField",
+        "description": "End date and time for countdown timer. Timer will be hidden if blank.",
+        "label": "Timer"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_customInterval",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Days until the banner expires. Only to be used when 'Once every 'X' days' is selected from the frequency.",
+        "label": "Days until expiration"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "or|and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

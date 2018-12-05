@@ -1,0 +1,76 @@
+.hdrLogo {
+  position: relative;
+}
+.mt_countdown {
+  color: #000;
+  display: block;
+  float: right;
+  height: auto;
+  left: 90%;
+  margin: 0 auto;
+  max-width: 270px;
+  min-width: 210px;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: -10px;
+}
+#holidaycountdown{
+  color:#666; 
+  line-height: 8px;
+}
+.hed {
+  color: #666;
+  font-size: 8px;
+  letter-spacing: .16em;
+  line-height: 10px;
+  margin: 0;
+  margin-bottom: 4px;
+}
+.dek {
+  font-size: 10px;
+  letter-spacing: .16em;
+  line-height: 12px;
+  margin: 0;
+  margin-bottom: 4px;
+}
+.dek2 {
+  color: #666;
+  font-size: 8px;
+  letter-spacing: .16em;
+  line-height: 10px;
+  margin: 0 auto;
+  max-width: 80%;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header-right .hdrShipNote {
+    display: none !important;
+  }
+  #storeLocatorDesktop {
+    padding-right: 10px !important;
+  }
+}
+
+
+
+@media screen and (min-width: 1025px) {
+  .mt_countdown {
+    left: 100%;
+    top: -20px;
+  }
+  .hed {
+    font-size: 9px;
+    line-height: 12px;
+  }
+  .dek {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .dek2 {
+    font-size: 9px;
+    line-height: 12px;
+    max-width: 100%;
+  }
+}

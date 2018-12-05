@@ -50,12 +50,12 @@
     li[data-positionreset="1"] {
       display: none !important;
     }
-    
-    .grid-tile {
+    li[data-positionreset="2"] {
       .dont-want a,
-      .best-val-parrent .best-val-title,
-      .what-you-get .what-you-get-head {
+      .what-you-get .what-you-get-head,
+      .best-val-parrent .best-val-title {
         left: 115% !important;
+        transform: translateX(-50%);
       }
       .rhombus-logo {
         left: 50% !important;
@@ -63,7 +63,22 @@
         transform: translateX(-50%) !important;
       }
     }
-    
+    li[data-positionreset="3"] {
+      .best-val-parrent .best-val-title {
+        left: 115% !important;
+        transform: translateX(-50%);
+      }
+      .dont-want a,
+      .what-you-get .what-you-get-head {
+        left: -13% !important;
+        transform: translateX(-50%);
+      }
+      .rhombus-logo {
+        left: 50% !important;
+        position: absolute !important;
+        transform: translateX(-50%) !important;
+      }
+    }
     
   }
 }

@@ -1,0 +1,40 @@
+.mt-oip {
+  display: block;
+  position: relative;
+  width: 100%;
+  &[data-collapsible-status="closed"] {
+    border-top: none;
+  }
+  &[data-collapsible-status="open"] {
+    border-top: 2px solid #E9E9E9;
+  }
+  
+  &__content {
+    border-top: none !important;
+    &[data-collapsible-status="closed"] {
+      display: none;
+    }
+    &[data-collapsible-status="open"] {
+      display: block;
+    }
+  }
+
+  &__heading {
+    span.glyphicon {
+      width: 16px !important;
+    }
+  }
+  
+}
+
+
+.prescriptionsContainer {
+  .prescription-list {
+    clear: both !important;
+    .heading--tertiary {
+      margin-left: 0 !important;
+      margin-top: 15px !important;
+    }
+  }
+}
+

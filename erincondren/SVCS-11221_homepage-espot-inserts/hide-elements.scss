@@ -1,0 +1,12 @@
+.bootstrap-main-container {
+
+
+  .row.collection-banner,
+  .row.collection-banner + div[class*="gap"],
+  .story-slider-ghost,
+  .storefront-story-slider,
+  .row + div[class*="gap"] {
+    display: none !important;
+  }
+  
+}

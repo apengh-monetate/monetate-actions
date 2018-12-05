@@ -1,0 +1,193 @@
+{
+  "id": 370597,
+  "title": "Takeover Image Spots on HP Under Hero",
+  "description": "Takeover Image Spots on HP Under Hero",
+  "op": "selectorInsertHtmlString",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Home Page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<div class=\"mt_linkbox\">\n<h3 class=\"mt_linkbox__heading\">Backpacks</h3>\n\n<p class=\"mt_linkbox__link\"><a href=\"https://www.kipling-usa.com/backpacks-laptop/\">Laptop</a></p>\n\n<p class=\"mt_linkbox__link\"><a href=\"https://www.kipling-usa.com/backpacks-fashion/\">Fashion</a></p>\n\n<p class=\"mt_linkbox__link\"><a href=\"https://www.kipling-usa.com/backpacks-wheeled/\">Rolling</a></p>\n\n<p class=\"mt_linkbox__link\"><a href=\"https://www.kipling-usa.com/backpacks-use-travel/\">Travel</a></p>\n</div>\n"
+      },
+      "widget": {
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": null
+      },
+      "widget": {
+        "label": "Image Spot",
+        "options": [
+          {
+            "name": "div.hp--wrapper-2 > div.departments--wrapper > div.dp--div:eq(0)",
+            "label": "First Image"
+          },
+          {
+            "name": "div.hp--wrapper-2 > div.departments--wrapper > div.dp--div:eq(1)",
+            "label": "Second Image"
+          },
+          {
+            "name": "div.hp--wrapper-2 > div.departments--wrapper > div.dp--div:eq(2)",
+            "label": "Third Image"
+          },
+          {
+            "name": "div.hp--wrapper-2 > div.departments--wrapper > div.dp--div:eq(3)",
+            "label": "Fourth Image"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Image Spot to takeover (1-4)",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "takeover"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": "display: block;\nposition: relative;\nwidth: 100%;\nheight: 100%;\nbackground: #2d2c2f;"
+      },
+      "widget": {
+        "label": "Banner Div Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".mt_linkbox {\n  -ms-flex-line-pack: stretch;\n      align-content: stretch;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 5% 0;\n  position: relative;\n  width: 100%;\n}\n\n@media screen and (min-width: 768px) {\n  .mt_linkbox {\n    padding: 5% 0 8%;\n  }\n}\n\n.mt_linkbox__heading {\n  color: #fff;\n  display: block;\n  font-family: 'Kipling-ExtraBold', 'Futura', sans-serif;\n  font-size: 18px;\n  letter-spacing: 0;\n  line-height: 22px;\n  padding-bottom: 5px;\n  text-align: center;\n  text-transform: uppercase;\n  width: 100%;\n}\n\n@media screen and (min-width: 768px) {\n  .mt_linkbox__heading {\n    font-size: 22px;\n    line-height: 26px;\n  }\n}\n\n@media screen and (min-width: 1200px) {\n  .mt_linkbox__heading {\n    font-size: 28px;\n    line-height: 32px;\n  }\n}\n\n.mt_linkbox__link {\n  display: block;\n  position: relative;\n  text-align: center;\n  width: 100%;\n}\n\n.mt_linkbox__link a {\n  color: #fff;\n  display: inline-block;\n  font-family: 'Kipling-Regular', 'Futura', sans-serif;\n  font-size: 12px;\n  font-weight: 600;\n  letter-spacing: 0;\n  line-height: 16px;\n  margin-top: 3%;\n  position: relative;\n  text-decoration: none;\n  text-transform: uppercase;\n}\n\n@media screen and (min-width: 768px) {\n  .mt_linkbox__link a {\n    font-size: 16px;\n    line-height: 20px;\n    margin-top: 8px;\n  }\n}\n\n@media screen and (min-width: 1200px) {\n  .mt_linkbox__link a {\n    font-size: 18px;\n    line-height: 22px;\n    margin-top: 12px;\n  }\n}\n\n.mt_linkbox__link a::after {\n  background: #fff;\n  bottom: 0;\n  content: \"\";\n  display: block;\n  height: 1px;\n  left: 0;\n  position: absolute;\n  right: 0;\n  width: 100%;\n}\n\n@media screen and (max-width: 960px) {\n  .departments--wrapper .dp--div:nth-child(1), .departments--wrapper .dp--div:nth-child(2) {\n    margin: 0 0 20px;\n  }\n}\n\n@media screen and (min-width: 992px) {\n  .departments--wrapper .dp--div {\n    width: 25%;\n  }\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [
+    {
+      "selector": "div.hp--wrapper-2 > div.departments--wrapper",
+      "value": "(https?\\:\\/\\/(?:www.)kipling-usa.com)(\\/)?($|\\?.*)?",
+      "op": "full_iregex"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "main"
+        ],
+        "id": 210516,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

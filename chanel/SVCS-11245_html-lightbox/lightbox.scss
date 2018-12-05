@@ -1,0 +1,146 @@
+div#monetate_lightbox_content {
+  text-align: center;
+}
+
+div#monetate_lightbox_content h1 {
+  line-height: 40px;
+  padding: 40px 0 20px;
+}
+
+div#monetate_lightbox_content h3 {
+  padding: 20px 0;
+}
+
+div#monetate_lightbox_content p {
+  color: #555;
+  font-size: 16px;
+}
+
+div#monetate_lightbox_content_container {
+  background-image: url({{IMAGE_URL}});
+  height: auto !important;
+  padding: 40px;
+  @media screen and (max-width: 400px) {
+    max-width: 90%;
+    padding: 30px;
+  }
+}
+
+button.lightbox_close {
+  font-family: Helvetica,sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  @media screen and (max-width: 400px) {
+    right: 10px;
+    top: 0;
+  }
+}
+
+.sr-only {
+  -webkit-clip-path: inset(50%) !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+
+
+.mt-lightbox {
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    @media screen and (min-width: 768px) {
+      padding-bottom: 20px;
+    }
+  }
+  
+  &__img {
+    
+  }
+  &__text {
+    color: #767676;
+    font-family: 'Helvetica','Open-Sans',"sans-serif-light",sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 18px;
+    margin-bottom: 18px;
+    margin-top: 14px;
+    text-align: center;
+  }
+  
+  &__cta {
+    align-items: baseline;
+    border: none;
+    color: #333;
+    display: inline-flex;
+    font-family: 'abchanel-pb-s',sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 0.875rem;
+    
+    outline: none !important;
+    padding: 0;
+    text-transform: uppercase;
+    span {
+      span {
+        position: relative;
+        &::after {
+          bottom: -.3rem;
+          content: "";
+          height: 1px;
+          left: 0;
+          position: absolute;
+          transform: scaleX(.98);
+          transition: all .5s ease-out;
+          width: 100%;
+        }
+      }
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+      span {
+        span {
+          &::after {
+            animation: fadeIn .5s ease-out forwards;
+            background-color: #333;
+            filter: blur(0);
+            opacity: 1;
+            transform: scaleX(1);
+            transition: all .5s ease-out;
+          }
+        }
+      }
+    }
+    
+    svg.icon {
+      fill: #333;
+      height: 0.5rem;
+      margin-left: 0.25rem;
+      margin-right: 0;
+      order: 1;
+      stroke-width: 0;
+      width: 0.5rem;
+    }
+  }
+  
+  
+  
+}
+

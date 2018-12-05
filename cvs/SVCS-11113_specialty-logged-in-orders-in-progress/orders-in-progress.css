@@ -1,0 +1,38 @@
+.mt-oip {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.mt-oip[data-collapsible-status="closed"] {
+  border-top: none;
+}
+
+.mt-oip[data-collapsible-status="open"] {
+  border-top: 2px solid #E9E9E9;
+}
+
+.mt-oip__content {
+  border-top: none !important;
+}
+
+.mt-oip__content[data-collapsible-status="closed"] {
+  display: none;
+}
+
+.mt-oip__content[data-collapsible-status="open"] {
+  display: block;
+}
+
+.mt-oip__heading span.glyphicon {
+  width: 16px !important;
+}
+
+.prescriptionsContainer .prescription-list {
+  clear: both !important;
+}
+
+.prescriptionsContainer .prescription-list .heading--tertiary {
+  margin-left: 0 !important;
+  margin-top: 15px !important;
+}

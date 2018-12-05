@@ -1,0 +1,100 @@
+.personal-info-pg .col-sm-7 {
+  width: 100% !important;
+}
+
+.personal-info-pg form.form[name="mainForm"] .questions-wizard,
+.personal-info-pg form.form[name="mainForm"] .delivery-details-back-nav-container {
+  width: 100% !important;
+}
+
+.personal-info-pg form.form[name="mainForm"] .btn-container {
+  display: none !important;
+}
+
+.personal-info-pg form.form[name="mainForm"] .delivery-details-back-nav-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.personal-info-pg form.form[name="mainForm"] .delivery-details-back-nav-container button.back-link {
+  font-size: 14px !important;
+  line-height: 18px !important;
+  margin-left: -12px !important;
+  margin-top: 10px !important;
+}
+
+.personal-info-pg form.form[name="mainForm"] .delivery-details-back-nav-container button.back-link::before {
+  height: 14px !important;
+  margin-top: -9px !important;
+}
+
+.personal-info-pg form.form[name="mainForm"] .delivery-details-back-nav-container button.back-link::after {
+  height: 14px !important;
+}
+
+.personal-info-pg .cart-container-whole .cart-container {
+  display: block !important;
+  left: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+.personal-info-pg .cart-container-whole .cart-container.is-sticky {
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+.personal-info-pg .cart-container-whole .cart {
+  margin-bottom: 30px !important;
+}
+
+.personal-info-pg .cart-container-whole .cart > *:first-child {
+  clear: left;
+  float: left;
+  width: 50% !important;
+}
+
+.personal-info-pg .cart-container-whole .cart > *:not(:first-child) {
+  clear: right;
+  float: right;
+  width: 50% !important;
+}
+
+.personal-info-pg .cart-container-whole .cart_checkout-btn-container {
+  margin: 0 !important;
+}
+
+.personal-info-pg .cart-container-whole .cart ul#cartItems {
+  max-width: 298px !important;
+}
+
+.personal-info-pg .cart-container-whole .cart h3.heading--quaternary.cart_header {
+  margin-bottom: 10px !important;
+}
+
+.personal-info-pg .cart-container-whole .cart_checkout_text-container p.cart_cost-text {
+  color: #000 !important;
+  font-size: 14px !important;
+  line-height: 17px !important;
+  text-align: left !important;
+}
+
+.personal-info-pg .cart-container-whole .cart button.cart_checkout-btn.primary-btn {
+  max-width: 238px !important;
+}
+
+.personal-info-pg .cart-container-whole .cart button.back-link {
+  display: none !important;
+}
+
+.personal-info-pg .cart-container-whole p.disclaimer {
+  color: #000 !important;
+  font-size: 12px !important;
+  line-height: 14px !important;
+}
+
+.personal-info-pg .cart-container-whole div:last-child {
+  height: auto !important;
+}

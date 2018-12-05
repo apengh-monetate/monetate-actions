@@ -42,12 +42,31 @@
   #search-result-items li[data-positionreset="1"] {
     display: none !important;
   }
-  #search-result-items .grid-tile .dont-want a,
-  #search-result-items .grid-tile .best-val-parrent .best-val-title,
-  #search-result-items .grid-tile .what-you-get .what-you-get-head {
+  #search-result-items li[data-positionreset="2"] .dont-want a,
+  #search-result-items li[data-positionreset="2"] .what-you-get .what-you-get-head,
+  #search-result-items li[data-positionreset="2"] .best-val-parrent .best-val-title {
     left: 115% !important;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
-  #search-result-items .grid-tile .rhombus-logo {
+  #search-result-items li[data-positionreset="2"] .rhombus-logo {
+    left: 50% !important;
+    position: absolute !important;
+    -webkit-transform: translateX(-50%) !important;
+            transform: translateX(-50%) !important;
+  }
+  #search-result-items li[data-positionreset="3"] .best-val-parrent .best-val-title {
+    left: 115% !important;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  #search-result-items li[data-positionreset="3"] .dont-want a,
+  #search-result-items li[data-positionreset="3"] .what-you-get .what-you-get-head {
+    left: -13% !important;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  #search-result-items li[data-positionreset="3"] .rhombus-logo {
     left: 50% !important;
     position: absolute !important;
     -webkit-transform: translateX(-50%) !important;

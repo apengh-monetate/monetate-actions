@@ -1,0 +1,55 @@
+div.contact-details-wrap {
+  margin-left: 0 !important;
+}
+
+@media screen and (max-width: 375px) {
+  .cvs-storeLoc-store-address-wrap {
+    padding-right: 0 !important;
+  }
+}
+
+@media screen and (min-width: 737px) {
+  .cvs-storeLoc-store-address-wrap {
+    padding-left: 10px !important;
+  }
+  .cvs-storeLoc-store-address-wrap .contact-details-wrap {
+    clear: left;
+    margin-top: 15px;
+  }
+  .cvs-storeLoc-store-address-wrap .contact-details-wrap span.telephone {
+    margin-left: 0 !important;
+  }
+}
+
+@media screen and (min-width: 978px) {
+  .cvs-storeLoc-store-address-wrap {
+    padding-left: 0 !important;
+  }
+}
+
+.mt_passports {
+  clear: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+@media screen and (min-width: 737px) {
+  .mt_passports {
+    margin-top: 15px;
+  }
+}
+
+.mt_passports__icon {
+  margin-right: 5px;
+}
+
+.mt_passports__msg {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}

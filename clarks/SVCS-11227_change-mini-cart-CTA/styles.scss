@@ -1,0 +1,13 @@
+.mini-cart-container {
+  .mini-bag-btns a[title="CHECKOUT"] {
+    font-size: 0 !important;
+    &::before {
+      content: "VIEW CART";
+      font-family: 'Lato-Regular', 'Lato';
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+  }  
+}

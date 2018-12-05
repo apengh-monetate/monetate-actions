@@ -1,0 +1,11 @@
+.tab-content-ipim {
+  font-size: 0 !important;
+}
+
+.tab-content-ipim h2 {
+  display: none !important;
+}
+
+.tab-content-ipim ul {
+  font-size: 13px !important;
+}

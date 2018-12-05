@@ -1,0 +1,102 @@
+@media screen and (max-width: 591px) {
+  .fancybox {
+    &-inner {
+      height: auto !important;
+    }
+    &-opened {
+      left: 50% !important;
+      transform: translateX(-50%);
+
+
+      .modal {
+        &-header {
+          display: none !important;
+        }
+      }
+
+      .col-1-2 {
+        position: relative;
+      }
+      a.password-reset-link {
+        position: absolute;
+        right: 0;
+        top: 76px;
+      }
+
+
+      .btn.primary {
+        max-width: 90px !important;
+      }
+
+      .grey-box {
+        background: #fff !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: center !important;
+        h4,
+        p,
+        div.grid-row:last-of-type {
+          display: none !important;
+        }
+
+        div.grid-row:first-of-type {
+          align-content: center;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          &::before {
+            color: #444;
+            content: "New Customer?";
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 14px;
+            position: relative;
+          }
+          
+          a.btn {
+            background: none !important;
+            border: none !important;
+            color: #009fe3 !important;
+            margin: 0 !important;
+            max-width: 110px !important;
+            width: 110px !important;
+            &::before {
+              content: "";
+              display: none !important;
+            }
+          }
+        }
+      }
+      
+    }
+
+  }
+
+  #modal-login-register .modal-content .grid-row .grid-row:nth-of-type(4) {
+    top: -10px !important;
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  .fancybox-opened {
+    max-width: 88% !important;
+    a.password-reset-link {
+      top: 79px !important;
+    }
+  }
+  .fancybox-inner {
+    max-width: 100% !important;
+  }
+  .modal-content {
+    padding: 15px !important;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .fancybox-inner {
+    overflow: hidden !important;
+  }
+}

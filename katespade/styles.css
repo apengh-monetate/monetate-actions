@@ -1,0 +1,17 @@
+.mt-declined {
+  color: red !important;
+  font-family: 'NewBaskervilleStd-Bold', Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+  margin-bottom: -20px !important;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+  text-transform: none !important;
+}
+
+@media screen and (min-width: 481px) {
+  .mt-declined {
+    padding-bottom: 0 !important;
+  }
+}

@@ -1,0 +1,94 @@
+@media screen and (max-width: 591px) {
+  .fancybox-inner {
+    height: auto !important;
+  }
+  .fancybox-opened {
+    left: 50% !important;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .fancybox-opened .modal-header {
+    display: none !important;
+  }
+  .fancybox-opened .col-1-2 {
+    position: relative;
+  }
+  .fancybox-opened a.password-reset-link {
+    position: absolute;
+    right: 0;
+    top: 76px;
+  }
+  .fancybox-opened .btn.primary {
+    max-width: 90px !important;
+  }
+  .fancybox-opened .grey-box {
+    background: #fff !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  .fancybox-opened .grey-box h4,
+  .fancybox-opened .grey-box p,
+  .fancybox-opened .grey-box div.grid-row:last-of-type {
+    display: none !important;
+  }
+  .fancybox-opened .grey-box div.grid-row:first-of-type {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .fancybox-opened .grey-box div.grid-row:first-of-type::before {
+    color: #444;
+    content: "New Customer?";
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    position: relative;
+  }
+  .fancybox-opened .grey-box div.grid-row:first-of-type a.btn {
+    background: none !important;
+    border: none !important;
+    color: #009fe3 !important;
+    margin: 0 !important;
+    max-width: 110px !important;
+    width: 110px !important;
+  }
+  .fancybox-opened .grey-box div.grid-row:first-of-type a.btn::before {
+    content: "";
+    display: none !important;
+  }
+  #modal-login-register .modal-content .grid-row .grid-row:nth-of-type(4) {
+    top: -10px !important;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .fancybox-opened {
+    max-width: 88% !important;
+  }
+  .fancybox-opened a.password-reset-link {
+    top: 79px !important;
+  }
+  .fancybox-inner {
+    max-width: 100% !important;
+  }
+  .modal-content {
+    padding: 15px !important;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .fancybox-inner {
+    overflow: hidden !important;
+  }
+}

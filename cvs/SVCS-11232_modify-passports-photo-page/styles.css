@@ -1,0 +1,132 @@
+.passport-photos .img-responsive {
+  margin-bottom: -14%;
+  position: relative;
+}
+
+.passport-photos .img-responsive::after {
+  background-color: white;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 88%;
+  width: 100%;
+  z-index: 1;
+}
+
+.passport-photos .tile-content {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.mt-passport {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-top: 10px;
+  padding: 15px;
+  position: relative;
+}
+
+@media screen and (min-width: 641px) {
+  .mt-passport {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 20px;
+  }
+}
+
+.mt-passport__icon {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40px;
+          flex: 0 0 40px;
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 20px;
+  margin-top: 5px;
+  position: relative;
+  width: 40px;
+}
+
+@media screen and (min-width: 641px) {
+  .mt-passport__icon {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: 30px;
+    margin-top: 0;
+  }
+}
+
+.mt-passport__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: -5px;
+}
+
+.mt-passport__text sup {
+  font-size: 10px;
+  line-height: 24px;
+  position: relative;
+  top: auto !important;
+}
+
+.mt-passport__heading {
+  color: #000;
+  display: block;
+  font-size: 16px !important;
+  font-weight: bold;
+  line-height: 19px;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  position: relative;
+}
+
+@media screen and (min-width: 641px) {
+  .mt-passport__heading {
+    margin-bottom: 10px;
+  }
+}
+
+.mt-passport__link {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.mt-passport__link a {
+  color: #c00;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  line-height: 18px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
