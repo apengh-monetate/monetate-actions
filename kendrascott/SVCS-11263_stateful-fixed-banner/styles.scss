@@ -1,0 +1,67 @@
+.mt-fixed {
+
+  &__banner {
+    background: #2B465E;
+    bottom: 0;
+    box-shadow: rgba(0,0,0,0.24) 0 -3px 10px;
+    color: #fff;
+    display: block;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    left: 0;
+    padding: 8px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+  }
+
+  &__close {
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    display: inline-flex;
+    font-family: "Lato", sans-serif;
+    font-size: 32px;
+    font-weight: 100;
+    height: 24px;
+    justify-content: center;
+    line-height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background 0.3s ease;
+    width: 24px;
+    z-index: 1;
+    &:hover,
+    &:focus {
+      background: darken(#2B465E, 5%);
+    }
+
+    & > span {
+      margin-top: -2px;
+    }
+  }
+
+  &__content {
+    display: block;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    width: 100%;
+    p {
+      margin: 0 !important;
+    }
+  }
+
+
+
+}

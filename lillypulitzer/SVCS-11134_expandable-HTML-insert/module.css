@@ -1,10 +1,19 @@
 .mt-expandable {
+  background: #f8f2ff;
   display: block;
   margin: 20px auto 0;
   max-width: 1440px;
+  padding-bottom: 8px;
+  padding-top: 8px;
   position: relative;
   text-align: center;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-expandable {
+    background: #fff;
+  }
 }
 
 @media screen and (min-width: 1025px) {

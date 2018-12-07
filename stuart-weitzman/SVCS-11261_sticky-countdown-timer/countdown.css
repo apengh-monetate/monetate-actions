@@ -1,0 +1,173 @@
+/*
+ * Custom Styles
+ */
+.mt-countdown {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #D8D8D8;
+  box-sizing: border-box;
+  color: #636363;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Gill Sans Medium', sans-serif;
+  font-weight: 400;
+  height: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    height: 30px;
+  }
+}
+
+.mt-countdown .bold {
+  font-family: "Gill Sans Medium", sans-serif;
+  font-weight: 700;
+}
+
+.mt-countdown__lead {
+  display: block;
+  font-size: 9px;
+  letter-spacing: .2em;
+  line-height: 1;
+  margin-bottom: 6px;
+  margin-top: 0;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown__lead {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    font-size: 10px;
+    line-height: 10px;
+    margin-bottom: 0;
+    margin-right: 20px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .mt-countdown__lead {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.mt-countdown__timer {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .3em;
+  line-height: 1;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown__timer {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    font-size: 10px;
+    line-height: 10px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .mt-countdown__timer {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.mt-countdown__msg {
+  display: block;
+  font-size: 9px;
+  letter-spacing: .2em;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 8px;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown__msg {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    font-size: 10px;
+    line-height: 10px;
+    margin-left: 20px;
+    margin-top: 0;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .mt-countdown__msg {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.mt_time {
+  color: #C1992D;
+}
+
+/*
+ * Need to adjust padding-top for .hdr.mobileOnly
+ * by height of the countdown container
+ */
+@media screen and (max-width: 47.938em) {
+  .hdrLogo.mobileOnly {
+    padding-top: 110px !important;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .sitebody,
+  .sitebody-hm {
+    padding-top: 145px !important;
+  }
+}
+
+@media screen and (min-width: 53.813em) {
+  .sitebody,
+  .sitebody-hm {
+    padding-top: 150px !important;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .sitebody,
+  .sitebody-hm {
+    padding-top: 155px !important;
+  }
+}

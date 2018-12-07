@@ -1,0 +1,143 @@
+$breakpoint-md: 768px;
+$breakpoint-lg: 960px;
+
+$gold: #C1992D;
+$gray: #636363;
+$light-gray: #D8D8D8;
+
+$height: 60px;
+$padding-top: 50px + $height;
+
+$font-medium: 'Gill Sans Medium', sans-serif;
+
+/*
+ * Custom Styles
+ */
+.mt-countdown {
+  align-content: center;
+  align-items: center;
+  border-bottom: 1px solid $light-gray;
+  box-sizing: border-box;
+  color: $gray;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Gill Sans Medium', sans-serif;
+  font-weight: 400;
+  height: $height;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  @media screen and (min-width: $breakpoint-md) {
+    flex-wrap: nowrap;
+    height: 30px;
+  }
+
+  .bold {
+    font-family: $font-medium;
+    font-weight: 700;
+  }
+
+
+  &__lead {
+    display: block;
+    font-size: 9px;
+    letter-spacing: .2em;
+    line-height: 1;
+    margin-bottom: 6px;
+    margin-top: 0;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-md) {
+      flex-grow: 0;
+      flex-shrink: 0;
+      font-size: 10px;
+      line-height: 10px;
+      margin-bottom: 0;
+      margin-right: 20px;
+      width: auto;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+  &__timer {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .3em;
+    line-height: 1;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-md) {
+      flex-grow: 0;
+      flex-shrink: 0;
+      font-size: 10px;
+      line-height: 10px;
+      width: auto;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+
+  &__msg {
+    display: block;
+    font-size: 9px;
+    letter-spacing: .2em;
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: 8px;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-md) {
+      flex-grow: 0;
+      flex-shrink: 0;
+      font-size: 10px;
+      line-height: 10px;
+      margin-left: 20px;
+      margin-top: 0;
+      width: auto;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+
+}
+
+
+.mt_tickerElem {
+
+}
+.mt_time {
+  color: $gold;
+}
+
+
+/*
+ * Need to adjust padding-top for .hdr.mobileOnly
+ * by height of the countdown container
+ */
+ .hdrLogo.mobileOnly {
+   @media screen and (max-width: 47.938em) {
+     padding-top: $padding-top !important;
+   }
+ }
+ .sitebody,
+ .sitebody-hm {
+   @media screen and (min-width: 48em) {
+     padding-top: 145px !important;
+   }
+   @media screen and (min-width: 53.813em) {
+     padding-top: 150px !important;
+   }
+   @media screen and (min-width: 60em) {
+     padding-top: 155px !important;
+   }
+ }

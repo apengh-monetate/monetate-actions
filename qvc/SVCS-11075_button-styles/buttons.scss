@@ -18,8 +18,8 @@ $border-width: 2px;
 $font-size: 14px;
 $text-transform: uppercase;
 
-/* 
- * PRIMARY BUTTON 
+/*
+ * PRIMARY BUTTON
  */
 %primary-button {
   background-color: $pink !important;
@@ -34,7 +34,7 @@ $text-transform: uppercase;
   }
 }
 
-/* 
+/*
  * SECONDARY BUTTON
  */
 
@@ -84,7 +84,7 @@ $text-transform: uppercase;
   }
 }
 
- 
+
 %primary {
   input {
     @extend %primary-button;
@@ -99,22 +99,20 @@ $text-transform: uppercase;
 }
 
 %input {
-  align-items: center !important;      
   background-image: none !important;
   box-sizing: border-box !important;
-  display: inline-flex;
+  display: inline-block;
   font-family: 'Gotham SSm 5r', Arial, Helvetica, sans-serif;
   font-size: $font-size !important;
   font-weight: 500 !important;
   height: 45px !important;
-  justify-content: center !important;
   letter-spacing: 0px !important;
   line-height: 17px !important;
   opacity: 1;
   padding: 0 !important;
   text-align: center !important;
   text-transform: $text-transform !important;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
   width: 100% !important;
 }
 
@@ -161,7 +159,7 @@ body.shoppingCart {
       @extend %button;
       @extend %primary;
       display: block;
-      
+
       input {
         @media screen and (min-width: $breakpoint-md) {
           width: 137.5px !important;
@@ -210,7 +208,7 @@ body.shoppingCart {
         width: 290px !important;
       }
     }
-    
+
   }
 
 
@@ -283,7 +281,7 @@ body.shoppingCart {
       }
     }
   }
-  
+
 }
 
 
@@ -376,9 +374,9 @@ body.checkoutStep2 {
     @media screen and (min-width: $breakpoint-sm) {
       margin-top: 25px;
     }
-    
+
     input {
-      @media screen and (min-width: $breakpoint-sm) {      
+      @media screen and (min-width: $breakpoint-sm) {
         width: 195px !important;
       }
     }
@@ -413,7 +411,7 @@ body.checkoutStep3 {
       }
     }
   }
-  
+
 
   #voucherCode {
     .btn-secondary {
@@ -522,7 +520,7 @@ body.pg-order-confirmation {
       @media screen and (min-width: $breakpoint-sm) {
         margin-top: 4px;
       }
-      
+
       input {
         @media screen and (min-width: $breakpoint-sm) {
           height: 35px !important;
