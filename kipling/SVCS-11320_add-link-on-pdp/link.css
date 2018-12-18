@@ -1,0 +1,36 @@
+form[id*="dwfrm_product_addtocart"] {
+  position: relative;
+}
+
+@media screen and (min-width: 961px) {
+  .box-inventory {
+    margin-bottom: 10px !important;
+  }
+}
+
+.mt_link {
+  bottom: -28px;
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 961px) {
+  .mt_link {
+    bottom: initial;
+    text-align: right;
+    top: 52px;
+  }
+}
+
+.mt_link a {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 961px) {
+  .mt_link a {
+    font-size: 1.5em;
+  }
+}

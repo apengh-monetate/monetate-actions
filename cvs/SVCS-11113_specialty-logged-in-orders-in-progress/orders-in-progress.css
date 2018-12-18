@@ -1,5 +1,6 @@
 .mt-oip {
   display: block;
+  margin-top: -15px !important;
   position: relative;
   width: 100%;
 }
@@ -34,5 +35,5 @@
 
 .prescriptionsContainer .prescription-list .heading--tertiary {
   margin-left: 0 !important;
-  margin-top: 15px !important;
+  margin-top: 0 !important;
 }

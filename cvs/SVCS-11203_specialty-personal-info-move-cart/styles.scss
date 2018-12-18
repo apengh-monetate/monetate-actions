@@ -8,7 +8,7 @@
   form.form[name="mainForm"] .delivery-details-back-nav-container {
     width: 100% !important;
     @media screen and (min-width: 768px) {
-      
+
     }
   }
 
@@ -34,6 +34,11 @@
   }
 
 
+  .col-sm-5 {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+  }
 
 
 
@@ -97,7 +102,7 @@
       button.back-link {
         display: none !important;
       }
-      
+
     }
 
 
@@ -107,14 +112,10 @@
       line-height: 14px !important;
     }
 
-    
+
 
     div:last-child {
       height: auto !important;
     }
   }
 }
-
-
-
-

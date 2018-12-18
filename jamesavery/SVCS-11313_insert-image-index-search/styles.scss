@@ -1,0 +1,27 @@
+.pagination-results .product-grid {
+  div[id*="monetate_selectorBanner"] {
+    border: 1px solid #eaeef5;
+    display: inline-block;
+    height: 300px;
+    margin: 0 0 -1px -1px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 50%;
+    @media screen and (min-width: 768px), print {
+      height: 406px;
+      width: 33.33%;
+    }
+    @media screen and (min-width: 1024px), print {
+      width: 25%;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-height: 100%;
+      max-width: 100%;
+      position: relative;
+    }
+  }
+}
