@@ -1,0 +1,45 @@
+[data-el=breadcrumbs] .breadcrumbs-wrapper {
+  overflow: hidden;
+}
+
+.mt-hazard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+  white-space: normal;
+  width: 100%;
+
+  svg {
+    fill: #231f20;
+    height: 16px;
+    width: 18px;
+  }
+
+  &__icon {
+    display: block;
+    margin-right: 5px;
+    padding-top: 2px;
+    position: relative;
+    width: 18px;
+  }
+
+  &__text {
+    display: block;
+    position: relative;
+    p {
+      color: #000 !important;
+      font-family: 'Avenir','Helvetica','Arial',sans-serif !important;
+      font-size: 14px !important;
+      letter-spacing: 0.5px !important;
+      margin-bottom: 0 !important;
+    }
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+}

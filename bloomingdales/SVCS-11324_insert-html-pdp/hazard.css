@@ -1,0 +1,54 @@
+[data-el=breadcrumbs] .breadcrumbs-wrapper {
+  overflow: hidden;
+}
+
+.mt-hazard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+  white-space: normal;
+  width: 100%;
+}
+
+.mt-hazard svg {
+  fill: #231f20;
+  height: 16px;
+  width: 18px;
+}
+
+.mt-hazard__icon {
+  display: block;
+  margin-right: 5px;
+  padding-top: 2px;
+  position: relative;
+  width: 18px;
+}
+
+.mt-hazard__text {
+  display: block;
+  position: relative;
+}
+
+.mt-hazard__text p {
+  color: #000 !important;
+  font-family: 'Avenir','Helvetica','Arial',sans-serif !important;
+  font-size: 14px !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 0 !important;
+}
+
+.mt-hazard .uppercase {
+  text-transform: uppercase;
+}
