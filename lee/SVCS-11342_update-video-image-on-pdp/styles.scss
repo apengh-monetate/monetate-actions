@@ -1,0 +1,45 @@
+.swatches-product-details-container ~ div[id*="monetate_selectorHTML"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 1380px;
+    padding: 0 15px;
+    @media screen and (min-width: 640px) {
+        padding: 0;
+        padding-right: 15px;
+        padding-left: 85px;
+    }
+
+
+    // IMAGE
+    #mt_pdp_image_area {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-bottom: 10px;
+        img {
+            width: 100%;
+        }
+    }
+
+
+    // VIDEO
+    #mt_pdp_video_area {
+        display: block;
+        padding-bottom: 56.25%;
+        position: relative;
+        width: 100%;
+        line-height: 0;
+        font-size: 0;
+
+        iframe {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+}

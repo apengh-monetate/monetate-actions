@@ -1,0 +1,151 @@
+{
+  "id": 374475,
+  "title": "Insert HTML Hero Bottom of \"Axis\" Pages (Foundation Match Up)",
+  "description": "Insert HTML Hero Bottom of \"Axis\" Pages",
+  "op": "selectorInsertHtmlString",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Axis Pages",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<div class=\"mt_axis\">\n    <div class=\"mt_axis__img\">\n        <picture>\n            <source media=\"(min-width: 1160px)\" srcset=\"https://dev-apengh-1.monetate.org/img/1/414/1876892.jpg\" />\n            <img src=\"https://dev-apengh-1.monetate.org/img/1/414/1876891.jpg\" alt=\"FOUNDATION MATCH UP - Compare CHANEL foundations to find your ideal match.\" />\n        </picture>\n    </div>\n    <div class=\"mt_axis__text\">\n        <h3>Compare CHANEL foundations to find your ideal match.</h3>\n        <p class=\"context-link\">\n            <a href=\"#\" class=\"hero__link button link is-secondary is-not-underline\" title=\"EXPLORE - Compare CHANEL foundations to find your ideal match.\">\n                <span>\n                    <span>EXPLORE</span>\n                </span>\n            </a>\n        </p>\n    </div>\n</div>\n"
+      },
+      "widget": {
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#main"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "last"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "label": "Banner Div Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".mt_axis {\n  display: block;\n  margin: 30px auto 0;\n  position: relative;\n}\n\n.mt_axis__img {\n  display: block;\n  position: relative;\n}\n\n.mt_axis__text {\n  display: block;\n  position: relative;\n  text-align: center;\n  width: 100%;\n}\n\n@media screen and (min-width: 1160px) {\n  .mt_axis__text {\n    position: absolute;\n    top: 75%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n  }\n}\n\n.mt_axis__text h3 {\n  margin-top: 20px;\n}\n\n.mt_axis__text p {\n  margin-top: 20px;\n}\n\n.mt_axis .button {\n  padding: 0 3rem !important;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

@@ -1,23 +1,22 @@
-form[id*="dwfrm_product_addtocart"] {
-  position: relative;
+form.pdpForm {
+  position: relative !important;
 }
 
-.box-inventory {
-  @media screen and (min-width: 961px) {
-    margin-bottom: 10px !important;
-  }
-}
+
 
 .mt_link {
-  bottom: -28px;
+  // background: rgba(red, 0.1);
+  // border: 1px solid rgba(red, 0.3);
   display: block;
-  position: absolute;
+  margin-top: 10px;
+  position: relative;
   text-align: center;
   width: 100%;
   @media screen and (min-width: 961px) {
-    bottom: initial;
+    position: absolute;
+    right: 0;
     text-align: right;
-    top: 52px;
+    top: 45px;
   }
 
 
@@ -27,5 +26,12 @@ form[id*="dwfrm_product_addtocart"] {
     @media screen and (min-width: 961px) {
       font-size: 1.5em;
     }
+  }
+}
+
+.smartgift {
+  @media screen and (min-width: 961px) {
+    display: block !important;
+    margin-top: 30px !important;
   }
 }

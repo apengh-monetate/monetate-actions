@@ -1,0 +1,328 @@
+.radio.full-width,.radio.rd-option{
+    background-color:#e6eced;
+    border:2px solid #e6eced!important;
+    border-radius:5px;
+    box-sizing:border-box;
+    margin-bottom:10px;
+    padding:2px 14px 0!important;
+    width:100%
+}
+.radio.selected{
+    background:linear-gradient(to bottom,#e6eced 0,#e6eced 66px,#fff 67px,#fff 100%);
+    border:2px solid #aebabf!important;
+    box-shadow:none!important;
+    left:0!important;
+    padding:2px 13px 10px!important;
+    width:100%!important
+}
+#bopusSelectEnabledBopusAttrOn.selected.singleLine{
+    background:linear-gradient(to bottom,#e6eced 0,#e6eced 80px,#fff 81px,#fff 100%)
+}
+#bopusSelectEnabledBopusAttrOn.selected.twoLine{
+    background:linear-gradient(to bottom,#e6eced 0,#e6eced 102px,#fff 103px,#fff 100%)
+}
+#bopusSelectEnabledBopusAttrOn.selected.threeLine{
+    background:linear-gradient(to bottom,#e6eced 0,#e6eced 124px,#fff 125px,#fff 100%)
+}
+#bopusSelectEnabledBopusAttrOn.selected.fourLine{
+    background:linear-gradient(to bottom,#e6eced 0,#e6eced 146px,#fff 147px,#fff 100%)
+}
+#bopusSelectEnabledBopusAttrOn.selected.fiveLine{
+    background:linear-gradient(to bottom,#e6eced 0,#e6eced 168px,#fff 169px,#fff 100%)
+}
+#bopusSelectEnabledBopusAttrOn.selected.sixLine{
+    background:linear-gradient(to bottom,#e6eced 0,#e6eced 190px,#fff 191px,#fff 100%)
+}
+.radio-bottom{
+    margin:0 0 15px!important
+}
+.radio.selected:not(#rd-option-container) .radio-bottom{
+    margin:30px 0 15px!important
+}
+.radio-button i{
+    background:#00b2e7!important;
+    border:1px solid #abb8bf!important;
+    box-shadow:inset 0 0 0 9px #fff!important;
+    height:16px!important;
+    left:20px!important;
+    margin:-10px 0 0!important;
+    position:absolute;
+    top:50%;
+    width:16px!important
+}
+.repeat-delivery-select .selected-option-box{
+    margin:0 0 10px!important
+}
+.selected .radio-button i{
+    top:33px!important
+}
+.radio-button>input:checked+i{
+    box-shadow:inset 0 0 0 3px #fff!important
+}
+span[class*=header]{
+    color:#3e3e3f!important;
+    font-size:.8em!important;
+    margin-left:32px
+}
+span[class*=option-price]{
+    margin-left:13px
+}
+#rd-add-on .product-price-rdradio{
+    margin-left:-12px!important
+}
+#store-pickup-price strong,.product-price-rdradio,.product-price-rdradio.text-bold,.rd-select-price>strong{
+    color:#007f9d!important;
+    font-size:15px!important;
+    margin-left:-1px
+}
+#store-pickup-price strong{
+    margin-left:11px
+}
+#item-price strong{
+    margin-left:-2px
+}
+#repeat-delivery-select span.rd-logo{
+    background-image:url('/wcsstore/PetcoStore/img/repeat-delivery-logo.png')!important;
+    background-repeat:no-repeat!important;
+    background-size:auto 20px!important;
+    height:20px!important;
+    margin:0 0 0 2px!important;
+    top:2px!important;
+    vertical-align:top!important;
+    width:20px!important
+}
+#repeat-delivery-select .selected .rd-logo{
+    margin:-1px 0 0 2px!important;
+    vertical-align:top!important
+}
+div[id*=monetate_selectorHTML_]{
+    border-radius:0 3px 0 0!important;
+    padding:0!important
+}
+.best-price{
+    border-radius:0 3px 0 0!important;
+    color:#FFF!important;
+    font-size:12px;
+    letter-spacing:.05em;
+    padding:0 10px!important
+}
+a[data-toggle=popover]{
+    display:none!important
+}
+div[id*=InventoryStatus_Availability_SectionBopus]{
+    font-size:12px;
+    margin:5px 0 16px 9px
+}
+span[id*=InventoryStatus_OnlineStatusBopus]{
+    color:#000
+}
+#splDelvMsgWrapperBopus{
+    display:none
+}
+label[for=repeat-delivery-freq-options]{
+    font-size:.8em;
+    margin:16px 0 0 1px
+}
+label[for=repeat-delivery-freq-options]>strong{
+    line-height:2.3em
+}
+div.select-style{
+    border-radius:5px!important
+}
+.mt-tiny{
+    font-size:.8em
+}
+#add2CartBtn_cpy2{
+    font-size:1em
+}
+.product-price-rd-info,.rd-next{
+    display:none!important
+}
+#bopusSelectEnabledBopusAttrOn>.radio-top>.radio-top-data>.delivery-option-availability,#petcoWishListForReg{
+    display:none
+}
+.local-store-availability-header{
+    margin-top:-2px
+}
+.local-store-availability-body{
+    // margin-bottom:92px;
+    margin-left:-21px;
+    top:20px!important
+}
+.lsa-location{
+    font-size:.9em;
+    font-weight:400!important;
+    line-height:17px;
+    margin-top:4px;
+    width:calc(80% - 100px)
+}
+span.lsa-location{
+    color:#504f51!important
+}
+.radio.full-width.store-pickup{
+    padding:6px 0 0 1px!important
+}
+#store-pickup-dropdown,div.local-store-availability-header{
+    background:0 0!important;
+    border:none!important
+}
+#bopusSelectEnabledBopusAttrOn .delivery-option-header{
+    margin-left:44px
+}
+#add2CartBtn_bopus{
+    margin-bottom:10px;
+    margin-left:14px;
+    width:calc(100% - 28px)
+}
+.lsa-change{
+    bottom:19px!important;
+    right:0!important
+}
+#store-pickup-dropdown.singleLine{
+    max-height:23px!important
+}
+#store-pickup-dropdown.twoLine{
+    max-height:40px!important
+}
+#store-pickup-dropdown.threeLine{
+    max-height:52px!important
+}
+#store-pickup-dropdown.fourLine{
+    max-height:72px!important
+}
+#store-pickup-dropdown.fiveLine{
+    max-height:88px!important
+}
+#store-pickup-dropdown.sixLine{
+    max-height:106px!important
+}
+#store-pickup-dropdown.open {
+    max-height: 100% !important;
+}
+.mt-icon{
+    background-image:url('https://sb.monetate.net/img/1/66/1816713.png');
+    background-position:0 0;
+    background-repeat:no-repeat;
+    background-size:contain!important;
+    display:inline-block;
+    height:16px;
+    margin:0 0 18px 25px;
+    width:16px
+}
+.mt-icon.singleLine{
+    margin:0 0 2px 27px
+}
+.mt-icon.twoLine{
+    margin:0 0 18px 27px
+}
+.mt-icon.threeLine{
+    margin:0 0 34px 27px
+}
+.mt-icon.fourLine{
+    margin:0 0 50px 27px
+}
+.mt-icon.fiveLine{
+    margin:0 0 66px 27px
+}
+.mt-icon.sixLine{
+    margin:0 0 82px 27px
+}
+.collapse-change-store{
+    padding:5px 0 0!important;
+    top:-3px!important
+}
+#pdp-promo-2-monetate .col-12{
+    padding-bottom:15px
+}
+#pdp-promo-2-monetate>.container.bg-lightestgray.margin-top-lg{
+    background-color:#dff9ff!important
+}
+#pdp-promo-2-monetate .col-12>p{
+    color:#4a4a4a;
+    font-size:1em!important;
+    margin-bottom:2px
+}
+#pdp-promo-2-monetate .col-12>ul{
+    font-size:.74em!important;
+    line-height:.9em
+}
+#pdp-promo-2-monetate .col-12>ul>li:nth-child(4){
+    display:none
+}
+#pdp-promo-2-monetate .col-12>img{
+    height:22px;
+    margin-bottom:16px;
+    width:167px!important
+}
+#rd-option-container #add2CartBtn_cpy2:before,
+.mt-repeat-delivery #add2CartBtn:before {
+    content: "Save with";
+    display: block;
+    font-size: 13px;
+    padding-top: 4px;
+}
+.mt-repeat-delivery #add2CartBtn:after,
+#rd-option-container #add2CartBtn_cpy2:after {
+    content: url('/wcsstore/PetcoStore/img/RD_logo_white.png');
+    display: block;
+    height: 30px;
+}
+@media (min-width:769px) and (max-width:920px){
+    #rd-option-container>div.radio-top>label{
+        margin-top:16px
+    }
+}
+@media (orientation:landscape) and (min-width:769px) and (max-width:980px){
+    #bopusSelectEnabledBopusAttrOn>div.radio-top>label{
+        margin-top:12px
+    }
+    #store-pickup-dropdown{
+        max-height:50px!important
+    }
+    #bopusSelectEnabledBopusAttrOn.selected.singleLine {
+        background:linear-gradient(to bottom,#e6eced 0,#e6eced 92px,#fff 93px,#fff 100%)
+    }
+    #bopusSelectEnabledBopusAttrOn.selected.twoLine {
+        background:linear-gradient(to bottom,#e6eced 0,#e6eced 114px,#fff 115px,#fff 100%)
+    }
+    #bopusSelectEnabledBopusAttrOn.selected.threeLine {
+        background:linear-gradient(to bottom,#e6eced 0,#e6eced 136px,#fff 137px,#fff 100%)
+    }
+    #bopusSelectEnabledBopusAttrOn.selected.fourLine{
+        background:linear-gradient(to bottom,#e6eced 0,#e6eced 158px,#fff 159px,#fff 100%)
+    }
+    #bopusSelectEnabledBopusAttrOn.selected.fiveLine{
+        background:linear-gradient(to bottom,#e6eced 0,#e6eced 170px,#fff 171px,#fff 100%)
+    }
+    #bopusSelectEnabledBopusAttrOn.selected.sixLine{
+        background:linear-gradient(to bottom,#e6eced 0,#e6eced 192px,#fff 193px,#fff 100%)
+    }
+}
+@media (min-width:415px) and (max-width:767px){
+    #add2CartBtn_bopus{
+        margin-top:40px
+    }
+    #bopusSelectEnabledBopusAttrOn.selected.singleLine{
+        background:linear-gradient(to bottom,#e6eced 0,#e6eced 102px,#fff 103px,#fff 100%)
+    }
+    #bopusSelectEnabledBopusAttrOn.selected.twoLine{
+        background:linear-gradient(to bottom,#e6eced 0,#e6eced 124px,#fff 125px,#fff 100%)
+    }
+    #bopusSelectEnabledBopusAttrOn.selected.threeLine{
+        background:linear-gradient(to bottom,#e6eced 0,#e6eced 146px,#fff 147px,#fff 100%)
+    }
+    #bopusSelectEnabledBopusAttrOn.selected.fourLine{
+        background:linear-gradient(to bottom,#e6eced 0,#e6eced 168px,#fff 169px,#fff 100%)
+    }
+    #bopusSelectEnabledBopusAttrOn.selected.fiveLine{
+        background:linear-gradient(to bottom,#e6eced 0,#e6eced 180px,#fff 181px,#fff 100%)
+    }
+    #bopusSelectEnabledBopusAttrOn.selected.sixLine{
+        background:linear-gradient(to bottom,#e6eced 0,#e6eced 202px,#fff 203px,#fff 100%)
+    }
+}
+
+/* Hack for eliminating redundant 'Add to Cart' text in RD button */
+#add2CartBtn_cpy2 {
+  font-size: 0;
+}

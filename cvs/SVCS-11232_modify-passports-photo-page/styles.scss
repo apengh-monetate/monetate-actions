@@ -1,105 +1,114 @@
 .passport-photos {
-  .img-responsive {
-    margin-bottom: -14%;
-    position: relative;
-    &::after {
-      background-color: white;
-      bottom: 0;
-      content: "";
-      display: block;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 88%;
-      width: 100%;
-      z-index: 1;
+    .passport-brdr {
+        z-index: 1 !important;
     }
-  }
+    .img-responsive {
+        margin-bottom: -14%;
+        position: relative;
+        @media screen and (min-width: 641px) and (max-width: 800px) {
+            margin-bottom: -7%;
+        }
+        &::after {
+            background-color: white;
+            bottom: 0;
+            content: "";
+            display: block;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 88%;
+            width: 100%;
+            z-index: 1;
+        }
+    }
 
-  .tile-content {
-    display: block;
-    position: relative;
-    z-index: 2;
-  }
+    .tile-content {
+        display: block;
+        position: relative;
+        z-index: 2;
+        @media screen and (min-width: 641px) and (max-width: 800px) {
+            padding-right: 20px !important;
+        }
+    }
+
+    a.button-01.coupon-button {
+        width: 100% !important;
+    }
 }
 
 
 
 
 .mt-passport {
-  align-items: flex-start;
-  background: #F2F2F2;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin-top: 10px;
-  padding: 15px;
-  position: relative;
-  @media screen and (min-width: 641px) {
-    align-items: center;
-    margin-top: 20px;
-  }
-
-  &__icon {
-    align-self: flex-start;
-    display: block;
-    flex: 0 0 40px;
-    height: 40px;
-    margin-left: 5px;
-    margin-right: 20px;
-    margin-top: 5px;
-    position: relative;
-    width: 40px;
-    @media screen and (min-width: 641px) {
-      align-self: center;
-      margin-right: 30px;
-      margin-top: 0;
-    }
-  }
-
-  &__text {
+    align-items: flex-start;
+    background: #F2F2F2;
     display: flex;
-    flex: 1 1 100%;
-    flex-direction: column;
-    margin-top: -5px;
-
-    sup {
-      font-size: 10px;
-      line-height: 24px;
-      position: relative;
-      top: auto !important;
-    }
-  }
-
-
-  &__heading {
-    color: #000;
-    display: block;
-    font-size: 16px !important;
-    font-weight: bold;
-    line-height: 19px;
-    margin: 0;
-    margin-bottom: 15px;
-    padding: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+    padding: 15px;
     position: relative;
     @media screen and (min-width: 641px) {
-      margin-bottom: 10px;
+        align-items: center;
+        margin-top: 20px;
     }
-  }
 
-  &__link {
-    display: block;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    a {
-      color: #c00;
-      font-size: 14px !important;
-      font-weight: bold !important;
-      line-height: 18px;
-      margin: 0;
-      padding: 0;
-      text-decoration: none
+    &__icon {
+        align-self: flex-start;
+        display: block;
+        flex: 0 0 40px;
+        height: 40px;
+        margin-left: 5px;
+        margin-right: 20px;
+        margin-top: 5px;
+        position: relative;
+        width: 40px;
+        @media screen and (min-width: 641px) {
+            align-self: center;
+            margin-right: 30px;
+            margin-top: 0;
+        }
     }
-  }
+
+    &__text {
+        display: flex;
+        flex: 1 1 100%;
+        flex-direction: column;
+        margin-top: -5px;
+
+        sup {
+            font-size: 10px;
+            line-height: 24px;
+            position: relative;
+            top: auto !important;
+        }
+    }
+
+
+    &__heading {
+        color: #000;
+        display: block;
+        font-size: 16px !important;
+        font-weight: bold;
+        line-height: 19px;
+        margin: 0;
+        margin-bottom: 15px;
+        padding: 0;
+        position: relative;
+        @media screen and (min-width: 641px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__link {
+        color: #c00 !important;
+        display: block;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        line-height: 18px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        text-decoration: none
+    }
 }

@@ -1,0 +1,22 @@
+@media screen and (min-width: 1200px) {
+  #monetate_sidebar-nav {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #sidebar-nav .custom-nav ul.nav > li:not(:nth-child(n + 5)) {
+    position: relative !important;
+  }
+  #sidebar-nav .custom-nav ul.nav > li:not(:nth-child(n + 5)) .dropdown-menu {
+    left: 0 !important;
+    right: auto !important;
+  }
+  #sidebar-nav .custom-nav ul.nav > li:nth-child(n + 5) {
+    position: inherit !important;
+  }
+  #sidebar-nav .custom-nav ul.nav > li:nth-child(n + 5) .dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+  }
+}

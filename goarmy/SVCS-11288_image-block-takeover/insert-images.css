@@ -1,0 +1,23 @@
+.mt_images img {
+  width: 100%;
+}
+
+.mt_images--mobile {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_images--mobile {
+    display: none;
+  }
+}
+
+.mt_images--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_images--desktop {
+    display: block;
+  }
+}

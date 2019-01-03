@@ -1,0 +1,184 @@
+{
+    "id": 374496,
+    "title": "Takeover HP Image Block - Insert Image",
+    "description": "Takeover HP Image Block - Insert Image (Action 2 of 2)",
+    "op": "selectorBanner",
+    "slot": "actionbuilder_ag_0",
+    "slot_type": "page",
+    "category": "image",
+    "subcategory": "Home page",
+    "action_events": [
+        "op_click",
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "img_creative",
+                "name": "creative",
+                "value": {
+                    "extension": ".png",
+                    "height": 740,
+                    "width": 1500,
+                    "discriminator": "layered_content",
+                    "alt": "",
+                    "static_sha": "d32933fa0cf30bbb1efa9ada541d4db309796ac6",
+                    "id": 625727
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "ImageCreative",
+                "description": "Upload an image creative",
+                "label": "Image Creative"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "selector",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "StringSelectField",
+                "description": "Image size to insert",
+                "label": "Image Size",
+                "options": [
+                    {
+                        "name": ".mt_images--mobile",
+                        "label": "Mobile Image"
+                    },
+                    {
+                        "name": ".mt_images--desktop",
+                        "label": "Desktop Image"
+                    }
+                ]
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "imeth",
+                "value": "takeover"
+            },
+            "widget": {
+                "description": "Where to insert the banner in relation to the Relative Element Selector.",
+                "label": "Insert Method",
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First Child"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last Child"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "action_visible": false
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_divStyle",
+                "value": null
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "TextField",
+                "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+                "label": "Banner Div Inline Style"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_imgStyle",
+                "value": null
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "TextField",
+                "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
+                "label": "Image Element Inline Style"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "opt_styleSheet",
+                "value": {
+                    "content": "",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "CSSCodeField",
+                "description": "CSS appended to the DOM in a <style> or <link> element.",
+                "label": "CSS"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_multiSel",
+                "value": false
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "BooleanField",
+                "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+                "label": "Select multiple elements, if matched?"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_poll",
+                "value": false
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "BooleanField",
+                "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+                "label": "Re-check for Elements"
+            },
+            "required": false
+        }
+    ],
+    "masks": [],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [],
+        "required": []
+    },
+    "manage_impressions": false
+}

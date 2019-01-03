@@ -1,0 +1,151 @@
+{
+  "id": 374476,
+  "title": "Insert HTML Hero Bottom of \"Axis\" Pages (Skincare Spotlight)",
+  "description": "Insert HTML Hero Bottom of \"Axis\" Pages",
+  "op": "selectorInsertHtmlString",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Axis Pages",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<div class=\"mt_axis\">\n<div class=\"mt_axis__img\"><picture> <source media=\"(min-width: 1160px)\" srcset=\"https://dev-apengh-1.monetate.org/img/1/414/1876895.jpg\" /> <img alt=\"SKINCARE SPOTLIGHT - A special curation of CHANEL skincare.\" src=\"https://dev-apengh-1.monetate.org/img/1/414/1876894.jpg\" /> </picture></div>\n\n<div class=\"mt_axis__text\">\n<h3>A special curation of CHANEL skincare.</h3>\n\n<p class=\"context-link\"><a class=\"hero__link button link is-secondary is-not-underline\" href=\"#\" title=\"EXPLORE - SKINCARE SPOTLIGHT - A special curation of CHANEL skincare.\"><span><span>EXPLORE</span> </span> </a></p>\n</div>\n</div>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#main"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "last"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".mt_axis {\n  display: block;\n  margin: 30px auto 0;\n  position: relative;\n}\n\n.mt_axis__img {\n  display: block;\n  position: relative;\n}\n\n.mt_axis__text {\n  display: block;\n  position: relative;\n  text-align: center;\n  width: 100%;\n}\n\n@media screen and (min-width: 1160px) {\n  .mt_axis__text {\n    position: absolute;\n    top: 60%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n  }\n}\n\n.mt_axis__text h3 {\n  margin-top: 20px;\n}\n\n.mt_axis__text p {\n  margin-top: 30px;\n}\n\n.mt_axis .button {\n  padding: 0 3rem !important;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

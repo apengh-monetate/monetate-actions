@@ -1,0 +1,50 @@
+.monetate_form_banner {
+  font-size: 0;
+  line-height: 0;
+}
+
+.monetate_form_banner form [generated].error {
+  display: none;
+}
+
+.monetate_form_banner input {
+  font-size: 16px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.monetate_form_banner img {
+  max-width: 100%;
+}
+
+#dwfrm_newsletter_emailAddress {
+  background-color: transparent;
+  border-style: none !important;
+  color: #FFFFFF;
+}
+
+#dwfrm_newsletter_emailAddress::-webkit-input-placeholder {
+  color: #eee;
+  opacity: 0.5;
+}
+
+#dwfrm_newsletter_emailAddress::-moz-placeholder {
+  color: #eee;
+  opacity: 0.5;
+}
+
+#dwfrm_newsletter_emailAddress:-ms-input-placeholder {
+  color: #eee;
+  opacity: 0.5;
+}
+
+#dwfrm_newsletter_emailAddress::-ms-input-placeholder {
+  color: #eee;
+  opacity: 0.5;
+}
+
+#dwfrm_newsletter_emailAddress::placeholder {
+  color: #eee;
+  opacity: 0.5;
+}

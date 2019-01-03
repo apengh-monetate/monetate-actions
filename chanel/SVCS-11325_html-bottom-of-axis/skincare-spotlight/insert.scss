@@ -1,0 +1,34 @@
+.mt_axis {
+    display: block;
+    margin: 30px auto 0;
+    position: relative;
+
+
+    &__img {
+        display: block;
+        position: relative;
+    }
+
+    &__text {
+        display: block;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        @media screen and (min-width: 1160px) {
+            position: absolute;
+            top: 60%;
+            transform: translateY(-50%);
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+        p {
+            margin-top: 30px;
+        }
+    }
+
+    .button {
+        padding: 0 3rem !important;
+    }
+}

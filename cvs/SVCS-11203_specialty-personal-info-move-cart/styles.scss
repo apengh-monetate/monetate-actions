@@ -1,121 +1,153 @@
 .personal-info-pg {
 
-  .col-sm-7 {
-    width: 100% !important;
-  }
-
-  form.form[name="mainForm"] .questions-wizard,
-  form.form[name="mainForm"] .delivery-details-back-nav-container {
-    width: 100% !important;
-    @media screen and (min-width: 768px) {
-
+    .col-sm-7 {
+        width: 100% !important;
     }
-  }
 
-  form.form[name="mainForm"] .btn-container {
-    display: none !important;
-  }
-  form.form[name="mainForm"] .delivery-details-back-nav-container {
-    margin: 0 !important;
-    padding: 0 !important;
-    button.back-link {
-      font-size: 14px !important;
-      line-height: 18px !important;
-      margin-left: -12px !important;
-      margin-top: 10px !important;
-      &::before {
-        height: 14px !important;
-        margin-top: -9px !important;
-      }
-      &::after {
-        height: 14px !important;
-      }
+    .datepicker.col-sm-7 {
+        max-width: 372px !important;
+        width: 70% !important;
     }
-  }
 
+    .form_fieldset_checkbox {
+        right: 0 !important;
+    }
 
-  .col-sm-5 {
-    display: block !important;
-    position: relative !important;
-    width: 100% !important;
-  }
+    form.form[name="mainForm"] {
+        input {
+            max-width: 372px !important;
+        }
+    }
 
+    form.form[name="mainForm"] .questions-wizard,
+    form.form[name="mainForm"] .delivery-details-back-nav-container {
+        width: 100% !important;
+        @media screen and (min-width: 768px) {
 
+        }
+    }
 
-  .cart-container-whole {
-
-    .cart-container {
-      display: block !important;
-      left: 0 !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      position: relative !important;
-      &.is-sticky {
+    form.form[name="mainForm"] .btn-container {
+        display: none !important;
+    }
+    form.form[name="mainForm"] .delivery-details-back-nav-container {
         margin: 0 !important;
         padding: 0 !important;
+        button.back-link {
+            font-size: 14px !important;
+            line-height: 18px !important;
+            margin-left: -12px !important;
+            margin-top: 10px !important;
+            &::before {
+                height: 14px !important;
+                margin-top: -9px !important;
+            }
+            &::after {
+                height: 14px !important;
+            }
+        }
+    }
+
+
+    .col-sm-5 {
+        display: block !important;
         position: relative !important;
-      }
+        width: 100% !important;
     }
 
 
-    .cart {
-      margin-bottom: 30px !important;
 
-      & > * {
-        &:first-child {
-          clear: left;
-          float: left;
-          width: 50% !important;
+    .cart-container-whole {
+
+        .cart-container {
+            display: block !important;
+            left: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            position: relative !important;
+            &.is-sticky {
+                margin: 0 !important;
+                padding: 0 !important;
+                position: relative !important;
+            }
         }
-        &:not(:first-child) {
-          clear: right;
-          float: right;
-          width: 50% !important;
+
+
+        .cart {
+            margin-bottom: 30px !important;
+
+            & > * {
+                &:first-child {
+                    clear: left;
+                    float: left;
+                    width: 50% !important;
+                }
+                &:not(:first-child) {
+                    clear: right;
+                    float: right;
+                    width: 50% !important;
+                }
+            }
+
+            &_checkout-btn-container {
+                margin: 0 !important;
+            }
+
+            ul#cartItems {
+                max-width: 298px !important;
+            }
+
+            h3.heading--quaternary.cart_header {
+                margin-bottom: 10px !important;
+            }
+
+            &_checkout_text-container {
+                p.cart_cost-text {
+                    color: #000 !important;
+                    font-size: 14px !important;
+                    line-height: 17px !important;
+                    text-align: left !important;
+                }
+            }
+
+            button.cart_checkout-btn.primary-btn {
+                max-width: 238px !important;
+                &[disabled] {
+                    background: #cccccc !important;
+                    border-bottom: 2px solid #bbb !important;
+                    color: #565656 !important;
+                    opacity: 0.4 !important;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: #cccccc !important;
+                        border-bottom: 2px solid #bbb !important;
+                        color: #565656 !important;
+                        opacity: 0.4 !important;
+                    }
+                }
+            }
+
+            button.back-link {
+                display: none !important;
+            }
+
         }
-      }
 
-      &_checkout-btn-container {
-        margin: 0 !important;
-      }
 
-      ul#cartItems {
-        max-width: 298px !important;
-      }
-
-      h3.heading--quaternary.cart_header {
-        margin-bottom: 10px !important;
-      }
-
-      &_checkout_text-container {
-        p.cart_cost-text {
-          color: #000 !important;
-          font-size: 14px !important;
-          line-height: 17px !important;
-          text-align: left !important;
+        p.disclaimer {
+            color: #000 !important;
+            font-size: 12px !important;
+            line-height: 14px !important;
+            br {
+                display: none !important;
+            }
         }
-      }
 
-      button.cart_checkout-btn.primary-btn {
-        max-width: 238px !important;
-      }
 
-      button.back-link {
-        display: none !important;
-      }
 
+        div:last-child {
+            height: auto !important;
+        }
     }
-
-
-    p.disclaimer {
-      color: #000 !important;
-      font-size: 12px !important;
-      line-height: 14px !important;
-    }
-
-
-
-    div:last-child {
-      height: auto !important;
-    }
-  }
 }

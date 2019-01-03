@@ -2,6 +2,19 @@
   width: 100% !important;
 }
 
+.personal-info-pg .datepicker.col-sm-7 {
+  max-width: 372px !important;
+  width: 70% !important;
+}
+
+.personal-info-pg .form_fieldset_checkbox {
+  right: 0 !important;
+}
+
+.personal-info-pg form.form[name="mainForm"] input {
+  max-width: 372px !important;
+}
+
 .personal-info-pg form.form[name="mainForm"] .questions-wizard,
 .personal-info-pg form.form[name="mainForm"] .delivery-details-back-nav-container {
   width: 100% !important;
@@ -91,6 +104,20 @@
   max-width: 238px !important;
 }
 
+.personal-info-pg .cart-container-whole .cart button.cart_checkout-btn.primary-btn[disabled] {
+  background: #cccccc !important;
+  border-bottom: 2px solid #bbb !important;
+  color: #565656 !important;
+  opacity: 0.4 !important;
+}
+
+.personal-info-pg .cart-container-whole .cart button.cart_checkout-btn.primary-btn[disabled]:hover, .personal-info-pg .cart-container-whole .cart button.cart_checkout-btn.primary-btn[disabled]:focus, .personal-info-pg .cart-container-whole .cart button.cart_checkout-btn.primary-btn[disabled]:active {
+  background: #cccccc !important;
+  border-bottom: 2px solid #bbb !important;
+  color: #565656 !important;
+  opacity: 0.4 !important;
+}
+
 .personal-info-pg .cart-container-whole .cart button.back-link {
   display: none !important;
 }
@@ -99,6 +126,10 @@
   color: #000 !important;
   font-size: 12px !important;
   line-height: 14px !important;
+}
+
+.personal-info-pg .cart-container-whole p.disclaimer br {
+  display: none !important;
 }
 
 .personal-info-pg .cart-container-whole div:last-child {

@@ -1,0 +1,30 @@
+#monetate_sidebar-nav {
+  @media screen and (min-width: 1200px) {
+    display: none !important;
+  }
+}
+
+
+#sidebar-nav {
+  @media screen and (min-width: 1200px) {
+    .custom-nav ul.nav > li {
+
+      &:not(:nth-child(n + 5)) {
+        position: relative !important;
+        .dropdown-menu {
+          left: 0 !important;
+          right: auto !important;
+        }
+      }
+
+      &:nth-child(n + 5) {
+        position: inherit !important;
+        .dropdown-menu {
+          left: auto !important;
+          right: 0 !important;
+        }
+      }
+
+    }
+  }
+}

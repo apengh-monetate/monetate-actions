@@ -7,10 +7,26 @@
   /* Adjust padding/height of product info */
   .productCell .productInfo {
     height: 162px !important;
-    padding-left: 15px !important;
   }
   /* Hide "More Colors Available" Text */
   .productInfo .moreColors {
     display: none !important;
+  }
+  /* Adjust Alignment */
+  .productCell .colortiles {
+    margin-left: 0 !important;
+    -webkit-transition: margin-left 0.2s linear;
+    transition: margin-left 0.2s linear;
+  }
+  .productCell .productInfo {
+    padding-left: 0 !important;
+    -webkit-transition: padding-left 0.2s linear;
+    transition: padding-left 0.2s linear;
+  }
+  .productCell:hover .colortiles {
+    margin-left: 15px !important;
+  }
+  .productCell:hover .productInfo {
+    padding-left: 15px !important;
   }
 }

@@ -1,19 +1,46 @@
 @media screen and (min-width: 1024px) {
-  /* Show color swatches */
-  fieldset.swatchset .colorContainer {
-    height: 40px !important;
-    visibility: visible !important;
-  }
+    /* Show color swatches */
+    fieldset.swatchset .colorContainer {
+        height: 40px !important;
+        visibility: visible !important;
+    }
 
-  /* Adjust padding/height of product info */
-  .productCell .productInfo {
-    height: 162px !important;
-    padding-left: 15px !important;
-  }
+    /* Adjust padding/height of product info */
+    .productCell .productInfo {
+        height: 162px !important;
+        // padding-left: 15px !important;
+    }
 
-  /* Hide "More Colors Available" Text */
-  .productInfo .moreColors {
-    display: none !important;
-  }
+    /* Hide "More Colors Available" Text */
+    .productInfo .moreColors {
+        display: none !important;
+    }
+
+
+
+    // ==================================================================
+    /* Adjust Alignment */
+    // ==================================================================
+    .productCell {
+        .colortiles {
+            margin-left: 0 !important;
+            transition: margin-left 0.2s linear;
+        }
+        .productInfo {
+            padding-left: 0 !important;
+            transition: padding-left 0.2s linear;
+        }
+
+
+        &:hover {
+            .colortiles {
+                margin-left: 15px !important;
+            }
+            .productInfo {
+                padding-left: 15px !important;
+            }
+        }
+    }
+
 
 }
