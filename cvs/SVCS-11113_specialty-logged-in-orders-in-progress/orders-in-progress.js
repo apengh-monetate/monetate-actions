@@ -34,7 +34,7 @@
 
     // HTML to be inserted - 'Orders in Progress' section
     function insertHTML(selector, method) {
-        var html = "<div class=\"mt-oip prescription-list\" data-collapsible-status=\"closed\">\n      <h2 tabindex=\"0\" role=\"button\" class=\"mt-oip__heading prescription_header prescription_header_inactive heading--tertiary\" data-collapsible-target=\"mt-oip__content\">\n        <span class=\"glyphicon glyphicon-triangle-right\">&nbsp;</span> Orders in progress\n      </h2>\n      <ul class=\"mt-oip__content prescription\" aria-hidden=\"true\" data-collapsible-status=\"closed\">\n        <!-- Orders in progress go here -->\n      </ul>\n    </div>";
+        var html = "<div class=\"mt-oip prescription-list\" data-collapsible-status=\"closed\">\n      <h2 tabindex=\"0\" role=\"button\" class=\"mt-oip__heading prescription_header prescription_header_inactive heading--tertiary\" data-collapsible-target=\"mt-oip__content\">\n        <span class=\"glyphicon glyphicon-triangle-right\">&nbsp;</span> <span id=\"ordersInProgressCount\"></span> prescription(s) in progress\n      </h2>\n      <ul class=\"mt-oip__content prescription\" aria-hidden=\"true\" data-collapsible-status=\"closed\">\n        <!-- Orders in progress go here -->\n      </ul>\n    </div>";
         var relativeElement = document.querySelectorAll(selector);
         relativeElement = relativeElement[relativeElement.length - 1];
         relativeElement.insertAdjacentHTML(method, html);
@@ -61,10 +61,14 @@
             }
         }
 
-        // Update 'Active Prescriptions' Count
+        // Update 'Active Prescriptions' and 'Orders in Progress' Count
         var activePrescriptionsCount = $activePrescriptions.querySelectorAll('ul.prescription > li.ng-scope').length;
         var $activePrescriptionsSpan = $activePrescriptions.querySelector('h1.prescription_header > span');
         $activePrescriptionsSpan.innerText = activePrescriptionsCount;
+
+        var ordersInProgressCount = document.querySelectorAll('.mt-oip__content > li.ng-scope').length;
+        var $ordersInProgressCountSpan = document.querySelector('#ordersInProgressCount');
+        $ordersInProgressCountSpan.innerText = ordersInProgressCount;
     }
 
 

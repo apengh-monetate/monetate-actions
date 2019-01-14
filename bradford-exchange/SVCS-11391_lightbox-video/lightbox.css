@@ -1,7 +1,21 @@
 .mt-lightbox {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #fff;
   border: none;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   left: 50%;
   min-width: 320px;
   padding: 0;
@@ -28,7 +42,7 @@
           align-items: center;
   background: none;
   border: none;
-  color: #666;
+  color: #FFF;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -43,20 +57,19 @@
   right: 0;
   text-align: center;
   top: 0;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
   width: 36px;
   z-index: 1;
 }
 
-.mt-lightbox__close:hover, .mt-lightbox__close:focus, .mt-lightbox__close:active {
-  background: none;
-  color: #333;
+.mt-lightbox__video {
+  display: block;
+  position: relative;
 }
 
-.mt-lightbox__content {
+.mt-lightbox video {
   display: block;
-  padding-bottom: 100px;
-  padding-top: 100px;
-  position: relative;
+  max-width: 600px;
+  width: 100%;
 }

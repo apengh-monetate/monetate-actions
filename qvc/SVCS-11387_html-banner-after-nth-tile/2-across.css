@@ -1,0 +1,56 @@
+/* 2 Product Layout */
+@media screen and (max-width: 1199px) {
+  /* Inner Content Styling */
+  .mt-row-banner {
+    background: #eee;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 10px;
+  }
+  .mt-row-banner img {
+    width: 100%;
+  }
+  /* Update banner ID if selector changes, same for all below */
+  #monetate_selectorHTML_8e46898f_0 {
+    clear: both;
+    display: block !important;
+    margin: 20px;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  #monetate_selectorHTML_8e46898f_0 {
+    border-top: 1px solid #ddd;
+    margin: 0 15px 20px;
+    padding-top: 20px;
+  }
+  .plContent .productGallery #monetate_selectorHTML_8e46898f_0 + .galleryItem {
+    border-right: 1px solid #ddd;
+  }
+  .plContent .productGallery #monetate_selectorHTML_8e46898f_0 + .galleryItem:before {
+    margin-left: 15px !important;
+    right: 0 !important;
+  }
+}
+
+/* Mobile Banner */
+@media screen and (max-width: 729px) {
+  .mt-row-banner-mobile {
+    display: block;
+  }
+  .mt-row-banner-tablet {
+    display: none;
+  }
+}
+
+/* Tablet Banner */
+@media screen and (min-width: 730px) and (max-width: 1199px) {
+  .mt-row-banner-mobile {
+    display: none;
+  }
+  .mt-row-banner-tablet {
+    display: block;
+  }
+}

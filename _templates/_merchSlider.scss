@@ -16,7 +16,7 @@
     padding: 0 !important;
   }
 
-  
+
 
 
   // ------------------------------------------------------------------
@@ -44,7 +44,7 @@
       padding: 10px;
     }
     img {
-      max-height: 100%;
+      max-width: 100%;
     }
     a {
       text-decoration: none;
@@ -108,7 +108,7 @@
     [data-slider-mask] {
       touch-action: pan-y;
     }
-    
+
     [data-slide] {
       opacity: 0;
       position: absolute;
@@ -199,7 +199,6 @@
   }
 
 
-  
+
 
 } // #MONETATE-ID
-

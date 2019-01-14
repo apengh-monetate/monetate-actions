@@ -109,7 +109,7 @@ span[class*=option-price] {
 }
 
 #repeat-delivery-select span.rd-logo {
-  background-image: url("/wcsstore/PetcoStore/img/repeat-delivery-logo.png") !important;
+  background-image: url("https://www.petco.com/wcsstore/PetcoStore/img/repeat-delivery-logo.png") !important;
   background-repeat: no-repeat !important;
   background-size: auto 20px !important;
   height: 20px !important;
@@ -325,17 +325,15 @@ span.lsa-location {
   width: 167px !important;
 }
 
-#rd-option-container #add2CartBtn_cpy2:before,
-.mt-repeat-delivery #add2CartBtn:before {
+#rd-option-container #add2CartBtn_cpy2:before, .mt-repeat-delivery #add2CartBtn:before {
   content: "Save with";
   display: block;
   font-size: 13px;
   padding-top: 4px;
 }
 
-.mt-repeat-delivery #add2CartBtn:after,
-#rd-option-container #add2CartBtn_cpy2:after {
-  content: url("/wcsstore/PetcoStore/img/RD_logo_white.png");
+.mt-repeat-delivery #add2CartBtn:after, #rd-option-container #add2CartBtn_cpy2:after {
+  content: url(//www.petco.com/wcsstore/PetcoStore/img/RD_logo_white.png);
   display: block;
   height: 30px;
 }

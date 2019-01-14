@@ -1,0 +1,25 @@
+// 1. Replace Main Image (Replace)
+div.product-tile[data-itemid="00047400664296"] > div.product-image > a > img {}
+
+// 2. Replace Logo (Takeover)
+div.product-tile[data-itemid="00047400664296"] > div.product-image > div.brand_logo {}
+
+// 3. New code for "Select" button
+div.add_to_cart_btn.selectplan1[variantid="00047400664296"] {}
+
+// 4. New pricing (insert HTML takeover)
+div.product-tile[data-itemid="00047400664296"] > div.product-pricing-parent {}
+
+// 5. Change cartridge blowout picture
+li.grid-tile[data-positionreset="2"] div.product_feature_img {}
+
+// 6. Change copy under cartridge
+li.grid-tile[data-positionreset="2"] div.product_features_parent {}
+
+// 7. Learn More link
+li.grid-tile[data-positionreset="2"] > a.learn-more.plplearnmorelink {}
+
+// 8. Mobile images (slide "dots")
+#search-result-items.slick-initialized > ul.slick-dots > li[data-positionreset="2"] > button.tab,
+.search-result-items-thumbs > li[data-positionreset="2"]
+{}

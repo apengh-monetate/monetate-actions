@@ -1,0 +1,12 @@
+<a class="mt_slider__product-link" href="{{product_url}}" data-pid="{{pid}}">
+  <div class="mt_slider__product-image">
+    <img src="{{thumbnail_image}}" alt="{{pid}} - {{name}}" />
+  </div>
+  <p class="mt_slider__product-name">
+    <span>{{name|truncate: 75}}</span>
+  </p>
+  <div class="mt_slider__price">
+    <span class="mt_slider__price--reg">{{price|priceFormat: $1,000}}</span>
+    <span class="mt_slider__price--alt">SALE: {{alternate_price|priceFormat: $1,000}}</span>
+  </div>
+</a>

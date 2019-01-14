@@ -14,40 +14,53 @@
     }
 }
 
+.colortiles {
+    .productswatches {
+        margin-bottom: 4px !important;
+        li {
+            cursor: default !important;
+            height: 20px !important;
+            margin: 4px 4px 0 0 !important;
+            pointer-events: none !important;
+            user-select: none !important;
+            width: 20px !important;
+            &:nth-child(6n) {
+                clear: both;
+            }
+            &:nth-child(n + 11) {
+                display: none !important;
+            }
+        }
 
-.productswatches {
-    margin-bottom: 4px !important;
-    li {
-        height: 20px !important;
-        margin: 4px 4px 0 0 !important;
-        width: 20px !important;
+        // .active {
+        //     a:before,
+        //     a:after {
+        //         border-color: transparent;
+        //     }
+        // }
+
+        a {
+            .imgSwatch {
+                //border-radius: 50%;
+            }
+
+            &:before {
+                border: 2px solid transparent;
+                //border-radius: 50%;
+            }
+            &:after {
+                border: 2px solid transparent;
+                //border-radius: 50%;
+                bottom: 2px;
+                left: 2px;
+                right: 2px;
+                top: 2px;
+            }
+        }
     }
-
-    // .active {
-    //     a:before,
-    //     a:after {
-    //         border-color: transparent;
-    //     }
-    // }
-
-    a {
-        .imgSwatch {
-            border-radius: 50%;
-        }
-
-        &:before {
-            border: 1px solid transparent;
-            border-radius: 50%;
-        }
-        &:after {
-            border: 2px solid transparent;
-            border-radius: 50%;
-            bottom: 1px;
-            left: 1px;
-            right: 1px;
-            top: 1px;
-        }
-    }
+}
 
 
+.categorydisplay-wrapper .productInfo .moreColors {
+  display: none;
 }

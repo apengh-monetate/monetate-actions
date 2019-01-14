@@ -36,7 +36,7 @@
 }
 
 #MONETATE-ID [data-slide] img {
-  max-height: 100%;
+  max-width: 100%;
 }
 
 #MONETATE-ID [data-slide] a {

@@ -1,0 +1,228 @@
+{
+  "id": 377699,
+  "title": "HTML Lightbox on Click",
+  "description": "HTML Lightbox on Click",
+  "op": "htmlLightboxStringOnClick",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "lightbox",
+  "subcategory": "Any Page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "a.header__logo-link"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<section class=\"mt-lightbox\">\n  <button class=\"mt-lightbox__close\" tabindex=\"0\">&times;</button>\n\n  <div class=\"mt-lightbox__content\">\n    Content\n  </div>\n</section>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted.  Close buttons classes should correspond to the optional 'Close Button Class' input or use the default class of 'lightboxClose'.  You may also use a link with an href of '#close'.",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "lightboxWidth",
+        "value": 0
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Width of the lightbox (in pixels). If you set to zero, the width will be calculated automatically.",
+        "label": "Lightbox Width"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "lightboxHeight",
+        "value": 0
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Height of the lightbox (in pixels).  If you set to zero, the height will be calculated automatically.",
+        "label": "Lightbox Height"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_pinned",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Is the lightbox pinned to its position on screen, or does it scroll with the page?",
+        "label": "Pin Lightbox Position?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_left",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "The left offset of the lightbox (in pixels).",
+        "label": "Left Position"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_top",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "The top offset of the lightbox (in pixels).",
+        "label": "Top Position"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_color",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "Color of the lightbox overlay. Defaults to \"#000\".",
+        "label": "Overlay Color"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "float",
+        "name": "opt_opacity",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "FloatField",
+        "description": "Opacity of the lightbox overlay. Defaults to '0.6'.",
+        "label": "Overlay Opacity"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".mt-lightbox {\n  background: #fff;\n  border: none;\n  display: block;\n  left: 50%;\n  min-width: 320px;\n  padding: 0;\n  position: fixed;\n  text-align: center;\n  top: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  width: auto;\n  z-index: 9999;\n}\n\n@media screen and (min-width: 768px) {\n  .mt-lightbox {\n    min-width: 480px;\n  }\n}\n\n.mt-lightbox__close {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background: none;\n  border: none;\n  color: #666;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-size: 36px;\n  font-weight: 100;\n  height: 36px;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  line-height: 0;\n  position: absolute;\n  right: 0;\n  text-align: center;\n  top: 0;\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease;\n  width: 36px;\n  z-index: 1;\n}\n\n.mt-lightbox__close:hover, .mt-lightbox__close:focus, .mt-lightbox__close:active {\n  background: none;\n  color: #333;\n}\n\n.mt-lightbox__content {\n  display: block;\n  padding-bottom: 100px;\n  padding-top: 100px;\n  position: relative;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "label": "Script"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_closeButtonClass",
+        "value": "mt-lightbox__close"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "All elements in the HTML creative with this class will act as a close button for the lightbox.",
+        "label": "Close Button Class"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_closeable",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Is the lightbox closeable by clicking on the overlay?",
+        "label": "Click Overlay to Close?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

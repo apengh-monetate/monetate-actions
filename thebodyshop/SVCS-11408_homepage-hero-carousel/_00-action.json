@@ -1,0 +1,498 @@
+{
+  "id": 237479,
+  "title": "Homepage Slideshow Replace",
+  "description": "Inserts a slideshow with 6 placeholder slides.",
+  "op": "insertSlideshowUnlimitedResp",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "image",
+  "subcategory": "Slideshow",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "sel",
+        "value": "#rotating-images-slider-section"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Selector to find the relative node.",
+        "label": "CSS3 Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "insertMethod",
+        "value": "takeover"
+      },
+      "widget": {
+        "description": "Function to use when inserting the slideshow relative to the selected node.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Function"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "width",
+        "value": 1272
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "PositiveIntegerField",
+        "description": "The width of each slide in pixels.",
+        "label": "Width"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "height",
+        "value": 520
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "PositiveIntegerField",
+        "description": "The height of each slide in pixels.",
+        "label": "Height"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "slideDuration",
+        "value": 5000
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "How long (in milliseconds) the slide will delay before transitioning to the next one.  Enter 0 to disable automatic progression.",
+        "label": "Slide Duration"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "transitionDuration",
+        "value": 500
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "How long (in milliseconds) it takes to transition from one slide to the next.",
+        "label": "Transition Duration"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "direction",
+        "value": "r-l"
+      },
+      "widget": {
+        "description": "How the slides will transition in/out.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "l-r",
+            "label": "Left to Right"
+          },
+          {
+            "name": "r-l",
+            "label": "Right to Left"
+          },
+          {
+            "name": "t-b",
+            "label": "Top to Bottom"
+          },
+          {
+            "name": "b-t",
+            "label": "Bottom to Top"
+          },
+          {
+            "name": "rld",
+            "label": "Random Linear Direction"
+          }
+        ],
+        "label": "Transition Direction"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "transitionType",
+        "value": "push"
+      },
+      "widget": {
+        "description": "The type of transition to use.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "cover",
+            "label": "Cover"
+          },
+          {
+            "name": "fade",
+            "label": "Fade (No Direction)"
+          },
+          {
+            "name": "push",
+            "label": "Push"
+          },
+          {
+            "name": "random",
+            "label": "Random"
+          }
+        ],
+        "label": "Transition Type"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "prevCreative",
+        "value": {
+          "extension": ".png",
+          "height": 36,
+          "width": 48,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "ab5de261fb9ba24bb7d0edafee5a2a521c587c00",
+          "id": 463869
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload an image creative to replace the previous button",
+        "label": "Left arrow button"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "nextCreative",
+        "value": {
+          "extension": ".png",
+          "height": 36,
+          "width": 48,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "7cbbc6ad4da0d2ec668724ee112732b30dbcf102",
+          "id": 463870
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload an image creative to replace the next button",
+        "label": "Right arrow button"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "stopAtEnds",
+        "value": false
+      },
+      "widget": {
+        "label": "Disable scroll looping?",
+        "type": "BooleanField",
+        "description": "If true, manual scrolling with the arrow will be disabled when the last or first slide is reached. Arrows will receive an 'end' class which can be styled using the CSS input with the selector '.monetate_nav_arrow.end'.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "showDots",
+        "value": true
+      },
+      "widget": {
+        "label": "Dot navigation?",
+        "type": "BooleanField",
+        "description": "Whether to show navigation dots",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_loadingHtml",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "What to show until at least one of the slides is loaded up with content.",
+        "label": "Loading Screen HTML"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_navStyles",
+        "value": "top: 0 !important; pointer-events: none !important;"
+      },
+      "widget": {
+        "label": "Navigation arrows container CSS Style",
+        "type": "TextField",
+        "description": "CSS styles for the element containing the navigation arrows.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_dotStyles",
+        "value": "background: rgba(255,255,255,.6);"
+      },
+      "widget": {
+        "label": "CSS Styles for Pagination Dots",
+        "type": "TextField",
+        "description": "CSS styles for the pagination dots. Use 'background-color' to set dot color.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_activeDotStyles",
+        "value": "background: rgba(255,255,255,1) !important;"
+      },
+      "widget": {
+        "label": "CSS Style for Active Pagination Dots",
+        "type": "TextField",
+        "description": "CSS styles for the pagination dots when active.  Use 'background-color' to set dot color.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_dotContainerStyles",
+        "value": "bottom: 30px;"
+      },
+      "widget": {
+        "label": "CSS Style for Pagination container",
+        "type": "TextField",
+        "description": "CSS styles for the element containing the pagination dots.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleSheet",
+        "value": ".monetate_previous_slide { left: 20px !important; pointer-events: all !important;  }\n.monetate_next_slide { right: 20px !important; pointer-events: all !important;  }\n\n.slideWrapper > .mt_slide { pointer-events: all !important; }\n\n#RotatingImagesBannerComponent { display: none !important; }\n.main-content > .slideshowContainer:nth-child(2) { display: none !important; }"
+      },
+      "widget": {
+        "label": "Additional CSS Style",
+        "type": "TextField",
+        "description": "Appends a stylesheet to the page with the supplied CSS.  To refer to the container DIV, you can use the actual Container ID you entered or the \"\" pseudo-selector (eg. \" a:hover{ color:#F00; }\").  To reference a particular slide you can use \".slide{NUMBER}\" (eg. \".slide2\").  NOTE:  The slideshow container and the controllers container gets a class of \"monetate_slideshow_paused\" when the slideshow is paused. If navigation arrows are used, they can be referenced with .monetate_nav_arrow and each one gets a class of 'end' if you reach the beginning or end of the slides",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_responsive",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "Select yes to make the countdown resize based on your responsive site.",
+        "label": "Responsive?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "opt_img1",
+        "value": {
+          "extension": ".png",
+          "height": 520,
+          "width": 1272,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "50ba35c1f9dbf4817fa9636ce313b55cfac3a2d8",
+          "id": 463871
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload the first banner creative",
+        "label": "Image Creative"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "opt_img2",
+        "value": {
+          "extension": ".png",
+          "height": 520,
+          "width": 1272,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "87cc697f9cd77f6c9e902aedc1f78b5d19a62f91",
+          "id": 463872
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload the second banner creative",
+        "label": "Image Creative"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "opt_img3",
+        "value": {
+          "extension": ".png",
+          "height": 520,
+          "width": 1272,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "1cf95cd4282bed6615c29275238e7616021c17e6",
+          "id": 463873
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload the third banner creative",
+        "label": "Image Creative"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "opt_img4",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload the fourth banner creative",
+        "label": "Image Creative"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "opt_img5",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload the fourth banner creative",
+        "label": "Image Creative"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "opt_img6",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload the fourth banner creative",
+        "label": "Image Creative"
+      },
+      "required": false
+    }
+  ],
+  "masks": [
+    {
+      "selector": "#rotating-images-slider-section",
+      "value": "/",
+      "op": "path_iprefix"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

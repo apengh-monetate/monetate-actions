@@ -1,0 +1,333 @@
+{
+  "id": 376374,
+  "title": "Email Signup Lightbox - v2",
+  "description": "Form lightbox with one image creative and an optional thank you creative.",
+  "op": "formLightboxV2",
+  "slot": "lightbox",
+  "slot_type": "page",
+  "category": "lightbox",
+  "subcategory": "Any page",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlstring",
+        "value": "<form action=\"/email-signup\" class=\"form\"><input class=\"form-control\" maxlength=\"80\" name=\"emailAddress\" placeholder=\"Sign up for emails\" required=\"\" title=\"Email Address\" type=\"email\" />&nbsp;</form>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted.",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative",
+        "value": {
+          "extension": ".png",
+          "height": 400,
+          "width": 400,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "292bbaa81c7d3fddbd2d5110b0cb2cee3c40a0dd",
+          "id": 627812
+        }
+      },
+      "widget": {
+        "label": "Lightbox Image Creative.",
+        "type": "ImageCreative",
+        "description": "Optional #close clickzone. To display form inputs, add clickzones that correspond with form input names: i.e. input name='email' would need clickzone with href='#email'. Alternatively, you can name the clickzone in the form using a clickzone attribute (input clickzone='email')",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "lightboxId",
+        "value": 1
+      },
+      "widget": {
+        "label": "Lightbox ID - Pick a number that is distinct from other lightboxes (0-31 only)",
+        "type": "IntegerField",
+        "description": "Differentiates this lightbox from others for this retailer.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "showInterval",
+        "value": "session"
+      },
+      "widget": {
+        "description": "How long until the this lightbox is shown again. Based on lightboxId.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "page",
+            "label": "Every page"
+          },
+          {
+            "name": "session",
+            "label": "Once per session"
+          },
+          {
+            "name": "30days",
+            "label": "Once per thirty days"
+          },
+          {
+            "name": "once",
+            "label": "Once, ever"
+          }
+        ],
+        "label": "How often (per user) should this lightbox be shown?"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "submitMethod",
+        "value": "jQuery"
+      },
+      "widget": {
+        "description": "What form submission method should we use?",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "iframe",
+            "label": "iframe"
+          },
+          {
+            "name": "jQuery",
+            "label": "jQuery.ajax"
+          }
+        ],
+        "label": "Which submission method is preferred?"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "opt_receiptCreative",
+        "value": {
+          "extension": ".png",
+          "height": 400,
+          "width": 400,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "da145dd18e8ba2cd5da8af609679749db8816fbc",
+          "id": 627809
+        }
+      },
+      "widget": {
+        "label": "Optional Thank You Creative (#close)",
+        "type": "ImageCreative",
+        "description": "Displays upon successful email collection. Optional #close clickzone. Lightbox will automatically close on submit without any creative.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_lightboxClass",
+        "value": "monetate_emailsignup"
+      },
+      "widget": {
+        "label": "Lightbox Class",
+        "type": "CharField",
+        "description": "A class to add to the lightbox for styling purposes.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_appendCSS",
+        "value": "#monetate_lightbox_mask {\n  display: none !important;\n}\n\n#monetate_lightbox_content_container {\n  max-width: 600px !important;\n}\n\n@media all and (orientation: portrait) and (max-width: 768px) {\n  #monetate_lightbox_content_container {\n    max-width: 100% !important;\n  }\n}\n\n@media all and (max-width: 768px) {\n  #monetate_lightbox_content_container {\n    max-width: 100% !important;\n  }\n}\n\n@media all and (orientation: landscape) and (max-width: 768px) {\n  #monetate_lightbox_content_container[style*=\"top: 54px;\"], #monetate_lightbox_content_container[style*=\"top: 96px;\"], #monetate_lightbox_content_container[style*=\"top: 110px;\"] {\n    position: absolute !important;\n    top: 50% !important;\n    width: 278px !important;\n  }\n}\n\n@media all and (orientation: portrait) and (max-width: 768px) {\n  #monetate_lightbox_content_container[style*=\"top: 54px;\"], #monetate_lightbox_content_container[style*=\"top: 96px;\"], #monetate_lightbox_content_container[style*=\"top: 110px;\"] {\n    top: 96px !important;\n  }\n}\n\n#monetate_lightbox #monetate_lightbox_content_container {\n  z-index: 9999;\n}\n\n#monetate_lightbox #monetate_lightbox_content_container img[usemap*=\"ltBox\"],\n#monetate_lightbox #monetate_lightbox_content_container #monetate_success_creative img[usemap=\"#monetate_success_creativeMap\"] {\n  border-radius: 5px;\n  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);\n  width: 100%;\n}\n\n#monetate_lightbox_content_container {\n  font-size: 0;\n  line-height: 0;\n}\n\n#monetate_lightbox_content_container input {\n  background-color: #fff;\n  font-size: 13px;\n  line-height: 1.42857143;\n}\n\n@media screen and (min-width: 768px) {\n  #monetate_lightbox_content_container input {\n    font-size: 16px;\n  }\n}"
+      },
+      "widget": {
+        "label": "CSS Styles",
+        "type": "TextField",
+        "description": "CSS stylesheet to append.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_top",
+        "value": null
+      },
+      "widget": {
+        "label": "Top Position",
+        "type": "IntegerField",
+        "description": "The top offset of the lightbox (in pixels).",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_left",
+        "value": null
+      },
+      "widget": {
+        "label": "Left Position",
+        "type": "IntegerField",
+        "description": "The left offset of the lightbox (in pixels).",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_pinned",
+        "value": true
+      },
+      "widget": {
+        "label": "Pin Lightbox Position?",
+        "type": "BooleanField",
+        "description": "Is the lightbox pinned to its position on screen, or does it scroll with the page?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_color",
+        "value": null
+      },
+      "widget": {
+        "label": "Overlay Color",
+        "type": "CharField",
+        "description": "Color of the lightbox overlay. Defaults to \"#000\".",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "float",
+        "name": "opt_opacity",
+        "value": null
+      },
+      "widget": {
+        "label": "Overlay Opacity",
+        "type": "FloatField",
+        "description": "Opacity of the lightbox overlay. Defaults to \"0.6\".",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_closeable",
+        "value": true
+      },
+      "widget": {
+        "label": "Closeable?",
+        "type": "BooleanField",
+        "description": "Is the lightbox closeable by clicking on the overlay?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_refreshAfter",
+        "value": false
+      },
+      "widget": {
+        "label": "Refresh After?",
+        "type": "BooleanField",
+        "description": "Should the page reload after closing the thank you lightbox? (This is useful for sign-in lightboxes!)",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_responsiveCZ",
+        "value": true
+      },
+      "widget": {
+        "label": "Responsive clickzones?",
+        "type": "BooleanField",
+        "description": "Are the clickzones responsive?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_responsive",
+        "value": true
+      },
+      "widget": {
+        "label": "Responsive?",
+        "type": "BooleanField",
+        "description": "Select yes to make the lightbox responsive.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_emailError",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "Defaults to 'Valid email address required.' if no error message is provided.",
+        "label": "Specific error for not valid email input."
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_genericError",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "Defaults to 'This field is required.' if no error message is provided.",
+        "label": "Generic error for required inputs."
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}
