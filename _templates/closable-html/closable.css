@@ -1,0 +1,63 @@
+.mt_closable {
+  background: #fff;
+  bottom: 0;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.25);
+  display: block;
+  left: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.mt_closable__close {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: none;
+  color: #666;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 24px;
+  height: 28px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 4px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 28px;
+}
+
+.mt_closable__close:hover, .mt_closable__close:active, .mt_closable__close:focus {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+.mt_closable__content {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 15px;
+}
