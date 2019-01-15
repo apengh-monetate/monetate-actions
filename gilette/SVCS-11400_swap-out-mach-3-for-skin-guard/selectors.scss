@@ -23,3 +23,11 @@ li.grid-tile[data-positionreset="2"] > a.learn-more.plplearnmorelink {}
 #search-result-items.slick-initialized > ul.slick-dots > li[data-positionreset="2"] > button.tab,
 .search-result-items-thumbs > li[data-positionreset="2"]
 {}
+
+
+
+// 9. First Learn More Link
+li.grid-tile[data-positionreset="2"] div.content-asset > a.learn-more {}
+
+// 10. Replace Features Heading
+li.grid-tile[data-positionreset="2"] div.product_features_heading {}

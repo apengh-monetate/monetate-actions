@@ -1,0 +1,17 @@
+#utility-links-wrapper {
+  display: none !important;
+}
+
+.secondaryUtility > div.searchDesktop {
+  display: none !important;
+}
+
+#secondary-nav {
+  display: none !important;
+}
+
+#navContainer {
+  height: 40px !important;
+  margin-bottom: 52px !important;
+  visibility: hidden !important;
+}

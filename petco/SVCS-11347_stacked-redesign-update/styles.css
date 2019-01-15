@@ -411,3 +411,20 @@ span.lsa-location {
 #add2CartBtn_cpy2 {
   font-size: 0;
 }
+
+.radio.selected .radio-top div[id*="InventoryStatus_Availability_SectionBopus"] {
+  background: #fff;
+  box-sizing: border-box;
+  display: block;
+  left: 0;
+  margin-left: 0;
+  margin-top: 15px !important;
+  padding-left: 20px;
+  position: absolute;
+  width: 100%;
+}
+
+.radio.selected .radio-top .delivery-option-availability {
+  height: 20px !important;
+  padding-top: 20px !important;
+}
