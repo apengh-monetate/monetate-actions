@@ -1,0 +1,42 @@
+.mt-form-lightbox {
+  background: #fff;
+  border: none;
+  display: block;
+  left: 50%;
+  min-width: 320px;
+  padding: 0;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: auto;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-form-lightbox {
+    min-width: 600px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-form-lightbox {
+    min-width: 810px;
+  }
+}
+
+.mt-form-lightbox > img {
+  display: none;
+}
+
+.mt-form-lightbox__content {
+  display: block;
+  position: relative;
+}
+
+.mt-form-lightbox__heading {
+  background: #da2128;
+  display: block;
+  min-height: 80px;
+}

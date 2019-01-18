@@ -1,0 +1,9 @@
+/* Hide Banner Above HP Hero */
+.hp--container > .hp-0--header {
+    display: none !important;
+}
+
+/* Hide Text Under HP Hero */
+.hp--container .hp-hero--wrppaer-right  {
+    display: none !important;
+}

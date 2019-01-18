@@ -1,0 +1,42 @@
+/* {
+  "autoRotateDuration": 0,
+  "breakpoints": {
+    "Infinity": {
+      "visible": 6
+    },
+    "768": {
+      "peekRight": 0.5,
+      "visible": 2
+    },
+    "480": {
+      "peekRight": 0.75,
+      "visible": 1
+    }
+  },
+  "gridSize": 1,
+  "infiniteSlide": false,
+  "pagination": false,
+  "pauseOnHover": false,
+  "slideIncrement": "page",
+  "stopOnInteraction": false,
+  "transitionAnimation": "push",
+  "transitionDuration": 250
+} */
+
+
+{
+  "autoRotateDuration": 0,
+  "breakpoints": {
+    "Infinity": {
+      "visible": 6
+    }
+  },
+  "gridSize": 1,
+  "infiniteSlide": false,
+  "pagination": false,
+  "pauseOnHover": false,
+  "slideIncrement": "page",
+  "stopOnInteraction": false,
+  "transitionAnimation": "push",
+  "transitionDuration": 250
+}

@@ -1,0 +1,54 @@
+$brand: #da2128;
+$black: #282f2f;
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+.mt-form-lightbox {
+    background: #fff;
+    border: none;
+    display: block;
+    left: 50%;
+    min-width: 320px;
+    padding: 0;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    z-index: 9999;
+    @media screen and (min-width: $breakpoint-md) {
+        min-width: 600px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        min-width: 810px;
+    }
+
+    & > img {
+        display: none;
+    }
+
+    &__content {
+        display: block;
+        position: relative;
+    }
+
+
+    // ==================================================================
+    // Heading
+    // ==================================================================
+    &__heading {
+        background: $brand;
+        display: block;
+        min-height: 80px;
+    }
+
+
+
+    // ==================================================================
+    // Form
+    // ==================================================================
+    &__form {
+        //display: none;
+    }
+}

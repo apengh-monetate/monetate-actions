@@ -1,0 +1,75 @@
+#navigation nav > ul > div[id*="monetate_selectorHTML"] {
+    background: #fff;
+    border-bottom: 1px solid #ededed;
+    clear: both;
+    display: inline-block;
+    float: left;
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    @media screen and (min-width: 1024px) {
+        border-bottom: none;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-top: 1px solid transparent;
+        clear: none;
+        display: table-cell;
+        float: none;
+        margin-left: -1px;
+        margin-top: -1px;
+        padding-bottom: 3px;
+        position: relative;
+        text-align: center;
+        white-space: nowrap;
+        width: auto;
+        &:hover {
+            border-left: 1px solid #d2cfd3;
+            border-right: 1px solid #d2cfd3;
+            border-top: 1px solid #d2cfd3;
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+    }
+}
+
+.mt-nav-link {
+    border: none;
+    box-sizing: border-box;
+    clear: both;
+    color: #333;
+    display: inline-block;
+    float: left;
+    padding: 17px 20px 18px !important;
+    position: relative;
+    text-transform: uppercase;
+    white-space: normal;
+    width: 100%;
+    @media screen and (min-width: 1024px) {
+        clear: none;
+        color: #706d75;
+        display: block;
+        float: none;
+        font-size: 12px;
+        margin: 0;
+        padding: 17px 0 12px !important;
+        position: relative;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+
+    span {
+        color: #333;
+        font-size: 15px;
+        line-height: 1em;
+        position: relative;
+        width: 100%;
+        @media screen and (min-width: 1024px) {
+            display: inline-block;
+            font-size: 12px;
+            letter-spacing: .08em;
+            line-height: 1em;
+            padding: 0;
+        }
+    }
+}

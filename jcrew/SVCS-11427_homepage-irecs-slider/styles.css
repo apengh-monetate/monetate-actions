@@ -1,0 +1,416 @@
+/**
+* DEFAULT SLIDER STYLES
+* Edit at your own risk!
+*/
+#MONETATE-ID {
+  position: relative;
+}
+
+#MONETATE-ID li {
+  list-style: none;
+}
+
+#MONETATE-ID [data-slider] {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider] {
+  white-space: nowrap !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slide] {
+  display: inline-block !important;
+  vertical-align: top;
+  white-space: normal;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide],
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  cursor: pointer;
+  z-index: 1;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider-mask],
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slider-mask] {
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+}
+
+#MONETATE-ID [data-pagination-slide] * {
+  pointer-events: none;
+}
+
+/** ----END DEFAULT STYLES---- */
+/**
+* CUSTOM SLIDER STYLING
+*/
+#MONETATE-ID {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+@media screen and (min-width: 48em) {
+  #MONETATE-ID {
+    height: 0;
+    margin: 30px auto;
+    max-width: 1440px;
+    padding: 0 0 61.944%;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #MONETATE-ID {
+    padding: 0 0 892px;
+  }
+}
+
+#MONETATE-ID .mt-product-tiles__outer {
+  overflow-y: hidden;
+}
+
+#MONETATE-ID .mt-product-tiles__inner {
+  margin: 0 0 -20px;
+  overflow-x: scroll;
+  padding: 0 0 20px;
+}
+
+#MONETATE-ID [data-slider] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 12px;
+  -webkit-transform: none !important;
+          transform: none !important;
+  -webkit-transition: width .5s ease;
+  transition: width .5s ease;
+  width: 1440px;
+}
+
+@media screen and (min-width: 48em) {
+  #MONETATE-ID [data-slider] {
+    max-width: 1440px;
+    min-width: 1300px;
+    padding: 0 24px;
+    width: 100%;
+  }
+}
+
+#MONETATE-ID [data-slide] {
+  display: inline-block;
+  position: relative;
+  width: 16% !important;
+}
+
+#MONETATE-ID [data-slide] > div {
+  height: 100%;
+  padding: 0;
+}
+
+@media screen and (min-width: 48em) {
+  #MONETATE-ID [data-slide] > div {
+    height: auto;
+  }
+}
+
+#MONETATE-ID [data-slide] img {
+  max-width: 100%;
+}
+
+#MONETATE-ID [data-slide] a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 48em) {
+  #MONETATE-ID [data-slide] {
+    display: inline-block;
+    position: absolute;
+  }
+  #MONETATE-ID [data-slide]:nth-child(1) {
+    left: 2.917%;
+    top: 37.668%;
+    width: 16.667% !important;
+  }
+  #MONETATE-ID [data-slide]:nth-child(2) {
+    left: 28.75%;
+    top: 0;
+    width: 18.75% !important;
+  }
+  #MONETATE-ID [data-slide]:nth-child(3) {
+    left: 20.417%;
+    top: 41.704%;
+    width: 27.083% !important;
+  }
+  #MONETATE-ID [data-slide]:nth-child(4) {
+    left: 48.333%;
+    top: 7.623%;
+    width: 20.833% !important;
+  }
+  #MONETATE-ID [data-slide]:nth-child(5) {
+    left: 48.333%;
+    top: 53.812%;
+    width: 16.667% !important;
+  }
+  #MONETATE-ID [data-slide]:nth-child(6) {
+    left: 70%;
+    top: 13.004%;
+    width: 27.083% !important;
+  }
+  #MONETATE-ID [data-slide]:not(:first-child) {
+    display: inline-block !important;
+  }
+}
+
+#MONETATE-ID [data-slide] .slide-link:hover .mt-product-tile__details {
+  opacity: 1;
+}
+
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  background: none;
+  color: #000;
+  font-size: 25px;
+  padding: 0;
+  position: absolute;
+  top: 45%;
+  user-select: none;
+}
+
+#MONETATE-ID [data-prev-button] {
+  left: 0;
+}
+
+#MONETATE-ID [data-next-button] {
+  right: 0;
+}
+
+#MONETATE-ID [disabled] {
+  opacity: 0.5;
+}
+
+#MONETATE-ID .mt-product-tiles__heading {
+  margin: 0;
+  padding: 0 14px 12px;
+}
+
+@media screen and (min-width: 48em) {
+  #MONETATE-ID .mt-product-tiles__heading {
+    bottom: 65%;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+#MONETATE-ID .mt-product-tiles__heading h3 {
+  border: 0;
+  display: block;
+  font-family: "freight-big-pro", Times, serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1;
+  margin: .2em 0;
+  padding: 0;
+  text-align: left;
+  text-transform: none;
+}
+
+@media screen and (min-width: 48em) {
+  #MONETATE-ID .mt-product-tiles__heading h3 {
+    margin: 0 0 0 2.9%;
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1439px) {
+  #MONETATE-ID .mt-product-tiles__heading h3 {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #MONETATE-ID .mt-product-tiles__heading h3 {
+    font-size: 36px;
+  }
+}
+
+#MONETATE-ID .mt-product-tile__img {
+  text-align: center;
+}
+
+@media screen and (min-width: 48em) {
+  #MONETATE-ID .mt-product-tile__img {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  #MONETATE-ID .mt-product-tile__img img {
+    left: -16.666%;
+    max-width: none !important;
+    position: absolute;
+    top: 0;
+    width: 133.333%;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  #MONETATE-ID .mt-product-tile__img-progressive {
+    padding-bottom: 133.333%;
+  }
+}
+
+#MONETATE-ID .mt-product-tile__details {
+  box-sizing: border-box;
+  display: block;
+  font-family: 'soleil',Helvetica,sans-serif;
+  letter-spacing: 0;
+  line-height: 1;
+  opacity: 1;
+  padding: 12px 0;
+  text-align: left;
+  -webkit-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+  width: 100%;
+}
+
+@media screen and (min-width: 48em) {
+  #MONETATE-ID .mt-product-tile__details {
+    background-color: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    padding: 12px;
+    position: absolute;
+    right: 0;
+  }
+}
+
+#MONETATE-ID .mt-product-tile__details-name {
+  display: block;
+  font-size: 13px;
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 1.125rem;
+  text-transform: none;
+}
+
+#MONETATE-ID .mt-product-tile__details-price {
+  display: inline-block;
+  font-size: 14px;
+  font-size: .875rem;
+  font-weight: 700;
+  padding-right: 6px;
+  padding-right: .375rem;
+  text-decoration: line-through;
+}
+
+#MONETATE-ID .mt-product-tile__details-sale-price {
+  color: #da2a2a;
+  display: inline-block;
+  font-size: 14px;
+  font-size: .875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#MONETATE-ID div[data-missing-keys="salePrice"] .mt-product-tile__details-price {
+  display: inline-block;
+  font-size: 14px;
+  font-size: .875rem;
+  font-weight: 700;
+  padding-right: 0;
+  text-decoration: none !important;
+}
+
+#MONETATE-ID [data-pagination="thumbnails"] [data-pagination-slide] {
+  background: none;
+  border-radius: 0;
+  height: auto;
+  width: 40px;
+}
+
+#MONETATE-ID [data-pagination-slide] {
+  background: #000;
+  border-radius: 6px;
+  display: inline-block;
+  height: 12px;
+  margin: 4px;
+  opacity: 0.5;
+  width: 12px;
+}
+
+#MONETATE-ID [data-pagination-slide][data-slide-active] {
+  opacity: 1;
+}
+
+#MONETATE-ID [data-pagination*="dots"] [data-pagination-slide] {
+  /* remove below for pagination numbers */
+  text-indent: -9999px;
+}
+
+#MONETATE-ID button.mt-product-tile-quickshop {
+  background-color: transparent;
+  border: 1px solid #dedede;
+  display: none;
+  height: auto;
+  margin-bottom: 0;
+  margin-top: 1.25rem;
+  padding: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 48em) {
+  #MONETATE-ID button.mt-product-tile-quickshop {
+    display: none;
+  }
+}
+
+#MONETATE-ID button.mt-product-tile-quickshop .btn--quickshop {
+  color: #666;
+  font-size: 12px;
+  font-size: .75rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  letter-spacing: .09375rem;
+  line-height: 15px;
+  line-height: .9375rem;
+  padding-bottom: .3125rem;
+  padding-top: .375rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#MONETATE-ID button.mt-product-tile-quickshop .btn--quickshop:hover {
+  background-color: #f1f1f1;
+}

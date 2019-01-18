@@ -1,0 +1,14 @@
+<a class="slide-link" href="{{link}}" data-pid="{{id}}">
+    <div class="mt-product-tile__img">
+        <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+        <div class="mt-product-tile__img-progressive"></div>
+    </div>
+    <button class="mt-product-tile-quickshop c-product-tile__quickshop c-product-tile__quickshop-triple is-hidden--small-block js-quickshop btn--quickshop" data-color="WX2940" data-product="{{id}}" data-url="{{link}}">
+        <div class="js-quickshop btn--quickshop">QUICK SHOP</div>
+    </button>
+    <div class="mt-product-tile__details">
+        <span class="mt-product-tile__details-name">{{title|truncate: 100}}</span>
+        <span class="mt-product-tile__details-price">{{price|priceFormat: $1,000.00}}</span>
+        <span class="mt-product-tile__details-sale-price">{{salePrice|priceFormat: $1,000.00}}</span>
+    </div>
+</a>

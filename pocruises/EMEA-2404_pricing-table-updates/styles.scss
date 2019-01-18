@@ -1,0 +1,178 @@
+$font-primary: 'cronos-pro', sans-serif;
+$font-secondary: 'CoreRhino35Light';
+
+$black: #4d4d4d;
+$blue: #13377c;
+$gold: #9f7f2b;
+$even: #fff;
+$odd: #eeede9;
+
+
+// ==================================================================
+// Pricing Table
+// ==================================================================
+.mt_pricing {
+    display: block;
+    position: relative;
+    width: 100%;
+
+
+
+    // ------------------------------------------------------------------
+    // Heading
+    // ------------------------------------------------------------------
+    &__heading {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        h3 {
+            color: $gold;
+            font-family: $font-secondary;
+            font-size: 40px;
+            letter-spacing: -0.03em;
+            line-height: 40px;
+            padding-bottom: 30px;
+        }
+    } // HEADING
+
+
+
+
+    // ------------------------------------------------------------------
+    // Table
+    // ------------------------------------------------------------------
+    &__table {
+        color: $black;
+        display: block;
+        position: relative;
+        width: 100%;
+
+
+        // ------------------------------------------------------------------
+        // Head (thead)
+        // ------------------------------------------------------------------
+        &-head {
+            background: $even;
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+            width: 100%;
+            tr {
+            }
+            th {
+                color: $blue;
+                font-family: $font-primary;
+                font-size: 16px;
+                line-height: 1em;
+                padding: 12px 0;
+                text-align: left;
+                text-transform: uppercase;
+                &:not(:first-child) {
+                    padding-left: 10px;
+                }
+            }
+        }
+
+
+        // ------------------------------------------------------------------
+        // Body (tbody)
+        // ------------------------------------------------------------------
+        &-body {
+            tr {
+                &:nth-child(odd) {
+                    background: $odd;
+                }
+                &:nth-child(even) {
+                    background: darken($odd, 5%);
+                }
+            }
+            th {
+                border-right: 1px solid #ccc;
+                font-weight: bold;
+            }
+            th,
+            td {
+                font-family: $font-primary;
+                font-size: 20px;
+                line-height: 18px;
+                padding-bottom: 12px;
+                padding-left: 0;
+                padding-right: 10px;
+                padding-top: 12px;
+                text-align: left;
+                vertical-align: middle;
+            }
+            td {
+                padding-left: 10px;
+            }
+        }
+
+
+        // ------------------------------------------------------------------
+        // Footer (tfoot)
+        // ------------------------------------------------------------------
+        &-footer {
+            tr {
+                background: #fff;
+            }
+            td {
+                font-family: $font-primary;
+                font-size: 20px;
+                line-height: 18px;
+                padding-bottom: 12px;
+                padding-left: 0;
+                padding-right: 10px;
+                padding-top: 12px;
+                vertical-align: middle;
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+        
+    } // TABLE
+
+
+
+
+    // ------------------------------------------------------------------
+    // Buttons
+    // ------------------------------------------------------------------
+    &__buttons {
+        //background: #fff !important;
+    }
+    &__button {
+        display: flex;
+        a {
+            align-content: center;
+            align-items: center;
+            background: $blue;
+            border-radius: 3px;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            display: flex;
+            font-size: 18px;
+            justify-content: space-between;
+            line-height: 21px;
+            padding: 12px 0 12px 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 100%;
+            &:hover,
+            &:focus,
+            &:active {
+                background: $blue;
+                color: #fff;
+                text-decoration: none;
+            }
+            span {
+                margin-right: -8px;
+            }
+        }
+    }
+
+
+}

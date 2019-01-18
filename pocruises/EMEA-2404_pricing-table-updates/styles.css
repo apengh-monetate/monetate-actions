@@ -1,0 +1,141 @@
+.mt_pricing {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.mt_pricing__heading {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.mt_pricing__heading h3 {
+  color: #9f7f2b;
+  font-family: "CoreRhino35Light";
+  font-size: 40px;
+  letter-spacing: -0.03em;
+  line-height: 40px;
+  padding-bottom: 30px;
+}
+
+.mt_pricing__table {
+  color: #4d4d4d;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.mt_pricing__table-head {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.mt_pricing__table-head th {
+  color: #13377c;
+  font-family: "cronos-pro", sans-serif;
+  font-size: 16px;
+  line-height: 1em;
+  padding: 12px 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.mt_pricing__table-head th:not(:first-child) {
+  padding-left: 10px;
+}
+
+.mt_pricing__table-body tr:nth-child(odd) {
+  background: #eeede9;
+}
+
+.mt_pricing__table-body tr:nth-child(even) {
+  background: #e3e1db;
+}
+
+.mt_pricing__table-body th {
+  border-right: 1px solid #ccc;
+  font-weight: bold;
+}
+
+.mt_pricing__table-body th,
+.mt_pricing__table-body td {
+  font-family: "cronos-pro", sans-serif;
+  font-size: 20px;
+  line-height: 18px;
+  padding-bottom: 12px;
+  padding-left: 0;
+  padding-right: 10px;
+  padding-top: 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.mt_pricing__table-body td {
+  padding-left: 10px;
+}
+
+.mt_pricing__table-footer tr {
+  background: #fff;
+}
+
+.mt_pricing__table-footer td {
+  font-family: "cronos-pro", sans-serif;
+  font-size: 20px;
+  line-height: 18px;
+  padding-bottom: 12px;
+  padding-left: 0;
+  padding-right: 10px;
+  padding-top: 12px;
+  vertical-align: middle;
+}
+
+.mt_pricing__table-footer td:last-child {
+  padding-right: 0;
+}
+
+.mt_pricing__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mt_pricing__button a {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #13377c;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 21px;
+  padding: 12px 0 12px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.mt_pricing__button a:hover, .mt_pricing__button a:focus, .mt_pricing__button a:active {
+  background: #13377c;
+  color: #fff;
+  text-decoration: none;
+}
+
+.mt_pricing__button a span {
+  margin-right: -8px;
+}
