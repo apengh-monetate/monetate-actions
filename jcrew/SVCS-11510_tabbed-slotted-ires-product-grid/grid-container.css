@@ -1,0 +1,126 @@
+.mt_grid__container {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 24px;
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 30em) {
+  .mt_grid__container {
+    padding-right: 0;
+  }
+}
+
+.mt_grid__container img {
+  max-width: 100%;
+}
+
+.mt_grid__heading {
+  border-bottom: 0;
+  clear: both;
+  display: block;
+  font-family: 'soleil',Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: .15em;
+  line-height: 16px;
+  line-height: 1rem;
+  list-style: none;
+  margin: 1.3125rem auto !important;
+  margin-bottom: 0 !important;
+  padding: 0 0 .4375rem !important;
+  position: relative;
+  text-align: center !important;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.mt_grid__recommendations {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  max-width: 1138px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 20px;
+  padding-right: 0;
+}
+
+@media screen and (min-width: 30em) {
+  .mt_grid__recommendations {
+    padding: 20px 15px;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .mt_grid__recommendations {
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mt_grid__recommendations {
+    padding: 15px 0;
+  }
+}
+
+.mt_grid__recommendations-wrapper {
+  margin-left: -10px;
+  width: 1100px;
+}
+
+@media screen and (min-width: 30em) {
+  .mt_grid__recommendations-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .mt_grid__recommendations-wrapper {
+    width: 100%;
+  }
+}
+
+.mt_grid__recommendations-list {
+  display: inline;
+  list-style-type: none;
+  width: 100%;
+}
+
+.mt_grid__recommendations-item {
+  display: inline-block;
+  float: left;
+  font-size: 0;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  vertical-align: top;
+}
+
+.mt_grid__recommendations-item.span-1 {
+  width: 20%;
+}
+
+.mt_grid__recommendations-item.span-2 {
+  width: 40%;
+}
+
+.mt_grid__recommendations-item.span-3 {
+  width: 60%;
+}
+
+.mt_grid__recommendations-item.span-4 {
+  width: 80%;
+}
+
+.mt_grid__recommendations-item.span-5 {
+  width: 100%;
+}
+
+@media screen and (min-width: 48em) {
+  .mt-tab-content .mt_grid__heading {
+    display: none !important;
+  }
+}

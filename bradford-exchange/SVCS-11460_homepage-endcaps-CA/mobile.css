@@ -1,0 +1,165 @@
+/* ---------------------------------------------------------
+    GENERIC STYLES
+    These can stay mostly untouched
+--------------------------------------------------------- */
+.mt_endcap {
+  overflow: hidden;
+  position: relative;
+}
+
+.mt_sliderMiddle {
+  overflow: hidden;
+  position: relative;
+}
+
+.mt_sliderMask {
+  height: auto;
+  width: 100%;
+}
+
+.mt_sliderMask ul {
+  position: relative;
+}
+
+.mt_sliderMask ul li.mt_item {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 10px 20px 0px 0px;
+}
+
+.mt_sliderMask ul li.mt_item a {
+  display: block;
+}
+
+.mt_arrowContainer {
+  cursor: pointer;
+}
+
+.mt_endcap .mt_prodName {
+  display: block;
+  font-size: 10px !important;
+  line-height: 12px !important;
+  padding: 5px 0 10px 0;
+  text-decoration: underline;
+}
+
+.mt_endcap .mt_price {
+  color: #32465a;
+  display: block;
+  font-weight: bold;
+  padding: 0 0 5px 0;
+}
+
+.mt_endcap .mt_currency, .mt_endcap .mt_amount {
+  font-size: 12px !important;
+}
+
+.mt_endcap .mt_amount:after {
+  content: 'CAD';
+  padding-left: 4px;
+}
+
+.mt_endcap .mt_title {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------------
+    HORIZONTAL STYLES
+    Adjust your max width on the endcap & edit the
+    slider mask calc to match your creative widths.
+--------------------------------------------------------- */
+.mt_endcap.mt_horizontal {
+  max-width: 960px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.mt_horizontal .mt_sliderMiddle {
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+          align-items: center;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  padding-left: 15px;
+}
+
+.mt_horizontal .mt_sliderMask {
+  float: left;
+  max-width: calc(100% - 40px);
+}
+
+.mt_horizontal .mt_sliderMask ul {
+  left: 0;
+}
+
+.mt_horizontal .mt_sliderMask ul.mt_animate {
+  -webkit-transition: left .25s;
+  transition: left .25s;
+}
+
+.mt_horizontal li.mt_item {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mt_horizontal .mt_itemImageContainer .mt_image {
+  height: auto;
+  width: 100%;
+}
+
+.mt_horizontal .mt_arrowContainer {
+  float: left;
+  position: relative;
+}
+
+.mt_horizontal .mt_sliderTop {
+  padding: 0 15px 10px 15px;
+}
+
+/* ---------------------------------------------------------
+    VERTICAL STYLES
+    Adjust the position, top, left, etc to taste.
+--------------------------------------------------------- */
+.mt_endcap.mt_vertical {
+  left: 50%;
+  margin-left: -705px;
+  overflow: visible;
+  position: absolute;
+  top: 70px;
+  width: 180px;
+}
+
+.mt_vertical .mt_sliderMiddle {
+  background: #fff;
+  height: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.mt_vertical .mt_sliderMask ul {
+  top: 0;
+}
+
+.mt_vertical .mt_arrowBtn > img {
+  display: block;
+  margin: 0 auto;
+}
+
+.mt_vertical .mt_sliderMask ul.mt_animate {
+  -webkit-transition: top .25s;
+  transition: top .25s;
+}
+
+.mt_vertical .mt_itemImageContainer .mt_image {
+  height: auto;
+  max-width: 100px;
+  width: 100%;
+}
+
+/* ---------------------------------------------------------
+    CONVENIENCE CLASSES
+--------------------------------------------------------- */

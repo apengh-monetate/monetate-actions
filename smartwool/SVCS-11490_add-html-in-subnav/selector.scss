@@ -1,0 +1,3 @@
+li.l1.topnav-accordion-item:has(a:contains("SHOP")) > .topnav-dropdown > .topnav-dropdown-wrapper > .row > .columns > .topnav-accordion-l2-dropdown:has(a.topnav-accordion-item-link:contains("COLLECTIONS")) {}
+
+.topnav-accordion-l2-dropdown:has(a.topnav-accordion-item-link:contains("COLLECTIONS")) {}

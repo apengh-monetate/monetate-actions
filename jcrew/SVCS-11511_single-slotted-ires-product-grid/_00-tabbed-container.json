@@ -1,0 +1,170 @@
+{
+  "id": 378871,
+  "title": "Tab Container for Recommendation Product Grid",
+  "description": "Tabbed HTML container for recommendation product grid on the PDP",
+  "op": "tabContainer",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Product detail page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "tabs",
+        "value": "Customers Also Love\nSimilar Items\nGoes Well With"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Line separated tab titles.",
+        "label": "Tab Titles"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "sel",
+        "value": "#c-product__recommendations"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Selector to find the relative node.",
+        "label": "CSS3 Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "replace"
+      },
+      "widget": {
+        "description": "Function to use when inserting the banner relative to the selected node",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "first",
+            "label": "First"
+          },
+          {
+            "name": "last",
+            "label": "Last"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Function"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_style",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssValueAsString",
+        "description": "Sets the cssText value of the containing div element",
+        "label": "Containing Div Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleSheet",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "CSS style to append",
+        "label": "CSS Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_hideTabs",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Hides the tab if no content is inserted. Useful for endcap merch sets that don't always display (i.e. Recently Viewed).",
+        "label": "Hide tab if no content is inserted."
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [
+    {
+      "selector": "#c-product__recommendations",
+      "value": "/p/",
+      "op": "path_iprefix"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 213860,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

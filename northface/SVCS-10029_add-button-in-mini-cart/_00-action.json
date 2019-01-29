@@ -1,0 +1,170 @@
+{
+  "id": 378879,
+  "title": "Insert Additional Button in Mini-Cart",
+  "description": "Insert Additional Button in Mini-Cart",
+  "op": "allInOneV2",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Mini-Cart",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<div class=\"mini-cart-actions-item cart-actions-item\" id=\"secureCheckout\"><a class=\"mini-cart-action button primary\" href=\"https://www.thenorthface.com/webapp/wcs/stores/servlet/VFShippingAddressView?storeId=7001\">Checkout</a></div>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": ".mini-cart-actions-item.cart-actions-item"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "after"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "description": "Where to insert the banner in relation to the Relative Element Selector."
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "label": "Script"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "#checkout > a.mini-cart-action:before {\n  text-align: center;\n  width: 100%;\n}\n\n#secureCheckout > a.mini-cart-action {\n  font-size: 15px !important;\n  line-height: 22px !important;\n}\n\n#checkout {\n  margin-right: 20px;\n  text-align: right;\n}\n\n#secureCheckout {\n  text-align: left;\n}\n\n.mini-cart-actions.cart-actions {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: nowrap;\n      flex-wrap: nowrap;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n\n.mini-cart-actions.cart-actions > * {\n  display: block;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.cart-list .cart-actions-item {\n  padding-left: 0 !important;\n  padding-right: 0 !important;\n}\n\n.topnav-minicart-panel .mini-cart-action {\n  width: 80% !important;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

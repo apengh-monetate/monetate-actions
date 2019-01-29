@@ -1,0 +1,4 @@
+.r3s1content .rs-floating > .r3s1block1,
+.r3s1content .rs-floating > .r3s1block2 {
+  display: none !important;
+}

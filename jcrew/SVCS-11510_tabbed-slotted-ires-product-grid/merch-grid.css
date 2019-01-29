@@ -1,0 +1,105 @@
+#MONETATE-ID [mt-data-grid] {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+}
+
+#MONETATE-ID .mt-merch-item {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 10px 20px 10px;
+  padding: 0;
+}
+
+@media screen and (min-width: 30em) {
+  #MONETATE-ID .mt-merch-item {
+    margin: 0 5px 10px 5px;
+  }
+}
+
+.mt-grid-tile {
+  padding: 0;
+  text-align: left;
+  text-decoration: none !important;
+  text-transform: none;
+}
+
+.mt-grid-tile__img img {
+  display: block;
+  margin-bottom: 1.25rem;
+  max-width: 100%;
+}
+
+.mt-grid-tile__details {
+  box-sizing: border-box;
+  display: block;
+  font-family: 'soleil',Helvetica,sans-serif;
+  line-height: 13px;
+  line-height: .8125rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  text-transform: none;
+}
+
+@media screen and (min-width: 48em) {
+  .mt-grid-tile__details {
+    line-height: 18px;
+    line-height: 1.125rem;
+  }
+}
+
+.mt-grid-tile__details-name {
+  display: block;
+  font-size: 13px;
+  font-size: .8125rem;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.mt-grid-tile__details-price {
+  display: inline-block;
+  font-size: 14px;
+  font-size: .875rem;
+  font-weight: 400;
+  margin-top: 10px;
+  padding-right: 10px;
+  text-decoration: line-through;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 48em) {
+  .mt-grid-tile__details-price {
+    margin-top: 0;
+  }
+}
+
+.mt-grid-tile__details-sale-price {
+  color: #da2a2a;
+  display: inline-block;
+  font-size: 14px;
+  font-size: .875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+div.mt-merch-item[data-missing-keys="salePrice"] .mt-grid-tile__details-price {
+  display: inline-block;
+  font-size: 14px;
+  font-size: .875rem;
+  font-weight: 400;
+  padding-right: 0;
+  text-decoration: none !important;
+}

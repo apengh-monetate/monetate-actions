@@ -1,0 +1,79 @@
+$max-width: 1126px;
+
+// ==================================================================
+// Tabs
+// ==================================================================
+.mt-tabs {
+    display: none;
+    @media screen and (min-width: 48em) {
+        display: flex;
+        justify-content: flex-start;
+        list-style-type: none;
+        margin: 2.25rem auto .9375rem;
+        max-width: 1128px;
+        padding-bottom: .125rem;
+        padding-left: 20px;
+        width: 100%;
+    }
+    @media screen and (min-width: 1024px) {
+        padding-left: 0;
+    }
+
+    // Tab Title
+    li {
+        border-bottom: 0;
+        color: #999;
+        cursor: pointer;
+        display: inline;
+        font-size: 13px!important;
+        font-size: .8125rem!important;
+        font-weight: 500;
+        letter-spacing: 1.95px;
+        letter-spacing: .12187rem;
+        margin-left: 1.25rem;
+        text-align: left;
+        text-transform: uppercase;
+        @media screen and (min-width: 48em) {
+            margin-left: 0;
+            margin-right: 5.3125rem;
+            padding-bottom: .3125rem;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            border-bottom: 2px solid #000;
+            color: #000;
+            text-decoration: none;
+        }
+
+        &.mt-open {
+            @media screen and (min-width: 48em) {
+                border-bottom: 2px solid #000;
+                color: #000;
+            }
+        }
+    }
+}
+
+
+// ==================================================================
+// Tab Content
+// ==================================================================
+.mt-tab-content {
+    & > div {
+        display: block;
+        margin: 0 auto;
+        max-width: 1138px;
+        width: 100%;
+        @media screen and (min-width: 48em) {
+            display: none;
+            &.mt-open {
+                display: block !important;
+            }
+        }
+        @media screen and (min-width: 1025px) {
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+    }
+}

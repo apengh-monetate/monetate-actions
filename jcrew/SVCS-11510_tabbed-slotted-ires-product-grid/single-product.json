@@ -1,0 +1,13 @@
+{
+    "products_data": [{
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Wallace & Barnes garment-dyed chore blazer",
+        "price": 425,
+        "imageLink": "https://www.jcrew.com/s7-img-facade/G6710_BL8133_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636",
+        "link": "/p/mens_category/sportcoatsandvests/cotton/wallace-barnes-garmentdyed-chore-blazer/G6710",
+        "salePrice": 209.99,
+        "id": "G6710",
+        "itemGroupId": "1"
+    }]
+}

@@ -1,0 +1,90 @@
+.mt_grid {
+    &__container {
+        display: block;
+        overflow: hidden;
+        padding-bottom: 24px;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__heading {
+        border-bottom: 0;
+        clear: both;
+        display: block;
+        font-family: 'soleil',Helvetica,Arial,sans-serif;
+        font-size: 16px;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: .15em;
+        line-height: 16px;
+        line-height: 1rem;
+        list-style: none;
+        margin: 1.3125rem auto !important;
+        margin-bottom: 0 !important;
+        padding: 0 0 .4375rem !important;
+        position: relative;
+        text-align: center !important;;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    &__recommendations {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        max-width: 1138px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding: 20px;
+        padding-right: 0;
+        @media screen and (min-width: 48em) {
+            overflow: hidden;
+            padding: 20px 15px;
+        }
+        @media screen and (min-width: 1025px) {
+            padding: 20px 0;
+        }
+
+        &-wrapper {
+            margin-left: -5px;
+            margin-right: -5px;
+            width: 1320px;
+            @media screen and (min-width: 48em) {
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+            }
+        }
+
+        &-list {
+            display: inline;
+            list-style-type: none;
+            width: 100%;
+        }
+
+        &-item {
+            display: inline-block;
+            float: left;
+            font-size: 0;
+            height: auto;
+            margin: 0 auto;
+            padding: 0;
+            vertical-align: top;
+
+            &:last-child {
+                padding-right: 1.25rem;
+                @media screen and (min-width: 481px) {
+                    padding-right: 0;
+                }
+            }
+
+            @for $i from 1 through 6 {
+                &.span-#{$i} {
+                    width: 100% / (6 / $i);
+                }
+            }
+        }
+    }
+
+}

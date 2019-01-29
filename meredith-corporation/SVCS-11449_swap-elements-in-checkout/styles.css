@@ -1,0 +1,52 @@
+/* MOBILE */
+@media screen and (max-width: 540px) {
+  #storeCheckoutForm > .row--main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #storeCheckoutForm > .row--main .column__right--main {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #storeCheckoutForm > .row--main #gift__address-form {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+  }
+  #storeCheckoutForm > .row--main .column__left--main {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+/* TABLET / DESKTOP */
+@media screen and (min-width: 541px) {
+  .row--main .column__left--main {
+    float: right !important;
+    margin-left: 5.55% !important;
+    margin-right: 0 !important;
+  }
+  .row--main .column__right--main {
+    margin-left: 0 !important;
+    margin-right: 5.55% !important;
+  }
+  /* Gift Option */
+  form.gifts #gift__offers {
+    float: left !important;
+  }
+  form.gifts #gift__address-form {
+    float: left !important;
+  }
+  form.gifts .row--main .column__left--main,
+  form.gifts .row--main .column__right--main {
+    float: right !important;
+    margin-left: 0 !important;
+    margin-right: 5.55% !important;
+  }
+}

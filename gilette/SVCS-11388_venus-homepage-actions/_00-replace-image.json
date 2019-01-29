@@ -1,0 +1,190 @@
+{
+  "id": 378840,
+  "title": "Replace Homepage Hero Image",
+  "description": "Replace Homepage Hero Image",
+  "op": "selectorBanner",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "image",
+  "subcategory": "Home page",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative",
+        "value": {
+          "extension": ".png",
+          "height": 1384,
+          "width": 2880,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "cccf21dd0a49e31c8c8e237cffa97ce03a0135c1",
+          "id": 629518
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload an image creative",
+        "label": "Image Creative"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "StringSelectField",
+        "description": "Image to replace",
+        "label": "Image to replace",
+        "options": [
+            {
+                "name": ".main > section.first div.imgContainer > img.mobile",
+                "label": "Mobile Image"
+            },
+            {
+                "name": ".main > section.first div.imgContainer > img.desktop",
+                "label": "Desktop Image"
+            }
+        ]
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "replace"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "label": "Insert Method",
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "action_visible": false
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_imgStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
+        "label": "Image Element Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "/* Set the background color to match the image */\n.container.probablyHomePage .first {\n  background-color: #404040 !important;\n}",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [
+    {
+      "selector": ".main > section.first div.imgContainer",
+      "value": "(https?\\:\\/\\/direct\\.gillettevenus\\.com\\/?)($|\\?.*)?",
+      "op": "full_iregex"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

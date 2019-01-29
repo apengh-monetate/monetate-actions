@@ -1,0 +1,107 @@
+.wrapper-mob-nav-sticky-links {
+    .my-account {}
+    .wish-list {}
+    .customer-care {}
+}
+
+.wrapper-global-header-mobile {
+    .mobile-nav {}
+    .icon-header-search {}
+    .store-finder {}
+    .mini-basket {}
+}
+
+%icon {
+    display: block;
+    font-family: 'Open Sans';
+    font-size: 9px;
+    line-height: 11px;
+    position: absolute;
+    text-transform: uppercase;
+}
+%black {
+    bottom: -5px;
+    color: #000;
+    font-weight: 700;
+}
+%white {
+    bottom: 9px;
+    color: #fff;
+    font-weight: 100;
+}
+
+.wrapper-global-header-mobile {
+    .icons.mobile-nav::after {
+        @extend %icon;
+        @extend %black;
+        content:"MENU";
+    }
+
+    .icons.icon-header-search::after {
+        @extend %icon;
+        @extend %black;
+        color: #000;
+        content:"SEARCH";
+        transform: translateX(-10%);
+    }
+
+    .icons.store-finder::after {
+        @extend %icon;
+        @extend %black;
+        content:"STORES";
+        transform: translateX(-25%);
+    }
+
+    .icons.mini-basket {
+        position: relative;
+        &::after {
+            @extend %icon;
+            @extend %black;
+            bottom: -15px;
+            content:"BAG";
+            transform: translate(0, 50%, 0);
+        }
+    }
+    a.full-basket {
+        .icons.mini-basket {
+            &::after {
+                bottom: -15px;
+            }
+        }
+    }
+}
+
+.wrapper-mob-nav-sticky-links {
+    .my-account::after {
+        @extend %icon;
+        @extend %white;
+        content:"LOGIN/REGISTER";
+        transform: translateX(-30%);
+    }
+    .wish-list::after {
+        @extend %icon;
+        @extend %white;
+        content:"WISHLIST";
+        transform: translateX(-20%);
+    }
+    .customer-care::after {
+        @extend %icon;
+        @extend %white;
+        content:"HELP";
+        transform: translateX(5%);
+    }
+}
+
+
+
+// Reset
+.wrapper-global-header-mobile .row {
+    @media screen and (max-width: 1024px) {
+        height: 100% !important;
+    }
+}
+.wrapper-global-header-mobile .basket-icon-circle {
+    @media screen and (max-width: 1024px) {
+        top: -4px !important;
+    }
+}

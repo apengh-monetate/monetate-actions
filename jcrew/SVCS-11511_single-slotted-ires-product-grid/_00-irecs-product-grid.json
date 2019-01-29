@@ -1,0 +1,172 @@
+{
+  "id": 378870,
+  "title": "Intelligent Recommendations Grid - Manual",
+  "description": "Inserts a grid of iRec items.",
+  "op": "iRecGrid",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "endcap",
+  "subcategory": "other",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "sel",
+        "value": null
+      },
+      "widget": {
+        "label": "Insert Selector",
+        "type": "CssSelectorField",
+        "description": "Selector to find the node where the grid will be inserted.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "first"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "first",
+            "label": "First"
+          },
+          {
+            "name": "last",
+            "label": "Last"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Method to use when inserting the grid relative to the selected node.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "insertOptions",
+        "value": "RecheckForElement"
+      },
+      "widget": {
+        "description": "RecheckForElement: If the selector is not found, wait up to 3 seconds for it to show up. SelectMultipleElements: If the selector matches multiple places, do you want to insert at each of them?",
+        "label": "Insert Options",
+        "action_visible": true,
+        "hiddenMenu": true,
+        "allIsValid": true,
+        "type": "CheckboxArrayAsString",
+        "options": [
+          "RecheckForElement",
+          "SelectMultipleElements"
+        ]
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "json",
+        "name": "json",
+        "value": "{\n    \"products_data\": [{\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Wallace & Barnes garment-dyed chore blazer\",\n        \"price\": 425,\n        \"imageLink\": \"https://www.jcrew.com/s7-img-facade/G6710_BL8133_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636\",\n        \"link\": \"/p/mens_category/sportcoatsandvests/cotton/wallace-barnes-garmentdyed-chore-blazer/G6710\",\n        \"salePrice\": 209.99,\n        \"id\": \"G6710\",\n        \"itemGroupId\": \"1\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Ludlow stretch two-ply easy-care cotton dress shirt in microcheck\",\n        \"price\": 69.50,\n        \"imageLink\": \"https://www.jcrew.com/s7-img-facade/H6089_WX2293_d7?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636\",\n        \"link\": \"/p/mens_category/dressshirts/classicdressshirts/ludlow-stretch-twoply-easycare-cotton-dress-shirt-in-microcheck/H6089\",\n        \"salePrice\": 57.99,\n        \"id\": \"H6089\",\n        \"itemGroupId\": \"2\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Red Wing for J.Crew oxfords\",\n        \"price\": 270.00,\n        \"imageLink\": \"https://www.jcrew.com/s7-img-facade/G8898_EG4218?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636\",\n        \"link\": \"/p/mens_category/shoes/boots/red-wing-for-jcrew-oxfords/G8898\",\n        \"salePrice\": null,\n        \"id\": \"G8898\",\n        \"itemGroupId\": \"3\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Everyday cashmere V-neck sweater\",\n        \"price\": 98.00,\n        \"imageLink\": \"https://www.jcrew.com/s7-img-facade/J6388_BL8271_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636\",\n        \"link\": \"/p/mens_category/sweaters/pullover/everyday-cashmere-vneck-sweater/J6388\",\n        \"salePrice\": null,\n        \"id\": \"J6388\",\n        \"itemGroupId\": \"4\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Ludlow blazer in herringbone English tweed\",\n        \"price\": 298.00,\n        \"imageLink\": \"https://www.jcrew.com/s7-img-facade/C8778_WX2479_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636\",\n        \"link\": \"/p/mens_category/sportcoatsandvests/wool/ludlow-blazer-in-herringbone-english-tweed/C8778\",\n        \"salePrice\": 249.00,\n        \"id\": \"C8778\",\n        \"itemGroupId\": \"5\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Stretch Secret Wash shirt in solid heathered poplin\",\n        \"price\": 59.50,\n        \"imageLink\": \"https://www.jcrew.com/s7-img-facade/J6690_GY7315_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636\",\n        \"link\": \"/p/mens_category/shirts/classicfitshirts/stretch-secret-wash-shirt-in-solid-heathered-poplin/J6690\",\n        \"salePrice\": null,\n        \"id\": \"J6690\",\n        \"itemGroupId\": \"6\"\n    }]\n}\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "JsonCodeField",
+        "description": "Manually Add product data.",
+        "label": "JSON Products Input"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "maxItems",
+        "value": 8
+      },
+      "widget": {
+        "label": "Maximum Number of Items",
+        "type": "IntegerField",
+        "description": "Maximum number of merch items to have in the grid.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "gridTemplate",
+        "value": "<div>Merch Grid</div>\n{{GRID}}"
+      },
+      "widget": {
+        "label": "Grid Container Template",
+        "type": "HtmlCodeField",
+        "description": "Include an HTML template to build the grid structure. Use the placeholder '{{grid}}' to place the gird of items.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "itemTemplate",
+        "value": "<a href=\"{{link}}\" data-pid=\"{{id}}\">\n    <div>\n      <img src=\"{{imageLink}}\" alt=\"{{id}} - {{title}}\">\n    </div>\n    <div>\n        <div>{{title|truncate: 20}}</div>\n                <div>\n            <span>{{price|priceFormat: $1,000.00}}</span>\n            <span>{{salePrice|priceFormat: $1,000.00}}</span>\n        </div>\n    </div>\n</a>"
+      },
+      "widget": {
+        "label": "Item Template",
+        "type": "HtmlCodeField",
+        "description": "Placeholder example: '{{price}}'. Possible placeholders include all product catalog fields. Examples: title, id, itemGroupId, price, salePrice, link, imageLink",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "css",
+        "value": {
+          "content": "#MONETATE-ID [mt-data-grid] {\n    box-sizing: border-box;\n    display: -ms-flexbox;\n    display: -webkit-box;\n    display: flex;\n    -ms-flex-direction: row;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    flex-direction: row;\n    -ms-flex-wrap: wrap;\n    flex-wrap: wrap;\n}\n\n#MONETATE-ID .mt-merch-item {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n    box-sizing: border-box;\n    padding: 10px;\n}\n\n@media (max-width: 768px) {\n    #MONETATE-ID .mt-merch-item {\n        -ms-flex-preferred-size: 50%;\n        flex-basis: 50%;\n        max-width: 50%;\n    }\n}\n\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+        "label": "CSS"
+      },
+      "required": true
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

@@ -1,0 +1,49 @@
+#MONETATE-ID .mt-price-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#MONETATE-ID .mt-sale-price {
+  color: #000;
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  font-weight: bold;
+  margin-top: 5px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  text-decoration: none;
+}
+
+#MONETATE-ID .mt-price {
+  color: #7B827F;
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  font-weight: normal;
+  margin-top: 5px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  text-decoration: line-through;
+}
+
+#MONETATE-ID .mt-merch-item[data-missing-keys="salePrice"] .mt-price {
+  color: #000;
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  font-size: 14px;
+  font-weight: bold;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  text-decoration: none;
+}

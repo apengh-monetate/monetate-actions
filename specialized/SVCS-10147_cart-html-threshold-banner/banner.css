@@ -1,0 +1,24 @@
+.mt_cart-banner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #cde2f5;
+  color: #414141;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "DIN W01 Medium", sans-serif;
+  height: 48px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 20px;
+  position: relative;
+  width: 100%;
+}
+
+.mt_cart-banner__msg {
+  display: block;
+  margin: 0;
+  padding: 0;
+}

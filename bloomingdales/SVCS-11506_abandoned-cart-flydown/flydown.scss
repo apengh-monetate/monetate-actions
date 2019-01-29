@@ -1,0 +1,108 @@
+/* adjust animation here - 6s is duration, 2.5s is delay */
+#wglHeaderResponsive > div[id*="monetate_selectorHTML"] {
+    animation-delay: 2.5s;
+    animation-direction: forwards;
+    animation-duration: 6s;
+    animation-name: flyinOut;
+    animation-timing-function: ease;
+    background: #fff;
+    border: 1px solid #ccc;
+    bottom: -93px;
+    opacity: 0;
+    padding: 15px 10px 20px;
+    position: absolute;
+    right: 0;
+    width: 175px;
+    z-index: 99999;
+    @media screen and (min-width: 600px) {
+        bottom: -83px;
+        right: 18px;
+    }
+    @media screen and (min-width: 768px) {
+        bottom: -83px;
+        right: 0;
+    }
+    @media screen and (min-width: 1440px) {
+        bottom: -83px;
+        right: calc((100vw - 1440px) / 2);
+    }
+}
+// .header-flex-container.smallsticky .cart-link > div[id*="monetate_selectorHTML"] {
+//     @media screen and (min-width: 1025px) {
+//         top: 30px;
+//     }
+// }
+//
+#wglHeaderResponsive,
+body > header {
+    position: relative;
+}
+
+/* Abandond Cart Flydown */
+.mt-abandoned-cart {
+    text-align: center;
+    &:before {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAHBAMAAAAsQKpuAAAAJFBMVEX////MzMzMzMzMzMzMzMzQ0NDQ0NDU1NTw8PD19fX6+vr///9WnUvqAAAABnRSTlMAJlF5+fkJqfZhAAAALUlEQVQImWNgYGBkAAMTBRDJXBEEosxXTwVymat27wwCcXbvBnKrdu/evTMBAKMrC85aARJaAAAAAElFTkSuQmCC") 0 0 no-repeat;
+        content: '';
+        display: inline-block;
+        height: 7px;
+        position: absolute;
+        right: 20px;
+        top: -7px;
+        width: 11px;
+        @media screen and (min-width: 768px) {
+            right: 40px;
+        }
+        @media screen and (min-width: 1025px) {
+            right: 24px;
+        }
+    }
+
+    &__msg {
+        font-family: 'Avenir',Helvetica,Arial,sans-serif!important;
+        font-size: 10px!important;
+        font-weight: bold!important;
+        letter-spacing: .1em!important;
+        line-height: 17px!important;
+        text-transform: uppercase!important;
+    }
+    &__btn {
+        align-items: center;
+        background: #000 !important;
+        border-color: #000 !important;
+        color: #fff !important;
+        display: flex;
+        font-family: 'Avenir',Helvetica,Arial,sans-serif !important;
+        font-size: 12px !important;
+        justify-content: center;
+        letter-spacing: 0.02083rem !important;
+        line-height: 15px !important;
+        margin-top: 10px !important;
+        padding: 8px 30px !important;
+        text-decoration: none !important;
+        text-transform: uppercase !important;
+    }
+}
+
+
+
+
+@keyframes flyinOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    15% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    85% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+        visibility: hidden;
+    }
+}

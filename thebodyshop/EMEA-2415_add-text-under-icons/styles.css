@@ -1,0 +1,82 @@
+.wrapper-global-header-mobile .icons.mobile-nav::after, .wrapper-global-header-mobile .icons.icon-header-search::after, .wrapper-global-header-mobile .icons.store-finder::after, .wrapper-global-header-mobile .icons.mini-basket::after, .wrapper-mob-nav-sticky-links .my-account::after, .wrapper-mob-nav-sticky-links .wish-list::after, .wrapper-mob-nav-sticky-links .customer-care::after {
+  display: block;
+  font-family: 'Open Sans';
+  font-size: 9px;
+  line-height: 11px;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.wrapper-global-header-mobile .icons.mobile-nav::after, .wrapper-global-header-mobile .icons.icon-header-search::after, .wrapper-global-header-mobile .icons.store-finder::after, .wrapper-global-header-mobile .icons.mini-basket::after {
+  bottom: -5px;
+  color: #000;
+  font-weight: 700;
+}
+
+.wrapper-mob-nav-sticky-links .my-account::after, .wrapper-mob-nav-sticky-links .wish-list::after, .wrapper-mob-nav-sticky-links .customer-care::after {
+  bottom: 9px;
+  color: #fff;
+  font-weight: 100;
+}
+
+.wrapper-global-header-mobile .icons.mobile-nav::after {
+  content: "MENU";
+}
+
+.wrapper-global-header-mobile .icons.icon-header-search::after {
+  color: #000;
+  content: "SEARCH";
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+.wrapper-global-header-mobile .icons.store-finder::after {
+  content: "STORES";
+  -webkit-transform: translateX(-25%);
+          transform: translateX(-25%);
+}
+
+.wrapper-global-header-mobile .icons.mini-basket {
+  position: relative;
+}
+
+.wrapper-global-header-mobile .icons.mini-basket::after {
+  bottom: -15px;
+  content: "BAG";
+  -webkit-transform: translate(0, 50%, 0);
+          transform: translate(0, 50%, 0);
+}
+
+.wrapper-global-header-mobile a.full-basket .icons.mini-basket::after {
+  bottom: -15px;
+}
+
+.wrapper-mob-nav-sticky-links .my-account::after {
+  content: "LOGIN/REGISTER";
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+}
+
+.wrapper-mob-nav-sticky-links .wish-list::after {
+  content: "WISHLIST";
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+}
+
+.wrapper-mob-nav-sticky-links .customer-care::after {
+  content: "HELP";
+  -webkit-transform: translateX(5%);
+          transform: translateX(5%);
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper-global-header-mobile .row {
+    height: 100% !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper-global-header-mobile .basket-icon-circle {
+    top: -4px !important;
+  }
+}

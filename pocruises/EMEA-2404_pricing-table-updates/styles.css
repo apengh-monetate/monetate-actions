@@ -39,15 +39,27 @@
 .mt_pricing__table-head th {
   color: #13377c;
   font-family: "cronos-pro", sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1em;
   padding: 12px 0;
   text-align: left;
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 500px) {
+  .mt_pricing__table-head th {
+    font-size: 16px;
+  }
+}
+
 .mt_pricing__table-head th:not(:first-child) {
-  padding-left: 10px;
+  padding-left: 4px;
+}
+
+@media screen and (min-width: 500px) {
+  .mt_pricing__table-head th:not(:first-child) {
+    padding-left: 10px;
+  }
 }
 
 .mt_pricing__table-body tr:nth-child(odd) {
@@ -66,18 +78,33 @@
 .mt_pricing__table-body th,
 .mt_pricing__table-body td {
   font-family: "cronos-pro", sans-serif;
-  font-size: 20px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 15px;
   padding-bottom: 12px;
   padding-left: 0;
-  padding-right: 10px;
+  padding-right: 4px;
   padding-top: 12px;
   text-align: left;
   vertical-align: middle;
 }
 
+@media screen and (min-width: 500px) {
+  .mt_pricing__table-body th,
+  .mt_pricing__table-body td {
+    font-size: 20px;
+    line-height: 18px;
+    padding-right: 10px;
+  }
+}
+
 .mt_pricing__table-body td {
   padding-left: 10px;
+}
+
+@media screen and (min-width: 500px) {
+  .mt_pricing__table-body td {
+    padding-left: 4px;
+  }
 }
 
 .mt_pricing__table-footer tr {
@@ -119,15 +146,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 18px;
+  font-size: 12px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  line-height: 21px;
-  padding: 12px 0 12px 10px;
+  line-height: 15px;
+  padding: 12px 4px 12px 10px;
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .mt_pricing__button a {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 12px 0 12px 10px;
+  }
 }
 
 .mt_pricing__button a:hover, .mt_pricing__button a:focus, .mt_pricing__button a:active {

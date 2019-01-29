@@ -10,6 +10,58 @@
   display: none !important;
 }
 
+
+
 #navContainer {
-  display: none !important;
+    visibility: hidden !important;
+    // @media screen and (min-width: 1024px) {
+    //     height: 40px !important;
+    //     margin-bottom: 52px !important;
+    // }
+}
+
+body.mobile .header #headerBottomContentWrap {
+    padding-top: 62px !important;
+}
+body.desktop .header #headerBottomContentWrap {
+    padding-top: 0 !important;
+}
+
+
+
+/* Hide "Continue Shopping" Breadcrumb */
+ul.continueShopping.breadcrumb {
+    display: none !important;
+}
+body.mobile .breadcrumb {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Hide Category Breadcrums */
+#categoryBreadcrumb {
+    margin-top: 0 !important;
+}
+#categoryBreadcrumb .crumb {
+    display: none !important;
+}
+
+/* Hide "More Cool Stuff" */
+#certonaRecs {
+    display: none !important;
+}
+
+/* Hide "You May Also Like" */
+.twelve.columns > .alsoLike {
+    display: none !important;
+}
+
+
+
+// Spirit Halloween
+body.mobile header.header #headerBottomContentWrap {
+    padding-top: 20px!important;
+}
+body.desktop header.header #headerBottomContentWrap {
+    padding-top: 0 !important;
 }

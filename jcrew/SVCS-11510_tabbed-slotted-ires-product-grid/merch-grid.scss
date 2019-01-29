@@ -1,0 +1,94 @@
+#MONETATE-ID {
+    [mt-data-grid] {
+        box-sizing: border-box;
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    .mt-merch-item {
+        box-sizing: border-box;
+        display: inline-block;
+        flex: 1;
+        margin: 0 10px 20px 10px;
+        padding: 0;
+        @media screen and (min-width: 30em) {
+            margin: 0 5px 10px 5px;
+        }
+    }
+}
+
+.mt-grid-tile {
+    padding: 0;
+    text-align: left;
+    text-decoration: none !important;
+    text-transform: none;
+
+    // Image
+    &__img {
+        img {
+            display: block;
+            margin-bottom: 1.25rem;
+            max-width: 100%;
+        }
+    }
+
+
+    // Details
+    &__details {
+        box-sizing: border-box;
+        display: block;
+        font-family: 'soleil',Helvetica,sans-serif;
+        line-height: 13px;
+        line-height: .8125rem;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        text-align: left;
+        text-transform: none;
+        @media screen and (min-width: 48em) {
+            line-height: 18px;
+            line-height: 1.125rem;
+        }
+
+        &-name {
+            display: block;
+            font-size: 13px;
+            font-size: .8125rem;
+            font-weight: 300;
+            text-transform: none;
+        }
+
+        &-price {
+            display: inline-block;
+            font-size: 14px;
+            font-size: .875rem;
+            font-weight: 400;
+            margin-top: 10px;
+            padding-right: 10px;
+            text-decoration: line-through;
+            text-transform: uppercase;
+            @media screen and (min-width: 48em) {
+                margin-top: 0;
+            }
+        }
+
+        &-sale-price {
+            color: #da2a2a;
+            display: inline-block;
+            font-size: 14px;
+            font-size: .875rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+}
+
+div.mt-merch-item[data-missing-keys="salePrice"] .mt-grid-tile__details-price {
+    display: inline-block;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 400;
+    padding-right: 0;
+    text-decoration: none !important;
+}

@@ -1,0 +1,23 @@
+<section class="mt-lightbox">
+    <button class="lb-close" type="button" name="button">&times;</button>
+
+    <div class="mt-lightbox__content">
+        <h3>Need help finding the perfect product?</h3>
+        <p>With over 700 stores, our electrical experts are always here to help.</p>
+        <p>Enter your town or postcode to find your local store.</p>
+
+
+        <form id="storeFinderFormLightbox" action="/store-finder" method="get">
+            <div class="ui-front">
+                <div class="control control--fill control--flush">
+                    <input id="storelocator-query" name="q" type="text" value="" class="control__item control__item--input control__item--flex input input--fill form-control--postcode js-store-finder-search-input ui-autocomplete-input" placeholder="Name, Postcode, Street or Town" autocomplete="off">
+
+                    <button class="control__item control__item--button button button--primary button--1-1 js-store-locator-search-btn" type="submit" data-search-empty="Check that you entered a valid postcode or place name.">
+                        <i class="icon icon--find icon--vertical-middle">&nbsp;</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</section>

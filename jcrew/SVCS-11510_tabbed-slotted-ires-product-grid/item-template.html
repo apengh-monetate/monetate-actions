@@ -1,0 +1,10 @@
+<a class="mt-grid-tile" href="{{link}}" data-pid="{{id}}">
+    <div class="mt-grid-tile__img">
+        <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+    </div>
+    <div class="mt-grid-tile__details">
+        <span class="mt-grid-tile__details-name">{{title|truncate: 100}}</span>
+        <span class="mt-grid-tile__details-price">{{price|priceFormat: $1,000.00}}</span>
+        <span class="mt-grid-tile__details-sale-price">{{salePrice|priceFormat: $1,000.00}}</span>
+    </div>
+</a>

@@ -1,0 +1,164 @@
+{
+  "id": 378873,
+  "title": "Tab Container on PDP",
+  "description": "Tabbed HTML container on PDP",
+  "op": "tabContainer",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Any Page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "tabs",
+        "value": "Customers Also Love\nSimilar Items\nGoes Well With"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Line separated tab titles.",
+        "label": "Tab Titles"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "sel",
+        "value": "#c-product__recommendations"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Selector to find the relative node.",
+        "label": "CSS3 Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "first"
+      },
+      "widget": {
+        "description": "Function to use when inserting the banner relative to the selected node",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "first",
+            "label": "First"
+          },
+          {
+            "name": "last",
+            "label": "Last"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Function"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_style",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssValueAsString",
+        "description": "Sets the cssText value of the containing div element",
+        "label": "Containing Div Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleSheet",
+        "value": ".mt-tabs {\n  display: none;\n}\n\n@media screen and (min-width: 48em) {\n  .mt-tabs {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    list-style-type: none;\n    margin: 2.25rem auto .9375rem;\n    max-width: 1126px;\n    padding-bottom: .125rem;\n    padding-left: 20px;\n    width: 100%;\n  }\n}\n\n@media screen and (min-width: 1024px) {\n  .mt-tabs {\n    padding-left: 0;\n  }\n}\n\n.mt-tabs li {\n  border-bottom: 0;\n  color: #999;\n  cursor: pointer;\n  display: inline;\n  font-size: 13px !important;\n  font-size: 0.8125rem !important;\n  font-weight: 500;\n  letter-spacing: 1.95px;\n  letter-spacing: .12187rem;\n  margin-left: 1.25rem;\n  text-align: left;\n  text-transform: uppercase;\n}\n\n@media screen and (min-width: 48em) {\n  .mt-tabs li {\n    margin-left: 0;\n    margin-right: 5.3125rem;\n    padding-bottom: .3125rem;\n  }\n}\n\n.mt-tabs li:hover, .mt-tabs li:active, .mt-tabs li:focus {\n  border-bottom: 2px solid #000;\n  color: #000;\n  text-decoration: none;\n}\n\n@media screen and (min-width: 48em) {\n  .mt-tabs li.mt-open {\n    border-bottom: 2px solid #000;\n    color: #000;\n  }\n}\n\n.mt-tab-content > div {\n  display: block;\n  margin: 0 auto;\n  max-width: 1126px;\n  width: 100%;\n}\n\n@media screen and (min-width: 48em) {\n  .mt-tab-content > div {\n    display: none;\n  }\n  .mt-tab-content > div.mt-open {\n    display: block !important;\n  }\n}"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "CSS style to append",
+        "label": "CSS Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_hideTabs",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "Hides the tab if no content is inserted. Useful for endcap merch sets that don't always display (i.e. Recently Viewed).",
+        "label": "Hide tab if no content is inserted."
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 213863,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

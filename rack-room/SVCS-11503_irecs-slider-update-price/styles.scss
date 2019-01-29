@@ -1,0 +1,37 @@
+$monetate-id: #mt-slider-2589839-0;
+$monetate-id: #MONETATE-ID;
+
+#{$monetate-id} .mt-price-text {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#{$monetate-id} .mt-sale-price {
+  color: #000;
+  display: block;
+  flex: 0 1 100%;
+  font-weight: bold;
+  margin-top: 5px;
+  order: 1;
+  text-decoration: none;
+}
+
+#{$monetate-id} .mt-price {
+  color: #7B827F;
+  display: block;
+  flex: 0 1 100%;
+  font-weight: normal;
+  margin-top: 5px;
+  order: 2;
+  text-decoration: line-through;
+}
+
+#{$monetate-id} .mt-merch-item[data-missing-keys="salePrice"] .mt-price {
+    color: #000;
+    display: block;
+    flex: 0 1 100%;
+    font-size: 14px;
+    font-weight: bold;
+    order: 1;
+    text-decoration: none;
+}

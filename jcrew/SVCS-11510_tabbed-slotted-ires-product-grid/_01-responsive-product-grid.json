@@ -1,0 +1,188 @@
+{
+  "id": 378872,
+  "title": "Responsive Grid Container for Tab Container",
+  "description": "Responsive Grid Container for Tab Container on PDP",
+  "op": "allInOneV2",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Product detail page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<section class=\"mt_grid__container\">\n<h3 class=\"mt_grid__heading\" title=\"Customers Also Love\">Customers Also Love</h3>\n\n<div class=\"mt_grid__recommendations\" data-recommendations-name=\"Customers Also Love\">\n<div class=\"mt_grid__recommendations-wrapper\">\n<ul class=\"mt_grid__recommendations-list\">\n\t<li class=\"mt_grid__recommendations-item span-3\">&nbsp;</li>\n\t<li class=\"mt_grid__recommendations-item span-1\">&nbsp;</li>\n\t<li class=\"mt_grid__recommendations-item span-1\">&nbsp;</li>\n\t<li class=\"mt_grid__recommendations-item span-1\">&nbsp;</li>\n</ul>\n</div>\n</div>\n</section>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "div.mt-tab-content div.tab_0"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "takeover"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "label": "Script"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".mt_grid__container {\n  display: block;\n  overflow: hidden;\n}\n\n.mt_grid__container img {\n  max-width: 100%;\n}\n\n.mt_grid__heading {\n  border-bottom: 0;\n  clear: both;\n  display: block;\n  font-family: 'soleil',Helvetica,Arial,sans-serif;\n  font-size: 16px;\n  font-size: 1rem;\n  font-weight: 400;\n  letter-spacing: .15em;\n  line-height: 16px;\n  line-height: 1rem;\n  list-style: none;\n  margin: 1.3125rem auto !important;\n  margin-bottom: 0 !important;\n  padding: 0 0 .4375rem !important;\n  position: relative;\n  text-align: center !important;\n  text-transform: uppercase;\n  width: 100%;\n}\n\n@media screen and (min-width: 48em) {\n  .mt_grid__heading {\n    display: none !important;\n  }\n}\n\n.mt_grid__recommendations {\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 0;\n  max-width: 1128px;\n  overflow-x: scroll;\n  overflow-y: hidden;\n  padding: 1.25rem;\n  padding-right: 0;\n}\n\n@media screen and (min-width: 48em) {\n  .mt_grid__recommendations {\n    overflow: hidden;\n  }\n}\n\n@media screen and (min-width: 1025px) {\n  .mt_grid__recommendations {\n    padding: 0;\n  }\n}\n\n.mt_grid__recommendations-wrapper {\n  width: 1320px;\n}\n\n@media screen and (min-width: 48em) {\n  .mt_grid__recommendations-wrapper {\n    width: 100%;\n  }\n}\n\n.mt_grid__recommendations-list {\n  display: inline;\n  list-style-type: none;\n  width: 100%;\n}\n\n.mt_grid__recommendations-item {\n  display: inline-block;\n  float: left;\n  font-size: 0;\n  height: auto;\n  margin: 0 auto;\n  padding: 0;\n  vertical-align: top;\n}\n\n.mt_grid__recommendations-item:last-child {\n  padding-right: 1.25rem;\n}\n\n@media screen and (min-width: 481px) {\n  .mt_grid__recommendations-item:last-child {\n    padding-right: 0;\n  }\n}\n\n.mt_grid__recommendations-item.span-1 {\n  width: 16.66667%;\n}\n\n.mt_grid__recommendations-item.span-2 {\n  width: 33.33333%;\n}\n\n.mt_grid__recommendations-item.span-3 {\n  width: 50%;\n}\n\n.mt_grid__recommendations-item.span-4 {\n  width: 66.66667%;\n}\n\n.mt_grid__recommendations-item.span-5 {\n  width: 83.33333%;\n}\n\n.mt_grid__recommendations-item.span-6 {\n  width: 100%;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 213864,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}
