@@ -10,6 +10,27 @@ $padding-top: 50px + $height;
 
 $font-medium: 'Gill Sans Medium', sans-serif;
 
+/*---Default Styles---*/
+/* Wrapper */
+.mt_countdown {
+  background-image: url({{BKG_URL}});
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+/*Hides the plural parameter on any suffixes when counting down.*/
+.mt_countdown .mt_hide_plural {
+  display: none;
+}
+
+
 /*
  * Custom Styles
  */
@@ -120,6 +141,27 @@ $font-medium: 'Gill Sans Medium', sans-serif;
 }
 
 
+/* Wrapper */
+.mt_countdown {
+  background-image: url({{BKG_URL}});
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+/* Hides the plural parameter on any suffixes when counting down. */
+.mt_countdown .mt_hide_plural {
+  display: none;
+}
+
+
 /*
  * Adjust for updated fixed transparent header
  */
@@ -128,8 +170,14 @@ $font-medium: 'Gill Sans Medium', sans-serif;
     flex: 0 0 100%;
     margin-bottom: 10px;
 }
+.mt_countdown {
+    display: none;
+    @media screen and (min-width: 64.063em) {
+        display: block;
+    }
+}
 
-@media only screen and (min-width: 64.063em) {
+@media screen and (min-width: 64.063em) {
     header {
         padding-top: 0 !important;
     }

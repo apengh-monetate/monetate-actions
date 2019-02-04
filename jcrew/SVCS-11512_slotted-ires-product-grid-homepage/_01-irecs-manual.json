@@ -1,0 +1,191 @@
+{
+  "id": 380712,
+  "title": "Intelligent Recommendations Grid (Homepage) - Manual",
+  "description": "Inserts a grid of iRec items for Homepage",
+  "op": "iRecGrid",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "endcap",
+  "subcategory": "other",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "sel",
+        "value": "div[data-recommendations-name=\"Homepage\"] li.mt_grid__recommendations-item:eq(0)"
+      },
+      "widget": {
+        "label": "Insert Selector",
+        "type": "CssSelectorField",
+        "description": "Selector to find the node where the grid will be inserted.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "takeover"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "first",
+            "label": "First"
+          },
+          {
+            "name": "last",
+            "label": "Last"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Method to use when inserting the grid relative to the selected node.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "insertOptions",
+        "value": "RecheckForElement"
+      },
+      "widget": {
+        "description": "RecheckForElement: If the selector is not found, wait up to 3 seconds for it to show up. SelectMultipleElements: If the selector matches multiple places, do you want to insert at each of them?",
+        "label": "Insert Options",
+        "action_visible": true,
+        "hiddenMenu": true,
+        "allIsValid": true,
+        "type": "CheckboxArrayAsString",
+        "options": [
+          "RecheckForElement",
+          "SelectMultipleElements"
+        ]
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "json",
+        "name": "json",
+        "value": "{\n    \"products_data\": [{\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Wallace & Barnes garment-dyed chore blazer\",\n        \"price\": 425,\n        \"imageLink\": \"https://www.jcrew.com/s7-img-facade/G6710_BL8133_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636\",\n        \"link\": \"/p/mens_category/sportcoatsandvests/cotton/wallace-barnes-garmentdyed-chore-blazer/G6710\",\n        \"salePrice\": 209.99,\n        \"id\": \"G6710\",\n        \"itemGroupId\": \"1\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Ludlow stretch two-ply easy-care cotton dress shirt in microcheck\",\n        \"price\": 69.50,\n        \"imageLink\": \"https://www.jcrew.com/s7-img-facade/H6089_WX2293_d7?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636\",\n        \"link\": \"/p/mens_category/dressshirts/classicdressshirts/ludlow-stretch-twoply-easycare-cotton-dress-shirt-in-microcheck/H6089\",\n        \"salePrice\": 57.99,\n        \"id\": \"H6089\",\n        \"itemGroupId\": \"2\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Red Wing for J.Crew oxfords\",\n        \"price\": 270.00,\n        \"imageLink\": \"https://www.jcrew.com/s7-img-facade/G8898_EG4218?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636\",\n        \"link\": \"/p/mens_category/shoes/boots/red-wing-for-jcrew-oxfords/G8898\",\n        \"salePrice\": null,\n        \"id\": \"G8898\",\n        \"itemGroupId\": \"3\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Everyday cashmere V-neck sweater\",\n        \"price\": 98.00,\n        \"imageLink\": \"https://www.jcrew.com/s7-img-facade/J6388_BL8271_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636\",\n        \"link\": \"/p/mens_category/sweaters/pullover/everyday-cashmere-vneck-sweater/J6388\",\n        \"salePrice\": null,\n        \"id\": \"J6388\",\n        \"itemGroupId\": \"4\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Ludlow blazer in herringbone English tweed\",\n        \"price\": 298.00,\n        \"imageLink\": \"https://www.jcrew.com/s7-img-facade/C8778_WX2479_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636\",\n        \"link\": \"/p/mens_category/sportcoatsandvests/wool/ludlow-blazer-in-herringbone-english-tweed/C8778\",\n        \"salePrice\": 249.00,\n        \"id\": \"C8778\",\n        \"itemGroupId\": \"5\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Stretch Secret Wash shirt in solid heathered poplin\",\n        \"price\": 59.50,\n        \"imageLink\": \"https://www.jcrew.com/s7-img-facade/J6690_GY7315_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636\",\n        \"link\": \"/p/mens_category/shirts/classicfitshirts/stretch-secret-wash-shirt-in-solid-heathered-poplin/J6690\",\n        \"salePrice\": null,\n        \"id\": \"J6690\",\n        \"itemGroupId\": \"6\"\n    }]\n}\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "JsonCodeField",
+        "description": "Manually Add product data.",
+        "label": "JSON Products Input"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "maxItems",
+        "value": 2
+      },
+      "widget": {
+        "label": "Maximum Number of Items",
+        "type": "IntegerField",
+        "description": "Maximum number of merch items to have in the grid.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "gridTemplate",
+        "value": "<span></span>\n{{GRID}}"
+      },
+      "widget": {
+        "label": "Grid Container Template",
+        "type": "HtmlCodeField",
+        "description": "Include an HTML template to build the grid structure. Use the placeholder '{{grid}}' to place the gird of items.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "itemTemplate",
+        "value": "<a class=\"mt-grid-tile\" href=\"{{link}}\" data-pid=\"{{id}}\">\n    <div class=\"mt-grid-tile__img\">\n        <img src=\"{{imageLink}}\" alt=\"{{id}} - {{title}}\">\n        <div class=\"mt-grid-tile__img-progressive\"></div>\n    </div>\n    <div class=\"mt-grid-tile__details\">\n        <span class=\"mt-grid-tile__details-name\">{{title|truncate: 100}}</span>\n        <span class=\"mt-grid-tile__details-price\">{{price|priceFormat: $1,000.00}}</span>\n        <span class=\"mt-grid-tile__details-sale-price\">{{salePrice|priceFormat: $1,000.00}}</span>\n    </div>\n</a>\n"
+      },
+      "widget": {
+        "label": "Item Template",
+        "type": "HtmlCodeField",
+        "description": "Placeholder example: '{{price}}'. Possible placeholders include all product catalog fields. Examples: title, id, itemGroupId, price, salePrice, link, imageLink",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "css",
+        "value": {
+          "content": "#MONETATE-ID [mt-data-grid] {\n  box-sizing: border-box;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: nowrap;\n      flex-wrap: nowrap;\n  width: 100%;\n}\n\n.mt-grid-tile {\n  padding: 0;\n  text-align: left;\n  text-decoration: none !important;\n  text-transform: none;\n}\n\n.mt-grid-tile__img {\n  text-align: center;\n}\n\n@media screen and (min-width: 48em) {\n  .mt-grid-tile__img {\n    overflow: hidden;\n    position: relative;\n    width: 100%;\n  }\n}\n\n@media screen and (min-width: 48em) {\n  .mt-grid-tile__img img {\n    left: -16.666%;\n    max-width: none !important;\n    position: absolute;\n    top: 0;\n    width: 133.333%;\n  }\n}\n\n@media screen and (min-width: 48em) {\n  .mt-grid-tile__img-progressive {\n    padding-bottom: 133.333%;\n  }\n}\n\n.mt-grid-tile__details {\n  box-sizing: border-box;\n  display: block;\n  font-family: 'soleil',Helvetica,sans-serif;\n  letter-spacing: 0;\n  line-height: 1;\n  opacity: 1;\n  padding: 12px 0;\n  text-align: left;\n  -webkit-transition: opacity .25s ease;\n  transition: opacity .25s ease;\n  width: 100%;\n}\n\n@media screen and (min-width: 48em) {\n  .mt-grid-tile__details {\n    background-color: rgba(255, 255, 255, 0.8);\n    bottom: 0;\n    left: 0;\n    opacity: 0;\n    padding: 12px;\n    position: absolute;\n    right: 0;\n  }\n}\n\n.mt-grid-tile__details-name {\n  display: block;\n  font-size: 13px;\n  font-size: .8125rem;\n  font-weight: 400;\n  line-height: 18px;\n  line-height: 1.125rem;\n  text-transform: none;\n}\n\n.mt-grid-tile__details-price {\n  display: inline-block;\n  font-size: 14px;\n  font-size: .875rem;\n  font-weight: 700;\n  padding-right: 6px;\n  padding-right: .375rem;\n  text-decoration: line-through;\n}\n\n.mt-grid-tile__details-sale-price {\n  color: #da2a2a;\n  display: inline-block;\n  font-size: 14px;\n  font-size: .875rem;\n  font-weight: 700;\n  text-transform: uppercase;\n}\n\ndiv[data-missing-keys=\"salePrice\"] .mt-grid-tile__details-price {\n  display: inline-block;\n  font-size: 14px;\n  font-size: .875rem;\n  font-weight: 700;\n  padding-right: 0;\n  text-decoration: none !important;\n}\n\n.mt-grid-tile:hover .mt-grid-tile__details {\n  opacity: 1;\n}\n\n.mt-merch-item {\n  box-sizing: border-box;\n  display: inline-block;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  margin: 0;\n  padding-right: 12px;\n}\n\n@media screen and (min-width: 48em) {\n  .mt-merch-item {\n    padding-right: 0;\n    position: absolute;\n  }\n  .mt-merch-item-1 {\n    left: 2.917%;\n    top: 37.668%;\n    width: 16.667% !important;\n  }\n  .mt-merch-item-2 {\n    left: 28.75%;\n    top: 0;\n    width: 18.75% !important;\n  }\n  .mt-merch-item-3 {\n    left: 20.417%;\n    top: 41.704%;\n    width: 27.083% !important;\n  }\n  .mt-merch-item-4 {\n    left: 48.333%;\n    top: 7.623%;\n    width: 20.833% !important;\n  }\n  .mt-merch-item-5 {\n    left: 48.333%;\n    top: 53.812%;\n    width: 16.667% !important;\n  }\n  .mt-merch-item-6 {\n    left: 70%;\n    top: 13.004%;\n    width: 27.083% !important;\n  }\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+        "label": "CSS"
+      },
+      "required": true
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "main"
+        ],
+        "id": 214496,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

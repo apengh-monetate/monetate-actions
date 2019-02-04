@@ -1,0 +1,71 @@
+{
+  "id": 380720,
+  "title": "181119 - Collapse Services Filter After Search (mWeb)",
+  "description": "181119 - Collapse Services Filter After Search for Mobile",
+  "op": "insertJavascript",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "javascript",
+  "subcategory": "181119",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "js",
+        "value": {
+          "content": "(function() {\n    var loadMore = document.querySelector('#loadMore');\n    if(loadMore) {\n        \n        // If aria-expanded = true\n        var expanded = loadMore.getAttribute('aria-expanded');\n        if(expanded == 'true') {\n            console.log(expanded);\n\n            // Set loadMore aria-expanded=false\n            console.log('Set loadMore aria-expanded=false');\n            loadMore.setAttribute('aria-expaned', 'false');\n            \n            // Set filterMore aria-expanded=false\n            console.log('Set filterMore aria-expanded=false');\n            var filterMore = document.querySelector('#filterMore');\n            filterMore.setAttribute('aria-expanded', 'false');\n\n            // Set all searchFilter2 li display:none\n            console.log('Set all searchFilter2 li display:none');\n            var searchFilters = document.querySelectorAll('#searchFilter2 > li');\n            for(var i = 0; i < searchFilters.length; i++) {\n                searchFilters[i].style.display = 'none';\n            }\n\n            // Rotate .storeLocator_caret transform: rotate(270deg)\n            console.log('Rotate .storeLocator_caret transform: rotate(270deg)');\n            var caret = filterMore.querySelector('.storeLocator_caret');\n            caret.style.transform = 'rotate(270deg)';\n        }\n    }\n})();",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "label": "Script"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_runOnce",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If true, JS will only be inserted on first track and not on subsequent retracks.",
+        "label": "Only run once?"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "_requestid"
+        ],
+        "id": 214500,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "contains",
+          "label": "URL",
+          "rule_name": "page_url",
+          "rule_op": "icontains",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

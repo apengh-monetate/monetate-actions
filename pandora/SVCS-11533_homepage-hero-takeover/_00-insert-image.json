@@ -1,12 +1,12 @@
 {
-  "id": 380722,
-  "title": "Insert Image Banner in Header Below Native Banner (Open Selector)",
-  "description": "Insert Image Banner in Header Below Native Banner (Open Selector)",
+  "id": 380734,
+  "title": "Replace Homepage Hero Image",
+  "description": "Replace Homepage Hero Image",
   "op": "selectorBanner",
   "slot": "actionbuilder_ag_0",
   "slot_type": "page",
   "category": "image",
-  "subcategory": "Header",
+  "subcategory": "Home page",
   "action_events": [
     "op_click",
     "op_impression"
@@ -18,12 +18,12 @@
         "name": "creative",
         "value": {
           "extension": ".png",
-          "height": 50,
-          "width": 1020,
+          "height": 460,
+          "width": 960,
           "discriminator": "layered_content",
           "alt": "",
-          "static_sha": "bb6141a5a7ba25c11a7204a9c342c5d19e975e42",
-          "id": 631326
+          "static_sha": "3629d317ec0ccc8718058ecd487d8ea89e495976",
+          "id": 631338
         }
       },
       "widget": {
@@ -38,7 +38,7 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": ".fixed-header + div.span-30, #header"
+        "value": "#cm-placement-placement-cm1 .ci-image-wrapper"
       },
       "widget": {
         "action_visible": true,
@@ -52,10 +52,12 @@
       "input": {
         "type": "str",
         "name": "imeth",
-        "value": "after"
+        "value": "takeover"
       },
       "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
         "label": "Insert Method",
+        "type": "StringSelectField",
         "options": [
           {
             "name": "after",
@@ -82,8 +84,6 @@
             "label": "Takeover"
           }
         ],
-        "type": "StringSelectField",
-        "description": "Where to insert the banner in relation to the Relative Element Selector.",
         "action_visible": true
       },
       "required": true
@@ -92,7 +92,7 @@
       "input": {
         "type": "str",
         "name": "opt_divStyle",
-        "value": "display: block;\nmargin: 0 auto;\nwidth: 100%;"
+        "value": null
       },
       "widget": {
         "action_visible": true,
@@ -106,7 +106,7 @@
       "input": {
         "type": "str",
         "name": "opt_imgStyle",
-        "value": "display: block;\nmargin: 0 auto;\nmax-width: 100%;"
+        "value": "max-width: 100%"
       },
       "widget": {
         "action_visible": true,
@@ -164,10 +164,34 @@
       "required": false
     }
   ],
-  "masks": [],
+  "masks": [
+    {
+      "selector": "#cm-placement-placement-cm1 .ci-image-wrapper",
+      "value": "^/$",
+      "op": "path_iregex"
+    }
+  ],
   "rule_operator": "and",
   "rules": {
-    "builtin": [],
+    "builtin": [
+      {
+        "values": [
+          "home"
+        ],
+        "id": 214509,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
     "required": []
   },
   "manage_impressions": false

@@ -1,0 +1,158 @@
+.mt_grid__wrapper {
+  background-color: #f2f2f2;
+  margin: 0 auto 60px;
+  padding: 36px 0;
+}
+
+@media screen and (min-width: 48em) {
+  .mt_grid__wrapper {
+    margin: 60px auto;
+    padding: 60px 0;
+  }
+}
+
+.mt_grid__container {
+  display: block;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 48em) {
+  .mt_grid__container {
+    height: 0;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 0 61.944%;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .mt_grid__container {
+    padding: 0 0 892px;
+  }
+}
+
+.mt_grid__container img {
+  max-width: 100%;
+}
+
+.mt_grid__heading {
+  margin: 0;
+  padding: 0 14px 12px;
+}
+
+@media screen and (min-width: 48em) {
+  .mt_grid__heading {
+    bottom: 65%;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.mt_grid__heading h3 {
+  border: 0;
+  display: block;
+  font-family: "freight-big-pro", Times, serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1;
+  margin: .2em 0;
+  padding: 0;
+  text-align: left;
+  text-transform: none;
+}
+
+@media screen and (min-width: 48em) {
+  .mt_grid__heading h3 {
+    margin: 0 0 0 2.9%;
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1439px) {
+  .mt_grid__heading h3 {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .mt_grid__heading h3 {
+    font-size: 36px;
+  }
+}
+
+.mt_grid__recommendations {
+  margin-bottom: -20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  max-width: 1440px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 20px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 0;
+}
+
+.mt_grid__recommendations-wrapper {
+  width: 1440px;
+}
+
+@media screen and (min-width: 30em) {
+  .mt_grid__recommendations-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .mt_grid__recommendations-wrapper {
+    width: 100%;
+  }
+}
+
+.mt_grid__recommendations-list {
+  display: inline;
+  list-style-type: none;
+  width: 100%;
+}
+
+.mt_grid__recommendations-item {
+  display: inline-block;
+  float: left;
+  font-size: 0;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  vertical-align: top;
+}
+
+.mt_grid__recommendations-item.span-1 {
+  width: 16.66667%;
+}
+
+.mt_grid__recommendations-item.span-2 {
+  width: 33.33333%;
+}
+
+.mt_grid__recommendations-item.span-3 {
+  width: 50%;
+}
+
+.mt_grid__recommendations-item.span-4 {
+  width: 66.66667%;
+}
+
+.mt_grid__recommendations-item.span-5 {
+  width: 83.33333%;
+}
+
+.mt_grid__recommendations-item.span-6 {
+  width: 100%;
+}

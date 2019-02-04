@@ -1,0 +1,170 @@
+{
+  "id": 380729,
+  "title": "Update Girls & Plus Nav Menus (Desktop)",
+  "description": "Update Girls & Plus Nav Menus (Desktop)",
+  "op": "allInOneV2",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Navigation",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<ul class=\"aaa vertical menu\">\n    <li class=\"l1-sub-menu\" role=\"menuitem\">\n        <a href=\"/store/girls/girls-shoes/_/N-9uq?Nf=product.discountPercentage|LTEQ+40\" class=\"paddSqeez\">Shoes</a>\n        <div>\n            <ul class=\"sLevel dropdown vertical menu\">\n                <li class=\"l2-sub-menu\" role=\"menuitem\">\n                    <a href=\"/store/girls/girls-shoes/boots-&amp;-booties/_/N-9ut?Nf=product.discountPercentage|LTEQ+40\" class=\"paddSqeez\">Boots &amp; Booties</a>\n                </li>\n                <li class=\"l2-sub-menu\" role=\"menuitem\">\n                    <a href=\"/store/girls/girls-shoes/sandals/_/N-9vn?Nf=product.discountPercentage|LTEQ+40\" class=\"paddSqeez \">Sandals</a>\n                </li>\n                <li class=\"l2-sub-menu\" role=\"menuitem\">\n                    <a href=\"/store/girls/girls-shoes/heels/_/N-9v6?Nf=product.discountPercentage|LTEQ+40\" class=\"paddSqeez\">Heels</a>\n                </li>\n                <li class=\"l2-sub-menu\" role=\"menuitem\">\n                    <a href=\"/store/girls/girls-shoes/flats/_/N-9v5?Nf=product.discountPercentage|LTEQ+40\" class=\"paddSqeez\">Flats</a>\n                </li>\n                <li class=\"l2-sub-menu\" role=\"menuitem\">\n                    <a href=\"/store/girls/girls-shoes/sneakers/_/N-9vf?Nf=product.discountPercentage|LTEQ+40\" class=\"paddSqeez\">Sneakers</a>\n                </li>\n            </ul>\n        </div>\n        <a href=\"/store/plus/wide-width-boots-&-shoes/_/N-a0a\" class=\"paddSqeez\">Wide Width Boots &amp; Shoes</a>\n    </li>\n</ul>"
+      },
+      "widget": {
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "li.mLevel[aria-label*=\"Girls\"] .bottomRow div.bbb:eq(3) ul.menu, li.mLevel[aria-label*=\"Plus\"] .bottomRow div.bbb:eq(3) ul.menu"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "takeover"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "label": "Banner Div Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "label": "Script",
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": true
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

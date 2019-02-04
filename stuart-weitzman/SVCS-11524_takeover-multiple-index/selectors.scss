@@ -1,0 +1,32 @@
+// Selectors
+
+
+// 2 x 1
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(0) {} // Before
+
+// 2 x 2
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(1) {} // After
+
+// 3 x 1
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(2) {} // After
+
+// 2 x 2
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(3) {} // Before
+
+// 3 x 1
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(4) {} // After
+
+// 2 x 2
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(5) {} // After
+
+// 3 x 1
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(6) {} // After
+
+// 2 x 2
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(7) {} // Before
+
+// 3 x 1
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(8) {} // After
+
+// 3 x 3
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(9) {} // Before

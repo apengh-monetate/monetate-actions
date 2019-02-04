@@ -1,0 +1,18 @@
+.mt_responsive-img {
+    display: block;
+    width: 100%;
+
+    &__mobile {
+        display: block;
+        @media screen and (min-width: 481px) {
+            display: none;
+        }
+    }
+
+    &__desktop {
+        display: none;
+        @media screen and (min-width: 481px) {
+            display: block;
+        }
+    }
+}

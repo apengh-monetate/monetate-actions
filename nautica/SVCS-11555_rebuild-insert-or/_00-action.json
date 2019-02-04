@@ -1,0 +1,188 @@
+{
+  "id": 64420,
+  "title": "Insert \"Or\" On Checkout Process V2",
+  "description": "Insert \"Or\" On Checkout Process",
+  "op": "selectorInsertHtml",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Any Page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "html_creative",
+        "name": "creative",
+        "value": {
+          "creative": {
+            "last_updated": "2015-01-28T17:08:12",
+            "tags": {
+              "builtin": [
+                "html"
+              ],
+              "custom": []
+            },
+            "height": null,
+            "generated": false,
+            "id": 262162,
+            "archived": false,
+            "name": "nauticaInsert.html",
+            "extension": ".htm",
+            "sha": "cd88e19fa1feb14ca18ab040a5e6fdbdc623eb43",
+            "ref": "305/262162.htm",
+            "notes": "",
+            "jsonp_root_url": "https://int-apengh-1.monetate.org/img/1/p/305/262162.htm/",
+            "width": null,
+            "image_url": "https://int-apengh-1.monetate.org/img/1/305/262162.htm",
+            "type": "html"
+          }
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlCreative",
+        "description": "",
+        "label": "HTML"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#cart-continue-shopping-top form.paypalcheckout"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Supports CSS3 and Sizzle syntax.",
+        "label": "Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "ifunc",
+        "value": "after"
+      },
+      "widget": {
+        "description": "",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "first",
+            "label": "First"
+          },
+          {
+            "name": "last",
+            "label": "Last"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Placement"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "style",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssValueAsString",
+        "description": "CSS applied as an inline style on the containing <div> element.",
+        "label": "HTML Container Styles"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleSheet",
+        "value": "#monetateTextInsert { float: left; padding: 14px 0 0 7px; font-family: TradeGothicLTStd-BoldExt,Arial,sans-serif; }"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "CSS style to append",
+        "label": "CSS Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If more than one element matches the Element Selector, should the change apply to all elements or just the first one?",
+        "label": "Select All Elements"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "cart"
+        ],
+        "id": 51645,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

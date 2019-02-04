@@ -1,0 +1,63 @@
+{
+    "products_data": [{
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Wallace & Barnes garment-dyed chore blazer",
+        "price": 425,
+        "imageLink": "https://www.jcrew.com/s7-img-facade/G6710_BL8133_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636",
+        "link": "/p/mens_category/sportcoatsandvests/cotton/wallace-barnes-garmentdyed-chore-blazer/G6710",
+        "salePrice": 209.99,
+        "id": "G6710",
+        "itemGroupId": "1"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Ludlow stretch two-ply easy-care cotton dress shirt in microcheck",
+        "price": 69.50,
+        "imageLink": "https://www.jcrew.com/s7-img-facade/H6089_WX2293_d7?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636",
+        "link": "/p/mens_category/dressshirts/classicdressshirts/ludlow-stretch-twoply-easycare-cotton-dress-shirt-in-microcheck/H6089",
+        "salePrice": 57.99,
+        "id": "H6089",
+        "itemGroupId": "2"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Red Wing for J.Crew oxfords",
+        "price": 270.00,
+        "imageLink": "https://www.jcrew.com/s7-img-facade/G8898_EG4218?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636",
+        "link": "/p/mens_category/shoes/boots/red-wing-for-jcrew-oxfords/G8898",
+        "salePrice": null,
+        "id": "G8898",
+        "itemGroupId": "3"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Everyday cashmere V-neck sweater",
+        "price": 98.00,
+        "imageLink": "https://www.jcrew.com/s7-img-facade/J6388_BL8271_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636",
+        "link": "/p/mens_category/sweaters/pullover/everyday-cashmere-vneck-sweater/J6388",
+        "salePrice": null,
+        "id": "J6388",
+        "itemGroupId": "4"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Ludlow blazer in herringbone English tweed",
+        "price": 298.00,
+        "imageLink": "https://www.jcrew.com/s7-img-facade/C8778_WX2479_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636",
+        "link": "/p/mens_category/sportcoatsandvests/wool/ludlow-blazer-in-herringbone-english-tweed/C8778",
+        "salePrice": 249.00,
+        "id": "C8778",
+        "itemGroupId": "5"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Stretch Secret Wash shirt in solid heathered poplin",
+        "price": 59.50,
+        "imageLink": "https://www.jcrew.com/s7-img-facade/J6690_GY7315_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&wid=636&hei=636",
+        "link": "/p/mens_category/shirts/classicfitshirts/stretch-secret-wash-shirt-in-solid-heathered-poplin/J6690",
+        "salePrice": null,
+        "id": "J6690",
+        "itemGroupId": "6"
+    }]
+}

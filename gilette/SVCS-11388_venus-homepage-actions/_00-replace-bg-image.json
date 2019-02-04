@@ -1,0 +1,120 @@
+{
+  "id": 380726,
+  "title": "Set Background Image",
+  "description": "Set the background image of a CSS3 selector.",
+  "op": "selectorBgImage",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "image",
+  "subcategory": "Any page",
+  "action_events": [
+    "op_impression",
+    "op_click"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative",
+        "value": {
+          "extension": ".png",
+          "height": 692,
+          "width": 1440,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "54d05048c239ede1890e2b4847bc987a3d22906f",
+          "id": 631333
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload an image creative",
+        "label": "Image Creative"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": ".r3section1 .r3s1background"
+      },
+      "widget": {
+        "label": "Element Selector",
+        "type": "CssSelectorField",
+        "description": "Supports CSS3 and Sizzle syntax",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_style",
+        "value": null
+      },
+      "widget": {
+        "label": "Selector CSS Styles",
+        "type": "TextField",
+        "description": "CSS styles to be applied to the selected element(s).",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "/* Set background color to match image */\n.redesignv3-home .r3section1 {\n  background-color: #ccc !important;\n}",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

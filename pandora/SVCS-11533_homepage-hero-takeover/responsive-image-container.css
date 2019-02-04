@@ -1,0 +1,24 @@
+.mt_responsive-img {
+  display: block;
+  width: 100%;
+}
+
+.mt_responsive-img__mobile {
+  display: block;
+}
+
+@media screen and (min-width: 481px) {
+  .mt_responsive-img__mobile {
+    display: none;
+  }
+}
+
+.mt_responsive-img__desktop {
+  display: none;
+}
+
+@media screen and (min-width: 481px) {
+  .mt_responsive-img__desktop {
+    display: block;
+  }
+}

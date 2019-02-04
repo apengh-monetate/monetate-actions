@@ -1,0 +1,32 @@
+.mt_video {
+
+
+
+    &__container {
+        display: block;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 100%;
+    }
+
+    &__responsive {
+        display: block;
+        height: 0;
+        padding-bottom: 56.25%;
+        position: relative; 
+        width: 100%;
+
+        iframe {
+            bottom: 0;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+
+
+}

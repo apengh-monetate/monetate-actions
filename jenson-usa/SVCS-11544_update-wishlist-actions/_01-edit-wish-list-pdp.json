@@ -1,0 +1,175 @@
+{
+  "id": 299213,
+  "title": "Edit Add to Cart and Add to Wishlist on PDP (Updated)",
+  "description": "Edits Add to Wishlist to be a text link and makes the Add to Cart full-width on product detail pages",
+  "op": "selectorInsertHtmlString",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Product detail page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "Add to Wishlist <span class=\"jenson-icon-double-arrow-right\">&nbsp;</span>"
+      },
+      "widget": {
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": ".button_wishlist > .button-default"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "takeover"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "label": "Banner Div Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "#pdpButtons {\n  position: relative;\n}\n\n.product-buttons .button_add {\n  width: 100% !important;\n  margin-right: 0 !important;\n  float: none !important;\n}\n\n.button_wishlist {\n  float: right !important;\n  width: 33% !important;\n  line-height: 1 !important;\n  text-align: right;\n}\n\n.button_wishlist > .button-default {\n  background: none;\n  padding: 0;\n  color: #000;\n  border: 0 !important;\n  text-transform: none !important;\n  font-family: Lato,sans-serif !important;\n  font-size: 12px;\n  width: auto !important;\n}\n.button_wishlist > .button-default:hover,\n.button_wishlist > .button-default:focus,\n.button_wishlist > .button-default:active {\n  background: none;\n  color: #000;\n  text-decoration: underline;\n}\n\n.button_wishlist .jenson-icon-double-arrow-right {\n  font-size: 8px;\n  top: -1px;\n  position: relative;\n}\n\n.button_wishlist .jenson-icon-double-arrow-right:before {\n  margin-right: 0 !important;\n}\n\n.product-details .product-price-match {\n  float: left;\n  width: 67%;\n}\n\n.product-details .product-price-match > div {\n  margin-right: 0.35em !important;\n}",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [
+    {
+      "selector": "#product-buttons",
+      "value": "/",
+      "op": "path_iprefix"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "Product"
+        ],
+        "id": 179509,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

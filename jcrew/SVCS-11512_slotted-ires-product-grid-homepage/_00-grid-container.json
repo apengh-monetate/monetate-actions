@@ -1,0 +1,189 @@
+{
+  "id": 380711,
+  "title": "Responsive Grid Container for Slotted Intelligent Recommendations (Homepage)",
+  "description": "Responsive Grid Container for Slotted Intelligent Recommendations (Homepage)",
+  "op": "allInOneV2",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Home Page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<section class=\"mt_grid__container\">\n<div class=\"mt_grid__heading\">\n<h3 title=\"We can't keep these in stock\">We can&rsquo;t keep these in stock!</h3>\n</div>\n\n<div class=\"mt_grid__recommendations\" data-recommendations-name=\"Homepage\">\n<div class=\"mt_grid__recommendations-wrapper\">\n<ul class=\"mt_grid__recommendations-list\">\n\t<li class=\"mt_grid__recommendations-item span-1\">&nbsp;</li>\n\t<li class=\"mt_grid__recommendations-item span-1\">&nbsp;</li>\n\t<li class=\"mt_grid__recommendations-item span-1\">&nbsp;</li>\n    <li class=\"mt_grid__recommendations-item span-1\">&nbsp;</li>\n\t<li class=\"mt_grid__recommendations-item span-1\">&nbsp;</li>\n\t<li class=\"mt_grid__recommendations-item span-1\">&nbsp;</li>\n</ul>\n</div>\n</div>\n</section>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#product-recommendations"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "takeover"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "(function() {\n\n    // Poll for element\n    function pollForElement(element, callback) {\n      if (element) {\n        callback();\n      } else {\n        setTimeout(function () {\n          pollForElement(element, callback);\n        }, 100);\n      }\n    }\n\n    // Add classes to homepage grid recs\n    function initAddClassesToMerchItems() {\n        var recommendation = document.querySelector('div[data-recommendations-name]');\n        pollForElement(recommendation, function() {\n            var listItems = recommendation.querySelectorAll('.mt_grid__recommendations-item');\n            var lastListItem = recommendation.querySelectorAll('.mt_grid__recommendations-item')[listItems.length - 1];\n\n            pollForElement(lastListItem, function() {\n                var merchItems = recommendation.querySelectorAll('.mt-merch-item');\n                merchItems.forEach(function(merchItem, index) {\n                    merchItem.classList.add( 'mt-merch-item-' + (index+1) );\n                });\n            });\n        });\n    }\n\n    window.onload = function() {\n        initAddClassesToMerchItems();\n    };\n})();\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "label": "Script"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".mt_grid__container {\n  display: block;\n  overflow: hidden;\n}\n\n@media screen and (min-width: 48em) {\n  .mt_grid__container {\n    height: 0;\n    margin: 0 auto;\n    max-width: 1440px;\n    padding: 0 0 61.944%;\n    position: relative;\n    width: 100%;\n  }\n}\n\n@media screen and (min-width: 1440px) {\n  .mt_grid__container {\n    padding: 0 0 892px;\n  }\n}\n\n.mt_grid__container img {\n  max-width: 100%;\n}\n\n.mt_grid__heading {\n  margin: 0;\n  padding: 0 14px 12px;\n}\n\n@media screen and (min-width: 48em) {\n  .mt_grid__heading {\n    bottom: 65%;\n    padding: 0;\n    position: absolute;\n    text-align: left;\n    width: 100%;\n  }\n}\n\n.mt_grid__heading h3 {\n  border: 0;\n  display: block;\n  font-family: \"freight-big-pro\", Times, serif;\n  font-size: 24px;\n  font-size: 1.5rem;\n  font-weight: 700;\n  letter-spacing: -.02em;\n  line-height: 1;\n  margin: .2em 0;\n  padding: 0;\n  text-align: left;\n  text-transform: none;\n}\n\n@media screen and (min-width: 48em) {\n  .mt_grid__heading h3 {\n    margin: 0 0 0 2.9%;\n    width: 20%;\n  }\n}\n\n@media screen and (min-width: 960px) and (max-width: 1439px) {\n  .mt_grid__heading h3 {\n    font-size: 2.5vw;\n  }\n}\n\n@media screen and (min-width: 1440px) {\n  .mt_grid__heading h3 {\n    font-size: 36px;\n  }\n}\n\n.mt_grid__recommendations {\n  margin-bottom: -20px;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 0;\n  max-width: 1440px;\n  overflow-x: scroll;\n  overflow-y: hidden;\n  padding-bottom: 20px;\n  padding-left: 14px;\n  padding-right: 14px;\n  padding-top: 0;\n}\n\n.mt_grid__recommendations-wrapper {\n  width: 1440px;\n}\n\n@media screen and (min-width: 30em) {\n  .mt_grid__recommendations-wrapper {\n    margin-left: auto;\n    margin-right: auto;\n  }\n}\n\n@media screen and (min-width: 48em) {\n  .mt_grid__recommendations-wrapper {\n    width: 100%;\n  }\n}\n\n.mt_grid__recommendations-list {\n  display: inline;\n  list-style-type: none;\n  width: 100%;\n}\n\n.mt_grid__recommendations-item {\n  display: inline-block;\n  float: left;\n  font-size: 0;\n  height: auto;\n  margin: 0 auto;\n  padding: 0;\n  vertical-align: top;\n}\n\n.mt_grid__recommendations-item.span-1 {\n  width: 16.66667%;\n}\n\n.mt_grid__recommendations-item.span-2 {\n  width: 33.33333%;\n}\n\n.mt_grid__recommendations-item.span-3 {\n  width: 50%;\n}\n\n.mt_grid__recommendations-item.span-4 {\n  width: 66.66667%;\n}\n\n.mt_grid__recommendations-item.span-5 {\n  width: 83.33333%;\n}\n\n.mt_grid__recommendations-item.span-6 {\n  width: 100%;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "main"
+        ],
+        "id": 214494,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

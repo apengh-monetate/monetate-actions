@@ -1,0 +1,37 @@
+.search-result-items {
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 768px) {
+  .search-result-items {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.search-result-items .grid-tile {
+  margin-right: 0 !important;
+  width: 100% !important;
+}
+
+div[id*="monetate_selector"] > img {
+  max-width: 100%;
+}
+
+/* 3x3 */
+div#MONETATE-ID {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  div#MONETATE-ID {
+    display: block;
+    -ms-grid-column-span: 3;
+    grid-column: span 3;
+    -ms-grid-row-span: 3;
+    grid-row: span 3;
+  }
+}

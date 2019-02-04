@@ -1,36 +1,27 @@
 {
-  "id": 380722,
-  "title": "Insert Image Banner in Header Below Native Banner (Open Selector)",
-  "description": "Insert Image Banner in Header Below Native Banner (Open Selector)",
-  "op": "selectorBanner",
+  "id": 380725,
+  "title": "Replace Homepage Hero Button Text",
+  "description": "Replace Homepage Hero Button Text",
+  "op": "allInOneV2",
   "slot": "actionbuilder_ag_0",
-  "slot_type": "page",
-  "category": "image",
-  "subcategory": "Header",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Home page",
   "action_events": [
-    "op_click",
     "op_impression"
   ],
   "inputs": [
     {
       "input": {
-        "type": "img_creative",
-        "name": "creative",
-        "value": {
-          "extension": ".png",
-          "height": 50,
-          "width": 1020,
-          "discriminator": "layered_content",
-          "alt": "",
-          "static_sha": "bb6141a5a7ba25c11a7204a9c342c5d19e975e42",
-          "id": 631326
-        }
+        "type": "str",
+        "name": "htmlString",
+        "value": "Placeholder"
       },
       "widget": {
-        "action_visible": true,
-        "type": "ImageCreative",
-        "description": "Upload an image creative",
-        "label": "Image Creative"
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "action_visible": true
       },
       "required": true
     },
@@ -38,13 +29,13 @@
       "input": {
         "type": "str",
         "name": "selector",
-        "value": ".fixed-header + div.span-30, #header"
+        "value": "div.r3s1btn > div"
       },
       "widget": {
-        "action_visible": true,
+        "label": "Relative Element Selector",
         "type": "CssSelectorField",
         "description": "CSS Selector to find the relative element.",
-        "label": "Relative Element Selector"
+        "action_visible": true
       },
       "required": true
     },
@@ -52,10 +43,12 @@
       "input": {
         "type": "str",
         "name": "imeth",
-        "value": "after"
+        "value": "takeover"
       },
       "widget": {
-        "label": "Insert Method",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
         "options": [
           {
             "name": "after",
@@ -82,9 +75,7 @@
             "label": "Takeover"
           }
         ],
-        "type": "StringSelectField",
-        "description": "Where to insert the banner in relation to the Relative Element Selector.",
-        "action_visible": true
+        "label": "Insert Method"
       },
       "required": true
     },
@@ -92,27 +83,32 @@
       "input": {
         "type": "str",
         "name": "opt_divStyle",
-        "value": "display: block;\nmargin: 0 auto;\nwidth: 100%;"
+        "value": null
       },
       "widget": {
-        "action_visible": true,
+        "label": "Banner Div Inline Style",
         "type": "TextField",
         "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
-        "label": "Banner Div Inline Style"
+        "action_visible": false
       },
       "required": false
     },
     {
       "input": {
-        "type": "str",
-        "name": "opt_imgStyle",
-        "value": "display: block;\nmargin: 0 auto;\nmax-width: 100%;"
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
       },
       "widget": {
-        "action_visible": true,
-        "type": "TextField",
-        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
-        "label": "Image Element Inline Style"
+        "label": "Script",
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "action_visible": false
       },
       "required": false
     },
@@ -128,10 +124,10 @@
         }
       },
       "widget": {
-        "action_visible": true,
+        "label": "CSS",
         "type": "CSSCodeField",
         "description": "CSS appended to the DOM in a <style> or <link> element.",
-        "label": "CSS"
+        "action_visible": true
       },
       "required": false
     },
@@ -142,10 +138,10 @@
         "value": false
       },
       "widget": {
-        "action_visible": false,
+        "label": "Select multiple elements, if matched?",
         "type": "BooleanField",
         "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
-        "label": "Select multiple elements, if matched?"
+        "action_visible": false
       },
       "required": false
     },
@@ -153,13 +149,13 @@
       "input": {
         "type": "bool",
         "name": "opt_poll",
-        "value": true
+        "value": false
       },
       "widget": {
-        "action_visible": false,
+        "label": "Re-check for Elements",
         "type": "BooleanField",
         "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
-        "label": "Re-check for Elements"
+        "action_visible": false
       },
       "required": false
     }
@@ -167,7 +163,25 @@
   "masks": [],
   "rule_operator": "and",
   "rules": {
-    "builtin": [],
+    "builtin": [
+      {
+        "values": [
+          "GilletteVenusUS"
+        ],
+        "id": 214503,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
     "required": []
   },
   "manage_impressions": false

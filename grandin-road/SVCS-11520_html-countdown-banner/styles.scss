@@ -1,0 +1,46 @@
+.mt-countdown {
+    background: #C22B2C;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    max-width: 1225px;
+    padding: 6px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    @media screen and (min-width: 737px) {
+        padding: 12px;
+    }
+
+    p {
+        color: #fff;
+        display: block;
+        font-size: 14px;
+        margin: 0;
+        @media screen and (min-width: 737px) {
+            font-size: 18px;
+        }
+    }
+
+
+    &__message {
+        display: inline-block;
+    }
+
+    &__divider {
+        display: none;
+        @media screen and (min-width: 737px) {
+            display: inline-block;
+            font-size: 18px;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+    }
+
+    &__timer {
+        display: inline-block;
+    }
+
+
+}

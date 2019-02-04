@@ -1,0 +1,131 @@
+$font-serif: 'freight-big-pro',Times,serif;
+$font-sans: 'soleil', Helvetica, sans-serif;
+
+$breakpoint-md: 48em;
+$breakpoint-lg: 64em;
+$breakpoint-xl: 70.5em;
+
+
+.mt_grid {
+
+    &__wrapper {
+        background-color: #f2f2f2;
+        margin: 0 auto 60px;
+        padding: 36px 0;
+        @media screen and (min-width: 48em) {
+            margin: 60px auto;
+            padding: 60px 0;
+        }
+    }
+
+
+    // Maps to .product-recs-inner
+    &__container {
+        display: block;
+        // margin-bottom: 30px;
+        overflow: hidden;
+        @media screen and (min-width: 48em) {
+            height: 0;
+            margin: 0 auto;
+            max-width: 1440px;
+            padding: 0 0 61.944%;
+            position: relative;
+            width: 100%;
+        }
+        @media screen and (min-width: 1440px) {
+            padding: 0 0 892px;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__heading {
+        margin: 0;
+        padding: 0 14px 12px;
+        @media screen and (min-width: 48em) {
+            bottom: 65%;
+            padding: 0;
+            position: absolute;
+            text-align: left;
+            width: 100%;
+        }
+        h3 {
+            border: 0;
+            display: block;
+            font-family: $font-serif;
+            font-size: 24px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -.02em;
+            line-height: 1;
+            margin: .2em 0;
+            padding: 0;
+            text-align: left;
+            text-transform: none;
+            @media screen and (min-width: 48em) {
+                margin: 0 0 0 2.9%;
+                width: 20%;
+            }
+            @media screen and (min-width: 960px) and (max-width: 1439px) {
+                font-size: 2.5vw;
+            }
+            @media screen and (min-width: 1440px) {
+                font-size: 36px;
+            }
+        }
+    }
+
+
+    // Maps to .product-recs__products-outer
+    &__recommendations {
+        margin-bottom: -20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        max-width: 1440px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding-bottom: 20px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-top: 0;
+
+        // Maps to .product-recs__products-inner
+        &-wrapper {
+            width: 1440px;
+            @media screen and (min-width: 30em) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @media screen and (min-width: 48em) {
+                width: 100%;
+            }
+        }
+
+
+        // Maps to .product-recs__products
+        &-list {
+            display: inline;
+            list-style-type: none;
+            width: 100%;
+        }
+
+        &-item {
+            display: inline-block;
+            float: left;
+            font-size: 0;
+            height: auto;
+            margin: 0 auto;
+            padding: 0;
+            vertical-align: top;
+
+            @for $i from 1 through 6 {
+                &.span-#{$i} {
+                    width: 100% / (6 / $i);
+                }
+            }
+        }
+    }
+
+}
