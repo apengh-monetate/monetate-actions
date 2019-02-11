@@ -1,9 +1,12 @@
+/*Hides the plural parameter on any suffixes when counting down.*/
+.mt_countdown .mt_hide_plural {
+  display: none;
+}
+
 /*---Default Styles---*/
 /* Wrapper */
 .mt_countdown {
-  background-image: url({{BKG_URL}});
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #FAECE0;
   color: #000;
   display: block;
   height: auto;
@@ -14,26 +17,21 @@
   width: 100%;
 }
 
-/*Hides the plural parameter on any suffixes when counting down.*/
-.mt_countdown .mt_hide_plural {
-  display: none;
-}
-
-/*
- * Custom Styles
- */
-.mt-countdown {
+.mt_countdown .mt-countdown {
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #FAECE0;
+  background-image: url({{BKG_URL}});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-bottom: 1px solid #D8D8D8;
   box-sizing: border-box;
   color: #636363;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none !important;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -46,57 +44,63 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 auto;
+  max-width: 1366px;
   text-align: center;
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 768px) {
-  .mt-countdown {
+@media screen and (min-width: 1025px) {
+  .mt_countdown .mt-countdown {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     height: 30px;
   }
 }
 
-.mt-countdown .bold {
+.mt_countdown .mt-countdown .bold {
   font-family: "Gill Sans Medium", sans-serif;
   font-weight: 700;
 }
 
-.mt-countdown__lead {
+.mt_countdown .mt-countdown__lead {
+  color: #1f1f1f;
   display: block;
   font-size: 9px;
+  font-weight: 700;
   letter-spacing: .2em;
   line-height: 1;
   margin-bottom: 6px;
   margin-top: 0;
   position: relative;
+  text-transform: uppercase;
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-  .mt-countdown__lead {
+@media screen and (min-width: 1025px) {
+  .mt_countdown .mt-countdown__lead {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     margin-bottom: 0;
     margin-right: 20px;
     width: auto;
   }
 }
 
-@media screen and (min-width: 960px) {
-  .mt-countdown__lead {
-    font-size: 12px;
-    line-height: 12px;
-  }
+.mt_countdown .mt-countdown__lead span {
+  color: #B78A6A;
 }
 
-.mt-countdown__timer {
+.mt_countdown .mt-countdown__timer {
+  color: #1f1f1f;
   display: block;
   font-size: 14px;
   font-weight: 700;
@@ -105,29 +109,23 @@
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-  .mt-countdown__timer {
+@media screen and (min-width: 1025px) {
+  .mt_countdown .mt-countdown__timer {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     width: auto;
   }
 }
 
-@media screen and (min-width: 960px) {
-  .mt-countdown__timer {
-    font-size: 12px;
-    line-height: 12px;
-  }
-}
-
-.mt-countdown__msg {
+.mt_countdown .mt-countdown__msg {
   display: block;
   font-size: 9px;
+  font-weight: 700;
   letter-spacing: .2em;
   line-height: 1;
   margin-bottom: 0;
@@ -136,55 +134,44 @@
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-  .mt-countdown__msg {
+@media screen and (min-width: 1025px) {
+  .mt_countdown .mt-countdown__msg {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     margin-left: 20px;
     margin-top: 0;
     width: auto;
   }
 }
 
-@media screen and (min-width: 960px) {
-  .mt-countdown__msg {
-    font-size: 12px;
-    line-height: 12px;
-  }
+.mt_countdown .mt-countdown__msg a {
+  border-bottom: 1px solid #1f1f1f;
+  color: #1f1f1f;
+  text-decoration: none;
 }
 
-.mt_time {
+.mt_countdown .mt_time {
   color: #C1992D;
 }
 
-/* Wrapper */
 .mt_countdown {
-  background-image: url({{BKG_URL}});
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #000;
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-/* Hides the plural parameter on any suffixes when counting down. */
-.mt_countdown .mt_hide_plural {
   display: none;
 }
 
+@media screen and (min-width: 1025px) {
+  .mt_countdown {
+    display: block;
+  }
+}
+
 /*
- * Adjust for updated fixed transparent header
- */
+* Adjust for updated fixed transparent header
+*/
 .mt_countdown {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
@@ -192,23 +179,61 @@
   margin-bottom: 10px;
 }
 
-.mt_countdown {
-  display: none;
-}
-
-@media screen and (min-width: 64.063em) {
-  .mt_countdown {
-    display: block;
-  }
-}
-
 @media screen and (min-width: 64.063em) {
   header {
-    padding-top: 0 !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    width: 100% !important;
   }
   header.condensed {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding-top: 0 !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  header.condensed #desktop-top-row {
+    margin-left: auto;
+    margin-right: auto;
+    width: 38px !important;
+  }
+  header.condensed #desktop-bottom-row {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: none !important;
+            flex: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1066px;
+    width: 71.70737% !important;
+  }
+  header.condensed #condensed-icons {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #desktop-top-row,
+  #desktop-bottom-row {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 85.375em;
+    width: 95.25% !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header.condensed #desktop-top-row {
+    margin-right: 94px;
+  }
+  header.condensed #desktop-bottom-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  header.condensed #condensed-icons {
+    margin-left: 94px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .sitebody {
+    padding-top: 140px !important;
   }
 }

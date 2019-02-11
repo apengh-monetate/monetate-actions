@@ -1,0 +1,9 @@
+@media screen and (min-width: 960px) {
+  body > .cx-widget > .cx-widget.cx-side-button-group {
+    left: unset !important;
+    right: 0 !important;
+    top: 165px !important;
+    -webkit-transform: rotate(270deg) !important;
+            transform: rotate(270deg) !important;
+  }
+}

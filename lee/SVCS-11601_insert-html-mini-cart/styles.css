@@ -1,0 +1,6 @@
+/* Show Mini-Cart */
+.topnav .topnav-minicart .hide {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}

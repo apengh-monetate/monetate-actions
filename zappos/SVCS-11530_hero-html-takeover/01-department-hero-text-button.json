@@ -1,0 +1,176 @@
+{
+  "id": 381694,
+  "title": "Department Hero Takeover (Text and Button)",
+  "description": "Department Hero Takeover (Text and Button)",
+  "op": "allInOneV2",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Department Page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<a class=\"mt_hero white-box\" href=\"#\">\n    <div class=\"mt_hero__img\">\n        <picture>\n            <source media=\"(max-width: 650px)\" srcset=\"https://via.placeholder.com/650x433\">\n            <source media=\"(max-width: 1024px)\" srcset=\"https://via.placeholder.com/1024x356\">\n            <img src=\"https://via.placeholder.com/1440x500\" alt=\"&quot;&quot;\" srcset=\"https://via.placeholder.com/1480x514 2x, https://via.placeholder.com/1440x500 1x\">\n        </picture>\n    </div>\n\n    <div class=\"mt_hero__copy bottom-right\">\n        <h2 class=\"mt_hero__heading\">Back to Campus: Athletic Sneakers</h2>\n        <p class=\"mt_hero__subheading\">Look for styles that shift seamlessly from gym and track to class!</p>\n        <p class=\"mt_hero__button\">Shop Now</p>\n    </div>\n</a>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "div._3yCDp._9_hcB"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "replace"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "label": "Script"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".mt_hero {\n  display: block;\n  margin: 0 auto 32px;\n  max-width: 1440px;\n  overflow: hidden;\n  position: relative;\n  text-decoration: none !important;\n  width: 100%;\n}\n\n@media screen and (min-width: 651px) {\n  .mt_hero {\n    margin: 0 auto 64px;\n  }\n}\n\n.mt_hero__img {\n  display: block;\n  width: 100%;\n}\n\n.mt_hero__img picture,\n.mt_hero__img picture img {\n  max-width: 100%;\n}\n\n.mt_hero__copy {\n  display: block;\n  padding: 16px;\n  position: relative;\n  text-align: center;\n}\n\n@media screen and (min-width: 651px) {\n  .mt_hero__copy {\n    max-width: calc(100% - 64px);\n    padding: 32px;\n    position: absolute;\n    text-align: left;\n    width: auto;\n  }\n}\n\n@media screen and (min-width: 1025px) {\n  .mt_hero__copy {\n    width: 275px;\n  }\n}\n\n@media screen and (min-width: 651px) {\n  .mt_hero__copy.bottom-left {\n    bottom: 32px;\n    left: 32px;\n    right: auto;\n    top: auto;\n  }\n}\n\n@media screen and (min-width: 651px) {\n  .mt_hero__copy.bottom-right {\n    bottom: 32px;\n    left: auto;\n    right: 32px;\n    top: auto;\n  }\n}\n\n.mt_hero__copy img {\n  display: block;\n  margin-bottom: 24px;\n  max-width: 100%;\n  width: auto;\n}\n\n.mt_hero__heading {\n  font-family: \"Open Sans\", sans-serif;\n  font-size: 20px;\n  font-weight: 600;\n  margin-bottom: 16px;\n}\n\n@media screen and (min-width: 651px) {\n  .mt_hero__heading {\n    font-size: 24px;\n    margin-bottom: 10px;\n  }\n}\n\n.mt_hero__subheading {\n  font-family: \"Open Sans\", sans-serif;\n  font-size: 14px !important;\n  font-weight: 400 !important;\n  line-height: normal !important;\n  margin-bottom: 16px !important;\n}\n\n@media screen and (min-width: 651px) {\n  .mt_hero__subheading {\n    font-size: 16px !important;\n    margin-bottom: 10px !important;\n  }\n}\n\n.mt_hero__cta a {\n  border-bottom: 1px solid #003953;\n  color: #003953;\n  display: inline-block !important;\n  font-family: \"Open Sans\", sans-serif;\n  font-size: 14px;\n  font-weight: 700 !important;\n  margin: .75em 1em .75em 0;\n  text-decoration: none;\n  text-transform: uppercase;\n}\n\n.mt_hero__cta a:hover, .mt_hero__cta a:visited, .mt_hero__cta a:focus {\n  border-color: #0076bd;\n  color: #0076bd;\n}\n\n.mt_hero__button {\n  background: transparent;\n  border: 2px solid #003953;\n  border-color: #1f1f1f;\n  border-radius: 4px;\n  color: #003953;\n  color: #1f1f1f;\n  cursor: pointer;\n  display: inline-block;\n  font-family: \"Open Sans\", sans-serif;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 120%;\n  padding: 12px 24px;\n  text-align: center;\n  text-decoration: none;\n  text-transform: uppercase;\n  -ms-touch-action: manipulation;\n      touch-action: manipulation;\n  -webkit-transition: all .3s ease 0s;\n  transition: all .3s ease 0s;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n\n.mt_hero.white-box {\n  color: #1f1f1f;\n}\n\n@media screen and (min-width: 651px) {\n  .mt_hero.white-box .mt_hero__copy {\n    background-color: #fff;\n  }\n}\n\n.mt_hero.white-box .mt_hero__heading,\n.mt_hero.white-box .mt_hero__subheading {\n  color: #1f1f1f;\n}\n\n.mt_hero.white-box .mt_hero__cta a {\n  border-color: #003953;\n  color: #003953;\n}\n\n.mt_hero.white-box .mt_hero__cta a:hover, .mt_hero.white-box .mt_hero__cta a:visited, .mt_hero.white-box .mt_hero__cta a:focus {\n  border-color: #0076bd;\n  color: #0076bd;\n}\n\n.mt_hero.white-box .mt_hero__button {\n  background: transparent;\n  border: 2px solid #1f1f1f;\n  color: #1f1f1f;\n}\n\n.mt_hero.white-box:hover .mt_hero__button {\n  background: #1f1f1f;\n  border: 2px solid #1f1f1f;\n  color: #fff;\n}\n\n.mt_hero.black-box {\n  color: #fff;\n}\n\n@media screen and (min-width: 651px) {\n  .mt_hero.black-box .mt_hero__copy {\n    background-color: #1f1f1f;\n  }\n}\n\n.mt_hero.black-box .mt_hero__heading,\n.mt_hero.black-box .mt_hero__subheading {\n  color: #fff;\n}\n\n.mt_hero.black-box .mt_hero__cta a {\n  border-color: #fff !important;\n  color: #fff !important;\n}\n\n.mt_hero.black-box .mt_hero__cta a:hover, .mt_hero.black-box .mt_hero__cta a:visited, .mt_hero.black-box .mt_hero__cta a:focus {\n  border-color: #fff !important;\n  color: #fff !important;\n}\n\n.mt_hero.black-box .mt_hero__button {\n  background: transparent;\n  border: 2px solid #fff;\n  color: #fff;\n}\n\n.mt_hero.black-box:hover .mt_hero__button {\n  background: #fff;\n  border: 2px solid #fff;\n  color: #1f1f1f;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [
+    {
+      "selector": "div._3yCDp._9_hcB",
+      "value": "/c/shoes",
+      "op": "path_iprefix"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

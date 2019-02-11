@@ -1,28 +1,46 @@
-.search-result-items {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    @media screen and (min-width: 768px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-}
-
-.search-result-items .grid-tile {
-    margin-right: 0 !important;
-    width: 100% !important;
-}
-
-div[id*="monetate_selector"] > img {
-    max-width: 100%;
-}
+// .search-result-items {
+//     @media screen and (min-width: 1025px) {
+//         display: grid !important;
+//         grid-template-columns: repeat(3, 1fr);
+//     }
+//
+//     @media screen and (min-width: 1025px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+//         display: block !important;
+//         overflow: auto;
+//     }
+// }
+//
+//
+// .search-result-items .grid-tile {
+//     @media screen and (min-width: 1025px) {
+//         margin-right: 0 !important;
+//         width: 100% !important;
+//     }
+//     @media screen and (min-width: 1025px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+//         display: block !important;
+//         overflow: auto;
+//     }
+// }
+//
+// div[id*="monetate_selector"] > img {
+//     max-width: 100%;
+// }
 
 
 /* 2x2 */
 div#MONETATE-ID {
     display: none;
-    @media screen and (min-width: 768px) {
-        display: block;
+    @media screen and (min-width: 1025px) {
+        display: inline-block;
         grid-column: span 2;
         grid-row: span 2;
+    }
+    @media screen and (min-width: 1025px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        // align-items: center;
+        // display: inline-flex;
+        display: inline-block;
+        float: left;
+        // min-height: 1180px;
+        width: 66.66667%;
     }
 }

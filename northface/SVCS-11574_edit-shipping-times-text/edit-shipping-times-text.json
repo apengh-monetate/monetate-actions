@@ -1,0 +1,57 @@
+{
+  "id": 381693,
+  "title": "Edit Shipping Times Text",
+  "description": "Edit Shipping Times Text",
+  "op": "insertCSS",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "css",
+  "subcategory": "Shipping",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "styleSheet",
+        "value": {
+          "content": "/* 3-Day */\n.shipping-method-item[data-shipmode-id=\"15154\"] .shipping-delivery-msg-js::before {\n    content: \"STANDARD \";\n    display: inline;\n}\n\n/* 2-Day */\n.shipping-method-item[data-shipmode-id=\"15153\"] .shipping-delivery-msg-js::before {\n    content: \"EXPEDITED \";\n    display: inline;\n}\n\n/* Overnight */\n.shipping-method-item[data-shipmode-id=\"15152\"] .shipping-delivery-msg-js::before {\n    content: \"EXPRESS \";\n    display: inline;\n}",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": true
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "shipping"
+        ],
+        "id": 214801,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

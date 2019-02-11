@@ -1,0 +1,12 @@
+<a href="{{product_url}}" data-pid="{{pid}}">
+    <div>
+        <img class="lazyload" data-src="{{thumbnail_image}}" alt="{{pid}} - {{name}}" src="/content/images/assets/trans.gif" />
+    </div>
+    <div>
+        <h3 class="item-name">{{name}}</h3>
+        <div>
+            <span>{{price|priceFormat: $1,000.00}}</span>
+            <span>{{alternate_price|priceFormat: $1,000.00}}</span>
+        </div>
+    </div>
+</a>

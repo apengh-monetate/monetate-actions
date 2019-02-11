@@ -1,0 +1,41 @@
+.page-header__utility .page-header__action.page-header__action--cart.page-header__icon-wrap {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  float: left;
+  font: inherit;
+  font-weight: normal;
+  height: 48px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 1;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  right: unset;
+  top: unset;
+  -webkit-transform: none;
+          transform: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 25%;
+}
+
+.page-header__actions button.page-header__utility-item.page-header__utility-item--search.page-header__icon-wrap {
+  border: none;
+  height: 24px;
+  position: absolute;
+  right: 14px;
+  top: calc(50% + 12px);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 24px;
+}

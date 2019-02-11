@@ -1,0 +1,113 @@
+
+/* adjust animation here - 6s is duration, 2.5s is delay */
+#checkout-link > div[id*="monetate_selectorHTML"],
+#checkout-icon > div[id*="monetate_selectorHTML"] {
+    animation-delay: 2.5s;
+    animation-direction: forwards;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-name: flyinOut;
+    animation-timing-function: ease;
+    background: #fff;
+    border: 1px solid #ddd;
+    opacity: 0;
+    // opacity: 1 !important;
+    padding: 15px 10px 20px;
+    position: absolute;
+    right: -15px;
+    top: 45px;
+    width: 175px;
+    z-index: 99999;
+    @media screen and (min-width: 768px) {
+        right: -23px;
+    }
+    @media screen and (min-width: 1025px) {
+        right: 0;
+        top: 30px;
+    }
+
+    &.flydownComplete {
+        display: none !important;
+    }
+}
+
+// #condensed-checkout-icons > div[id*="monetate_selectorHTML"] {
+//     @media screen and (min-width: 1025px) {
+//         right: 42px;
+//         top: 44px;
+//     }
+// }
+
+
+
+/* Abandond Cart Flydown */
+.mt-abandoned-cart {
+    text-align: center;
+    &:before {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAHBAMAAAAsQKpuAAAAJFBMVEX////MzMzMzMzMzMzMzMzQ0NDQ0NDU1NTw8PD19fX6+vr///9WnUvqAAAABnRSTlMAJlF5+fkJqfZhAAAALUlEQVQImWNgYGBkAAMTBRDJXBEEosxXTwVymat27wwCcXbvBnKrdu/evTMBAKMrC85aARJaAAAAAElFTkSuQmCC") 0 0 no-repeat;
+        content: '';
+        display: inline-block;
+        height: 7px;
+        position: absolute;
+        right: 20px;
+        top: -7px;
+        width: 11px;
+        @media screen and (min-width: 768px) {
+            right: 28px;
+        }
+        @media screen and (min-width: 1025px) {
+            right: 24px;
+        }
+    }
+
+    &__msg {
+        color: #000;
+        font-family: "Futura W01 Heavy",Arial,sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: .1em;
+        line-height: 17px;
+        text-transform: uppercase;
+    }
+    &__btn {
+        align-items: center;
+        background: #000 !important;
+        border-color: #000 !important;
+        color: #fff !important;
+        display: block;
+        display: flex;
+        font-family: 'FuturaSTD-Book',Arial,Helvetica,sans-serif !important;
+        font-size: 11px !important;
+        font-size: .6875rem !important;
+        height: 30px !important;
+        justify-content: center;
+        letter-spacing: 0.1em;
+        line-height: 2.72727em !important;
+        margin-top: 10px;
+        padding: 0;
+        text-transform: uppercase;
+    }
+}
+
+
+
+
+@keyframes flyinOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    15% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    85% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,34 @@
+<a href="{{product_url}}" data-pid="{{pid}}">
+    <div>
+        <img src="{{thumbnail_image}}" alt="{{pid}} - {{name}}" />
+    </div>
+    <div>
+        <h4>{{brand_name}}</h4>
+        <div>{{name|truncate: 20}}</div>
+        <div>{{description|truncate: 40}}</div>
+        <div>
+            <span>{{price|priceFormat: $1,000.00}}</span>
+            <span>{{alternate_price|priceFormat: $1,000.00}}</span>
+        </div>
+    </div>
+</a>
+
+
+
+<div class="mt_slider__item" data-pid="{{pid}}">
+    <div class="mt_slider__img">
+        <a href="{{product_url}}">
+            <img src="{{thumbnail_image}}" alt="{{pid}} - {{name}}" />
+        </a>
+    </div>
+    <div class="mt_slider__details">
+        <div class="mt_slider__price">
+            <span class="mt_slider__price--alt">{{alternate_price|priceFormat: $1,000.00}}</span>
+            <span class="mt_slider__price--reg">{{price|priceFormat: $1,000.00}}</span>
+            <span class="mt_slider__price--tag">Sale</span>
+        </div>
+        <p class="mt_slider__desc">
+            <a href="{{product_url}}">{{name}}</a>
+        </p>
+    </div>
+</div>

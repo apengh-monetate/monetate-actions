@@ -1,0 +1,220 @@
+.mt_hero {
+  display: block;
+  margin: 0 auto 32px;
+  max-width: 1440px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+  width: 100%;
+}
+
+@media screen and (min-width: 651px) {
+  .mt_hero {
+    margin: 0 auto 64px;
+  }
+}
+
+.mt_hero__img {
+  display: block;
+  width: 100%;
+}
+
+.mt_hero__img picture,
+.mt_hero__img picture img {
+  max-width: 100%;
+}
+
+.mt_hero__copy {
+  display: block;
+  padding: 16px;
+  position: relative;
+  text-align: center;
+}
+
+@media screen and (min-width: 651px) {
+  .mt_hero__copy {
+    max-width: calc(100% - 64px);
+    padding: 32px;
+    position: absolute;
+    text-align: left;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mt_hero__copy {
+    width: 275px;
+  }
+}
+
+@media screen and (min-width: 651px) {
+  .mt_hero__copy.bottom-left {
+    bottom: 32px;
+    left: 32px;
+    right: auto;
+    top: auto;
+  }
+}
+
+@media screen and (min-width: 651px) {
+  .mt_hero__copy.bottom-right {
+    bottom: 32px;
+    left: auto;
+    right: 32px;
+    top: auto;
+  }
+}
+
+.mt_hero__copy img {
+  display: block;
+  margin-bottom: 24px;
+  max-width: 100%;
+  width: auto;
+}
+
+.mt_hero__heading {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 651px) {
+  .mt_hero__heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+.mt_hero__subheading {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+  margin-bottom: 16px !important;
+}
+
+@media screen and (min-width: 651px) {
+  .mt_hero__subheading {
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+.mt_hero__cta a {
+  border-bottom: 1px solid #003953;
+  color: #003953;
+  display: inline-block !important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700 !important;
+  margin: .75em 1em .75em 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.mt_hero__cta a:hover, .mt_hero__cta a:visited, .mt_hero__cta a:focus {
+  border-color: #0076bd;
+  color: #0076bd;
+}
+
+.mt_hero__button {
+  background: transparent;
+  border: 2px solid #003953;
+  border-color: #1f1f1f;
+  border-radius: 4px;
+  color: #003953;
+  color: #1f1f1f;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 120%;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.mt_hero.white-box {
+  color: #1f1f1f;
+}
+
+@media screen and (min-width: 651px) {
+  .mt_hero.white-box .mt_hero__copy {
+    background-color: #fff;
+  }
+}
+
+.mt_hero.white-box .mt_hero__heading,
+.mt_hero.white-box .mt_hero__subheading {
+  color: #1f1f1f;
+}
+
+.mt_hero.white-box .mt_hero__cta a {
+  border-color: #003953;
+  color: #003953;
+}
+
+.mt_hero.white-box .mt_hero__cta a:hover, .mt_hero.white-box .mt_hero__cta a:visited, .mt_hero.white-box .mt_hero__cta a:focus {
+  border-color: #0076bd;
+  color: #0076bd;
+}
+
+.mt_hero.white-box .mt_hero__button {
+  background: transparent;
+  border: 2px solid #1f1f1f;
+  color: #1f1f1f;
+}
+
+.mt_hero.white-box:hover .mt_hero__button {
+  background: #1f1f1f;
+  border: 2px solid #1f1f1f;
+  color: #fff;
+}
+
+.mt_hero.black-box {
+  color: #fff;
+}
+
+@media screen and (min-width: 651px) {
+  .mt_hero.black-box .mt_hero__copy {
+    background-color: #1f1f1f;
+  }
+}
+
+.mt_hero.black-box .mt_hero__heading,
+.mt_hero.black-box .mt_hero__subheading {
+  color: #fff;
+}
+
+.mt_hero.black-box .mt_hero__cta a {
+  border-color: #fff !important;
+  color: #fff !important;
+}
+
+.mt_hero.black-box .mt_hero__cta a:hover, .mt_hero.black-box .mt_hero__cta a:visited, .mt_hero.black-box .mt_hero__cta a:focus {
+  border-color: #fff !important;
+  color: #fff !important;
+}
+
+.mt_hero.black-box .mt_hero__button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.mt_hero.black-box:hover .mt_hero__button {
+  background: #fff;
+  border: 2px solid #fff;
+  color: #1f1f1f;
+}

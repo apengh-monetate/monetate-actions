@@ -1,188 +1,226 @@
-$breakpoint-md: 768px;
-$breakpoint-lg: 960px;
+@import "../../variables";
 
-$gold: #C1992D;
-$gray: #636363;
-$light-gray: #D8D8D8;
 
-$height: 60px;
-$padding-top: 50px + $height;
 
-$font-medium: 'Gill Sans Medium', sans-serif;
+/*Hides the plural parameter on any suffixes when counting down.*/
+.mt_countdown .mt_hide_plural {
+    display: none;
+}
 
 /*---Default Styles---*/
 /* Wrapper */
 .mt_countdown {
-  background-image: url({{BKG_URL}});
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #000;
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-/*Hides the plural parameter on any suffixes when counting down.*/
-.mt_countdown .mt_hide_plural {
-  display: none;
-}
-
-
-/*
- * Custom Styles
- */
-.mt-countdown {
-  align-content: center;
-  align-items: center;
-  border-bottom: 1px solid $light-gray;
-  box-sizing: border-box;
-  color: $gray;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-family: 'Gill Sans Medium', sans-serif;
-  font-weight: 400;
-  height: $height;
-  justify-content: center;
-  text-align: center;
-  text-transform: uppercase;
-  @media screen and (min-width: $breakpoint-md) {
-    flex-wrap: nowrap;
-    height: 30px;
-  }
-
-  .bold {
-    font-family: $font-medium;
-    font-weight: 700;
-  }
-
-
-  &__lead {
+    background-color: #FAECE0;
+    color: #000;
     display: block;
-    font-size: 9px;
-    letter-spacing: .2em;
-    line-height: 1;
-    margin-bottom: 6px;
-    margin-top: 0;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
     position: relative;
+    text-align: center;
     width: 100%;
-    @media screen and (min-width: $breakpoint-md) {
-      flex-grow: 0;
-      flex-shrink: 0;
-      font-size: 10px;
-      line-height: 10px;
-      margin-bottom: 0;
-      margin-right: 20px;
-      width: auto;
-    }
-    @media screen and (min-width: $breakpoint-lg) {
-      font-size: 12px;
-      line-height: 12px;
-    }
-  }
-
-  &__timer {
-    display: block;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: .3em;
-    line-height: 1;
-    width: 100%;
-    @media screen and (min-width: $breakpoint-md) {
-      flex-grow: 0;
-      flex-shrink: 0;
-      font-size: 10px;
-      line-height: 10px;
-      width: auto;
-    }
-    @media screen and (min-width: $breakpoint-lg) {
-      font-size: 12px;
-      line-height: 12px;
-    }
-  }
 
 
-  &__msg {
-    display: block;
-    font-size: 9px;
-    letter-spacing: .2em;
-    line-height: 1;
-    margin-bottom: 0;
-    margin-top: 8px;
-    position: relative;
-    width: 100%;
-    @media screen and (min-width: $breakpoint-md) {
-      flex-grow: 0;
-      flex-shrink: 0;
-      font-size: 10px;
-      line-height: 10px;
-      margin-left: 20px;
-      margin-top: 0;
-      width: auto;
-    }
-    @media screen and (min-width: $breakpoint-lg) {
-      font-size: 12px;
-      line-height: 12px;
-    }
-  }
+    .mt-countdown {
+        align-content: center;
+        align-items: center;
+        background-color: #FAECE0;
+        background-image: url({{BKG_URL}});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-bottom: 1px solid $light-gray;
+        box-sizing: border-box;
+        color: $gray;
+        display: none !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-family: 'Gill Sans Medium', sans-serif;
+        font-weight: 400;
+        height: $height;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1366px;
+        text-align: center;
+        text-transform: uppercase;
+        @media screen and (min-width: $breakpoint-lg) {
+            display: flex !important;
+            flex-wrap: nowrap;
+            height: 30px;
+        }
+
+        .bold {
+            font-family: $font-medium;
+            font-weight: 700;
+        }
 
 
+        &__lead {
+            color: #1f1f1f;
+            display: block;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .2em;
+            line-height: 1;
+            margin-bottom: 6px;
+            margin-top: 0;
+            position: relative;
+            text-transform: uppercase;
+            width: 100%;
+            @media screen and (min-width: $breakpoint-lg) {
+                flex-grow: 0;
+                flex-shrink: 0;
+                font-size: 12px;
+                line-height: 12px;
+                margin-bottom: 0;
+                margin-right: 20px;
+                width: auto;
+            }
+
+            span {
+                color: #B78A6A;
+            }
+        }
+
+        &__timer {
+            color: #1f1f1f;
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: .3em;
+            line-height: 1;
+            width: 100%;
+            @media screen and (min-width: $breakpoint-lg) {
+                flex-grow: 0;
+                flex-shrink: 0;
+                font-size: 12px;
+                line-height: 12px;
+                width: auto;
+            }
+        }
+
+
+        &__msg {
+            display: block;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .2em;
+            line-height: 1;
+            margin-bottom: 0;
+            margin-top: 8px;
+            position: relative;
+            width: 100%;
+            @media screen and (min-width: $breakpoint-lg) {
+                flex-grow: 0;
+                flex-shrink: 0;
+                font-size: 12px;
+                line-height: 12px;
+                margin-left: 20px;
+                margin-top: 0;
+                width: auto;
+            }
+
+            a {
+                border-bottom: 1px solid #1f1f1f;
+                color: #1f1f1f;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .mt_tickerElem {
+
+    }
+    .mt_time {
+        color: $gold;
+    }
 }
 
 
-.mt_tickerElem {
-
-}
-.mt_time {
-  color: $gold;
-}
-
-
-/* Wrapper */
-.mt_countdown {
-  background-image: url({{BKG_URL}});
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #000;
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-/* Hides the plural parameter on any suffixes when counting down. */
-.mt_countdown .mt_hide_plural {
-  display: none;
-}
-
-
-/*
- * Adjust for updated fixed transparent header
- */
-
-.mt_countdown {
-    flex: 0 0 100%;
-    margin-bottom: 10px;
-}
 .mt_countdown {
     display: none;
-    @media screen and (min-width: 64.063em) {
+    @media screen and (min-width: $breakpoint-lg) {
         display: block;
     }
 }
 
+
+
+
+
+
+
+
+
+/*
+* Adjust for updated fixed transparent header
+*/
+.mt_countdown {
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+}
+
+%header {
+    max-width: 85.375em;
+    padding: 20px 2.5% 0;
+    width: 95.25%;
+}
+
 @media screen and (min-width: 64.063em) {
     header {
-        padding-top: 0 !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        width: 100% !important;
+        &.condensed {
+            flex-wrap: wrap;
+            justify-content: center !important;
+            #desktop-top-row {
+                margin-left: auto;
+                margin-right: auto;
+                width: 38px !important;
+            }
+            #desktop-bottom-row {
+                flex: none !important;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 1066px;
+                width: 71.70737% !important;
+            }
+            #condensed-icons {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     }
-    header.condensed {
-        flex-wrap: wrap;
-        padding-top: 0 !important;
+    #desktop-top-row,
+    #desktop-bottom-row {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 85.375em;
+        width: 95.25% !important;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    header {
+        &.condensed {
+            #desktop-top-row {
+                margin-right: 94px;
+            }
+            #desktop-bottom-row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            #condensed-icons {
+                margin-left: 94px;
+            }
+        }
+    }
+}
+
+
+.sitebody {
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-top: 140px !important;
     }
 }

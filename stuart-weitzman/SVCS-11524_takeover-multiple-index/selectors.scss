@@ -2,31 +2,51 @@
 
 
 // 2 x 1
-ul[id="search-result-items-0.0"] > li.grid-tile:eq(0) {} // Before
+// Image Size: 884x555
+// Insert Method: BEFORE
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(0) {}
 
-// 2 x 2
-ul[id="search-result-items-0.0"] > li.grid-tile:eq(1) {} // After
-
-// 3 x 1
-ul[id="search-result-items-0.0"] > li.grid-tile:eq(2) {} // After
-
-// 2 x 2
-ul[id="search-result-items-0.0"] > li.grid-tile:eq(3) {} // Before
+// 2 x 2 (Right)
+// Image Size: 884x555
+// Insert Method: BEFORE
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(1) {}
 
 // 3 x 1
-ul[id="search-result-items-0.0"] > li.grid-tile:eq(4) {} // After
+// Image Size: 1326x555
+// Insert Method: AFTER
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(2) {}
 
-// 2 x 2
-ul[id="search-result-items-0.0"] > li.grid-tile:eq(5) {} // After
-
-// 3 x 1
-ul[id="search-result-items-0.0"] > li.grid-tile:eq(6) {} // After
-
-// 2 x 2
-ul[id="search-result-items-0.0"] > li.grid-tile:eq(7) {} // Before
+// 2 x 2 (Left)
+// Image Size: 884x555
+// Insert Method: BEFORE
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(3) {}
 
 // 3 x 1
-ul[id="search-result-items-0.0"] > li.grid-tile:eq(8) {} // After
+// Image Size: 1326x555
+// Insert Method: AFTER
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(4) {}
+
+// 2 x 2 (Right)
+// Image Size: 884x555
+// Insert Method: AFTER
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(5) {}
+
+// 3 x 1
+// Image Size: 1326x555
+// Insert Method: AFTER
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(6) {}
+
+// 2 x 2 (Left)
+// Image Size: 884x555
+// Insert Method: BEFORE
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(7) {}
+
+// 3 x 1
+// Image Size: 1326x555
+// Insert Method: AFTER
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(8) {}
 
 // 3 x 3
-ul[id="search-result-items-0.0"] > li.grid-tile:eq(9) {} // Before
+// Image Size: 1326x1326
+// Insert Method: BEFORE
+ul[id="search-result-items-0.0"] > li.grid-tile:eq(9) {}

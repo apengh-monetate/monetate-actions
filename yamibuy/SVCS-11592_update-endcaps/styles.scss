@@ -1,0 +1,352 @@
+/**
+* DEFAULT SLIDER STYLES
+* Edit at your own risk!
+*/
+#MONETATE-ID {
+    display: block;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    max-width: 1920px;
+    min-width: 945px;
+    position: relative;
+    text-align: center;
+    width: 945px;
+    @media screen and (min-width: 1367px) {
+        width: 1265px;
+    }
+    @media screen and (min-width: 1680px) {
+        width: 1585px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    [data-slider] {
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+
+
+    // ------------------------------------------------------------------
+    // Mask
+    // ------------------------------------------------------------------
+    [data-slider-mask] {
+        display: inline-block;
+        margin: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative !important;
+        // width: calc(100% - 106px);
+        width: 100%;
+    }
+
+
+
+
+    // ------------------------------------------------------------------
+    // Slide
+    // ------------------------------------------------------------------
+    [data-slide] {
+        float: none;
+        > div {
+            height: 100%;
+        }
+        img {
+            max-width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+
+
+
+    // ------------------------------------------------------------------
+    // Horizontal
+    // ------------------------------------------------------------------
+    &[data-slider-wrapper="horizontal"] {
+        [data-slider-mask] {
+            touch-action: pan-y;
+        }
+        [data-slider] {
+            white-space: nowrap !important;
+        }
+        [data-slide] {
+            display: inline-block !important;
+            vertical-align: top;
+            white-space: normal;
+        }
+    } // Horizontal
+
+
+
+
+    // ------------------------------------------------------------------
+    // Vertical
+    // ------------------------------------------------------------------
+    &[data-slider-wrapper="vertical"] {
+        [data-slider-mask] {
+            height: 400px !important;
+            touch-action: pan-x;
+        }
+        [data-slide] {
+            display: block!important;
+        }
+        [data-prev-button] {
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+        [data-next-button] {
+            bottom: 0;
+            left: 50%;
+            right: auto;
+            top: auto;
+            transform: translateX(-50%);
+        }
+    } // Vertical
+
+
+
+    // ------------------------------------------------------------------
+    // Fade
+    // ------------------------------------------------------------------
+    &[data-slider-wrapper="fade"] {
+        [data-slider-mask] {
+            touch-action: pan-y;
+        }
+
+        [data-slide] {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            &[data-slide-active] {
+                opacity: 1;
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+
+
+
+
+    // ------------------------------------------------------------------
+    // Buttons
+    // ------------------------------------------------------------------
+    [data-pagination-slide],
+    [data-prev-button],
+    [data-next-button]{
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    [data-prev-button],
+    [data-next-button] {
+        background: #fff;
+        background-image: none;
+        border: 0;
+        border-radius: 50%;
+        box-shadow: 0 4px 16px 0 rgba(0,0,0,0.1);
+        height: 64px;
+        opacity: 1;
+        position: absolute;
+        text-align: center;
+        top: 45%;
+        width: 64px;
+        z-index: 10;
+        &[disabled] {
+            opacity: 0;
+            pointer-events: none;
+            user-select: none;
+        }
+    }
+
+    [data-prev-button] {
+        left: 6px;
+        padding-left: 2px;
+    }
+
+    [data-next-button] {
+        padding-left: 6px;
+        right: 6px;
+    }
+
+
+
+
+    // ------------------------------------------------------------------
+    // Pagination
+    // ------------------------------------------------------------------
+    [data-pagination-slide] {
+        background: #000;
+        border-radius: 6px;
+        display: inline-block;
+        height: 12px;
+        margin: 4px;
+        opacity: 0.5;
+        width: 12px;
+        * {
+            pointer-events: none;
+        }
+        &[data-slide-active] {
+            opacity: 1;
+        }
+    }
+
+    [data-pagination="thumbnails"] [data-pagination-slide] {
+        background: none;
+        border-radius: 0;
+        height: auto;
+        width: 40px;
+    }
+
+    [data-pagination*="dots"] [data-pagination-slide] {
+        /* remove below for pagination numbers */
+        text-indent: -9999px;
+    }
+
+
+
+
+
+
+    // ==================================================================
+    // .mt_slider Custom Styling
+    // ==================================================================
+    .mt_slider {
+
+        // ------------------------------------------------------------------
+        // Heading
+        // ------------------------------------------------------------------
+        &__heading {
+            color: #222;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 38px;
+            margin: 0;
+            margin-bottom: 20px;
+            padding: 0;
+            text-align: center;
+        }
+
+
+
+
+
+        // ------------------------------------------------------------------
+        // Slide
+        // ------------------------------------------------------------------
+        &__item {
+            display: block;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            text-align: left;
+        }
+
+        &__img {
+            display: block;
+            height: 185px;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            width: 185px;
+        }
+
+
+        &__details {
+
+        }
+
+        &__price {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            line-height: 22px;
+            margin: 0;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        &__desc {
+            color: #222;
+            display: block;
+            font-size: 14px;
+            height: 44px;
+            line-height: 22px;
+            margin-top: 5px;
+            overflow: hidden;
+            padding: 0;
+        }
+
+
+
+    }
+
+
+
+    // No Alternate Price
+    [data-missing-keys="alternate_price"] {
+        .mt_slider__price--reg {
+            color: #222;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 22px;
+            margin-left: 0;
+            text-decoration: none;
+            &::first-letter {
+                float: none;
+                font-size: 14px;
+                vertical-align: top;
+            }
+        }
+        .mt_slider__price--tag {
+            display: none !important;
+        }
+    }
+
+
+    // Alternate Price (Sale)
+    .mt_slider__price--alt {
+        font-size: 24px;
+        font-weight: 700;
+        &::first-letter {
+            float: none;
+            font-size: 14px;
+            vertical-align: top;
+        }
+    }
+    .mt_slider__price--reg {
+        color: #888;
+        font-size: 14px;
+        line-height: 22px;
+        margin-left: 10px;
+        text-decoration: line-through;
+    }
+    .mt_slider__price--tag {
+        background-color: rgba(242, 87, 89, 0.1);
+        border: 0;
+        border-radius: 100px;
+        color: #f25759;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-left: 10px;
+        order: 3;
+        padding: 0 9px;
+        user-select: none;
+    }
+
+} // #MONETATE-ID
