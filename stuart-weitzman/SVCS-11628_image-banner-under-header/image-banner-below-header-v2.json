@@ -1,0 +1,174 @@
+{
+  "id": 383348,
+  "title": "Image Banner Below Header - V2",
+  "description": "Inserts an image banner below the header",
+  "op": "selectorBanner",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "image",
+  "subcategory": "Any Page",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative",
+        "value": {
+          "extension": ".png",
+          "height": 63,
+          "width": 1920,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "5d7f96af78d4122d250bc2211fb49dc35fdcfbeb",
+          "id": 515615
+        }
+      },
+      "widget": {
+        "label": "Image Creative",
+        "type": "ImageCreative",
+        "description": "Upload an image creative",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "header"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "after"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": "position: relative;\nz-index: 1;"
+      },
+      "widget": {
+        "label": "Banner Div Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_imgStyle",
+        "value": null
+      },
+      "widget": {
+        "label": "Image Element Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "/* HEADER */\nheader + div[id*=\"monetate_selectorBanner\"] {\n  font-size: 0;\n  left: 50%;\n  margin-left: -683px;\n  /* Half of max-width */\n  max-width: 1366px;\n  position: fixed !important;\n  top: calc((100vw * 0.0728) + 55px);\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  z-index: 2 !important;\n}\n\n@media screen and (min-width: 768px) {\n  header + div[id*=\"monetate_selectorBanner\"] {\n    top: 50px !important;\n  }\n}\n\n@media screen and (min-width: 1025px) {\n  header + div[id*=\"monetate_selectorBanner\"] {\n    top: 96px !important;\n  }\n}\n\nbody.home header + div[id*=\"monetate_selectorBanner\"] {\n  left: 0;\n  margin-left: 0;\n  max-width: 100%;\n}\n\n/* FIXED HEADER ON SCROLL */\nheader.condensed + div[id*=\"monetate_selectorBanner\"] {\n  top: 50px !important;\n}\n\n@media screen and (min-width: 1025px) {\n  header.condensed + div[id*=\"monetate_selectorBanner\"] {\n    top: 44px !important;\n  }\n}\n\n/* HOMEPAGE */\n.sitebody-hm {\n  padding-top: calc(100vw * 0.03285714);\n}\n\n@media screen and (min-width: 768px) {\n  .sitebody-hm {\n    padding-top: calc((100vw * 0.03285714) + 50px);\n  }\n}\n\n@media screen and (min-width: 1025px) {\n  .sitebody-hm {\n    padding-top: 0;\n  }\n}\n\n/* NON-HOMEPAGE */\n@media screen and (min-width: 768px) {\n  .sitebody {\n    padding-top: calc((100vw * 0.03285714) + 50px) !important;\n  }\n}\n\n@media screen and (min-width: 1025px) {\n  .sitebody {\n    padding-top: calc((100vw * 0.03285714) + 96px) !important;\n  }\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

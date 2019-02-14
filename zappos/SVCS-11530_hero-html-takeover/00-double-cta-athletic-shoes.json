@@ -1,7 +1,7 @@
 {
-  "id": 381695,
-  "title": "Department Hero Takeover (Logo and Button)",
-  "description": "Department Hero Takeover (Logo and Button)",
+  "id": 383342,
+  "title": "Department Hero Takeover (Double CTA: Athletic Shoes)",
+  "description": "Department Hero Takeover (Double CTA: Athletic Shoes)",
   "op": "allInOneV2",
   "slot": "actionbuilder_ag_0",
   "slot_type": "none",
@@ -15,7 +15,7 @@
       "input": {
         "type": "str",
         "name": "htmlString",
-        "value": "<a class=\"mt_hero white-box\" href=\"#\">\n    <div class=\"mt_hero__img\">\n        <picture>\n            <source media=\"(max-width: 650px)\" srcset=\"https://via.placeholder.com/650x433\">\n            <source media=\"(max-width: 1024px)\" srcset=\"https://via.placeholder.com/1024x356\">\n            <img src=\"https://via.placeholder.com/1440x500\" alt=\"&quot;&quot;\" srcset=\"https://via.placeholder.com/1480x514 2x, https://via.placeholder.com/1440x500 1x\">\n        </picture>\n    </div>\n\n    <div class=\"mt_hero__copy bottom-right\">\n        <img src=\"https://via.placeholder.com/200x71\" alt=\"\">\n        <p class=\"mt_hero__button\">Shop Now</p>\n    </div>\n</a>\n"
+        "value": "<section class=\"mt_hero white-box\">\n\n    <div class=\"mt_hero__img\">\n        <picture>\n            <source media=\"(max-width: 650px)\" srcset=\"https://via.placeholder.com/650x433\">\n            <source media=\"(max-width: 1024px)\" srcset=\"https://via.placeholder.com/1440x500\">\n            <img src=\"https://via.placeholder.com/1440x500\" alt=\"&quot;&quot;\" srcset=\"https://via.placeholder.com/2880x1000 2x, https://via.placeholder.com/1440x500 1x\">\n        </picture>\n    </div>\n\n    <div class=\"mt_hero__copy bottom-right\">\n        <h2 class=\"mt_hero__heading\">Right on Track:<br>Athletic Sneakers</h2>\n        <p class=\"mt_hero__subheading\">Look for styles that shift seamlessly from workouts to study sessions!</p>\n        <p class=\"mt_hero__cta\">\n            <a href=\"https://www.zappos.com/women-running-shoes/CK_XARC81wEY0O4BwAEB4gIEAQIDGA.zso?si=4521888&sy=1\">Shop Women's</a>\n        </p>\n        <p class=\"mt_hero__cta\">\n            <a href=\"https://www.zappos.com/men-running-shoes/CK_XARC81wEY0O4BwAEC4gIEAQIDGA.zso?si=4521883&sy=1&\">Shop Men's</a>\n        </p>\n    </div>\n\n</section>\n"
       },
       "widget": {
         "label": "HTML String",
@@ -149,7 +149,7 @@
       "input": {
         "type": "bool",
         "name": "opt_poll",
-        "value": true
+        "value": false
       },
       "widget": {
         "label": "Re-check for Elements",
@@ -169,7 +169,25 @@
   ],
   "rule_operator": "and",
   "rules": {
-    "builtin": [],
+    "builtin": [
+      {
+        "values": [
+          "/c/shoes"
+        ],
+        "id": 215512,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "contains",
+          "label": "URL",
+          "rule_name": "page_url",
+          "rule_op": "icontains",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
     "required": []
   },
   "manage_impressions": false

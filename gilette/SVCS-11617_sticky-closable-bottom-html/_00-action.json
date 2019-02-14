@@ -1,0 +1,250 @@
+{
+  "id": 381723,
+  "title": "Sticky Closeable Bottom HTML",
+  "description": "Fixed position bottom HTML with close functionality (element class input example: .mtClose) and editable background color.",
+  "op": "statefulHTML",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Any page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<span style=\"font-size:28px; position:absolute; top:5px; right:10px; cursor:pointer;\">\n    <span class=\"mtClose\">X</span>\n</span>\n\n<p><strong><span style=\"font-size:26px; letter-spacing:.75pt; color: rgb(96, 96, 96);\">Stay Updated</span></strong></p>\n\n<p>\n    <span style=\"font-size:20px; letter-spacing: 1px; color: rgb(96, 96, 96);\">Enter your email address for special offers and updates from Gillette on Demand.</span>\n</p>\n\n<form action=\"https://docs.google.com/forms/d/e/1FAIpQLSffwv4hZtIJw2-cHVIzoSWz95FI35Bdd2lgMZqGJQdBavRVlw/formResponse\" id=\"subscribeForm\" method=\"POST\" onsubmit=\"submitted=true;\" target=\"hidden_iframe\">\n    <input id=\"emailaddress\" name=\"entry.1408328650\" placeholder=\"Email\" type=\"email\" /> \n    <input id=\"subscribe\" type=\"submit\" value=\"Submit\" />&nbsp;\n</form>\n\n<p>\n    <span style=\"font-size:10px;\"><em>By proceeding you agree to our <a href=\"https://www.pg.com/en_US/terms_conditions/index.shtml\"> Terms &amp; Conditions</a>, <a href=\"https://www.pg.com/privacy/english/privacy_notice.shtml\">Privacy Policy</a>,and <a href=\"https://ondemand.gillette.com/en-us/gbr-store-policy.html\">Store Policy</a>.</em></span>\n</p>"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "id",
+        "value": 1
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "This ID can be any number between zero and 31, and determines the grouping of this lightbox to differentiate it from other lightboxes.",
+        "label": "Lightbox ID"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "showInterval",
+        "value": "page"
+      },
+      "widget": {
+        "description": "How long until the this banner is shown again. Based on ID.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "page",
+            "label": "Every page"
+          },
+          {
+            "name": "session",
+            "label": "Once per session"
+          },
+          {
+            "name": "once",
+            "label": "Once, ever"
+          },
+          {
+            "name": "custominterval",
+            "label": "Once every 'X' days"
+          }
+        ],
+        "label": "How often (per user) should this banner be shown?"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "stateApp",
+        "value": "close"
+      },
+      "widget": {
+        "label": "When should the display interval be applied?",
+        "options": [
+          {
+            "name": "first",
+            "label": "After the banner is first loaded"
+          },
+          {
+            "name": "close",
+            "label": "After the user closes the banner"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "If 'Every page' is selected this will not matter. For the other intervals, this setting determines when to stop showing the banner.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "body"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "first"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "closeButtonClass",
+        "value": "mtClose"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "All elements in the HTML creative with this class will act as a close button for the lightbox.",
+        "label": "Close Button Class"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": "background: #fffab8; /* set background color here */\nbottom: 0;\ndisplay: block;\nfont-family: \"Gilroy-Regular\", Arial ,\"Helvetica Neue\",Helvetica,sans-serif;\nfont-style: normal;\nleft: 0;\nmargin: 0 auto;\npadding-top: 10px;\nposition: fixed;\ntext-align: center;\nwidth: 100%;\nz-index: 9999;"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_customInterval",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Days until the banner expires. Only to be used when 'Once every 'X' days' is selected from the frequency.",
+        "label": "Days until expiration"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

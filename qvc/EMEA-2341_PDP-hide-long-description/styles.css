@@ -1,11 +1,15 @@
-.tab-content-ipim {
+.accordion.accLongDesc .tab-content-ipim {
   font-size: 0 !important;
 }
 
-.tab-content-ipim h2 {
+.accordion.accLongDesc .tab-content-ipim h2 {
   display: none !important;
 }
 
-.tab-content-ipim ul {
+.accordion.accLongDesc .tab-content-ipim h2:nth-child(2) {
+  display: block !important;
+}
+
+.accordion.accLongDesc .tab-content-ipim ul {
   font-size: 13px !important;
 }

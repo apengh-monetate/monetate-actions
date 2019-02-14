@@ -1,0 +1,89 @@
+@import "../variables";
+
+/* HEADER */
+header + div[id*="monetate_selectorBanner"] {
+    font-size: 0;
+    position: fixed !important;
+    top: calc((100vw * 0.0728) + 55px);
+    transition: all 0.2s ease;
+    z-index: 2 !important;
+    @media screen and (min-width: $breakpoint-md) {
+        top: 50px !important;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        left: 50%;
+        margin-left: -683px; /* Half of max-width */
+        max-width: 1366px;
+        top: 96px !important;
+    }
+}
+
+body.home {
+    header + div[id*="monetate_selectorBanner"] {
+        left: 0;
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
+
+/* FIXED HEADER ON SCROLL */
+header.condensed + div[id*="monetate_selectorBanner"] {
+    top: 50px !important;
+    @media screen and (min-width: $breakpoint-md) {
+
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        top: 44px !important;
+    }
+}
+
+
+/* HOMEPAGE */
+.sitebody-hm {
+    padding-top: calc(100vw * 0.03285714) !important;
+    @media screen and (min-width: $breakpoint-md) {
+        padding-top: calc((100vw * 0.03285714) + 50px) !important;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-top: 0 !important;
+    }
+}
+
+/* NON-HOMEPAGE */
+.sitebody {
+    @media screen and (min-width: $breakpoint-md) {
+        padding-top: calc((100vw * 0.03285714) + 55px) !important;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-top: calc((100vw * 0.03285714) + 96px) !important;
+    }
+}
+
+
+// ==================================================================
+// .sitebody, .sitebody-hm (First)
+// ==================================================================
+// .sitebody-hm,
+// .sitebody {
+//     & > div[id*="monetate_selector"] {
+//         font-size: 0;
+//         @media screen and (min-width: $breakpoint-md) {
+//             position: absolute !important;
+//             top: 50px;
+//         }
+//         @media screen and (min-width: $breakpoint-lg) {
+//             top: 96px;
+//         }
+//     }
+// }
+//
+//
+//
+// .sitebody {
+//     @media screen and (min-width: $breakpoint-md) {
+//         padding-top: calc((100vw * 0.03285714) + 55px) !important;
+//     }
+//     @media screen and (min-width: $breakpoint-lg) {
+//         padding-top: calc((100vw * 0.03285714) + 100px) !important;
+//     }
+// }

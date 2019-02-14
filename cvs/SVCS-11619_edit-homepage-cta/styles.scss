@@ -1,0 +1,36 @@
+.srx-home-top {
+    @media screen and (max-width: 767px) {
+        span {
+            background-position: 8px 55px !important;
+            padding-left: 15px !important;
+            padding-top: 60px !important;
+            width: calc(100% - 30px) !important;
+        }
+
+        h1 {
+            margin-bottom: 20px !important;
+            margin-left: 5px !important;
+        }
+
+        a {
+            display: block !important;
+            position: relative !important;
+            width: 100% !important;
+
+            button {
+                margin-bottom: 15px !important;
+                width: 100% !important;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        a {
+            button {
+                height: 60px !important;
+                width: 180px !important;
+            }
+        }
+    }
+
+}

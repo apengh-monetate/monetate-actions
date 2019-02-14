@@ -1,7 +1,7 @@
 {
-  "id": 383344,
-  "title": "Department Hero Takeover (Text and Button)",
-  "description": "Department Hero Takeover (Text and Button)",
+  "id": 383343,
+  "title": "Department Hero Takeover (Double CTA: Winter Boots)",
+  "description": "Department Hero Takeover (Double CTA: Winter Boots)",
   "op": "allInOneV2",
   "slot": "actionbuilder_ag_0",
   "slot_type": "none",
@@ -15,13 +15,13 @@
       "input": {
         "type": "str",
         "name": "htmlString",
-        "value": "<a class=\"mt_hero white-box\" href=\"#\">\n    <div class=\"mt_hero__img\">\n        <picture>\n            <source media=\"(max-width: 650px)\" srcset=\"https://via.placeholder.com/650x433\">\n            <source media=\"(max-width: 1024px)\" srcset=\"https://via.placeholder.com/1024x356\">\n            <img src=\"https://via.placeholder.com/1440x500\" alt=\"&quot;&quot;\" srcset=\"https://via.placeholder.com/1480x514 2x, https://via.placeholder.com/1440x500 1x\">\n        </picture>\n    </div>\n\n    <div class=\"mt_hero__copy bottom-right\">\n        <h2 class=\"mt_hero__heading\">Back to Campus: Athletic Sneakers</h2>\n        <p class=\"mt_hero__subheading\">Look for styles that shift seamlessly from gym and track to class!</p>\n        <p class=\"mt_hero__button\">Shop Now</p>\n    </div>\n</a>\n"
+        "value": "<section class=\"mt_hero white-box\">\n\n    <div class=\"mt_hero__img\">\n        <picture>\n            <source media=\"(max-width: 650px)\" srcset=\"https://via.placeholder.com/650x433\">\n            <source media=\"(max-width: 1024px)\" srcset=\"https://via.placeholder.com/1440x500\">\n            <img src=\"https://via.placeholder.com/1440x500\" alt=\"&quot;&quot;\" srcset=\"https://via.placeholder.com/2880x1000 2x, https://via.placeholder.com/1440x500 1x\">\n        </picture>\n    </div>\n\n    <div class=\"mt_hero__copy bottom-right\">\n        <h2 class=\"mt_hero__heading\">Still in Stock:<br>Winter Boots</h2>\n        <p class=\"mt_hero__subheading\">Don't wait to enjoy the styles you’ve been eyeing all season!</p>\n        <p class=\"mt_hero__cta\">\n            <a href=\"https://www.zappos.com/women-winter-and-snow-boots/CK_XARCz1wEY1uwBwAEB4gIEAQIDGA.zso?s=recentSalesStyle%2Fdesc%2F&si=4374673&sy=1\">Shop Women's</a>\n        </p>\n        <p class=\"mt_hero__cta\">\n            <a href=\"https://www.zappos.com/men-winter-and-snow-boots/CK_XARCz1wEY1uwBwAEC4gIEAQIDGA.zso?s=recentSalesStyle/desc/\">Shop Men's</a>\n        </p>\n    </div>\n\n</section>\n"
       },
       "widget": {
-        "label": "HTML String",
+        "action_visible": true,
         "type": "HtmlField",
         "description": "HTML to be inserted",
-        "action_visible": true
+        "label": "HTML String"
       },
       "required": true
     },
@@ -32,10 +32,10 @@
         "value": "div._3yCDp._9_hcB"
       },
       "widget": {
-        "label": "Relative Element Selector",
+        "action_visible": true,
         "type": "CssSelectorField",
         "description": "CSS Selector to find the relative element.",
-        "action_visible": true
+        "label": "Relative Element Selector"
       },
       "required": true
     },
@@ -46,9 +46,7 @@
         "value": "replace"
       },
       "widget": {
-        "description": "Where to insert the banner in relation to the Relative Element Selector.",
-        "action_visible": true,
-        "type": "StringSelectField",
+        "label": "Insert Method",
         "options": [
           {
             "name": "after",
@@ -75,7 +73,9 @@
             "label": "Takeover"
           }
         ],
-        "label": "Insert Method"
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true
       },
       "required": true
     },
@@ -86,10 +86,10 @@
         "value": null
       },
       "widget": {
-        "label": "Banner Div Inline Style",
+        "action_visible": false,
         "type": "TextField",
         "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
-        "action_visible": true
+        "label": "Banner Div Inline Style"
       },
       "required": false
     },
@@ -105,10 +105,10 @@
         }
       },
       "widget": {
-        "label": "Script",
+        "action_visible": false,
         "type": "JavaScriptCodeField",
         "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
-        "action_visible": true
+        "label": "Script"
       },
       "required": false
     },
@@ -124,10 +124,10 @@
         }
       },
       "widget": {
-        "label": "CSS",
+        "action_visible": true,
         "type": "CSSCodeField",
         "description": "CSS appended to the DOM in a <style> or <link> element.",
-        "action_visible": true
+        "label": "CSS"
       },
       "required": false
     },
@@ -138,10 +138,10 @@
         "value": false
       },
       "widget": {
-        "label": "Select multiple elements, if matched?",
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
-        "action_visible": true
+        "label": "Select multiple elements, if matched?"
       },
       "required": false
     },
@@ -149,13 +149,13 @@
       "input": {
         "type": "bool",
         "name": "opt_poll",
-        "value": true
+        "value": false
       },
       "widget": {
-        "label": "Re-check for Elements",
+        "action_visible": false,
         "type": "BooleanField",
         "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
-        "action_visible": true
+        "label": "Re-check for Elements"
       },
       "required": false
     }
@@ -169,7 +169,25 @@
   ],
   "rule_operator": "and",
   "rules": {
-    "builtin": [],
+    "builtin": [
+      {
+        "values": [
+          "/c/shoes"
+        ],
+        "id": 215511,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "contains",
+          "label": "URL",
+          "rule_name": "page_url",
+          "rule_op": "icontains",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
     "required": []
   },
   "manage_impressions": false

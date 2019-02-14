@@ -1,0 +1,14 @@
+#monetate_selector {
+  background: #fffab8;
+  /* set background color here */
+  bottom: 0;
+  display: block;
+  font-family: "Gilroy-Regular", Arial ,"Helvetica Neue",Helvetica,sans-serif;
+  font-style: normal;
+  left: 0;
+  margin: 0 auto;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 9999;
+}

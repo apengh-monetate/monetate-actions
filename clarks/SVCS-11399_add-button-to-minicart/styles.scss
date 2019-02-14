@@ -1,0 +1,70 @@
+.mini-bag-btns {
+    .mt__buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media screen and (min-width: 768px) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    .mt__button {
+        display: block;
+        flex: 1 0 100%;
+        @media screen and (min-width: 768px) {
+            flex: 0 0 48%;
+        }
+
+
+        &--btn {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            color: #666;
+            cursor: pointer;
+            display: inline-block;
+            font-family: 'Lato-Regular',Lato;
+            font-size: 14px;
+            font-weight: 400;
+            height: 40px;
+            line-height: 18px;
+            margin-bottom: 0;
+            min-width: 1px;
+            outline: none;
+            padding: 10px 15px;
+            text-align: center;
+            text-transform: uppercase;
+            vertical-align: middle;
+            white-space: nowrap;
+            width: 100%;
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: #333;
+                border-color: #333;
+                color: #ccc;
+                outline: none;
+            }
+        }
+
+        &--view-cart {
+            background-color: #DCDCDC;
+            border-color: #DCDCDC;
+            color: #707070;
+            margin-bottom: 10px;
+            @media screen and (min-width: 768px) {
+                background-color: #0579d0;
+                border: none;
+                color: #fff;
+                margin-bottom: 0;
+            }
+        }
+
+        &--checkout {
+            background-color: #0579d0;
+            border: none;
+            color: #fff;
+        }
+    }
+}

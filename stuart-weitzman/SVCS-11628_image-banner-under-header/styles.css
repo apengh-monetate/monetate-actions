@@ -1,0 +1,72 @@
+/* HEADER */
+header + div[id*="monetate_selectorBanner"] {
+  font-size: 0;
+  position: fixed !important;
+  top: calc((100vw * 0.0728) + 55px);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  z-index: 2 !important;
+}
+
+@media screen and (min-width: 768px) {
+  header + div[id*="monetate_selectorBanner"] {
+    top: 50px !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  header + div[id*="monetate_selectorBanner"] {
+    left: 50%;
+    margin-left: -683px;
+    /* Half of max-width */
+    max-width: 1366px;
+    top: 96px !important;
+  }
+}
+
+body.home header + div[id*="monetate_selectorBanner"] {
+  left: 0;
+  margin-left: 0;
+  max-width: 100%;
+}
+
+/* FIXED HEADER ON SCROLL */
+header.condensed + div[id*="monetate_selectorBanner"] {
+  top: 50px !important;
+}
+
+@media screen and (min-width: 1025px) {
+  header.condensed + div[id*="monetate_selectorBanner"] {
+    top: 44px !important;
+  }
+}
+
+/* HOMEPAGE */
+.sitebody-hm {
+  padding-top: calc(100vw * 0.03285714) !important;
+}
+
+@media screen and (min-width: 768px) {
+  .sitebody-hm {
+    padding-top: calc((100vw * 0.03285714) + 50px) !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .sitebody-hm {
+    padding-top: 0 !important;
+  }
+}
+
+/* NON-HOMEPAGE */
+@media screen and (min-width: 768px) {
+  .sitebody {
+    padding-top: calc((100vw * 0.03285714) + 55px) !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .sitebody {
+    padding-top: calc((100vw * 0.03285714) + 96px) !important;
+  }
+}

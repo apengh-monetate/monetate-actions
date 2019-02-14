@@ -1,0 +1,128 @@
+{
+  "id": 383368,
+  "title": "Swap Cart and Search Icons on Mobile",
+  "description": "Swap Cart and Search Icons on Mobile",
+  "op": "swapNodes",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Swap Elements",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selA",
+        "value": ".page-header__actions .page-header__action.page-header__action--cart.page-header__icon-wrap"
+      },
+      "widget": {
+        "label": "Selector For Element A",
+        "type": "CssSelectorField",
+        "description": "Selector to find the first element that is being swapped.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selB",
+        "value": ".page-header__utility .page-header__utility-item.page-header__utility-item--search.page-header__icon-wrap"
+      },
+      "widget": {
+        "label": "Selector For Element B",
+        "type": "CssSelectorField",
+        "description": "Selector to find the second element that is being swapped.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleA",
+        "value": null
+      },
+      "widget": {
+        "label": "Style for Element A",
+        "type": "TextField",
+        "description": "Adds inline CSS style to Element A.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleB",
+        "value": null
+      },
+      "widget": {
+        "label": "Style for Element B",
+        "type": "TextField",
+        "description": "Adds inline CSS style to Element B.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "/* Cart */\n.page-header__utility .page-header__action.page-header__action--cart.page-header__icon-wrap {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background: none;\n  border: 0;\n  cursor: pointer;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  float: left;\n  font: inherit;\n  font-weight: normal;\n  height: 48px;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  line-height: 1;\n  margin: 0;\n  overflow: visible;\n  padding: 0;\n  position: relative;\n  right: unset;\n  top: unset;\n  -webkit-transform: none;\n          transform: none;\n  vertical-align: middle;\n  white-space: nowrap;\n  width: 25%;\n}\n\n/* Search */\n.page-header__actions button.page-header__utility-item.page-header__utility-item--search.page-header__icon-wrap {\n  border: none;\n  height: 48px;\n  position: absolute;\n  right: 6px;\n  top: calc(50% + 12px);\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  width: 48px;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "cart",
+          "checkout"
+        ],
+        "id": 215515,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": false,
+          "verb": "≠",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "manage_impressions": false
+}

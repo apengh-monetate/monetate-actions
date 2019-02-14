@@ -1,3 +1,4 @@
+/* Cart */
 .page-header__utility .page-header__action.page-header__action--cart.page-header__icon-wrap {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -29,13 +30,14 @@
   width: 25%;
 }
 
+/* Search */
 .page-header__actions button.page-header__utility-item.page-header__utility-item--search.page-header__icon-wrap {
   border: none;
-  height: 24px;
+  height: 48px;
   position: absolute;
-  right: 14px;
+  right: 6px;
   top: calc(50% + 12px);
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  width: 24px;
+  width: 48px;
 }
