@@ -1,0 +1,71 @@
+.mt_closable {
+  bottom: 0;
+  height: 285px;
+  margin: 15px;
+  position: fixed;
+  width: 285px;
+  z-index: 99999;
+}
+
+.mt_closable.right {
+  right: 0;
+}
+
+.mt_closable.left {
+  left: 0;
+}
+
+.mt_closable.fadeIn {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-direction: forwards;
+          animation-direction: forwards;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  opacity: 0;
+}
+
+.mt_closable__close {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  height: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 18px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  width: 24px;
+}
+
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

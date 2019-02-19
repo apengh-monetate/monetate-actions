@@ -1,0 +1,174 @@
+{
+  "id": 383376,
+  "title": "Fixed Tippy Top Image Banner (Desktop)",
+  "description": "Fixed Tippy Top Image Banner (Desktop)",
+  "op": "selectorBanner",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "image",
+  "subcategory": "Any Page",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative",
+        "value": {
+          "extension": ".png",
+          "height": 40,
+          "width": 1600,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "dc387aa7d74de0c0f066c10160261a3bd0dd1e73",
+          "id": 633676
+        }
+      },
+      "widget": {
+        "label": "Image Creative",
+        "type": "ImageCreative",
+        "description": "Upload an image creative",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "header"
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "first"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": "font-size: 0;\nmargin: 0 auto;\n-webkit-box-flex: 0;\n-ms-flex: 0 0 100%;\nflex: 0 0 100%;"
+      },
+      "widget": {
+        "label": "Banner Div Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_imgStyle",
+        "value": "display: block;\nmargin: 0 auto;\nmax-width: 1366px !important;"
+      },
+      "widget": {
+        "label": "Image Element Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "/*\n * Show Banner for Desktop\n * Hide on Mobile/Tablet\n */\n#monetate_selectorBanner_f1bc458e_00 {\n  display: none;\n}\n\n@media screen and (min-width: 1025px) {\n  #monetate_selectorBanner_f1bc458e_00 {\n    display: block;\n  }\n}\n\n@media screen and (min-width: 64.063em) {\n  header {\n    max-width: 100% !important;\n    padding: 0 !important;\n    width: 100% !important;\n  }\n  header.condensed {\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n    -webkit-box-pack: center !important;\n        -ms-flex-pack: center !important;\n            justify-content: center !important;\n  }\n  header.condensed #desktop-top-row {\n    margin-left: auto;\n    margin-right: auto;\n    width: 38px !important;\n  }\n  header.condensed #desktop-bottom-row {\n    -webkit-box-flex: 0 !important;\n        -ms-flex: none !important;\n            flex: none !important;\n    margin-left: auto;\n    margin-right: auto;\n    max-width: 1066px;\n    width: 71.70737% !important;\n  }\n  header.condensed #condensed-icons {\n    margin-left: auto;\n    margin-right: auto;\n  }\n  #desktop-top-row,\n  #desktop-bottom-row {\n    margin-left: auto;\n    margin-right: auto;\n    max-width: 85.375em;\n    width: 95.25% !important;\n  }\n  #desktop-top-row {\n    padding-top: 5px;\n  }\n}\n\n@media screen and (min-width: 1440px) {\n  header.condensed #desktop-top-row {\n    margin-right: 94px;\n  }\n  header.condensed #desktop-bottom-row {\n    margin-left: 0;\n    margin-right: 0;\n  }\n  header.condensed #condensed-icons {\n    margin-left: 94px;\n  }\n}\n\n@media screen and (min-width: 1025px) {\n  .sitebody {\n    padding-top: 140px !important;\n  }\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

@@ -1,0 +1,51 @@
+.mt_closable {
+bottom: 0;
+height: 285px;
+margin: 15px;
+position: fixed;
+width: 285px;
+z-index: 99999;
+    &.right {
+        right: 0;
+    }
+    &.left {
+        left: 0;
+    }
+
+    &.fadeIn {
+        animation-delay: 1s;
+        animation-direction: forwards;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-name: fadeIn;
+        opacity: 0;
+    }
+
+    &__close {
+        align-items: center;
+        background: #000;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        font-size: 16px;
+        height: 24px;
+        justify-content: center;
+        line-height: 18px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(50%, -50%);
+        width: 24px;
+    }
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

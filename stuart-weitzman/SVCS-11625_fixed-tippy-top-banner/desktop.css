@@ -1,0 +1,75 @@
+/*
+ * Show Banner for Desktop
+ * Hide on Mobile/Tablet
+ */
+#monetate_selectorBanner_f1bc458e_00 {
+  display: none;
+}
+
+@media screen and (min-width: 1025px) {
+  #monetate_selectorBanner_f1bc458e_00 {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 64.063em) {
+  header {
+    max-width: 100% !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  header.condensed {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  header.condensed #desktop-top-row {
+    margin-left: auto;
+    margin-right: auto;
+    width: 38px !important;
+  }
+  header.condensed #desktop-bottom-row {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: none !important;
+            flex: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1066px;
+    width: 71.70737% !important;
+  }
+  header.condensed #condensed-icons {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #desktop-top-row,
+  #desktop-bottom-row {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 85.375em;
+    width: 95.25% !important;
+  }
+  #desktop-top-row {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header.condensed #desktop-top-row {
+    margin-right: 94px;
+  }
+  header.condensed #desktop-bottom-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  header.condensed #condensed-icons {
+    margin-left: 94px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .sitebody {
+    padding-top: 140px !important;
+  }
+}

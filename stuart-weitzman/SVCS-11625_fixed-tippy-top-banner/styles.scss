@@ -1,0 +1,28 @@
+@import "../variables";
+
+
+// Mobile
+#monetate_selectorBanner_45ab12c2_00 {
+    display: block;
+    @media screen and (min-width: $breakpoint-lg) {
+        display: none;
+    }
+}
+
+
+// Desktop
+#monetate_selectorBanner_f1bc458e_00 {
+    display: none;
+    @media screen and (min-width: $breakpoint-lg) {
+        display: block;
+    }
+}
+
+
+
+// ==================================================================
+// MOBILE
+// ==================================================================
+#top-row > #monetate_selectorBanner_45ab12c2_00 {
+
+}

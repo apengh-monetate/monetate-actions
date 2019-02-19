@@ -1,0 +1,50 @@
+@media screen and (max-width: 639px) {
+    .sticky-add-to-cart {
+        bottom: 0 !important;
+        display: block !important;
+        top: auto !important;
+
+        &.hide {
+            display: block !important;
+        }
+
+        &-container {
+            min-height: 60px;
+        }
+
+
+        .product-swatch,
+        .product-text {
+            display: none !important;
+        }
+
+        .product-button {
+            padding: 5px;
+            width: 100%;
+        }
+
+        #sticky-add-to-cart-button {
+            border-radius: 5px;
+            font-size: 0;
+            position: relative !important;
+            &::after {
+                align-items: center;
+                color: #fff;
+                content: "ADD TO CART";
+                display: block;
+                display: inline-flex;
+                font-family: "Bureau Grot Cond",sans-serif;
+                font-size: 27px;
+                height: 100%;
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    }
+
+
+    body.pdp footer {
+        padding-bottom: 60px;
+    }
+
+}

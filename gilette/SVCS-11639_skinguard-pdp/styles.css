@@ -1,0 +1,32 @@
+.product-container > .product-col-2.product-detail > .content-asset {
+  display: none;
+}
+
+.product-container .extra-service {
+  float: left;
+}
+
+.pt_product-details .pdp-main .product-container .product-col-2.product-detail {
+  margin-right: 2%;
+  width: 25% !important;
+}
+
+.product-col-2.product-detail.mt_future-orders {
+  margin-right: 0 !important;
+  margin-top: 152px;
+  padding-top: 0 !important;
+}
+
+.product-col-2.product-detail.mt_future-orders .parrent-price {
+  width: 100% !important;
+}
+
+.product-col-2.product-detail.mt_future-orders .price-sales,
+.product-col-2.product-detail.mt_future-orders .product-promo {
+  color: #606060 !important;
+  text-align: left !important;
+}
+
+.pt_product-details .pdp-main .product-container .product-col-2.product-detail.mt_future-orders {
+  width: 100% !important;
+}

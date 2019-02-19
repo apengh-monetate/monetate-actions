@@ -1,0 +1,63 @@
+@import "../variables";
+
+
+/*
+ * Show Banner for Mobile/Tablet
+ * Hide on Desktop
+ */
+#monetate_selectorBanner_45ab12c2_00 {
+    display: block;
+    @media screen and (min-width: $breakpoint-lg) {
+        display: none;
+    }
+}
+
+
+// ==================================================================
+// MOBILE
+// ==================================================================
+#top-row {
+    @media screen and (max-width: ($breakpoint-lg - 1)) {
+        flex-wrap: wrap;
+        padding-top: 0 !important;
+    }
+}
+
+
+/*
+ * Adjust logo spacing for mobile
+ * Padding factor is calculated by dividing image height into image width
+ * Example: 1024 x 60 image
+ * 60 / 1024 = 0.058594
+ */
+header > .mobile-only.site-logo {
+    padding-top: calc((0.058594 * 100vw) + 41px) !important;
+}
+
+
+
+/*
+ * Adjust Homepage site body spacing
+ * Padding factor is calculated by dividing image height into image width
+ * Example: 1024 x 60 image
+ * 60 / 1024 = 0.058594
+ */
+.sitebody-hm {
+    @media screen and (min-width: $breakpoint-md) and (max-width: ($breakpoint-lg - 1)) {
+        padding-top: calc((0.058594 * 100vw) + 41px) !important;
+    }
+}
+
+
+
+/*
+ * Adjust Non-Homepage site body spacing
+ * Padding factor is calculated by dividing image height into image width
+ * Example: 1024 x 60 image
+ * 60 / 1024 = 0.058594
+ */
+.sitebody {
+    @media screen and (min-width: $breakpoint-md) and (max-width: ($breakpoint-lg - 1)) {
+        padding-top: calc((0.058594 * 100vw) + 41px) !important;
+    }
+}

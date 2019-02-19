@@ -1,0 +1,47 @@
+@media screen and (max-width: 639px) {
+  .sticky-add-to-cart {
+    bottom: 0 !important;
+    display: block !important;
+    top: auto !important;
+  }
+  .sticky-add-to-cart.hide {
+    display: block !important;
+  }
+  .sticky-add-to-cart-container {
+    min-height: 60px;
+  }
+  .sticky-add-to-cart .product-swatch,
+  .sticky-add-to-cart .product-text {
+    display: none !important;
+  }
+  .sticky-add-to-cart .product-button {
+    padding: 5px;
+    width: 100%;
+  }
+  .sticky-add-to-cart #sticky-add-to-cart-button {
+    border-radius: 5px;
+    font-size: 0;
+    position: relative !important;
+  }
+  .sticky-add-to-cart #sticky-add-to-cart-button::after {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    content: "ADD TO CART";
+    display: block;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-family: "Bureau Grot Cond",sans-serif;
+    font-size: 27px;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  body.pdp footer {
+    padding-bottom: 60px;
+  }
+}

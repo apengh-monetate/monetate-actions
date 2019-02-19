@@ -10,6 +10,9 @@
       elements[i].classList.add('flydownComplete');
     }
   }, animationComplete);
+  $('.mt-abandoned-cart').on('click', function (event) {
+    event.stopPropagation();
+  });
 })();
 
 //# sourceMappingURL=script.compile.js.map

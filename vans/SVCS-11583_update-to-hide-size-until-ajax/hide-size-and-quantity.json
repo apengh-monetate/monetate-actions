@@ -1,0 +1,67 @@
+{
+  "id": 378888,
+  "title": "Hide Size and Quantity Until AJAX",
+  "description": "Hide Size and Quantity fields until AJAX completes",
+  "op": "hideSizeAndQuantity",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Product",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "raw_img_creative",
+        "name": "loadingImage",
+        "value": {
+          "discriminator": "raw_img_creative",
+          "dyntexts": [],
+          "creative": {
+            "last_updated": "2019-02-04T22:48:57",
+            "tags": {
+              "builtin": [
+                "image"
+              ],
+              "custom": []
+            },
+            "height": 126,
+            "generated": false,
+            "id": 1913738,
+            "archived": false,
+            "name": "icon_file_corrected.png",
+            "extension": ".png",
+            "sha": "01796bb2dcf978cdcd62d92d5ae6fa510696c594",
+            "ref": "383/1913738.png",
+            "notes": "",
+            "width": 126,
+            "image_url": "https://int-apengh-1.monetate.org/img/1/383/1913738.png",
+            "type": "image"
+          }
+        }
+      },
+      "widget": {
+        "label": "Image",
+        "type": "RawImageCreative",
+        "description": "Image Creative.",
+        "action_visible": true
+      },
+      "required": true
+    }
+  ],
+  "masks": [
+    {
+      "selector": ".product-content-form-size-step-container, #qty-step-container",
+      "value": "/shop/",
+      "op": "path_iprefix"
+    }
+  ],
+  "rule_operator": "or|and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "manage_impressions": false
+}

@@ -1,0 +1,20 @@
+li.mLevel[aria-label*="Shoes"] > ul.dropdown {
+  width: 600px !important;
+}
+
+li.mLevel[aria-label*="Shoes"] > ul.dropdown > li.leftC.col3 {
+  width: 400px !important;
+}
+
+li.mLevel[aria-label*="Shoes"] > ul.dropdown > li.leftC.col3 .upperRow > div.bbb:nth-child(1) ul.sLevel.dropdown.menu .l1-sub-menu a {
+  color: #333 !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 13px !important;
+  margin: 0 !important;
+  padding: 4px 15px !important;
+}
+
+li.mLevel[aria-label*="Shoes"] > ul.dropdown > li.leftC.col3 .upperRow > div.bbb:nth-child(1) ul.sLevel.dropdown.menu .l1-sub-menu a:hover, li.mLevel[aria-label*="Shoes"] > ul.dropdown > li.leftC.col3 .upperRow > div.bbb:nth-child(1) ul.sLevel.dropdown.menu .l1-sub-menu a:focus, li.mLevel[aria-label*="Shoes"] > ul.dropdown > li.leftC.col3 .upperRow > div.bbb:nth-child(1) ul.sLevel.dropdown.menu .l1-sub-menu a:active {
+  color: #f36c21 !important;
+}

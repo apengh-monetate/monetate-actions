@@ -1,0 +1,20 @@
+/*
+ * Move .page-container.is-moved-by-drawer down the same proportion as the image
+ * Determine factor by dividing image height by width
+ * Example: Image of 1180 x 60
+ * 60 / 1180 = 0.05085
+ */
+.page-container.is-moved-by-drawer {
+  margin-top: calc(100vw * 0.05085) !important;
+}
+
+/*
+ * At image width, set breakpoint
+ * Set spacing equal to image height
+ * If image is full-width, this breakpoint isn't needed
+ */
+@media screen and (min-width: 1180px) {
+  .page-container.is-moved-by-drawer {
+    margin-top: 60px !important;
+  }
+}
