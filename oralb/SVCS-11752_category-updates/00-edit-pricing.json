@@ -1,0 +1,185 @@
+{
+    "id": 387361,
+    "title": "Edit Pricing for Electric Toothbrushes",
+    "description": "Edit Pricing for Electric Toothbrushes",
+    "op": "allInOneV2",
+    "slot": "actionbuilder_ag_0",
+    "slot_type": "none",
+    "category": "html",
+    "subcategory": "Category",
+    "action_events": [
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "str",
+                "name": "htmlString",
+                "value": "<div class=\"mt-prices\">\n    <span class=\"mt-prices--sale\">$89.94</span>\n    <span class=\"mt-prices--regular\">Reg: <span>$109.99</span></span>\n</div>\n"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "HtmlField",
+                "description": "HTML to be inserted",
+                "label": "HTML String"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "selector",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "StringSelectField",
+                "description": "CSS Selector to find the relative element.",
+                "label": "Element to Update",
+                "options": [
+                    {
+                        "name": "img[title=\"Oral-B Pro 3000\"] ~ p:last",
+                        "label": "Oral-B Pro 3000"
+                    },
+                    {
+                        "name": "img[title=\"Oral-B Pro 6000\"] ~ p:last",
+                        "label": "Oral-B Pro 6000"
+                    },
+                    {
+                        "name": "img[title=\"Oral-B Pro 7000\"] ~ p:last",
+                        "label": "Oral-B Pro 7000"
+                    }
+                ]
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "imeth",
+                "value": "takeover"
+            },
+            "widget": {
+                "description": "Where to insert the banner in relation to the Relative Element Selector.",
+                "label": "Insert Method",
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First Child"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last Child"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_divStyle",
+                "value": null
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "TextField",
+                "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+                "label": "Banner Div Inline Style"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "opt_js",
+                "value": {
+                    "content": "",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "javascript"
+                }
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "JavaScriptCodeField",
+                "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+                "label": "Script"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "opt_styleSheet",
+                "value": {
+                    "content": ".mt-prices--sale {\n  font-weight: bold;\n}\n\n.mt-prices--regular {\n  margin-left: 5px;\n}\n\n.mt-prices--regular span {\n  text-decoration: line-through;\n}\n",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CSSCodeField",
+                "description": "CSS appended to the DOM in a <style> or <link> element.",
+                "label": "CSS"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_multiSel",
+                "value": false
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "BooleanField",
+                "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+                "label": "Select multiple elements, if matched?"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_poll",
+                "value": false
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "BooleanField",
+                "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+                "label": "Re-check for Elements"
+            },
+            "required": false
+        }
+    ],
+    "masks": [],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [],
+        "required": []
+    },
+    "integration_type": "js-tag",
+    "manage_impressions": false
+}

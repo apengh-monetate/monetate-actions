@@ -1,0 +1,94 @@
+$className: '.mt-value-prop';
+$breakpoint: 40.063em;
+$proxima: 'proxima';
+$proxima-semi-bold: 'proximasemibold';
+$proxima-light: 'proxima_light';
+$proxima-bold: 'proximabold';
+
+/* ===================================================== */
+/* Variant 1: Above Product Name
+/* Selector: #pdp_name
+/* Insert Method: Before
+/* ===================================================== */
+#pdp_name {} // Before
+.product-stats > div[id*="monetate_selector"] {
+    & > #{$className} {
+        color: #961100;
+        display: block;
+        font-family: $proxima;
+        font-size: 14px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+        text-align: left;
+        @media screen and (min-width: $breakpoint) {
+            padding-top: 0;
+        }
+        p {
+            color: #961100;
+            display: block;
+            font-family: $proxima;
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+}
+
+
+/* ===================================================== */
+/* Variant 2: Above ATC Button
+/* Selector: #add_to_bag
+/* Insert Method: Before
+/* ===================================================== */
+#add_to_bag {} // Before
+#shoppableProduct > div[id*="monetate_selector"] {
+    & > #{$className} {
+        color: #000;
+        display: block;
+        font-family: $proxima;
+        font-size: 14px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+        text-align: center;
+        @media screen and (min-width: $breakpoint) {
+            padding-top: 25px;
+        }
+        p {
+            color: #000;
+            display: block;
+            font-family: $proxima;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+/* ===================================================== */
+/* Variant 3: Below ATC Button */
+/* Selector: #add_to_bag
+/* Insert Method: After
+/* ===================================================== */
+#add_to_bag {} // After
+#shoppableProduct > #add_to_bag + div[id*="monetate_selector"] {
+    & > #{$className} {
+        color: #000;
+        display: block;
+        font-family: $proxima-bold;
+        font-size: 14px;
+        margin-top: -10px;
+        padding-bottom: 25px;
+        padding-top: 0;
+        text-align: center;
+        @media screen and (min-width: $breakpoint) {
+        }
+        p {
+            color: #000;
+            display: block;
+            font-family: $proxima-bold;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+span[data-tooltip-text] {
+    cursor: pointer;
+    font-size: 0;
+    line-height: 0;
+    list-style: none;
+    margin-top: -4px;
+    position: relative;
+
+    &::after {
+        background: #0077c8;
+        border-radius: 50%;
+        color: #fff;
+        content: "?";
+        display: inline-block;
+        font-size: 16px;
+        height: 24px;
+        line-height: 24px;
+        margin: 0;
+        margin-top: -12px;
+        text-align: center;
+        vertical-align: middle;
+        width: 24px;
+    }
+
+    .tooltip {
+        background-color: #fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.1);
+        color: #333;
+        display: block;
+        font-size: 14px;
+        left: 54%;
+        line-height: 18px;
+        margin: 0 auto;
+        opacity: 1;
+        padding: 15px;
+        position: absolute;
+        top: 20px;
+        transform: translateX(-50%);
+        transition: opacity 0.5s ease;
+        width: 180px;
+        z-index: 999;
+
+        &::before {
+            border-bottom: 8px solid #e6e6e6;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            content: "";
+            height: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: -8px;
+            width: 0;
+        }
+        &::after {
+            border-bottom: 7px solid #fff;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            content: "";
+            height: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: -7px;
+            width: 0;
+        }
+
+        &.fade-in {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+    }
+}
+
+
+.buy-selector .warranty-selection .warranty-list .warranty-row .warranty-detail {
+    align-content: center;
+    align-items: center;
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}

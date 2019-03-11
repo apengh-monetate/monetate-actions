@@ -1,0 +1,15 @@
+.mt-mobile-links {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-mobile-links {
+    margin-top: -12px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mt-mobile-links {
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+// animation: animation-c3cto8 5s ease 0s 1 normal none running
+/* ===================================================== */
+/* Fade In/Out Animation
+/* ===================================================== */
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+  opacity: 0;
+  position: relative;
+  z-index: 1;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 5s;
+    animation-fill-mode: none;
+    animation-iteration-count: 1;
+    animation-name: fadeInOut;
+    animation-play-state: running;
+    animation-timing-function: ease;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

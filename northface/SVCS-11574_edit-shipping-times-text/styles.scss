@@ -1,0 +1,35 @@
+.shipping-method-item .shipping-delivery-msg-js {
+    font-size: 0 !important;
+    &::before {
+        display: inline;
+        font-size: 1.07692rem;
+        font-weight: 300;
+        letter-spacing: .04rem;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+}
+
+
+/* 3-Day */
+.shipping-method-item[data-shipmode-id="15154"] .shipping-delivery-msg-js {
+    &::before {
+        content: "STANDARD 3-4 BUSINESS DAYS";
+
+    }
+}
+
+/* 2-Day */
+.shipping-method-item[data-shipmode-id="15153"] .shipping-delivery-msg-js {
+    &::before {
+        content: "EXPEDITED 2-3 BUSINESS DAYS";
+    }
+}
+
+
+/* Overnight */
+.shipping-method-item[data-shipmode-id="15152"] .shipping-delivery-msg-js {
+    &::before {
+        content: "EXPRESS 1-2 BUSINESS DAYS";
+    }
+}

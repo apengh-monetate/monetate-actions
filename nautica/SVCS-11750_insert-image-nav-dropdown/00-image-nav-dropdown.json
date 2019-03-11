@@ -1,0 +1,201 @@
+{
+  "id": 387365,
+  "title": "Insert Image in Nav Dropdown",
+  "description": "Insert Image in Nav Dropdown",
+  "op": "selectorBanner",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "image",
+  "subcategory": "Nav",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "img_creative",
+        "name": "creative",
+        "value": {
+          "extension": ".png",
+          "height": 300,
+          "width": 200,
+          "discriminator": "layered_content",
+          "alt": "",
+          "static_sha": "dd1574a013e5b0a2024d1dd6a6377455c1ae683c",
+          "id": 637337
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "ImageCreative",
+        "description": "Upload an image creative",
+        "label": "Image Creative"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "StringSelectField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Menu Item",
+        "options": [
+          {
+            "name": "#navigation-menu > li.level-1:has(a[data-event-action=\"Men\"]) div.menuColumn:last",
+            "label": "Men"
+          },
+          {
+            "name": "#navigation-menu > li.level-1:has(a[data-event-action=\"Women\"]) div.menuColumn:last",
+            "label": "Women"
+          },
+          {
+            "name": "#navigation-menu > li.level-1:has(a[data-event-action=\"Kids\"]) div.menuColumn:last",
+            "label": "Kids"
+          },
+          {
+            "name": "#navigation-menu > li.level-1:has(a[data-event-action=\"Home\"]) div.menuColumn:last",
+            "label": "Home"
+          },
+          {
+            "name": "#navigation-menu > li.level-1:has(a[data-event-action=\"Accessories\"]) div.menuColumn:last",
+            "label": "Accessories"
+          },
+          {
+            "name": "#navigation-menu > li.level-1:has(a[data-event-action=\"Sale\"]) div.menuColumn:last",
+            "label": "Sale"
+          }
+        ]
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "after"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "action_visible": false,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "description": "Where to insert the banner in relation to the Relative Element Selector."
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_imgStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the image element via a style attribute.",
+        "label": "Image Element Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

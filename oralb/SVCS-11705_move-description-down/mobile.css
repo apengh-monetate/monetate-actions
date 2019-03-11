@@ -1,0 +1,11 @@
+.product-price-pdp {
+  color: #0081cb;
+  display: block;
+  font-size: 22px;
+  line-height: normal;
+  margin: 10px 0 15px 15px;
+}
+
+.productdetail .product-short-desc {
+  clear: both;
+}

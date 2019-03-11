@@ -1,0 +1,54 @@
+{% set columns = 3 %}
+{% set rows = 2 %}
+
+
+{# CALCULATE MAX PRODUCTS TO RETURN BASED ON ROWS/COLUMNS #}
+{% set maxProducts = columns * rows %}
+{% set products = recommended_products | length %}
+
+{# CALCULATE # OF PRODUCTS TO RETURN #}
+{% if products < maxProducts %}
+  {% set results = (products / columns) | round(0,'floor') | int %}
+  {% set fetch = results * columns %}
+{% else %}
+  {% set fetch = maxProducts %}
+{% endif %}
+
+
+{# CSS CALCULATIONS #}
+{% set maxWidth = 640 %} {# container max-width, in pixels #}
+{% set columnWidth = 100 / columns | round(5) %} {# column width, as percentage of parent container #}
+
+<style>
+/*body {margin:0; padding:0;}*/
+</style>
+
+<div class="mt-container" style="
+  box-sizing: border-box;
+  color: #1a1a1a;
+  font-family: 'freight-big-pro','Times New Roman','Times',serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  margin: 0 auto;
+  max-width: {{ maxWidth }}px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;">
+
+  <h3 class="mt-heading" style="display:block; font-size:20px; font-weight:400; text-align:center; width:100%;">Plus, more items you might like</h3>
+
+  <div class="mt-product__grid" style="display:block; font-size:0; margin:0 auto; width:100%">
+    {% for product in recommended_products[:fetch] %}
+    <a class="mt-product__link" href="{{ product.link }}?mt_recs=1009019" style="box-sizing:border-box; display:inline-block; text-decoration:none; width:{{columnWidth}}%; padding-left:5px; padding-right:5px; padding-bottom:20px;">
+        <div class="mt-product__img">
+            <img class="mt-product__img" src="{{product.additionalImageLink}}" style="display:block; max-width:100%;">
+        </div>
+        <div class="mt-product__details" style="color:#000; display:block; font-size:16px; line-height:20px;">
+            <div class="mt-product__title" style="display:none;">{{ product.title | truncate(40, False, '') }}</div>
+            <div class="mt-product__desc" style="display:none;">{{ product.description | truncate(30, False, '') }}</div>
+            <div class="mt-product__price" style="display:none; font-weight:700;">{{ "$%.2f"|format(product.price|float) }}</div>
+        </div>
+    </a>
+    {% endfor %}
+  </div>
+
+</div>

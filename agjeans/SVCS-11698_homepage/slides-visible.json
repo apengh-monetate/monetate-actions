@@ -1,0 +1,19 @@
+{
+  "autoRotateDuration": 0,
+  "breakpoints": {
+    "Infinity": {
+        "visible": 6
+    },
+    "1025": {
+        "visible": 6
+    }
+  },
+  "gridSize": 1,
+  "infiniteSlide": false,
+  "pagination": true,
+  "pauseOnHover": false,
+  "slideIncrement": "single",
+  "stopOnInteraction": false,
+  "transitionAnimation": "push",
+  "transitionDuration": 250
+}

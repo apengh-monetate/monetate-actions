@@ -1,0 +1,35 @@
+.mt_bundles__header {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.mt_bundles img {
+  max-width: 100%;
+}
+
+.mt_bundles__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mt_bundles .bc-buy-button {
+  height: 0;
+  padding-bottom: 147.45763%;
+  position: relative;
+  width: 100%;
+}
+
+.mt_bundles .bc-buy-button iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

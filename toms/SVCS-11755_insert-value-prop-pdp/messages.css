@@ -1,0 +1,81 @@
+/* ===================================================== */
+/* Variant 1: Above Product Name
+/* Selector: #pdp_name
+/* Insert Method: Before
+/* ===================================================== */
+.product-stats > div[id*="monetate_selector"] > .mt-value-prop {
+  color: #961100;
+  display: block;
+  font-family: "proxima";
+  font-size: 14px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  text-align: left;
+}
+
+@media screen and (min-width: 40.063em) {
+  .product-stats > div[id*="monetate_selector"] > .mt-value-prop {
+    padding-top: 0;
+  }
+}
+
+.product-stats > div[id*="monetate_selector"] > .mt-value-prop p {
+  color: #961100;
+  display: block;
+  font-family: "proxima";
+  font-size: 14px;
+  text-align: left;
+}
+
+/* ===================================================== */
+/* Variant 2: Above ATC Button
+/* Selector: #add_to_bag
+/* Insert Method: Before
+/* ===================================================== */
+#shoppableProduct > div[id*="monetate_selector"] > .mt-value-prop {
+  color: #000;
+  display: block;
+  font-family: "proxima";
+  font-size: 14px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 40.063em) {
+  #shoppableProduct > div[id*="monetate_selector"] > .mt-value-prop {
+    padding-top: 25px;
+  }
+}
+
+#shoppableProduct > div[id*="monetate_selector"] > .mt-value-prop p {
+  color: #000;
+  display: block;
+  font-family: "proxima";
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ===================================================== */
+/* Variant 3: Below ATC Button */
+/* Selector: #add_to_bag
+/* Insert Method: After
+/* ===================================================== */
+#shoppableProduct > #add_to_bag + div[id*="monetate_selector"] > .mt-value-prop {
+  color: #000;
+  display: block;
+  font-family: "proximabold";
+  font-size: 14px;
+  margin-top: -10px;
+  padding-bottom: 25px;
+  padding-top: 0;
+  text-align: center;
+}
+
+#shoppableProduct > #add_to_bag + div[id*="monetate_selector"] > .mt-value-prop p {
+  color: #000;
+  display: block;
+  font-family: "proximabold";
+  font-size: 14px;
+  text-align: center;
+}

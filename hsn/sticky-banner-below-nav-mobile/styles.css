@@ -1,0 +1,4 @@
+/* Adjust content due to sticky banner */
+header + div[id*="monetate_selectorBanner"] + #torso {
+  padding-top: calc((200 / 680) * 100vw);
+}

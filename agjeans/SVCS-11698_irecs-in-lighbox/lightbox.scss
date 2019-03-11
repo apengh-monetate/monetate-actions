@@ -1,0 +1,68 @@
+@import "../variables";
+
+$brand: #e90606;
+$black: #282f2f;
+
+.mt-lightbox {
+    background: #fff;
+    border: none;
+    display: block;
+    left: 50%;
+    max-width: calc(100vw - 20px) !important;
+    min-width: 320px;
+    padding: 0;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100% !important;
+    z-index: 9999;
+    @media screen and (min-width: $breakpoint-md) {
+        max-width: 600px !important;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        max-width: 960px !important;
+    }
+
+    &__close {
+        align-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #666;
+        display: inline-flex;
+        font-family: "Avenir Next W01 Light",Arial,sans-serif;
+        font-size: 36px;
+        font-weight: 100;
+        height: 36px;
+        justify-content: center;
+        letter-spacing: 0;
+        line-height: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        transition: all 0.3s ease;
+        width: 36px;
+        z-index: 1;
+        &:hover,
+        &:focus,
+        &:active {
+            background: #f0f0f0;
+            border: none;
+            color: #000;
+            font-size: 36px;
+            height: 36px;
+            letter-spacing: 0;
+            line-height: 0;
+            width: 36px;
+        }
+    }
+
+    &__content {
+        display: block;
+        padding: 20px 5px 20px;
+        position: relative;
+    }
+
+}

@@ -1,0 +1,68 @@
+/* ===================================================== */
+/* Variant 1: Hide top pagination
+/* ===================================================== */
+#results-pagination-con .pagination {
+    display: none !important;
+}
+
+/* ===================================================== */
+/* Variant 2: Show "View All" only for top pagination
+/* ===================================================== */
+#results-pagination-con .pagination {
+    & li:not(:last-child) {
+        display: none !important;
+    }
+}
+
+/* ===================================================== */
+/* Variant 3: Show "View All" only for bottom pagination
+/* ===================================================== */
+#bottom-pagination .pagination {
+    & li:not(:last-child) {
+        display: none !important;
+    }
+}
+
+
+/* ===================================================== */
+/* Variant 4: Show "Load More" instead of bottom pagination
+/* ===================================================== */
+#bottom-pagination .pagination {
+    float: none !important;
+    & li:not(:last-child) {
+        display: none !important;
+    }
+    li:last-child {
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+        a {
+            background: none;
+            border: none !important;
+            font-size: 0;
+            margin: 0;
+            padding: 0;
+            &::after {
+                align-items: center;
+                background: #fff;
+                border: 1px solid #000;
+                border-radius: 4px;
+                color: #000;
+                content: "Load More";
+                display: inline-flex;
+                font-family: 'proximabold';
+                font-size: 14px;
+                height: 56px;
+                justify-content: center;
+                max-width: 270px;
+                padding: 5px;
+                text-align: center;
+                text-transform: uppercase;
+                width: 100%;
+                @media screen and (min-width: 641px) {
+                    max-width: 360px;
+                }
+            }
+        }
+    }
+}

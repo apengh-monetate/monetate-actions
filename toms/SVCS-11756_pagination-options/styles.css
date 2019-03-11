@@ -1,0 +1,79 @@
+/* ===================================================== */
+/* Variant 1: Hide top pagination
+/* ===================================================== */
+#results-pagination-con .pagination {
+  display: none !important;
+}
+
+/* ===================================================== */
+/* Variant 2: Show "View All" only for top pagination
+/* ===================================================== */
+#results-pagination-con .pagination li:not(:last-child) {
+  display: none !important;
+}
+
+/* ===================================================== */
+/* Variant 3: Show "View All" only for bottom pagination
+/* ===================================================== */
+#bottom-pagination .pagination li:not(:last-child) {
+  display: none !important;
+}
+
+/* ===================================================== */
+/* Variant 4: Show "Load More" instead of bottom pagination
+/* ===================================================== */
+#bottom-pagination .pagination {
+  float: none !important;
+}
+
+#bottom-pagination .pagination li:not(:last-child) {
+  display: none !important;
+}
+
+#bottom-pagination .pagination li:last-child {
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#bottom-pagination .pagination li:last-child a {
+  background: none;
+  border: none !important;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#bottom-pagination .pagination li:last-child a::after {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 4px;
+  color: #000;
+  content: "Load More";
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: 'proximabold';
+  font-size: 14px;
+  height: 56px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 270px;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media screen and (min-width: 641px) {
+  #bottom-pagination .pagination li:last-child a::after {
+    max-width: 360px;
+  }
+}

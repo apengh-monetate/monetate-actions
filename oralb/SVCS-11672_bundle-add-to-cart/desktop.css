@@ -1,0 +1,32 @@
+.mt_bundles__header {
+  display: block;
+  margin-left: -28px;
+  margin-right: -28px;
+  position: relative;
+}
+
+.mt_bundles img {
+  max-width: 100%;
+}
+
+.mt_bundles__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mt_bundles .bc-buy-button {
+  height: 435px;
+  max-width: 295px;
+  position: relative;
+  width: 33%;
+}
+
+#phdesktopbody_0_phdesktophomeheroarea_0_homeCarousel.carousel + div[id*="monetate_selector"] {
+  margin-top: 54px !important;
+}

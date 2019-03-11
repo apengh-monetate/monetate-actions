@@ -4,7 +4,13 @@
  */
 #MONETATE-ID {
   position: relative;
-  text-align: center;
+
+  [data-slider-mask] {
+    margin: 0!important;
+    overflow: hidden!important;
+    padding: 0!important;
+    position: relative!important;
+  }
 
   li {
     list-style: none;
@@ -12,121 +18,38 @@
 
   [data-slider] {
     display: block;
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0!important;
+    padding: 0!important;
   }
 
-
-
-
-  // ------------------------------------------------------------------
-  // Mask
-  // ------------------------------------------------------------------
-  [data-slider-mask] {
-    display: inline-block;
-    margin: 0 !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: relative !important;
-    width: calc(100% - 106px);
-  }
-
-
-
-
-  // ------------------------------------------------------------------
-  // Slide
-  // ------------------------------------------------------------------
   [data-slide] {
     float: none;
-    > div {
-      height: 100%;
-      padding: 10px;
-    }
-    img {
-      max-width: 100%;
-    }
-    a {
-      text-decoration: none;
-    }
   }
 
-
-
-
-  // ------------------------------------------------------------------
-  // Horizontal
-  // ------------------------------------------------------------------
-  &[data-slider-wrapper="horizontal"] {
-    [data-slider-mask] {
-      touch-action: pan-y;
-    }
-    [data-slider] {
-      white-space: nowrap !important;
-    }
-    [data-slide] {
-      display: inline-block !important;
-      vertical-align: top;
-      white-space: normal;
-    }
-  } // Horizontal
-
-
-
-
-  // ------------------------------------------------------------------
-  // Vertical
-  // ------------------------------------------------------------------
-  &[data-slider-wrapper="vertical"] {
-    [data-slider-mask] {
-      height: 400px !important;
-      touch-action: pan-x;
-    }
-    [data-slide] {
-      display: block!important;
-    }
-    [data-prev-button] {
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-    }
-    [data-next-button] {
-      bottom: 0;
-      left: 50%;
-      right: auto;
-      top: auto;
-      transform: translateX(-50%);
-    }
-  } // Vertical
-
-
-
-  // ------------------------------------------------------------------
-  // Fade
-  // ------------------------------------------------------------------
-  &[data-slider-wrapper="fade"] {
-    [data-slider-mask] {
-      touch-action: pan-y;
-    }
-
-    [data-slide] {
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      &[data-slide-active] {
-        opacity: 1;
-        position: relative;
-        z-index: 1;
-      }
-    }
+  &[data-slider-wrapper="horizontal"] [data-slider] {
+    white-space: nowrap!important;
+  }
+  &[data-slider-wrapper="horizontal"] [data-slide] {
+    display: inline-block!important;
+    vertical-align: top;
+    white-space: normal;
   }
 
+  &[data-slider-wrapper="vertical"] [data-slide] {
+    display: block!important;
+  }
+  &[data-slider-wrapper="fade"] [data-slide] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+  }
 
+  &[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+  }
 
-
-  // ------------------------------------------------------------------
-  // Buttons
-  // ------------------------------------------------------------------
   [data-pagination-slide],
   [data-prev-button],
   [data-next-button]{
@@ -134,71 +57,107 @@
     z-index: 1;
   }
 
-  [data-prev-button],
-  [data-next-button] {
-    background: none;
-    border: none;
-    color: #000;
-    font-size: 25px;
-    padding: 0;
-    position: absolute;
-    top: 45%;
-    user-select: none;
+  &[data-slider-wrapper="vertical"] [data-slider-mask] {
+    touch-action: pan-x;
+  }
+  &[data-slider-wrapper="horizontal"] [data-slider-mask],
+  &[data-slider-wrapper="fade"] [data-slider-mask] {
+    touch-action: pan-y;
+  }
+  [data-pagination-slide] * {
+    pointer-events: none;
   }
 
-  [data-prev-button] {
-    left: 10px;
-  }
-
-  [data-next-button] {
-    right: 10px;
-  }
+} // MONETATE-ID
+/** ----END DEFAULT STYLES---- */
 
 
+/**
+ * CUSTOM SLIDER STYLING
+ */
+#MONETATE-ID {
+    text-align: center;
 
-
-  // ------------------------------------------------------------------
-  // Pagination
-  // ------------------------------------------------------------------
-  [data-pagination-slide] {
-    background: #000;
-    border-radius: 6px;
-    display: inline-block;
-    height: 12px;
-    margin: 4px;
-    opacity: 0.5;
-    width: 12px;
-    * {
-      pointer-events: none;
+    [data-pagination="thumbnails"] [data-pagination-slide] {
+      background: none;
+      border-radius: 0;
+      height: auto;
+      width: 40px;
     }
-    &[data-slide-active] {
-      opacity: 1;
+
+    [disabled] {
+      opacity: 0.5;
     }
-  }
 
-  [data-pagination="thumbnails"] [data-pagination-slide] {
-    background: none;
-    border-radius: 0;
-    height: auto;
-    width: 40px;
-  }
+    [data-pagination-slide] {
+      background: #000;
+      border-radius: 6px;
+      display: inline-block;
+      height: 12px;
+      margin: 4px;
+      opacity: 0.5;
+      width: 12px;
+      &[data-slide-active] {
+          opacity: 1;
+      }
+    }
 
-  [data-pagination*="dots"] [data-pagination-slide] {
-    /* remove below for pagination numbers */
-    text-indent: -9999px;
-  }
+    [data-slide] {
+        > div {
+          height: 100%;
+          padding: 10px;
+        }
+        img {
+          max-height: 100%;
+        }
+        a {
+          text-decoration: none;
+        }
+    }
 
+    [data-prev-button],
+    [data-next-button] {
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      -webkit-user-select: none;
+      background: none;
+      color: #000;
+      font-size: 25px;
+      padding: 0;
+      position: absolute;
+      top: 45%;
+      user-select: none;
+    }
+    [data-prev-button] {
+      left: 10px;
+    }
+    [data-next-button] {
+      right: 10px;
+    }
+    &[data-slider-wrapper="vertical"] [data-prev-button] {
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+    &[data-slider-wrapper="vertical"] [data-next-button] {
+      bottom: 0;
+      left: 50%;
+      right: auto;
+      top: auto;
+      transform: translateX(-50%);
+    }
 
+    [data-slider-mask] {
+      display: inline-block;
+      width: calc(100% - 106px);
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+      height: 400px!important;
+    }
 
-
-  // ------------------------------------------------------------------
-  // Disabled
-  // ------------------------------------------------------------------
-  [disabled] {
-    opacity: 0.5;
-  }
-
-
-
-
-} // #MONETATE-ID
+    [data-pagination*="dots"] [data-pagination-slide] {
+      /* remove below for pagination numbers */
+      text-indent: -9999px;
+    }
+}

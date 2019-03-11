@@ -1,0 +1,23 @@
+@media screen and (min-width: 1025px) {
+  #pdpMain > div[id*="monetate_selectorHTML"] #BVRRWidgetID,
+  #pdpMain > div[id*="monetate_selectorHTML"] .pdp_rel_rec_parent {
+    border-top: none !important;
+  }
+}
+
+#BVRRWidgetID {
+  border-top: 2px solid #E5E5E5 !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .product-detail-accordions .accordion-container:last-child {
+    border-bottom: none !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .pt_product-details #pdpaccordions {
+    border-bottom: none !important;
+    border-top: 2px solid #E5E5E5 !important;
+  }
+}

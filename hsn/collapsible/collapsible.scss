@@ -1,0 +1,71 @@
+.mt-collapsible {
+    background: #fff;
+    border-radius: 0;
+    display: block;
+    margin: 0;
+    margin-top: 2px;
+    padding: 0;
+    position: relative;
+
+    &__header {
+        align-items: center;
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        font-family: IsidoraSemiBold;
+        font-size: 1.6rem;
+        font-weight: bold;
+        justify-content: space-between;
+        margin: 0;
+        padding: 11px 0;
+        position: relative;
+        text-align: left;
+        text-transform: uppercase;
+        width: 100%;
+        &[data-collapsible-status="closed"] {
+            border-bottom: 2px solid #fff;
+        }
+        &[data-collapsible-status="open"] {
+            border-bottom: 2px solid transparent;
+        }
+
+        span {
+            color: #0077c8;
+            font-size: 2rem;
+            margin-left: 10px;
+            text-transform: none;
+        }
+
+        .image {
+            background: url(https://www.hsn.com/cassette.axd/file/assets/img/mobile/BlackPlusMinus-9d5052e….png) 100% 100% no-repeat;
+            background-size: 27px auto;
+            display: block;
+            height: 27px;
+            position: relative;
+            right: 5px;
+            width: 27px;
+            &.plus {
+                background-position-y: 100%;
+            }
+            &.minus {
+                background-position-y: 0;
+            }
+        }
+    }
+
+
+    &__content {
+        display: none;
+        overflow-x: hidden;
+        padding: 10px;
+        transition: opacity 1s ease;
+        &[data-collapsible-status="closed"] {
+            opacity: 0;
+        }
+        &[data-collapsible-status="open"] {
+            opacity: 1;
+        }
+    }
+
+}

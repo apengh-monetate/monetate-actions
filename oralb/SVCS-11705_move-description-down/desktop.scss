@@ -1,0 +1,24 @@
+.product-short-desc {
+    border-top: 1px solid #ccc;
+    font-size: 15px;
+    line-height: normal;
+    margin-top: 30px !important;
+    padding-top: 10px;
+    position: relative;
+    &::before {
+        color: #011c43;
+        content: "Product Details";
+        display: block;
+        font-family: "ProximaNW01Smbd";
+        font-size: 24px;
+        line-height: 24px;
+        position: absolute;
+        text-transform: uppercase;
+        top: -30px;
+    }
+}
+
+#pagemainwrapper .clsAddToCart {
+  margin: 15px 0 15px 0 !important;
+  position: relative !important;
+}

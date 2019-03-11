@@ -1,0 +1,16 @@
+#searchToggle span.cae-svg-wrap {
+  width: 100px !important;
+}
+
+#searchToggle span.cae-svg.cae-search {
+  margin-right: 9px !important;
+}
+
+#searchToggle button.button-unstyled.cae-search-button::before {
+  content: "Search";
+  left: -32px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}

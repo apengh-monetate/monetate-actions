@@ -1,0 +1,37 @@
+TEST 1
+(https?\:\/\/(?:stage|www)\.rue21\.com\/store\/plus\/plus\-dresses\-\&\-rompers\/\_\/N\-9ag)($|\?)(?!.*Dresses)(.*)
+https://stage.rue21.com/store/girls/dresses-&-rompers/_/N-96t$2$3
+
+https://stage.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag
+https://stage.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag?Dresses
+https://stage.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag?utm_medium=email&utm_source=cheetah
+https://stage.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag?utm_medium=Social&utm_source=cheetah
+https://stage.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag?utm_medium=email&utm_source=cheetah&Dresses
+https://stage.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag?utm_medium=Social&utm_source=cheetah&Dresses
+
+https://www.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag
+https://www.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag?Dresses
+https://www.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag?utm_medium=email&utm_source=cheetah
+https://www.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag?utm_medium=Social&utm_source=cheetah
+https://www.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag?utm_medium=email&utm_source=cheetah&Dresses
+https://www.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag?utm_medium=Social&utm_source=cheetah&Dresses
+
+
+
+TEST 2
+(https?\:\/\/(?:stage|www)\.rue21\.com\/store\/girls\/dresses\-\&\-rompers\/\_\/N\-96t)($|\?)(?!.*Dresses)(.*)
+https://stage.rue21.com/store/plus/plus-dresses-&-rompers/_/N-9ag$2$3
+
+https://stage.rue21.com/store/girls/dresses-&-rompers/_/N-96t
+https://stage.rue21.com/store/girls/dresses-&-rompers/_/N-96t?Dresses
+https://stage.rue21.com/store/girls/dresses-&-rompers/_/N-96t?utm_medium=email&utm_source=cheetah
+https://stage.rue21.com/store/girls/dresses-&-rompers/_/N-96t?utm_medium=Social&utm_source=cheetah
+https://stage.rue21.com/store/girls/dresses-&-rompers/_/N-96t?utm_medium=email&utm_source=cheetah&Dresses
+https://stage.rue21.com/store/girls/dresses-&-rompers/_/N-96t?utm_medium=Social&utm_source=cheetah&Dresses
+
+https://www.rue21.com/store/girls/dresses-&-rompers/_/N-96t
+https://www.rue21.com/store/girls/dresses-&-rompers/_/N-96t?Dresses
+https://www.rue21.com/store/girls/dresses-&-rompers/_/N-96t?utm_medium=email&utm_source=cheetah
+https://www.rue21.com/store/girls/dresses-&-rompers/_/N-96t?utm_medium=Social&utm_source=cheetah
+https://www.rue21.com/store/girls/dresses-&-rompers/_/N-96t?utm_medium=email&utm_source=cheetah&Dresses
+https://www.rue21.com/store/girls/dresses-&-rompers/_/N-96t?utm_medium=Social&utm_source=cheetah&Dresses

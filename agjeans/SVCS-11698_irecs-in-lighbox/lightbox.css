@@ -1,0 +1,80 @@
+.mt-lightbox {
+  background: #fff;
+  border: none;
+  display: block;
+  left: 50%;
+  max-width: calc(100vw - 20px) !important;
+  min-width: 320px;
+  padding: 0;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100% !important;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-lightbox {
+    max-width: 600px !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mt-lightbox {
+    max-width: 960px !important;
+  }
+}
+
+.mt-lightbox__close {
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: none;
+  color: #666;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: "Avenir Next W01 Light",Arial,sans-serif;
+  font-size: 36px;
+  font-weight: 100;
+  height: 36px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0;
+  line-height: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 36px;
+  z-index: 1;
+}
+
+.mt-lightbox__close:hover, .mt-lightbox__close:focus, .mt-lightbox__close:active {
+  background: #f0f0f0;
+  border: none;
+  color: #000;
+  font-size: 36px;
+  height: 36px;
+  letter-spacing: 0;
+  line-height: 0;
+  width: 36px;
+}
+
+.mt-lightbox__content {
+  display: block;
+  padding: 20px 5px 20px;
+  position: relative;
+}

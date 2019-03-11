@@ -1,0 +1,11 @@
+.mt-prices--sale {
+  font-weight: bold;
+}
+
+.mt-prices--regular {
+  margin-left: 5px;
+}
+
+.mt-prices--regular span {
+  text-decoration: line-through;
+}

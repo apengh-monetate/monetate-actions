@@ -1,0 +1,86 @@
+span[data-tooltip-text] {
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  list-style: none;
+  position: relative;
+}
+
+@media screen and (min-width: 62em) {
+  span[data-tooltip-text] {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+}
+
+span[data-tooltip-text]::after {
+  background: #0077c8;
+  border-radius: 50%;
+  color: #fff;
+  content: "?";
+  display: inline-block;
+  font-size: 16px;
+  height: 24px;
+  line-height: 24px;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 24px;
+}
+
+span[data-tooltip-text] .tooltip {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.1);
+  color: #333;
+  display: block;
+  font-size: 14px;
+  left: 54%;
+  line-height: 18px;
+  margin: 0 auto;
+  opacity: 1;
+  padding: 15px;
+  position: absolute;
+  top: 40px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  width: 140px;
+  z-index: 999;
+}
+
+span[data-tooltip-text] .tooltip::before {
+  border-bottom: 16px solid #e6e6e6;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  content: "";
+  height: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: -1rem;
+  width: 0;
+}
+
+span[data-tooltip-text] .tooltip::after {
+  border-bottom: 15px solid #fff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  content: "";
+  height: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: -0.9rem;
+  width: 0;
+}
+
+span[data-tooltip-text] .tooltip.fade-in {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}

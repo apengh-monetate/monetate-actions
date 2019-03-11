@@ -1,0 +1,69 @@
+{
+    "products_data": [{
+        "productType": "Test Data > Products",
+        "description": "Meet your favorite new fit - a vintage inspired high-rise flare crop. Constructed with stretch for an optimal overall fit and lasting comfort.",
+        "title": "The Jodi Crop",
+        "price": 235.00,
+        "imageLink": "https://i1.adis.ws/i/AG/JRN1662IS13YAWE_1.JPEG",
+        "link": "https://www.agjeans.com/the-jodi-crop-JRN1662IS13YAWE.html?dwvar_JRN1662IS13YAWE_color=13YAWE",
+        "color": "13yrs awestruck",
+        "salePrice": null,
+        "id": "1",
+        "itemGroupId": "1"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "The Farrah Ankle skinny jean for women features an authentic, 17-year vintage light denim wash that’s been uniquely worn-in to mimic a pair of genuine vintage jeans. Cut with flattering high rise waist for a sleek silhouette and cropped length at the ankle. This women’s jean is designed in comfort stretch denim fabrication for all-day wearability.",
+        "title": "The Farrah Skinny Ankle",
+        "price": 225.00,
+        "imageLink": "https://i1.adis.ws/i/AG/EMP177717YCSS_1.JPEG",
+        "link": "https://www.agjeans.com/the-farrah-skinny-ankle-EMP177717YCSS.html?dwvar_EMP177717YCSS_color=17YCSS",
+        "color": "17 years ceaseless",
+        "salePrice": null,
+        "id": "2",
+        "itemGroupId": "2"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "The Mari High Rise Straight Leg Jean for women features a crisp, 1-year vintage white denim wash, snug fit around the hips, straight leg, and subtle slim leg opening. This women’s jean is designed in a lightweight denim with comfortable stretch and finished with elevated hardware.",
+        "title": "The Mari",
+        "price": 215.00,
+        "imageLink": "https://i1.adis.ws/i/AG/DSD187501YTWT_1.JPEG",
+        "link": "https://www.agjeans.com/the-mari-DSD187501YTWT.html?dwvar_DSD187501YTWT_color=01YTWT",
+        "color": "1yr tonal white",
+        "salePrice": null,
+        "id": "3",
+        "itemGroupId": "3"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "The Prima Crop Cigarette Jean for women features a beautiful blue hue, fitted silhouette through the hips, slight tapering at the leg, and is finished with a cropped hem. This women’s jean is designed in a lightweight, super stretch indigo denim fabrication for a luxurious feel and comfortable wear.",
+        "title": "The Prima Crop",
+        "price": 188.00,
+        "imageLink": "https://i1.adis.ws/i/AG/PSI1557CONR_1.JPEG",
+        "link": "https://www.agjeans.com/the-prima-crop-PSI1557CONR.html?dwvar_PSI1557CONR_color=CONR",
+        "color": "Concord",
+        "salePrice": null,
+        "id": "4",
+        "itemGroupId": "4"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "The Legging Ankle Jean for women features a luxurious pink hue and a super skinny fit that contours the body from hip to hem, cropped at a modern ankle length with raw edge. This women’s jean is designed in a lightweight twill blend with added stretch for a luxurious feel and comfortable wear.",
+        "title": "The Legging Ankle",
+        "price": 178.00,
+        "imageLink": "https://i1.adis.ws/i/AG/SSW1389RHPDPK_1.JPEG",
+        "link": "https://www.agjeans.com/the-legging-ankle-SSW1389RHPDPK.html?dwvar_SSW1389RHPDPK_color=PDPK",
+        "color": "Peaked pink",
+        "salePrice": null,
+        "id": "5",
+        "itemGroupId": "5"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "The Etta Wide Leg Crop Jean for women features a minimal white hue and is cut with a flattering ultra high waist and fits wide and relaxed from hip to cropped leg opening. This women’s wide leg jean is designed in comfort stretch denim fabrication in a casual silhouette finished with tonal AG stitching at the back pocket.",
+        "title": "The Etta",
+        "price": 215.00,
+        "imageLink": "https://i1.adis.ws/i/AG/DSD182701YBRW_1.JPEG",
+        "link": "https://www.agjeans.com/the-etta-DSD182701YBRW.html?dwvar_DSD182701YBRW_color=01YBRW",
+        "color": "1 year bare white",
+        "salePrice": null,
+        "id": "6",
+        "itemGroupId": "6"
+    }]
+}

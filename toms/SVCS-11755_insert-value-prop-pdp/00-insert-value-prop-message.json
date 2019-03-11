@@ -1,0 +1,183 @@
+{
+    "id": 387375,
+    "title": "Insert Value Prop Messaging on PDP",
+    "description": "Insert Value Prop Messaging on PDP",
+    "op": "allInOneV2",
+    "slot": "actionbuilder_ag_0",
+    "slot_type": "none",
+    "category": "html",
+    "subcategory": "Product Page",
+    "action_events": [
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "str",
+                "name": "htmlString",
+                "value": "<div class=\"mt-value-prop\">\n<p>Short revenue driving message goes here!</p>\n</div>\n"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "HtmlField",
+                "description": "HTML to be inserted",
+                "label": "HTML String"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "selector",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "StringSelectField",
+                "description": "CSS Selector to find the relative element.",
+                "label": "Relative Element Selector",
+                "options": [
+                    {
+                        "name": "#pdp_name",
+                        "label": "Product Name"
+                    },
+                    {
+                        "name": "#add_to_bag",
+                        "label": "Add to Bag Button"
+                    }
+                ]
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "imeth",
+                "value": "after"
+            },
+            "widget": {
+                "label": "Insert Method",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    }
+                ],
+                "description": "Where to insert the banner in relation to the Relative Element Selector."
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_divStyle",
+                "value": null
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "TextField",
+                "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+                "label": "Banner Div Inline Style"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "opt_js",
+                "value": {
+                    "content": "",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "javascript"
+                }
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "JavaScriptCodeField",
+                "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+                "label": "Script"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "opt_styleSheet",
+                "value": {
+                    "content": "/* ===================================================== */\n/* Variant 1: Above Product Name\n/* Selector: #pdp_name\n/* Insert Method: Before\n/* ===================================================== */\n.product-stats > div[id*=\"monetate_selector\"] > .mt-value-prop {\n  color: #961100;\n  display: block;\n  font-family: \"proxima\";\n  font-size: 14px;\n  padding-bottom: 10px;\n  padding-top: 20px;\n  text-align: left;\n}\n\n@media screen and (min-width: 40.063em) {\n  .product-stats > div[id*=\"monetate_selector\"] > .mt-value-prop {\n    padding-top: 0;\n  }\n}\n\n.product-stats > div[id*=\"monetate_selector\"] > .mt-value-prop p {\n  color: #961100;\n  display: block;\n  font-family: \"proxima\";\n  font-size: 14px;\n  text-align: left;\n}\n\n/* ===================================================== */\n/* Variant 2: Above ATC Button\n/* Selector: #add_to_bag\n/* Insert Method: Before\n/* ===================================================== */\n#shoppableProduct > div[id*=\"monetate_selector\"] > .mt-value-prop {\n  color: #000;\n  display: block;\n  font-family: \"proxima\";\n  font-size: 14px;\n  padding-bottom: 10px;\n  padding-top: 20px;\n  text-align: center;\n}\n\n@media screen and (min-width: 40.063em) {\n  #shoppableProduct > div[id*=\"monetate_selector\"] > .mt-value-prop {\n    padding-top: 25px;\n  }\n}\n\n#shoppableProduct > div[id*=\"monetate_selector\"] > .mt-value-prop p {\n  color: #000;\n  display: block;\n  font-family: \"proxima\";\n  font-size: 14px;\n  text-align: center;\n}\n\n/* ===================================================== */\n/* Variant 3: Below ATC Button */\n/* Selector: #add_to_bag\n/* Insert Method: After\n/* ===================================================== */\n#shoppableProduct > #add_to_bag + div[id*=\"monetate_selector\"] > .mt-value-prop {\n  color: #000;\n  display: block;\n  font-family: \"proximabold\";\n  font-size: 14px;\n  margin-top: -10px;\n  padding-bottom: 25px;\n  padding-top: 0;\n  text-align: center;\n}\n\n#shoppableProduct > #add_to_bag + div[id*=\"monetate_selector\"] > .mt-value-prop p {\n  color: #000;\n  display: block;\n  font-family: \"proximabold\";\n  font-size: 14px;\n  text-align: center;\n}\n",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CSSCodeField",
+                "description": "CSS appended to the DOM in a <style> or <link> element.",
+                "label": "CSS"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_multiSel",
+                "value": false
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "BooleanField",
+                "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+                "label": "Select multiple elements, if matched?"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_poll",
+                "value": true
+            },
+            "widget": {
+                "action_visible": false,
+                "type": "BooleanField",
+                "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+                "label": "Re-check for Elements"
+            },
+            "required": false
+        }
+    ],
+    "masks": [],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [
+            {
+                "values": [
+                    "product"
+                ],
+                "id": 217005,
+                "rule_tmpl": {
+                    "widget": "itemlist",
+                    "description": null,
+                    "is_included": true,
+                    "verb": "=",
+                    "label": "Page type",
+                    "rule_name": "page_type",
+                    "rule_op": "equal",
+                    "value_type": "string",
+                    "filter_name": "page_filter"
+                }
+            }
+        ],
+        "required": []
+    },
+    "integration_type": "js-tag",
+    "manage_impressions": false
+}

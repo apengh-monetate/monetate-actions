@@ -1,0 +1,13 @@
+<a class="mt_recommendations__item" href="{{link}}?rec=pdp" data-pid="{{id}}">
+    <div class="mt_recommendations__image">
+        <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+    </div>
+    <div class="mt_recommendations__details">
+        <h3 class="mt_recommendations__title uppercase">{{title|truncate: 20}}</h3>
+        <p class="mt_recommendations__color">{{color}}</p>
+        <div class="mt_recommendations__price">
+            <span>{{price|priceFormat: $1,000.00}}</span>
+            <span class="hide">{{salePrice|priceFormat: $1,000.00}}</span>
+        </div>
+    </div>
+</a>

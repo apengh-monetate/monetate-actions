@@ -1,0 +1,36 @@
+header.header.sticky-navigation {
+    position: fixed !important;
+    & ~ main {
+        padding-top: 85px;
+    }
+    & + div[id*="monetate_selectorBanner"] {
+        top: 85px;
+        & + main {
+            padding-top: calc(((100 / 1200) * 100vw) + 85px);
+        }
+    }
+}
+
+@media screen and (min-width: 1026px) {
+    header.header.sticky-navigation {
+        & ~ main {
+            padding-top: 135px;
+        }
+        & + div[id*="monetate_selectorBanner"] {
+            top: 135px;
+            & + main {
+                padding-top: calc(((100 / 1200) * 100vw) + 135px);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header.header.sticky-navigation {
+        & + div[id*="monetate_selectorBanner"] {
+            & + main {
+                padding-top: calc(100px + 135px);
+            }
+        }
+    }
+}

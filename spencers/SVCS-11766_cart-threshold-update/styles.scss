@@ -1,0 +1,6 @@
+/* ----------------------------------------------------- */
+/* Hide gray bubble once threshold reached
+/* ----------------------------------------------------- */
+.mt-progress__fill[style*="width: calc(100%"] + .mt-progress__end {
+    display: none !important;
+}
