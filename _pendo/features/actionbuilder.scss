@@ -1,0 +1,45 @@
+https://marketer.monetate.net/control/a-59fa0bba/p/clarksusa.com/builder/create/action/?xpc=%7B%22cn%22%3A%22Pm4VpDyv8w%22%2C%22tp%22%3A1%7D
+
+// ==================================================================
+// Step 2: Select element
+// ==================================================================
+.selector-step.step.has-selector .ui-field.css-selector-field.selectorField input
+
+
+
+// ==================================================================
+// Step 3
+// ==================================================================
+// Config Tabs
+.config-step.step .config-tabs [data-value="Details"]
+.config-step.step .config-tabs [data-value="HTML"]
+.config-step.step .config-tabs [data-value="Styles"]
+.config-step.step .config-tabs [data-value="Mask"]
+.config-step.step .config-tabs [data-value="Conditions"]
+.config-step.step .config-tabs [data-value="Inputs"]
+
+
+
+// ------------------------------------------------------------------
+// Step 3: Mask
+// ------------------------------------------------------------------
+.config-panel-mask .slide-checkbox
+.config-panel-mask .content-left-content .field-container .ui-field.css-selector-field input
+
+.config-panel-mask .content-left-content .field-container .ui-field.select-field .select:nth-child(1) button.select-button[aria-posinset="1"]
+.config-panel-mask .content-left-content .field-container .ui-field.select-field .select:nth-child(1) .menu.menu-vertical .menu-item[data-value="url"]
+.config-panel-mask .content-left-content .field-container .ui-field.select-field .select:nth-child(1) .menu.menu-vertical .menu-item[data-value="full"]
+
+.config-panel-mask .content-left-content .field-container .ui-field.select-field .select:nth-child(2) button.select-button[aria-posinset="2"]
+.config-panel-mask .content-left-content .field-container .ui-field.select-field .select:nth-child(2) .menu.menu-vertical .menu-item[data-value="iequal"]
+.config-panel-mask .content-left-content .field-container .ui-field.select-field .select:nth-child(2) .menu.menu-vertical .menu-item[data-value="iprefix"]
+.config-panel-mask .content-left-content .field-container .ui-field.select-field .select:nth-child(2) .menu.menu-vertical .menu-item[data-value="isuffix"]
+.config-panel-mask .content-left-content .field-container .ui-field.select-field .select:nth-child(2) .menu.menu-vertical .menu-item[data-value="iregex"]
+
+.config-panel-mask .content-left-content .field-container .ui-field.select-field .ui-field.char-field input
+
+
+
+// ------------------------------------------------------------------
+// Step 3: Inputs
+// ------------------------------------------------------------------

@@ -1,4 +1,38 @@
 /* ===================================================== */
+/* Slide Formatting
+/* ===================================================== */
+#MONETATE-ID [data-slide] {
+  font-family: 'Trade Gothic W01 Bold 2';
+  font-size: 12px;
+}
+
+#MONETATE-ID [data-slide] a {
+  color: #000;
+  font-family: 'Trade Gothic W01 Light';
+  text-decoration: underline !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#MONETATE-ID [data-slide] a:hover {
+  color: #7F8587;
+  font-family: 'Trade Gothic W01 Light';
+}
+
+#MONETATE-ID [data-slide] a:active, #MONETATE-ID [data-slide] a:focus {
+  color: #000;
+  font-family: 'Trade Gothic W01 Bold 2';
+}
+
+/* ===================================================== */
+/* Arrows
+/* ===================================================== */
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  display: none;
+}
+
+/* ===================================================== */
 /* Fade In/Out Animation
 /* ===================================================== */
 #MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {

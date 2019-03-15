@@ -1,0 +1,290 @@
+/* ===================================================== */
+/* Who
+/* ===================================================== */
+
+// Who Button
+.phrase-button.who-button
+
+// Add Target Button
+.right-button-tray .button-group.split-button button.button:nth-child(1)
+
+// Add Target Button Dropdown
+.right-button-tray .button-group.split-button button.button:nth-child(2)
+
+.menu.menu-vertical .menu-item[data-value="add-target"]
+.menu.menu-vertical .menu-item[data-value="create-target"]
+
+
+
+
+
+// ------------------------------------------------------------------
+// Target Types
+// Experience > Who > Add Target > Target Type >
+// ------------------------------------------------------------------
+.nav-panel.category-picker:contains("Target Types") .js-category-button:contains("Landing") // Landing
+.nav-panel.category-picker:contains("Target Types") .js-category-button:contains("Location") // Location
+.nav-panel.category-picker:contains("Target Types") .js-category-button:contains("Behavior") // Behavior
+.nav-panel.category-picker:contains("Target Types") .js-category-button:contains("Technographics") // Technographics
+.nav-panel.category-picker:contains("Target Types") .js-category-button:contains("Travel") // Travel
+.nav-panel.category-picker:contains("Target Types") .js-category-button:contains("US Demographics") // US Demographics
+.nav-panel.category-picker:contains("Target Types") .js-category-button:contains("Weather") // Weather
+.nav-panel.category-picker:contains("Target Types") .js-category-button:contains("Named Segments") // Named Segments
+.nav-panel.category-picker:contains("Target Types") .js-category-button:contains("BlueKai") // BlueKai
+.nav-panel.category-picker:contains("Target Types") .js-category-button:contains("Custom Targets") // Custom Targets
+.nav-panel.category-picker:contains("Target Types") .js-category-button:contains("Datasets") // Datasets
+
+// ------------------------------------------------------------------
+// Breadcrumbs
+// ------------------------------------------------------------------
+.breadcrumb-tray.breadcrumbs button.button:contains("Who")
+.breadcrumb-tray.breadcrumbs button.button:contains("Target Type")
+
+.right-button-tray button.button:contains("Return to Target Type")
+
+
+
+
+// ------------------------------------------------------------------
+// Landing
+// ------------------------------------------------------------------
+Experience > Who > Add Target > Target Type > Landing >
+
+.nav-panel.item-picker:contains("Landing")
+
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Coremetrics landing page")
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Custom variable visitors")
+// .nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Custom variable visitors with lookup")
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:nth-child(3)
+
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Custom variable visitors with lookup, greater than")
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Custom variable visitors with lookup, less than")
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Custom variable visitors with multiple values")
+
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Direct navigation visitors")
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Initial URL query string")
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Landing page match")
+
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Landing page product out of stock")
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Last external landing in past hours contains")
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Last external referrer in past hours contains")
+
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("New visitors")
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Referrer")
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Returning visitors")
+
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Search terms")
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Visitors familiar with site")
+.nav-panel.item-picker:contains("Landing") .js-item-picker-grid ul > li:contains("Visitors who search for the site")
+
+
+// ------------------------------------------------------------------
+// Location
+// ------------------------------------------------------------------
+Experience > Who > Add Target > Target Type > Location >
+
+.nav-panel.item-picker:contains("Location")
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("City")
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("Country")
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("Distance to address")
+
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("Distance to location")
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("Distance to many locations")
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("Distance to retailer warehouse")
+
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("IP address")
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("Internet service provider")
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("Language")
+
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("Media market")
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("Non-US region")
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("Organization")
+
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("Timezone")
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("US state")
+.nav-panel.item-picker:contains("Location") .js-item-picker-grid ul > li:contains("Zip/Postal code")
+
+
+// ------------------------------------------------------------------
+// Behavior
+// ------------------------------------------------------------------
+Experience > Who > Add Target > Target Type > Behavior >
+
+.nav-panel.item-picker:contains("Behavior")
+
+.js-item-picker-grid ul > li button:contains("Abandoned booking")
+.js-item-picker-grid ul > li button:contains("Abandoned cart")
+.js-item-picker-grid ul > li button:contains("Abandoned review")
+
+.js-item-picker-grid ul > li button:contains("Amount in abandoned booking")
+.js-item-picker-grid ul > li button:contains("Amount in abandoned cart")
+.js-item-picker-grid ul > li button:contains("Amount in abandoned review")
+
+.js-item-picker-grid ul > li button:contains("Amount in booking")
+.js-item-picker-grid ul > li button:contains("Amount in cart")
+.js-item-picker-grid ul > li button:contains("Amount in review")
+
+.js-item-picker-grid ul > li button:contains("At least one custom event this visit")
+.js-item-picker-grid ul > li button:contains("Average order size")
+.js-item-picker-grid ul > li button:contains("Average review size")
+
+.js-item-picker-grid ul > li button:contains("Brand in cart")
+.js-item-picker-grid ul > li button:contains("Brand last purchased")
+.js-item-picker-grid ul > li button:contains("Brand purchased")
+
+.js-item-picker-grid ul > li button:contains("Brand viewed") ????
+.js-item-picker-grid ul > li button:contains("Brand viewed last visit")
+.js-item-picker-grid ul > li button:contains("Brand viewed this visit")
+
+.js-item-picker-grid ul > li button:contains("Category in cart")
+.js-item-picker-grid ul > li button:contains("Category last purchased")
+.js-item-picker-grid ul > li button:contains("Category purchased")
+
+.js-item-picker-grid ul > li button:contains("Category viewed") ????
+.js-item-picker-grid ul > li button:contains("Category viewed last visit")
+.js-item-picker-grid ul > li button:contains("Category viewed this visit")
+
+.js-item-picker-grid ul > li button:contains("Conversion frequency")
+.js-item-picker-grid ul > li button:contains("Conversions in past days")
+.js-item-picker-grid ul > li button:contains("Custom event in past days")
+
+.js-item-picker-grid ul > li button:contains("Custom event this visit") ????
+.js-item-picker-grid ul > li button:contains("Custom event this visit last value")
+.js-item-picker-grid ul > li button:contains("Custom event this visit, greater than or equal to a numeric value")
+
+.js-item-picker-grid ul > li button:contains("Days since last conversion")
+.js-item-picker-grid ul > li button:contains("Days since last purchase")
+.js-item-picker-grid ul > li button:contains("Days since last visit")
+
+.js-item-picker-grid ul > li button:contains('Exclude users who have set "do not track"')  ????
+.js-item-picker-grid ul > li button:contains("Last order size")
+.js-item-picker-grid ul > li button:contains("Last review size")
+
+.js-item-picker-grid ul > li button:contains("Number of page views")
+.js-item-picker-grid ul > li button:contains("Product Type in cart (New Catalog)")
+.js-item-picker-grid ul > li button:contains("Product Type last purchased (New Catalog)")
+
+.js-item-picker-grid ul > li button:contains("Product Type purchased (New Catalog)")
+.js-item-picker-grid ul > li button:contains("Product Type viewed (New Catalog)")
+.js-item-picker-grid ul > li button:contains("Product Type viewed last visit (New Catalog)")
+
+.js-item-picker-grid ul > li button:contains("Product Type viewed this visit (New Catalog)")
+.js-item-picker-grid ul > li button:contains("Product in abandoned cart")
+.js-item-picker-grid ul > li button:contains("Product in cart")
+
+.js-item-picker-grid ul > li button:contains("Product last purchased")
+.js-item-picker-grid ul > li button:contains("Product purchased")
+.js-item-picker-grid ul > li button:contains("Product viewed") ????
+
+.js-item-picker-grid ul > li button:contains("Product viewed last visit")
+.js-item-picker-grid ul > li button:contains("Product viewed this visit")
+.js-item-picker-grid ul > li button:contains("Products purchased in past days")
+
+.js-item-picker-grid ul > li button:contains("Purchase frequency")
+.js-item-picker-grid ul > li button:contains("Purchased any product")
+.js-item-picker-grid ul > li button:contains("Purchased on or after specified date")
+
+.js-item-picker-grid ul > li button:contains("Purchases in past days")
+.js-item-picker-grid ul > li button:contains("Quantity in cart")
+.js-item-picker-grid ul > li button:contains("Sessions in past days")
+
+.js-item-picker-grid ul > li button:contains("Time on site")
+.js-item-picker-grid ul > li button:contains("Viewed product out of stock")
+.js-item-picker-grid ul > li button:contains("Visited on or after specified date")
+
+Experience > Who > Add Target > Target Type > Behavior >
+
+
+// ------------------------------------------------------------------
+// Technographics
+// ------------------------------------------------------------------
+Experience > Who > Add Target > Target Type > Technographics >
+
+.nav-panel.item-picker:contains("Technographics")
+.js-item-picker-grid ul > li button:contains("Browser")
+.js-item-picker-grid ul > li button:contains("Device type")
+.js-item-picker-grid ul > li button:contains("Flash capable")
+
+.js-item-picker-grid ul > li button:contains("HTML5 video and canvas capable")
+.js-item-picker-grid ul > li button:contains("Operating system")
+.js-item-picker-grid ul > li button:contains("Screen height")
+
+.js-item-picker-grid ul > li button:contains("Screen resolution")
+.js-item-picker-grid ul > li button:contains("Screen width")
+
+
+// ------------------------------------------------------------------
+// Travel
+// ------------------------------------------------------------------
+Experience > Who > Add Target > Target Type > Travel >
+
+.nav-panel.item-picker:contains("Travel")
+.js-item-picker-grid ul > li button:contains("")
+
+// ------------------------------------------------------------------
+// US Demographics
+// ------------------------------------------------------------------
+Experience > Who > Add Target > Target Type > US Demographics >
+
+.nav-panel.item-picker:contains("US Demographics")
+.js-item-picker-grid ul > li button:contains("Age distribution")
+.js-item-picker-grid ul > li button:contains("Education level")
+
+.js-item-picker-grid ul > li button:contains("Families with children")
+.js-item-picker-grid ul > li button:contains("Geographic region")
+
+.js-item-picker-grid ul > li button:contains("Household makeup")
+.js-item-picker-grid ul > li button:contains("Language prevalence")
+
+.js-item-picker-grid ul > li button:contains("Median family income")
+.js-item-picker-grid ul > li button:contains("Median house value")
+
+.js-item-picker-grid ul > li button:contains("Population density")
+.js-item-picker-grid ul > li button:contains("Us voting patterns")
+
+
+// ------------------------------------------------------------------
+// Weather
+// ------------------------------------------------------------------
+Experience > Who > Add Target > Target Type > Weather >
+
+.nav-panel.item-picker:contains("Weather")
+.js-item-picker-grid ul > li button:contains("Current heat index")
+.js-item-picker-grid ul > li button:contains("Current temperature")
+.js-item-picker-grid ul > li button:contains("Current weather")
+
+.js-item-picker-grid ul > li button:contains("Current wind chill")
+.js-item-picker-grid ul > li button:contains("Current windspeed")
+.js-item-picker-grid ul > li button:contains("Forecasted cloud cover")
+
+.js-item-picker-grid ul > li button:contains("Forecasted precipitation")
+.js-item-picker-grid ul > li button:contains("Forecasted temperature")
+.js-item-picker-grid ul > li button:contains("Forecasted temperature range")
+
+
+// ------------------------------------------------------------------
+// Named Segments
+// ------------------------------------------------------------------
+.nav-panel.item-picker:contains("Named Segments")
+.nav-panel.item-picker:contains("Named segments") .js-item-picker-grid ul > li
+
+
+// ------------------------------------------------------------------
+// BlueKai
+// ------------------------------------------------------------------
+.nav-panel.item-picker:contains("BlueKai")
+.nav-panel.item-picker:contains("BlueKai") .js-item-picker-grid ul > li:contains("")
+
+
+// ------------------------------------------------------------------
+// Custom Targets
+// ------------------------------------------------------------------
+.nav-panel.item-picker:contains("Custom Targets")
+.nav-panel.item-picker:contains("Custom Targets") .js-item-picker-grid ul > li button
+
+
+// ------------------------------------------------------------------
+// Datasets
+// ------------------------------------------------------------------
+.nav-panel.item-picker:contains("Datasets")
+.nav-panel.item-picker:contains("Datasets") .js-item-picker-grid ul > li button

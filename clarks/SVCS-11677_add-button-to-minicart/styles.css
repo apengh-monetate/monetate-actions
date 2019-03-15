@@ -1,28 +1,34 @@
 .mini-bag-btns .mt__buttons {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
   .mini-bag-btns .mt__buttons {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
   }
 }
 
 .mini-bag-btns .mt__button {
   display: block;
   -webkit-box-flex: 1;
+  -webkit-flex: 1 0 100%;
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
 }
@@ -30,6 +36,7 @@
 @media screen and (min-width: 768px) {
   .mini-bag-btns .mt__button {
     -webkit-box-flex: 0;
+    -webkit-flex: 0 0 48%;
         -ms-flex: 0 0 48%;
             flex: 0 0 48%;
   }
@@ -85,4 +92,8 @@
   background-color: #0579d0;
   border: none;
   color: #fff;
+}
+
+.js-mini-bag-data.mtShow {
+  display: block !important;
 }

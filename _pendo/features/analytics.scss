@@ -1,0 +1,71 @@
+// Table
+// Web Experience Analytics List > Table Header > Time Sorting Dropdown
+th[data-sort-name="last_modified_time"] .select.js-time-select button.select-button
+
+th[data-sort-name="last_modified_time"] .select.js-time-select button.select-button ul.menu li.menu-item[data-value="last_activated_time"]
+ul.menu li.menu-item[data-value="last_activated_time"]
+ul.menu li.menu-item[data-value="create_time"]
+ul.menu li.menu-item[data-value="last_modified_time"]
+ul.menu li.menu-item[data-value="stopped_time"]
+
+
+
+// Filters
+
+// Web Experience Analytics > Filters > Select Time Range Dropdown
+.filter-nav .js-select-timerange-button
+.filter-nav .select-timerange .menu div.menu-item[data-value="last_12_months"]
+.filter-nav .select-timerange .menu div.menu-item[data-value="last_30_days"]
+.filter-nav .select-timerange .menu div.menu-item[data-value="last_7_days"]
+.filter-nav .select-timerange .menu div.menu-item[data-value="last_year"]
+.filter-nav .select-timerange .menu div.menu-item[data-value="last_quarter"]
+.filter-nav .select-timerange .menu div.menu-item[data-value="last_month"]
+.filter-nav .select-timerange .menu div.menu-item[data-value="last_week"]
+.filter-nav .select-timerange .menu div.menu-item[data-value="year_to_date"]
+.filter-nav .select-timerange .menu div.menu-item[data-value="quarter_to_date"]
+.filter-nav .select-timerange .menu div.menu-item[data-value="month_to_date"]
+.filter-nav .select-timerange .menu div.menu-item[data-value="week_to_date"]
+.filter-nav .select-timerange .menu div.menu-item[data-value="custom_dates"]
+
+
+// Web Experience Analytics > Filters > Select Metric Dropdown
+.filter-nav .select-metric button.select-button
+
+.filter-nav .select-metric .menu div.menu-item[data-value="all"]
+.filter-nav .select-metric .menu div.menu-item:contains("Conversion Rate")
+.filter-nav .select-metric .menu div.menu-item:contains("New Visitor Conversion")
+
+.filter-nav .select-metric .menu div.menu-item:contains("Add To Cart")
+.filter-nav .select-metric .menu div.menu-item:contains("Cart Abandonment")
+
+.filter-nav .select-metric .menu div.menu-item:contains("Bounce Rate")
+.filter-nav .select-metric .menu div.menu-item:contains("Revenue Per Session")
+
+.filter-nav .select-metric .menu div.menu-item:contains("Average Page Views")
+.filter-nav .select-metric .menu div.menu-item:contains("Average Time On Site")
+
+.filter-nav .select-metric .menu div.menu-item:contains("Average Order Value")
+.filter-nav .select-metric .menu div.menu-item:contains("visitor used page search")
+
+
+
+.metrics-overview .metric-table
+
+
+
+
+
+
+// ==================================================================
+// Email Experiences
+// ==================================================================
+
+// Email Experience List
+.page-header .layout-container .grid-col button:contains("Create Email Experience")
+
+table.email-list td a.text-black
+
+// Email Experience List > Individual Experience > View Analytics
+table.email-list td div.button-group button[data-tooltip="Duplicate"]
+table.email-list td div.button-group a[data-tooltip="View Analytics"]
+table.email-list td div.button-group button[data-tooltip="Delete"]

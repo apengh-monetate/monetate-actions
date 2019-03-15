@@ -1,0 +1,409 @@
+/**
+* DEFAULT SLIDER STYLES
+* Edit at your own risk!
+*/
+#MONETATE-ID {
+  box-sizing: border-box;
+  position: relative;
+}
+
+#MONETATE-ID * {
+  box-sizing: border-box;
+}
+
+#MONETATE-ID [data-slider-mask] {
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+#MONETATE-ID li {
+  list-style: none;
+}
+
+#MONETATE-ID [data-slider] {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#MONETATE-ID [data-slide] {
+  float: none;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider] {
+  white-space: nowrap !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slide] {
+  display: inline-block !important;
+  vertical-align: top;
+  white-space: normal;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slide] {
+  display: block !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide],
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  cursor: pointer;
+  z-index: 1;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  -ms-touch-action: pan-x;
+      touch-action: pan-x;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider-mask],
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slider-mask] {
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+}
+
+#MONETATE-ID [data-pagination-slide] * {
+  pointer-events: none;
+}
+
+/** ----END DEFAULT STYLES---- */
+/**
+* CUSTOM SLIDER STYLING
+*/
+#MONETATE-ID {
+  text-align: center;
+}
+
+#MONETATE-ID [data-pagination="thumbnails"] [data-pagination-slide] {
+  background: none;
+  border-radius: 0;
+  height: auto;
+  width: 40px;
+}
+
+#MONETATE-ID [disabled] {
+  opacity: 0.5;
+}
+
+#MONETATE-ID [data-pagination-slide] {
+  background: #000;
+  border-radius: 6px;
+  display: inline-block;
+  height: 12px;
+  margin: 4px;
+  opacity: 0.5;
+  width: 12px;
+}
+
+#MONETATE-ID [data-pagination-slide][data-slide-active] {
+  opacity: 1;
+}
+
+#MONETATE-ID [data-slide] a {
+  text-decoration: none;
+}
+
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  background: none;
+  color: #000;
+  font-size: 25px;
+  padding: 0;
+  position: absolute;
+  top: 45%;
+  user-select: none;
+}
+
+#MONETATE-ID [data-prev-button] {
+  left: 10px;
+}
+
+#MONETATE-ID [data-next-button] {
+  right: 10px;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-prev-button] {
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-next-button] {
+  bottom: 0;
+  left: 50%;
+  right: auto;
+  top: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#MONETATE-ID [data-slider-mask] {
+  display: inline-block;
+  width: 100%;
+}
+
+#MONETATE-ID [data-slider] {
+  -webkit-transition-timing-function: ease-in-out !important;
+          transition-timing-function: ease-in-out !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  height: 400px !important;
+}
+
+#MONETATE-ID [data-pagination*="dots"] [data-pagination-slide] {
+  /* remove below for pagination numbers */
+  text-indent: -9999px;
+}
+
+/* ===================================================== */
+/* Title
+/* ===================================================== */
+#MONETATE-ID .mt-slider__header {
+  color: #1f1f1f;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+@media screen and (min-width: 651px) {
+  #MONETATE-ID .mt-slider__header {
+    font-size: 24px;
+  }
+}
+
+/* ===================================================== */
+/* Slider Container
+/* ===================================================== */
+#MONETATE-ID .mt-slider__container {
+  display: block;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+/* ===================================================== */
+/* Slides
+/* ===================================================== */
+#MONETATE-ID [data-slide] > div {
+  padding: 4px;
+}
+
+@media screen and (min-width: 651px) {
+  #MONETATE-ID [data-slide] > div {
+    padding: 8px;
+  }
+}
+
+#MONETATE-ID .mt-slide__img {
+  display: block;
+  padding-top: 37vw;
+  position: relative;
+}
+
+@media screen and (min-width: 651px) {
+  #MONETATE-ID .mt-slide__img {
+    padding-top: 28.5vw;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #MONETATE-ID .mt-slide__img {
+    padding-top: 18.5vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #MONETATE-ID .mt-slide__img {
+    padding-top: 277px;
+  }
+}
+
+#MONETATE-ID .mt-slide__img::before {
+  background: rgba(0, 0, 0, 0.04);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+#MONETATE-ID .mt-slide__img img {
+  display: block;
+  left: 50%;
+  max-height: calc(100% - 8px);
+  max-width: calc(100% - 24px);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#MONETATE-ID .mt-slide__text {
+  padding: 0;
+}
+
+@media screen and (min-width: 1025px) {
+  #MONETATE-ID .mt-slide__text {
+    height: 42px;
+    padding: 16px;
+  }
+}
+
+#MONETATE-ID .mt-slide__text p {
+  border: none;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#MONETATE-ID .mt-slide:hover .mt-slide__text p {
+  color: #0076bd;
+  text-decoration: underline;
+}
+
+/* ===================================================== */
+/* Arrows/Slider Indicators
+/* ===================================================== */
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  color: #1f1f1f;
+  cursor: pointer;
+  display: inline-block;
+  height: 48px;
+  opacity: 1;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -9999px;
+  top: calc(14.25vw + 4px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  visibility: visible;
+  width: 48px;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1025px) {
+  #MONETATE-ID [data-prev-button],
+  #MONETATE-ID [data-next-button] {
+    top: calc(9.25vw + 4px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #MONETATE-ID [data-prev-button],
+  #MONETATE-ID [data-next-button] {
+    top: 146.5px;
+  }
+}
+
+#MONETATE-ID [data-prev-button]::before,
+#MONETATE-ID [data-next-button]::before {
+  background-image: url("https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2019.02.19._CB1550610138_.svg");
+  background-repeat: no-repeat;
+  content: "";
+  height: 34px;
+  left: 50%;
+  margin: -17px 0 0 -10px;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+}
+
+#MONETATE-ID [data-prev-button][disabled],
+#MONETATE-ID [data-next-button][disabled] {
+  display: none !important;
+}
+
+#MONETATE-ID [data-prev-button] {
+  left: 6px;
+}
+
+@media screen and (min-width: 1025px) {
+  #MONETATE-ID [data-prev-button] {
+    left: 12px;
+  }
+}
+
+#MONETATE-ID [data-prev-button]::before {
+  background-position: -5px -100px;
+}
+
+#MONETATE-ID [data-next-button] {
+  right: 6px;
+}
+
+@media screen and (min-width: 1025px) {
+  #MONETATE-ID [data-next-button] {
+    right: 12px;
+  }
+}
+
+#MONETATE-ID [data-next-button]::before {
+  background-position: -40px -100px;
+}
+
+/* ===================================================== */
+/* Pagination/Dots
+/* ===================================================== */
+#MONETATE-ID [data-pagination] {
+  line-height: 1 !important;
+  margin-top: 8px;
+}
+
+#MONETATE-ID [data-pagination-slide] {
+  background: #d7d7d7;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  height: 10px;
+  margin: 0 6px;
+  opacity: 1;
+  outline: 0;
+  padding: 0;
+  text-indent: -999em;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  vertical-align: middle;
+  width: 10px;
+}
+
+#MONETATE-ID [data-pagination-slide][data-slide-active] {
+  background: #9b9b9b;
+}

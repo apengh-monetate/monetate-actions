@@ -1,0 +1,61 @@
+// ==================================================================
+// Dashboard (Engine)
+// ==================================================================
+
+// Dashboard (Engine) > Time Interval Filter Dropdown
+.time-interval-filter div.button
+
+.time-interval-filter ul.menu li:contains("past 12 hours")
+.time-interval-filter ul.menu li:contains("past 1 day")
+
+.time-interval-filter ul.menu li:contains("past 3 days")
+.time-interval-filter ul.menu li:contains("past 7 days")
+
+.time-interval-filter ul.menu li:contains("past 30 days")
+.time-interval-filter ul.menu li:contains("past 90 days")
+
+.time-interval-filter ul.menu li:contains("Custom Range")
+
+
+
+
+
+.card.engine-summary-card a:contains("Create a Majority Fit Experience")
+
+
+
+
+// Dashboard (Engine) > Tabbed Metric Widget
+.tabbed-metrics-widget .tabbed-widget-list-container .tabbed-widget-tab:contains("Conversion Rate")
+.tabbed-metrics-widget .tabbed-widget-list-container .tabbed-widget-tab:contains("New Visitor Conversion")
+
+.tabbed-metrics-widget .tabbed-widget-list-container .tabbed-widget-tab:contains("Add to Cart")
+.tabbed-metrics-widget .tabbed-widget-list-container .tabbed-widget-tab:contains("Cart Abandonment")
+
+.tabbed-metrics-widget .tabbed-widget-list-container .tabbed-widget-tab:contains("Bounce Rate")
+.tabbed-metrics-widget .tabbed-widget-list-container .tabbed-widget-tab:contains("Average Order Value")
+
+.tabbed-metrics-widget .tabbed-widget-list-container .tabbed-widget-tab:contains("Revenue Per Session")
+.tabbed-metrics-widget .tabbed-widget-list-container .tabbed-widget-tab:contains("Average Time on Site")
+
+.tabbed-metrics-widget .tabbed-widget-list-container .tabbed-widget-tab:contains("Average Page Views")
+
+
+
+// Dashboard (Engine) > Best-Worst Sort Dropdown
+.best-worst-sort div.button[data-test-id="lift-dropdown"]
+
+.best-worst-sort div.button[data-test-id="lift-dropdown"] ul.menu li:contains("Lift")
+.best-worst-sort div.button[data-test-id="lift-dropdown"] ul.menu li:contains("Current Impact")
+.best-worst-sort div.button[data-test-id="lift-dropdown"] ul.menu li:contains("Potential Impact")
+
+
+// Dashboard (Engine) > Best-Worst Metrics > Active Status Dropdown
+.best-worst-metrics div.button[data-key="activeStatus"]
+
+.best-worst-metrics div.button[data-key="activeStatus"] ul.menu li:contains("All")
+.best-worst-metrics div.button[data-key="activeStatus"] ul.menu li:contains("Active")
+.best-worst-metrics div.button[data-key="activeStatus"] ul.menu li:contains("Ended")
+.best-worst-metrics div.button[data-key="activeStatus"] ul.menu li:contains("Paused")
+
+.best-worst-metrics div.button[data-key="activeMetric"] ul.menu div.menu-item

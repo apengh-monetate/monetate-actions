@@ -1,0 +1,90 @@
+$arrowSize: 24px;
+$buttonSize: 30px;
+$green: #32664F;
+
+.mt-toggle {
+
+    // ==================================================================
+    // Header
+    // ==================================================================
+    &__header {
+        align-content: center;
+        align-items: center;
+        color: $green;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding-bottom: 5px;
+        position: relative;
+        &[data-collapsible-status="closed"] {
+            .mt-toggle__arrow {
+                transform: rotateX(180deg);
+            }
+        }
+    }
+    &__heading {
+        color: $green;
+        display: inline-block;
+        font-family: "Open Sans", arial, helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        position: relative;
+        text-transform: none;
+    }
+
+
+    // ------------------------------------------------------------------
+    // Arrow
+    // ------------------------------------------------------------------
+    &__arrow {
+        display: inline-block;
+        height: $arrowSize;
+        position: relative;
+        transition: all 0.3s ease;
+        width: $arrowSize;
+        svg {
+            display: block;
+            fill: $green;
+            height: $arrowSize;
+            width: $arrowSize;
+        }
+    }
+
+
+
+    // ==================================================================
+    // Content
+    // ==================================================================
+    &__content {
+        border: 1px solid $green;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        padding: 20px;
+        position: relative;
+    }
+
+    &__close {
+        align-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: $buttonSize;
+        height: $buttonSize;
+        justify-content: center;
+        line-height: 1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: $buttonSize;
+    }
+
+
+    &__text {
+
+    }
+
+}
