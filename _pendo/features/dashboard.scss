@@ -40,7 +40,15 @@
 
 .tabbed-metrics-widget .tabbed-widget-list-container .tabbed-widget-tab:contains("Average Page Views")
 
+.tabbed-metrics-widget .settings div.button
+.tabbed-metrics-widget .chart-settings-panel .button-group div.button:nth-child(1)
+.tabbed-metrics-widget .chart-settings-panel .button-group div.button:nth-child(2)
 
+// Dashboard (Engine) > Conversion Funnel Widget
+.funnel-widget .settings-button-top-right span div.button
+
+.funnel-widget .chart-settings-panel .button-group div.button:nth-child(1)
+.funnel-widget .chart-settings-panel .button-group div.button:nth-child(2)
 
 // Dashboard (Engine) > Best-Worst Sort Dropdown
 .best-worst-sort div.button[data-test-id="lift-dropdown"]
@@ -51,11 +59,21 @@
 
 
 // Dashboard (Engine) > Best-Worst Metrics > Active Status Dropdown
-.best-worst-metrics div.button[data-key="activeStatus"]
+[data-key="activeStatus"]
 
-.best-worst-metrics div.button[data-key="activeStatus"] ul.menu li:contains("All")
-.best-worst-metrics div.button[data-key="activeStatus"] ul.menu li:contains("Active")
-.best-worst-metrics div.button[data-key="activeStatus"] ul.menu li:contains("Ended")
-.best-worst-metrics div.button[data-key="activeStatus"] ul.menu li:contains("Paused")
+[data-key="activeStatus"] ul.menu li:contains("All")
+[data-key="activeStatus"] ul.menu li:contains("Active")
+[data-key="activeStatus"] ul.menu li:contains("Ended")
+[data-key="activeStatus"] ul.menu li:contains("Paused")
 
 .best-worst-metrics div.button[data-key="activeMetric"] ul.menu div.menu-item
+
+[data-key="confidence"]
+
+.best-worst-metrics .settings-button
+
+
+.best-worst-slider .wizard-button.prev
+.best-worst-slider .wizard-button.next
+.best-worst-slider .card .card-header-name
+.best-worst-slider .card .card-header-analytics

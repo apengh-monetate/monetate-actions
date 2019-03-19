@@ -92,7 +92,7 @@ $monetateid: '#MONETATE-ID';
     }
 
     [disabled] {
-        opacity: 1;
+        opacity: 0.25;
     }
 
 
@@ -352,7 +352,7 @@ $monetateid: '#MONETATE-ID';
 #{$monetateid} .grid-2-2 {
     @media screen and (max-width: 768px) {
         [data-pagination],
-        [data-prev-button]
+        [data-prev-button],
         [data-next-button] {
             display: none;
         }
@@ -379,9 +379,41 @@ $monetateid: '#MONETATE-ID';
         }
     }
 }
-.mt-lightbox__content #{$monetateid} .grid-2-2 {
-    @media screen and (max-width: 768px) {
-        padding-left: 5px;
-        padding-right: 5px;
+
+#{$monetateid} {
+    margin-left: 10px;
+    margin-right: 10px;
+    .grid-2-2 {
+        @media screen and (max-width: 767px) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @media screen and (min-width: 768px) {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+    }
+}
+.mt-lightbox__content {
+    #{$monetateid} {
+        .grid-2-2 {
+            @media screen and (max-width: 767px) {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+
+
+
+        [data-prev-button],
+        [data-next-button] {
+            &[disabled] {
+                display: none;
+            }
+        }
+
+        [data-slider-mask] {
+            width: 100%;
+        }
     }
 }

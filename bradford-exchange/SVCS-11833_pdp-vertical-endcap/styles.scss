@@ -1,0 +1,150 @@
+/* ---------------------------------------------------------
+GENERIC STYLES
+These can stay mostly untouched
+--------------------------------------------------------- */
+
+.mt_endcap {
+    overflow: hidden;
+    position: relative;
+}
+.mt_sliderMiddle {
+    overflow: hidden;
+    position: relative;
+}
+.mt_sliderMask {
+    height: auto;
+    width: 100%;
+}
+.mt_sliderMask ul {
+    position: relative;
+}
+.mt_sliderMask ul li.mt_item {
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0 20px 0 0;
+}
+.mt_sliderMask ul li.mt_item a {
+    display: block;
+}
+.mt_arrowContainer {
+    cursor: pointer;
+}
+.mt_endcap .mt_prodName {
+    display: block;
+    font-size: 10px !important;
+    line-height: 12px !important;
+    padding: 5px 0 10px 0;
+    text-decoration: underline;
+}
+.mt_endcap .mt_price {
+    color: #32465a;
+    display: block;
+    font-weight: bold;
+    padding: 0 0 5px 0;
+}
+.mt_endcap .mt_title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------------
+VERTICAL STYLES
+Adjust the position, top, left, etc to taste.
+--------------------------------------------------------- */
+
+.mt_endcap.mt_vertical {
+    margin-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.mt_vertical .mt_sliderTop {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(top, #e0e8ef, #ffffff);
+    background-image: linear-gradient(to bottom, #e0e8ef, #ffffff);
+    border-top: 1px solid #32465A;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.mt_vertical .mt_sliderBottom {
+    background: url(https://www.bradfordexchange.com/store/20091217001/images/backgrounds/bg-content-box-bottom.png) repeat-x 0 0;
+    /*
+    border-bottom: 1px solid #32465A;
+    background-color: #e0e8ef;
+    background-image: -webkit-linear-gradient(top, #fff, #e0e8ef);
+    background-image: linear-gradient(to bottom, #fff, #e0e8ef);
+    */
+    height: 25px;
+}
+.mt_vertical .mt_sliderMask {
+    height: auto !important;
+}
+.mt_vertical .mt_sliderMask ul {
+    top: 0;
+}
+
+.mt_vertical .mt_arrowBtn > img {
+    display: block;
+    margin: 0 auto;
+}
+
+.mt_vertical .mt_sliderMask ul.mt_animate {
+    height: auto !important;
+    transition: top .25s;
+}
+
+
+
+.mt_vertical .mt_sliderMiddle {
+    background: #fff;
+    height: auto !important;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: left;
+    width: 170px;
+
+    .mt_item {
+        height: auto !important;
+        padding: 0;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .mt_itemWrapper a {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mt_itemImageContainer .mt_image {
+        border: 1px solid #369;
+        border: none;
+        height: auto;
+        max-width: 170px;
+    }
+    .mt_prodName {
+        font-size: 12px !important;
+        line-height: 16px !important;
+    }
+    .mt_priceText {
+        font-size: 12px !important;
+        line-height: 16px !important;
+        text-align: right;
+    }
+}
+
+
+
+/* ---------------------------------------------------------
+CONVENIENCE CLASSES
+--------------------------------------------------------- */
+
+.mt_sliderTop .mt_title { font-size: 14px; font-weight: bold; }
+.mt_item a:hover { text-decoration: none; }
+.mt_itemImageContainer { float: left; margin-right: 7px; }
+.mt_description {  }
+.mt_priceText { font-size: 10px; }
+.mt_price {  }
+.mt_currency {  }
+.mt_amount {  }
+.mt_disabled {  }

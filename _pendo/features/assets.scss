@@ -1,0 +1,87 @@
+// Content Manager > Header Tabs
+.content-manager-container .creative-manager-tabs.header-tabs .tab:contains("Images")
+.content-manager-container .creative-manager-tabs.header-tabs .tab:contains("Code")
+.content-manager-container .creative-manager-tabs.header-tabs .tab:contains("Fonts")
+.content-manager-container .creative-manager-tabs.header-tabs .tab:contains("Locations")
+
+
+// ==================================================================
+// Content Manager > Images
+// ==================================================================
+.content-manager .layout-container .js-list-filter-content input
+.content-manager .layout-container button.button:contains("Filter")
+.content-manager .layout-container .add-buttons .button.upload-content-button
+.content-manager .layout-container .add-buttons .button.build-content-button
+
+
+.content-manager .content-list-page .list-item-container
+
+// Content Manager > Images > Content Details
+.content-manager .content-detail .content-detail-prev-button
+.content-manager .content-detail .content-detail-next-button
+.content-manager .content-detail .content-close-button
+.content-manager .content-detail .content-detail-image-link
+.content-manager .content-detail .content-created-user.link
+.content-manager .content-detail .content-tags-button
+.content-manager .content-detail .content-edit-button button.button
+.content-manager .content-detail button.content-duplicate-button
+.content-manager .content-detail button.content-delete-button
+.content-manager .content-detail .content-campaigns-button
+.content-manager .content-detail .content-actions-button
+.content-manager .content-detail .content-assets-button
+
+// Content Manager > Images > Filters >
+.content-manager .js-filters-popup .reset-button
+
+.content-manager .js-filters-popup
+.content-manager .js-filters-popup
+.content-manager .js-filters-popup
+
+// ==================================================================
+// Content Manager > Code
+// ==================================================================
+
+.js-list-filter-content input
+.js-list-filter-content div.menu.menu-vertical div.combobox-item.menu-item
+
+.js-list-filter-content .token-wrapper div.button.delete-token
+
+// Content Manager > Code > Select Menu Dropdown
+div.select[data-name="selectMenu"] button.select-button
+div.select[data-name="selectMenu"] ul.menu li.menu-item[data-value="all"] // All
+div.select[data-name="selectMenu"] ul.menu li.menu-item[data-value="none"] // None
+div.select[data-name="selectMenu"] ul.menu li.menu-item[data-value="invert"] // Invert
+
+// Content Manager > Code > Action Button Group
+div.button-group[data-value="containerButtons"] button[data-value="archive"]
+div.button-group[data-value="containerButtons"] button[data-value="restore"]
+div.button-group[data-value="containerButtons"] button[data-value="tagMenuButton"]
+ul.menu.tag-menu div.menu-item[data-value="New Tag"]
+
+// Content Manager > Code > Sort Menu Dropdown
+div.select[data-name="sortMenu"] button.select-button
+div.select[data-name="sortMenu"] ul.menu li.menu-item[data-value="name"] // Sort by name
+div.select[data-name="sortMenu"] ul.menu li.menu-item[data-value="updated"] // Sort by date updated
+
+// Content Manager > Code > Upload File (Button)
+button.button.js-add-button:contains("Upload file")
+
+// Content Manager > Code > Creative Card > Checkbox
+.creative-box.card .creative-box-file-info div.checkbox
+
+.creative-box.card .creative-file
+.creative-box.card .creative-notes a.button
+
+
+// ==================================================================
+// Content Manager > Fonts
+// ==================================================================
+
+
+
+
+
+
+// ==================================================================
+// Content Manager > Locations
+// ==================================================================

@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-  var tippyTopSlider = document.querySelector('body > div[id*="mt-slider"]'),
+  var tippyTopSlider = document.querySelector('div[id*="mt-slider"]'),
       tippyTopSliderHeight = tippyTopSlider.clientHeight,
       menuItems = document.querySelectorAll('div.page .mega-menu > ul > li .megamenu-wrapper'),
       defaultMenuTopPosition = 119;
@@ -25,7 +25,7 @@
         setMenuTopPosition(menuItems, defaultMenuTopPosition);
       } else {
         for (var i = 0; i < menuItems.length; i++) {
-          menuItems[i].style.top = defaultMenuTopPosition + 'px';
+          menuItems[i].style.top = '0px';
         }
       }
     }

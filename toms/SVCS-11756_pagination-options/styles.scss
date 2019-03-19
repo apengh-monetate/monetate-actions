@@ -9,8 +9,18 @@
 /* Variant 2: Show "View All" only for top pagination
 /* ===================================================== */
 #results-pagination-con .pagination {
-    & li:not(:last-child) {
+    @media screen and (max-width: 640px) {
+        text-align: center;
+    }
+    & li:not(.pag-view-all) {
         display: none !important;
+    }
+    li.pag-view-all {
+        @media screen and (max-width: 640px) {
+            display: inline-block !important;
+            float: none !important;
+            margin: 0 auto !important;
+        }
     }
 }
 
@@ -18,8 +28,18 @@
 /* Variant 3: Show "View All" only for bottom pagination
 /* ===================================================== */
 #bottom-pagination .pagination {
-    & li:not(:last-child) {
+    @media screen and (max-width: 640px) {
+        text-align: center;
+    }
+    & li:not(.pag-view-all) {
         display: none !important;
+    }
+    li.pag-view-all {
+        @media screen and (max-width: 640px) {
+            display: inline-block !important;
+            float: none !important;
+            margin: 0 auto !important;
+        }
     }
 }
 
@@ -29,10 +49,10 @@
 /* ===================================================== */
 #bottom-pagination .pagination {
     float: none !important;
-    & li:not(:last-child) {
+    & li:not(.pag-view-all) {
         display: none !important;
     }
-    li:last-child {
+    li.pag-view-all {
         float: none;
         margin: 0 auto;
         text-align: center;

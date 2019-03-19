@@ -67,3 +67,36 @@
         opacity: 0;
     }
 }
+
+
+
+.page {
+  padding-top: 0 !important;
+}
+.header-container {
+    position: relative !important;
+}
+.pm-open .header-container {
+    left: 0 !important;
+}
+.pm-open .page:not(.mt-unfixed) .mobile-bg {
+  top: 0 !important;
+}
+
+@media screen and (min-width: 1045px) {
+  #MONETATE-ID {
+      left: 50%;
+      margin-top: -38px;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 100vw !important;
+  }
+  body {
+    padding-top: 38px !important;
+  }
+  div.page .mega-menu > ul > li .megamenu-wrapper {
+      padding: 0 20px !important;
+      position: absolute !important;
+      top: 72px !important;
+  }
+}

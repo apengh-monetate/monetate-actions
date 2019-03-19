@@ -4,6 +4,7 @@
 .mt_editorial {
     box-sizing: border-box;
     display: block;
+    padding: 0 24px;
     position: relative;
 
     & * {
@@ -17,14 +18,12 @@
         margin: 0 auto 48px;
         max-width: 1440px;
         padding: 0;
-        position: relative;
         text-align: center;
         @media screen and (min-width: $breakpoint-sm) {
             margin-bottom: 60px;
         }
         @media screen and (min-width: $breakpoint-lg) {
             margin-bottom: 70px;
-            padding: 0 24px;
         }
         &:hover {
             color: #212121;
@@ -85,6 +84,7 @@
         margin: 0 auto;
         min-height: 0;
         padding: 24px;
+        position: relative;
         text-align: center;
         width: 100%;
         @media screen and (min-width: $breakpoint-sm) {
@@ -96,14 +96,32 @@
         }
         @media screen and (min-width: $breakpoint-lg) {
             min-height: 420px;
+            padding: 0;
         }
 
-        img {
-            align-self: center;
+        &-inner {
+            @media screen and (min-width: $breakpoint-sm) {
+                left: 0;
+                padding: 48px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+            }
+        }
+
+        &-img {
+            display: block;
             margin: 0 auto 16px;
-            max-width: 100%;
+            position: relative;
+            text-align: center;
+            width: 100%;
             @media screen and (min-width: $breakpoint-sm) {
                 margin: 0 auto 24px;
+            }
+
+            img {
+                max-width: 100%;
             }
         }
 

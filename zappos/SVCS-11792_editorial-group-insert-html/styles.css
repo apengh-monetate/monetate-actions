@@ -1,6 +1,7 @@
 .mt_editorial {
   box-sizing: border-box;
   display: block;
+  padding: 0 24px;
   position: relative;
 }
 
@@ -15,7 +16,6 @@
   margin: 0 auto 48px;
   max-width: 1440px;
   padding: 0;
-  position: relative;
   text-align: center;
 }
 
@@ -28,7 +28,6 @@
 @media screen and (min-width: 1025px) {
   .mt_editorial__link {
     margin-bottom: 70px;
-    padding: 0 24px;
   }
 }
 
@@ -104,6 +103,7 @@
   margin: 0 auto;
   min-height: 0;
   padding: 24px;
+  position: relative;
   text-align: center;
   width: 100%;
 }
@@ -127,22 +127,38 @@
 @media screen and (min-width: 1025px) {
   .mt_editorial__copy {
     min-height: 420px;
+    padding: 0;
   }
-}
-
-.mt_editorial__copy img {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-              -ms-grid-row-align: center;
-          align-self: center;
-  margin: 0 auto 16px;
-  max-width: 100%;
 }
 
 @media screen and (min-width: 651px) {
-  .mt_editorial__copy img {
+  .mt_editorial__copy-inner {
+    left: 0;
+    padding: 48px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 100%;
+  }
+}
+
+.mt_editorial__copy-img {
+  display: block;
+  margin: 0 auto 16px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 651px) {
+  .mt_editorial__copy-img {
     margin: 0 auto 24px;
   }
+}
+
+.mt_editorial__copy-img img {
+  max-width: 100%;
 }
 
 .mt_editorial__copy p {

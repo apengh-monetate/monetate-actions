@@ -1,0 +1,62 @@
+// header > div.region-2 > div.ng-tns-c2-0 > a > img (Replace)
+$width1: 16.66667%;
+$width2: 41.66667%;
+
+
+app-header[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] {
+    @media screen and (min-width: 768px) {
+        flex-wrap: nowrap !important;
+    }
+
+
+    > div[_ngcontent-c2] {
+
+        > a[_ngcontent-c2] {
+            left: 50% !important;
+            transform: translateX(-50%);
+            width: 200px !important;
+            @media screen and (min-width: 768px) {
+                transform: none !important;
+                width: 100% !important;
+            }
+
+            img {
+                max-width: 100% !important;
+            }
+        }
+
+
+        &:first-child {
+            @media screen and (min-width: 768px) {
+                flex: 0 1 35% !important;
+                max-width: 35% !important;
+            }
+            @media screen and (min-width: 1025px) {
+                flex: 0 0 #{(100 - 24) / 2}% !important;
+                max-width: #{(100 - 24) / 2}% !important;
+            }
+        }
+
+        &:first-child + div[_ngcontent-c2] {
+            @media screen and (min-width: 768px) {
+                flex: 1 0 24% !important;
+                max-width: 24% !important;
+            }
+            @media screen and (min-width: 1025px) {
+                flex: 0 0 24% !important;
+                max-width: 24% !important;
+            }
+        }
+
+        &:last-child {
+            @media screen and (min-width: 768px) {
+                flex: 0 1 41% !important;
+                max-width: 41% !important;
+            }
+            @media screen and (min-width: 1025px) {
+                flex: 0 0 #{(100 - 24) / 2}% !important;
+                max-width: #{(100 - 24) / 2}% !important;
+            }
+        }
+    }
+}

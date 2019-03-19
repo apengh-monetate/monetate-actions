@@ -1,0 +1,86 @@
+@media screen and (min-width: 768px) {
+  app-header[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] {
+    -webkit-flex-wrap: nowrap !important;
+        -ms-flex-wrap: nowrap !important;
+            flex-wrap: nowrap !important;
+  }
+}
+
+app-header[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2] > a[_ngcontent-c2] {
+  left: 50% !important;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 200px !important;
+}
+
+@media screen and (min-width: 768px) {
+  app-header[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2] > a[_ngcontent-c2] {
+    -webkit-transform: none !important;
+            transform: none !important;
+    width: 100% !important;
+  }
+}
+
+app-header[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2] > a[_ngcontent-c2] img {
+  max-width: 100% !important;
+}
+
+@media screen and (min-width: 768px) {
+  app-header[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:first-child {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 1 35% !important;
+        -ms-flex: 0 1 35% !important;
+            flex: 0 1 35% !important;
+    max-width: 35% !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  app-header[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:first-child {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 0 38% !important;
+        -ms-flex: 0 0 38% !important;
+            flex: 0 0 38% !important;
+    max-width: 38% !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  app-header[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:first-child + div[_ngcontent-c2] {
+    -webkit-box-flex: 1 !important;
+    -webkit-flex: 1 0 24% !important;
+        -ms-flex: 1 0 24% !important;
+            flex: 1 0 24% !important;
+    max-width: 24% !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  app-header[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:first-child + div[_ngcontent-c2] {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 0 24% !important;
+        -ms-flex: 0 0 24% !important;
+            flex: 0 0 24% !important;
+    max-width: 24% !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  app-header[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 1 41% !important;
+        -ms-flex: 0 1 41% !important;
+            flex: 0 1 41% !important;
+    max-width: 41% !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  app-header[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 0 38% !important;
+        -ms-flex: 0 0 38% !important;
+            flex: 0 0 38% !important;
+    max-width: 38% !important;
+  }
+}
