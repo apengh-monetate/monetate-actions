@@ -1,0 +1,25 @@
+._pendo-resource-center-sandbox-module-code-container {
+  height: 342px;
+  overflow-y: scroll;
+}
+
+.mt-release-notes {
+  padding: 20px;
+}
+
+.mt-release-notes h3 {
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+}
+
+.mt-release-notes p {
+  margin-bottom: 0.5rem;
+}
+
+.mt-release-notes ul {
+  margin-top: 4px;
+}
+
+.mt-release-notes li {
+  line-height: 1.2;
+}

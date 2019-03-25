@@ -1,8 +1,8 @@
 // Content Manager > Header Tabs
-.content-manager-container .creative-manager-tabs.header-tabs .tab:contains("Images")
-.content-manager-container .creative-manager-tabs.header-tabs .tab:contains("Code")
-.content-manager-container .creative-manager-tabs.header-tabs .tab:contains("Fonts")
-.content-manager-container .creative-manager-tabs.header-tabs .tab:contains("Locations")
+.creative-manager-tabs.header-tabs .tab:contains("Images")
+.creative-manager-tabs.header-tabs .tab:contains("Code")
+.creative-manager-tabs.header-tabs .tab:contains("Fonts")
+.creative-manager-tabs.header-tabs .tab:contains("Locations")
 
 
 // ==================================================================
@@ -76,6 +76,31 @@ button.button.js-add-button:contains("Upload file")
 // ==================================================================
 // Content Manager > Fonts
 // ==================================================================
+.js-list-filter-content input
+.js-list-filter-content div.menu.menu-vertical div.combobox-item.menu-item
+
+// Content Manager > Fonts > Select Menu Dropdown
+div.select[data-name="selectMenu"] button.select-button
+div.select[data-name="selectMenu"] ul.menu li.menu-item[data-value="all"] // All
+div.select[data-name="selectMenu"] ul.menu li.menu-item[data-value="none"] // None
+div.select[data-name="selectMenu"] ul.menu li.menu-item[data-value="invert"] // Invert
+
+// Content Manager > Fonts > Action Button Group
+div.button-group[data-value="containerButtons"] button[data-value="archive"]
+div.button-group[data-value="containerButtons"] button[data-value="restore"]
+div.button-group[data-value="containerButtons"] button[data-value="tagMenuButton"]
+ul.menu.tag-menu div.menu-item[data-value="New Tag"]
+
+// Content Manager > Fonts > Sort Menu Dropdown
+div.select[data-name="sortMenu"] button.select-button
+div.select[data-name="sortMenu"] ul.menu li.menu-item[data-value="name"] // Sort by name
+div.select[data-name="sortMenu"] ul.menu li.menu-item[data-value="updated"] // Sort by date updated
+
+// Content Manager > Fonts > Upload File (Button)
+button.button.js-add-button:contains("Upload file")
+
+// Content Manager > Fonts > Creative Card > Checkbox
+.creative-box.card .creative-box-file-info div.checkbox
 
 
 
@@ -85,3 +110,13 @@ button.button.js-add-button:contains("Upload file")
 // ==================================================================
 // Content Manager > Locations
 // ==================================================================
+#locationsApp .upload-help-container a
+#locationsApp a.download-csv-button
+#locationsApp .button.upload-content-button
+
+// Content Manager > Locations > Individual Location
+#locationsApp .layout-container table tr td a:contains("Email")
+#locationsApp .layout-container table tr td a:contains("URL 1")
+#locationsApp .layout-container table tr td a:contains("URL 2")
+
+#locationsApp .layout-container table tr td a[href*="maps.google.com"]

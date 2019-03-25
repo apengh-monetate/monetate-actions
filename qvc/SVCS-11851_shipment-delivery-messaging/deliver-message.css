@@ -1,0 +1,44 @@
+.mt-delivery-message {
+  display: none;
+  width: calc(200% + 30px);
+}
+
+.mt-delivery-message__msg {
+  color: #28334A;
+  display: inline-block;
+  font-family: "TT Norms Medium", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 21px;
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+label.deliveryOption[state="selected"] + div[id*="monetate_selector"] {
+  display: block !important;
+}
+
+/* ----------------------------------------------------- */
+/* Show Single Shipment Message
+/* ----------------------------------------------------- */
+label.deliveryOption.individualPurchase[state="selected"] + div[id*="monetate_selector"] > .mt-delivery-message {
+  display: block;
+}
+
+label.deliveryOption.individualPurchase[state="selected"] + div[id*="monetate_selector"] > .mt-delivery-message .mt-delivery-message__msg:not(.single-shipment) {
+  display: none;
+}
+
+/* ----------------------------------------------------- */
+/* Show Auto Deliver Message
+/* ----------------------------------------------------- */
+label.deliveryOption.adPurchase[state="selected"] + div[id*="monetate_selector"] > .mt-delivery-message {
+  display: block;
+  margin-left: -15px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+label.deliveryOption.adPurchase[state="selected"] + div[id*="monetate_selector"] > .mt-delivery-message .mt-delivery-message__msg:not(.auto-delivery) {
+  display: none;
+}

@@ -1,72 +1,78 @@
-#search-result-items .product-tile {
-    align-content: flex-start;
-    align-items: flex-start;
-    display: flex !important;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100% !important;
-    justify-content: flex-start;
-    padding-bottom: 10px !important;
-    @media screen and (min-width: 768px) {
-        padding-bottom: 30px !important;
-    }
-    @media screen and (min-width: 1026px) {
-        padding-bottom: 30px !important;
-    }
+.grid-tile {
+    min-height: 0 !important;
+    .product-tile {
+        align-content: flex-start;
+        align-items: flex-start;
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100% !important;
+        justify-content: flex-start;
+        padding-bottom: 10px !important;
+        @media screen and (min-width: 768px) {
+            padding-bottom: 30px !important;
+        }
+        @media screen and (min-width: 1026px) {
+            padding-bottom: 30px !important;
+        }
 
 
-    .product-image {
-        display: block;
-        margin: 15 0 0;
-        min-height: 53px;
-        order: 1;
-        width: 100%;
-    }
+        .product-image {
+            display: block;
+            margin: 15 0 0;
+            min-height: 53px;
+            order: 1;
+            width: 100%;
+        }
 
 
-    .product-name {
-        display: block;
-        margin-bottom: 5px;
-        min-height: 53px;
-        // min-height: 33px;
-        order: 2;
-        width: 100%;
-        h2 {
+        .product-name {
+            display: block;
+            margin-bottom: 5px;
+            min-height: 53px;
+            order: 2;
+            width: 100%;
+            // @media screen and (min-width: 1100px) {
+            //     min-height: 33px;
+            // }
+            h2 {
+                margin-top: 0;
+            }
+        }
+
+
+        .product-pricing {
+            display: block;
+            order: 4;
+            width: 100%;
+        }
+
+
+        .product-promo {
+            display: block;
+            margin: 6px 0 0;
+            min-height: 31px;
+            order: 5;
+            width: 100%;
+        }
+
+
+        .product-swatches {
+            display: block;
+            margin-bottom: 10px;
             margin-top: 0;
+            // margin-top: 10px;
+            min-height: 21px;
+            order: 3;
+            width: 100%;
+        }
+
+
+        .product-reviewstars {
+            display: block;
+            order: 6;
+            width: 100%;
         }
     }
 
-
-    .product-pricing {
-        display: block;
-        order: 4;
-        width: 100%;
-    }
-
-
-    .product-promo {
-        display: block;
-        margin: 6px 0 0;
-        min-height: 31px;
-        order: 5;
-        width: 100%;
-    }
-
-
-    .product-swatches {
-        display: block;
-        margin-bottom: 10px;
-        margin-top: 0;
-        // margin-top: 10px;
-        min-height: 21px;
-        order: 3;
-        width: 100%;
-    }
-
-
-    .product-reviewstars {
-        display: block;
-        order: 6;
-        width: 100%;
-    }
 }

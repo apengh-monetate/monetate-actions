@@ -1,0 +1,171 @@
+{
+  "id": 388850,
+  "title": "Takeover Team Shop Nav Menu",
+  "description": "Takeover Team Shop Nav Menu",
+  "op": "allInOneV2",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Nav",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<div class=\"mt-team-shop\">\n<ul class=\"mt-team-shop__list\">\n\t<li class=\"mt-team-shop__list-item\"><a class=\"mt-team-shop__list-link\" href=\"/mens-big-and-tall-store/nfl/cat440092\" title=\"NFL\"><img alt=\"\" class=\"mt-team-shop__list-img\" src=\"https://via.placeholder.com/600x400?text=NFL\" />\n\t<p class=\"mt-team-shop__list-text\">NFL</p>\n\t</a></li>\n\t<li class=\"mt-team-shop__list-item\"><a class=\"mt-team-shop__list-link\" href=\"/mens-big-and-tall-store/mlb/cat440094\" title=\"MLB\"><img alt=\"\" class=\"mt-team-shop__list-img\" src=\"https://via.placeholder.com/600x400?text=MLB\" />\n\t<p class=\"mt-team-shop__list-text\">MLB</p>\n\t</a></li>\n\t<li class=\"mt-team-shop__list-item\"><a class=\"mt-team-shop__list-link\" href=\"/mens-big-and-tall-store/nhl/cat440093\" title=\"NHL\"><img alt=\"\" class=\"mt-team-shop__list-img\" src=\"https://via.placeholder.com/600x400?text=NHL\" />\n\t<p class=\"mt-team-shop__list-text\">NHL</p>\n\t</a></li>\n\t<li class=\"mt-team-shop__list-item\"><a class=\"mt-team-shop__list-link\" href=\"/mens-big-and-tall-store/nba/cat440095\" title=\"NBA\"><img alt=\"\" class=\"mt-team-shop__list-img\" src=\"https://via.placeholder.com/600x400?text=NBA\" />\n\t<p class=\"mt-team-shop__list-text\">NBA</p>\n\t</a></li>\n\t<li class=\"mt-team-shop__list-item\"><a class=\"mt-team-shop__list-link\" href=\"/mens-big-and-tall-store/ncaa/cat440096\" title=\"Collegiate\"><img alt=\"\" class=\"mt-team-shop__list-img\" src=\"https://via.placeholder.com/600x400?text=Collegiate\" />\n\t<p class=\"mt-team-shop__list-text\">Collegiate</p>\n\t</a></li>\n</ul>\n</div>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "nav[role=\"navigation\"] > ul > li > ul[aria-label=\"Team Shop\"]"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "first"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": false
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "label": "Script"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "nav[role=\"navigation\"] > ul > li > ul[aria-label=\"Team Shop\"] > div {\n  display: block;\n  left: 0;\n  position: relative;\n  right: 0;\n}\n\n@media screen and (min-width: 768px) {\n  nav[role=\"navigation\"] > ul > li > ul[aria-label=\"Team Shop\"] > div ~ li {\n    display: none !important;\n  }\n}\n\n.mt-team-shop {\n  display: none;\n}\n\n@media screen and (min-width: 768px) {\n  .mt-team-shop {\n    display: block;\n    max-width: 90rem;\n  }\n}\n\n.mt-team-shop__list {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row;\n  -ms-flex-wrap: nowrap;\n      flex-wrap: nowrap;\n  -ms-flex-pack: justify;\n      justify-content: space-between;\n  list-style: none;\n  padding: 0 5px;\n  width: 100%;\n}\n\n.mt-team-shop__list-item {\n  -ms-flex: 1;\n      flex: 1;\n  padding: 0 10px;\n}\n\n.mt-team-shop__list-img {\n  margin-bottom: 10px;\n  max-width: 100%;\n}\n\n.mt-team-shop__list-text {\n  font-family: \"Libre Franklin\", sans-serif;\n  font-size: .875rem;\n  font-weight: 700;\n  text-align: center;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

@@ -1,0 +1,8 @@
+@media screen and (min-width: 40em) {
+  .master-header .topnav-util li a {
+    color: #333 !important;
+  }
+  .master-header .topnav-util li a:hover, .master-header .topnav-util li a:focus {
+    color: #333 !important;
+  }
+}

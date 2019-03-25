@@ -1,0 +1,50 @@
+<div class="mt-release-notes">
+    <h2>March 5, 2019</h2>
+    <h3>Feature Enhancements</h3>
+    <h4>Intelligent Recommendations</h4>
+    <p><strong>Concurrent Schema/Dataset Upload</strong></p>
+    <ul>
+        <li>The Schema Creation wizard now simultaneously uploads a full dataset to the platform automatically after a schema file is successfully uploaded and validated.</li>
+    </ul>
+    <p><strong>Global Settings Tab on Recommendations List Page</strong></p>
+    <ul>
+        <li>Added a "Global Settings" tab to the Recommendations List page
+            <ul>
+                <li>This gives you the ability to&nbsp;create rules that apply to all of your Recommendation Strategies so you don't need to configure the same rules for every strategy that you build.</li>
+            </ul>
+        </li>
+    </ul>
+    <p><strong>Configure Lookback Period for Recommendation Strategies</strong></p>
+    <ul>
+        <li>Added a dropdown menu to the Recommendation Strategy creation screen that allows you to set the lookback period that your Recommendation Strategy should consider
+            <ul>
+                <li>This allows you to more quickly surface new products in your Recommendations if you have a product catalog that is updated frequently</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>Bug Fixes</h3>
+    <ul>
+        <li><strong>Unicode Characters In Datasets</strong>
+            <ul>
+                <li>Fixed a bug that caused the Dataset Schema Wizard to crash when you upload a dataset that contains Unicode characters in the first row</li>
+            </ul>
+        </li>
+        <li><strong>Bad Data In Track Pixel Request</strong>
+            <ul>
+                <li>Fixed a bug that caused a track pixel request to send bad data that gets recorded.
+                    <ul>
+                        <li>This issue broke the nightly&nbsp;<code>load_warehouse</code>&nbsp;for all clients</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <h3>Updated Documentation</h3>
+    <ul>
+        <li><a href="https://knowledge.monetate.com/hc/en-us/articles/115000899366-Understand-Who-Targeting-in-Web-Experiences" target="_blank" rel="noopener">Understand "Who" Targeting in Web Experiences</a></li>
+        <li><a href="https://knowledge.monetate.com/hc/en-us/articles/360000572743-Create-A-Recommendation-Strategy" target="_blank" rel="noopener">Create A Recommendation Strategy</a></li>
+        <li><a href="https://knowledge.monetate.com/hc/en-us/articles/360024818331" target="_blank" rel="noopener">Intelligent Recommendations: Global Settings</a></li>
+        <li><a href="https://knowledge.monetate.com/hc/en-us/articles/360021218131-Create-Your-Product-Catalog-Schema" target="_blank" rel="noopener">Create Your Product Catalog Schema</a></li>
+        <li><a href="https://knowledge.monetate.com/hc/en-us/articles/360000573846" target="_blank" rel="noopener">The Recommendation Strategies List Page</a></li>
+    </ul>
+</div>

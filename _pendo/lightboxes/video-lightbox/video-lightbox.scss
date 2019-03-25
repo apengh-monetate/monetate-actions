@@ -1,0 +1,168 @@
+@import "../../variables";
+
+.mt_lightbox {
+    background: #eff5ff;
+
+
+
+    h1, h2, h3, h4, p {
+        color: #black;
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        // color: $blue;
+        font-weight: 600;
+    }
+    ul {
+        margin-bottom: 0;
+        li:first-child {
+            margin-top: 4px;
+        }
+    }
+
+
+
+    // ==================================================================
+    // Header
+    // ==================================================================
+    &__header {
+        position: relative;
+        &.light {
+            background: $white;
+            h1, h2, h3, h4 {
+                color: $black;
+                margin: 0
+            }
+        }
+        &.dark {
+            background: #0a1c39;
+            h1, h2, h3, h4 {
+                color: $white;
+                margin: 0;
+            }
+        }
+
+        h1 {
+            padding: 10px 20px;
+            position: relative;
+        }
+    }
+
+
+    // ------------------------------------------------------------------
+    // Hero
+    // ------------------------------------------------------------------
+    &__hero {
+        display: none;
+        &[style*="background-image"] {
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            height: 100px;
+            & + h1 {
+                padding: 0 20px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+
+
+
+    // ==================================================================
+    // mt_lightbox__content
+    // ==================================================================
+    &__content {
+
+    }
+
+
+    // ------------------------------------------------------------------
+    // Video
+    // ------------------------------------------------------------------
+    &__video {
+        overflow: hidden;
+        padding-top: 56.25%;
+        position: relative;
+        iframe {
+            border: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+
+
+
+    // ==================================================================
+    // Additional Resources / Use Cases
+    // ==================================================================
+    &__resources {
+        background: #eff5ff;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 20px;
+        & > .column {
+            flex: 1;
+        }
+    }
+
+
+
+
+    // ==================================================================
+    // Footer
+    // ==================================================================
+    &__footer {
+        background: #26374d;
+        &-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            list-style: none;
+            margin-right: 20px;
+            padding-bottom: 8px;
+            padding-top: 8px;
+            li {
+                border-right: 1px solid rgba(124,142,174,0.35);
+                line-height: 16px;
+                margin-top: 0 !important;
+                padding-left: 20px;
+                padding-right: 20px;
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    border-right: none;
+                    padding-right: 0;
+                }
+                a {
+                    border-bottom: 1px solid rgba(45,180,232,0.35);
+                    color: #2db4e8;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+
+
+
+    // ==================================================================
+    // Utility Classes
+    // ==================================================================
+    .hide {
+        display: none !important;
+    }
+}

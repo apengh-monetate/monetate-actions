@@ -1,0 +1,304 @@
+$monetateId: '#MONETATE-ID';
+// $monetateId: '#mt-slider-2744541-0';
+
+/**
+ * DEFAULT SLIDER STYLES
+ * Edit at your own risk!
+ */
+#{$monetateId} {
+  position: relative;
+}
+
+#{$monetateId} [data-slider-mask] {
+  margin: 0!important;
+  overflow: visible!important;
+  padding: 0!important;
+  position: relative!important;
+}
+
+#{$monetateId} li {
+  list-style: none;
+}
+
+#{$monetateId} [data-slider] {
+  display: block;
+  margin: 0!important;
+  padding: 0!important;
+}
+
+#{$monetateId} [data-slide] {
+  float: none;
+}
+
+#{$monetateId}[data-slider-wrapper="horizontal"] [data-slider] {
+  white-space: nowrap!important;
+}
+
+#{$monetateId}[data-slider-wrapper="horizontal"] [data-slide] {
+  display: inline-block!important;
+  vertical-align: top;
+  white-space: normal;
+}
+
+#{$monetateId}[data-slider-wrapper="fade"] [data-slide] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+#{$monetateId}[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+#{$monetateId} [data-pagination-slide],
+#{$monetateId} [data-prev-button],
+#{$monetateId} [data-next-button]{
+  cursor: pointer;
+  z-index: 1;
+}
+
+#{$monetateId}[data-slider-wrapper="horizontal"] [data-slider-mask],
+#{$monetateId}[data-slider-wrapper="fade"] [data-slider-mask] {
+  touch-action: pan-y;
+}
+
+#{$monetateId} [data-pagination-slide] * {
+  pointer-events: none;
+}
+
+/** ----END DEFAULT STYLES---- */
+
+
+/**
+ * CUSTOM SLIDER STYLING
+ */
+#{$monetateId} {
+  box-sizing: border-box;
+  margin: auto;
+  margin: 0 auto;
+  max-width: 1128px;
+  padding: 0;
+}
+
+.mt-product-tiles__wrapper {
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 1128px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 0 1.5rem;
+    @media screen and (min-width: 48em) {
+        overflow-x: hidden;
+        padding: 0 1.25rem;
+    }
+    @media screen and (min-width: 70.5em) {
+        padding: 0;
+    }
+}
+.mt-product-tiles__wrapper-inner {
+    width: 1272px;
+    @media screen and (min-width: 48em) {
+        width: 100%;
+    }
+}
+
+#{$monetateId} [data-slider] {
+    @media screen and (min-width: 48em) {
+        transform: none !important;
+    }
+}
+
+#{$monetateId} h3.mt-product-tiles-title {
+  border: 0;
+  display: block;
+  font-family: 'soleil',Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  letter-spacing: 0.01875rem;
+  line-height: 16px;
+  line-height: 1rem;
+  margin: 2rem 0 1.5rem;
+  padding: 0 1.5rem;
+  text-align: left;
+  text-transform: none;
+  @media screen and (min-width: 70.5em) {
+      margin: 2.25rem 0;
+      padding: 0;
+  }
+}
+
+#{$monetateId} [data-pagination="thumbnails"] [data-pagination-slide] {
+  background: none;
+  border-radius: 0;
+  height: auto;
+  width: 40px;
+}
+
+#{$monetateId} [disabled] {
+  opacity: 0.5;
+}
+
+#{$monetateId} [data-pagination-slide] {
+  background: #000;
+  border-radius: 6px;
+  display: inline-block;
+  height: 12px;
+  margin: 4px;
+  opacity: 0.5;
+  width: 12px;
+}
+
+#{$monetateId} [data-pagination-slide][data-slide-active] {
+  opacity: 1;
+}
+
+#{$monetateId} [data-slide] {
+    margin: 0 .75rem 2.25rem 0;
+    width: 240px !important;
+    @media screen and (min-width: 30em) {
+        width: calc((100% - 48px) / 5) !important;
+    }
+    &:last-child {
+        margin-right: 24px;
+    }
+}
+
+#{$monetateId} [data-slide] > div {
+  height: 100%;
+  padding: 0;
+}
+
+#{$monetateId} [data-prev-button],
+#{$monetateId} [data-next-button] {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  background: none;
+  color: #000;
+  font-size: 25px;
+  padding: 0;
+  position: absolute;
+  top: 45%;
+  user-select: none;
+}
+
+#{$monetateId} [data-prev-button] {
+  left: 0;
+}
+
+#{$monetateId} [data-next-button] {
+  right: 0;
+}
+
+#{$monetateId} [data-slider-mask] {
+  display: inline-block;
+  width: calc(100% - 0px);
+}
+
+#{$monetateId} .mt-product-tile-img {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#{$monetateId} [data-slide] img {
+  margin-bottom: 6px;
+  max-width: 100%;
+}
+
+#{$monetateId} [data-slide] a {
+  text-decoration: none;
+}
+
+#{$monetateId} [data-pagination*="dots"] [data-pagination-slide] {
+  /* remove below for pagination numbers */
+  text-indent: -9999px;
+}
+
+#{$monetateId} .mt-product-tile-details {
+  text-align: left;
+}
+
+#{$monetateId} .mt-product-tile-details-name {
+  display: block;
+  // font-family: 'soleil',Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 13px;
+  line-height: .8125rem;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+#{$monetateId} .mt-product-tile-details-price {
+  display: inline-block;
+  font-size: 13px;
+  font-size: .8125rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  letter-spacing: 0.01875rem;
+  line-height: 15px;
+  line-height: .9375rem;
+  margin-top: 6px;
+  margin-top: 0.375rem;
+  padding-right: 10px;
+  text-decoration: line-through;
+  text-transform: uppercase;
+}
+
+#{$monetateId} div[data-missing-keys="salePrice"] .mt-product-tile-details-price {
+  display: block;
+  padding-right: 0;
+  text-decoration: none;
+}
+
+#{$monetateId} .mt-product-tile-details-sale-price {
+  color: #da2a2a;
+  display: inline-block;
+  font-size: 14px;
+  font-size: .875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#{$monetateId} button.mt-product-tile-quickshop {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  border-radius: .1875rem;
+  color: #666;
+  font-size: 12px;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: 15px;
+  line-height: .9375rem;
+  margin-bottom: .375rem;
+  margin-top: 0;
+  transition: background-color .1s ease-in-out;
+}
+
+#{$monetateId} button.mt-product-tile-quickshop .btn--quickshop {
+  background-color: transparent;
+  color: #666;
+  color: #000;
+  cursor: pointer;
+  font-size: 13px;
+  font-size: .8125rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  letter-spacing: .09375rem;
+  letter-spacing: .3px;
+  letter-spacing: .01875rem;
+  padding: .75rem 0 .6875rem;
+  text-decoration: none;
+  text-transform: none;
+}
+
+#{$monetateId} button.mt-product-tile-quickshop:hover {
+  background-color: #f1f1f1;
+}

@@ -1,0 +1,91 @@
+// ==================================================================
+// Data
+// ==================================================================
+
+[data-test-id="create-dataset-button"]
+
+
+// Data > Dataset Folders
+.dataset-list-sidebar-legacy .folder-row:contains("All Datasets")
+.dataset-list-sidebar-legacy .folder-row:contains("Customer Attributes")
+.dataset-list-sidebar-legacy .folder-row:contains("Product Catalogs")
+.dataset-list-sidebar-legacy .folder-row:contains("Recommendations")
+
+// Data > Dataset List
+.dataset-row-complete a
+
+
+// Data > Dataset List
+.dataset-upload-button
+
+// Data > Dataset List > Upload Menu
+.dataset-upload-button .menu .menu-item:contains("API Info")
+.dataset-upload-button .menu .menu-item:contains("SFTP Info")
+.dataset-upload-button .menu .menu-item:contains("Manual File Upload")
+
+
+
+
+
+
+// Dataset - Customer Attributes
+.dataset-detail-page .header-tabs a:contains("Attributes")
+.dataset-detail-page .header-tabs a:contains("Update History")
+
+div.button[data-test-id="upload-data-button"]
+.menu-container div.menu .menu-item:contains("API Info")
+.menu-container div.menu .menu-item:contains("SFTP Info")
+.menu-container div.menu .menu-item:contains("Manual File Upload")
+
+
+
+
+
+
+
+
+
+// Dataset - Product Catalog
+.dataset-detail-page .header-tabs a:contains("Search")
+.dataset-detail-page .header-tabs a:contains("Attributes")
+.dataset-detail-page .header-tabs a:contains("Connected Domains")
+.dataset-detail-page .header-tabs a:contains("Update History")
+
+div.button[data-test-id="upload-data-button"]
+.menu-container div.menu .menu-item:contains("API Info")
+.menu-container div.menu .menu-item:contains("SFTP Info")
+.menu-container div.menu .menu-item:contains("Manual File Upload")
+
+
+
+// Dataset - Product Catalog > Search
+.attribute-filter-and-or-toggle .slide-checkbox
+[data-test-id="reset-filters-button"] // Reset filters
+
+.attribute-filter-operator div.button
+.attribute-filter-operator .menu .menu-item:contains("equals")
+.attribute-filter-operator .menu .menu-item:contains("does not equal")
+
+[data-test-id="add-filter-menu"] [data-test-id="select-attribute-button"]
+[data-test-id="add-filter-menu"] .menu li.menu-item
+
+[data-test-id="remove-filter-button"] // Remove filter
+[data-test-id="add-filter-button"] // Add filter
+
+
+
+table.product-search-results .product-row
+
+
+
+
+
+// Dataset - Product Catalog > Connected Domains
+[data-test-id="edit-default-catalogs-button"]
+
+#modal-root .default-catalog-select div.button
+#modal-root .default-catalog-select .menu li.menu-item
+#modal-root .checkbox
+
+#modal-root .modal-foot [data-test-id="save-button"]
+#modal-root .modal-foot [data-test-id="cancel-button"]

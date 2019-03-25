@@ -1,0 +1,171 @@
+{
+  "id": 388861,
+  "title": "Tippy Top Banner - Container",
+  "description": "Tippy Top Banner - Container (Action 1 of 2)",
+  "op": "allInOneV2",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "image",
+  "subcategory": "Tippy Top",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<section class=\"mt_tippy-top\">\n<div class=\"mt_tippy-top__mobile\">&nbsp;</div>\n\n<div class=\"mt_tippy-top__desktop\">&nbsp;</div>\n</section>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#wrapper > div.header-top-section"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "before"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "description": "Where to insert the banner in relation to the Relative Element Selector."
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": "font-size: 0;"
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "label": "Script"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".mt_tippy-top {\n    background: #233538;\n    text-align: center;\n}\n\n\n/* ===================================================== */\n/* Show Mobile Banner, Hide Desktop Banner\n/* ===================================================== */\n.mt_tippy-top__mobile {\n    display: block;\n}\n@media screen and (min-width: 1025px) {\n    .mt_tippy-top__mobile {\n        display: none;\n    }\n}\n.mt_tippy-top__mobile img {\n    display: block;\n    margin: 0 auto;\n    width: 100%;\n}\n\n\n/* ===================================================== */\n/* Hide Mobile Banner, Show Desktop Banner\n/* ===================================================== */\n.mt_tippy-top__desktop {\n    display: none;\n}\n\n@media screen and (min-width: 1025px) {\n    .mt_tippy-top__desktop {\n        display: block;\n    }\n}\n\n.mt_tippy-top__desktop img {\n    display: block;\n    margin: 0 auto;\n    max-width: 100%;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

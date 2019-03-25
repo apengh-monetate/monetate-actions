@@ -1,0 +1,214 @@
+{
+  "title": "Edit Brand Feature Content Block Thumbnail",
+  "description": "Edit Brand Feature Content Block Thumbnail",
+  "op": "allInOneV2",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Home page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<a data-event-action=\"Featured Products\" data-event-label=\"240112\" href=\"https://www.childrensalon.com/dkny-unisex-black-logo-sweatshirt-240112.html\">\n<div class=\"image\">\n<div class=\"img\"><img alt=\"\" class=\"lazyloaded\" data-srcset=\"https://via.placeholder.com/256x256.jpg 1x, https://via.placeholder.com/512x512.jpg 2x\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\" srcset=\"https://via.placeholder.com/256x256.jpg 1x, https://via.placeholder.com/512x512.jpg 2x\" /></div>\n</div>\n\n<div class=\"name\"><span>Placeholder Product Name 1</span></div>\n</a>"
+      },
+      "widget": {
+        "label": "HTML String",
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": null
+      },
+      "widget": {
+        "label": "Relative Element Selector",
+        "options": [
+          {
+            "name": "div.homepagev7-featureproducts > ul.items > li.item:eq(0)",
+            "label": "1st Thumbnail"
+          },
+          {
+            "name": "div.homepagev7-featureproducts > ul.items > li.item:eq(1)",
+            "label": "2nd Thumbnail"
+          },
+          {
+            "name": "div.homepagev7-featureproducts > ul.items > li.item:eq(2)",
+            "label": "3rd Thumbnail"
+          },
+          {
+            "name": "div.homepagev7-featureproducts > ul.items > li.item:eq(3)",
+            "label": "4th Thumbnail"
+          },
+          {
+            "name": "div.homepagev7-featureproducts > ul.items > li.item:eq(4)",
+            "label": "5th Thumbnail"
+          },
+          {
+            "name": "div.homepagev7-featureproducts > ul.items > li.item:eq(5)",
+            "label": "6th Thumbnail"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Thumbnail to edit.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "takeover"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "action_visible": false,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "label": "Banner Div Inline Style",
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "label": "Script",
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "main"
+        ],
+        "id": 217449,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

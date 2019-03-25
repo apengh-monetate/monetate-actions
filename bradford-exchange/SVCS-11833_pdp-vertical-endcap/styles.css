@@ -61,7 +61,7 @@ Adjust the position, top, left, etc to taste.
 --------------------------------------------------------- */
 .mt_endcap.mt_vertical {
   margin-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 17px;
   width: 100%;
 }
 
@@ -119,7 +119,7 @@ Adjust the position, top, left, etc to taste.
 }
 
 .mt_vertical .mt_sliderMiddle .mt_item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .mt_vertical .mt_sliderMiddle .mt_itemWrapper a {
@@ -144,12 +144,13 @@ Adjust the position, top, left, etc to taste.
 .mt_vertical .mt_sliderMiddle .mt_prodName {
   font-size: 12px !important;
   line-height: 16px !important;
+  padding: 5px 0 4px 0 !important;
 }
 
 .mt_vertical .mt_sliderMiddle .mt_priceText {
   font-size: 12px !important;
   line-height: 16px !important;
-  text-align: right;
+  text-align: left;
 }
 
 /* ---------------------------------------------------------

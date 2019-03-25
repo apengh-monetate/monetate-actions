@@ -1,0 +1,74 @@
+/* ===================================================== */
+/* Custom Styles
+/* ===================================================== */
+.mt-countdown {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-family: "Gotham-Bold", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (min-width: 1025px) {
+  .mt-countdown {
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    margin-left: -22px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .mt-countdown {
+    margin-left: 0;
+  }
+}
+
+.mt-countdown__timer {
+  margin-top: -6px;
+}
+
+@media screen and (min-width: 1025px) {
+  .mt-countdown__timer {
+    margin-left: 20px;
+  }
+}
+
+.mt_countdown .mt_tickerElem {
+  font-variant-numeric: tabular-nums;
+  position: relative;
+}
+
+.mt_countdown .mt_time {
+  position: relative;
+}
+
+.mt_countdown .mt_suffix {
+  font-size: 8px;
+  left: 50%;
+  position: absolute;
+  top: 6px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mt_countdown .mt_colon {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+/* ===================================================== */
+/* Change Header Banner Background Color
+/* ===================================================== */
+/*#wrapper .header-banner {
+    background-color: #DD2731 !important;
+}*/

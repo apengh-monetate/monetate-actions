@@ -1,0 +1,42 @@
+.mt_tippy-top {
+    background: #233538;
+    text-align: center;
+}
+
+
+/* ===================================================== */
+/* Show Mobile Banner, Hide Desktop Banner
+/* ===================================================== */
+.mt_tippy-top__mobile {
+    display: block;
+}
+@media screen and (min-width: 1025px) {
+    .mt_tippy-top__mobile {
+        display: none;
+    }
+}
+.mt_tippy-top__mobile img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+/* ===================================================== */
+/* Hide Mobile Banner, Show Desktop Banner
+/* ===================================================== */
+.mt_tippy-top__desktop {
+    display: none;
+}
+
+@media screen and (min-width: 1025px) {
+    .mt_tippy-top__desktop {
+        display: block;
+    }
+}
+
+.mt_tippy-top__desktop img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}

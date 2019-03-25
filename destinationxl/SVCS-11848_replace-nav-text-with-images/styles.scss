@@ -1,0 +1,55 @@
+// nav[role="navigation"] > ul > li > ul[aria-label="Team Shop"]
+nav[role="navigation"] > ul > li > ul[aria-label="Team Shop"] > div {
+    display: block;
+    left: 0;
+    position: relative;
+    right: 0;
+}
+nav[role="navigation"] > ul > li > ul[aria-label="Team Shop"] > div ~ li {
+    @media screen and (min-width: 768px) {
+        display: none !important;
+    }
+}
+
+nav[role="navigation"] > ul > li > ul[aria-label="Team Shop"] {
+    @media screen and (min-width: 768px) {
+        right: 0 !important;
+    }
+}
+
+.mt-team-shop {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
+        max-width: 90rem;
+    }
+
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0 5px;
+        width: 100%;
+
+
+        &-item {
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        &-img {
+            margin-bottom: 10px;
+            max-width: 100%
+        }
+
+        &-text {
+            font-family: "Libre Franklin", sans-serif;
+            font-size: .875rem;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+}

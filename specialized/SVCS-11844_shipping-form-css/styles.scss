@@ -1,0 +1,45 @@
+@media screen and (max-width: 767px) {
+    body.page-checkoutPage {
+
+        #content .container-fluid .row:first-of-type {
+            line-height: 1 !important;
+        }
+
+
+        .shipping-cell {
+            &__title-wrapper {
+                padding: 10px !important;
+            }
+            &__title {
+                padding-bottom: 5px !important;
+            }
+            &__text {
+                padding-bottom: 10px !important;
+            }
+            &__toggle-section {
+                padding: 15px 30px 10px !important;
+                .content {
+                    padding: 0 !important;
+                }
+            }
+            .custom-radio:not(:last-child) {
+                margin-bottom: 10px !important;
+                padding-bottom: 0 !important;
+            }
+        }
+
+
+        #shippingMethodForm {
+            .shipping-cell {
+                &__list {
+                    margin: 20px !important;
+                }
+            }
+            .custom-radio {
+                margin-bottom: 10px !important;
+                padding-bottom: 5px !important;
+                padding-top: 5px !important;
+            }
+        }
+    }
+}

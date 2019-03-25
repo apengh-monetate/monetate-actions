@@ -1,0 +1,34 @@
+// ==================================================================
+// EventBuilder
+// ==================================================================
+
+
+.template-controls div[role="button"]:contains("Interaction")
+.template-controls div[role="button"]:contains("Impression")
+.template-controls div[role="button"]:contains("Page URL")
+.template-controls div[role="button"]:contains("API")
+
+// EventBuilder > Interaction
+.tabContentWrapper div[role="button"]:contains("Click")
+.tabContentWrapper div[role="button"]:contains("Exit Link")
+.tabContentWrapper div[role="button"]:contains("Form Submit")
+.tabContentWrapper div[role="button"]:contains("Generic")
+
+// EventBuilder > Impression
+.tabContentWrapper div[role="button"]:contains("Cookie")
+.tabContentWrapper div[role="button"]:contains("JS Var")
+.tabContentWrapper div[role="button"]:contains("Query Parameter")
+.tabContentWrapper div[role="button"]:contains("HTML Element")
+
+
+// EventBuilder > Page URL
+.tabContentWrapper div[role="button"]:contains("Contains")
+.tabContentWrapper div[role="button"]:contains("Does not contain")
+.tabContentWrapper div[role="button"]:contains("Equals")
+.tabContentWrapper div[role="button"]:contains("Does not equal")
+.tabContentWrapper div[role="button"]:contains("Starts with")
+.tabContentWrapper div[role="button"]:contains("Does not start with")
+
+
+// EventBuilder > API
+.tabContentWrapper div[role="button"]:contains("Custom event key")

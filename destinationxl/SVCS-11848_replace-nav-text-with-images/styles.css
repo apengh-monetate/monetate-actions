@@ -1,0 +1,61 @@
+nav[role="navigation"] > ul > li > ul[aria-label="Team Shop"] > div {
+  display: block;
+  left: 0;
+  position: relative;
+  right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  nav[role="navigation"] > ul > li > ul[aria-label="Team Shop"] > div ~ li {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav[role="navigation"] > ul > li > ul[aria-label="Team Shop"] {
+    right: 0 !important;
+  }
+}
+
+.mt-team-shop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-team-shop {
+    display: block;
+    max-width: 90rem;
+  }
+}
+
+.mt-team-shop__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  list-style: none;
+  padding: 0 5px;
+  width: 100%;
+}
+
+.mt-team-shop__list-item {
+  -ms-flex: 1;
+      flex: 1;
+  padding: 0 10px;
+}
+
+.mt-team-shop__list-img {
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.mt-team-shop__list-text {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: .875rem;
+  font-weight: 700;
+  text-align: center;
+}

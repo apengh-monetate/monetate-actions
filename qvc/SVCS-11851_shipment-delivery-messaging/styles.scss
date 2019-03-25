@@ -1,0 +1,47 @@
+/* ----------------------------------------------------- */
+/* Single Shipment
+/* ----------------------------------------------------- */
+label.deliveryOption.individualPurchase[state="selected"]:after {
+  content: "Choose Auto-Delivery to lock in the price!";
+}
+
+/* ----------------------------------------------------- */
+/* Auto Delivery
+/* ----------------------------------------------------- */
+label.deliveryOption.adPurchase[state="selected"]:after {
+  content: "Lock in the price! Manage shipments & cancel online.";
+}
+
+/* Adjust padding on delivery select box */
+.buyBoxSelectDelivery {
+    padding-bottom: 60px !important;
+}
+
+/* Ensure individual radio buttons are relatively positioned */
+label.deliveryOption.individualPurchase[state="selected"],
+label.deliveryOption.adPurchase[state="selected"] {
+  overflow: visible;
+  position: relative;
+}
+
+label.deliveryOption[state="selected"]:after {
+  color: #28334A;
+  display: inline-block;
+  font-family: "TT Norms Medium", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  position: absolute;
+  text-align: left;
+  text-transform: none;
+  top: 112%;
+  width: calc(200% + 30px);
+}
+
+/* Single Shipment positioning */
+label.deliveryOption.individualPurchase[state="selected"]:after {
+  left: 0px;
+}
+/* Auto Delivery positioning */
+label.deliveryOption.adPurchase[state="selected"]:after {
+  bottom: -42px !important;
+  left: calc(-100% - 30px);
+}

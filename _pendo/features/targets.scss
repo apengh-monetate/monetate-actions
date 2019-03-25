@@ -1,0 +1,29 @@
+// ==================================================================
+// Targets List
+// ==================================================================
+
+// Targets List
+.react-Target-list .filter-controls input
+
+[data-test-id="type-button"]
+.flex-item-strong .filter-menu:nth-child(2) .menu li.check.menu-item:contains("Cookie")
+.flex-item-strong .filter-menu:nth-child(2) .menu li.check.menu-item:contains("HTML Element")
+.flex-item-strong .filter-menu:nth-child(2) .menu li.check.menu-item:contains("JavaScript Variable")
+.flex-item-strong .filter-menu:nth-child(2) .menu li.check.menu-item:contains("Query Parameter")
+.flex-item-strong .filter-menu:nth-child(2) .menu li.menu-item:contains("Reset")
+
+[data-test-id="experience-usage-button"]
+.flex-item-strong .filter-menu:nth-child(3) .menu li.check.menu-item:contains("Active")
+.flex-item-strong .filter-menu:nth-child(3) .menu li.check.menu-item:contains("Inactive")
+.flex-item-strong .filter-menu:nth-child(3) .menu li.check.menu-item:contains("Unused")
+.flex-item-strong .filter-menu:nth-child(3) .menu li.check.menu-item:contains("ID Collector")
+.flex-item-strong .filter-menu:nth-child(3) .menu li.menu-item:contains("Reset")
+
+
+.table-header-controls .grid-col:nth-child(1) div.button
+
+.table-header-controls .button-group div.button:nth-child(1) // Cozy
+.table-header-controls .button-group div.button:nth-child(2) // Compact
+
+.react-Target-list table thead input.checkbox-input // Select all
+.react-Target-list table tbody input.checkbox-input // Individual

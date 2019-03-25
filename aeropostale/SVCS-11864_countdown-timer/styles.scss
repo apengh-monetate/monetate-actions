@@ -1,0 +1,141 @@
+// /*---Default Styles---*/
+// /* Wrapper */
+// .mt_countdown {
+//   display: block;
+//   height: auto;
+//   margin: 0 auto;
+//   padding: 0;
+//   position: relative;
+//   text-align: center;
+//   width: 100%;
+// }
+// /*Hides the plural parameter on any suffixes when counting down.*/
+// .mt_countdown .mt_hide_plural {
+//   display: none;
+// }
+//
+//
+//
+// /*---Optional Ticker Interval Styles---*/
+// /*These may be altered to match the site's native styling or removed if not in use.*/
+// /* Years Interval */
+// .mt_countdown .mt_years {  }
+// .mt_countdown .mt_years .mt_time {  }
+// .mt_countdown .mt_years .mt_suffix {  }
+//
+// /* Weeks Interval */
+// .mt_countdown .mt_weeks {  }
+// .mt_countdown .mt_weeks .mt_time {  }
+// .mt_countdown .mt_weeks .mt_suffix {  }
+//
+// /* Days Interval */
+// .mt_countdown .mt_days {  }
+// .mt_countdown .mt_days .mt_time {  }
+// .mt_countdown .mt_days .mt_suffix {  }
+//
+// /* Hours Interval */
+// .mt_countdown .mt_hours {  }
+// .mt_countdown .mt_hours .mt_time {  }
+// .mt_countdown .mt_hours .mt_suffix {  }
+//
+// /* Minutes Interval */
+// .mt_countdown .mt_minutes {  }
+// .mt_countdown .mt_minutes .mt_time {  }
+// .mt_countdown .mt_minutes .mt_suffix {  }
+//
+// /* Minutes Interval */
+// .mt_countdown .mt_minutes {  }
+// .mt_countdown .mt_minutes .mt_time {  }
+// .mt_countdown .mt_minutes .mt_suffix {  }
+//
+// /* Seconds Interval */
+// .mt_countdown .mt_seconds {  }
+// .mt_countdown .mt_seconds .mt_time {  }
+// .mt_countdown .mt_seconds .mt_suffix {  }
+//
+// /* Seconds Interval */
+// .mt_countdown .mt_seconds {  }
+// .mt_countdown .mt_seconds .mt_time {  }
+// .mt_countdown .mt_seconds .mt_suffix {  }
+//
+// /* Tenths of a Second Interval */
+// .mt_countdown .mt_tenths {  }
+// .mt_countdown .mt_tenths .mt_time {  }
+// .mt_countdown .mt_tenths .mt_suffix {  }
+//
+//
+//
+
+
+/* ===================================================== */
+/* Custom Styles
+/* ===================================================== */
+.mt-countdown {
+    align-content: center;
+    align-items: center;
+    // background: #DD2731;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-family: "Gotham-Bold", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    justify-content: space-around;
+    @media screen and (min-width: 1025px) {
+        justify-content: flex-start;
+        margin-left: -22px;
+    }
+    @media screen and (min-width: 1100px) {
+        margin-left: 0;
+    }
+
+    // ------------------------------------------------------------------
+    // Message
+    // ------------------------------------------------------------------
+    &__message {
+
+    }
+
+
+    // ------------------------------------------------------------------
+    // Timer
+    // ------------------------------------------------------------------
+    &__timer {
+        margin-top: -6px;
+        @media screen and (min-width: 1025px) {
+            margin-left: 20px;
+        }
+    }
+
+}
+
+.mt_countdown {
+    .mt_tickerElem {
+        font-variant-numeric: tabular-nums;
+        position: relative;
+    }
+
+    .mt_time {
+        position: relative;
+    }
+    .mt_suffix {
+        font-size: 8px;
+        left: 50%;
+        position: absolute;
+        top: 6px;
+        transform: translateX(-50%);
+    }
+
+    .mt_colon {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+}
+
+
+/* ===================================================== */
+/* Change Header Banner Background Color
+/* ===================================================== */
+/*#wrapper .header-banner {
+    background-color: #DD2731 !important;
+}*/
