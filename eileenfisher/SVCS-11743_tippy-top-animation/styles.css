@@ -10,7 +10,6 @@
   color: #000;
   font-family: 'Trade Gothic W01 Light';
   text-decoration: underline !important;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -123,4 +122,10 @@
     position: absolute !important;
     top: 72px !important;
   }
+}
+
+#MONETATE-ID [data-slide] > div {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
 }

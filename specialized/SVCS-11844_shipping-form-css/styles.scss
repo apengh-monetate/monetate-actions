@@ -16,7 +16,7 @@
             &__text {
                 padding-bottom: 10px !important;
             }
-            &__toggle-section {
+            &__toggle-section:not([data-checkout-step="2"]) {
                 padding: 15px 30px 10px !important;
                 .content {
                     padding: 0 !important;
@@ -32,7 +32,7 @@
         #shippingMethodForm {
             .shipping-cell {
                 &__list {
-                    margin: 20px !important;
+                    margin: 20px auto !important;
                 }
             }
             .custom-radio {

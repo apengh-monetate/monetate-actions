@@ -11,10 +11,10 @@
   body.page-checkoutPage .shipping-cell__text {
     padding-bottom: 10px !important;
   }
-  body.page-checkoutPage .shipping-cell__toggle-section {
+  body.page-checkoutPage .shipping-cell__toggle-section:not([data-checkout-step="2"]) {
     padding: 15px 30px 10px !important;
   }
-  body.page-checkoutPage .shipping-cell__toggle-section .content {
+  body.page-checkoutPage .shipping-cell__toggle-section:not([data-checkout-step="2"]) .content {
     padding: 0 !important;
   }
   body.page-checkoutPage .shipping-cell .custom-radio:not(:last-child) {
@@ -22,7 +22,7 @@
     padding-bottom: 0 !important;
   }
   body.page-checkoutPage #shippingMethodForm .shipping-cell__list {
-    margin: 20px !important;
+    margin: 20px auto !important;
   }
   body.page-checkoutPage #shippingMethodForm .custom-radio {
     margin-bottom: 10px !important;

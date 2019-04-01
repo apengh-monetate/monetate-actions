@@ -3,6 +3,26 @@
 // ==================================================================
 
 [data-test-id="create-dataset-button"]
+[data-test-id="modal-close-button"] // Data > Dataset List > Create Dataset Modal > Close Modal (Button)
+
+// Data > Dataset List > Create Dataset Modal >
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(1) .radio-card:contains("Customer Attribute")
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(1) .radio-card:contains("Product Catalog")
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(1) .radio-card:contains("Recommendation")
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(1) [data-test-id="next-button"]
+
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(2) input
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(2) [data-test-id="back-button"]
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(2) [data-test-id="next-button"]
+
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(3) label
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(3) [data-test-id="back-button"]
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(3) [data-test-id="next-button"]
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(3) [data-test-id="re-upload-button"]
+
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(4) [data-test-id="back-button"]
+.modal.modal-fullpage > .grid > .grid-col-8 > div > div:nth-child(4) [data-test-id="confirm-and-create-button"]
+
 
 
 // Data > Dataset Folders
@@ -36,8 +56,6 @@ div.button[data-test-id="upload-data-button"]
 .menu-container div.menu .menu-item:contains("API Info")
 .menu-container div.menu .menu-item:contains("SFTP Info")
 .menu-container div.menu .menu-item:contains("Manual File Upload")
-
-
 
 
 

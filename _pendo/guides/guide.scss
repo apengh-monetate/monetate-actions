@@ -56,11 +56,12 @@
     &__hero {
         display: none;
         &[style*="background-image"] {
-            background-position: left center;
+            background-position: 0 66.66667%;
             background-repeat: no-repeat;
             background-size: cover;
             display: block;
             height: 100px;
+            transform: rotateX(180deg) rotateZ(180deg);
             & + h1 {
                 padding: 0 20px;
                 position: absolute;
@@ -161,6 +162,57 @@
         }
     }
 
+
+
+    // ==================================================================
+    // Flexbox
+    // ==================================================================
+    .flex {
+        align-content:       stretch;
+        align-items:         stretch;
+        display:             flex;
+        flex-direction:      row;
+        flex-wrap:           wrap;
+        justify-content:     flex-start;
+
+        @each $value in $flex-direction {
+          &__#{$value} {
+            display: flex;
+            flex-direction: #{$value};
+          }
+        }
+
+        &.nowrap {
+          flex-wrap: nowrap;
+        }
+
+        &__item {
+          flex: 0 1 100%;
+          width: 100%;
+        }
+
+        // ------------------------------------------------------------------
+        // Container Properties
+        // ------------------------------------------------------------------
+        @each $property, $values in $flex-container {
+          @each $key, $value in $values {
+            &.#{$property}--#{$key} {
+              #{$property}: #{$value};
+            }
+          }
+        }
+
+
+        // ------------------------------------------------------------------
+        // Item Properties
+        // ------------------------------------------------------------------
+        @each $key, $value in $align-self {
+          .align-self--#{$key} {
+            align-self: #{$value};
+          }
+        }
+
+    }
 
 
 

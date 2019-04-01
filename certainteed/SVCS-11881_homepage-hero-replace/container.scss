@@ -1,0 +1,45 @@
+.mt_hero {
+    display: block;
+    margin: 0 auto;
+    padding: 0 !important;
+
+    &__mobile {
+        display: block;
+        @media screen and (min-width: 1025px) {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__desktop {
+        display: none;
+        @media screen and (min-width: 1025px) {
+            display: block;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+
+}
+
+.node-landing-page .field-name-field-paragraphs .landing-module-hero-carousel .mt_hero {
+    padding-bottom: 0 !important;
+}
+
+
+.landing-module-hero-carousel .slider {
+    height: auto !important;
+}
+
+
+/* ===================================================== */
+/* Show Mobile Image, Hide Desktop Image
+/* ===================================================== */
+
+/* ===================================================== */
+/* Hide Mobile Image, Show Desktop Image
+/* ===================================================== */

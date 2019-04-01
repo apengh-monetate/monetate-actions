@@ -1,4 +1,16 @@
+table.total tr:has(#cart_services_and_warranties),
+table.total tr:has(#cart_estshipping),
+table.total tr:has(#cart_esttax)
+
+
 table.total tr:nth-child(2),
 table.total tr:nth-child(3) {
     display: none !important;
+}
+
+
+td#mtClonedTotal {
+  font-size: 1.064rem !important;
+  font-weight: 600 !important;
+  text-align: right !important;
 }

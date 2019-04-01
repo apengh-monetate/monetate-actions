@@ -1,0 +1,67 @@
+.mt_hero {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero {
+    padding: 0;
+  }
+}
+
+.mt_hero__img {
+  padding: 0;
+}
+
+.mt_hero img {
+  display: block;
+  height: 100%;
+  left: 50%;
+  max-width: initial;
+  min-width: initial;
+  position: relative;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  vertical-align: bottom;
+  width: initial;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero img {
+    width: 100%;
+  }
+}
+
+.mt_hero__content {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: inline-block;
+  left: 0;
+  margin: auto;
+  padding: 25px;
+  position: absolute;
+  text-align: center;
+  top: 25%;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero__content {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 500px;
+  }
+}
+
+.mt_hero__actions {
+  margin-top: 20px;
+}
+
+.mt_hero__actions .btn {
+  border-color: #fff;
+  color: #fff;
+}

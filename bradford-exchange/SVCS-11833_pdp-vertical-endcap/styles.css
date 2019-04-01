@@ -67,7 +67,6 @@ Adjust the position, top, left, etc to taste.
 
 .mt_vertical .mt_sliderTop {
   background-color: #fff;
-  background-image: -webkit-linear-gradient(top, #e0e8ef, #ffffff);
   background-image: linear-gradient(to bottom, #e0e8ef, #ffffff);
   border-top: 1px solid #32465A;
   margin-bottom: 10px;
@@ -76,6 +75,7 @@ Adjust the position, top, left, etc to taste.
 
 .mt_vertical .mt_sliderBottom {
   background: url(https://www.bradfordexchange.com/store/20091217001/images/backgrounds/bg-content-box-bottom.png) repeat-x 0 0;
+  display: none;
   /*
     border-bottom: 1px solid #32465A;
     background-color: #e0e8ef;
@@ -100,7 +100,6 @@ Adjust the position, top, left, etc to taste.
 
 .mt_vertical .mt_sliderMask ul.mt_animate {
   height: auto !important;
-  -webkit-transition: top .25s;
   transition: top .25s;
 }
 
@@ -123,15 +122,10 @@ Adjust the position, top, left, etc to taste.
 }
 
 .mt_vertical .mt_sliderMiddle .mt_itemWrapper a {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 
 .mt_vertical .mt_sliderMiddle .mt_itemImageContainer .mt_image {

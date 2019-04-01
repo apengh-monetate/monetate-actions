@@ -1,0 +1,114 @@
+{
+  "title": "Replace Category Hero (Image)",
+  "description": "Replace Category Hero (Action 2 of 2)",
+  "op": "setImageSource",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "image",
+  "subcategory": "Home page",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "raw_img_creative",
+        "name": "creative",
+        "value": {
+          "discriminator": "raw_img_creative",
+          "creative": {
+            "last_updated": "2019-03-26T18:12:59",
+            "tags": {
+              "builtin": [
+                "image"
+              ],
+              "custom": []
+            },
+            "height": 460,
+            "generated": true,
+            "id": 2008943,
+            "archived": false,
+            "name": "1200-460.png",
+            "extension": ".png",
+            "sha": "187093180b13d7258f402e9e27f285121ed8146a",
+            "ref": "1105/2008943.png",
+            "notes": "",
+            "width": 1200,
+            "image_url": "https://int-kpipe-1.monetate.org/img/1/1105/2008943.png",
+            "type": "image"
+          },
+          "dyntexts": []
+        }
+      },
+      "widget": {
+        "label": "New Image",
+        "type": "RawImageCreative",
+        "description": "Upload an image creative",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": ".mt_cat-hero .mt_cat-hero__img img"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Image to Replace.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "setDimensions",
+        "value": false
+      },
+      "widget": {
+        "label": "Set Dimensions?",
+        "type": "BooleanField",
+        "description": "If checked, sets the dimensions of the selected image to that of the image provided",
+        "action_visible": false
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select All Elements",
+        "type": "BooleanField",
+        "description": "If more than one element matches the Element Selector, should the change apply to all elements or just the first one?",
+        "action_visible": false
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": false
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

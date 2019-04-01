@@ -1,0 +1,48 @@
+.mt_hero {
+  display: block;
+  margin: 0 auto;
+  padding: 0 !important;
+}
+
+.mt_hero__mobile {
+  display: block;
+}
+
+@media screen and (min-width: 1025px) {
+  .mt_hero__mobile {
+    display: none;
+  }
+}
+
+.mt_hero__mobile img {
+  width: 100%;
+}
+
+.mt_hero__desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .mt_hero__desktop {
+    display: block;
+  }
+}
+
+.mt_hero__desktop img {
+  max-width: 100%;
+}
+
+.node-landing-page .field-name-field-paragraphs .landing-module-hero-carousel .mt_hero {
+  padding-bottom: 0 !important;
+}
+
+.landing-module-hero-carousel .slider {
+  height: auto !important;
+}
+
+/* ===================================================== */
+/* Show Mobile Image, Hide Desktop Image
+/* ===================================================== */
+/* ===================================================== */
+/* Hide Mobile Image, Show Desktop Image
+/* ===================================================== */

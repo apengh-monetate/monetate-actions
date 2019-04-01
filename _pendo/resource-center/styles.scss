@@ -1,0 +1,47 @@
+// .\_pendo-badge\_ {
+//     bottom: 0 !important;
+//     box-shadow: none !important;
+//     font-size: 0 !important;
+//     height: 42px !important;
+//     line-height: 0 !important;
+//     right: 20px !important;
+//     width: 130px !important;
+// }
+// .\_pendo-badge\_ img {
+//     height: 100% !important;
+//     opacity: .85 !important;
+//     transition: opacity 0.3s ease;
+//     width: 100% !important;
+// }
+// .\_pendo-badge\_ img {
+//
+// }
+
+div[id*="pendo-badge"] {
+    bottom: 0 !important;
+    box-shadow: none !important;
+    font-size: 0 !important;
+    height: 42px !important;
+    line-height: 0 !important;
+    right: 20px !important;
+    width: 130px !important;
+    img {
+        height: 100% !important;
+        opacity: .85 !important;
+        transition: opacity 0.3s ease;
+        width: 100% !important;
+        &:hover {
+            opacity: 1 !important;
+        }
+    }
+}
+
+
+
+
+// ==================================================================
+// ZenDesk Integration
+// ==================================================================
+.zendesk-integration {
+
+}

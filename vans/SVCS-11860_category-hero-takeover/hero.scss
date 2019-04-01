@@ -1,0 +1,158 @@
+.mt-hero {
+    display: block;
+    margin: 0 auto;
+    max-width: 1920px;
+    position: relative;
+
+
+    // ==================================================================
+    // Picture
+    // ==================================================================
+    &__picture {
+        overflow: hidden;
+        position: relative;
+    }
+
+
+    // ==================================================================
+    // Overlay
+    // ==================================================================
+    &__overlay {
+        margin: 0 auto;
+        max-width: 1440px;
+        padding: 0.625rem;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        @media screen and (min-width: 1024px) {
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+        }
+
+        &[data-show-mobile="true"] {
+            display: block;
+        }
+        &[data-show-mobile="false"] {
+            display: none;
+        }
+        @media screen and (min-width: 640px) {
+            &[data-show-tablet="true"] {
+                display: block;
+            }
+            &[data-show-tablet="false"] {
+                display: none;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            &[data-show-desktop="true"] {
+                display: block;
+            }
+            &[data-show-desktop="false"] {
+                display: none;
+            }
+        }
+
+
+        &.tablet {
+            @media screen and (min-width: 640px) {
+                &-left {
+                    left: 0;
+                    right: auto;
+                    text-align: left;
+                }
+                &-right {
+                    left: auto;
+                    right: 0;
+                    text-align: right;
+                }
+            }
+        }
+        &.desktop {
+            @media screen and (min-width: 1024px) {
+                &-left {
+                    left: 20px;
+                    right: auto;
+                    text-align: left;
+                }
+                &-right {
+                    left: auto;
+                    right: 20px;
+                    text-align: right;
+                }
+            }
+        }
+
+
+
+
+
+        h2 {
+            color: #000;
+            display: block;
+            font-size: calc( 36px + (50 - 36) * (100vw - 320px) / (1440 - 320));
+            font-weight: 700;
+            letter-spacing: 0.025em;
+            line-height: 1.0em;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            display: inline;
+            font-size: calc( 1.75em + (4.5 - 1.75) * (100vw - 20em) / (120 - 20) );
+            letter-spacing: 0.025em;
+            line-height: 1.35em;
+            padding: 0px 10px;
+        }
+
+        h4 {
+            color: #000;
+            display: block;
+            font-family: Helvetica, Helvetica Neue,Arial,sans-serif;
+            font-size: calc( 12px + (18 - 12) * (100vw - 320px) / (1920 - 320));
+            font-weight: 300;
+            line-height: 1.4em;
+            margin: 5px 0 15px;
+            text-transform: none;
+        }
+
+    } // Overlay
+
+
+
+}
+
+
+/* ===================================================== */
+/* Overlay
+/* ===================================================== */
+
+/* ===================================================== */
+/* Hide/Show Mobile Overlay
+/* ===================================================== */
+
+/* ===================================================== */
+/* Hide/Show Tablet Overlay
+/* ===================================================== */
+
+/* ===================================================== */
+/* Hide/Show Desktop Overlay
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* Position Overlay - Tablet
+/* ===================================================== */
+
+/* ===================================================== */
+/* Position Overlay - Desktop
+/* ===================================================== */
+
+
+/* ===================================================== */
+/* Text Styling
+/* ===================================================== */

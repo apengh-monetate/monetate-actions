@@ -1,0 +1,20 @@
+div[id*="pendo-badge"] {
+  bottom: 0 !important;
+  box-shadow: none !important;
+  font-size: 0 !important;
+  height: 42px !important;
+  line-height: 0 !important;
+  right: 20px !important;
+  width: 130px !important;
+}
+
+div[id*="pendo-badge"] img {
+  height: 100% !important;
+  opacity: .85 !important;
+  transition: opacity 0.3s ease;
+  width: 100% !important;
+}
+
+div[id*="pendo-badge"] img:hover {
+  opacity: 1 !important;
+}

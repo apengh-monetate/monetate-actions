@@ -1,0 +1,16 @@
+// ==================================================================
+// RESOURCE CENTER
+// ==================================================================
+
+// Badge
+// Pendo Resource Center > Badge
+div[data-layout="badgeResourceCenter"] img
+
+// Pendo Resource Center > Monetate Knowledge Base
+ol._pendo-resource-center-home-list > li > a._pendo-resource-center-module-list-item-text:contains("Monetate Knowledge Base");
+
+// Pendo Resource Center > Guide List
+ol._pendo-resource-center-home-list > li > a._pendo-resource-center-module-list-item-text:contains("Guide List");
+
+// Pendo Resource Center > Onboarding
+ol._pendo-resource-center-home-list > li > a._pendo-resource-center-module-list-item-text:contains("Onboarding");

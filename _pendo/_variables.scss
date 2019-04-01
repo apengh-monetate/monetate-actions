@@ -25,3 +25,50 @@ $xlight-gray: #eff5ff;
 //     font-size: 36px;
 //     margin: 0 0 11px;
 // }
+
+
+
+// ==================================================================
+// Flexbox
+// ==================================================================
+$flex-direction: (
+  row,
+  row-reverse,
+  column,
+  column-reverse
+);
+
+$flex-container: (
+  align-content: (
+    center:         center,
+    end:            flex-end,
+    start:          flex-start,
+    around:         space-around,
+    between:        space-between,
+    stretch:        stretch
+  ),
+  align-items: (
+    baseline:       baseline,
+    content:        center,
+    start:          flex-start,
+    end:            flex-end,
+    stretch:        stretch
+  ),
+  justify-content: (
+    center:         center,
+    end:            flex-end,
+    start:          flex-start,
+    around:         space-around,
+    between:        space-between,
+    evenly:         space-evenly
+  )
+);
+
+$align-self: (
+  auto:             auto,
+  baseline:         baseline,
+  content:          center,
+  end:              flex-end,
+  start:            flex-start,
+  stretch:          stretch
+);

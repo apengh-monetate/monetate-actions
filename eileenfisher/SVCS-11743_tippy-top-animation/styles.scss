@@ -100,3 +100,9 @@
       top: 72px !important;
   }
 }
+
+
+#MONETATE-ID [data-slide] > div {
+    display: inline-flex;
+    position: relative;
+}

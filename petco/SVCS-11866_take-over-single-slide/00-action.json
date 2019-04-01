@@ -1,0 +1,197 @@
+{
+  "id": 391459,
+  "title": "Takeover Single Slide on Global Banner",
+  "description": "Takeover Single Slide on Global Banner",
+  "op": "allInOneV2",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "html",
+  "subcategory": "Banner",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<div class=\"col-3 desktop-only\">\n    <img alt=\" \" class=\"center-block margin-top-lg\" src=\"https://via.placeholder.com/179x86.png\">\n</div>\n<div class=\"col-6\">\n    <div class=\"row\">\n        <h2 class=\"text-white text-left margin-top-md margin-bottom-md desktop-only\" style=\"font-size:1.8em; line-height:1.25em;\">$20 off your order of $80 or more</h2>\n        <h2 class=\"text-white text-left margin-top-xsm margin-bottom-sm mobile-only\" style=\"font-size:1.3em; line-height:1.25em;\">$20 off your order of $80 or more+</h2>\n    </div>\n    <ul class=\"text-left text-white text-x-small margin-left-lg\">\n        <li>The promotion ends XX/XX/XX at 11:59pm PST.</li>\n        <li>Promo code: <strong>CODE</strong>. Exclusions apply.</li>\n        <li>Offer valid only at petco.com. <a href=\"javascript:void(0);\" onclick=\"petcoCommonJS.showModal('spring20');\" class=\"text-normal text-underline\" tabindex=\"0\">See full details &gt;</a></li>\n    </ul>\n</div>\n<div class=\"col-3 text-center\">\n    <div class=\"margin-top-sm margin-bottom-sm\">\n        <a class=\"btn btn-inverted btn-full\" href=\"/shop/en/petcostore/s/sale-and-offers\" promo_onsite_link=\"aa0002-_-hpg-_-_-_-globalstripe-_-sitepromotion-_-20off80-_-fw8\" onclick=\"clickTrackLink(this);\" tabindex=\"0\">Shop Now</a>\n    </div>\n</div>"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "StringSelectField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector",
+        "options": [
+            {
+                "name": "#promo-carousel .item:eq(0) .container .row",
+                "label": "Slide 1"
+            },
+            {
+                "name": "#promo-carousel .item:eq(1) .container .row",
+                "label": "Slide 2"
+            },
+            {
+                "name": "#promo-carousel .item:eq(2) .container .row",
+                "label": "Slide 3"
+            },
+            {
+                "name": "#promo-carousel .item:eq(3) .container .row",
+                "label": "Slide 4"
+            },
+            {
+                "name": "#promo-carousel .item:eq(4) .container .row",
+                "label": "Slide 5"
+            },
+            {
+                "name": "#promo-carousel .item:eq(5) .container .row",
+                "label": "Slide 6"
+            }
+        ]
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "takeover"
+      },
+      "widget": {
+        "description": "Where to insert the banner in relation to the Relative Element Selector.",
+        "label": "Insert Method",
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "action_visible": false
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "label": "Script"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

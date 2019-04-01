@@ -1,0 +1,150 @@
+.mt_cat-hero {
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+}
+
+.mt_cat-hero__img {
+  padding: 0;
+}
+
+.mt_cat-hero img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.mt_cat-hero__thumbs {
+  background: #ebebeb;
+  padding: 20px 0 18px;
+  position: relative;
+}
+
+.mt_cat-hero__thumbs br {
+  font-size: 14px;
+  line-height: 23.8px;
+}
+
+.mt_cat-hero__content {
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_cat-hero__content {
+    background: url("https://d3fgmcoixbear.cloudfront.net/s3fs-public/theme_images/bg-header-cta.png") center bottom/cover no-repeat;
+    min-width: 265px;
+    padding: 15px 30px;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 265px;
+    z-index: 100;
+  }
+}
+
+.mt_cat-hero__content::after {
+  background: url("https://d3fgmcoixbear.cloudfront.net/s3fs-public/theme_images/shadow-short.png") top center no-repeat;
+  bottom: -15px;
+  content: "";
+  height: 15px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.mt_cat-hero__content h1 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 0 0 50px;
+  text-align: center;
+  word-break: inherit;
+}
+
+@media screen and (min-width: 480px) {
+  .mt_cat-hero__content h1 {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mt_cat-hero__content h1 {
+    padding: 0 0 15px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .mt_cat-hero__content h1 {
+    padding: 0 0 30px;
+  }
+}
+
+.mt_cat-hero__content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mt_cat-hero__content ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.mt_cat-hero__content ul li a {
+  border: 3px solid #007ac3;
+  border-radius: 0;
+  clear: both;
+  color: #007ac3;
+  cursor: pointer;
+  display: block;
+  font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  line-height: 100%;
+  margin: 0 auto 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .3s ease;
+  vertical-align: top;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .mt_cat-hero__content ul li a {
+    font-size: 14px;
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mt_cat-hero__content ul li a {
+    padding: 10px 25px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .mt_cat-hero__content ul li a {
+    padding: 15px 25px;
+  }
+}
+
+.mt_cat-hero__content ul li a:hover, .mt_cat-hero__content ul li a:active, .mt_cat-hero__content ul li a:focus {
+  background-color: #007ac3;
+  border-color: #007ac3;
+  color: #fff;
+  text-decoration: none;
+}

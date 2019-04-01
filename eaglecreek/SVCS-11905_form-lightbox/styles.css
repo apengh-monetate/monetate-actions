@@ -1,0 +1,14 @@
+#monetate_lightbox_content_container {
+  font-size: 0;
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  #monetate_lightbox_content_container {
+    max-height: 100vh;
+  }
+}
+
+#monetate_lightbox_content_container input {
+  font-size: 14px;
+  line-height: 21px;
+}
