@@ -7,7 +7,6 @@
     function hideElements() {
         for(var i = 0; i < elementsToHide.length; i++) {
             var element = elementsToHide[i];
-
             var node = document.getElementById(element);
             if(node) {
                 var parentEl = node.parentElement;
@@ -16,11 +15,10 @@
         }
     }
 
-    // Update subtotal to match total
-    function updateSubtotal() {
-        cartSubtotal.innerText = cartTotal.innerText;
+    // Update total to match subtotal
+    function updateTotal() {
+        cartTotal.innerHTML = cartSubtotal.innerHTML;
     }
-
 
     // Mutation observer to observe for change to cart total
     var config = {
@@ -34,7 +32,7 @@
     var callback = function(mutationsList, observer) {
         for(var i = 0; i < mutationsList.length; i++) {
             if (mutationsList[i].type == 'characterData') {
-                updateSubtotal();
+                updateTotal();
                 hideElements();
             }
         }
@@ -44,9 +42,11 @@
     var observer = new MutationObserver(callback);
 
     // Start observing the target node for configured mutations
-    observer.observe(cartTotal, config);
+    var estimatedTax = document.getElementById('cart_esttax');
+    estimatedTax = estimatedTax.parentElement;
+    observer.observe(estimatedTax, config);
 
 
     hideElements();
-    updateSubtotal();
+    updateTotal();
 })();

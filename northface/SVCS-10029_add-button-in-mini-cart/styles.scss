@@ -11,13 +11,17 @@
 // }
 
 #checkout > a.mini-cart-action:before {
-  text-align: center;
-  width: 100%;
+    content: "" !important;
+    display: none !important;
 }
 
 #checkout {
     margin-right: 20px;
     text-align: right;
+    > a.mini-cart-action {
+        font-size: 15px !important;
+        line-height: 22px !important;
+    }
 }
 
 #secureCheckout > a.mini-cart-action {

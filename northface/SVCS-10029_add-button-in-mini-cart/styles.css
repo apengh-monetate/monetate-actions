@@ -1,11 +1,16 @@
 #checkout > a.mini-cart-action:before {
-  text-align: center;
-  width: 100%;
+  content: "" !important;
+  display: none !important;
 }
 
 #checkout {
   margin-right: 20px;
   text-align: right;
+}
+
+#checkout > a.mini-cart-action {
+  font-size: 15px !important;
+  line-height: 22px !important;
 }
 
 #secureCheckout > a.mini-cart-action {
@@ -19,15 +24,19 @@
 
 .mini-cart-actions.cart-actions {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -35,6 +44,7 @@
 .mini-cart-actions.cart-actions > * {
   display: block;
   -webkit-box-flex: 1;
+  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }

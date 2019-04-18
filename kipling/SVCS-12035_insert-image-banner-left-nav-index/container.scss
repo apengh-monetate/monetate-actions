@@ -1,0 +1,13 @@
+.mt-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    &__img {
+        font-size: 0;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}

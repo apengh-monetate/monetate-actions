@@ -1,0 +1,372 @@
+@import "../variables";
+
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#MONETATE-ID {
+    position: relative;
+
+    li {
+        list-style: none;
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        margin: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider-mask],
+    &[data-slider-wrapper="fade"] [data-slider-mask] {
+        touch-action: pan-y;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        touch-action: pan-x;
+    }
+
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider] {
+        white-space: nowrap !important;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        float: none;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slide] {
+        display: inline-block !important;
+        vertical-align: top;
+        white-space: normal;
+    }
+    &[data-slider-wrapper="vertical"] [data-slide] {
+        display: block !important;
+    }
+    &[data-slider-wrapper="fade"] [data-slide] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+    &[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+    // ==================================================================
+    // Buttons / Pagination
+    // ==================================================================
+    [data-pagination-slide],
+    [data-prev-button],
+    [data-next-button]{
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    [data-pagination-slide] * {
+        pointer-events: none;
+    }
+
+} // MONETATE-ID
+
+
+
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#MONETATE-ID {
+    left: 50%;
+    margin: 0 auto;
+    max-width: 1320px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    text-align: center;
+    transform: translateX(-50%);
+    width: 100vw;
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @media screen and (min-width: 1430px) {
+        left: 0;
+        transform: none;
+    }
+
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        display: inline-block;
+        width: 100%;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        height: 400px!important;
+    }
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+
+    }
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        > div {
+            height: 100%;
+            padding-right: 5px;
+            @media screen and (min-width: $breakpoint-lg) {
+                padding: 0 8px;
+            }
+        }
+        img {
+            margin-bottom: 5px;
+            max-height: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+
+    // ==================================================================
+    // Buttons
+    // ==================================================================
+    [data-prev-button],
+    [data-next-button] {
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        -webkit-user-select: none;
+        background: none;
+        border: none;
+        color: #000;
+        font-size: 0;
+        height: 24px;
+        padding: 0;
+        padding: 1px;
+        position: absolute;
+        top: 47%;
+        user-select: none;
+        width: 24px;
+        @media screen and (min-width: $breakpoint-xl) {
+            height: 32px;
+            width: 32px;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    [data-prev-button] {
+        left: 10px;
+        @media screen and (min-width: $breakpoint-xl) {
+            left: 0;
+        }
+    }
+    [data-next-button] {
+        right: 10px;
+        @media screen and (min-width: $breakpoint-xl) {
+            right: 0;
+        }
+    }
+    &[data-slider-wrapper="vertical"] [data-prev-button] {
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    &[data-slider-wrapper="vertical"] [data-next-button] {
+        bottom: 0;
+        left: 50%;
+        right: auto;
+        top: auto;
+        transform: translateX(-50%);
+    }
+
+
+    // ==================================================================
+    // Pagination
+    // ==================================================================
+    [data-pagination="thumbnails"] [data-pagination-slide] {
+        background: none;
+        border-radius: 0;
+        height: auto;
+        width: 40px;
+    }
+
+    [disabled] {
+        opacity: 0.5;
+    }
+
+    [data-pagination="dots"],
+    [data-pagination="dots-page"] {
+        margin-top: 60px;
+        padding: 0 !important;
+    }
+
+    [data-pagination-slide] {
+        background: #D6D6D6;
+        border-radius: 50%;
+        display: inline-block;
+        height: 10px;
+        margin: 5px 7px;
+        opacity: 1;
+        transition: background 200ms ease;
+        width: 10px;
+        &[data-slide-active] {
+            background: #869791;
+        }
+    }
+    [data-pagination*="dots"] [data-pagination-slide] {
+        /* remove below for pagination numbers */
+        text-indent: -9999px;
+    }
+
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    .mt-slider {
+        &__heading {
+            display: block;
+            line-height: 50px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            position: relative;
+            width: calc(100% - 20px);
+            @media screen and (min-width: $breakpoint-md) {
+                margin-bottom: 20px;
+            }
+            &::before {
+                background: #ddd;
+                content: "";
+                display: block;
+                height: 1px;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 28px;
+                width: 100%;
+            }
+
+            h3 {
+                background: #fff;
+                display: inline-block;
+                font-family: Helvetica, "HelveticaNeueLTStd-Roman";
+                font-size: 17px;
+                font-weight: bold;
+                line-height: 50px;
+                margin: 0 auto;
+                padding: 4px 12px;
+                position: relative;
+                text-transform: uppercase;
+                z-index: 1;
+            }
+
+        }
+
+        &__wrapper {
+
+        }
+    }
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    .mt-slide {
+        display: block;
+        font-family: Helvetica, "HelveticaNeueLTStd-Roman";
+
+        // ------------------------------------------------------------------
+        // Image
+        // ------------------------------------------------------------------
+        &__img {
+            img {
+
+            }
+        }
+
+
+        &__details {
+            display: none;
+            @media screen and (min-width: $breakpoint-lg) {
+                align-items: flex-start;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+        }
+        &__title {
+            display: inline-block;
+            font-size: 10px;
+            text-align: left;
+        }
+
+        &__price {
+            display: inline-flex;
+            flex-direction: column;
+            font-size: 10px;
+            text-align: right;
+            @media screen and (min-width: $breakpoint-xl) {
+                flex-direction: row-reverse;
+                font-size: 11px;
+            }
+            &--reg {
+                color: #ccc;
+                display: inline-block;
+                text-decoration: line-through;
+                &:first-letter {
+                    margin-right: 2px;
+                }
+            }
+            &--sale {
+                color: #d62525;
+                display: inline-block;
+                @media screen and (min-width: $breakpoint-xl) {
+                    margin-right: 4px;
+                }
+                &:first-letter {
+                    margin-right: 2px;
+                }
+            }
+        }
+
+    }
+
+
+    [data-missing-keys="salePrice"] {
+        .mt-slide__price--reg {
+            color: #333;
+            text-decoration: none;
+        }
+    }
+}
+
+
+html, body {
+    overflow-x: hidden;
+}

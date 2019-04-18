@@ -1,0 +1,66 @@
+{% set columns = 2 %}
+{% set rows    = 2 %}
+
+
+{# CALCULATE MAX PRODUCTS TO RETURN BASED ON ROWS/COLUMNS #}
+{% set maxProducts = columns * rows %}
+{% set products = recommended_products | length %}
+
+{# CALCULATE # OF PRODUCTS TO RETURN #}
+{% if products < maxProducts %}
+  {% set results = (products / columns) | round(0,'floor') | int %}
+  {% set fetch = results * columns %}
+{% else %}
+  {% set fetch = maxProducts %}
+{% endif %}
+
+
+{# CSS CALCULATIONS #}
+{% set maxWidth = 640 %} {# container max-width, in pixels #}
+{% set columnWidth = 100 / columns | round(5) %} {# column width, as percentage of parent container #}
+
+<meta charset="UTF-8">
+<style>
+body {margin:0; padding:0;}
+</style>
+
+<div class="mt-container" style="
+  box-sizing: border-box;
+  color:#1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.055em;
+  margin: 0 auto;
+  max-width: {{maxWidth}}px;
+  overflow: auto;
+  text-transform: uppercase;">
+
+  <!--
+<h3 class="mt-heading" style="font-size:16px; font-weight:400; text-align:center; text-transform:uppercase; margin-bottom:0;">
+    Wait, There&rsquo;s More...<br>
+    <strong style="font-weight:600; font-size:16px;">We Think You&rsquo;ll Love These</strong>
+  </h3>
+-->
+  <div class="mt-product__grid" style="box-sizing:border-box; display:block; max-width:{{maxWidth}}px; margin:0 auto;">
+    {% for product in recommended_products[:fetch] %}
+    <div class="mt-product__wrapper" style="box-sizing:border-box; display:inline-block; float:left; position:relative; width:{{columnWidth}}%;">
+      <div class="mt-product" style="box-sizing:border-box; display:block; padding:0 10px 10px 10px; text-align:center; font-size:14px; line-height:18px; position:relative;">
+        <a class="mt-product__link" href="{{ product.link }}" alias="MonetateLink" style="color:#333; display:block; text-decoration:none;">
+          <img class="mt-product__img" src="{{product.imageLink }}" style="display:block; margin-bottom:10px; text-align:center; width:100%;">
+          <span class="mt-product__title" style="display:block; font-size: 14px; line-height:18px; font-weight:700;">{{ product.title | truncate(40, False, '') }}</span>
+          <span class="mt-product__price" style="display:block; font-weight:700;">{{ "$%.2f"|format(product.price|float) }}</span>
+        </a>
+        <div class="mt-product__cta" style="display:block; text-align:center; width:100%; position:relative; bottom:0; left:0; right:0;">
+          <a href="{{ product.link }}" alias="MonetateLink"  style="text-decoration:underline; text-transform:uppercase; font-size:14px; line-height:18px; color:#333; font-weight:700;">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+  <div class="mt-disclaimer" style="display:block; position:relative; clear:both; color:#777; font-size:9px; text-align:center; padding-top:60px; text-transform:none;">
+    <em>Please note, prices of items may vary due to promotional changes.</em>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+/* ===================================================== */
+/* Switch order of prices in Responsive Endcaps
+/* ===================================================== */
+
+$red: #D41D18;
+
+.mt_endcap {
+    .mt_priceText {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+    }
+    .mt_altPrice {
+        // color: $red !important;
+        text-decoration: none !important;
+    }
+    .mt_altPrice + .mt_price {
+        text-decoration: line-through !important;
+    }
+
+}

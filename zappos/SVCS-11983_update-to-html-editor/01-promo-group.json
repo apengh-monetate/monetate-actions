@@ -1,0 +1,176 @@
+{
+    "title": "Homepage - Promo Group Insert HTML (Editor)",
+    "description": "Homepage - Promo Group Insert HTML",
+    "op": "allInOneV2",
+    "slot": "actionbuilder_ag_0",
+    "slot_type": "none",
+    "category": "html",
+    "subcategory": "Home page",
+    "action_events": [
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "str",
+                "name": "html",
+                "value": "<section class=\"mt_promo-group\">\n    <h2 class=\"mt_promo-group__header\">Spring Must-Have Silhouettes</h2>\n    <div class=\"mt_promo-group__flex\">\n        <a href=\"#\" class=\"mt_promo-group__flex-item\">\n            <article>\n                <img class=\"mt_promo-group__img\" src=\"https://via.placeholder.com/650x433\" alt=\"\">\n                <div class=\"mt_promo-group__text\">\n                    <p class=\"mt_promo-group__text-heading\">Espadrilles: Elevate your look instantly!</p>\n                    <p class=\"mt_promo-group__text-cta\">Shop Now</p>\n                </div>\n            </article>\n        </a>\n\n        <a href=\"#\" class=\"mt_promo-group__flex-item\">\n            <article>\n                <img class=\"mt_promo-group__img\" src=\"https://via.placeholder.com/650x433\" alt=\"\">\n                <div class=\"mt_promo-group__text\">\n                    <p class=\"mt_promo-group__text-heading\">Slides: Turn heads with stylish ease!</p>\n                    <p class=\"mt_promo-group__text-cta\">Shop Now</p>\n                </div>\n            </article>\n        </a>\n\n        <a href=\"#\" class=\"mt_promo-group__flex-item\">\n            <article>\n                <img class=\"mt_promo-group__img\" src=\"https://via.placeholder.com/650x433\" alt=\"\">\n                <div class=\"mt_promo-group__text\">\n                    <p class=\"mt_promo-group__text-heading\">Booties: Wear them now through spring!</p>\n                    <p class=\"mt_promo-group__text-cta\">Shop Now</p>\n                </div>\n            </article>\n        </a>\n    </div>\n</section>"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "HtmlCodeField",
+                "description": "HTML to be inserted",
+                "label": "HTML String"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "selector",
+                "value": "div[data-slot-id=\"primary-5\"]"
+            },
+            "widget": {
+                "label": "Relative Element Selector",
+                "type": "CssSelectorField",
+                "description": "CSS Selector to find the relative element.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "imeth",
+                "value": "takeover"
+            },
+            "widget": {
+                "description": "Where to insert the banner in relation to the Relative Element Selector.",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First Child"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last Child"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "label": "Insert Method"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_divStyle",
+                "value": null
+            },
+            "widget": {
+                "label": "Banner Div Inline Style",
+                "type": "TextField",
+                "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "opt_js",
+                "value": {
+                    "content": "",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "javascript"
+                }
+            },
+            "widget": {
+                "label": "Script",
+                "type": "JavaScriptCodeField",
+                "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "opt_styleSheet",
+                "value": {
+                    "content": ".mt_promo-group__header {\n  color: #1f1f1f;\n  font: 600 24px 'Open Sans',sans-serif;\n  margin-bottom: 16px;\n}\n\n@media screen and (min-width: 651px) {\n  .mt_promo-group__header {\n    font-size: 24px;\n  }\n}\n\n.mt_promo-group__flex {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-flex-wrap: wrap;\n      -ms-flex-wrap: wrap;\n          flex-wrap: wrap;\n}\n\n@media screen and (min-width: 651px) {\n  .mt_promo-group__flex {\n    -webkit-flex-wrap: nowrap;\n        -ms-flex-wrap: nowrap;\n            flex-wrap: nowrap;\n  }\n}\n\n.mt_promo-group__flex-item {\n  display: block;\n  font-weight: 500;\n  margin: auto auto 32px;\n  max-width: 100%;\n  width: 100%;\n}\n\n@media screen and (min-width: 651px) {\n  .mt_promo-group__flex-item {\n    margin: 0 8px;\n  }\n}\n\n.mt_promo-group__flex-item:hover .mt_promo-group__text-cta {\n  border-color: #0076bd;\n  color: #0076bd;\n  outline: none;\n}\n\n.mt_promo-group__text {\n  display: block;\n  padding-top: 16px;\n}\n\n.mt_promo-group__text-heading {\n  color: #1f1f1f;\n  font: 400 14px Open Sans,sans-serif;\n  margin-bottom: 16px;\n}\n\n.mt_promo-group__text-cta {\n  border-bottom: 1px solid #003953;\n  color: #003953;\n  display: inline-block;\n  font: 700 14px Open Sans,sans-serif;\n  text-transform: uppercase;\n}\n",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "label": "CSS",
+                "type": "CSSCodeField",
+                "description": "CSS appended to the DOM in a <style> or <link> element.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_multiSel",
+                "value": false
+            },
+            "widget": {
+                "label": "Select multiple elements, if matched?",
+                "type": "BooleanField",
+                "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+                "action_visible": false
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_poll",
+                "value": true
+            },
+            "widget": {
+                "label": "Re-check for Elements",
+                "type": "BooleanField",
+                "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+                "action_visible": false
+            },
+            "required": false
+        }
+    ],
+    "masks": [
+        {
+            "selector": "div[data-slot-id=\"primary-5\"]",
+            "value": "/",
+            "op": "path_iprefix"
+        }
+    ],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [],
+        "required": []
+    },
+    "integration_type": "js-tag",
+    "manage_impressions": false
+}

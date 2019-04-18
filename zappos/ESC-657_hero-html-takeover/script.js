@@ -1,8 +1,11 @@
+// ==================================================================
+// API Event - Clicks on each CTA
+// ==================================================================
 (function() {
-    var heroCTA = document.querySelectorAll('.mt_hero__cta');
-    if(heroCTA.length) {
-        for(var i = 0; i < heroCTA.length; i++) {
-            heroCTA[i].addEventListener('click', function() {
+    var heroCTAs = document.querySelectorAll('.mt_hero__cta');
+    if(heroCTAs.length) {
+        for(var i = 0; i < heroCTAs.length; i++) {
+            heroCTAs[i].addEventListener('click', function() {
                 window.monetateQ = window.monetateQ || [];
                 window.monetateQ.push([
                     "trackEvent",

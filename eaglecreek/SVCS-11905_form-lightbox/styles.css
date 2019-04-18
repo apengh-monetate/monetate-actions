@@ -12,3 +12,8 @@
   font-size: 14px;
   line-height: 21px;
 }
+
+#monetate_lightbox_content_container input.mtError {
+  border-color: red;
+  color: red;
+}

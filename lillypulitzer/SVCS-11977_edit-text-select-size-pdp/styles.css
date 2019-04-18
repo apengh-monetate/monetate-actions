@@ -1,0 +1,5 @@
+@media screen and (min-width: 480px) {
+  .product-variations .variant-dropdown .select-style {
+    width: 164px !important;
+  }
+}

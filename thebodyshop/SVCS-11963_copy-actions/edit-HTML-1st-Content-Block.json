@@ -1,0 +1,93 @@
+{
+  "id": 208781,
+  "title": "Edit HTML 1st Content Block - Homepage",
+  "description": "Edit HTML 1st Content Block - Homepage",
+  "op": "selectorEditHtml",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Edit Content",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#CMSHomepagePromoBannerComponent > ul.square-box-wrapper > li.square-promo-box:eq(0) > div.square-promo-box-inner > div.content-wrapper"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Supports CSS3 and Sizzle syntax.",
+        "label": "Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "edithtml",
+        "value": "<picture> <!--[if IE 9]>\n                                            <video style=\"display: none;\"><![endif]--> <source media=\"(max-width: 640px)\" srcset=\"/medias/9190608994334.jpg?context=images/ha8/h6c/9190608994334.jpg\" /> <source media=\"(min-width: 641px)\" srcset=\"/medias/9276411150366.jpg?context=images/h4a/h74/9276411150366.jpg\" /> <!--[if IE 9]></video><![endif]--> <img alt=\"35% OFF offer\" class=\"square-promo-img\" src=\"/medias/9276411150366.jpg?context=images/h4a/h74/9276411150366.jpg\" /> </picture>\n<h3 class=\"heading-one\">&nbsp;</h3>\n\n<h4 class=\"heading-two\">&nbsp;</h4>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "",
+        "label": "HTML"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleSheet",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "CSS style to append",
+        "label": "CSS Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If more than one element matches the Element Selector, should the change apply to all elements or just the first one?",
+        "label": "Select All Elements"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

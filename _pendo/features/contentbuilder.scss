@@ -1,0 +1,17 @@
+// ==================================================================
+// ContentBuilder
+// ==================================================================
+
+// https://int-apengh-1.monetate.org/control/a-b6206def/p/fifthlevelfashion.com/content/build/new
+
+.content-builder .panels .layers-panel .layers-panel-add // ContentBuilder > Layers Panel > Add Layer (Button)
+.content-builder .panels .layers-panel .goog-menu .goog-menuitem:contains("Image") // ContentBuilder > Layers Panel > Add Layer > Image
+.content-builder .panels .layers-panel .goog-menu .goog-menuitem:contains("Text")
+.content-builder .panels .layers-panel .goog-menu .goog-menuitem:contains("Rectangle")
+.content-builder .panels .layers-panel .goog-menu .goog-menuitem:contains("Clickzone")
+.content-builder .panels .layers-panel .goog-menu .goog-menuitem:contains("Map")
+.content-builder .panels .layers-panel .goog-menu .goog-menuitem:contains("Web Snap")
+
+
+
+.content-builder .stage

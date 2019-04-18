@@ -1,0 +1,10 @@
+.mt_at-a-glance li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mt_at-a-glance svg {
+  margin: 0 8px 0 0;
+}

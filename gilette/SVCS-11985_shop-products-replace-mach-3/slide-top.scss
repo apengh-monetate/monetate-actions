@@ -1,0 +1,43 @@
+.mt_skinguard-top {
+
+
+
+    &__img {
+        background: #fff;
+        border-radius: 10px;
+        margin: 0 0 20px;
+        max-height: 340px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    h3 {
+        color: rgb(10, 10, 10);
+        display: block;
+        font-family: "Lato", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: bold;
+        letter-spacing: 1.2px;
+        line-height: 1.08;
+        margin: 0 0 4px;
+    }
+
+    &__price {
+        .striked {
+            color: rgb(176, 176, 176);
+            margin: 0 0 0 12px;
+            text-decoration: line-through;
+        }
+    }
+
+    
+    .hide {
+        display: none;
+    }
+
+}

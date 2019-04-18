@@ -1,0 +1,35 @@
+/* ===================================================== */
+/* Product Grid
+/* ===================================================== */
+#productGrid li.searchItem {
+  background: #ffffff !important;
+  color: #4c4c4c !important;
+}
+
+#productGrid li.searchItem .productName a,
+#productGrid li.searchItem .productPrice,
+#productGrid li.searchItem a.compare,
+#productGrid li.searchItem .bv-rating-label.bv-text-link {
+  color: #4c4c4c !important;
+}
+
+/* ===================================================== */
+/* Compare Products
+/* ===================================================== */
+#compareItemContainer .productInfo {
+  background: #ffffff !important;
+  color: #4c4c4c !important;
+}
+
+#compareItemContainer .productName a,
+#compareItemContainer .partNumber,
+#compareItemContainer .reviews a {
+  color: #4c4c4c !important;
+}
+
+#compareItemContainer .row2,
+#compareItemContainer li[class*="row_"] {
+  background: #ffffff !important;
+  border-left: 1px solid #4c4c4c;
+  color: #4c4c4c !important;
+}

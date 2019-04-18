@@ -1,0 +1,421 @@
+{
+    "id": 395835,
+    "title": "ADA Endcap with Intelligent Recommendations (PDP)",
+    "description": "Inserts a slider with intelligent recommendations.",
+    "op": "recoAdaEndcap",
+    "slot": "none",
+    "slot_type": "none",
+    "category": "endcap",
+    "subcategory": "other",
+    "action_events": [
+        "op_click",
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "str",
+                "name": "selector",
+                "value": ".product-details__container .product-details__text"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CssSelectorField",
+                "description": "Selector to find the node where the slider will be inserted.",
+                "label": "Insert Selector"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "imeth",
+                "value": "last"
+            },
+            "widget": {
+                "description": "Method to use when inserting the slider relative to the selected node.",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "label": "Insert Method"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "insertOptions",
+                "value": "RecheckForElement"
+            },
+            "widget": {
+                "description": "RecheckForElement: If the selector is not found, wait up to 3 seconds for it to show up. SelectMultipleElements: If the selector matches multiple places, do you want to insert at each of them?",
+                "label": "Insert Options",
+                "action_visible": true,
+                "hiddenMenu": true,
+                "allIsValid": true,
+                "type": "CheckboxArrayAsString",
+                "options": [
+                    "RecheckForElement",
+                    "SelectMultipleElements"
+                ]
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "recommendation_set_dict",
+                "name": "productsJson",
+                "value": {
+                    "min_items": 0,
+                    "fallback_rec_set_ids": [],
+                    "rec_set_ids": []
+                }
+            },
+            "widget": {
+                "label": "Recommendation Set",
+                "type": "RecommendationSet",
+                "description": "Group of products to put in the endcap.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "minItems",
+                "value": 3
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "IntegerField",
+                "description": "Minimum number of items before triggering the fallback set, if applicable.",
+                "label": "Minimum Number of Items"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "maxItems",
+                "value": 40
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "IntegerField",
+                "description": "Maximum number of merch items to have in the slider.",
+                "label": "Maximum Number of Items"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "sliderTemplate",
+                "value": "<div class=\"mt-slider__heading\">\n    <h3>The Perfect Match</h3>\n</div>\n<div class=\"mt-slider__wrapper\">\n    {{SLIDER}}\n</div>\n<div class=\"mt-slider__pagination\">\n    <button data-prev-button>\n        <svg class=\"icon is-back-thin\" focusable=\"false\" viewBox=\"0 0 1 1\" aria-hidden=\"true\">\n            <use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"/_ui/responsive/theme-onechanel/assets/icons.svg#back\"></use>\n        </svg>\n        <span class=\"is-sr-only\">Previous item</span>\n    </button>\n    {{PAGINATION}}\n    <button data-next-button>\n        <svg class=\"icon is-next-thin\" focusable=\"false\" viewBox=\"0 0 1 1\" aria-hidden=\"true\">\n            <use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"/_ui/responsive/theme-onechanel/assets/icons.svg#next\"></use>\n        </svg>\n        <span class=\"is-sr-only\">Next item</span>\n    </button>\n</div>"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "TextField",
+                "description": "Include an HTML template to build the slider structure. Placeholder example: '{{slider}}'. Possible placeholders: slider, pagination. Optionally, add the attributes 'data-prev-button' and 'data-next-button' to add previous and next slide buttons.",
+                "label": "Slider Container Template"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "itemTemplate",
+                "value": "<a class=\"mt-slide\" href=\"{{link}}\" data-pid=\"{{id}}\">\n    <div class=\"mt-slide__img\">\n        <img src=\"{{imageLink}}\" alt=\"{{id}} - {{title}}\">\n    </div>\n    <div class=\"mt-slide__details\">\n        <div class=\"mt-slide__title\">{{title|truncate: 20}}</div>\n        <div class=\"mt-slide__price\">\n            <p class=\"mt-slide__price--prefix\">starting from</p>\n            <span class=\"mt-slide__price--reg\">{{price|priceFormat: $1,000.00}}</span>\n            <span class=\"mt-slide__price--sale\">{{salePrice|priceFormat: $1,000.00}}</span>\n        </div>\n    </div>\n    <span class=\"is-sr-only\">Reference {{id}}</span>\n</a>"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "TextField",
+                "description": "Placeholder example: '{{price}}'. Possible placeholders: alternate_price, brand_name, description, name, out_of_stock, pid, price, product_url, purchase_count, secure_thumbnail_image, thumbnail_image.",
+                "label": "Slide Template"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "css",
+                "value": {
+                    "content": "/* ===================================================== */\n/* DEFAULT SLIDER STYLES\n/* Edit at your own risk!\n/* ===================================================== */\n#MONETATE-ID {\n  margin: 50px auto 0;\n  position: relative;\n}\n\n#MONETATE-ID li {\n  list-style: none;\n}\n\n#MONETATE-ID [data-slider-mask] {\n  margin: 0 !important;\n  overflow: hidden !important;\n  padding: 0 !important;\n  position: relative !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider-mask],\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slider-mask] {\n  -ms-touch-action: pan-y;\n      touch-action: pan-y;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  -ms-touch-action: pan-x;\n      touch-action: pan-x;\n}\n\n#MONETATE-ID [data-slider] {\n  display: block;\n  margin: 0 !important;\n  padding: 0 !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider] {\n  white-space: nowrap !important;\n}\n\n#MONETATE-ID [data-slide] {\n  float: none;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slide] {\n  display: inline-block !important;\n  vertical-align: top;\n  white-space: normal;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slide] {\n  display: block !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide] {\n  opacity: 0;\n  position: absolute;\n  top: 0;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide][data-slide-active] {\n  opacity: 1;\n  position: relative;\n  z-index: 1;\n}\n\n#MONETATE-ID [data-pagination-slide],\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n  cursor: pointer;\n  z-index: 1;\n}\n\n#MONETATE-ID [data-pagination-slide] * {\n  pointer-events: none;\n}\n\n/* ===================================================== */\n/* CUSTOM SLIDER STYES\n/* ===================================================== */\n#MONETATE-ID {\n  text-align: center;\n}\n\n#MONETATE-ID .is-sr-only {\n  -webkit-clip-path: inset(50%) !important;\n  border: 0 !important;\n  clip: rect(1px, 1px, 1px, 1px) !important;\n  clip-path: inset(50%) !important;\n  height: 1px !important;\n  overflow: hidden !important;\n  padding: 0 !important;\n  position: absolute !important;\n  white-space: nowrap !important;\n  width: 1px !important;\n}\n\n#MONETATE-ID [data-slider-mask] {\n  display: inline-block;\n  width: 100%;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  height: 400px !important;\n}\n\n#MONETATE-ID [data-slide] > div {\n  height: 100%;\n  padding: 0 9px;\n}\n\n@media screen and (min-width: 376px) {\n  #MONETATE-ID [data-slide] > div {\n    padding: 0 15px;\n  }\n}\n\n@media screen and (min-width: 601px) {\n  #MONETATE-ID [data-slide] > div {\n    padding: 0 9px;\n  }\n}\n\n@media screen and (min-width: 960px) {\n  #MONETATE-ID [data-slide] > div {\n    padding: 0 1vw;\n  }\n}\n\n#MONETATE-ID [data-slide] img {\n  max-height: 100%;\n}\n\n#MONETATE-ID [data-slide] a {\n  text-decoration: none;\n}\n\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -o-user-select: none;\n  -webkit-user-select: none;\n  background: none;\n  color: #000;\n  display: none;\n  font-size: 25px;\n  padding: 0;\n  position: absolute;\n  top: 45%;\n  user-select: none;\n}\n\n#MONETATE-ID [data-prev-button] {\n  left: 10px;\n}\n\n#MONETATE-ID [data-next-button] {\n  right: 10px;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-prev-button] {\n  left: 50%;\n  top: 0;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-next-button] {\n  bottom: 0;\n  left: 50%;\n  right: auto;\n  top: auto;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n}\n\n#MONETATE-ID [data-pagination=\"thumbnails\"] [data-pagination-slide] {\n  background: none;\n  border-radius: 0;\n  height: auto;\n  width: 40px;\n}\n\n#MONETATE-ID [disabled] {\n  opacity: 0.5;\n}\n\n#MONETATE-ID [data-pagination-slide] {\n  background: #000;\n  border-radius: 6px;\n  display: inline-block;\n  height: 12px;\n  margin: 4px;\n  opacity: 0.5;\n  width: 12px;\n}\n\n#MONETATE-ID [data-pagination-slide][data-slide-active] {\n  opacity: 1;\n}\n\n#MONETATE-ID [data-pagination*=\"dots\"] [data-pagination-slide] {\n  /* remove below for pagination numbers */\n  text-indent: -9999px;\n}\n\n#MONETATE-ID [data-pagination] {\n  color: #1d1d1d;\n  font-family: \"abchanel-corpo\", sans-serif;\n  font-size: 12px;\n  font-weight: 600;\n  letter-spacing: 1px;\n  line-height: 18px;\n}\n\n#MONETATE-ID [data-pagination] [data-pagination-prev],\n#MONETATE-ID [data-pagination] [data-pagination-next] {\n  height: 18px;\n}\n\n#MONETATE-ID [data-pagination] [data-pagination-prev] svg.icon,\n#MONETATE-ID [data-pagination] [data-pagination-next] svg.icon {\n  height: 8px;\n  width: 8px;\n}\n\n#MONETATE-ID [data-pagination] [data-pagination-prev] {\n  margin-right: 10px;\n}\n\n#MONETATE-ID [data-pagination] [data-pagination-next] {\n  margin-left: 10px;\n}\n\n#MONETATE-ID .mt-slider__heading {\n  display: block;\n  margin-bottom: 18px;\n  position: relative;\n}\n\n#MONETATE-ID .mt-slider__heading::before {\n  border-top: 1px solid #1d1d1d;\n  bottom: 0;\n  content: \"\";\n  left: 0;\n  margin: 0 auto;\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 100%;\n  z-index: -1;\n}\n\n#MONETATE-ID .mt-slider__heading h3 {\n  background: #fff;\n  color: #1d1d1d;\n  display: inline-block;\n  font-family: \"abchanel-corpo\", sans-serif;\n  font-size: 12px;\n  font-weight: 600;\n  letter-spacing: 1px;\n  line-height: 18px;\n  padding: 0 6px;\n  text-transform: uppercase;\n}\n\n#MONETATE-ID .mt-slider__wrapper {\n  display: block;\n  margin-left: -9px;\n  margin-right: -9px;\n  position: relative;\n}\n\n@media screen and (min-width: 376px) {\n  #MONETATE-ID .mt-slider__wrapper {\n    margin-left: -15px;\n    margin-right: -15px;\n  }\n}\n\n@media screen and (min-width: 601px) {\n  #MONETATE-ID .mt-slider__wrapper {\n    margin-left: -9px;\n    margin-right: -9px;\n  }\n}\n\n@media screen and (min-width: 960px) {\n  #MONETATE-ID .mt-slider__wrapper {\n    margin-left: -1vw;\n    margin-right: -1vw;\n  }\n}\n\n#MONETATE-ID .mt-slider__pagination {\n  display: block;\n  margin-top: 36px;\n  position: relative;\n}\n\n#MONETATE-ID .mt-slide__img img {\n  display: block;\n  margin-bottom: 18px;\n  position: relative;\n}\n\n#MONETATE-ID .mt-slide__details {\n  color: #1d1d1d;\n  text-align: center;\n}\n\n#MONETATE-ID .mt-slide__title {\n  font-family: \"abchanel-corpo\", sans-serif;\n  font-size: 12px;\n  font-weight: 600;\n  letter-spacing: 0;\n  line-height: 18px;\n  margin-bottom: 5px;\n  text-transform: uppercase;\n}\n\n@media screen and (min-width: 601px) {\n  #MONETATE-ID .mt-slide__title {\n    font-size: 10px;\n  }\n}\n\n@media screen and (min-width: 840px) {\n  #MONETATE-ID .mt-slide__title {\n    font-size: 12px;\n  }\n}\n\n#MONETATE-ID .mt-slide__price--prefix {\n  color: #333;\n  font-family: \"Helvetica\", sans-serif;\n  font-size: 14px;\n  letter-spacing: 0;\n  line-height: 18px;\n  margin-bottom: 5px;\n}\n\n#MONETATE-ID .mt-slide__price--reg {\n  color: #1d1d1d;\n  font-family: \"abchanel-corpo\", sans-serif;\n  font-size: 12px;\n  font-weight: 600;\n  letter-spacing: 0;\n  line-height: 18px;\n}\n\n#MONETATE-ID .mt-slide__price--sale {\n  color: #1d1d1d;\n  font-family: \"abchanel-corpo\", sans-serif;\n  font-size: 12px;\n  font-weight: 600;\n  letter-spacing: 0;\n  line-height: 18px;\n}\n",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "label": "CSS",
+                "type": "CSSCodeField",
+                "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "orientation",
+                "value": "horizontal"
+            },
+            "widget": {
+                "description": "Orientation of the slider.",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "horizontal",
+                        "label": "Horizontal"
+                    },
+                    {
+                        "name": "vertical",
+                        "label": "Vertical"
+                    }
+                ],
+                "label": "Orientation"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "infiniteSlide",
+                "value": true
+            },
+            "widget": {
+                "label": "Infinite Slide",
+                "type": "BooleanField",
+                "description": "Should this slide infinitely or stop at the end of the slider?",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "slidesVisible",
+                "value": "{\n    \"Infinity\": {\n        \"visible\": 2\n    }\n}"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "TextField",
+                "description": "Slides visible by browser width. 'Infinity' breakpoint is required. Example: {\"Infinity\": {\"peekLeft\": 0.5, \"visible\": 5, \"peekRight\": 0.5}}",
+                "label": "Slides Visible"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "slideInc",
+                "value": "page"
+            },
+            "widget": {
+                "description": "Number of items to slide on navigation button click.",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "page",
+                        "label": "Page"
+                    },
+                    {
+                        "name": "single",
+                        "label": "Single"
+                    }
+                ],
+                "label": "Slide By Increment"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_prev",
+                "value": null
+            },
+            "widget": {
+                "label": "Previous Button Creative",
+                "type": "RawImageCreative",
+                "description": "Previous button creative. Must include element with the attribute [data-prev-button] Slider Container Template.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_next",
+                "value": null
+            },
+            "widget": {
+                "label": "Next Button Creative",
+                "type": "RawImageCreative",
+                "description": "Next button creative. Must include element with the attribute [data-next-button] Slider Container Template.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "opt_gridSize",
+                "value": 1
+            },
+            "widget": {
+                "label": "Rows/Comumns",
+                "type": "IntegerField",
+                "description": "How many rows (horizontal) or columns (vertical) should the slider have?",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "opt_autoRotateDuration",
+                "value": 0
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "IntegerField",
+                "description": "Number of milliseconds before auto rotating to the next slide. Leave blank or use 0 to prevent auto rotate.",
+                "label": "Auto Rotate Duration"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_pauseOnHover",
+                "value": false
+            },
+            "widget": {
+                "label": "Pause Auto Rotate on Hover",
+                "type": "BooleanField",
+                "description": "Should auto rotation pause on slider hover?",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_stopOnInteraction",
+                "value": false
+            },
+            "widget": {
+                "label": "Stop Auto Rotate on Interaction",
+                "type": "BooleanField",
+                "description": "Should auto rotation stop on slider interaction?",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "opt_transitionDuration",
+                "value": 250
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "IntegerField",
+                "description": "Duration in milliseconds of slide animation. Leave blank or use 0 to prevent animations.",
+                "label": "Animation Transition Duration"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_transitionAnimation",
+                "value": "push"
+            },
+            "widget": {
+                "description": "Type of slide transition animation to use.",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "push",
+                        "label": "Push"
+                    },
+                    {
+                        "name": "fade",
+                        "label": "Fade"
+                    },
+                    {
+                        "name": "none",
+                        "label": "None"
+                    }
+                ],
+                "label": "Transition Animation"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "list",
+                "name": "opt_pinnedPids",
+                "value": null
+            },
+            "widget": {
+                "label": "Pinned Products",
+                "type": "ProductList",
+                "description": "Products 'pinned' to the beginning of the merch set.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_urlParam",
+                "value": null
+            },
+            "widget": {
+                "label": "URL Parameter",
+                "type": "CharField",
+                "description": "URL Parameter to be appended to item links. ex: name=value. To add multiple, just put '&' between them. ex: name=value&nameTwo=valueTwo.",
+                "action_visible": true
+            },
+            "required": false
+        }
+    ],
+    "masks": [],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [],
+        "required": []
+    },
+    "integration_type": "js-tag",
+    "manage_impressions": false
+}

@@ -1,0 +1,296 @@
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#MONETATE-ID {
+  position: relative;
+}
+
+#MONETATE-ID li {
+  list-style: none;
+}
+
+#MONETATE-ID [data-slider-mask] {
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider-mask],
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slider-mask] {
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  -ms-touch-action: pan-x;
+      touch-action: pan-x;
+}
+
+#MONETATE-ID [data-slider] {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider] {
+  white-space: nowrap !important;
+}
+
+#MONETATE-ID [data-slide] {
+  float: none;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slide] {
+  display: inline-block !important;
+  vertical-align: top;
+  white-space: normal;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slide] {
+  display: block !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide],
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  cursor: pointer;
+  z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide] * {
+  pointer-events: none;
+}
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#MONETATE-ID {
+  margin: 20px auto;
+  max-width: 1380px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  #MONETATE-ID {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #MONETATE-ID {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+#MONETATE-ID [data-slider-mask] {
+  display: inline-block;
+  width: calc(100% - 68px);
+  width: 100%;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  height: 400px !important;
+}
+
+#MONETATE-ID [data-slide] > div {
+  height: 100%;
+  padding: 10px;
+}
+
+#MONETATE-ID [data-slide] img {
+  max-height: 100%;
+}
+
+#MONETATE-ID [data-slide] a {
+  text-decoration: none;
+}
+
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  background: none;
+  color: #000;
+  display: none;
+  font-size: 25px;
+  padding: 0;
+  position: absolute;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  user-select: none;
+}
+
+#MONETATE-ID [data-prev-button] img,
+#MONETATE-ID [data-next-button] img {
+  max-width: 32px;
+}
+
+#MONETATE-ID [data-prev-button] {
+  left: 10px;
+}
+
+#MONETATE-ID [data-next-button] {
+  right: 10px;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-prev-button] {
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-next-button] {
+  bottom: 0;
+  left: 50%;
+  right: auto;
+  top: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#MONETATE-ID [data-pagination="thumbnails"] [data-pagination-slide] {
+  background: none;
+  border-radius: 0;
+  height: auto;
+  width: 40px;
+}
+
+#MONETATE-ID [disabled] {
+  opacity: 0.5;
+}
+
+#MONETATE-ID [data-pagination-slide] {
+  background: #000;
+  border-radius: 6px;
+  display: inline-block;
+  height: 12px;
+  margin: 4px;
+  opacity: 0.5;
+  width: 12px;
+}
+
+#MONETATE-ID [data-pagination-slide][data-slide-active] {
+  opacity: 1;
+}
+
+#MONETATE-ID [data-pagination*="dots"] [data-pagination-slide] {
+  /* remove below for pagination numbers */
+  text-indent: -9999px;
+}
+
+#MONETATE-ID .mt-slider__header {
+  color: #646464;
+  font-size: 24px;
+  line-height: 1;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: left;
+  text-transform: none;
+}
+
+#MONETATE-ID .mt-slider__wrapper {
+  position: relative;
+}
+
+@media screen and (min-width: 1380px) {
+  #MONETATE-ID .mt-slider__wrapper {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
+#MONETATE-ID .mt-slide {
+  color: #000;
+  text-decoration: none !important;
+}
+
+#MONETATE-ID .mt-slide:hover, #MONETATE-ID .mt-slide:focus, #MONETATE-ID .mt-slide:active {
+  color: #000;
+  text-decoration: none !important;
+}
+
+#MONETATE-ID .mt-slide__img img {
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+#MONETATE-ID .mt-slide__title {
+  color: #0068c6;
+  font-weight: 900;
+}
+
+#MONETATE-ID .mt-slide__price--sale {
+  display: none;
+}
+
+#MONETATE-ID .uppercase {
+  text-transform: uppercase;
+}
+
+#MONETATE-ID .hide {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------------
+ * Mobile 2x2 Grid
+ ----------------------------------------------------------------- */
+@media screen and (max-width: 639px) {
+  #MONETATE-ID .mobile-2-2 [data-pagination],
+  #MONETATE-ID .mobile-2-2 [data-prev-button],
+  #MONETATE-ID .mobile-2-2 [data-next-button] {
+    display: none;
+  }
+  #MONETATE-ID .mobile-2-2 [data-slider] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    overflow: hidden !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  #MONETATE-ID .mobile-2-2 [data-slide] {
+    width: 50% !important;
+  }
+  #MONETATE-ID .mobile-2-2 [data-slide] > div {
+    padding: 0;
+  }
+  #MONETATE-ID .mobile-2-2 [data-slide]:nth-child(n+5) {
+    display: none !important;
+  }
+  #MONETATE-ID .mobile-2-2 .mt_recommendations__details {
+    display: none;
+  }
+}

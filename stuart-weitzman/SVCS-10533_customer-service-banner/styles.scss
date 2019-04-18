@@ -1,0 +1,46 @@
+.mt_cs-banner {
+    display: block;
+    @media screen and (min-width: 640px) {
+        display: none;
+    }
+
+
+    &__slide-up {
+        animation-delay: 0;
+        animation-direction: normal;
+        animation-duration: 2;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-name: slideUp;
+        animation-timing-function: ease-in-out;
+    }
+    &__slide-down {
+        animation-delay: 0;
+        animation-direction: normal;
+        animation-duration: 2;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-name: slideDown;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+
+
+@keyframes slideUp {
+    0% {
+        bottom: initial !important;
+    }
+    100% {
+        bottom: 0 !important;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        bottom: 100% !important;
+    }
+    100% {
+        bottom: initial !important;
+    }
+}

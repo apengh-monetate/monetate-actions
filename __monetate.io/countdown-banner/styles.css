@@ -1,0 +1,225 @@
+.mt_countdown {
+  display: block;
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_countdown {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*Hides the plural parameter on any suffixes when counting down.*/
+.mt_countdown .mt_hide_plural {
+  display: none;
+}
+
+.mt-cat-banner {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f4f4f4;
+  background-image: url("{{BKG_URL}}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.mt-cat-banner__countdown {
+  display: block;
+  position: relative;
+}
+
+.mt-cat-banner__countdown::before, .mt-cat-banner__countdown::after {
+  border: 1px solid black;
+  content: "";
+  display: block;
+  height: 90%;
+  position: absolute;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  width: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-cat-banner__countdown::before, .mt-cat-banner__countdown::after {
+    height: 80%;
+  }
+}
+
+.mt-cat-banner__countdown::before {
+  border-right: none;
+  right: 105%;
+}
+
+.mt-cat-banner__countdown::after {
+  border-left: none;
+  left: 105%;
+}
+
+.mt-cat-banner__countdown .mt_time {
+  font-size: 22px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-cat-banner__countdown .mt_time {
+    font-size: 26px;
+  }
+}
+
+.mt-cat-banner__countdown .mt_tickerElem {
+  display: inline-block;
+  min-width: 28px;
+  position: relative;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-cat-banner__countdown .mt_tickerElem {
+    min-width: 34px;
+  }
+}
+
+.mt-cat-banner__countdown .mt_suffix {
+  bottom: -4px;
+  display: block;
+  font-size: 6px;
+  font-weight: 700;
+  left: 50%;
+  position: absolute;
+  text-transform: uppercase;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-cat-banner__countdown .mt_suffix {
+    bottom: -2px;
+  }
+}
+
+.mt-cat-banner__countdown .mt_colon {
+  font-size: 12px;
+  font-weight: 400;
+  position: relative;
+}
+
+.mt-cat-banner__pre-header {
+  color: #444;
+  display: block;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  top: -5px;
+  width: 100%;
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-cat-banner__pre-header {
+    font-size: 10px;
+  }
+}
+
+.mt-cat-banner__heading {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-cat-banner__heading {
+    font-size: 28px;
+  }
+}
+
+.mt-cat-banner__subcopy {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-cat-banner__subcopy {
+    font-size: 14px;
+  }
+}
+
+.mt-cat-banner__message {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.mt-cat-banner__code {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.mt-cat-banner__code::before {
+  content: "|";
+  display: inline-block;
+  padding-left: 6px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.mt-cat-banner__code .promo-code {
+  color: #2AA1AF;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-left: 3px;
+  padding: 0;
+}

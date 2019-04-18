@@ -1,0 +1,134 @@
+{
+  "id": 392886,
+  "title": "Takeover Join Now Button Link",
+  "description": "Takeover Join Now Button Link",
+  "op": "modifyAttribute",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Family Form",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "StringSelectField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector",
+        "options": [
+            {
+                "name": "div.vfam-header-right a.button.vfam-join-now",
+                "label": "Join Now Button"
+            },
+            {
+                "name": "div.vfam-down a.button.vfam-join-now",
+                "label": "Join The Family Button"
+            }
+        ]
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "attr",
+        "value": "href"
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "CharField",
+        "description": "The element attribute (e.g. 'href', 'title' or 'src') you wish to add, replace or remove (if 'Remove Attribute' is set true).",
+        "label": "Attribute"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_mod",
+        "value": "https://www.vans.com/family?utm_campaign=family-awareness&utm_medium=custom-landing-page&utm_source=Stellar-email&source_campaign=family-awareness_custom-landing-page_Stellar-email_link_short-form&utm_content=link&utm_term=profile-completion&short-form"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Replaces the current value of specified attribute.  If not set, this defaults to an empty string.  If 'Remove Attribute' is set true, this can be left blank.",
+        "label": "Replacement Value"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_remove",
+        "value": false
+      },
+      "widget": {
+        "action_visible": false,
+        "type": "BooleanField",
+        "description": "Set true if you want to remove the attribute and value rather than set it.",
+        "label": "Remove Attribute and Value"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

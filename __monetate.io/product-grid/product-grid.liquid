@@ -1,0 +1,106 @@
+<section class="">
+    {% if section.settings.title != blank %}
+      <div class="product-grid__heading">
+        <h2>{{ section.settings.title | escape }}</h2>
+      </div>
+    {% endif %}
+
+    {%- assign collection = collections[section.settings.collection] -%}
+
+    {% case section.settings.products %}
+      {% when 3 %}
+        {%- assign grid_items = 'grid-3' -%}
+      {% when 5 %}
+        {%- assign grid_items = 'grid-5' -%}
+      {% when 7 %}
+        {%- assign grid_items = 'grid-7' -%}
+    {% endcase %}
+
+    {%- assign product_limit = section.settings.products -%}
+
+    <div class="product-grid__grid {{ grid_items }}">
+        {% for product in collection.products limit: product_limit %}
+            <div class="product-grid__item">
+                <img src="{{ product.featured_image | img_url: '800x1200' }}" alt="">
+                {% if section.settings.cta != blank %}
+                    <a class="product-grid__overlay" href="{{ product.url }}">{{ section.settings.cta }}</a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if section.settings.show_view_all %}
+      <hr class="hr--invisible" aria-hidden="true" />
+      <div class="text-center">
+        <a href="{{ collection.url }}" class="btn" aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}">
+          {{ 'collections.general.view_all' | t }}
+        </a>
+      </div>
+    {% endif %}
+</section>
+
+
+{% schema %}
+{
+    "name": {
+        "en": "Best Sellers"
+    },
+    "class": "product-grid",
+    "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": {
+            "en": "Heading"
+        },
+        "default": {
+            "en": "Best Sellers"
+        }
+    },
+    {
+        "id": "collection",
+        "type": "collection",
+        "label": {
+            "en": "Collection"
+        }
+    },
+    {
+        "type": "range",
+        "id": "products",
+        "label": {
+            "en": "Products"
+        },
+        "min": 3,
+        "max": 7,
+        "step": 2,
+        "default": 7
+    },
+    {
+        "type": "text",
+        "id": "cta",
+        "label": {
+            "en": "Product CTA Text"
+        },
+        "default": "View Product"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_view_all",
+        "label": {
+            "en": "Show 'View all' button"
+        },
+        "default": false
+    }
+    ],
+    "presets": [
+    {
+        "name": {
+            "en": "Product Grid"
+        },
+        "category": {
+            "en": "Collection"
+        }
+    }
+    ]
+}
+{% endschema %}

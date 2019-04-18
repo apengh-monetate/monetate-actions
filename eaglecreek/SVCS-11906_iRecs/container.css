@@ -1,0 +1,51 @@
+.mt_recs-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 20px auto 0;
+  max-width: 1380px;
+  padding-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .mt_recs-container {
+    border-bottom: 1px solid #ccc;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mt_recs-container {
+    border-bottom: 1px solid #ccc;
+    width: calc(100% - 10px);
+  }
+}
+
+.mt_recs-container__column {
+  width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .mt_recs-container__column {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .mt_recs-container__column:not(:last-child) {
+    border-right: 1px solid #ccc;
+  }
+}

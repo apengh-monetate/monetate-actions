@@ -1,0 +1,70 @@
+#monetate_selectorHTML_40b29ed8_0::before,
+#monetate_selectorHTML_40b29ed8_0::after {
+    content: "" !important;
+    display: none;
+}
+
+.mt_table {
+    &__heading {
+        background: none;
+        border-right: none;
+        box-sizing: border-box;
+        color: inherit;
+        display: block !important;
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        height: 56px;
+        letter-spacing: 1px;
+        padding: 15px 0px;
+        text-align: center;
+        vertical-align: middle;
+        width: initial;
+        &::before {
+            content: "← ";
+            @media screen and (min-width: 960px) {
+                content: "";
+                display: none;
+            }
+        }
+        &::after {
+            content: " →";
+            @media screen and (min-width: 960px) {
+                content: "";
+                display: none;
+            }
+        }
+    }
+
+
+
+    &__body {
+
+    }
+
+    &__row {
+        align-items: center;
+        background: none;
+        border-right: none;
+        color: inherit;
+        display: flex;
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        height: 24px;
+        justify-content: center;
+        letter-spacing: 1px;
+        min-height: 65px;
+        padding: 0px 20px;
+        text-align: center;
+        vertical-align: middle;
+        width: initial;
+        @media screen and (min-width: 960px) {
+            min-width: 160px;
+        }
+        &:nth-child(2n+1) {
+            background: rgba(0, 123, 199, 0.1);
+        }
+
+    }
+
+}

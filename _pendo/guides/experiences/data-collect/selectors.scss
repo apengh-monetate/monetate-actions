@@ -1,0 +1,61 @@
+// ==================================================================
+// Create Data Collect Action
+// ==================================================================
+// Step 1 - Click Create Action
+[data-test-id="create-action-button"]
+
+// Step 2 - Click Edit / Other
+.template-step.step .template-controls .goog-flat-button:contains('Edit / Other')
+
+// Step 3 - Click Collect Data
+.page-builder .template-step .content .goog-link-button:contains("Collect Data")
+
+// Step 4 - Click Next Step
+.config-step .builder-flippers .js-next-button
+
+// Step 5 - Action Title
+.create-step .fields .title .inputs
+
+// Step 6 - Description
+.create-step .fields .description .inputs
+
+// Step 7 - Create and Exit
+.button.js-create-exit-button
+
+// Step 8 - Click name of action to open quickview
+.actiontemplate-row .anchor-reference .button.context-menu
+
+// Step 9 - Click create experience with action
+[data-test-id="create-experience-with-action-button"]
+
+// Step 10 - Create button in experience
+.nav-panel.action-config-panel .footer-container .button.js-create-button
+
+
+
+// ==================================================================
+// Create Experience
+// ==================================================================
+
+// Step 1 - Give experience a name
+.edit-in-place
+
+.edit-in-place div.button[data-value="save"]
+
+// Who Button
+.phrase-button.who-button
+
+// Add Target
+.campaign-group-navigator button.button:contains("Add Target")
+
+// Location
+.nav-panel.category-picker .category.location div.js-category-button
+
+// Country
+.js-item-picker-grid ul > li:contains("Country")
+
+// Country name
+.ui-field.country div.controls input
+
+// Create
+.nav-panel.countrypredicate div.button.js-create-button

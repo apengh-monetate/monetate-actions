@@ -1,0 +1,134 @@
+{
+    "products_data": [{
+        "productType": "Test Data > Products",
+        "description": "No matter where you’re going, the Global Companion 40L Travel Pack is the perfect travel aid. This organizational machine allows access from the top or bottom, along with middle access to a wide butterfly opening with dual interior compartments. Access whatever you need, wherever you are and however you’re carrying the bag.",
+        "title": "Global Companion 40L",
+        "price": 159.00,
+        "imageLink": "https://images.eaglecreek.com/is/image/eaglecreek/EC0A3K64_010_a?$GRID-IMAGE$",
+        "link": "https://www.eaglecreek.com/shop/travel-packs/global-companion-40l-ec0a3k64?variationId=010#hero=0",
+        "salePrice": null,
+        "id": "1648",
+        "itemGroupId": "1"
+    },
+    {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Global Companion 65L",
+        "price": 229.00,
+        "imageLink": "https://images.eaglecreek.com/is/image/eaglecreek/EC0A3KE2_010_a?$GRID-IMAGE$",
+        "link": "https://www.eaglecreek.com/shop/travel-packs/global-companion-40l-ec0a3k64?variationId=010",
+        "salePrice": null,
+        "id": "2",
+        "itemGroupId": "2"
+    },
+    {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Guide Travel Pack 65L",
+        "price": 299.00,
+        "imageLink": "https://images.eaglecreek.com/is/image/eaglecreek/EC0A3SBQ_010_a?$GRID-IMAGE$",
+        "link": "https://www.eaglecreek.com/shop/travel-packs/guide-travel-pack-65l-ec0a3sbq?variationId=010",
+        "salePrice": null,
+        "id": "3",
+        "itemGroupId": "3"
+    },
+    {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Gear Warrior Convertible Carry On",
+        "price": 299.00,
+        "imageLink": "https://images.eaglecreek.com/is/image/eaglecreek/EC0A3ZRM_281_a?$GRID-IMAGE$",
+        "link": "https://www.eaglecreek.com/shop/carry-on/gear-warrior-convertible-carry-on-ec0a3zrm?variationId=281",
+        "salePrice": null,
+        "id": "4",
+        "itemGroupId": "4"
+    },
+    {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Gear Warrior 4-Wheel Carry On",
+        "price": 279.00,
+        "imageLink": "https://images.eaglecreek.com/is/image/eaglecreek/EC0A3XV6_274_a?$GRID-IMAGE$",
+        "link": "https://www.eaglecreek.com/shop/carry-on/gear-warrior-4-wheel-carry-on-ec0a3xv6?variationId=274",
+        "salePrice": null,
+        "id": "5",
+        "itemGroupId": "5"
+    },
+    {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Orv Wheeled Duffel International Carry On",
+        "price": 319.00,
+        "imageLink": "https://images.eaglecreek.com/is/image/eaglecreek/EC0A3XVS_278_a?$GRID-IMAGE$",
+        "link": "https://www.eaglecreek.com/shop/carry-on/orv-wheeled-duffel-international-carry-on-ec0a3xvs?variationId=278",
+        "salePrice": null,
+        "id": "6",
+        "itemGroupId": "6"
+    },
+    {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 7",
+        "price": 48.9,
+        "imageLink": "https://dummyimage.com/300x400/070/fff.jpg",
+        "link": "https://www.monetate.com",
+        "salePrice": 22.12,
+        "id": "7",
+        "itemGroupId": "7"
+    },
+    {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 8",
+        "price": 62.98,
+        "imageLink": "https://dummyimage.com/300x400/080/fff.jpg",
+        "link": "https://www.monetate.com",
+        "salePrice": 4.76,
+        "id": "8",
+        "itemGroupId": "8"
+    },
+    {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 9",
+        "price": 53.52,
+        "imageLink": "https://dummyimage.com/300x400/090/fff.jpg",
+        "link": "https://www.monetate.com",
+        "salePrice": 49.61,
+        "id": "9",
+        "itemGroupId": "9"
+    },
+    {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 10",
+        "price": 40.34,
+        "imageLink": "https://dummyimage.com/300x400/100/fff.jpg",
+        "link": "https://www.monetate.com",
+        "salePrice": 23.68,
+        "id": "10",
+        "itemGroupId": "10"
+    },
+    {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 11",
+        "price": 20.08,
+        "imageLink": "https://dummyimage.com/300x400/110/fff.jpg",
+        "link": "https://www.monetate.com",
+        "salePrice": null,
+        "id": "11",
+        "itemGroupId": "11"
+    },
+    {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 12",
+        "price": 71.29,
+        "imageLink": "https://dummyimage.com/300x400/120/fff.jpg",
+        "link": "https://www.monetate.com",
+        "salePrice": 47.17,
+        "id": "12",
+        "itemGroupId": "12"
+    }]
+}

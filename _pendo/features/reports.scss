@@ -1,0 +1,113 @@
+// ==================================================================
+// REPORTS
+   //*/*/*/*/*/reports/**
+   //*/*/*/*/*/settings/scheduled_reports
+// ==================================================================
+
+
+// ------------------------------------------------------------------
+// Reports List
+// ------------------------------------------------------------------
+.button:contains("Create Report") // Reports List > Create Report (Button)
+
+.list-filter input // Reports List > Search (Input)
+.list-filter .menu .menu-item[data-value="last 60 days"] // Reports List > Search Input Dropdown > Last 60 days
+.list-filter .menu .menu-item[data-value="action"] // Reports List > Search Input Dropdown > Action
+.list-filter .menu .menu-item[data-value="dashboard"] // Reports List > Search Input Dropdown > Dashboard
+.list-filter .menu .menu-item[data-value="experience"] // Reports List > Search Input Dropdown > Experience
+.list-filter .menu .menu-item[data-value="no control"] // Reports List > Search Input Dropdown > No Control
+.list-filter .menu .menu-item[data-value="purchase audit"] // Reports List > Search Input Dropdown > Purchase Audit
+.list-filter .menu .menu-item[data-value="purchase detail"] // Reports List > Search Input Dropdown > Purchase Detail
+.list-filter .menu .menu-item[data-value="referrer"] // Reports List > Search Input Dropdown > Referrer
+.list-filter .menu .menu-item[data-value="rps detail"] // Reports List > Search Input Dropdown > RPS Detail
+.list-filter .menu .menu-item[data-value="search term"] // Reports List > Search Input Dropdown > Search Term
+.list-filter .menu .menu-item[data-value="legacy"] // Reports List > Search Input Dropdown > Legacy
+
+.list-filter .token-wrapper div.button.js-delete-token // Reports List > Search > Delete Tag
+
+table tr.report-box a.js-title // Reports List > Individual Report (Link)
+table tr.report-box .button-group a.download-button // Reports List > Individual Report > Download (Button)
+table tr.report-box .button-group a.js-duplicate-button // Reports List > Individual Report > Duplicate (Button)
+table tr.report-box .button-group a.js-delete-button // Reports List > Individual Report > Delete (Button)
+
+
+
+// ------------------------------------------------------------------
+// Create Report
+// ------------------------------------------------------------------
+.report-controls .page-bar a:contains("Back to Reports") // Create Report > Back to Reports (Breadcrumb Link)
+
+.report-controls .page-header .name-button // Create Report > Page Header > Name (Button)
+.report-controls .page-header .slide-checkbox // Create Report > Page Header > Decimal Place Precision (Slider)
+
+.report-controls .page-header div.select[data-name="dampeningSelect"] // Create Report > Page Header > Dampening (Dropdown)
+.report-controls .page-header div.select[data-name="dampeningSelect"] .menu-item[data-value="null"] // Create Report > Page Header > Dampening Dropdown > No dampening
+.report-controls .page-header div.select[data-name="dampeningSelect"] .menu-item[data-value="1"] // Create Report > Page Header > Dampening Dropdown > One SD from the Mean
+.report-controls .page-header div.select[data-name="dampeningSelect"] .menu-item[data-value="2"] // Create Report > Page Header > Dampening Dropdown > Two SD from the Mean
+.report-controls .page-header div.select[data-name="dampeningSelect"] .menu-item[data-value="3"] // Create Report > Page Header > Dampening Dropdown > Three SD from the Mean
+
+.report-controls .page-header button[data-value="execute"] // Create Report > Page Header > Execute Report (Button)
+
+.report-controls .page-header .js-report-type-select button.select-button // Create Report > Page Header > Report Type (Dropdown)
+.report-controls .page-header .js-report-type-select .menu-item:nth-child(1) // Create Report > Page Header > Report Type Dropdown > Experience Performance Report
+.report-controls .page-header .js-report-type-select .menu-item:contains("Purchase Audit Report") // Create Report > Page Header > Report Type Dropdown > Purchase Audit Report
+.report-controls .page-header .js-report-type-select .menu-item:contains("Purchase Detail Report") // Create Report > Page Header > Report Type Dropdown > Purchase Detail Report
+.report-controls .page-header .js-report-type-select .menu-item:contains("Search Term Report") // Create Report > Page Header > Report Type Dropdown > Search Term Report
+.report-controls .page-header .js-report-type-select .menu-item:contains("Referrer Report") // Create Report > Page Header > Report Type Dropdown > Referrer Report
+.report-controls .page-header .js-report-type-select .menu-item:contains("No Control Experience Performance Report") // Create Report > Page Header > Report Type Dropdown > No Control Experience Performance Report
+.report-controls .page-header .js-report-type-select .menu-item:contains("Account Dashboard Report") // Create Report > Page Header > Report Type Dropdown > Account Dashboard Report
+.report-controls .page-header .js-report-type-select .menu-item:contains("Revenue Per Session Detail Report") // Create Report > Page Header > Report Type Dropdown > Revenue Per Session Detail Report
+.report-controls .page-header .js-report-type-select .menu-item:contains("Action Performance Report") // Create Report > Page Header > Report Type Dropdown > Action Performance Report
+
+.report-controls .page-header div.select[data-name="rateSelect"] button // Create Report > Page Header > Schedule Report (Dropdown)
+.report-controls .page-header div.select[data-name="rateSelect"] .menu-item:contains("Once") // Create Report > Page Header > Schedule Report Dropdown > Once
+.report-controls .page-header div.select[data-name="rateSelect"] .menu-item:contains("Weekly") // Create Report > Page Header > Schedule Report Dropdown > Weekly
+.report-controls .page-header div.select[data-name="rateSelect"] .menu-item:contains("Monthly") // Create Report > Page Header > Schedule Report Dropdown > Monthly
+
+
+
+.sentence-browser .who-button // Create Report > Sentence Structure > Who (Button)
+.sentence-browser .what-button // Create Report > Sentence Structure > What (Button)
+.sentence-browser .when-button // Create Report > Sentence Structure > When (Button)
+.sentence-browser .where-button // Create Report > Sentence Structure > Where (Button)
+
+/* ----------------------------------------------------- */
+/* Who
+/* ----------------------------------------------------- */
+.campaign-group-navigator .right-button-tray .button:contains("Add Target") // Create Report > Who > Add Target (Button)
+
+
+/* ----------------------------------------------------- */
+/* What
+/* ----------------------------------------------------- */
+.report-what-panel div.menu-button.button // Create Report > What > Select Checkboxes (Dropdown)
+.report-what-panel .js-checkbox-array li:contains("Add to cart rate") // Create Report > What > Add to cart rate (Checkbox)
+.report-what-panel .js-checkbox-array li:contains("Average order value")
+.report-what-panel .js-checkbox-array li:contains("Average page views")
+.report-what-panel .js-checkbox-array li:contains("Average time on site")
+.report-what-panel .js-checkbox-array li:contains("Bounce rate")
+.report-what-panel .js-checkbox-array li:contains("Experience sentence")
+
+.report-what-panel .js-checkbox-array li:contains("Experience status")
+.report-what-panel .js-checkbox-array li:contains("Cart abandonment rate")
+.report-what-panel .js-checkbox-array li:contains("Control sessions")
+.report-what-panel .js-checkbox-array li:contains("Control total sales")
+.report-what-panel .js-checkbox-array li:contains("Conversion rate")
+.report-what-panel .js-checkbox-array li:contains("Experiement sessions")
+
+.report-what-panel .js-checkbox-array li:contains("Experiment total sales")
+.report-what-panel .js-checkbox-array li:contains("New customer acquisition rate")
+.report-what-panel .js-checkbox-array li:contains("Number of buyers")
+.report-what-panel .js-checkbox-array li:contains("Page Events")
+.report-what-panel .js-checkbox-array li:contains("Revenue per session")
+
+
+/* ----------------------------------------------------- */
+/* When
+/* ----------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------- */
+/* Where
+/* ----------------------------------------------------- */

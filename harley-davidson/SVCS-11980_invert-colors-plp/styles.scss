@@ -1,0 +1,42 @@
+$white: #ffffff;
+$black: #4c4c4c;
+
+/* ===================================================== */
+/* Product Grid
+/* ===================================================== */
+#productGrid {
+    li.searchItem {
+        background: $white !important;
+        color: $black !important;
+
+        .productName a,
+        .productPrice,
+        a.compare,
+        .bv-rating-label.bv-text-link {
+            color: $black !important;
+        }
+    }
+}
+
+
+/* ===================================================== */
+/* Compare Products
+/* ===================================================== */
+#compareItemContainer {
+    .productInfo {
+        background: $white !important;
+        color: $black !important;
+    }
+    .productName a,
+    .partNumber,
+    .reviews a {
+        color: $black !important;
+    }
+
+    .row2,
+    li[class*="row_"] {
+        background: $white !important;
+        border-left: 1px solid $black;
+        color: $black !important;
+    }
+}

@@ -1,0 +1,243 @@
+{
+    "products_data": [{
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "1",
+        "itemGroupId": "1"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "2",
+        "itemGroupId": "2"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "3",
+        "itemGroupId": "3"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "4",
+        "itemGroupId": "4"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "5",
+        "itemGroupId": "5"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "6",
+        "itemGroupId": "6"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "7",
+        "itemGroupId": "7"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "8",
+        "itemGroupId": "8"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "9",
+        "itemGroupId": "9"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "10",
+        "itemGroupId": "10"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "11",
+        "itemGroupId": "11"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "12",
+        "itemGroupId": "12"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "13",
+        "itemGroupId": "13"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "14",
+        "itemGroupId": "14"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "15",
+        "itemGroupId": "15"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "16",
+        "itemGroupId": "16"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "17",
+        "itemGroupId": "17"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "18",
+        "itemGroupId": "18"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "19",
+        "itemGroupId": "19"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "20",
+        "itemGroupId": "20"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "21",
+        "itemGroupId": "21"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "22",
+        "itemGroupId": "22"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "23",
+        "itemGroupId": "23"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "A luxurious bath gel that elevates the bathing experience. Skin is gently cleansed and delicately scented with the clean and sheer, warm and sexy fragrance.",
+        "title": "COCO Mademoiselle",
+        "price": 95.00,
+        "imageLink": "https://via.placeholder.com/512x512",
+        "link": "https://www.chanel.com/us/fragrance/p/112960/allure-bath-gel/",
+        "salePrice": null,
+        "id": "24",
+        "itemGroupId": "24"
+    }]
+}

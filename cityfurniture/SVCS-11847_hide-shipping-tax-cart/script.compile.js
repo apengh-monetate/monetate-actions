@@ -15,11 +15,11 @@
         parentEl.style.display = "none";
       }
     }
-  } // Update subtotal to match total
+  } // Update total to match subtotal
 
 
-  function updateSubtotal() {
-    cartSubtotal.innerText = cartTotal.innerText;
+  function updateTotal() {
+    cartTotal.innerHTML = cartSubtotal.innerHTML;
   } // Mutation observer to observe for change to cart total
 
 
@@ -33,7 +33,7 @@
   var callback = function callback(mutationsList, observer) {
     for (var i = 0; i < mutationsList.length; i++) {
       if (mutationsList[i].type == 'characterData') {
-        updateSubtotal();
+        updateTotal();
         hideElements();
       }
     }
@@ -42,9 +42,11 @@
 
   var observer = new MutationObserver(callback); // Start observing the target node for configured mutations
 
-  observer.observe(cartTotal, config);
+  var estimatedTax = document.getElementById('cart_esttax');
+  estimatedTax = estimatedTax.parentElement;
+  observer.observe(estimatedTax, config);
   hideElements();
-  updateSubtotal();
+  updateTotal();
 })();
 
 //# sourceMappingURL=script.compile.js.map

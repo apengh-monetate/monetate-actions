@@ -1,4 +1,4 @@
-https://marketer.monetate.net/control/a-59fa0bba/p/clarksusa.com/builder/create/action/?xpc=%7B%22cn%22%3A%22Pm4VpDyv8w%22%2C%22tp%22%3A1%7D
+// https://marketer.monetate.net/control/a-59fa0bba/p/clarksusa.com/builder/create/action/?xpc=%7B%22cn%22%3A%22Pm4VpDyv8w%22%2C%22tp%22%3A1%7D
 
 // ==================================================================
 // Step 2: Select element
@@ -43,3 +43,61 @@ https://marketer.monetate.net/control/a-59fa0bba/p/clarksusa.com/builder/create/
 // ------------------------------------------------------------------
 // Step 3: Inputs
 // ------------------------------------------------------------------
+
+
+
+
+
+
+// ==================================================================
+// Last Step
+// ==================================================================
+// https://int-apengh-1.monetate.org/control/a-b6206def/p/fifthlevelfashion.com/builder/create/action/?xpc=%7B%22cn%22%3A%22FW5WFnoa3j%22%2C%22tp%22%3A1%7D
+.button.js-create-exit-button // ActionBuilder > Last Step > Create & Exit Button (Button)
+.button.js-create-button // ActionBuilder > Last Step > Create (Button)
+
+
+
+.builder-preview-bar .slide-checkbox // ActionBuilder > Last Step > Create (Button)
+
+
+.builder-flippers .js-back-button // ActionBuilder > Previous Step (Button)
+.builder-flippers .js-next-button // ActionBuilder > Next Step (Button)
+
+
+// ActionBuilder > Last Step >
+.create-step .fields .ui-field.title input
+.create-step .fields .ui-field.description input
+.create-step .fields .ui-field.category .select .button.select-button
+.create-step .fields .ui-field.category .select .menu .menu-item[data-value="image"]
+.create-step .fields .ui-field.category .select .menu .menu-item[data-value="javascript"]
+.create-step .fields .ui-field.category .select .menu .menu-item[data-value="endcap"]
+.create-step .fields .ui-field.category .select .menu .menu-item[data-value="visual-search"]
+.create-step .fields .ui-field.category .select .menu .menu-item[data-value="hide-show-content"]
+.create-step .fields .ui-field.category .select .menu .menu-item[data-value="lightbox"]
+.create-step .fields .ui-field.category .select .menu .menu-item[data-value="html"]
+.create-step .fields .ui-field.category .select .menu .menu-item[data-value="badge"]
+.create-step .fields .ui-field.category .select .menu .menu-item[data-value="other"]
+.create-step .fields .ui-field.category .select .menu .menu-item[data-value="css"]
+
+
+.create-step .fields .ui-field.subcategory input
+
+
+
+
+
+// ==================================================================
+// Upload Image Widget
+// ==================================================================
+.image-creative-widget .button.pick-button // ActionBuilder > Upload Image Widget > Choose (Button)
+.image-creative-widget .button.js-pick-button
+
+.image-creative-widget .button.edit-button // ActionBuilder > Upload Image Widget > Edit (Button)
+.image-creative-widget .button.upload-button // ActionBuilder > Upload Image Widget > Upload (Button)
+.image-creative-widget .button.js-upload-button
+
+.image-creative-widget .button.generate-button // ActionBuilder > Upload Image Widget > Generate (Button)
+.image-creative-widget .button.js-generate-button
+
+.image-creative-widget .button.unselect-button // ActionBuilder > Upload Image Widget > Unselect (Button)

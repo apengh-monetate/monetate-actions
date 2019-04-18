@@ -1,0 +1,341 @@
+@import "../variables";
+
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#MONETATE-ID {
+    position: relative;
+
+    li {
+        list-style: none;
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        margin: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider-mask],
+    &[data-slider-wrapper="fade"] [data-slider-mask] {
+        touch-action: pan-y;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        touch-action: pan-x;
+    }
+
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider] {
+        white-space: nowrap !important;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        float: none;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slide] {
+        display: inline-block !important;
+        vertical-align: top;
+        white-space: normal;
+    }
+    &[data-slider-wrapper="vertical"] [data-slide] {
+        display: block !important;
+    }
+    &[data-slider-wrapper="fade"] [data-slide] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+    &[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+    // ==================================================================
+    // Buttons / Pagination
+    // ==================================================================
+    [data-pagination-slide],
+    [data-prev-button],
+    [data-next-button]{
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    [data-pagination-slide] * {
+        pointer-events: none;
+    }
+
+} // MONETATE-ID
+
+
+
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#MONETATE-ID {
+    margin: 20px auto;
+    max-width: $max-width;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-md) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        display: inline-block;
+        width: calc(100% - 68px);
+        width: 100%;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        height: 400px!important;
+    }
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+
+    }
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        > div {
+            height: 100%;
+            padding: 10px;
+        }
+        img {
+            max-height: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+
+
+    // ==================================================================
+    // Buttons
+    // ==================================================================
+    [data-prev-button],
+    [data-next-button] {
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        -webkit-user-select: none;
+        background: none;
+        color: #000;
+        display: none;
+        font-size: 25px;
+        padding: 0;
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        user-select: none;
+        img {
+            max-width: 32px;
+        }
+    }
+    [data-prev-button] {
+        left: 10px;
+    }
+    [data-next-button] {
+        right: 10px;
+    }
+    &[data-slider-wrapper="vertical"] [data-prev-button] {
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    &[data-slider-wrapper="vertical"] [data-next-button] {
+        bottom: 0;
+        left: 50%;
+        right: auto;
+        top: auto;
+        transform: translateX(-50%);
+    }
+
+
+
+    // ==================================================================
+    // Pagination
+    // ==================================================================
+    [data-pagination="thumbnails"] [data-pagination-slide] {
+        background: none;
+        border-radius: 0;
+        height: auto;
+        width: 40px;
+    }
+
+    [disabled] {
+        opacity: 0.5;
+    }
+
+    [data-pagination-slide] {
+        background: #000;
+        border-radius: 6px;
+        display: inline-block;
+        height: 12px;
+        margin: 4px;
+        opacity: 0.5;
+        width: 12px;
+        &[data-slide-active] {
+            opacity: 1;
+        }
+    }
+    [data-pagination*="dots"] [data-pagination-slide] {
+        /* remove below for pagination numbers */
+        text-indent: -9999px;
+    }
+
+
+
+    // ==================================================================
+    // Slider Container Template
+    // ==================================================================
+    .mt-slider {
+        &__header {
+            color: $gray;
+            font-size: 24px;
+            line-height: 1;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            text-align: left;
+            text-transform: none;
+        }
+
+        &__wrapper {
+            position: relative;
+            @media screen and (min-width: $max-width) {
+                margin-left: -10px;
+                margin-right: -10px;
+            }
+        }
+    } // .mt-slider
+
+
+
+    // ==================================================================
+    // Slide Template
+    // ==================================================================
+    .mt-slide {
+        color: #000;
+        text-decoration: none !important;
+        &:hover,
+        &:focus,
+        &:active {
+            color: #000;
+            text-decoration: none !important;
+        }
+
+        &__img {
+            img {
+                display: block;
+                margin-bottom: 10px;
+                position: relative;
+            }
+        }
+
+
+        &__details {
+
+        }
+        &__title {
+            color: $blue;
+            font-weight: 900;
+        }
+        &__price {
+            &--reg {
+
+            }
+            &--sale {
+                display: none;
+            }
+        }
+    } // .mt-slide
+
+
+    // ==================================================================
+    // Helper Classes
+    // ==================================================================
+    .uppercase {
+        text-transform: uppercase;
+    }
+    .hide {
+        display: none !important;
+    }
+
+} // #MONETATE-ID
+
+
+/* ------------------------------------------------------------------
+ * Mobile 2x2 Grid
+ ----------------------------------------------------------------- */
+#MONETATE-ID .mobile-2-2 {
+    @media screen and (max-width: ($breakpoint-md - 1)) {
+        [data-pagination],
+        [data-prev-button],
+        [data-next-button] {
+            display: none;
+        }
+        [data-slider-mask] {
+
+        }
+        [data-slider] {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow: hidden !important;
+            transform: none !important;
+        }
+        [data-slide] {
+            width: 50% !important;
+            > div {
+                padding: 0;
+            }
+            &:nth-child(n+5) {
+                display: none !important;
+            }
+        }
+        .mt_recommendations {
+            &__details {
+                display: none;
+            }
+        }
+    }
+}

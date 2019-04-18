@@ -1,0 +1,49 @@
+/* Change back link to "Homepage" */
+.back-button-wrapper .back-link {
+  font-size: 0;
+}
+
+.back-button-wrapper .back-link::after {
+  color: #003366;
+  content: "Homepage";
+  font-size: 11px;
+  line-height: 11px;
+}
+
+#mt-shop-category-link {
+  -ms-flex-align: center;
+      align-items: center;
+  background-color: #F8923C;
+  background-image: linear-gradient(to bottom, #F8923C 0%, rgba(255, 255, 255, 0.25) 50%, #F8923C 51%, #f78423 90%, #df6b08 100%);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.6);
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#mt-shop-category-link a {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 12px;
+  position: relative;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#mt-shop-category-link a::after {
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid white;
+  border-top: 6px solid transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: -16px;
+  top: 0;
+  width: 0;
+}

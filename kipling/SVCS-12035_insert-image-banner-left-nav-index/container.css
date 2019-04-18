@@ -1,0 +1,20 @@
+.mt-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+
+.mt-container__img {
+  font-size: 0;
+}
+
+.mt-container img {
+  max-width: 100%;
+}

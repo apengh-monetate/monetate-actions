@@ -1,0 +1,8 @@
+<a href="{{link}}" data-pid="{{id}}" id="mt-item-link-{{id}}">
+    <img src="{{imageLink}}" alt="{{id}} - {{title}}" />
+    <span class="mt-item-title heading is-7">{{siteName}}</span>
+    <span class="mt-item-desc">{{siteDescription}}</span>
+    <span class="is-sr-only">Reference {{id}}</span>
+    <p class="mt-price">{{price|priceFormat: $1000}}</p>
+</a>
+<button class="button is-tertiary" type="button" data-id="{{id}}" aria-label="{{title}}- Ref. {{id}}" aria-haspopup="dialog" data-popup-target="quickview" data-popup-query="sku={{id}}&amp;quickView=true"> <span class="button__wrapper"> <span>Add to bag</span> </span> </button>

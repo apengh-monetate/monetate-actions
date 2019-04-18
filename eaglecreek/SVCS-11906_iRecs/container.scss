@@ -1,0 +1,46 @@
+@import "../variables";
+
+
+.mt_recs-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px auto 0;
+    max-width: $max-width;
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-md) {
+        border-bottom: 1px solid #ccc;
+        flex-wrap: nowrap;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        border-bottom: 1px solid #ccc;
+        width: calc(100% - 10px);
+    }
+
+    &__column {
+        // min-height: 100px;
+        width: 100%;
+        @media screen and (min-width: $breakpoint-md) {
+            width: 50%;
+        }
+
+        &:not(:last-child) {
+            @media screen and (min-width: $breakpoint-md) {
+                border-right: 1px solid #ccc;
+            }
+        }
+
+    }
+
+    // .column-1 {
+    //     background: rgba(red, 0.1);
+    // }
+    // .column-2 {
+    //     background: rgba(green, 0.1);
+    // }
+
+
+
+}

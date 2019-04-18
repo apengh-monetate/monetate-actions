@@ -1,0 +1,61 @@
+@import "../../mixins";
+
+// ==================================================================
+// ACCORDION
+// ==================================================================
+.mt_accordion {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 798px;
+    padding: 0 30px;
+    @media screen and (min-width: 768px) {
+        padding: 0 45px;
+    }
+    &:first-child {
+        margin-top: 30px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    // ------------------------------------------------------------------
+    // Heading
+    // ------------------------------------------------------------------
+    &__heading {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__header {
+        margin: 0;
+        padding: 0;
+    }
+    &__toggle {
+        button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            height: 32px;
+            width: 32px;
+        }
+        &--open {
+
+        }
+        &--close {
+
+        }
+    }
+
+
+    // ------------------------------------------------------------------
+    // Content
+    // ------------------------------------------------------------------
+    &__content {
+
+    }
+
+} // .mt_accordion

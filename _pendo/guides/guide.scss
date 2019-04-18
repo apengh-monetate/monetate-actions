@@ -6,14 +6,22 @@
 
 
     h1, h2, h3, h4, p {
-        color: #black;
+        color: $black;
         margin: 0;
+        margin-bottom: 20px;
         padding: 0;
+        text-align: left;
     }
+
+    p {
+        margin: 0;
+    }
+
     a {
         // color: $blue;
         font-weight: 600;
     }
+
     ul {
         margin-bottom: 0;
         li:first-child {
@@ -79,7 +87,7 @@
     // ==================================================================
     &__content {
         &[data-content-type="text"] {
-            padding: 20px;
+            padding: 30px 20px;
         }
         &[data-content-type="video"] {
             padding: 0;
@@ -111,7 +119,7 @@
     // Additional Resources / Use Cases
     // ==================================================================
     &__resources {
-        background: #eff5ff;
+        background: #fff;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -119,6 +127,9 @@
         padding: 20px;
         & > .column {
             flex: 1;
+        }
+        h1, h2, h3, h4 {
+            margin-bottom: 5px;
         }
     }
 

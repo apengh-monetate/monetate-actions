@@ -8,5 +8,9 @@
     input {
         font-size: 14px;
         line-height: 21px;
+        &.mtError {
+            border-color: red;
+            color: red;
+        }
     }
 }
