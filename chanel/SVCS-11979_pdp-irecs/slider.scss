@@ -395,10 +395,23 @@ $font-family: "abchanel-corpo", sans-serif;
 
 }
 
+.product-details__media {
+    @media screen and (min-width: 60.0625rem) {
+        align-self: flex-start !important;
+    }
+}
 
-// .product-details__outer {
-//     @media screen and (min-width: 37.5625rem) {
-//         position: relative !important;
-//         top: 0 !important;
-//     }
-// }
+.product-details__outer {
+    @media screen and (min-width: 60.0625rem) {
+        position: relative !important;
+        top: 0 !important;
+        transform: none !important;
+    }
+}
+
+.product-details .carousel__slide {
+    @media screen and (min-width: 60.0625rem) {
+        align-items: flex-start !important;
+        height: auto !important;
+    }
+}

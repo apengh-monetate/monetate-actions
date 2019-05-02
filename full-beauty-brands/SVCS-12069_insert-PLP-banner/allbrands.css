@@ -1,0 +1,27 @@
+#search-result-items > li.grid-tile.new-row {
+  clear: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  #search-result-items > li.grid-tile:nth-child(odd) {
+    clear: both !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1299px) {
+  #search-result-items > li.grid-tile:nth-child(3n+1) {
+    clear: both !important;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #search-result-items > li.grid-tile:nth-child(4n+1) {
+    clear: both !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #search-result-items > [class*="monetate_cloneNode"] img {
+    width: 240px;
+  }
+}

@@ -1,0 +1,144 @@
+#MONETATE-ID {
+  display: block;
+  margin: 30px auto;
+  max-width: 1440px;
+  position: relative;
+}
+
+#MONETATE-ID img {
+  width: 100%;
+}
+
+#MONETATE-ID .mt_grid__heading {
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 1440px) {
+  #MONETATE-ID .mt_grid__heading {
+    padding: 0;
+  }
+}
+
+#MONETATE-ID .mt_grid__heading h2 {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt_grid__heading h2 {
+    font-size: 28px;
+  }
+}
+
+#MONETATE-ID [mt-data-grid] {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID [mt-data-grid] {
+    -ms-grid-columns: 2fr (1fr)[3];
+    grid-template-columns: 2fr repeat(3, 1fr);
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+#MONETATE-ID .mt-merch-item {
+  font-size: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#MONETATE-ID .mt-merch-item:first-child {
+  -ms-grid-column-span: 2;
+  grid-column-end: 3;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt-merch-item:first-child {
+    -ms-grid-column-span: 2;
+    grid-column-end: 2;
+    -ms-grid-row-span: 2;
+    grid-row-end: 3;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+}
+
+#MONETATE-ID .mt_grid-item:hover .mt_grid-item__img img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#MONETATE-ID .mt_grid-item:hover .mt_grid-item__details {
+  opacity: 1;
+}
+
+#MONETATE-ID .mt_grid-item__img img {
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+#MONETATE-ID .mt_grid-item__details {
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 12px;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+  width: 100%;
+}
+
+#MONETATE-ID .mt_grid-item__title {
+  font-weight: 600;
+}
+
+#MONETATE-ID .mt_grid-item__price--reg {
+  color: #ccc;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+#MONETATE-ID .mt_grid-item__price--sale {
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+#MONETATE-ID [data-missing-keys="salePrice"] .mt_grid-item__price--reg {
+  font-weight: 400;
+  text-decoration: none;
+}

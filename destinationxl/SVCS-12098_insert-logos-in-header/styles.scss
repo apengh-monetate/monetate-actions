@@ -1,0 +1,30 @@
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:first-child {
+
+}
+
+app-header[_nghost-c2] [aria-labelledby=storeHeading][_ngcontent-c2] {
+    @media screen and (min-width: 1025px) {
+        flex: 0 0 auto !important;
+        width: auto !important;
+    }
+}
+
+.mt_header-logos {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-right: 10px;
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+}
+// .mt_header-logo {
+//     img {
+//         margin-left: 10px;
+//         margin-right: 10px;
+//         margin-top: 5px;
+//     }
+// }

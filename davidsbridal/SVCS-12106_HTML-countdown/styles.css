@@ -1,0 +1,140 @@
+/*---Default Styles---*/
+/* Wrapper */
+.mt_countdown {
+  color: #000;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+/*Hides the plural parameter on any suffixes when counting down.*/
+.mt_countdown .mt_hide_plural {
+  display: none;
+}
+
+/*---Optional Ticker Interval Styles---*/
+/*These may be altered to match the site's native styling or removed if not in use.*/
+/* Years Interval */
+/* Weeks Interval */
+/* Days Interval */
+/* Hours Interval */
+/* Minutes Interval */
+/* Minutes Interval */
+/* Seconds Interval */
+/* Seconds Interval */
+/* Tenths of a Second Interval */
+/*---Optional Responsive Layout Breakpoints---*/
+/*These may be altered to match the site's native breakpoints or removed if not in use.*/
+.mt-countdown {
+  color: #4d4d4d;
+  display: block !important;
+  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  padding-top: 10px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown {
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+}
+
+.mt-countdown__heading {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown__heading {
+    display: inline-block;
+  }
+}
+
+.mt-countdown__heading span {
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.mt-countdown__heading span:not(:first-child) {
+  border-left: 1px solid #4d4d4d;
+}
+
+.mt-countdown__subheading {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  margin: 0;
+  margin-bottom: 4px;
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown__subheading {
+    border-left: 1px solid #4d4d4d;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+.mt-countdown__link {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 0;
+  padding-right: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown__link {
+    border-left: 1px solid #4d4d4d;
+    padding-left: 8px;
+    padding-right: 4px;
+  }
+}
+
+.mt-countdown__link a {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  text-decoration: underline;
+}
+
+.mt-countdown__timer {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  font-weight: 600;
+  line-height: 14px;
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown__timer {
+    border-left: 1px solid #4d4d4d;
+    font-size: 14px;
+    line-height: 14px;
+    padding-left: 8px;
+  }
+}
+
+.mt-countdown .bold {
+  font-weight: 700;
+}
+
+.mt-countdown .uppercase {
+  text-transform: uppercase;
+}

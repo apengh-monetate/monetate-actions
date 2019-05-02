@@ -1,0 +1,30 @@
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] {
+  -webkit-flex-wrap: nowrap !important;
+      -ms-flex-wrap: nowrap !important;
+          flex-wrap: nowrap !important;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] + ul[_ngcontent-c2] {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: 0 1 auto !important;
+      -ms-flex: 0 1 auto !important;
+          flex: 0 1 auto !important;
+  -webkit-flex-wrap: nowrap !important;
+      -ms-flex-wrap: nowrap !important;
+          flex-wrap: nowrap !important;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] + ul[_ngcontent-c2] > li {
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: 0 1 33.33333% !important;
+      -ms-flex: 0 1 33.33333% !important;
+          flex: 0 1 33.33333% !important;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] + ul[_ngcontent-c2] > li img {
+  max-width: 100% !important;
+}

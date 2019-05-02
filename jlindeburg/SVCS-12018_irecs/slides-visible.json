@@ -14,7 +14,7 @@
         }
     },
     "gridSize": 1,
-    "infiniteSlide": false,
+    "infiniteSlide": true,
     "pagination": "dots-page",
     "pauseOnHover": false,
     "slideIncrement": "page",

@@ -1,0 +1,30 @@
+/*
+ * Note: This is removing text-transforms for all child
+ * elements in the elements below.
+ */
+[data-eventlabel="melodyHeroFull"] *,
+[data-eventlabel="productSearch"] *,
+[data-eventlabel="melodyEditorialPromo"] *,
+[data-eventlabel="melodyPromoGroup"] * {
+  text-transform: none !important;
+}
+
+[data-eventlabel="melodyHeroFull"] a,
+[data-eventlabel="productSearch"] a,
+[data-eventlabel="melodyEditorialPromo"] a,
+[data-eventlabel="melodyPromoGroup"] a {
+  text-transform: none !important;
+}
+
+a[data-eventlabel="melodyHeroFull"] {
+  text-transform: none !important;
+}
+
+[data-page-id="zappos-homepage"] a[data-eventlabel],
+[data-page-id="zappos-homepage"] [data-eventlabel] * {
+  text-transform: none !important;
+}
+
+[data-page-id="zappos-homepage"] [data-eventlabel="Instagram"] p {
+  text-transform: uppercase !important;
+}

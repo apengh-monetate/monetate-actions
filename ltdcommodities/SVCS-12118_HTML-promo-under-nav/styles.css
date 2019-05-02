@@ -1,0 +1,76 @@
+.mt_promo-banner {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: .4rem;
+  padding: .2rem 0;
+  text-align: center;
+}
+
+.mt_promo-banner em {
+  color: #000;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 40em) {
+  .mt_promo-banner em {
+    margin: 0 .3rem;
+  }
+}
+
+.mt_promo-banner__offer {
+  color: #FF0000;
+  display: block;
+  font-size: .9rem;
+  font-weight: 900;
+  padding-right: .2rem;
+}
+
+@media screen and (min-width: 40em) {
+  .mt_promo-banner__offer {
+    font-size: 1.2rem;
+  }
+}
+
+.mt_promo-banner__promo {
+  display: inline-block;
+  margin-bottom: .4em;
+}
+
+@media screen and (min-width: 40em) {
+  .mt_promo-banner__promo {
+    margin-bottom: 0;
+  }
+}
+
+.mt_promo-banner__promo-code {
+  color: #252525;
+  display: block;
+  font-size: .9rem;
+  font-weight: 600;
+  padding-right: .2rem;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 40em) {
+  .mt_promo-banner__promo-code {
+    display: inline;
+    font-size: 1.2rem;
+    margin-left: .2rem;
+  }
+}
+
+.mt_promo-banner__promo-code span {
+  font-size: .8rem;
+  font-weight: 400;
+  margin-left: .2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.mt_promo-banner__terms {
+  color: #555;
+  display: block;
+  font-size: .5rem;
+  margin-top: .5rem;
+  padding-bottom: .2rem;
+}

@@ -1,0 +1,198 @@
+.mt-countdown {
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #223628;
+  color: #fceff3 !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  font-family: 'FuturaPTMedium', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: .02em;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+@media screen and (min-width: 1025px) {
+  .mt-countdown {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    padding-bottom: 10px;
+  }
+}
+
+.mt-countdown p {
+  margin: 0 !important;
+}
+
+.mt-countdown__msg {
+  color: #fceff3 !important;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+  .mt-countdown__msg {
+    margin: 0;
+    width: auto;
+  }
+}
+
+.mt-countdown__msg p {
+  color: #fceff3 !important;
+  display: block;
+  font-family: 'FuturaPTMedium', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .02em;
+  padding: 0;
+  text-transform: lowercase;
+}
+
+.mt-countdown__timer {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+  .mt-countdown__timer {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: auto;
+  }
+}
+
+.mt-countdown__prefix {
+  color: #fceff3;
+  font-family: 'FuturaPTMedium', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .02em;
+  margin-right: 4px;
+  padding: 0;
+  text-transform: lowercase;
+}
+
+.mt-countdown__digits {
+  border: 1px solid #fceff3;
+  font-family: 'FuturaPTMedium', Arial, sans-serif;
+  font-weight: 400;
+  min-width: 80px;
+  padding: 4px 16px;
+  text-align: center;
+}
+
+.mt-countdown__digits .mt_time {
+  position: relative;
+}
+
+.mt-countdown__digits .mt_time::after {
+  background-color: #223628;
+  color: inherit;
+  display: block;
+  font-size: 10px;
+  left: 50%;
+  line-height: 1;
+  padding: 0px 0.25em;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mt-countdown__digits--hrs .mt_time::after {
+  content: "H";
+}
+
+.mt-countdown__digits--min .mt_time::after {
+  content: "M";
+}
+
+.mt-countdown__digits--sec .mt_time::after {
+  content: "S";
+}
+
+.mt-countdown .mt_time {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  min-width: 20px;
+}
+
+.mt-countdown .mt_suffix {
+  margin-left: 4px;
+}
+
+.mt-countdown__links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 1025px) {
+  .mt-countdown__links {
+    margin-top: -4px;
+  }
+}
+
+.mt-countdown__link {
+  display: block;
+  margin: 0 !important;
+}
+
+.mt-countdown__link a {
+  border-bottom: 3px solid #fceff3;
+  color: #fceff3 !important;
+  letter-spacing: .5px;
+  margin-left: 6px;
+  margin-right: 6px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}

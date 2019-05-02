@@ -1,0 +1,169 @@
+@import "../../variables";
+
+// ==================================================================
+// Countdown
+// ==================================================================
+.mt-countdown {
+    align-content: center;
+    align-items: center;
+    background: $green;
+    color: $light-pink !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'FuturaPTMedium', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: center;
+    letter-spacing: .02em;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    @media screen and (min-width: 1025px) {
+        flex-wrap: nowrap;
+        padding-bottom: 10px;
+    }
+
+    p {
+        margin: 0 !important;
+    }
+
+
+    // ------------------------------------------------------------------
+    // Message
+    // ------------------------------------------------------------------
+    &__msg {
+        color: $light-pink !important;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        @media screen and (min-width: 1025px) {
+            margin: 0;
+            width: auto;
+        }
+
+        p {
+            color: $light-pink !important;
+            display: block;
+            font-family: 'FuturaPTMedium', Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: .02em;
+            padding: 0;
+            text-transform: lowercase;
+        }
+    }
+
+
+
+    // ------------------------------------------------------------------
+    // Timer
+    // ------------------------------------------------------------------
+    &__timer {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        @media screen and (min-width: 1025px) {
+            margin-left: 40px;
+            margin-right: 40px;
+            width: auto;
+        }
+    }
+
+    &__prefix {
+        color: #fceff3;
+        font-family: 'FuturaPTMedium', Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: .02em;
+        margin-right: 4px;
+        padding: 0;
+        text-transform: lowercase;
+    }
+    &__digits {
+        border: 1px solid $light-pink;
+        font-family: 'FuturaPTMedium', Arial, sans-serif;
+        font-weight: 400;
+        min-width: 80px;
+        padding: 4px 16px;
+        text-align: center;
+
+        .mt_time {
+            position: relative;
+            &::after {
+                background-color: $green;
+                color: inherit;
+                display: block;
+                font-size: 10px;
+                left: 50%;
+                line-height: 1;
+                padding: 0px 0.25em;
+                position: absolute;
+                transform: translateX(-50%);
+            }
+        }
+
+        &--hrs {
+            .mt_time {
+                &::after {
+                    content: "H";
+                }
+            }
+        }
+        &--min {
+            .mt_time {
+                &::after {
+                    content: "M";
+                }
+            }
+        }
+        &--sec {
+            .mt_time {
+                &::after {
+                    content: "S";
+                }
+            }
+        }
+    }
+    .mt_time {
+        display: inline-block;
+        font-variant-numeric: tabular-nums;
+        min-width: 20px;
+    }
+    .mt_suffix {
+        margin-left: 4px;
+    }
+
+
+    // ------------------------------------------------------------------
+    // Links
+    // ------------------------------------------------------------------
+    &__links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-top: 15px;
+        @media screen and (min-width: 1025px) {
+            margin-top: -4px;
+        }
+    }
+
+    &__link {
+        display: block;
+        margin: 0 !important;
+        a {
+            border-bottom: 3px solid $light-pink;
+            color: $light-pink !important;
+            letter-spacing: .5px;
+            margin-left: 6px;
+            margin-right: 6px;
+            text-decoration: none !important;
+            text-transform: uppercase;
+        }
+    }
+
+}

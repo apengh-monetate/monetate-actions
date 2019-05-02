@@ -1,0 +1,14 @@
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] {
+    flex-wrap: nowrap !important;
+}
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] + ul[_ngcontent-c2] {
+    display: flex !important;
+    flex: 0 1 auto !important;
+    flex-wrap: nowrap !important;
+}
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] + ul[_ngcontent-c2] > li {
+    flex: 0 1 33.33333% !important;
+}
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] + ul[_ngcontent-c2] > li img {
+    max-width: 100% !important;
+}

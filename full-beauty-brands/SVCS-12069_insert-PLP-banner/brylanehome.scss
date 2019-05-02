@@ -1,0 +1,35 @@
+#search-result-items > li.grid-tile {
+
+    &.new-row {
+        clear: none !important;
+    }
+
+    @media screen and (max-width: 767px) {
+        &:nth-child(odd) {
+            clear: both !important;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &:nth-child(3n+1) {
+            clear: both !important;
+        }
+    }
+
+    // @media screen and (min-width: 1300px) {
+    //     &:nth-child(4n+1) {
+    //         clear: both !important;
+    //     }
+    // }
+}
+
+#search-result-items > [class*="monetate_cloneNode"] {
+    @media screen and (min-width: 1024px) {
+        width: 33.33333%;
+    }
+    img {
+        @media screen and (min-width: 1024px) {
+            max-width: 300px;
+        }
+    }
+}

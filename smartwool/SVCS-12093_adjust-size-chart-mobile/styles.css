@@ -1,0 +1,14 @@
+@media screen and (max-width: 40em) {
+  .pdp.pdp-swatches #product-detail #product-form .product-attr-form > section.step-container:not(.attr-color) .step-content .button {
+    font-size: 1.06667rem !important;
+    height: auto !important;
+    line-height: 1.5 !important;
+    padding: 6px 0 !important;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .pdp.pdp-swatches #product-detail #product-form .product-attr-form > section.step-container:not(.attr-color) .step-content .button span {
+    line-height: 1.5 !important;
+  }
+}

@@ -1,0 +1,125 @@
+.btn-top {
+  display: none !important;
+}
+
+.mt-chat {
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fefefe;
+  border-left: 2px solid #ccc;
+  border-top: 2px solid #ccc;
+  bottom: 0;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  z-index: 9999;
+}
+
+.mt-chat * {
+  box-sizing: border-box;
+}
+
+.mt-chat__link {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  color: #999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 1025px) {
+  .mt-chat__link {
+    height: 37px;
+    padding: 6px 8px 4px 8px;
+  }
+}
+
+.mt-chat__link:hover, .mt-chat__link:active, .mt-chat__link:focus {
+  background: #f0f0f0;
+}
+
+.mt-chat__link img {
+  margin-right: 5px;
+  margin-top: 4px;
+  max-width: 20px;
+}
+
+.mt-chat__link--text {
+  font-family: 'AvenirBlack', sans-serif;
+  margin-left: 4px;
+}
+
+.mt-chat__back-to-top {
+  background: #fefefe;
+  background: none;
+  border: none;
+  border-left: 2px solid #ccc;
+  color: #999;
+  display: none;
+  font-size: 24px;
+  margin: 0;
+  padding: 19px 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: auto;
+}
+
+@media screen and (min-width: 1025px) {
+  .mt-chat__back-to-top {
+    display: block;
+  }
+}
+
+.mt-chat__back-to-top:hover, .mt-chat__back-to-top:active, .mt-chat__back-to-top:focus {
+  background: #f0f0f0;
+  border-color: #ccc;
+}
+
+.mt-chat__back-to-top span {
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.mt-chat__back-to-top span i {
+  margin-left: 4px;
+}

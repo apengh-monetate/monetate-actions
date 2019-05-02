@@ -1,0 +1,111 @@
+.mt_iamroamans {
+    text-align: center;
+
+    .relative {
+        position: relative;
+    }
+    .margin-bottom-section {
+        margin-bottom: 30px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 60px;
+        }
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 50px;
+        }
+    }
+
+
+    .uppercase {
+        text-transform: uppercase;
+    }
+    .mtb10 {
+        margin: 10px 0;
+    }
+    .mb15 {
+        margin-bottom: 15px;
+    }
+    .plr10 {
+        padding: 0 10px;
+    }
+    .z1 {
+        z-index: 1;
+    }
+    .block {
+        display: block;
+    }
+    .black {
+        color: #000;
+    }
+    .futura-book {
+        font-family: "Futura LT W01 Book", sans-serif;
+    }
+    .futura-med {
+        font-family: "Futura LT W01 Medium", sans-serif;
+    }
+    .fs50 {
+        font-size: calc(26px + 24 * ((100vw - 320px) / 1660));
+    }
+    .fs30 {
+        font-size: calc(20px + 10 * ((100vw - 320px) / 1660));
+    }
+    .fs20 {
+        font-size: calc(16px + 4 * ((100vw - 320px) / 1660));
+    }
+    .purple-rms {
+        color: #961DCE;
+    }
+
+    .flex {
+        display: flex;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .justify-center {
+        justify-content: center;
+    }
+    .align-items-center {
+        align-items: center;
+    }
+
+    .btn-rms {
+        background: #000;
+        box-sizing: border-box;
+        color: #fff;
+        display: inline-block;
+        letter-spacing: 0.1em;
+        line-height: 1;
+        min-width: 175px;
+        padding: 20px 30px;
+        text-align: center;
+        text-transform: uppercase;
+        @media screen and (max-width: 767px) {
+            min-width: 175px;
+        }
+    }
+    .btn-white {
+        background: #fff;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        color: #000;
+    }
+    .width100-mobile {
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+    }
+    .mobile-block {
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        li {
+            list-style: none;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+
+// Edit Other
+
+// Hide Element
+.flex-item-weak .tabContentWrapper div div:contains("Hide Element")
+
+// Select Element
+
+// Advance
+.selector-step.step .button.flipper.flipper-right
+
+// Select Mask
+.config-tabs button[data-value="Mask"]
+
+// Enable Masking
+.config-panel.config-panel-mask .slide-checkbox
+
+// Selector
+.config-panel.config-panel-mask .ui-field.css-selector-field.selector input
+
+// Apply this mask
+.ui-field.select-field.rule
+.ui-field.select-field.rule div.select:nth-child(2) button.select-button
+.ui-field.select-field.rule div.menu-item[data-value="iregex"]
+^\/$
+
+// Step 10 - Add condition?
+.config-tabs button[data-value="Conditions"]
+
+// Step 11 - Advance
+.config-step.step .button.flipper.flipper-right
+
+// Step 12 - Action Title, Description, Save and Exit
+.save-exit-buttons .button.js-create-exit-button
+
+// Click name of action to open quickview
+.actiontemplate-row:nth-child(1) td a
+
+// Click create experience with action
+[data-test-id="create-experience-with-action-button"]
+
+// Create button in experience
+.nav-panel.action-config-panel .footer-container .button.js-create-button
+
+
+.config-tabs button[data-value="Details"]
+.config-tabs button[data-value="Styles"]
+.config-tabs button[data-value="Mask"]
+.config-tabs button[data-value="Conditions"]
+.config-tabs button[data-value="Inputs"]

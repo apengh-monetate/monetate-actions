@@ -90,7 +90,7 @@
   width: 100vw;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   #MONETATE-ID {
     padding-left: 40px;
     padding-right: 40px;
@@ -119,7 +119,7 @@
   padding-right: 5px;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   #MONETATE-ID [data-slide] > div {
     padding: 0 8px;
   }
@@ -148,15 +148,25 @@
   padding: 0;
   padding: 1px;
   position: absolute;
-  top: 47%;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   user-select: none;
   width: 24px;
+}
+
+@media screen and (min-width: 500px) {
+  #MONETATE-ID [data-prev-button],
+  #MONETATE-ID [data-next-button] {
+    top: 45%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   #MONETATE-ID [data-prev-button],
   #MONETATE-ID [data-next-button] {
     height: 32px;
+    top: 47%;
     width: 32px;
   }
 }
@@ -287,33 +297,71 @@
 }
 
 #MONETATE-ID .mt-slide__details {
-  display: none;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 4px;
+}
+
+@media screen and (min-width: 500px) {
+  #MONETATE-ID .mt-slide__details {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 992px) {
   #MONETATE-ID .mt-slide__details {
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 
 #MONETATE-ID .mt-slide__title {
   display: inline-block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 50%;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
   font-size: 10px;
   text-align: left;
+  width: 60%;
+}
+
+@media screen and (min-width: 992px) {
+  #MONETATE-ID .mt-slide__title {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #MONETATE-ID .mt-slide__title {
+    font-size: 11px;
+  }
 }
 
 #MONETATE-ID .mt-slide__price {
@@ -321,13 +369,41 @@
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   font-size: 10px;
   text-align: right;
+  width: 40%;
+}
+
+@media screen and (min-width: 500px) {
+  #MONETATE-ID .mt-slide__price {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #MONETATE-ID .mt-slide__price {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -338,6 +414,7 @@
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
     font-size: 11px;
+    padding-left: 6px;
   }
 }
 
@@ -354,6 +431,18 @@
 #MONETATE-ID .mt-slide__price--sale {
   color: #d62525;
   display: inline-block;
+}
+
+@media screen and (min-width: 500px) {
+  #MONETATE-ID .mt-slide__price--sale {
+    margin-right: 4px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #MONETATE-ID .mt-slide__price--sale {
+    margin-right: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {

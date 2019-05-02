@@ -1,0 +1,65 @@
+.mt_promo-banner {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: .4rem;
+    padding: .2rem 0;
+    text-align: center;
+
+    em {
+        color: #000;
+        font-style: normal;
+        font-weight: 300;
+        @media screen and (min-width: 40em) {
+            margin: 0 .3rem;
+        }
+    }
+
+    &__offer {
+        color: #FF0000;
+        display: block;
+        font-size: .9rem;
+        font-weight: 900;
+        padding-right: .2rem;
+        @media screen and (min-width: 40em) {
+            font-size: 1.2rem;
+        }
+    }
+
+
+    &__promo {
+        display: inline-block;
+        margin-bottom: .4em;
+        @media screen and (min-width: 40em) {
+            margin-bottom: 0;
+        }
+        &-code {
+            color: #252525;
+            display: block;
+            font-size: .9rem;
+            font-weight: 600;
+            padding-right: .2rem;
+            vertical-align: middle;
+            @media screen and (min-width: 40em) {
+                display: inline;
+                font-size: 1.2rem;
+                margin-left: .2rem;
+            }
+            span {
+                font-size: .8rem;
+                font-weight: 400;
+                margin-left: .2rem;
+                text-transform: uppercase;
+                vertical-align: middle;
+            }
+        }
+    }
+
+
+    &__terms {
+        color: #555;
+        display: block;
+        font-size: .5rem;
+        margin-top: .5rem;
+        padding-bottom: .2rem;
+    }
+
+}

@@ -1,0 +1,55 @@
+.mt_closable {
+    align-items: center;
+    background: #000;
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    letter-spacing: .7px;
+    padding: 10px 15px 8px !important;
+    position: relative;
+    @media screen and (min-width: 600px) {
+        padding: 27px 30px !important;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 17px 15px !important;
+    }
+
+
+    &__wrapper {
+        margin: 0;
+        max-width: 1410px;
+        padding: 0;
+        position: relative;
+        text-align: right;
+        width: 100%;
+        @media screen and (min-width: 600px) {
+            padding: 0 25px;
+        }
+    }
+
+    &__close {
+        align-items: center;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 24px !important;
+        font-weight: 100;
+        height: 24px;
+        justify-content: center;
+        line-height: 1 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 24px;
+        @media screen and (min-width: 600px) {
+            display: none;
+        }
+    }
+
+
+    &__content {
+        margin: 0;
+        padding: 0;
+    }
+}

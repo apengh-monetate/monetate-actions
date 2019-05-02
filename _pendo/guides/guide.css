@@ -26,6 +26,25 @@
   margin-top: 4px;
 }
 
+.mt_lightbox img {
+  max-width: 100%;
+}
+
+.mt_lightbox .img img {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.mt_lightbox .img-16x9 {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
 .mt_lightbox__header {
   position: relative;
 }

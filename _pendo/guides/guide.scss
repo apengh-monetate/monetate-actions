@@ -22,6 +22,8 @@
         font-weight: 600;
     }
 
+
+
     ul {
         margin-bottom: 0;
         li:first-child {
@@ -29,6 +31,27 @@
         }
     }
 
+    // ==================================================================
+    // Images
+    // ==================================================================
+    img {
+        max-width: 100%;
+    }
+    .img {
+        img {
+            border: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        &-16x9 {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+    }
 
 
     // ==================================================================
@@ -187,30 +210,30 @@
         justify-content:     flex-start;
 
         @each $value in $flex-direction {
-          &__#{$value} {
-            display: flex;
-            flex-direction: #{$value};
-          }
+            &__#{$value} {
+                display: flex;
+                flex-direction: #{$value};
+            }
         }
 
         &.nowrap {
-          flex-wrap: nowrap;
+            flex-wrap: nowrap;
         }
 
         &__item {
-          flex: 0 1 100%;
-          width: 100%;
+            flex: 0 1 100%;
+            width: 100%;
         }
 
         // ------------------------------------------------------------------
         // Container Properties
         // ------------------------------------------------------------------
         @each $property, $values in $flex-container {
-          @each $key, $value in $values {
-            &.#{$property}--#{$key} {
-              #{$property}: #{$value};
+            @each $key, $value in $values {
+                &.#{$property}--#{$key} {
+                    #{$property}: #{$value};
+                }
             }
-          }
         }
 
 
@@ -218,9 +241,9 @@
         // Item Properties
         // ------------------------------------------------------------------
         @each $key, $value in $align-self {
-          .align-self--#{$key} {
-            align-self: #{$value};
-          }
+            .align-self--#{$key} {
+                align-self: #{$value};
+            }
         }
 
     }
