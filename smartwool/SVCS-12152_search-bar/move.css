@@ -1,0 +1,11 @@
+@media print, screen and (min-width: 64em) {
+  .topnav-accordion {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
+    -webkit-box-flex: 0 !important;
+    -webkit-flex-grow: 0 !important;
+        -ms-flex-positive: 0 !important;
+            flex-grow: 0 !important;
+  }
+}

@@ -1,0 +1,12 @@
+.topnav-accordion {
+    @media print, screen and (min-width: 64em) {
+        flex-basis: auto !important;
+        flex-grow: 0 !important;
+    }
+}
+
+.topnav-search-container {
+    @media print, screen and (min-width: 40em) {
+
+    }
+}

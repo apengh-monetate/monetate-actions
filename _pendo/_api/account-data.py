@@ -5,20 +5,27 @@ from monetate.campaign.models import CampaignGroup
 from monetate.recs.models import RecommendationSet
 from monetate.milestones.models import AccountMilestone, Milestone
 
+debug = False
+dryRun = False
 
-accounts = Account.objects.filter(domain="m.jcrew.com", archived=False, instance="p");
+accounts = Account.objects.filter(archived=False, instance="p");
 for account in accounts:
-    print("-------------------------------")
-    print("ACCOUNT")
-    print("-------------------------------")
+    if(debug):
+        print("-------------------------------")
+        print("ACCOUNT")
+        print("-------------------------------")
     print("{}, {}, {}::{}".format(account.retailer.name, account.domain, account.retailer.id, account.id))
 
 
+
+    # ===========================================
     # Campaigns (Experiences)
-    print(" ")
-    print("-------------------------------")
-    print("CAMPAIGNS/EXPERIENCES")
-    print("-------------------------------")
+    # ===========================================
+    if(debug):
+        print(" ")
+        print("-------------------------------")
+        print("CAMPAIGNS/EXPERIENCES")
+        print("-------------------------------")
     predictive_count = 0
     split_count = 0
     experience_count = 0
@@ -38,25 +45,42 @@ for account in accounts:
             elif cgt == "predictive_exp":
                 predictive_exp_count += 1;
 
-    print("predictive: {}".format(predictive_count))
-    print("experience: {}".format(experience_count))
-    print("split: {}".format(split_count))
-    print("predictive_exp: {}".format(predictive_exp_count))
+    if(debug):
+        print("predictive: {}".format(predictive_count))
+        print("experience: {}".format(experience_count))
+        print("split: {}".format(split_count))
+        print("predictive_exp: {}".format(predictive_exp_count))
 
 
+
+    # ===========================================
     # Salesforce
-    print(" ")
-    print("-------------------------------")
-    print("SALESFORCE")
-    print("-------------------------------")
-    print("salesforce_id: {}".format(account.salesforce_id))
-    salesforce = SalesforceAccount.objects.filter(salesforce_id=account.salesforce_id)
-    for s in salesforce:
-        print("account_number: {}".format(s.account_number))
+    # ===========================================
+    if(debug):
+        print(" ")
+        print("-------------------------------")
+        print("SALESFORCE")
+        print("-------------------------------")
+        #print("salesforce_id: {}".format(account.salesforce_id))
+    salesforce_id = account.salesforce_id
+    salesforce_accountNumber = ''
+    if(salesforce_id):
+        salesforce = SalesforceAccount.objects.filter(salesforce_id=salesforce_id)
+        for s in salesforce:
+            salesforce_accountNumber = s.account_number
+
+    else:
+        salesforce_id = ''
+
+    print("salesforce_id: {}".format(salesforce_id))
+    print("account_number: {}".format(salesforce_accountNumber))
 
 
+
+    # ===========================================
     # Milestones
-    print(" ")
+    # ===========================================
+    # print(" ")
     # print("-------------------------------")
     # print("MILESTONES")
     # print("-------------------------------")
@@ -65,11 +89,15 @@ for account in accounts:
     #     print(m.milestone.name)
 
 
+
+    # ===========================================
     # Recommendation Sets
-    print(" ")
-    print("-------------------------------")
-    print("RECOMMENDATIONS")
-    print("-------------------------------")
+    # ===========================================
+    if(debug):
+        print(" ")
+        print("-------------------------------")
+        print("RECOMMENDATIONS")
+        print("-------------------------------")
     recs = RecommendationSet.objects.filter(account=account, archived=False)
     client_onboarded = 0
     most_viewed = 0
@@ -101,54 +129,62 @@ for account in accounts:
             view_also_view += 1;
         elif algorithm == "view_later_purchase":
             view_later_purchase += 1;
-    print("client_onboarded: {}".format(client_onboarded))
-    print("most_viewed: {}".format(most_viewed))
-    print("newest: {}".format(newest))
-    print("purchase_also_purchase: {}".format(purchase_also_purchase))
-    print("recently_viewed: {}".format(recently_viewed))
-    print("top_selling_count: {}".format(top_selling_count))
-    print("top_selling_revenue: {}".format(top_selling_revenue))
-    print("view_also_view: {}".format(view_also_view))
-    print("view_later_purchase: {}".format(view_later_purchase))
+
+    if(debug):
+        print("client_onboarded: {}".format(client_onboarded))
+        print("most_viewed: {}".format(most_viewed))
+        print("newest: {}".format(newest))
+        print("purchase_also_purchase: {}".format(purchase_also_purchase))
+        print("recently_viewed: {}".format(recently_viewed))
+        print("top_selling_count: {}".format(top_selling_count))
+        print("top_selling_revenue: {}".format(top_selling_revenue))
+        print("view_also_view: {}".format(view_also_view))
+        print("view_later_purchase: {}".format(view_later_purchase))
 
 
+    # ===========================================
     # Data object to be sent to Pendo API
-    print(" ")
-    print("-------------------------------")
-    print("PENDO DATA")
-    print("-------------------------------")
+    # ===========================================
+    if(debug):
+        print(" ")
+        print("-------------------------------")
+        print("PENDO DATA")
+        print("-------------------------------")
     metadata = {
         "accountId":"{}::{}".format(account.retailer.id, account.id),
         "values": {
-            "predictive":"{}".format(predictive_count),
-            "split":"{}".format(split_count),
-            "experience":"{}".format(experience_count),
-            "predictiveexp":"{}".format(predictive_exp_count),
-            "salesforceAccountId": "{}".format(s.salesforce_id),
-            "salesforceAccountNumber":"{}".format(s.account_number),
-            # "recommendationSetClientOnboarded":"{}".format(client_onboarded),
-            # "recommendationSetMostViewed":"{}".format(most_viewed),
-            # "recommendationSetNewest":"{}".format(newest),
-            # "recommendationSetPurchaseAlsoPurchase":"{}".format(purchase_also_purchase),
-            # "recommendationSetRecentlyViewed":"{}".format(recently_viewed),
-            # "recommendationSetTopSellingCount":"{}".format(top_selling_count),
-            # "recommendationSetTopSellingRevenue":"{}".format(top_selling_revenue),
-            # "recommendationSetViewAlsoView":"{}".format(view_also_view),
-            # "recommendationSetViewLaterPurchase":"{}".format(view_later_purchase),
+#             "campaignsPredictive":"{}".format(predictive_count),
+#             "campaignsSplit":"{}".format(split_count),
+#             "campaignsExperience":"{}".format(experience_count),
+#             "campaignsPredictiveExp":"{}".format(predictive_exp_count),
+            "salesforceAccountId": "{}".format(salesforce_id),
+            "salesforceAccountNumber":"{}".format(salesforce_accountNumber),
+#             "recommendationSetClientOnboarded":"{}".format(client_onboarded),
+#             "recommendationSetMostViewed":"{}".format(most_viewed),
+#             "recommendationSetNewest":"{}".format(newest),
+#             "recommendationSetPurchaseAlsoPurchase":"{}".format(purchase_also_purchase),
+#             "recommendationSetRecentlyViewed":"{}".format(recently_viewed),
+#             "recommendationSetTopSellingCount":"{}".format(top_selling_count),
+#             "recommendationSetTopSellingRevenue":"{}".format(top_selling_revenue),
+#             "recommendationSetViewAlsoView":"{}".format(view_also_view),
+#             "recommendationSetViewLaterPurchase":"{}".format(view_later_purchase)
         }
     }
     data = json.dumps(metadata)
     data = '[' + data + ']'
-    print(data)
+    if(debug):
+        print(data)
 
     # Send data to Pendo
     url = "https://app.pendo.io/api/v1/metadata/account/custom/value"
     #data = "[{\"accountId\":\"{0}\",\"values\":{\"firstname\":\"Quam\",\"lastname\":\"Quis\"}},{\"visitorId\":\"45\",\"values\":{\"firstname\":\"Vel\",\"lastname\":\"Quam\"}},{\"visitorId\":\"63\",\"values\":{\"firstname\":\"Eros\",\"lastname\":\"Nam\"}}]"
-    headers = {
-        'x-pendo-integration-key': "5508000e-d2f6-492f-622f-fbe620a9a4f4",
-        'content-type': "application/json",
-    }
-    response = requests.post(url, data = data, headers = headers)
-    print(response)
+    if not dryRun:
+        headers = {
+            'x-pendo-integration-key': "5508000e-d2f6-492f-622f-fbe620a9a4f4",
+            'content-type': "application/json",
+        }
+        response = requests.post(url, data = data, headers = headers)
+        print(response)
 
-print("-------------------------------")
+        print("-------------------------------")
+        print(" ")
