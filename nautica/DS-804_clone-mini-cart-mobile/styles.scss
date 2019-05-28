@@ -1,0 +1,29 @@
+$blue: #001745;
+
+#mtClonedMiniCart {
+    align-content: center;
+    align-items: center;
+    background: #fff;
+    border: 3px solid $blue;
+    border-radius: 50%;
+    bottom: 0px;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    position: absolute;
+    right: -10px;
+    width: 60px;
+    .mobile-cart-img-wrapper {
+        height: auto;
+        width: 22px;
+        img {
+            display: block;
+            margin-top: -5px;
+        }
+    }
+
+    .mobile-bar-title {
+        right: 10px;
+        top: 22px;
+    }
+}

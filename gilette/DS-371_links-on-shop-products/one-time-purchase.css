@@ -1,0 +1,13 @@
+.mt_one-time-purchase {
+  color: #182f6e;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 18px;
+  margin: 15px 0 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline !important;
+  vertical-align: baseline;
+}

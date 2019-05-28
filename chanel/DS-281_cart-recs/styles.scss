@@ -1,0 +1,16 @@
+#MONETATE-ID {
+    [data-slider] {
+        display: flex;
+    }
+    [data-slide] {
+        display: inline-flex !important;
+        flex-shrink: 0;
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .price-atc {
+        margin-top: auto;
+    }
+}

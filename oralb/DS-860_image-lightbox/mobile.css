@@ -1,0 +1,53 @@
+/**
+* Hide existing lightbox
+*/
+#proactiveChatContainer,
+.modal-backdrop {
+  display: none !important;
+}
+
+#monetate_selectorBanner_f4849e09_00 {
+  -webkit-animation-delay: 5s; /* Delays the display of flyin banner */
+  -webkit-animation-direction: normal;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-name: slideUp;
+  -webkit-animation-timing-function: ease;
+          animation-delay: 5s; /* Delays the display of flyin banner */
+          animation-direction: normal;
+          animation-duration: 3s;
+          animation-fill-mode: forwards;
+          animation-iteration-count: 1;
+          animation-name: slideUp;
+          animation-timing-function: ease;
+  bottom: -100%;
+  font-size: 0;
+  height: auto;
+  line-height: 0;
+  position: fixed;
+  top: auto;
+  width: 100%;
+}
+
+#monetate_selectorBanner_f4849e09_00 img {
+  width: 100%;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}

@@ -1,0 +1,28 @@
+.mt_subscribe-btn {
+  background: #182f6e;
+  border: 2px solid #182f6e;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  height: 48px;
+  line-height: 44px;
+  margin-top: 15px;
+  outline: none;
+  padding: 0 16px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.mt_subscribe-btn:hover {
+  background: #fff;
+  color: #182f6e;
+}

@@ -1,0 +1,37 @@
+/**
+* Hide existing lightbox
+*/
+#proactiveChatContainer,
+.modal-backdrop {
+    display: none !important;
+}
+
+#monetate_selectorBanner_f4849e09_00 {
+    animation-delay: 0; /* Delays the display of flyin banner */
+    animation-direction: normal;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-name: slideUp;
+    animation-timing-function: ease;
+    bottom: -100%;
+    font-size: 0;
+    height: auto;
+    line-height: 0;
+    position: fixed;
+    top: auto;
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+
+
+@keyframes slideUp {
+    0% {
+        bottom: -100%;
+    }
+    100% {
+        bottom: 0%;
+    }
+}

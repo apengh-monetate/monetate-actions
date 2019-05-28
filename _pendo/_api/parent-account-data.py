@@ -2,84 +2,52 @@ import requests
 import json
 from monetate.retailer.models import Retailer, Account, SalesforceAccount
 
-debug = True
-dryRun = False
 
+# ===========================================
+# Retailer
+# ===========================================
 retailers = Retailer.objects.filter(id=249)
 for retailer in retailers:
-    print("{}, {}".format(retailer, retailer.id))
-
-
-
-
-
-
-
-accounts = Account.objects.filter(archived=False, instance="p");
-for account in accounts:
-    if(debug):
-        print(" ")
-        print(" ")
-        print("-------------------------------")
-        print("ACCOUNT")
-        print("-------------------------------")
-    print("{}, {}, {}::{}".format(account.retailer.name, account.domain, account.retailer.id, account.id))
 
 
     # ===========================================
-    # Salesforce
+    # Accounts (by Retailer)
     # ===========================================
-    if(debug):
-        print(" ")
-        print("-------------------------------")
-        print("SALESFORCE")
-        print("-------------------------------")
-        #print("salesforce_id: {}".format(account.salesforce_id))
-    salesforce_id = account.salesforce_id
-    salesforce_accountNumber = ''
-    salesforce_name = ''
-    if(salesforce_id):
-        salesforce = SalesforceAccount.objects.filter(salesforce_id=salesforce_id)
-        for s in salesforce:
-            salesforce_name = s.name
-            salesforce_accountNumber = s.account_number
+    accounts = Account.objects.filter(archived=False, retailer=retailer);
+    for account in accounts:
+        salesforce_id = account.salesforce_id
 
-    else:
-        salesforce_id = ''
-
-    print("salesforce_id: {}".format(salesforce_id))
-    print("salesforce_name: {}".format(salesforce_name))
-    print("salesforce_accountNumber: {}".format(salesforce_accountNumber))
+        # ===========================================
+        # Salesforce
+        # ===========================================
+        if(salesforce_id):
+            salesforce = SalesforceAccount.objects.filter(salesforce_id=salesforce_id)
+            for s in salesforce:
+                salesforce_name = s.name
+                salesforce_accountNumber = s.account_number
 
 
-
-
-
-
-    # ===========================================
-    # Data object to be sent to Pendo API
-    # ===========================================
-    if(debug):
-        print(" ")
-        print("-------------------------------")
-        print("PENDO DATA")
-        print("-------------------------------")
-    metadata = {
-        "accountId":"{}::{}".format(account.retailer.id, account.id),
-        "values": {
-            "salesforceAccountId": "{}".format(salesforce_id),
-            "salesforceAccountNumber":"{}".format(salesforce_accountNumber)
+        # ===========================================
+        # Account level data object to be sent to Pendo API
+        # ===========================================
+        print("{}, {}, {}::{}, {}".format(account.retailer.name, account.domain, account.retailer.id, account.id, salesforce_accountNumber))
+        metadata = {
+            "accountId":"{}::{}".format(account.retailer.id, account.id),
+            "values": {
+                #"salesforceAccountId": "{}".format(salesforce_id),
+                "salesforceAccountNumber":"{}".format(salesforce_accountNumber)
+            }
         }
-    }
-    data = json.dumps(metadata)
-    data = '[' + data + ']'
-    if(debug):
+        data = json.dumps(metadata)
+        data = '[' + data + ']'
         print(data)
 
-    # Send data to Pendo
-    url = "https://app.pendo.io/api/v1/metadata/account/custom/value"
-    #data = "[{\"accountId\":\"{0}\",\"values\":{\"firstname\":\"Quam\",\"lastname\":\"Quis\"}},{\"visitorId\":\"45\",\"values\":{\"firstname\":\"Vel\",\"lastname\":\"Quam\"}},{\"visitorId\":\"63\",\"values\":{\"firstname\":\"Eros\",\"lastname\":\"Nam\"}}]"
-    if not dryRun:
+
+        # ===========================================
+        # Send data to Pendo
+        # ===========================================
+        url = "https://app.pendo.io/api/v1/metadata/account/custom/value"
+        #data = "[{\"accountId\":\"{0}\",\"values\":{\"firstname\":\"Quam\",\"lastname\":\"Quis\"}},{\"visitorId\":\"45\",\"values\":{\"firstname\":\"Vel\",\"lastname\":\"Quam\"}},{\"visitorId\":\"63\",\"values\":{\"firstname\":\"Eros\",\"lastname\":\"Nam\"}}]"
         headers = {
             'x-pendo-integration-key': "5508000e-d2f6-492f-622f-fbe620a9a4f4",
             'content-type': "application/json",
@@ -89,3 +57,32 @@ for account in accounts:
 
         print("-------------------------------")
         print(" ")
+
+
+# ===========================================
+# Parent account level data object to be sent to Pendo API
+# ===========================================
+print("{}, {}".format(retailer, retailer.id))
+metadata = {
+    "accountId":"{}".format(account.retailer.id, account.id),
+    "values": {
+        "salesforceAccountId": "{}".format(salesforce_id)
+    }
+}
+data = json.dumps(metadata)
+data = '[' + data + ']'
+print(data)
+
+# ===========================================
+# Send data to Pendo
+# ===========================================
+url = "https://app.pendo.io/api/v1/metadata/account/custom/value"
+headers = {
+    'x-pendo-integration-key': "5508000e-d2f6-492f-622f-fbe620a9a4f4",
+    'content-type': "application/json",
+}
+response = requests.post(url, data = data, headers = headers)
+print(response)
+
+print("-------------------------------")
+print(" ")

@@ -1,0 +1,15 @@
+section.topnav > .search-form-container {
+  display: block;
+  height: auto !important;
+  position: relative;
+}
+
+section.topnav > .search-form-container .topbar-search-form.hide {
+  display: block !important;
+  position: relative !important;
+  top: 0 !important;
+}
+
+section.topnav > .search-form-container .search-button-container {
+  line-height: 0 !important;
+}

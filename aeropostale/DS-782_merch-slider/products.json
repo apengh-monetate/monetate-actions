@@ -1,0 +1,163 @@
+{
+    "products_data": [{
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Solid Twill 9\" Jogger Shorts",
+        "price": 44.50,
+        "imageLink": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw45948e67/66313811_182_alt1.jpg?sw=460&sh=535&sm=fit&sfrm=jpg",
+        "link": "https://www.aeropostale.com/solid-twill-9%22-jogger-shorts/0091673275.html",
+        "salePrice": 17.80,
+        "id": "1",
+        "itemGroupId": "1"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Aero NYC 9\" Fleece Shorts",
+        "price": 34.50,
+        "imageLink": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw3ab10e3b/68133693_053_alt1.jpg?sw=460&sh=535&sm=fit&sfrm=jpg",
+        "link": "https://www.aeropostale.com/aero-nyc-9%22-fleece-shorts/68133693.html",
+        "salePrice": null,
+        "id": "2",
+        "itemGroupId": "2"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Aero-87 9\" Fleece Shorts",
+        "price": 34.50,
+        "imageLink": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dwe3cba234/68133694_437_alt1.jpg?sw=460&sh=535&sm=fit&sfrm=jpg",
+        "link": "https://www.aeropostale.com/aero-87-9%22-fleece-shorts/68133694.html",
+        "salePrice": 12.00,
+        "id": "3",
+        "itemGroupId": "3"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Classic 7.5\" Jogger Shorts",
+        "price": 44.50,
+        "imageLink": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw39259459/66314170_466_main.jpg?sw=460&sh=535&sm=fit&sfrm=jpg",
+        "link": "https://www.aeropostale.com/classic-7.5%22-jogger-shorts/66314170.html",
+        "salePrice": 17.80,
+        "id": "4",
+        "itemGroupId": "4"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Classic Stretch 7.5\" Beach Shorts",
+        "price": 44.50,
+        "imageLink": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw5cc9b937/66124107_182_main.jpg?sw=460&sh=535&sm=fit&sfrm=jpg",
+        "link": "https://www.aeropostale.com/classic-stretch-7.5%22-beach-shorts/66124107.html",
+        "salePrice": 17.80,
+        "id": "5",
+        "itemGroupId": "5"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Classic Twill Joggers",
+        "price": 44.50,
+        "imageLink": "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw18373b56/64912037_202_alt1.jpg?sw=460&sh=535&sm=fit&sfrm=jpg",
+        "link": "https://www.aeropostale.com/classic-twill-joggers/64912037.html",
+        "salePrice": 17.80,
+        "id": "6",
+        "itemGroupId": "6"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 7",
+        "price": 48.9,
+        "imageLink": "https://via.placeholder.com/460x535",
+        "link": "https://www.monetate.com",
+        "salePrice": 22.12,
+        "id": "7",
+        "itemGroupId": "7"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 8",
+        "price": 62.98,
+        "imageLink": "https://via.placeholder.com/460x535",
+        "link": "https://www.monetate.com",
+        "salePrice": 4.76,
+        "id": "8",
+        "itemGroupId": "8"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 9",
+        "price": 53.52,
+        "imageLink": "https://via.placeholder.com/460x535",
+        "link": "https://www.monetate.com",
+        "salePrice": 49.61,
+        "id": "9",
+        "itemGroupId": "9"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 10",
+        "price": 40.34,
+        "imageLink": "https://via.placeholder.com/460x535",
+        "link": "https://www.monetate.com",
+        "salePrice": 23.68,
+        "id": "10",
+        "itemGroupId": "10"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 11",
+        "price": 20.08,
+        "imageLink": "https://via.placeholder.com/460x535",
+        "link": "https://www.monetate.com",
+        "salePrice": null,
+        "id": "11",
+        "itemGroupId": "11"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 12",
+        "price": 71.29,
+        "imageLink": "https://via.placeholder.com/460x535",
+        "link": "https://www.monetate.com",
+        "salePrice": 47.17,
+        "id": "12",
+        "itemGroupId": "12"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 13",
+        "price": 76.85,
+        "imageLink": "https://via.placeholder.com/460x535",
+        "link": "https://www.monetate.com",
+        "salePrice": 42.91,
+        "id": "13",
+        "itemGroupId": "13"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 14",
+        "price": 34.78,
+        "imageLink": "https://via.placeholder.com/460x535",
+        "link": "https://www.monetate.com",
+        "salePrice": null,
+        "id": "14",
+        "itemGroupId": "14"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 15",
+        "price": 25.76,
+        "imageLink": "https://via.placeholder.com/460x535",
+        "link": "https://www.monetate.com",
+        "salePrice": null,
+        "id": "15",
+        "itemGroupId": "15"
+    }, {
+        "productType": "Test Data > Products",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.",
+        "title": "Test Item 16",
+        "price": 38.1,
+        "imageLink": "https://via.placeholder.com/460x535",
+        "link": "https://www.monetate.com",
+        "salePrice": 22.24,
+        "id": "16",
+        "itemGroupId": "16"
+    }]
+}

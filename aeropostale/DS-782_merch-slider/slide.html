@@ -1,0 +1,19 @@
+<div class="mt_product">
+    <div class="mt_product__image">
+        <a href="{{link}}">
+            <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+        </a>
+    </div>
+    <div class="mt_product__name">
+        <a href="{{link}}" title="Go to Product: {{title}}">{{title}}</a>
+    </div>
+    <div class="mt_product__pricing">
+        <span class="mt_product__pricing-reg">{{price|priceFormat: $1,000.00}}</span>
+        <span class="mt_product__pricing-sale">{{salePrice|priceFormat: $1,000.00}}</span>
+    </div>
+    <!--
+    <div class="mt_product__promo">
+        <div class="mt_product__promo-message">Free Shipping Over $50</div>
+    </div>
+    -->
+</div>

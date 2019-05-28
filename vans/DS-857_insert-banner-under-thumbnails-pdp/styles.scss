@@ -1,0 +1,18 @@
+.mt_banner {
+    align-content: center;
+    align-items: center;
+    border: 2px solid #c9192e;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 50px 20px;
+    position: relative;
+
+    p {
+        color: #c9192e;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+}
