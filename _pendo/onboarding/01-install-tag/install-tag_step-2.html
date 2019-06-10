@@ -11,7 +11,7 @@
 
     <!-- Content / Video -->
     <section class="mt_lightbox__content" data-content-type="text">
-        <p>Paste the Tag into the first line of the HTML page <code>&lt;head&gt;</code> on every page of your site.</p>
+        <p>Paste ONE of the Monetate Tags below into the first line of the HTML page <code>&lt;head&gt;</code> on every page of your site.</p>
         <br>
         <h4 style="margin-bottom:5px;">Synchronous Tag:</h4>
         <div class="CodeMirror cm-s-solarized cm-s-dark">
@@ -181,7 +181,11 @@
         </div>
 
         <div class="flex justify-content--end" style="margin-top: 20px;">
-            <button class="button blue" type="button" name="dismiss" data-guide-action="dismiss">Dismiss Guide</button>
+            <div class="flex justify-content--start">
+                <button class="button blue hide" type="button" name="previous" data-guide-action="previous"><span class="micon-chevron-left"><svg><use xlink:href="/site_media/build/closure/mt/images/micons.svg#micon-chevron-left"></use></svg></span> Previous</button>
+                <button class="button green" type="button" name="dismiss" data-guide-action="dismiss"><span class="micon-check"><svg><use xlink:href="/site_media/build/closure/mt/images/micons.svg#micon-check"></use></svg></span>Dismiss Guide</button>
+            </div>
+            <button class="button green hide" type="button" name="next" data-guide-action="next">Next <span class="micon-chevron-right"><svg><use xlink:href="/site_media/build/closure/mt/images/micons.svg#micon-chevron-right"></use></svg></span></button>
         </div>
     </section>
 

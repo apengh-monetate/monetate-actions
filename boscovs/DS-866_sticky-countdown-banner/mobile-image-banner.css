@@ -1,0 +1,81 @@
+#monetate_selectorBanner_fd99b709_00 {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+#monetate_selectorBanner_fd99b709_00 img {
+  width: 100%;
+}
+
+#monetate_selectorBanner_fd99b709_00 > div {
+  height: 100% !important;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+#monetate_selectorBanner_fd99b709_00 > div > div {
+  height: 100%;
+  width: 100% !important;
+}
+
+#monetate_selectorBanner_fd99b709_00 > div > div > div {
+  left: 60% !important;
+  top: 40% !important;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: auto !important;
+}
+
+#mt_tickerStyleDiv {
+  min-width: 120px;
+  text-align: center;
+}
+
+#mt_tickerSpan {
+  color: #333;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  font-size: 22px !important;
+  font-variant-numeric: tabular-nums;
+  font-weight: bold;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+#mt_tickerSpan .hours,
+#mt_tickerSpan .minutes,
+#mt_tickerSpan .seconds {
+  font-size: 13px !important;
+  position: absolute;
+  top: 100%;
+}
+
+#mt_tickerSpan .hours {
+  left: -1px;
+}
+
+#mt_tickerSpan .minutes {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#mt_tickerSpan .seconds {
+  right: -1px;
+}

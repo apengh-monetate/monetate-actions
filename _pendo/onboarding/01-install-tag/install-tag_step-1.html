@@ -14,16 +14,52 @@
         <p>The Monetate tag is a small chunk of code that allows you to test, personalize, merchandise, and measure anything on your website.</p>
         <br>
         <p>There are two different versions of the Monetate Tag:</p>
-        <ul>
-            <li>
-                <a href="https://knowledge.monetate.com/hc/en-us/articles/115001204623-Synchronous-Tag-API-Info-" target="_blank">Synchronous Tag</a>
-            </li>
-            <li>
-                <a href="https://knowledge.monetate.com/hc/en-us/articles/115001204843-Asynchronous-Tag-API-Info-" target="_blank">Asynchronous Tag</a>
-            </li>
-        </ul>
-        <div class="flex justify-content--end" style="margin-top: 20px;">
-            <button class="button blue" type="button" name="next" data-guide-action="next">Next</button>
+
+        <table class="contained">
+            <thead>
+                <tr>
+                    <th>Asynchronous Tag</th>
+                    <th>Synchronous Tag</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Non-blocking tag</td>
+                    <td>Blocking tag</td>
+                </tr>
+                <tr>
+                    <td>Monetate fully functional, with the exception of Full-Page testing experiences</td>
+                    <td>Monetate fully functional</td>
+                </tr>
+                <tr>
+                    <td>Single script request</td>
+                    <td>Two script requests (<code>entry.js</code> and <code>custom.js</code>)</td>
+                </tr>
+                <tr>
+                    <td>Loads independent of your site</td>
+                    <td>Guarantees Monetate tag load priority</td>
+                </tr>
+                <tr>
+                    <td>Visual artifacts are possible on your site</td>
+                    <td>Prevents visual artifacts from occurring</td>
+                </tr>
+                <tr>
+                    <td>Can use Content Masking, but more performant on the Synchronous tag</td>
+                    <td>Use Content Masking for "Edit" and "Hide" actions. For more information, check out the <a href="https://knowledge.monetate.com/hc/en-us/articles/115000939026-Content-Masking" target="_blank">Content Masking</a> documentation.</td>
+                </tr>
+                <tr>
+                    <td>13ms response time (average)</td>
+                    <td>11ms response time (average)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="flex justify-content--between">
+            <div class="flex justify-content--start">
+                <button class="button blue" type="button" name="previous" data-guide-action="previous"><span class="micon-chevron-left"><svg><use xlink:href="/site_media/build/closure/mt/images/micons.svg#micon-chevron-left"></use></svg></span> Previous</button>
+                <button class="button blue transparent hide" type="button" name="dismiss" data-guide-action="dismiss">Dismiss</button>
+            </div>
+            <button class="button green" type="button" name="next" data-guide-action="next">Next <span class="micon-chevron-right"><svg><use xlink:href="/site_media/build/closure/mt/images/micons.svg#micon-chevron-right"></use></svg></span></button>
         </div>
     </section>
 

@@ -1,0 +1,87 @@
+#MONETATE-ID {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+#MONETATE-ID img {
+  width: 100%;
+}
+
+#MONETATE-ID > div {
+  height: 100% !important;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+#MONETATE-ID > div > div {
+  height: 100%;
+  width: 100% !important;
+}
+
+#MONETATE-ID > div > div > div {
+  left: 64vw !important;
+  top: 40% !important;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: auto !important;
+}
+
+@media screen and (max-width: 1220px) {
+  #MONETATE-ID > div > div > div {
+    left: 780px !important;
+  }
+}
+
+#MONETATE-ID #mt_tickerStyleDiv {
+  min-width: 120px;
+  text-align: center;
+}
+
+#MONETATE-ID #mt_tickerSpan {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  font-size: 22px;
+  font-variant-numeric: tabular-nums;
+  font-weight: bold;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+#MONETATE-ID #mt_tickerSpan .hours,
+#MONETATE-ID #mt_tickerSpan .minutes,
+#MONETATE-ID #mt_tickerSpan .seconds {
+  font-size: 13px;
+  margin-top: -8px;
+  position: absolute;
+  top: 100%;
+}
+
+#MONETATE-ID #mt_tickerSpan .hours {
+  left: 1px;
+}
+
+#MONETATE-ID #mt_tickerSpan .minutes {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#MONETATE-ID #mt_tickerSpan .seconds {
+  right: 1px;
+}

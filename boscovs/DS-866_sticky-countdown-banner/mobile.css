@@ -1,0 +1,57 @@
+/**
+  * Set height by adjusting for the creative image height and width
+  * calc((Height / Width) * 100vw);
+  */
+.mt-countdown {
+  background-image: url("{{BKG_URL}}");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc((100 / 640) * 100vw);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.mt-countdown__timer {
+  left: 55%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.mt-countdown .mt_tickerElem {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 0.5vw;
+  position: relative;
+  text-align: center;
+}
+
+.mt-countdown .mt_time {
+  font-size: 5vw;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.mt-countdown .mt_suffix {
+  font-size: 14px;
+  line-height: 1;
+}

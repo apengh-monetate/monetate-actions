@@ -1,0 +1,38 @@
+@media screen and (max-width: 1025px) {
+  .pt_account .checkoutLogin .col-2 {
+    margin-top: 0 !important;
+  }
+  .checkout-login #main .checkout-step-title {
+    margin-top: 0 !important;
+  }
+  .checkoutLogin .mobile-checkout-guest {
+    background: #f4f4f0;
+    border: 1px dotted #c5c6c8;
+  }
+  .checkoutLogin .mobile-checkout-guest .section-header {
+    margin: 0 -1px 0 !important;
+    padding: 10px 10px 10px 20px !important;
+  }
+  .checkoutLogin .mobile-checkout-guest .create-new-customer {
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .checkoutLogin .mobile-checkout-guest .create-new-customer a {
+    background: none repeat scroll 0 0 #111841;
+    border: 0;
+    color: #fff;
+    display: inline-block;
+    font-family: AvenirBook;
+    font-size: 9px;
+    height: 34px;
+    letter-spacing: 1px;
+    line-height: 34px;
+    margin-top: 20px;
+    outline: medium none;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 230px;
+  }
+}

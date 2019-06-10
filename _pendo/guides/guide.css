@@ -45,6 +45,19 @@
   position: relative;
 }
 
+.mt_lightbox button [class^="micon-"] {
+  padding-right: 0;
+}
+
+.mt_lightbox table {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.mt_lightbox table code {
+  font-size: 12px;
+}
+
 .mt_lightbox__header {
   position: relative;
 }

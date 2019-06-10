@@ -1,0 +1,23 @@
+@media screen and (max-width: 1023px) {
+  .minor-nav-row {
+    -webkit-box-pack: start !important;
+    -webkit-justify-content: flex-start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+  .minor-nav-row .minor-nav-links.left {
+    left: auto !important;
+    right: 0;
+  }
+  .minor-nav-row .minor-nav-links.right {
+    right: 45px !important;
+  }
+  .site-nav-major-wrapper {
+    display: none;
+    left: 100% !important;
+    width: 100vw !important;
+  }
+  .site-nav-major-wrapper.in {
+    left: 0 !important;
+  }
+}

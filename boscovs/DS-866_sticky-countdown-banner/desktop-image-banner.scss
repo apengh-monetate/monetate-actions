@@ -1,0 +1,71 @@
+#MONETATE-ID {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+
+    > div {
+        height: 100% !important;
+        left: 0;
+        position: absolute;
+        top: 0;
+
+        > div {
+            height: 100%;
+            width: 100% !important;
+
+            > div {
+                left: 64vw !important;
+                top: 40% !important;
+                transform: translate(-50%, -50%);
+                width: auto !important;
+
+                @media screen and (max-width: 1220px) {
+                    left: 780px !important;
+                }
+            }
+        }
+    }
+
+    #mt_tickerStyleDiv {
+        min-width: 120px;
+        text-align: center;
+    }
+
+    #mt_tickerSpan {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        font-size: 22px;
+        font-variant-numeric: tabular-nums;
+        font-weight: bold;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+
+        .hours,
+        .minutes,
+        .seconds {
+            font-size: 13px;
+            margin-top: -8px;
+            position: absolute;
+            top: 100%;
+        }
+
+
+        .hours {
+            left: 1px;
+        }
+        .minutes {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .seconds {
+            right: 1px;
+        }
+    }
+
+}
