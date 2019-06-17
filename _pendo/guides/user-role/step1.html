@@ -3,7 +3,7 @@
 <div class="mt_lightbox">
 
     <!-- Header -->
-    <header class="mt_lightbox__header dark">
+    <header class="mt_lightbox__header dark hide">
         <!-- Set a background image using inline style="background-image: url()" -->
         <div class="mt_lightbox__hero" style="background-image: url(https://info.monetate.com/rs/092-TQN-434/images/MPI.jpg)"></div>
         <h1>Welcome to the Monetate Personalization Engine</h1>
@@ -12,8 +12,26 @@
 
 
     <!-- Content / Video -->
-    <section class="mt_lightbox__content" data-content-type="text">
-        <h3>Welcome to the Monetate Platform!</h3>
+    <section class="mt_lightbox__content" data-content-type="text" style="text-align: center;">
+        <h2 style="text-align: center;">
+            What is your role?
+        </h2>
+
+        <p style="margin-top: 10px;">
+            Help us tailor your experience and understand your use case better. Please select your role below.
+        </p>
+
+        <select data-pendo-poll-id="yurzngjqnk" class="_pendo-multi-choice-poll-select" style="margin-top: 10px;">
+            <option class="pendo-option _pendo-option" data-pendo-poll-id="yurzngjqnk" name="pendo-poll-choice-yurzngjqnk" type="option" value="Data Analyst" data-_pendo-option-1="Data Analyst">Data Analyst</option>
+            <option class="pendo-option _pendo-option" data-pendo-poll-id="yurzngjqnk" name="pendo-poll-choice-yurzngjqnk" type="option" value="Developer" data-_pendo-option-2="Developer">Developer</option>
+            <option class="pendo-option _pendo-option" data-pendo-poll-id="yurzngjqnk" name="pendo-poll-choice-yurzngjqnk" type="option" value="Marketer" data-_pendo-option-3="Marketer">Marketer</option>
+            <option class="pendo-option _pendo-option" data-pendo-poll-id="yurzngjqnk" name="pendo-poll-choice-yurzngjqnk" type="option" value="Product Manager" data-_pendo-option-4="Product Manager">Product Manager</option>
+            <option class="pendo-option _pendo-option" data-pendo-poll-id="yurzngjqnk" name="pendo-poll-choice-yurzngjqnk" type="option" value="Other" data-_pendo-option-5="Other">Other</option>
+        </select>
+
+        <div class="flex justify-content--center" style="margin-top: 20px;">
+            <button class="_pendo-poll-submit_ button green" type="button">Submit</button>
+        </div>
     </section>
 
 
@@ -41,7 +59,7 @@
 
 
     <!-- Footer Links -->
-    <footer class="mt_lightbox__footer">
+    <footer class="mt_lightbox__footer hide">
         <ul class="mt_lightbox__footer-links">
             <li>
                 <a href="https://knowledge.monetate.com/hc/en-us" target="_blank">Knowledge Base</a>

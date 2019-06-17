@@ -1,0 +1,170 @@
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+#monetate_selectorHTML_7d1c89cd_0 + footer {
+    padding-bottom: 60px;
+    @media screen and (min-width: $breakpoint-md) {
+
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-bottom: 70px;
+    }
+}
+
+
+.mt_closable {
+    background: #fff;
+    bottom: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+    color: #1e1d19;
+    display: block;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+
+
+    &__content {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        @media screen and (min-width: $breakpoint-md) {
+            justify-content: space-between;
+            padding-bottom: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 0;
+        }
+        // @media screen and (min-width: $breakpoint-lg) {
+        //     padding-bottom: 10px;
+        //     padding-left: 20px;
+        //     padding-right: 20px;
+        //     padding-top: 10px;
+        // }
+    }
+
+
+    // ------------------------------------------------------------------
+    // Logos
+    // ------------------------------------------------------------------
+    &__logos {
+        display: none;
+        @media screen and (min-width: $breakpoint-md) {
+            align-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+    }
+    &__logo {
+        &.bass-pro-shop {
+            border-right: 1px solid #ccc;
+            padding-right: 14px;
+            img {
+                max-width: 70px;
+            }
+        }
+
+        &.cabelas {
+            img {
+                max-width: 120px;
+            }
+        }
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: none;
+    }
+
+
+    // ------------------------------------------------------------------
+    // Links
+    // ------------------------------------------------------------------
+    &__links {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        font-size: 14px;
+        font-weight: bold;
+        justify-content: center;
+    }
+    &__link {
+        position: relative;
+        &.cabelas {
+            border-right: 1px solid #ccc;
+            padding-right: 10px;
+        }
+        &.feedback {
+            margin-left: 12px;
+            padding-left: 12px;
+            a {
+                color: #0065D1;
+                &:active,
+                &:focus,
+                &:hover {
+                    color: #0065D1;
+                }
+            }
+        }
+    }
+    .feedback-icon {
+        left: -4px;
+        position: absolute;
+        top: 1px;
+        img {
+            max-width: 12px;
+        }
+    }
+
+
+    // ------------------------------------------------------------------
+    // Close Button
+    // ------------------------------------------------------------------
+    &__close {
+        align-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #1e1d19;
+        display: flex;
+        font-size: 24px;
+        height: 24px;
+        justify-content: center;
+        line-height: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        vertical-align: top;
+        width: 24px;
+        &:active,
+        &:focus,
+        &:hover {
+            background: none;
+            border: none;
+            color: #1e1d19;
+        }
+        @media screen and (min-width: 768px) {
+            right: 5px;
+        }
+    }
+
+
+    .hide {
+        display: none !important;
+    }
+
+}

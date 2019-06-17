@@ -1,0 +1,27 @@
+div[id*="mt-ltbx-content"],
+.mt_iframe-lightbox,
+.mt_iframe-responsive,
+iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.mt_iframe__close {
+  background: none;
+  border: none;
+  color: #3A475B;
+  font-size: 24px;
+  height: 24px;
+  line-height: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+}
+
+.mt_iframe__close:focus, .mt_iframe__close:active, .mt_iframe__close:hover {
+  background: none;
+  border: none;
+  color: #3A475B;
+}

@@ -1,0 +1,89 @@
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+.mt_hero {
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+
+
+    // ==================================================================
+    // Images
+    // ==================================================================
+    &__images {
+        display: block;
+        position: relative;
+    }
+    &__image {
+        &.mobile {
+            display: block;
+            @media screen and (min-width: $breakpoint-md) {
+                display: none;
+            }
+        }
+        &.desktop {
+            display: none;
+            @media screen and (min-width: $breakpoint-md) {
+                display: block;
+            }
+        }
+    }
+
+
+    // ==================================================================
+    // Text
+    // ==================================================================
+    &__text {
+        bottom: 0;
+        color: #fff;
+        left: 0;
+        position: absolute;
+        right: 15px;
+        top: auto;
+        @media screen and (min-width: $breakpoint-md) {
+            bottom: 0;
+            left: auto;
+            right: 30px;
+            top: auto;
+        }
+
+        &-inner {
+            background: none;
+            padding: 0;
+            position: static;
+            text-align: right;
+
+        }
+    }
+
+    &__link {
+        border-bottom: 2px solid transparent;
+        color: #fff;
+        display: inline-block;
+        font-weight: 500;
+        margin-bottom: 8px;
+        text-decoration: none;
+        text-transform: uppercase;
+        @media screen and (min-width: $breakpoint-md) {
+            margin-bottom: 24px;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-color: #fff;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        &:first-of-type {
+            margin-left: 15px;
+            margin-right: 0;
+            @media screen and (min-width: $breakpoint-md) {
+                margin-left: 30px;
+                margin-right: 0;
+            }
+        }
+    }
+
+} // .mt_hero

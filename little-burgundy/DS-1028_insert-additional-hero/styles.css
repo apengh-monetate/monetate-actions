@@ -1,0 +1,89 @@
+.mt_hero {
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.mt_hero__images {
+  display: block;
+  position: relative;
+}
+
+.mt_hero__image.mobile {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero__image.mobile {
+    display: none;
+  }
+}
+
+.mt_hero__image.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero__image.desktop {
+    display: block;
+  }
+}
+
+.mt_hero__text {
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  position: absolute;
+  right: 15px;
+  top: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero__text {
+    bottom: 0;
+    left: auto;
+    right: 30px;
+    top: auto;
+  }
+}
+
+.mt_hero__text-inner {
+  background: none;
+  padding: 0;
+  position: static;
+  text-align: right;
+}
+
+.mt_hero__link {
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero__link {
+    margin-bottom: 24px;
+  }
+}
+
+.mt_hero__link:hover, .mt_hero__link:focus, .mt_hero__link:active {
+  border-color: #fff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.mt_hero__link:first-of-type {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero__link:first-of-type {
+    margin-left: 30px;
+    margin-right: 0;
+  }
+}
