@@ -1,0 +1,67 @@
+// .js-is-apple-pay-pdp-main {
+//     display: none !important;
+// }
+// #add-to-cart {
+//     width: 100% !important;
+// }
+
+
+
+
+#add-to-cart {
+    @media screen and (max-width: 960px) {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        font-size: 15px !important;
+        justify-content: space-between;
+        padding: 5px 15px !important;
+    }
+}
+
+
+
+#mtClonedPrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 0 !important;
+    @media screen and (min-width: 961px) {
+        display: none;
+    }
+
+    .price-standard,
+    .price-sales {
+        color:  #fff !important;
+        font-size: 15px !important;
+    }
+
+    .price-sales {
+        margin-left: 0;
+    }
+    .price-standard + .price-sales {
+        margin-left: 10px;
+    }
+}
+
+
+
+
+
+
+/* ===================================================== */
+/* Apple Pay Active
+/* ===================================================== */
+.active-apple-pay {
+    #add-to-cart {
+        @media screen and (max-width: 960px) {
+            flex-direction: column;
+        }
+    }
+
+
+
+    #mtClonedPrice {
+        justify-content: center;
+    }
+}

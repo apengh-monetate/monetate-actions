@@ -1,0 +1,38 @@
+$blue: rgb(3, 35, 102);
+
+$font: "Gotham-Bold", Arial, sans-serif;
+
+.mt-countdown {
+    display: block;
+    font-family: $font;
+    font-weight: bold;
+    margin-top: 15px;
+    position: relative;
+
+    p {
+        margin-bottom: 6px;
+        margin-top: 6px;
+    }
+
+
+    &__timer {
+        color: $blue;
+        font-variant-numeric: tabular-nums;
+
+        > span {
+            margin-left: 4px;
+            margin-right: 4px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .blue {
+        color: $blue;
+    }
+
+}

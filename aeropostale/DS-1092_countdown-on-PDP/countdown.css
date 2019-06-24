@@ -1,0 +1,34 @@
+.mt-countdown {
+  display: block;
+  font-family: "Gotham-Bold", Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 15px;
+  position: relative;
+}
+
+.mt-countdown p {
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.mt-countdown__timer {
+  color: #032366;
+  font-variant-numeric: tabular-nums;
+}
+
+.mt-countdown__timer > span {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.mt-countdown__timer > span:first-child {
+  margin-left: 0;
+}
+
+.mt-countdown__timer > span:last-child {
+  margin-right: 0;
+}
+
+.mt-countdown .blue {
+  color: #032366;
+}

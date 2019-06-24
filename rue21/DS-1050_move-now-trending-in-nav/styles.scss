@@ -1,0 +1,28 @@
+@media screen and (min-width: 1024px) {
+    .mLevel[aria-label*="Jeans"] {
+
+        ul.dropdown.col4 {
+            width: 1000px !important;
+            li.rightC.col1 {
+                display: flex !important;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width: 400px !important;
+
+                .upperRow {
+                    height: auto !important;
+                }
+
+                .bottomRow {
+                    margin-top: 0 !important;
+                }
+            }
+        }
+
+        ul.dropdown.col4.js-dropdown-active {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+    }
+}

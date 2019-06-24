@@ -1,0 +1,40 @@
+@media screen and (min-width: 1024px) {
+  .mLevel[aria-label*="Jeans"] ul.dropdown.col4 {
+    width: 1000px !important;
+  }
+  .mLevel[aria-label*="Jeans"] ul.dropdown.col4 li.rightC.col1 {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    width: 400px !important;
+  }
+  .mLevel[aria-label*="Jeans"] ul.dropdown.col4 li.rightC.col1 .upperRow {
+    height: auto !important;
+  }
+  .mLevel[aria-label*="Jeans"] ul.dropdown.col4 li.rightC.col1 .bottomRow {
+    margin-top: 0 !important;
+  }
+  .mLevel[aria-label*="Jeans"] ul.dropdown.col4.js-dropdown-active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+}

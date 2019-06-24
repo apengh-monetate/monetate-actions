@@ -1,0 +1,38 @@
+@media screen and (max-width: 960px) {
+    .hidden-desktop.mobile-pdp-header-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobile-rating {
+        display: none !important;
+    }
+
+    .mobile-name {
+        flex-grow: 1;
+        text-align: left !important;
+    }
+
+    .mobile-price {
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+
+    .product-price {
+        display: flex;
+        flex-direction: column;
+    }
+
+    span.pdp-name-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      display: block;
+      /* Fallback for non-webkit */
+      display: -webkit-box;
+      height: 56px;
+      /* Fallback for non-webkit */
+      margin: 0 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+}
