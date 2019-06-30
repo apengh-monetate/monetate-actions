@@ -1,0 +1,63 @@
+$breakpoint-md: 768px;
+
+#ajax-product-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > li.item {
+        flex: 0 1 50%;
+        @media screen and (min-width: 768px) {
+            flex: 0 1 33.33%;
+        }
+    }
+
+}
+
+
+/* ===================================================== */
+/* Mobile Banners
+/* ===================================================== */
+.mt_plp-banner__mobile {
+    display: block;
+    padding-bottom: 21px;
+    @media screen and (min-width: $breakpoint-md) {
+        display: none;
+    }
+
+    &.one-across {
+        flex: 0 1 50%;
+    }
+
+    &.two-across {
+        flex: 0 1 100%;
+    }
+
+    &.three-across {
+        flex: 0 1 100%;
+    }
+}
+
+
+/* ===================================================== */
+/* Desktop Banners
+/* ===================================================== */
+.mt_plp-banner__desktop {
+    display: none;
+    @media screen and (min-width: $breakpoint-md) {
+        display: block;
+        padding-bottom: 21px;
+    }
+
+    &.one-across {
+        flex: 0 1 33.33%;
+    }
+
+    &.two-across {
+        flex: 0 1 66.67%;
+    }
+
+    &.three-across {
+        flex: 0 1 100%;
+    }
+}

@@ -2,13 +2,19 @@ import requests
 import json
 from monetate.retailer.models import Retailer, Account, SalesforceAccount
 from monetate.campaign.models import CampaignGroup
-from monetate.recs.models import RecommendationSet
+from monetate.recs.models import RetailerProductCatalog, RecommendationSet
 from monetate.milestones.models import AccountMilestone, Milestone
 
-debug = False
-dryRun = False
 
-accounts = Account.objects.filter(archived=False, instance="p");
+
+# ===========================================
+# Variables
+# ===========================================
+debug = True
+dryRun = True
+
+
+accounts = Account.objects.filter(archived=False, instance="p", retailer="1151");
 for account in accounts:
     if(debug):
         print("-------------------------------")
@@ -63,17 +69,17 @@ for account in accounts:
         print("-------------------------------")
         #print("salesforce_id: {}".format(account.salesforce_id))
     salesforce_id = account.salesforce_id
-    salesforce_accountNumber = ''
+    salesforce_account_number = ''
     if(salesforce_id):
         salesforce = SalesforceAccount.objects.filter(salesforce_id=salesforce_id)
         for s in salesforce:
-            salesforce_accountNumber = s.account_number
+            salesforce_account_number = s.account_number
 
     else:
         salesforce_id = ''
 
     print("salesforce_id: {}".format(salesforce_id))
-    print("account_number: {}".format(salesforce_accountNumber))
+    print("salesforce_account_number: {}".format(salesforce_account_number))
 
 
 
@@ -89,6 +95,17 @@ for account in accounts:
     #     print(m.milestone.name)
 
 
+    # ===========================================
+    # Product Catalog
+    # ===========================================
+    if(debug):
+        print(" ")
+        print("-------------------------------")
+        print("PRODUCT CATALOGS")
+        print("-------------------------------")
+    catalogs = RetailerProductCatalog.objects.filter(retailer=account.retailer.id)
+    for catalog in catalogs:
+        print(catalog)
 
     # ===========================================
     # Recommendation Sets
@@ -142,6 +159,7 @@ for account in accounts:
         print("view_later_purchase: {}".format(view_later_purchase))
 
 
+
     # ===========================================
     # Data object to be sent to Pendo API
     # ===========================================
@@ -153,21 +171,21 @@ for account in accounts:
     metadata = {
         "accountId":"{}::{}".format(account.retailer.id, account.id),
         "values": {
-#             "campaignsPredictive":"{}".format(predictive_count),
-#             "campaignsSplit":"{}".format(split_count),
-#             "campaignsExperience":"{}".format(experience_count),
-#             "campaignsPredictiveExp":"{}".format(predictive_exp_count),
+            "campaignsPredictive":"{}".format(predictive_count),
+            "campaignsSplit":"{}".format(split_count),
+            "campaignsExperience":"{}".format(experience_count),
+            "campaignsPredictiveExp":"{}".format(predictive_exp_count),
             "salesforceAccountId": "{}".format(salesforce_id),
-            "salesforceAccountNumber":"{}".format(salesforce_accountNumber),
-#             "recommendationSetClientOnboarded":"{}".format(client_onboarded),
-#             "recommendationSetMostViewed":"{}".format(most_viewed),
-#             "recommendationSetNewest":"{}".format(newest),
-#             "recommendationSetPurchaseAlsoPurchase":"{}".format(purchase_also_purchase),
-#             "recommendationSetRecentlyViewed":"{}".format(recently_viewed),
-#             "recommendationSetTopSellingCount":"{}".format(top_selling_count),
-#             "recommendationSetTopSellingRevenue":"{}".format(top_selling_revenue),
-#             "recommendationSetViewAlsoView":"{}".format(view_also_view),
-#             "recommendationSetViewLaterPurchase":"{}".format(view_later_purchase)
+            "salesforceAccountNumber":"{}".format(salesforce_account_number),
+            "recommendationSetClientOnboarded":"{}".format(client_onboarded),
+            "recommendationSetMostViewed":"{}".format(most_viewed),
+            "recommendationSetNewest":"{}".format(newest),
+            "recommendationSetPurchaseAlsoPurchase":"{}".format(purchase_also_purchase),
+            "recommendationSetRecentlyViewed":"{}".format(recently_viewed),
+            "recommendationSetTopSellingCount":"{}".format(top_selling_count),
+            "recommendationSetTopSellingRevenue":"{}".format(top_selling_revenue),
+            "recommendationSetViewAlsoView":"{}".format(view_also_view),
+            "recommendationSetViewLaterPurchase":"{}".format(view_later_purchase)
         }
     }
     data = json.dumps(metadata)

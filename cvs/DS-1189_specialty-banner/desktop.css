@@ -1,0 +1,178 @@
+@media screen and (min-width: 768px) {
+  .header-overlay-content {
+    margin: 14px auto 19px !important;
+  }
+}
+
+.mt_enrollment-banner {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #FFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  height: 60px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_enrollment-banner {
+    background: #CC0000;
+  }
+}
+
+.mt_enrollment-banner::before {
+  background: #CC0000;
+  content: "";
+  display: block;
+  height: 60px;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100vw;
+  z-index: 0;
+}
+
+.mt_enrollment-banner:hover p, .mt_enrollment-banner:active p, .mt_enrollment-banner:focus p {
+  text-decoration: none;
+}
+
+.mt_enrollment-banner__icon--mobile {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_enrollment-banner__icon--mobile {
+    display: none;
+  }
+}
+
+.mt_enrollment-banner__icon--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_enrollment-banner__icon--desktop {
+    display: block;
+  }
+}
+
+.mt_enrollment-banner__icon img {
+  height: 42px;
+  margin-right: 13px;
+  position: relative;
+  width: 34px;
+}
+
+.mt_enrollment-banner__text {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  z-index: 2;
+}
+
+.mt_enrollment-banner__text p {
+  color: #cc0000;
+  font-family: "Helvetica Neue","Helvetica",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  margin: 0;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_enrollment-banner__text p {
+    color: #fff;
+  }
+}
+
+.mt_enrollment-banner__text p:hover, .mt_enrollment-banner__text p:focus, .mt_enrollment-banner__text p:active {
+  text-decoration: none;
+}
+
+.mt_enrollment-banner__text .enroll-now {
+  display: inline-block;
+  position: relative;
+}
+
+.mt_enrollment-banner__arrow--mobile {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_enrollment-banner__arrow--mobile {
+    display: none;
+  }
+}
+
+.mt_enrollment-banner__arrow--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_enrollment-banner__arrow--desktop {
+    display: block;
+  }
+}
+
+.mt_enrollment-banner__arrow--mobile, .mt_enrollment-banner__arrow--desktop {
+  height: 20px;
+  left: 100%;
+  margin-left: 4px;
+  position: absolute;
+  top: 0;
+  width: 12px;
+}
+
+.mt_enrollment-banner__arrow--mobile img, .mt_enrollment-banner__arrow--desktop img {
+  height: 20px;
+  width: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_enrollment-banner br.mobile-break {
+    display: none;
+  }
+}
+
+/* ===================================================== */
+/* Make banner fixed on scroll
+/* ===================================================== */
+.mt_enrollment-banner.fixed {
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}

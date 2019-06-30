@@ -16,6 +16,16 @@
 
 
 
+// ------------------------------------------------------------------
+// PREVIEW
+// ------------------------------------------------------------------
+.page-header a[data-value="preview"] // [Component] Experience > Preview (Button)
+.page-header button[data-value="preview"] // [Component] Experience > Preview (Dropdown)
+li.menu-item.link-item[data-action="preview"] > a:contains("Preview Experiment") // [Component] Experience > Preview Dropdown > Preview Experiment
+li.menu-item[data-action="share"]:contains("Share via Public Preview") // [Component] Experience > Preview Dropdown > Share via Public Preview
+.dialog.create-share-url button.button:contains("Cancel") // [Component] Experience > Preview Dropdown > Share via Public Preview > Cancel (Button)
+.dialog.create-share-url .dialog-title-close // [Component] Experience > Preview Dropdown > Share via Public Preview > Close X (Button)
+
 
 
 // ------------------------------------------------------------------

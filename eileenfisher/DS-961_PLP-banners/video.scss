@@ -1,0 +1,92 @@
+$breakpoint-md: 768px;
+
+#ajax-product-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > li.item {
+        flex: 0 1 50%;
+        @media screen and (min-width: 768px) {
+            flex: 0 1 33.33%;
+        }
+    }
+
+}
+
+
+/* ===================================================== */
+/* Mobile Banners
+/* ===================================================== */
+.mt_plp-banner__mobile--video {
+    display: inline-block;
+    height: 0;
+    margin-bottom: 21px;
+    overflow: hidden;
+    position: relative;
+    @media screen and (min-width: $breakpoint-md) {
+        display: none;
+    }
+
+    iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &.one-across {
+        flex: 0 1 50%;
+        padding-bottom: calc((320 / 320) * 100%);
+    }
+
+    &.two-across {
+        flex: 0 1 100%;
+        padding-bottom: calc((320 / 290) * 100%);
+    }
+
+    &.three-across {
+        flex: 0 1 100%;
+        padding-bottom: calc((900 / 1600) * 100%);
+    }
+}
+
+
+/* ===================================================== */
+/* Desktop Banners
+/* ===================================================== */
+.mt_plp-banner__desktop--video {
+    display: none;
+    @media screen and (min-width: $breakpoint-md) {
+        display: inline-block;
+        height: 0;
+        margin-bottom: 21px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &.one-across {
+        flex: 0 1 33.33%;
+        padding-bottom: calc((353 / 679) * 100%);
+    }
+
+    &.two-across {
+        flex: 0 1 66.67%;
+        padding-bottom: calc((420 / 750) * 100%);
+    }
+
+    &.three-across {
+        flex: 0 1 100%;
+        padding-bottom: calc((900 / 1600) * 100%);
+    }
+}

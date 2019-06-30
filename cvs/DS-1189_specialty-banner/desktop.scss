@@ -1,0 +1,151 @@
+$breakpoint-md: 768px;
+
+.header-overlay-content {
+    @media screen and (min-width: $breakpoint-md) {
+        margin: 14px auto 19px !important;
+    }
+}
+
+.mt_enrollment-banner {
+    align-items: center;
+    background: #FFF;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 60px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-md) {
+        background: #CC0000;
+    }
+
+    &::before {
+        background: #CC0000;
+        content: "";
+        display: block;
+        height: 60px;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        width: 100vw;
+        z-index: 0;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        p {
+            text-decoration: none;
+        }
+    }
+
+
+
+
+    &__icon {
+        &--mobile {
+            display: block;
+
+            @media screen and (min-width: $breakpoint-md) {
+                display: none;
+            }
+
+
+        }
+        &--desktop {
+            display: none;
+            @media screen and (min-width: $breakpoint-md) {
+                display: block;
+            }
+        }
+
+        img {
+            height: 42px;
+            margin-right: 13px;
+            position: relative;
+            width: 34px;
+        }
+    }
+
+
+    &__text {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        z-index: 2;
+        p {
+            color: #cc0000;
+            font-family: "Helvetica Neue","Helvetica",Arial,sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 19px;
+            margin: 0;
+            text-decoration: none;
+            @media screen and (min-width: $breakpoint-md) {
+                color: #fff;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: none;
+            }
+        }
+
+        .enroll-now {
+            display: inline-block;
+            position: relative;
+        }
+    }
+
+    &__arrow {
+        &--mobile {
+            display: block;
+            @media screen and (min-width: $breakpoint-md) {
+                display: none;
+            }
+        }
+        &--desktop {
+            display: none;
+            @media screen and (min-width: $breakpoint-md) {
+                display: block;
+            }
+        }
+
+        &--mobile,
+        &--desktop {
+            height: 20px;
+            left: 100%;
+            margin-left: 4px;
+            position: absolute;
+            top: 0;
+            width: 12px;
+            img {
+                height: 20px;
+                width: 12px;
+            }
+        }
+    }
+
+    br.mobile-break {
+        @media screen and (min-width: $breakpoint-md) {
+            display: none;
+        }
+    }
+
+} // .mt_enrollment-banner
+
+
+/* ===================================================== */
+/* Make banner fixed on scroll
+/* ===================================================== */
+.mt_enrollment-banner {
+    &.fixed {
+        left: 0;
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+    }
+}

@@ -1,0 +1,100 @@
+#ajax-product-grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+#ajax-product-grid > li.item {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 50%;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+@media screen and (min-width: 768px) {
+  #ajax-product-grid > li.item {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 33.33%;
+        -ms-flex: 0 1 33.33%;
+            flex: 0 1 33.33%;
+  }
+}
+
+/* ===================================================== */
+/* Mobile Banners
+/* ===================================================== */
+.mt_plp-banner__mobile {
+  display: block;
+  padding-bottom: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_plp-banner__mobile {
+    display: none;
+  }
+}
+
+.mt_plp-banner__mobile.one-across {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 50%;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.mt_plp-banner__mobile.two-across {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 100%;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.mt_plp-banner__mobile.three-across {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 100%;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+/* ===================================================== */
+/* Desktop Banners
+/* ===================================================== */
+.mt_plp-banner__desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_plp-banner__desktop {
+    display: block;
+    padding-bottom: 21px;
+  }
+}
+
+.mt_plp-banner__desktop.one-across {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 33.33%;
+      -ms-flex: 0 1 33.33%;
+          flex: 0 1 33.33%;
+}
+
+.mt_plp-banner__desktop.two-across {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 66.67%;
+      -ms-flex: 0 1 66.67%;
+          flex: 0 1 66.67%;
+}
+
+.mt_plp-banner__desktop.three-across {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 100%;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
