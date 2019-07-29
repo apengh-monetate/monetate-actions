@@ -1,0 +1,79 @@
+/* ===================================================== */
+/* Fixed Header
+/* ===================================================== */
+@media screen and (max-width: 1024px) {
+  body.mt_fixed-header #wrapper {
+    margin-top: 96px;
+  }
+  body.mt_fixed-header #header {
+    left: 0;
+    position: fixed !important;
+    right: 0;
+    top: 0;
+  }
+  body.mt_fixed-header .post-header-banner {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 64px;
+    z-index: 10;
+  }
+}
+
+/* ===================================================== */
+/* BXC box at top + fixed header
+/* ===================================================== */
+@media screen and (max-width: 1024px) {
+  body.mt_fixed-header > div.bxc ~ #wrapper {
+    margin-top: 96px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body.mt_fixed-header > div.bxc ~ #wrapper #header {
+    left: 0;
+    position: fixed !important;
+    right: 0;
+    top: 76px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body.mt_fixed-header > div.bxc ~ #wrapper .post-header-banner {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: calc(64px + 76px);
+    z-index: 10;
+  }
+}
+
+/* ===================================================== */
+/* Search Bar Open
+/* ===================================================== */
+@media screen and (max-width: 1024px) {
+  body.mt_fixed-header.mt_search-open #wrapper {
+    padding-top: 42px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body.mt_fixed-header.mt_search-open #wrapper .post-header-banner {
+    top: 110px !important;
+  }
+}
+
+/* ===================================================== */
+/* BXC banner + Fixed Header + Search Bar Open
+/* ===================================================== */
+@media screen and (max-width: 1024px) {
+  body.mt_fixed-header.mt_search-open > div.bxc ~ #wrapper {
+    padding-top: 42px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body.mt_fixed-header.mt_search-open > div.bxc ~ #wrapper .post-header-banner {
+    top: calc(110px + 76px) !important;
+  }
+}

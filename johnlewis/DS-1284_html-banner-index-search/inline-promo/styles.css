@@ -1,0 +1,137 @@
+.mt_inline-promo {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_inline-promo {
+    display: block;
+    position: relative;
+  }
+}
+
+.mt_inline-promo__inner {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+  overflow: hidden;
+}
+
+.mt_inline-promo__img {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+          flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+  min-height: 1px;
+  min-width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.mt_inline-promo__img img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.mt_inline-promo__heading {
+  box-sizing: border-box;
+  display: block;
+  -webkit-flex-basis: 100%;
+          flex-basis: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+  margin-top: 24px;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.mt_inline-promo__heading h3 {
+  color: #141414;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1.07px;
+  letter-spacing: 0.06688rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  margin-bottom: 16px;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.mt_inline-promo__body {
+  box-sizing: border-box;
+  display: block;
+  -webkit-flex-basis: 100%;
+          flex-basis: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.mt_inline-promo__body p {
+  color: #141414;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 20px;
+  line-height: 1.25rem;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.mt_inline-promo__cta {
+  box-sizing: border-box;
+  display: block;
+  -webkit-flex-basis: 100%;
+          flex-basis: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.mt_inline-promo__cta a {
+  color: #141414;
+  display: inline-block;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 20px;
+  line-height: 1.25rem;
+  margin-bottom: 16px;
+  margin-top: 0;
+}

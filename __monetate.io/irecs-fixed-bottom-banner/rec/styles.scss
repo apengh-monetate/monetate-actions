@@ -1,0 +1,75 @@
+#MONETATE-ID [mt-data-grid] {
+    display: block;
+    margin: 0 auto;
+    max-width: 480px;
+    position: relative;
+}
+
+#MONETATE-ID .mt-merch-item {
+
+}
+
+#MONETATE-ID .mt_grid-item {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0 10px;
+
+
+    &__img {
+        flex: 1 1 50%;
+        line-height: 0;
+        padding: 10px 30px;
+        width: 50%;
+        @media screen and (max-width: 380px) {
+            padding: 10px;
+        }
+
+        a {
+
+        }
+        img {
+
+        }
+    }
+
+
+    &__text {
+        flex: 1 1 50%;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        width: 50%;
+    }
+    &__title {
+        font-weight: 500;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+    }
+    &__description {
+        font-weight: 400;
+    }
+
+    &__price {
+        display: block;
+        margin-top: 4px;
+    }
+
+    &__link {
+        background: #2aa1af;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-top: 15px;
+        padding: 10px 30px;
+        position: relative;
+        @media screen and (max-width: 380px) {
+            padding: 10px;
+        }
+    }
+
+}

@@ -1,0 +1,74 @@
+/* ===================================================== */
+/*
+/* ===================================================== */
+@media screen and (min-width: 992px) {
+  [_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] {
+    flex-wrap: nowrap !important;
+    -webkit-box-pack: end !important;
+            justify-content: flex-end !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  [_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] {
+    -webkit-box-flex: 1 !important;
+            flex-grow: 1 !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  [_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] form.search-box[_ngcontent-c2] {
+    width: 100% !important;
+  }
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] form.search-box[_ngcontent-c2] > input[_ngcontent-c2] {
+  border-color: #000;
+  color: #000;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] form.search-box[_ngcontent-c2] > input[_ngcontent-c2]:focus, [_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] form.search-box[_ngcontent-c2] > input[_ngcontent-c2]:active {
+  color: #000;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] form.search-box[_ngcontent-c2] > input[_ngcontent-c2]::-webkit-input-placeholder {
+  color: #000;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] form.search-box[_ngcontent-c2] > input[_ngcontent-c2]::-moz-placeholder {
+  color: #000;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] form.search-box[_ngcontent-c2] > input[_ngcontent-c2]:-ms-input-placeholder {
+  color: #000;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] form.search-box[_ngcontent-c2] > input[_ngcontent-c2]::-ms-input-placeholder {
+  color: #000;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] form.search-box[_ngcontent-c2] > input[_ngcontent-c2]::placeholder {
+  color: #000;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] form.search-box[_ngcontent-c2] > input[_ngcontent-c2] + div[_ngcontent-c2] button[_ngcontent-c2] {
+  border-color: #000;
+  border-left-color: transparent;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] .search-box[_ngcontent-c2] .search-ahead-results[_ngcontent-c2] {
+  border-color: #000 !important;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] .search-box[_ngcontent-c2] .search-ahead-results[_ngcontent-c2] > li {
+  cursor: pointer;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] .search-box[_ngcontent-c2] .search-ahead-results[_ngcontent-c2] > li:hover, [_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] .search-box[_ngcontent-c2] .search-ahead-results[_ngcontent-c2] > li:focus {
+  background-color: #fff !important;
+}
+
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] .search-box[_ngcontent-c2] .search-ahead-results[_ngcontent-c2] > li > a:hover, [_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] .search-box[_ngcontent-c2] .search-ahead-results[_ngcontent-c2] > li > a:focus {
+  color: #000 !important;
+}

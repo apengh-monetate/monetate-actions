@@ -151,6 +151,7 @@ Experience > Who > Add Target > Target Type > Behavior >
 .js-item-picker-grid ul > li button:contains("Category purchased")
 
 .js-item-picker-grid ul > li button:contains("Category viewed") ????
+.js-item-picker-grid ul > li button:contains("Category viewed"):not(:contains("visit"))
 .js-item-picker-grid ul > li button:contains("Category viewed last visit")
 .js-item-picker-grid ul > li button:contains("Category viewed this visit")
 
@@ -298,3 +299,5 @@ Experience > Who > Add Target > Target Type > Weather >
 // ------------------------------------------------------------------
 .nav-panel.item-picker:contains("Datasets")
 .nav-panel.item-picker:contains("Datasets") .js-item-picker-grid ul > li button
+
+.nav-panel.item-picker .js-item-picker-grid.grid.grid-3up .grid-col .choice-group ul.plain li button

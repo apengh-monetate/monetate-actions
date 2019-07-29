@@ -1,0 +1,280 @@
+/**
+ * DEFAULT SLIDER STYLES
+ * Edit at your own risk!
+ */
+#MONETATE-ID {
+  position: relative;
+}
+
+#MONETATE-ID [data-slider-mask] {
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+#MONETATE-ID li {
+  list-style: none;
+}
+
+#MONETATE-ID [data-slider] {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#MONETATE-ID [data-slide] {
+  float: none;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider] {
+  white-space: nowrap !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slide] {
+  display: inline-block !important;
+  vertical-align: top;
+  white-space: normal;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slide] {
+  display: block !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide],
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  touch-action: pan-x;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider-mask],
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slider-mask] {
+  touch-action: pan-y;
+}
+
+#MONETATE-ID [data-pagination-slide] * {
+  pointer-events: none;
+}
+
+/** ----END DEFAULT STYLES---- */
+/**
+ * CUSTOM SLIDER STYLING
+ */
+#MONETATE-ID [data-pagination="thumbnails"] [data-pagination-slide] {
+  background: none;
+  border-radius: 0;
+  height: auto;
+  width: 40px;
+}
+
+#MONETATE-ID [disabled] {
+  opacity: 0.5;
+}
+
+#MONETATE-ID [data-pagination-slide] {
+  background: #000;
+  border-radius: 6px;
+  display: inline-block;
+  height: 12px;
+  margin: 4px;
+  opacity: 0.5;
+  width: 12px;
+}
+
+#MONETATE-ID [data-pagination-slide][data-slide-active] {
+  opacity: 1;
+}
+
+#MONETATE-ID [data-slide] > div {
+  height: 100%;
+  padding: 10px;
+}
+
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  background: none;
+  color: #000;
+  font-size: 25px;
+  padding: 0;
+  position: absolute;
+  top: 45%;
+  user-select: none;
+}
+
+#MONETATE-ID [data-prev-button] {
+  left: 10px;
+}
+
+#MONETATE-ID [data-next-button] {
+  right: 10px;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-prev-button] {
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-next-button] {
+  bottom: 0;
+  left: 50%;
+  right: auto;
+  top: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#MONETATE-ID [data-slider-mask] {
+  display: inline-block;
+  width: 100%;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  height: 400px !important;
+}
+
+#MONETATE-ID [data-slide] img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#MONETATE-ID [data-slide] a {
+  text-decoration: none;
+}
+
+#MONETATE-ID [data-pagination*="dots"] [data-pagination-slide] {
+  /* remove below for pagination numbers */
+  text-indent: -9999px;
+}
+
+#MONETATE-ID .mt-slider-title {
+  background: url(https://www.bradfordexchange.com/store/20091217001/images/backgrounds/bg-content-box.png) repeat-x 0 0;
+  border-top: 1px solid #32465A;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 12px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: left;
+}
+
+#MONETATE-ID .mt-product-name {
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 10px;
+  text-align: left;
+  text-decoration: underline;
+}
+
+#MONETATE-ID .mt-price {
+  color: #32465A;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+}
+
+#MONETATE-ID {
+  background: #fff url(https://www.bradfordexchange.com/store/20091217001/images/backgrounds/bg-content-box-bottom.png) repeat-x 0 bottom;
+  clear: both;
+  margin: 0 auto 10px;
+  max-height: 100%;
+  max-width: 960px;
+  padding: 0 0 25px;
+  width: 100%;
+}
+
+/* ===================================================== */
+/* Vertical
+/* ===================================================== */
+#MONETATE-ID[data-slider-wrapper="vertical"] {
+  margin-bottom: 20px;
+  padding-top: 17px;
+  width: 100%;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-prev-button],
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-next-button] {
+  display: none;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  height: auto !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  margin: 0 auto !important;
+  padding: 0 10px !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+  width: 170px;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slide] {
+  box-sizing: content-box !important;
+  display: block !important;
+  font-size: 11px;
+  height: auto !important;
+  line-height: 14px;
+  margin-bottom: 15px;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slide] img {
+  border: none;
+  height: auto;
+  max-width: 170px;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] .mt-product-name {
+  font-size: 10px;
+  line-height: 12px;
+  margin: 0;
+  padding: 5px 0 4px;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] .mt-price {
+  color: #32465a;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  margin: 0;
+  padding: 0 0 5px;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slide] > div {
+  padding: 0;
+}

@@ -1,0 +1,30 @@
+
+
+.filter-controls .flex-item-weak input // [Component] Actions List > Filter Controls > Search Input
+.filter-controls .flex-item-strong div.button[data-test-id="type-button"] // [Component] Actions List > Filter Controls > Action Type (Dropdown)
+.filter-controls .flex-item-strong .filter-menu:nth-child(2) ul.menu li:contains("Badge") // [Component] Actions List > Filter Controls > Action Type Dropdown > Badge
+.filter-controls .flex-item-strong .filter-menu:nth-child(2) ul.menu li:contains("CSS")
+
+.filter-controls .flex-item-strong .filter-menu:nth-child(2) ul.menu li:contains("HTML")
+.filter-controls .flex-item-strong .filter-menu:nth-child(2) ul.menu li:contains("Hide/Show Content")
+
+.filter-controls .flex-item-strong .filter-menu:nth-child(2) ul.menu li:contains("Image")
+.filter-controls .flex-item-strong .filter-menu:nth-child(2) ul.menu li:contains("Javascript")
+
+.filter-controls .flex-item-strong .filter-menu:nth-child(2) ul.menu li:contains("Lightbox")
+.filter-controls .flex-item-strong .filter-menu:nth-child(2) ul.menu li:contains("Visual Search")
+
+.filter-controls .flex-item-strong .filter-menu:nth-child(2) ul.menu li:contains("Reset")
+
+.filter-controls .flex-item-strong div.button[data-test-id="experience-usage-button"] // [Component] Actions List > Filter Controls > Experience Usage (Dropdown)
+.filter-controls .flex-item-strong .filter-menu:nth-child(3) ul.menu li:contains("Active") // [Component] Actions List > Filter Controls > Experience Usage Dropdown > Active
+.filter-controls .flex-item-strong .filter-menu:nth-child(3) ul.menu li:contains("Inactive") // [Component] Actions List > Filter Controls > Experience Usage Dropdown > Active
+.filter-controls .flex-item-strong .filter-menu:nth-child(3) ul.menu li:contains("Unused") // [Component] Actions List > Filter Controls > Experience Usage Dropdown > Active
+.filter-controls .flex-item-strong .filter-menu:nth-child(3) ul.menu li:contains("Reset")
+
+
+.table-header-controls .grid .grid-col:nth-child(1) div.button:nth-child(1) // [Component] Actions List > Table Header > Download (Button)
+.table-header-controls .grid .grid-col:nth-child(1) div.button:nth-child(2) // [Component] Actions List > Table Header > Delete (Button)
+
+.table-header-controls .grid .grid-col:nth-child(2) div.button:nth-child(1) // [Component] Actions List > Table Header > Cozy (Button)
+.table-header-controls .grid .grid-col:nth-child(2) div.button:nth-child(2) // [Component] Actions List > Table Header > Compact (Button)

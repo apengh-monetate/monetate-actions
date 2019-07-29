@@ -1,8 +1,10 @@
 .mt_footer-recs {
-  background: #000;
+  display: block;
+  position: relative;
 }
 
 .mt_footer-recs__container {
   display: block;
   font-size: 0;
+  position: relative;
 }

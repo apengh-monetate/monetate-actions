@@ -1,0 +1,22 @@
+
+@media screen and (min-width: 992px) {
+    #navigation .container > div.flex {
+        flex-direction: row-reverse;
+    }
+
+    #navigation .container > div.flex > a {
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+        img {
+            display: block;
+            margin-left: auto;
+        }
+    }
+
+    #navigation .container > div.flex > div.flex {
+        flex-basis: 100%;
+        flex-direction: row-reverse;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+}

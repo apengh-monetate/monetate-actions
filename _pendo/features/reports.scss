@@ -76,6 +76,34 @@ table tr.report-box .button-group a.js-delete-button // Reports List > Individua
 /* ----------------------------------------------------- */
 .campaign-group-navigator .right-button-tray .button:contains("Add Target") // Create Report > Who > Add Target (Button)
 
+.report-filter-add-panel .category-picker-list .category.landing // Create Report > Who > Add Target > Landing
+.report-filter-picker button.button:contains("Referrer")
+.report-filter-picker button.button:contains("New Visitors")
+.report-filter-picker button.button:contains("Landing URL")
+
+
+.report-filter-add-panel .category-picker-list .category.location // Create Report > Who > Add Target > Location
+.report-filter-picker button.button:contains("Country")
+.report-filter-picker button.button:contains("Time Zone")
+.report-filter-picker button.button:contains("City")
+.report-filter-picker button.button:contains("Zip/Postal Code")
+.report-filter-picker button.button:contains("Media Market")
+.report-filter-picker button.button:contains("US State")
+.report-filter-picker button.button:contains("IP Address")
+
+.report-filter-add-panel .category-picker-list .category.behavior // Create Report > Who > Add Target > Behavior
+.report-filter-picker button.button:contains("Has Purchased Product")
+.report-filter-picker button.button:contains("Has Purchase (Any Product)")
+.report-filter-picker button.button:contains("Has Viewed Product")
+
+.report-filter-add-panel .category-picker-list .category.technographics // Create Report > Who > Add Target > Technographics
+.report-filter-picker button.button:contains("Device")
+.report-filter-picker button.button:contains("Screen Width")
+.report-filter-picker button.button:contains("Screen Resolution")
+.report-filter-picker button.button:contains("Browser")
+.report-filter-picker button.button:contains("Operating System")
+.report-filter-picker button.button:contains("Screen Height")
+
 
 /* ----------------------------------------------------- */
 /* What

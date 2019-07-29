@@ -1,0 +1,323 @@
+{
+  "title": "Promo Drawer",
+  "description": "Inserts expandable/collapsible promo bar with slider.",
+  "op": "promoDrawerCollapseDelay",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Any page",
+  "action_events": [
+    "op_impression",
+    "op_click"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "css",
+        "value": {
+          "content": "#mt-promo-drawer {\n  border-radius: 15px 15px 0 0;\n  bottom: 0;\n  color: #fff;\n  font-family: 'Open Sans', sans-serif;\n  left: 50%;\n  max-width: 1137px;\n  opacity: 1;\n  position: fixed;\n  touch-action: none;\n  -webkit-transform: translate(-50%, 0%);\n          transform: translate(-50%, 0%);\n  -webkit-transform-style: preserve-3d;\n          transform-style: preserve-3d;\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n  width: 100%;\n  z-index: 9999;\n}\n\n#mt-promo-drawer .mt-title-wrapper {\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  background: #242424;\n  border-radius: 15px 15px 0 0 !important;\n  box-sizing: border-box;\n  cursor: pointer;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: reverse;\n  -webkit-flex-direction: row-reverse;\n          flex-direction: row-reverse;\n  -webkit-flex-wrap: nowrap;\n          flex-wrap: nowrap;\n  height: 42px !important;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  left: 50%;\n  overflow: hidden;\n  position: relative;\n  text-transform: uppercase;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  -webkit-transform-style: preserve-3d;\n          transform-style: preserve-3d;\n  vertical-align: bottom;\n  white-space: nowrap;\n  width: 398px;\n}\n\n#mt-promo-drawer .mt-title-wrapper .mt-expand-btn {\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  border: 0;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: inline-flex;\n  height: 24px;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  margin-left: 10px;\n  -webkit-transform: rotateX(180deg);\n          transform: rotateX(180deg);\n  -webkit-transform-style: preserve-3d;\n          transform-style: preserve-3d;\n  -webkit-transition: -webkit-transform 300ms ease-in-out;\n  transition: -webkit-transform 300ms ease-in-out;\n  transition: transform 300ms ease-in-out;\n  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;\n  width: 24px;\n}\n\n#mt-promo-drawer .mt-title-wrapper .mt-expand-btn svg {\n  fill: #fff;\n  height: 14px;\n  width: 14px;\n}\n\n#mt-promo-drawer .mt-title-wrapper .mt-expand-title {\n  border: none;\n  font-size: 14px;\n  font-weight: 700;\n  letter-spacing: 2px;\n  line-height: 0;\n  margin: 0;\n  outline: none;\n  padding: 0;\n}\n\n#mt-promo-drawer.mt-expanded .mt-title-wrapper .mt-expand-btn {\n  -webkit-transform: rotateX(0deg);\n          transform: rotateX(0deg);\n  -webkit-transform-style: preserve-3d;\n          transform-style: preserve-3d;\n}\n\n#mt-promo-drawer .mt-body-wrapper {\n  background: #fff;\n  color: #1f1f1f;\n  height: auto !important;\n  max-height: 0px;\n  overflow: hidden;\n  -webkit-transition: all 400ms ease-in-out;\n  transition: all 400ms ease-in-out;\n  width: 100%;\n}\n\n#mt-promo-drawer.mt-expanded .mt-body-wrapper {\n  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.5);\n  max-height: 600px;\n}\n\n#mt-promo-drawer [data-slider-wrapper] {\n  margin: 0 auto;\n  max-width: 1440px;\n  position: relative;\n}\n\n#mt-promo-drawer [data-slider-mask] {\n  margin: 0 auto !important;\n  overflow: hidden !important;\n  padding: 0 !important;\n  position: relative !important;\n}\n\n#mt-promo-drawer li {\n  list-style: none;\n}\n\n#mt-promo-drawer img {\n  max-width: 100%;\n}\n\n#mt-promo-drawer [data-slider] {\n  display: block;\n  margin: 0;\n  padding: 0;\n  padding-top: 20px;\n}\n\n#mt-promo-drawer [data-slide] {\n  float: none;\n}\n\n#mt-promo-drawer [data-slider-wrapper=\"horizontal\"] [data-slider] {\n  white-space: nowrap !important;\n}\n\n#mt-promo-drawer [data-slider-wrapper=\"horizontal\"] [data-slide] {\n  display: inline-block !important;\n  vertical-align: top;\n  white-space: normal;\n}\n\n#mt-promo-drawer [data-prev-button],\n#mt-promo-drawer [data-next-button] {\n  cursor: pointer;\n  position: absolute;\n  z-index: 1;\n}\n\n#mt-promo-drawer [data-prev-button][disabled],\n#mt-promo-drawer [data-next-button][disabled] {\n  display: none;\n}\n\n#mt-promo-drawer [data-slider-wrapper=\"horizontal\"] [data-slider-mask] {\n  touch-action: pan-y;\n}\n\n#mt-promo-drawer [data-prev-button],\n#mt-promo-drawer [data-next-button] {\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -o-user-select: none;\n  -webkit-user-select: none;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  background: none;\n  border: none;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: inline-flex;\n  height: 36px;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  margin: 0;\n  outline: none;\n  padding: 0;\n  user-select: none;\n  width: 36px;\n}\n\n#mt-promo-drawer [data-prev-button] svg,\n#mt-promo-drawer [data-next-button] svg {\n  fill: #000;\n  height: 24px;\n  width: 24px;\n}\n\n#mt-promo-drawer .mt-body-wrapper [data-prev-button],\n#mt-promo-drawer .mt-body-wrapper [data-next-button] {\n  top: 45%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n  -webkit-transform-style: preserve-3d;\n          transform-style: preserve-3d;\n}\n\n@media screen and (min-width: 1024px) {\n  #mt-promo-drawer .mt-body-wrapper [data-prev-button],\n  #mt-promo-drawer .mt-body-wrapper [data-next-button] {\n    top: 48%;\n  }\n}\n\n#mt-promo-drawer .mt-body-wrapper [data-prev-button] {\n  left: 6px;\n}\n\n#mt-promo-drawer .mt-body-wrapper [data-next-button] {\n  right: 6px;\n}\n\n#mt-promo-drawer .mt-view-all-offers {\n  margin-bottom: 20px;\n  margin-top: 15px;\n  text-align: center;\n  text-transform: uppercase;\n}\n\n#mt-promo-drawer .mt-view-all-offers a {\n  color: #1f1f1f;\n  font-size: 14px;\n  font-weight: 700;\n  letter-spacing: 1px;\n  text-decoration: underline;\n}\n\n#mt-promo-drawer .mt-promo {\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 120%;\n  padding: 0 10px;\n  text-transform: uppercase;\n}\n\n#mt-promo-drawer .mt-promo a {\n  color: #1f1f1f;\n  cursor: pointer;\n  text-decoration: none;\n}\n\n#mt-promo-drawer .mt-promo__title {\n  background: #fff;\n  color: #1f1f1f;\n  padding: 4px 0;\n}\n\n#mt-promo-drawer .mt-promo__code {\n  background: #fff;\n  color: #1f1f1f;\n  padding: 4px 0;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "tabTemplate",
+        "value": "Just For You"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlCodeField",
+        "description": "HTML for the tab.",
+        "label": "Slider Tab Template"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "sliderTemplate",
+        "value": "<button data-prev-button>\n  <svg width=\"20px\" height=\"32px\" viewbox=\"0 0 20 32\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n    <polygon points=\"19.2 1.94 17.13 0 0 16 17.13 32 19.2 30.07 4.15 16\"></polygon>\n  </svg>\n</button>\n{{SLIDER}}\n{{PAGINATION}}\n<button data-next-button>\n  <svg width=\"20px\" height=\"32px\" viewbox=\"0 0 20 32\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n    <polygon points=\"0 1.94 2.07 0 19.2 16 2.07 32 0 30.07 15.05 16\"></polygon>\n  </svg>\n</button>"
+      },
+      "widget": {
+        "label": "Slider Container Template",
+        "type": "HtmlCodeField",
+        "description": "Include an HTML template to build the slider structure. Placeholder example: '{{slider}}'. Possible placeholders: slider, pagination. Optionally, add the attributes 'data-prev-button' and 'data-next-button' to add previous and next slide buttons. If optional arrow images are included, elements with the attribute 'data-prev-button' and 'data-next-button' are required for them to display.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "json",
+        "name": "slidesVisible",
+        "value": "{\n    \"Infinity\": {\n        \"visible\": 4\n    },\n    \"1024\": {\n        \"visible\": 4\n    },\n    \"768\": {\n        \"visible\": 2\n    }, \n    \"414\": {\n        \"visible\": 1\n    }\n}"
+      },
+      "widget": {
+        "label": "Slides Visible",
+        "type": "JsonCodeField",
+        "description": "Slides visible by browser width. 'Infinity' breakpoint is required. Example: {\"Infinity\": {\"peekLeft\": 0.5, \"visible\": 5, \"peekRight\": 0.5}}",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "infiniteSlide",
+        "value": true
+      },
+      "widget": {
+        "label": "Infinite Slide",
+        "type": "BooleanField",
+        "description": "Should this slide infinitely or stop at the end of the slider?",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_collapseOnLanding",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Collapse promo banner on the first page load.",
+        "label": "Collapse promo banner on first page load"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_collapseAfter",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Collapse promo banner after first page load. If set to false the bottom promos will be expanded every page load.",
+        "label": "Collapse promo banner after first page load"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_collapseDelay",
+        "value": 5
+      },
+      "widget": {
+        "label": "Optional Collapse Delay",
+        "type": "IntegerField",
+        "description": "Number of seconds before the banner should be collapsed",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_autoRotateDuration",
+        "value": 0
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Number of milliseconds before auto rotating to the next slide. Leave blank or use 0 to prevent auto rotate.",
+        "label": "Auto Rotate Duration"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_pauseOnHover",
+        "value": true
+      },
+      "widget": {
+        "label": "Pause Auto Rotate on Hover",
+        "type": "BooleanField",
+        "description": "Should auto rotation pause on slider hover?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_transitionDuration",
+        "value": 250
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Duration in milliseconds of slide animation. Leave blank or use 0 to prevent animations.",
+        "label": "Animation Transition Duration"
+      },
+      "required": false
+  },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_slideInc",
+        "value": "single"
+      },
+      "widget": {
+        "label": "Slide By Increment",
+        "options": [
+          {
+            "name": "page",
+            "label": "Page"
+          },
+          {
+            "name": "single",
+            "label": "Single"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Number of items to slide on navigation button click.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "label": "Script",
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_runOnce",
+        "value": true
+      },
+      "widget": {
+        "label": "Only run once?",
+        "type": "BooleanField",
+        "description": "If true, JS will only be inserted on first track and not on subsequent retracks.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_slideBody1",
+        "value": "<section class=\"mt-promo\">\n    <a class=\"mt-promo__link\" href=\"#\">\n        <div class=\"mt-promo__img\">\n            <img alt=\"Placeholder Image 400x300\" src=\"https://via.placeholder.com/400x300?text=Promo+1\" />\n        </div>\n    </a>\n</section>"
+      },
+      "widget": {
+        "label": "Slide 1 Body",
+        "type": "HtmlCodeField",
+        "description": "HTML body for slide 1.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_slideBody2",
+        "value": "<section class=\"mt-promo\">\n    <a class=\"mt-promo__link\" href=\"#\">\n        <div class=\"mt-promo__img\">\n            <img alt=\"Placeholder Image 400x300\" src=\"https://via.placeholder.com/400x300?text=Promo+2\" />\n        </div>\n    </a>\n</section>"
+      },
+      "widget": {
+        "label": "Slide 2 Body",
+        "type": "HtmlCodeField",
+        "description": "HTML body for slide 2.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_slideBody3",
+        "value": "<section class=\"mt-promo\">\n    <a class=\"mt-promo__link\" href=\"#\">\n        <div class=\"mt-promo__img\">\n            <img alt=\"Placeholder Image 400x300\" src=\"https://via.placeholder.com/400x300?text=Promo+3\" />\n        </div>\n    </a>\n</section>"
+      },
+      "widget": {
+        "label": "Slide 3 Body",
+        "type": "HtmlCodeField",
+        "description": "HTML body for slide 3.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_slideBody4",
+        "value": "<section class=\"mt-promo\">\n    <a class=\"mt-promo__link\" href=\"#\">\n        <div class=\"mt-promo__img\">\n            <img alt=\"Placeholder Image 400x300\" src=\"https://via.placeholder.com/400x300?text=Promo+4\" />\n        </div>\n    </a>\n</section>"
+      },
+      "widget": {
+        "label": "Slide 4 Body",
+        "type": "HtmlCodeField",
+        "description": "HTML body for slide 4.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_slideBody5",
+        "value": "<section class=\"mt-promo\">\n    <a class=\"mt-promo__link\" href=\"#\">\n        <div class=\"mt-promo__img\">\n            <img alt=\"Placeholder Image 400x300\" src=\"https://via.placeholder.com/400x300?text=Promo+5\" />\n        </div>\n    </a>\n</section>"
+      },
+      "widget": {
+        "label": "Slide 5 Body",
+        "type": "HtmlCodeField",
+        "description": "HTML body for slide 5.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_slideBody6",
+        "value": "<section class=\"mt-promo\">\n    <a class=\"mt-promo__link\" href=\"#\">\n        <div class=\"mt-promo__img\">\n            <img alt=\"Placeholder Image 400x300\" src=\"https://via.placeholder.com/400x300?text=Promo+6\" />\n        </div>\n    </a>\n</section>"
+      },
+      "widget": {
+        "label": "Slide 6 Body",
+        "type": "HtmlCodeField",
+        "description": "HTML body for slide 6.",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

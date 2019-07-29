@@ -1,0 +1,18 @@
+<section class="mt_index-banner">
+    <div class="mt_index-banner__inner">
+        <div class="mt_index-banner__content">
+            <h3 class="mt_index-banner__heading" style="color: {headerTextHexCode};">{headerText}</h3>
+            <p class="mt_index-banner__body" style="color: {bodyTextHexCode};">{bodyText}</p>
+            <a class="mt_index-banner__cta" href="{ctaHref}" style="color: {ctaHexCode};">{ctaText}</a>
+        </div>
+
+        <div class="mt_index-banner__img">
+            <picture>
+                <source media="(min-width: 769px)" srcset="{desktopImageURL}"></source>
+                <source media="(min-width: 481px) and (max-width: 768px)" srcset="{tabletImageURL}"></source>
+                <source media="(max-width: 480px)" srcset="{mobileImageURL}"></source>
+                <img src="{desktopImageURL}" alt="">
+            </picture>
+        </div>
+    </div>
+</section>

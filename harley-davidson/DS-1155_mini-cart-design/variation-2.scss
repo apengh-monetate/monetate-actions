@@ -1,0 +1,45 @@
+$dark-gray: #4C4C4C;
+
+/* ===================================================== */
+/* Mini-Cart - Top
+/* ===================================================== */
+#signInSpanSPL {
+    background: #fff !important;
+
+    .miniSignIn,
+    .miniCartCloseBtn {
+        color: $dark-gray !important;
+    }
+
+    .miniCartCloseBtn img {
+        filter: invert(100%);
+    }
+
+}
+
+/* ===================================================== */
+/* Mini-Cart - Items
+/* ===================================================== */
+#miniCartHolder {
+    background: #fff !important;
+    .cartItem * {
+        color: $dark-gray !important;
+    }
+    .cartItem {
+        background-position: 10px bottom !important;
+        width: 456px !important;
+    }
+
+    #cartItemID > div:last-child .cartItem {
+        background: none !important;
+    }
+}
+
+
+/* ===================================================== */
+/* Mini-Cart - Bottom
+/* ===================================================== */
+#subTotal {
+    background: #4f4f4f !important;
+    box-sizing: border-box;
+}

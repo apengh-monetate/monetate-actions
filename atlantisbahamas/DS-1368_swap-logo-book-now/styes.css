@@ -1,0 +1,30 @@
+@media screen and (min-width: 992px) {
+  #navigation .container > div.flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  #navigation .container > div.flex > a {
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  #navigation .container > div.flex > a img {
+    display: block;
+    margin-left: auto;
+  }
+  #navigation .container > div.flex > div.flex {
+    -webkit-flex-basis: 100%;
+            flex-basis: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+            flex-grow: 1;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+  }
+}

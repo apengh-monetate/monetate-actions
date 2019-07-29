@@ -1,0 +1,14 @@
+<div class="mt_slide" data-id="{{id}}">
+    <a class="mt_slide__img" href="{{link}}">
+        <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+        <div class="mt_slide__title">{{title|truncate: 60}}</div>
+    </a>
+    <div class="mt_slide__text">
+        <a class="mt_slide__quick-view mpg-quick-view-button" href="quickinfo.html?tpt=5_en&Ntx=mode%2bmatchall&Ntk=DISP_CODE&N=8125%209037%209040%209044&code={{itemGroupId}}&vid=20091217001&Ntt={{itemGroupId}}&EndecaQuery-p=5" onclick="showSmartWindow(jQuery(this));return false;">Quick View</a>
+        <a class="mt_slide__add-to-cart mpg-cart-button" href="/action.html?vid=20091217001&mode=addItems&qty=1&ic={{itemGroupId}}&CATALOG_UPSELL=Y&url=basket.html?vid=20091217001%26CATALOG_UPSELL=Y%26SOURCE=Y%26RECOMM=Y&prdid1=1">Add to Cart</a>
+        <div class="mt_slide__price">
+            <span class="mt_slide__price--reg">{{price|priceFormat: $1,000.00}}</span>
+            <span class="mt_slide__price--sale">{{salePrice|priceFormat: $1,000.00}}</span>
+        </div>
+    </div>
+</div>

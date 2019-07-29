@@ -1,0 +1,103 @@
+
+body.mt_fixed-header {
+    // @media screen and (max-width: 1024px) {
+    //     padding-top: 104px !important;
+    // }
+    // @media screen and (max-width: 400px) {
+    //     padding-top: 96px !important;
+    // }
+}
+
+/* ===================================================== */
+/* Fixed Header
+/* ===================================================== */
+body.mt_fixed-header {
+    @media screen and (max-width: 1024px) {
+        #wrapper {
+            margin-top: 96px;
+        }
+        #header {
+            left: 0;
+            position: fixed !important;
+            right: 0;
+            top: 0;
+        }
+        .post-header-banner {
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 64px;
+            z-index: 10;
+        }
+
+    }
+}
+
+
+/* ===================================================== */
+/* BXC box at top + fixed header
+/* ===================================================== */
+body.mt_fixed-header > div.bxc {
+    & ~ #wrapper {
+        @media screen and (max-width: 1024px) {
+            margin-top: 96px;
+        }
+
+        #header {
+            @media screen and (max-width: 1024px) {
+                left: 0;
+                position: fixed !important;
+                right: 0;
+                top: 76px;
+            }
+        }
+        .post-header-banner {
+            @media screen and (max-width: 1024px) {
+                left: 0;
+                position: fixed;
+                right: 0;
+                top: calc(64px + 76px);
+                z-index: 10;
+            }
+        }
+
+    }
+}
+
+
+/* ===================================================== */
+/* Search Bar Open
+/* ===================================================== */
+body.mt_fixed-header.mt_search-open {
+
+    #wrapper {
+        @media screen and (max-width: 1024px) {
+            padding-top: 42px !important;
+        }
+        #header {
+        }
+
+        .post-header-banner {
+            @media screen and (max-width: 1024px) {
+                top: 110px !important;
+            }
+        }
+    }
+}
+
+/* ===================================================== */
+/* BXC banner + Fixed Header + Search Bar Open
+/* ===================================================== */
+body.mt_fixed-header.mt_search-open > div.bxc {
+    & ~ #wrapper {
+        @media screen and (max-width: 1024px) {
+            padding-top: 42px !important;
+        }
+
+        .post-header-banner {
+            @media screen and (max-width: 1024px) {
+                top: calc(110px + 76px) !important;
+            }
+        }
+    }
+}

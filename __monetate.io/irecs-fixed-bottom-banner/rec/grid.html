@@ -1,0 +1,16 @@
+<section class="mt_grid-item" data-pid="{{id}}">
+    <div class="mt_grid-item__img">
+        <a href="{{link}}">
+            <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+        </a>
+    </div>
+    <div class="mt_grid-item__text">
+        <div class="mt_grid-item__title">{{title}}</div>
+        <div class="mt_grid-item__description">{{description|truncate:100}}</div>
+        <div class="mt_grid-item__price">
+            <span class="mt_grid-item__price">{{price|priceFormat: $1000.00}}</span>
+            <span class="mt_grid-item__price">{{salePrice|priceFormat: $1000.00}}</span>
+        </div>
+        <a class="mt_grid-item__link" href="{{link}}">Go to product</a>
+    </div>
+</section>

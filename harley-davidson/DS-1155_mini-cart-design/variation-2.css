@@ -1,0 +1,44 @@
+/* ===================================================== */
+/* Mini-Cart - Top
+/* ===================================================== */
+#signInSpanSPL {
+  background: #fff !important;
+}
+
+#signInSpanSPL .miniSignIn,
+#signInSpanSPL .miniCartCloseBtn {
+  color: #4C4C4C !important;
+}
+
+#signInSpanSPL .miniCartCloseBtn img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+/* ===================================================== */
+/* Mini-Cart - Items
+/* ===================================================== */
+#miniCartHolder {
+  background: #fff !important;
+}
+
+#miniCartHolder .cartItem * {
+  color: #4C4C4C !important;
+}
+
+#miniCartHolder .cartItem {
+  background-position: 10px bottom !important;
+  width: 456px !important;
+}
+
+#miniCartHolder #cartItemID > div:last-child .cartItem {
+  background: none !important;
+}
+
+/* ===================================================== */
+/* Mini-Cart - Bottom
+/* ===================================================== */
+#subTotal {
+  background: #4f4f4f !important;
+  box-sizing: border-box;
+}

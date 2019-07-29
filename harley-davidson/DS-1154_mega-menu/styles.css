@@ -1,0 +1,73 @@
+/* ===================================================== */
+/* ALL MENUS
+/* ===================================================== */
+#shopNav div.sub {
+  background: #fff !important;
+}
+
+.innerSub {
+  -webkit-align-content: stretch;
+          align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+          align-items: stretch;
+  background: #fff !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  padding-bottom: 0 !important;
+}
+
+.innerSub h2.categoryHeading {
+  color: #4C4C4C !important;
+  text-shadow: none !important;
+}
+
+.innerSub ul {
+  box-sizing: border-box;
+  height: auto !important;
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+  padding-bottom: 10px !important;
+  padding-left: 10px !important;
+  padding-top: 60px !important;
+  width: 25% !important;
+}
+
+.innerSub ul li a {
+  color: #4C4C4C !important;
+}
+
+.innerSub ul li a:hover, .innerSub ul li a:active, .innerSub ul li a:focus {
+  color: #fff !important;
+}
+
+/* ===================================================== */
+/* FOR THE BIKE
+/* ===================================================== */
+#subcat_5 .innerSub ul:nth-child(3), #subcat_5 .innerSub ul:nth-child(4) {
+  background: #D2D2D2 !important;
+}
+
+/* ===================================================== */
+/* MEN
+/* ===================================================== */
+#cat_6 .innerSub ul:nth-child(3), #cat_6 .innerSub ul:nth-child(4) {
+  background: #D2D2D2 !important;
+}
+
+/* ===================================================== */
+/* WOMEN
+/* ===================================================== */
+#cat_7 .innerSub ul:nth-child(3), #cat_7 .innerSub ul:nth-child(4) {
+  background: #D2D2D2 !important;
+}

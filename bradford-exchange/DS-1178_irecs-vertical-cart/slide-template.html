@@ -1,0 +1,13 @@
+<a class="mt_slide" href="{{link|appendParam:CATALOG_UPSELL=Y&SOURCE=Y_CERT_CAT&RECOMM=Y&CP_WEB}}" data-pid="{{id}}">
+    <div class="mt_slide__img">
+      <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+    </div>
+    <div class="mt_slide__text">
+        <div class="mt_slide__title">{{title|truncate: 60}}</div>
+        <div class="mt_slide__message">Available in Installments</div>
+        <div class="mt_slide__price">
+            <span class="mt_slide__price--reg">{{price|priceFormat: $1,000.00}}</span>
+            <span class="mt_slide__price__sale">{{salePrice|priceFormat: $1,000.00}}</span>
+        </div>
+    </div>
+</a>

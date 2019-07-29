@@ -1,0 +1,64 @@
+// ==================================================================
+// LIST
+// ==================================================================
+
+// No Datasets
+.nodatasets-container h4:contains("What is a dataset?") // [Component] Customer Datasets List > No Datasets > What is a dataset?
+.nodatasets-container h4:contains("How does this all work?") // [Component] Customer Datasets List > No Datasets > How does this all work?
+.nodatasets-container h4:contains("How do I get my data in?") // [Component] Customer Datasets List > No Datasets > How do I get my data in?
+.nodatasets-container h4:contains("What are my limits?") // [Component] Customer Datasets List > No Datasets > What are my limits?
+
+// Datasets
+[data-test-id="dataset-panel"] select.button.select-button // [Component] Customer Datasets List > Sort (Dropdown)
+[data-test-id="dataset-panel"] select.button.select-button option:contains("Sort by Name") // [Component] Customer Datasets List > Sort Dropdown > Sort by Name
+[data-test-id="dataset-panel"] select.button.select-button option:contains("Sort by Date Updated") // [Component] Customer Datasets List > Sort Dropdown > Sort by Date Updated
+
+[data-test-id="dataset-panel"] .dataset-card h4.dataset-card-title // [Component] Customer Datasets List > Individual Dataset (Link)
+[data-test-id="dataset-panel"] .dataset-card div.dropdown // [Component] Customer Datasets List > Individual Dataset Dropdown Menu
+[data-test-id="dataset-panel"] .dataset-card div.dropdown li.menu-item:contains("View Upload History") // [Component] Customer Datasets List > Individual Dataset Dropdown > View Upload History
+[data-test-id="dataset-panel"] .dataset-card div.dropdown li.menu-item:contains("Manage Auto Updates") // [Component] Customer Datasets List > Individual Dataset Dropdown > Manage Auto Updates
+[data-test-id="dataset-panel"] .dataset-card div.dropdown li.menu-item:contains("Delete") // [Component] Customer Datasets List > Individual Dataset Dropdown > Delete
+
+
+[data-test-id="upload-data-button"] // [Component] Customer Datasets List > Upload Data (Button)
+
+// ------------------------------------------------------------------
+// MODAL
+// ------------------------------------------------------------------
+.datasets-modal .updateOption:contains("Update Existing Dataset") // [Component] Customer Datasets List > Datasets Upload Modal > Step 1 > Update Existing Dataset
+.datasets-modal .updateOption:contains("Create New Dataset") // [Component] Customer Datasets List > Datasets Upload Modal > Step 1 > Create New Dataset
+
+[data-test-id="update-dataset-select"] // [Component] Customer Datasets List > Datasets Upload Modal > Step 1 > Update Existing Dataset > Select Dataset (Dropdown)
+[data-test-id="update-dataset-select"] option // [Component] Customer Datasets List > Datasets Upload Modal > Step 1 > Update Existing Dataset > Select Dataset Dropdown > Dataset
+
+[data-test-id="dataset-name-input"] // [Component] Customer Datasets List > Datasets Upload Modal > Step 1 > Create New Dataset > Dataset Name (Input)
+
+[data-test-id="partial-update-button"] // [Component] Customer Datasets List > Datasets Upload Modal > Step 1 > Update Existing Dataset
+[data-test-id="full-update-button"] // [Component] Customer Datasets List > Datasets Upload Modal > Step 1 > Create New Dataset
+
+.button.next-button // [Component] Customer Datasets List > Datasets Upload Modal > Next Button
+.button.previous-button // [Component] Customer Datasets List > Datasets Upload Modal > Previous Button
+
+div.drop-zone label // [Component] Customer Datasets List > Datasets Upload Modal > Step 1 > Create New Dataset > File Upload > Browse (Link)
+a.button.cancel-button:contains("Cancel Upload") // [Component] Customer Datasets List > Datasets Upload Modal > Step 1 > Create New Dataset > File Upload > Cancel Upload (Button)
+
+// Step 2
+.segment-repeater .slide-checkbox // [Component] Customer Datasets List > Datasets Upload Modal > Step 2 > Include/Exclude (Slide Toggle)
+.segment-repeater input.segment-input // [Component] Customer Datasets List > Datasets Upload Modal > Step 2 > Name (Input)
+.segment-repeater select.select-button // [Component] Customer Datasets List > Datasets Upload Modal > Step 2 > Format (Dropdown)
+.segment-repeater select.select-button option:contains("True/False") // [Component] Customer Datasets List > Datasets Upload Modal > Step 2 > Format Dropdown > True/False
+.segment-repeater select.select-button option:contains("Date & Time") // [Component] Customer Datasets List > Datasets Upload Modal > Step 2 > Format Dropdown > Date & Time
+.segment-repeater select.select-button option:contains("Number") // [Component] Customer Datasets List > Datasets Upload Modal > Step 2 > Format Dropdown > Number
+.segment-repeater select.select-button option:contains("Text") // [Component] Customer Datasets List > Datasets Upload Modal > Step 2 > Format Dropdown > Text
+
+// Step 3
+[data-test-id="dataset-identifier-select"] // [Component] Customer Datasets List > Datasets Upload Modal > Step 3 > Dataset Identifier (Dropdown)
+[data-test-id="on-site-id-select"] // [Component] Customer Datasets List > Datasets Upload Modal > Step 3 > ID Collector (Dropdown)
+button.button:contains("Refresh List") // [Component] Customer Datasets List > Datasets Upload Modal > Step 3 > Refesh List
+a.button.green:contains("Create ID Collector") // [Component] Customer Datasets List > Datasets Upload Modal > Step 3 > Create ID Collector (Button)
+
+[data-test-id="finish-button"] // [Component] Customer Datasets List > Datasets Upload Modal > Finish Button
+
+// ==================================================================
+// INDIVIDUAL CUSTOMER DATASET
+// ==================================================================

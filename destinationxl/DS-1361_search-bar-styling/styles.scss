@@ -1,0 +1,68 @@
+$breakpoint: 992px;
+
+/* ===================================================== */
+/*
+/* ===================================================== */
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] {
+    @media screen and (min-width: $breakpoint) {
+        flex-wrap: nowrap !important;
+        justify-content: flex-end !important;
+    }
+
+
+    // Search container
+    & > div[_ngcontent-c2] {
+        @media screen and (min-width: $breakpoint) {
+            flex-grow: 1 !important;
+            margin-left: 0 !important;
+        }
+
+        // Search Box <form>
+        form.search-box[_ngcontent-c2] {
+            @media screen and (min-width: $breakpoint) {
+                width: 100% !important;
+            }
+
+            // Search input
+            > input[_ngcontent-c2] {
+                border-color: #000;
+                color: #000;
+                &:focus,
+                &:active {
+                    color: #000;
+                }
+                &::placeholder {
+                    color: #000;
+                }
+
+                // Search Button
+                + div[_ngcontent-c2] button[_ngcontent-c2] {
+                    border-color: #000;
+                    border-left-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+
+
+// Autocomplete
+[_nghost-c2] header[_ngcontent-c2] .region-2[_ngcontent-c2] > div[_ngcontent-c2]:last-child > div[_ngcontent-c2] > div[_ngcontent-c2] .search-box[_ngcontent-c2] .search-ahead-results[_ngcontent-c2] {
+    border-color: #000 !important;
+
+    > li {
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            background-color: #fff !important;
+        }
+
+        > a {
+            &:hover,
+            &:focus {
+                color: #000 !important;
+            }
+        }
+    }
+}

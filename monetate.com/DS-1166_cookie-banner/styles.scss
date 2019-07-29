@@ -1,0 +1,65 @@
+.mt_cookie-banner {
+    align-items: center;
+    background: #fefefe;
+    bottom: 0;
+    box-shadow: 0 0 7px rgba(0,0,0,.1)!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    padding: 16px 10px;
+    position: fixed;
+    right: 0;
+    top: auto;
+    width: 100%;
+    z-index: 2147483647;
+    @media screen and (min-width: 64em) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    &__text {
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        margin: 0;
+        text-align: center;
+
+        a {
+            color: #000;
+            font-weight: 700;
+            &:hover,
+            &:focus,
+            &:active {
+                color: #000;
+            }
+        }
+    }
+
+    &__close {
+        background: #ff7119;
+        border-radius: 4px !important;
+        color: #fefefe;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 15px;
+        padding: 6px 20px;
+        @media screen and (min-width: 64em) {
+            margin: 0;
+            margin-left: 10px;
+        }
+        @media screen and (min-width: 75em) {
+            margin-left: 24px;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: #000;
+        }
+    }
+}
