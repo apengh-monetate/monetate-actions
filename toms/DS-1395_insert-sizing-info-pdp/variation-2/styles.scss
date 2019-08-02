@@ -1,0 +1,16 @@
+.mt_sizing-message {
+    border: none;
+    display: flex;
+    margin-top: 16px;
+    text-align: left;
+
+    &__text {
+        color: #000;
+        font-family: proximabold;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0;
+        padding: 0;
+    }
+
+}

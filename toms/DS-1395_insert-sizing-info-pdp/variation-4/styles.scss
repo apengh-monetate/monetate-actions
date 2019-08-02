@@ -1,0 +1,17 @@
+.mt_sizing-message {
+    color: #000 !important;
+    display: inline;
+    font-family: proximabold !important;
+    font-size: 14px !important;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    &::before {
+        content: "|";
+        display: inline;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+    }
+}

@@ -1,0 +1,11 @@
+.mt_formlightbox input[type="email"] {
+  background: none !important;
+  border: none !important;
+  color: #0E66CB !important;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mt_formlightbox input[type="email"].mtError {
+  color: #f00 !important;
+}

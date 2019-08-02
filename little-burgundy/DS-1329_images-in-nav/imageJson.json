@@ -1,0 +1,50 @@
+{
+    "Adidas": {
+        "href": "https://www.littleburgundyshoes.com/collections/adidas",
+        "image": "https://via.placeholder.com/315x250?text=adidas"
+    },
+    "Birkenstock": {
+        "href": "https://www.littleburgundyshoes.com/collections/birkenstock",
+        "image": "https://via.placeholder.com/315x250?text=birkenstock"
+    },
+    "Converse": {
+        "href": "https://www.littleburgundyshoes.com/collections/converse",
+        "image": "https://via.placeholder.com/315x250?text=converse"
+    },
+    "Dr. Martens": {
+        "href": "https://www.littleburgundyshoes.com/collections/dr-martens",
+        "image": "https://via.placeholder.com/315x250?text=dr-martens"
+    },
+    "Fila": {
+        "href": "https://www.littleburgundyshoes.com/collections/fila",
+        "image": "https://via.placeholder.com/315x250?text=fila"
+    },
+    "Floyd": {
+        "href": "https://www.littleburgundyshoes.com/collections/floyd",
+        "image": "https://via.placeholder.com/315x250?text=floyd"
+    },
+    "Herschel Supply Co.": {
+        "href": "https://www.littleburgundyshoes.com/collections/herschel-supply",
+        "image": "https://via.placeholder.com/315x250?text=herschel-supply"
+    },
+    "Little Burgundy": {
+        "href": "https://www.littleburgundyshoes.com/collections/little-burgundy",
+        "image": "https://via.placeholder.com/315x250?text=little-burgundy"
+    },
+    "Matt & Nat": {
+        "href": "https://www.littleburgundyshoes.com/collections/matt-nat",
+        "image": "https://via.placeholder.com/315x250?text=matt-nat"
+    },
+    "Nike": {
+        "href": "https://www.littleburgundyshoes.com/collections/nike",
+        "image": "https://via.placeholder.com/315x250?text=nike"
+    },
+    "Reebok": {
+        "href": "https://www.littleburgundyshoes.com/collections/reebok",
+        "image": "https://via.placeholder.com/315x250?text=reebok"
+    },
+    "Vans": {
+        "href": "https://www.littleburgundyshoes.com/collections/vans",
+        "image": "https://via.placeholder.com/315x250?text=vans"
+    }
+}

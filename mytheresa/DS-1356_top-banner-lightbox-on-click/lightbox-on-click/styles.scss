@@ -1,0 +1,142 @@
+$brand: #e90606;
+$black: #282f2f;
+
+.mt-lightbox {
+    background: #fff;
+    border: none;
+    display: block;
+    font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif,Futura,Century Gothic,Gill Sans,Helvetica,sans-serif;
+    left: 50%;
+    max-width: 320px;
+    min-width: 320px;
+    padding: 0;
+    position: fixed;
+    text-align: left;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    z-index: 9999;
+    @media screen and (max-width: 320px) {
+        max-width: 300px;
+        min-width: 300px;
+    }
+
+
+    &__content {
+        display: block;
+        padding-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 40px;
+        position: relative;
+    }
+
+
+    &__heading {
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 8px;
+        padding: 0;
+    }
+
+
+    &__message {
+        font-size: 16px;
+        margin: 0;
+        margin-bottom: 8px;
+        padding: 0;
+    }
+
+
+    &__list {
+        list-style: disc;
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+        &-item {
+            font-size: 16px;
+            line-height: 20px;
+            margin: 0;
+            margin-bottom: 8px;
+            padding: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+
+    &__button {
+        display: block;
+        margin-top: 30px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        a {
+            background: #000;
+            border: none;
+            color: #fff !important;
+            cursor: pointer;
+            display: block;
+            font-family: "Futura", "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1.2px;
+            line-height: 17px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition:
+                background-color .4s ease-out,
+                border-color .4s ease-out,
+                color .4s ease-out;
+            &:hover,
+            &:visited {
+                color: #fff !important;
+            }
+            &:hover {
+                background: #666;
+            }
+            &::after {
+                bottom: 1px;
+                content: " \00BB";
+                position: relative;
+            }
+        }
+    }
+
+
+    // ==================================================================
+    // Close Button
+    // ==================================================================
+    &__close {
+        align-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #333;
+        cursor: pointer;
+        display: flex;
+        font-size: 36px;
+        font-weight: 100;
+        justify-content: center;
+        line-height: 36px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        text-decoration: none;
+        top: 0;
+        transition: all 0.3s ease;
+        width: 36px;
+        z-index: 1;
+        &:hover,
+        &:focus,
+        &:active {
+            background: none;
+            color: #666;
+            text-decoration: none;
+        }
+    }
+
+}

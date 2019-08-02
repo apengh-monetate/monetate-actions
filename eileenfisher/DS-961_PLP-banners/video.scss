@@ -90,3 +90,24 @@ $breakpoint-md: 768px;
         padding-bottom: calc((900 / 1600) * 100%);
     }
 }
+
+
+
+/* ===================================================== */
+/* Resize video to fit available space
+/* ===================================================== */
+.mt_plp-banner__mobile--video {
+
+}
+
+.mt_plp-banner__desktop--video {
+    &.two-across {
+        flex: 0 1 66.67%;
+        padding-bottom: calc((420 / 750) * 100%);
+        iframe {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150%;
+        }
+    }
+}

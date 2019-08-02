@@ -1,0 +1,31 @@
+.mt_sizing-message {
+  background-color: #FBF2E0;
+  border: none;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-top: 16px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.mt_sizing-message__text {
+  color: #000;
+  font-family: proximabold;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.mt_sizing-message__link a {
+  color: #000;
+  font-family: proxima;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: underline;
+}

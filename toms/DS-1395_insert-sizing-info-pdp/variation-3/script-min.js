@@ -1,0 +1,1 @@
+!function(){var e=document.querySelector(".mt_sizing-message .mt_sizing-message__text-size"),t=document.querySelectorAll("ul.size-swatches li");if(e&&t)for(var i=0;i<t.length;i++){t[i].addEventListener("click",function(t){var i=this.querySelector("a");if(i){var n=i.getAttribute("data-size");e.textContent=n}})}}();

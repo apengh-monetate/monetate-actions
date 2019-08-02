@@ -1,30 +1,20 @@
 #ajax-product-grid {
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 #ajax-product-grid > li.item {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 50%;
-      -ms-flex: 0 1 50%;
           flex: 0 1 50%;
 }
 
 @media screen and (min-width: 768px) {
   #ajax-product-grid > li.item {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 1 33.33%;
-        -ms-flex: 0 1 33.33%;
             flex: 0 1 33.33%;
   }
 }
@@ -56,24 +46,18 @@
 
 .mt_plp-banner__mobile--video.one-across {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 50%;
-      -ms-flex: 0 1 50%;
           flex: 0 1 50%;
   padding-bottom: calc((320 / 320) * 100%);
 }
 
 .mt_plp-banner__mobile--video.two-across {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 100%;
-      -ms-flex: 0 1 100%;
           flex: 0 1 100%;
   padding-bottom: calc((320 / 290) * 100%);
 }
 
 .mt_plp-banner__mobile--video.three-across {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 100%;
-      -ms-flex: 0 1 100%;
           flex: 0 1 100%;
   padding-bottom: calc((900 / 1600) * 100%);
 }
@@ -106,24 +90,34 @@
 
 .mt_plp-banner__desktop--video.one-across {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 33.33%;
-      -ms-flex: 0 1 33.33%;
           flex: 0 1 33.33%;
   padding-bottom: calc((353 / 679) * 100%);
 }
 
 .mt_plp-banner__desktop--video.two-across {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 66.67%;
-      -ms-flex: 0 1 66.67%;
           flex: 0 1 66.67%;
   padding-bottom: calc((420 / 750) * 100%);
 }
 
 .mt_plp-banner__desktop--video.three-across {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 100%;
-      -ms-flex: 0 1 100%;
           flex: 0 1 100%;
   padding-bottom: calc((900 / 1600) * 100%);
+}
+
+/* ===================================================== */
+/* Resize video to fit available space
+/* ===================================================== */
+.mt_plp-banner__desktop--video.two-across {
+  -webkit-box-flex: 0;
+          flex: 0 1 66.67%;
+  padding-bottom: calc((420 / 750) * 100%);
+}
+
+.mt_plp-banner__desktop--video.two-across iframe {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 150%;
 }

@@ -1,0 +1,77 @@
+.mt_homepage-banner {
+  background: #003367;
+  color: #fff;
+  display: block;
+  font-family: "Visuelt Bold Pro";
+  padding: 30px 0 10px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_homepage-banner {
+    padding-top: 36px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mt_homepage-banner {
+    padding: 42px 0 30px;
+  }
+}
+
+.mt_homepage-banner__text {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  font-weight: 900;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_homepage-banner__text {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+            justify-content: center;
+  }
+}
+
+.mt_homepage-banner__text-first {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_homepage-banner__text-first {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mt_homepage-banner__text-first {
+    font-size: 36px;
+  }
+}
+
+.mt_homepage-banner__text-second {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_homepage-banner__text-second {
+    font-size: 20px;
+    margin-left: 6px;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mt_homepage-banner__text-second {
+    font-size: 36px;
+  }
+}

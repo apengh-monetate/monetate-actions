@@ -1,0 +1,21 @@
+{
+    "autoRotateDuration": 0,
+    "breakpoints": {
+        "Infinity": {
+            "visible": 5,
+            "peekRight": 0.5
+        },
+        "414": {
+            "visible": 3,
+            "peekRight": 0.5
+        }
+    },
+    "gridSize": 1,
+    "infiniteSlide": true,
+    "pagination": "none",
+    "pauseOnHover": false,
+    "slideIncrement": "single",
+    "stopOnInteraction": false,
+    "transitionAnimation": "push",
+    "transitionDuration": 250
+}

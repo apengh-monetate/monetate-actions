@@ -1,0 +1,139 @@
+.mt-lightbox {
+  background: #fff;
+  border: none;
+  display: block;
+  font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif,Futura,Century Gothic,Gill Sans,Helvetica,sans-serif;
+  left: 50%;
+  max-width: 320px;
+  min-width: 320px;
+  padding: 0;
+  position: fixed;
+  text-align: left;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: auto;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 320px) {
+  .mt-lightbox {
+    max-width: 300px;
+    min-width: 300px;
+  }
+}
+
+.mt-lightbox__content {
+  display: block;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  position: relative;
+}
+
+.mt-lightbox__heading {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.mt-lightbox__message {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.mt-lightbox__list {
+  list-style: disc;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+}
+
+.mt-lightbox__list-item {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.mt-lightbox__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.mt-lightbox__button {
+  display: block;
+  margin-top: 30px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.mt-lightbox__button a {
+  background: #000;
+  border: none;
+  color: #fff !important;
+  cursor: pointer;
+  display: block;
+  font-family: "Futura", "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  line-height: 17px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: background-color .4s ease-out, border-color .4s ease-out, color .4s ease-out;
+  transition: background-color .4s ease-out, border-color .4s ease-out, color .4s ease-out;
+}
+
+.mt-lightbox__button a:hover, .mt-lightbox__button a:visited {
+  color: #fff !important;
+}
+
+.mt-lightbox__button a:hover {
+  background: #666;
+}
+
+.mt-lightbox__button a::after {
+  bottom: 1px;
+  content: " \00BB";
+  position: relative;
+}
+
+.mt-lightbox__close {
+  align-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: -webkit-box;
+  display: flex;
+  font-size: 36px;
+  font-weight: 100;
+  -webkit-box-pack: center;
+          justify-content: center;
+  line-height: 36px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 36px;
+  z-index: 1;
+}
+
+.mt-lightbox__close:hover, .mt-lightbox__close:focus, .mt-lightbox__close:active {
+  background: none;
+  color: #666;
+  text-decoration: none;
+}
