@@ -1,0 +1,378 @@
+$breakpoint-sm: 450px;
+$breakpoint-md: 650px;
+$breakpoint-lg: 1051px;
+
+
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#MONETATE-ID {
+    position: relative;
+
+    li {
+        list-style: none;
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        margin: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider-mask],
+    &[data-slider-wrapper="fade"] [data-slider-mask] {
+        touch-action: pan-y;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        touch-action: pan-x;
+    }
+
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider] {
+        white-space: nowrap !important;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        float: none;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slide] {
+        display: inline-block !important;
+        vertical-align: top;
+        white-space: normal;
+    }
+    &[data-slider-wrapper="vertical"] [data-slide] {
+        display: block !important;
+    }
+    &[data-slider-wrapper="fade"] [data-slide] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+    &[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+    // ==================================================================
+    // Buttons / Pagination
+    // ==================================================================
+    [data-pagination-slide],
+    [data-prev-button],
+    [data-next-button]{
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    [data-pagination-slide] * {
+        pointer-events: none;
+    }
+
+} // MONETATE-ID
+
+
+
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+// .product-list-by {
+//     #MONETATE-ID {
+//         width: 100%;
+//     }
+// }
+
+
+#MONETATE-ID {
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    display: inline-block;
+    float: left;
+    min-height: 380px;
+    padding-bottom: 10px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-sm) {
+        min-height: 450px;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+        min-height: 540px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        height: 550px;
+        width: 33.33%;
+    }
+
+
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        display: inline-block;
+        width: 100%;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        height: 400px !important;
+    }
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+
+    }
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        > div {
+
+        }
+        img {
+            max-width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+
+
+    // ==================================================================
+    // Buttons
+    // ==================================================================
+    [data-prev-button],
+    [data-next-button] {
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        -webkit-user-select: none;
+        background: none;
+        border: none;
+        color: #000;
+        display: none;
+        font-size: 25px;
+        padding: 0;
+        position: absolute;
+        top: 45%;
+        user-select: none;
+        @media screen and (min-width: $breakpoint-md) {
+            display: block;
+        }
+    }
+    [data-prev-button] {
+        left: 10px;
+    }
+    [data-next-button] {
+        right: 10px;
+    }
+    &[data-slider-wrapper="vertical"] [data-prev-button] {
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    &[data-slider-wrapper="vertical"] [data-next-button] {
+        bottom: 0;
+        left: 50%;
+        right: auto;
+        top: auto;
+        transform: translateX(-50%);
+    }
+
+
+    // ==================================================================
+    // Pagination
+    // ==================================================================
+    [data-pagination="thumbnails"] [data-pagination-slide] {
+        background: none;
+        border-radius: 0;
+        height: auto;
+        width: 40px;
+    }
+
+    [disabled] {
+        opacity: 0.5;
+    }
+
+    [data-pagination-slide] {
+        background: #000;
+        border-radius: 6px;
+        display: inline-block;
+        height: 12px;
+        margin: 4px;
+        opacity: 0.5;
+        width: 12px;
+        &[data-slide-active] {
+            opacity: 1;
+        }
+    }
+    [data-pagination*="dots"] [data-pagination-slide] {
+        /* remove below for pagination numbers */
+        text-indent: -9999px;
+    }
+
+
+    // ==================================================================
+    // Slider Container Template
+    // ==================================================================
+    .mt_slider {
+        &__container {
+            display: block;
+            position: relative;
+        }
+        &__heading {
+            display: block;
+            font-size: 18px;
+            margin: 0;
+            margin-top: 15px;
+            padding: 0 15px;
+            text-align: left;
+        }
+        &__wrapper {
+            display: block;
+            position: relative;
+        }
+    }
+
+
+    // ==================================================================
+    // Slide Template
+    // ==================================================================
+    .mt_slide {
+        display: block;
+        position: relative;
+
+        // Image
+        &__img {
+            img {
+
+            }
+        }
+
+
+        // Text
+        &__text {
+            color: #231F20;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: center;
+        }
+
+        // Brand
+        &__brand {
+            color: #231F20;
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 25px;
+            line-height: 1;
+            margin-bottom: 10.5px;
+            margin-top: 10.5px;
+            text-transform: uppercase;
+            @media screen and (min-width: $breakpoint-md) {
+                font-size: 20px;
+            }
+        }
+
+        // Title
+        &__title {
+            color: #231F20;
+            font-size: 14px;
+            line-height: 1;
+            margin: 10.5px 0;
+            padding: 4px;
+            text-transform: uppercase;
+            text-transform: uppercase;
+            @media screen and (min-width: $breakpoint-md) {
+
+            }
+        }
+
+        // Price
+        &__price {
+            color: #231F20;
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            font-weight: 700;
+            min-height: 26px;
+            min-width: 82px;
+            @media screen and (min-width: 376px) {
+
+            }
+            &-sale {
+                color: #EB1E2F;
+                font-size: 16px;
+                font-weight: 700;
+                min-height: 26px;
+                &--text {
+
+                }
+                &--currency {
+
+                }
+            }
+            &-reg {
+                color: #000;
+                font-size: 14px;
+                font-weight: 400;
+                &--text {
+
+                }
+                &--currency {
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+
+    [data-missing-keys="salePrice"] {
+        .mt_slide__price{
+            &-sale {
+                display: none;
+                &--text {
+                    display: none;
+                }
+                &--currency {
+
+                }
+            }
+            &-reg {
+                color: #231F20;
+                display: inline-block;
+                font-size: 18px;
+                font-weight: 700;
+                min-height: 26px;
+                text-decoration: none;
+                &--text {
+                    display: none;
+                }
+                &--currency {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

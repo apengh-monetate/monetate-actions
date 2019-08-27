@@ -1,0 +1,278 @@
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#MONETATE-ID {
+  position: relative;
+}
+
+#MONETATE-ID li {
+  list-style: none;
+}
+
+#MONETATE-ID [data-slider-mask] {
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider-mask],
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slider-mask] {
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  -ms-touch-action: pan-x;
+      touch-action: pan-x;
+}
+
+#MONETATE-ID [data-slider] {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider] {
+  white-space: nowrap !important;
+}
+
+#MONETATE-ID [data-slide] {
+  float: none;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slide] {
+  display: inline-block !important;
+  vertical-align: top;
+  white-space: normal;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slide] {
+  display: block !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide],
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  cursor: pointer;
+  z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide] * {
+  pointer-events: none;
+}
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#MONETATE-ID {
+  border-bottom: 1px solid #f6f6f6;
+  border-right: 1px solid #f6f6f6;
+  display: inline-block;
+  float: left;
+  min-height: 390px;
+  padding-bottom: 10px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 650px) {
+  #MONETATE-ID {
+    min-height: 540px;
+  }
+}
+
+@media screen and (min-width: 1051px) {
+  #MONETATE-ID {
+    min-height: 375px;
+    width: 33.33%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #MONETATE-ID {
+    height: 495px;
+  }
+}
+
+#MONETATE-ID [data-slider-mask] {
+  display: inline-block;
+  width: 100%;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  height: 400px !important;
+}
+
+#MONETATE-ID [data-slide] img {
+  max-width: 100%;
+}
+
+#MONETATE-ID [data-slide] a {
+  text-decoration: none;
+}
+
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  background: none;
+  border: none;
+  color: #000;
+  display: none;
+  font-size: 25px;
+  padding: 0;
+  position: absolute;
+  top: 45%;
+  user-select: none;
+}
+
+@media screen and (min-width: 1051px) {
+  #MONETATE-ID [data-prev-button],
+  #MONETATE-ID [data-next-button] {
+    display: block;
+  }
+}
+
+#MONETATE-ID [data-prev-button] {
+  left: 10px;
+}
+
+#MONETATE-ID [data-next-button] {
+  right: 10px;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-prev-button] {
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-next-button] {
+  bottom: 0;
+  left: 50%;
+  right: auto;
+  top: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#MONETATE-ID [data-pagination="thumbnails"] [data-pagination-slide] {
+  background: none;
+  border-radius: 0;
+  height: auto;
+  width: 40px;
+}
+
+#MONETATE-ID [disabled] {
+  opacity: 0.5;
+}
+
+#MONETATE-ID [data-pagination-slide] {
+  background: #000;
+  border-radius: 6px;
+  display: inline-block;
+  height: 12px;
+  margin: 4px;
+  opacity: 0.5;
+  width: 12px;
+}
+
+#MONETATE-ID [data-pagination-slide][data-slide-active] {
+  opacity: 1;
+}
+
+#MONETATE-ID [data-pagination*="dots"] [data-pagination-slide] {
+  /* remove below for pagination numbers */
+  text-indent: -9999px;
+}
+
+#MONETATE-ID .mt_slider__container {
+  display: block;
+  position: relative;
+}
+
+#MONETATE-ID .mt_slider__heading {
+  display: block;
+  font-size: 18px;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0 15px;
+  text-align: left;
+}
+
+#MONETATE-ID .mt_slider__wrapper {
+  display: block;
+  position: relative;
+}
+
+#MONETATE-ID .mt_slide {
+  display: block;
+  position: relative;
+}
+
+#MONETATE-ID .mt_slide__text {
+  color: #000;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+}
+
+#MONETATE-ID .mt_slide__brand {
+  color: #000;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10.5px;
+  margin-top: 10.5px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1051px) {
+  #MONETATE-ID .mt_slide__brand {
+    font-size: 18px;
+  }
+}
+
+#MONETATE-ID .mt_slide__title {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 7px 0;
+  text-transform: uppercase;
+  text-transform: uppercase;
+}
+
+#MONETATE-ID .mt_slide__price {
+  color: #363441;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  min-width: 82px;
+}
+
+#MONETATE-ID .mt_slide__price--reg {
+  display: none;
+  margin-right: 15px;
+}
+
+#MONETATE-ID [data-missing-keys="salePrice"] .mt_slide__price--reg {
+  display: inline-block;
+}

@@ -1,0 +1,1 @@
+document.getElementById("mtCopyPromoCode").addEventListener("click",function(){console.log("Copy button clicked");var e=document.getElementById("mtPromoCode");console.log(e),e.select(),document.execCommand("copy"),document.querySelector(".mt-lightbox__tooltip").innerHTML="Copied: "+e.value});

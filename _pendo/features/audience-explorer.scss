@@ -1,0 +1,57 @@
+// ==================================================================
+// Audience Exploror
+// ==================================================================
+
+.local-loader .grid.squash // [Feature] Audience Explorer
+
+// Sidebar
+.segmentation-sidebar [data-test-id="define-new-audience-button"] // [Component] Audience Explorer > Sidebar > Define New Audience (Button)
+.segmentation-sidebar .folder-list .folder-name // [Component] Audience Explorer > Sidebar > Audience (Link)
+
+
+// Explore and Create Audiences
+.segmentation-content-wrapper [data-test-id="add-filter-button"] // [Component] Audience Explorer > Explore and Create > Add Filter (Button)
+
+[data-test-id="add-filter-menu"] [data-test-id="select-attribute-button"] // [Component] Audience Explorer > Explore and Create > Add Filter Menu (Button)
+[data-test-id="add-filter-menu"] div.menu li.menu-item:contains("Bounced from site") // [Component] Audience Explorer > Explore and Create > Add Filter Menu > Bounced from site
+[data-test-id="add-filter-menu"] div.menu li.menu-item:contains("Brand purchased") // [Component] Audience Explorer > Explore and Create > Add Filter Menu > Brand purchased
+
+[data-test-id="add-filter-menu"] div.menu li.menu-item:contains("Brand viewed") // [Component] Audience Explorer > Explore and Create > Add Filter Menu > Brand viewed
+[data-test-id="add-filter-menu"] div.menu li.menu-item:contains("Browser") // [Component] Audience Explorer > Explore and Create > Add Filter Menu > Browser
+
+[data-test-id="add-filter-menu"] div.menu li.menu-item:contains("City") // [Component] Audience Explorer > Explore and Create > Add Filter Menu > City
+[data-test-id="add-filter-menu"] div.menu li.menu-item:contains("Country") // [Component] Audience Explorer > Explore and Create > Add Filter Menu > Country
+
+[data-test-id="add-filter-menu"] div.menu li.menu-item:contains("Device type") // [Component] Audience Explorer > Explore and Create > Add Filter Menu > Device type
+[data-test-id="add-filter-menu"] div.menu li.menu-item:contains("Experience viewed") // [Component] Audience Explorer > Explore and Create > Add Filter Menu > Experience viewed
+
+[data-test-id="add-filter-menu"] div.menu li.menu-item:contains("Has carted") // [Component] Audience Explorer > Explore and Create > Add Filter Menu > Has carted
+[data-test-id="add-filter-menu"] div.menu li.menu-item:contains("Has purchased") // [Component] Audience Explorer > Explore and Create > Add Filter Menu > Has purchased
+
+[data-test-id="add-filter-menu"] div.menu li.menu-item:contains("New customer") // [Component] Audience Explorer > Explore and Create > Add Filter Menu > New customer
+[data-test-id="add-filter-menu"] div.menu li.menu-item:contains("Operating system") // [Component] Audience Explorer > Explore and Create > Add Filter Menu > Operating system
+
+.segmentation-content-wrapper [data-test-id="apply-button"] // [Component] Audience Explorer > Explore and Create > Apply (Button)
+
+.segmentation-content-wrapper [data-test-id="save-as-audience-button"] // [Component] Audience Explorer > Explore and Create > Save As Audience (Button)
+.segmentation-content-wrapper [data-test-id="create-experience-button"] // [Component] Audience Explorer > Explore and Create > Create Experience (Button)
+
+
+
+
+// Comparison Dropdowns
+.segmentation-content-wrapper .margin-top-l:nth-child(2) .grid-col-6:nth-child(2) div.button // [Component] Audience Explorer > Comparison Dropdowns > Compare Audience (Dropdown)
+.segmentation-content-wrapper .margin-top-l:nth-child(2) .grid-col-6:nth-child(2) li.menu-item // [Component] Audience Explorer > Comparison Dropdowns > Compare Audience > Menu Item
+
+//  Metric Accordions
+.segmentation-content-wrapper .card.expando-card:contains("Sessions") // [Component] Audience Explorer > Metric Accordions > Sessions
+.segmentation-content-wrapper .card.expando-card:contains("Abandon cart rate") // [Component] Audience Explorer > Metric Accordions > Abandon cart rate
+
+.segmentation-content-wrapper .card.expando-card:contains("Add to cart rate") // [Component] Audience Explorer > Metric Accordions > Add to cart rate
+.segmentation-content-wrapper .card.expando-card:contains("Conversion rate") // [Component] Audience Explorer > Metric Accordions > Conversion rate
+
+.segmentation-content-wrapper .card.expando-card:contains("Average order value") // [Component] Audience Explorer > Metric Accordions > Average order value
+.segmentation-content-wrapper .card.expando-card:contains("Average page views") // [Component] Audience Explorer > Metric Accordions > Average page views
+
+.segmentation-content-wrapper .card.expando-card:contains("Average time on site") // [Component] Audience Explorer > Metric Accordions > Average time on site
+.segmentation-content-wrapper .card.expando-card:contains("Revenue per session") // [Component] Audience Explorer > Metric Accordions > Revenue per session

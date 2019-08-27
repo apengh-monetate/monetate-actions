@@ -1,0 +1,27 @@
+$monetate: '#MONETATE-ID';
+// $monetate: '#monetate_selectorHTML_55b3ea54_0';
+
+$blue: #051e39;
+
+#mini-cart .desktop-only {
+    a.mini-cart-link-checkout {
+        margin-bottom: 0;
+    }
+}
+
+#{$monetate} {
+    button.checkout-paypal {
+        align-items: center;
+        background: #fff;
+        color: $blue;
+        display: flex;
+        font-family: "hco gotham";
+        font-size: .75rem;
+        height: 30px;
+        justify-content: center;
+        letter-spacing: 0.05em;
+        max-width: 18.75rem;
+        padding: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,117 @@
+.mt-upsell-banner {
+    align-items: center;
+    border: 1px solid silver;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 20px;
+
+    select {
+        border-color: #dadada;
+        color: #272727;
+        font-size: 14px;
+        font-weight: 900;
+        height: 30px;
+        padding: 0 20px;
+        width: 100%;
+        &[disabled] {
+            background-color: #e9ecef;
+            color: #6c757d;
+        }
+    }
+
+    .error {
+        display: none;
+    }
+
+
+    &__inner {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        position: relative;
+        width: 100%;
+    }
+}
+
+.mt-submit {
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    position: relative !important;
+    @media screen and (min-width: 660px) {
+        flex: 0 1 33.33333% !important;
+        margin-top: 0 !important;
+    }
+    &:after {
+        top: 0 !important;
+    }
+    &[disabled] {
+        background: #95c5a0;
+        &:hover {
+            background: #95c5a0;
+        }
+    }
+}
+
+.mt-upsell-title {
+    flex-basis: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.mt_select_wrapper {
+    display: block;
+    flex: 1 1 100%;
+    margin-top: 10px;
+    width: 100%;
+    @media screen and (min-width: 660px) {
+        flex: 0 1 33.33333%;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+
+
+    div.select-icon {
+        &::after {
+            background-color: transparent !important;
+            right: 0 !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+        }
+    }
+}
+
+
+.mt-productImage {
+    flex-basis: 150px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    max-width: 100px;
+    // @media screen and (min-width: 660px) {
+    //     max-width: 100px;
+    // }
+}
+
+.mt-productActions {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    padding-left: 10px;
+    @media screen and (min-width: 660px) {
+        flex-wrap: nowrap;
+    }
+
+    > button {
+        flex-grow: 1;
+        margin-top: 10px;
+        @media screen and (max-width: 1024px) {
+
+        }
+    }
+}

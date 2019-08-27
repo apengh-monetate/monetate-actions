@@ -17,7 +17,10 @@
     transform: translate(-50%, 0%);
     transform-style: preserve-3d;
     width: 100%;
-    z-index: 9999;
+    z-index: 999;
+    @media screen and (min-width: 768px) {
+        z-index: 1010;
+    }
     &.mt-expanded {
         background: #fff;
         border-radius: 15px 15px 0 0;

@@ -1,0 +1,24 @@
+#mini-cart .desktop-only a.mini-cart-link-checkout {
+  margin-bottom: 0;
+}
+
+#MONETATE-ID button.checkout-paypal {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  color: #051e39;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "hco gotham";
+  font-size: .75rem;
+  height: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.05em;
+  max-width: 18.75rem;
+  padding: 0;
+  width: 100%;
+}

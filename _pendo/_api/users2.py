@@ -15,6 +15,33 @@ headers = {
 debug = True
 dryRun = True
 
+userIds = [24068,24074,24086];
+
+for i in range(len(userIds)):
+    userId = userIds[i]
+    users = UserProfileV2.objects.filter(user_id=userId)
+    for user in users:
+        print("{}, {}".format(user.user_id, user))
+
+        currentUser = {
+            "values":{
+                "email":"{}".format(user)
+            },
+            "visitorId":"{}".format(user.user_id)
+        }
+        data = json.dumps(currentUser)
+        data = '[' + data + ']'
+        print(data)
+
+        url = "https://app.pendo.io/api/v1/metadata/visitor/agent/value"
+        response = requests.post(url, data = data, headers = headers)
+        if(response.status_code == 200):
+            print(response.text)
+        else:
+            print(response.text)
+
+
+
 
 accounts = Account.objects.filter(archived=False, instance="p", retailer="564");
 for account in accounts:

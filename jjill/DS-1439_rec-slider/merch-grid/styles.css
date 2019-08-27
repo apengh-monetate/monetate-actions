@@ -1,0 +1,107 @@
+#MONETATE-ID [mt-data-grid] {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  #MONETATE-ID [mt-data-grid] {
+    width: 83.33333%;
+  }
+}
+
+#MONETATE-ID .mt-merch-item {
+  box-sizing: border-box;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  max-width: 50%;
+  padding: 0 10px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt-merch-item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+
+#MONETATE-ID .mt_merch-grid__header {
+  display: block;
+  font-family: 'BrandonGrotesque-Bold' !important;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#MONETATE-ID .mt_grid-item:hover {
+  text-decoration: none;
+}
+
+#MONETATE-ID .mt_grid-item__img img {
+  border: 1px solid #bfbfbf;
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+#MONETATE-ID .mt_grid-item__title {
+  font-size: 1.3rem;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt_grid-item__title {
+    font-size: 1.6rem;
+  }
+}
+
+#MONETATE-ID .mt_grid-item__price {
+  font-family: 'BrandonGrotesque-Regular' !important;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt_grid-item__price {
+    font-size: 1.5rem;
+  }
+}
+
+#MONETATE-ID .mt_grid-item__price--reg {
+  color: #737373 !important;
+  text-decoration: line-through;
+}
+
+#MONETATE-ID .mt_grid-item__price--reg span.from {
+  display: none;
+}
+
+#MONETATE-ID .mt_grid-item__price--sale {
+  color: #ba2235;
+}
+
+#MONETATE-ID [data-missing-keys="salePrice"] .mt_grid-item__price--reg {
+  text-decoration: none;
+}
+
+#MONETATE-ID [data-missing-keys="salePrice"] .mt_grid-item__price--reg span.from {
+  display: inline;
+}
+
+#MONETATE-ID [data-missing-keys="salePrice"] .mt_grid-item__price--sale {
+  display: none;
+}

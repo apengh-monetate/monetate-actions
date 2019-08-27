@@ -1,0 +1,15 @@
+<div class="mt_slide">
+    <a class="mt_slide__inner" href="{{link}}" data-pid="{{id}}">
+        <div class="mt_slide__img">
+          <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+        </div>
+        <div class="mt_slide__text">
+            <div class="mt_slide__title">{{title}}</div>
+            <div class="mt_slide__price">
+                <span class="mt_slide__price--reg">{{price|priceFormat: $1,000.00}}</span>
+                <span class="mt_slide__price--sale">{{salePrice|priceFormat: $1,000.00}}</span>
+            </div>
+        </div>
+    </a>
+    <button class="mt_slide__add-to-cart" data-add-to-cart data-pid="{{id}}">Add to Bag</button>
+</div>

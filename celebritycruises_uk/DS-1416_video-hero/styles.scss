@@ -1,0 +1,112 @@
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+// ==================================================================
+// Image Hero
+// ==================================================================
+.mt_hero-video {
+    display: block;
+    height: 0;
+    margin-bottom: 50px;
+    margin-top: -3vw;
+    overflow: hidden;
+    padding-bottom: calc((660 / 1280) * 100vw);
+    position: relative;
+    width: 100vw;
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-bottom: calc((500 / 1280) * 100vw);
+    }
+
+    video {
+        display: block;
+        width: 100%;
+    }
+
+    // Text Box
+    &__text {
+        color: #fff;
+        left: 0;
+        left: 50%;
+        margin-top: 3vw;
+        max-width: 360px;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        @media screen and (min-width: $breakpoint-lg) {
+            margin-top: 1vw;
+        }
+    }
+
+    // Header
+    &__header {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 14px;
+        margin-bottom: 15px;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: 38px;
+            line-height: 34px;
+            margin-bottom: 25px;
+        }
+    }
+
+
+    // Copy
+    &__copy {
+        color: #fff;
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 320px;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 25px;
+        }
+    }
+
+    // Button
+    &__button {
+        background-color: #A01939;
+        border: none;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 14px;
+        margin: 0;
+        padding-bottom: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 15px;
+        text-decoration: none;
+        transition: background-color .3s;
+        &:visited {
+            color: #fff;
+        }
+        &:hover,
+        &:focus {
+            background-color: darken(#A01939, 10%);
+        }
+    }
+
+    // Mini-text
+    &__mini-text {
+        font-size: 12px;
+        margin-bottom: 0;
+        margin-top: 15px;
+        @media screen and (min-width: $breakpoint-md) {
+            font-size: 14px;
+            margin-top: 25px;
+        }
+    }
+}

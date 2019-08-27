@@ -1,0 +1,74 @@
+.checkout-buttons-inner-container .hidden-checkout-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.checkout-buttons-inner-container .hidden-checkout-buttons .checkout-buttons {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.checkout-buttons-inner-container .hidden-checkout-buttons .amazon-btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 48%;
+          flex: 1 1 48%;
+  width: 48%;
+}
+
+.checkout-buttons-inner-container .hidden-checkout-buttons .paypal-cart-buttons-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 48%;
+          flex: 1 1 48%;
+  margin-right: 1px;
+  margin-top: -10px;
+  width: 48%;
+}
+
+@media screen and (min-width: 992px) {
+  .checkout-buttons-inner-container .hidden-checkout-buttons .paypal-cart-buttons-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 46%;
+            flex: 1 1 46%;
+    margin-right: 3%;
+    width: 46%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .checkout-buttons-inner-container .hidden-checkout-buttons .checkout-shoprunner {
+    margin-bottom: 10px;
+  }
+}
+
+.checkout-buttons-inner-container > .checkout-buttons {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkout-buttons-inner-container > .checkout-buttons .checkout-buttons {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.checkout-buttons-inner-container > .checkout-buttons .checkout-buttons a {
+  margin-left: 8%;
+  width: 100%;
+}
+
+.checkout-buttons-inner-container .paypal-cart-button {
+  background: none !important;
+}

@@ -1,0 +1,173 @@
+$breakpoint-md: 769px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+$green: #13665A;
+
+
+.mt_countdown {
+    background-color: #EAEAEA;
+    background-image: url("{{BKG_URL}}");
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    max-width: 930px;
+    position: relative;
+    @media screen and (min-width: $breakpoint-xl) {
+        max-width: 1110px;
+    }
+}
+
+
+// ==================================================================
+// Countdown Timer
+// ==================================================================
+.mt-countdown {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    @media screen and (min-width: $breakpoint-md) {
+        flex-wrap: nowrap;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+    }
+
+
+    // ------------------------------------------------------------------
+    // Icon
+    // ------------------------------------------------------------------
+    &__icon {
+        align-items: center;
+        display: flex;
+        flex: 1 1 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        font-weight: bold;
+        justify-content: center;
+        margin-top: 4px;
+        @media screen and (min-width: $breakpoint-md) {
+            margin-top: 0;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+        }
+
+        &-text {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 4px;
+        }
+
+        &-now {
+            background: $green;
+            color: #fff;
+            font-size: 9pt;
+            line-height: 1;
+            margin: 0;
+            padding: 4px 8px;
+        }
+        &-promoting {
+            color: #000;
+            font-size: 12pt;
+            line-height: 1;
+            margin: 0;
+            margin-top: 8px;
+        }
+    }
+
+    &__calendar {
+        img {
+            width: 64px;
+            @media screen and (min-width: $breakpoint-md) {
+            }
+            @media screen and (min-width: $breakpoint-lg) {
+            }
+        }
+    }
+
+
+
+    // ------------------------------------------------------------------
+    // Message
+    // ------------------------------------------------------------------
+    &__message {
+        color: #000;
+        flex: 1 1 100%;
+        font-size: 15pt;
+        margin-top: 15px;
+        @media screen and (min-width: $breakpoint-md) {
+            flex: none;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 0;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+    }
+    &__heading {
+        font-weight: bold;
+        margin: 0;
+    }
+    &__subheading {
+        margin: 0;
+    }
+
+    // ------------------------------------------------------------------
+    // Countdown
+    // ------------------------------------------------------------------
+    &__timer {
+        align-items: center;
+        display: flex;
+        flex: 1 1 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-top: 15px;
+        @media screen and (min-width: $breakpoint-md) {
+            flex: 0 1 100%;
+            margin-top: 0;
+        }
+    }
+
+    .mt_tickerElem {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        line-height: 1;
+        margin-left: 5px;
+        margin-right: 5px;
+        @media screen and (min-width: $breakpoint-md) {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        // Numbers
+        .mt_time {
+            background: $green;
+            color: #fff;
+            font-size: 15pt;
+            font-variant-numeric: tabular-nums;
+            padding: 4px 8px;
+
+        }
+
+        // Units
+        .mt_suffix {
+            color: #000;
+            font-size: 9pt;
+            margin-top: 4px;
+            @media screen and (min-width: $breakpoint-md) {
+                font-size: 12px;
+            }
+        }
+    }
+
+} // .mt-countdown

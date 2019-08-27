@@ -1,0 +1,157 @@
+.mt_countdown {
+  background-color: #13665A;
+  background-image: url("{{BKG_URL}}");
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: block;
+  left: 15px;
+  position: absolute;
+  top: 30px;
+  width: auto;
+}
+
+.mt-countdown {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding-bottom: 6px;
+  padding-right: 7px;
+  padding-top: 6px;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown {
+    padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mt-countdown {
+    padding-right: 11px;
+  }
+}
+
+.mt-countdown__icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 9px;
+  padding-right: 1px;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown__icon {
+    padding-left: 11px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mt-countdown__icon {
+    padding-left: 12px;
+  }
+}
+
+.mt-countdown__icon img {
+  width: 14px;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown__icon img {
+    width: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mt-countdown__icon img {
+    width: 20px;
+  }
+}
+
+.mt-countdown__timer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.mt-countdown .mt_tickerElem {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: bold;
+  line-height: 1;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown .mt_tickerElem {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mt-countdown .mt_tickerElem {
+    margin-left: 11px;
+    margin-right: 11px;
+  }
+}
+
+.mt-countdown .mt_tickerElem .mt_time {
+  font-size: 11pt;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown .mt_tickerElem .mt_time {
+    font-size: 16pt;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mt-countdown .mt_tickerElem .mt_time {
+    font-size: 16pt;
+  }
+}
+
+.mt-countdown .mt_tickerElem .mt_suffix {
+  font-size: 6px;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown .mt_tickerElem .mt_suffix {
+    font-size: 9px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mt-countdown .mt_tickerElem .mt_suffix {
+    font-size: 9px;
+  }
+}

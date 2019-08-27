@@ -1,0 +1,17 @@
+<div class="mt_slide" data-pid="{{id}}">
+    <a class="mt_slide__img" href="{{link}}">
+        <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+    </a>
+    <h4 class="mt_slide__title">{{title}}</h4>
+    <div class="mt_slide__price">
+        <span class="mt_slide__price--reg">
+            {{price|priceFormat: £1,000.00}}
+            <sup>M2</sup>
+        </span>
+        <span class="mt_slide__price--alt hide">{{ukfdWasPrice|priceFormat: £1,000.00}}</span>
+        <span class="mt_slide__price--discount">Save {{discount}}%</span>
+    </div>
+    <div class="mt_slide__button">
+        <a href="{{link}}">View Product</a>
+    </div>
+</div>

@@ -40,15 +40,7 @@
 
     var tag = account.name + '/' + account.instance+ '/' + account.domain;
     console.log(tag);
-    var monetateTagCodeSync = document.getElementById('monetateTagCodeSync');
-    var monetateTagCodeAsync = document.getElementById('monetateTagCodeAsync');
-
-    console.log(monetateTagCodeSync);
-    console.log(monetateTagCodeSync.innerText);
-    monetateTagCodeSync.innerText = tag;
-
-    console.log(monetateTagCodeAsync);
-    console.log(monetateTagCodeAsync.innerText);
-    monetateTagCodeAsync.innerText = tag;
+    var integrationsLink = document.getElementById('integrationsPage');
+    integrationsLink.href = '/control/' + tag + '/settings/integration';
 
 })(step,guide);

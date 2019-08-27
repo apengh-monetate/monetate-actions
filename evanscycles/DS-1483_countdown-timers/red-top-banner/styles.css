@@ -1,0 +1,246 @@
+.mt-countdown {
+  background-color: #af0128;
+  background-image: url("{{BKG_URL}}");
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+  padding-bottom: 32px;
+  padding-top: 40px;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mt-countdown {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.mt-countdown__text {
+  color: #fff;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown__text {
+    margin-right: 60px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mt-countdown__text {
+    margin-right: 0;
+  }
+}
+
+.mt-countdown__heading {
+  color: #fff;
+  font-size: 30pt;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown__heading {
+    font-size: 32pt;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mt-countdown__heading {
+    font-size: 40pt;
+  }
+}
+
+.mt-countdown__subheading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 15pt;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown__subheading {
+    display: block;
+    font-size: 13pt;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mt-countdown__subheading {
+    font-size: 16pt;
+  }
+}
+
+.mt-countdown__countdown {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: auto;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown__countdown {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+}
+
+.mt-countdown__timer {
+  -ms-flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown__timer {
+    margin: 0;
+    margin-left: auto;
+    margin-top: 18px;
+  }
+}
+
+.mt-countdown .mt_tickerElem {
+  background: #fff;
+  color: #af0128;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+  min-width: 45px;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+@media screen and (min-width: 414px) {
+  .mt-countdown .mt_tickerElem {
+    padding: 10px;
+  }
+}
+
+.mt-countdown .mt_tickerElem .mt_time {
+  font-size: 35pt;
+  font-variant-numeric: tabular-nums;
+  font-weight: bold;
+  line-height: 1;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown .mt_tickerElem .mt_time {
+    font-size: 24pt;
+  }
+}
+
+.mt-countdown .mt_tickerElem .mt_suffix {
+  font-size: 19pt;
+  line-height: 1;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown .mt_tickerElem .mt_suffix {
+    font-size: 14pt;
+  }
+}
+
+.mt-countdown__end-date {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #fff;
+  display: block;
+  font-size: 14pt;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 11px;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown__end-date {
+    font-size: 7pt;
+    margin-right: 5px;
+    margin-top: 5px;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown .mobile-only {
+    display: none !important;
+  }
+}

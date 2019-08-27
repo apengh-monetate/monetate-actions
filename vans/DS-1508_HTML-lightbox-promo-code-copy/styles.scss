@@ -1,0 +1,200 @@
+.mt-lightbox {
+    background: #fff;
+    border: none;
+    display: block;
+    left: 50%;
+    max-width: 400px;
+    min-width: 300px;
+    padding: 0;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    width: auto;
+    z-index: 9999;
+    @media screen and (max-width: 768px) {
+        width: 90% !important;
+    }
+
+
+    // ------------------------------------------------------------------
+    // Close Button
+    // ------------------------------------------------------------------
+    &__close {
+        align-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #666;
+        cursor: pointer;
+        display: flex;
+        font-size: 36px;
+        font-weight: 100;
+        justify-content: center;
+        line-height: 36px;
+        margin: 0;
+        padding: 4px 8px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        text-decoration: none;
+        top: 0;
+        transition: all 0.3s ease;
+        width: 36px;
+        z-index: 1;
+        &:hover,
+        &:focus,
+        &:active {
+            background: none;
+            color: #333;
+            text-decoration: none;
+        }
+    }
+
+
+    // ------------------------------------------------------------------
+    // Content
+    // ------------------------------------------------------------------
+    &__content {
+        display: block;
+        padding-bottom: 20px;
+        padding-top: 40px;
+        position: relative;
+    }
+
+
+    // ------------------------------------------------------------------
+    // Logo
+    // ------------------------------------------------------------------
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 130px;
+    }
+
+
+    // ------------------------------------------------------------------
+    // Message
+    // ------------------------------------------------------------------
+    &__message {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        max-width: 480px;
+        padding: 0 20px;
+        position: relative;
+        text-align: center;
+    }
+
+
+    // ------------------------------------------------------------------
+    // CTA
+    // ------------------------------------------------------------------
+    &__cta {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+    }
+
+
+    // ------------------------------------------------------------------
+    // Promo
+    // ------------------------------------------------------------------
+    &__promo {
+        align-items: center;
+        border: 1px solid #ccc;
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-top: 20px;
+        position: relative;
+        &-code {
+            border: none !important;
+            box-shadow: none !important;
+            color: #000 !important;
+            display: block !important;
+            font-size: 18px !important;
+            font-weight: bold !important;
+            line-height: 1 !important;
+            margin: 0 !important;
+            outline: none;
+            padding: 0 !important;
+            text-align: center !important;
+            text-transform: uppercase;
+            width: 160px !important;
+        }
+    }
+
+    &__copy-btn {
+        margin: 0;
+        position: relative;
+        &:hover .mt-lightbox__tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__tooltip {
+        background-color: #555;
+        border-radius: 6px;
+        bottom: 115%;
+        color: #fff;
+        left: 50%;
+        margin-left: -75px;
+        opacity: 0;
+        padding: 5px;
+        position: absolute;
+        text-align: center;
+        transition: opacity 0.3s;
+        visibility: hidden;
+        width: 140px;
+        z-index: 1;
+        &::after {
+            border-color: #555 transparent transparent transparent;
+            border-style: solid;
+            border-width: 5px;
+            content: "";
+            left: 50%;
+            margin-left: -5px;
+            position: absolute;
+            top: 100%;
+        }
+    }
+
+
+    // ------------------------------------------------------------------
+    // Details
+    // ------------------------------------------------------------------
+    &__details {
+        border-top: 1px solid #ccc;
+        display: block;
+        margin-top: 20px;
+        padding: 0 20px;
+        position: relative;
+        text-align: left;
+    }
+
+    &__detail {
+        display: block;
+        margin-top: 20px;
+        position: relative;
+        h4 {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 20px;
+            margin: 0;
+            text-transform: none;
+        }
+        p {
+            display: block;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 18px;
+            margin: 0;
+        }
+    }
+
+
+}

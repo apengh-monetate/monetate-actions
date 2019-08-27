@@ -1,5 +1,5 @@
-import requests
 import json
+import requests
 from monetate.retailer.models import Retailer, Account, SalesforceAccount
 
 
@@ -7,9 +7,8 @@ from monetate.retailer.models import Retailer, Account, SalesforceAccount
 # ===========================================
 # Variables
 # ===========================================
-pendoAPI = "5508000e-d2f6-492f-622f-fbe620a9a4f4";
 headers = {
-    'x-pendo-integration-key': pendoAPI,
+    'x-pendo-integration-key': "5508000e-d2f6-492f-622f-fbe620a9a4f4",
     'content-type': "application/json",
 }
 debug = True

@@ -1,0 +1,49 @@
+#toast-container.toast-top-center .toast.toast-success {
+  background-color: #fff !important;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAQCAYAAAD52jQlAAAABGdBTUEAALGPC/xhBQAAAP1JREFUOBHt1DEPwUAUAOD3Tq4Ro0kM2o1RmFoGCX/FIPwVo1r9EGLBbDaIzWYjouG51zaSchUto0uaNK/X7969vh7ADwYRoTSdYdZqtpjDb00GDasxAqKesk4iI2riG/QJVCni5LxdbFKb4ZZdWbLJv0xnxLE/GFRAlpp1aTnVd/VIUkPBIOBtCjeaxcGarzy+7JYDRCRdIgLF9YhAZ/Uwr4NjwH4cyIv4LWBYdgUI5kRQULEDCGx7u9U6DfhA+eYFRuioNbvhn8KNzVt+myE7PCLNGoERPJW9DGZ9Dr6gHIjA/oxkIL+iHQwbpr1XJ4/LddVOShPMlRvFtOAd0yat0ybr/h4AAAAASUVORK5CYII=") !important;
+  background-position: 20px 20px !important;
+  max-width: 240px !important;
+  padding: 12px !important;
+}
+
+#toast-container.toast-top-center .toast-message {
+  color: #051e39 !important;
+  margin-bottom: 12px;
+  padding-left: 42px !important;
+}
+
+.mt_atc-buttons .mini-cart-link-checkout {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 6px auto;
+}
+
+.mt_atc-buttons button.checkout-paypal {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  color: #051e39;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "hco gotham";
+  font-size: .75rem;
+  height: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.05em;
+  margin: 6px auto;
+  max-width: 18.75rem;
+  padding: 0;
+  width: 100%;
+}

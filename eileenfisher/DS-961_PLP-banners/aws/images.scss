@@ -1,0 +1,69 @@
+$breakpoint-md: 768px;
+
+.products.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > .product.item {
+        flex: 0 1 50%;
+        @media screen and (min-width: 768px) {
+            flex: 0 1 calc(100% / 3);
+            padding-left: 1.28205128%;
+            padding-right: 1.28205128%;
+        }
+    }
+
+}
+
+
+/* ===================================================== */
+/* Mobile Banners
+/* ===================================================== */
+.mt_plp-banner__mobile {
+    display: block;
+    margin-bottom: 20px;
+    padding-left: 1.28205128%;
+    padding-right: 1.28205128%;
+    @media screen and (min-width: $breakpoint-md) {
+        display: none;
+    }
+
+    &.one-across {
+        flex: 0 1 50%;
+    }
+
+    &.two-across {
+        flex: 0 1 100%;
+    }
+
+    &.three-across {
+        flex: 0 1 100%;
+    }
+}
+
+
+/* ===================================================== */
+/* Desktop Banners
+/* ===================================================== */
+.mt_plp-banner__desktop {
+    display: none;
+    @media screen and (min-width: $breakpoint-md) {
+        display: block;
+        margin-bottom: 20px;
+        padding-left: 1.28205128%;
+        padding-right: 1.28205128%;
+    }
+
+    &.one-across {
+        flex: 0 1 calc(100% / 3);
+    }
+
+    &.two-across {
+        flex: 0 1 calc((100% / 3) * 2);
+    }
+
+    &.three-across {
+        flex: 0 1 100%;
+    }
+}

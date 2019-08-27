@@ -1,0 +1,121 @@
+.products.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.products.list > .product.item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .products.list > .product.item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(100% / 3);
+            flex: 0 1 calc(100% / 3);
+    padding-left: 1.28205128%;
+    padding-right: 1.28205128%;
+  }
+}
+
+/* ===================================================== */
+/* Mobile Banners
+/* ===================================================== */
+.mt_plp-banner__mobile--video {
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 1.28205128%;
+  margin-right: 1.28205128%;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_plp-banner__mobile--video {
+    display: none;
+  }
+}
+
+.mt_plp-banner__mobile--video iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.mt_plp-banner__mobile--video.one-across {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  padding-bottom: calc((320 / 320) * 100%);
+}
+
+.mt_plp-banner__mobile--video.two-across {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  padding-bottom: calc((320 / 290) * 100%);
+}
+
+.mt_plp-banner__mobile--video.three-across {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  padding-bottom: calc((900 / 1600) * 100%);
+}
+
+/* ===================================================== */
+/* Desktop Banners
+/* ===================================================== */
+.mt_plp-banner__desktop--video {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_plp-banner__desktop--video {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 1.28205128%;
+    margin-right: 1.28205128%;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+.mt_plp-banner__desktop--video iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.mt_plp-banner__desktop--video.one-across {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc((100% / 3) - 30px);
+          flex: 0 1 calc((100% / 3) - 30px);
+  padding-bottom: calc((353 / 679) * 100%);
+}
+
+.mt_plp-banner__desktop--video.two-across {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(((100% / 3) * 2) - 30px);
+          flex: 0 1 calc(((100% / 3) * 2) - 30px);
+  padding-bottom: calc((420 / 750) * 100%);
+}
+
+.mt_plp-banner__desktop--video.three-across {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc((100% / 1) - 30px);
+          flex: 0 1 calc((100% / 1) - 30px);
+  padding-bottom: calc((900 / 1600) * 100%);
+}

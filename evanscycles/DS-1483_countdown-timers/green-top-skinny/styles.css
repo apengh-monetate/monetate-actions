@@ -1,0 +1,126 @@
+@charset "UTF-8";
+.mt_countdown {
+  background-color: #EAEAEA;
+  background-image: url("{{BKG_URL}}");
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  max-width: 930px;
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .mt_countdown {
+    max-width: 1110px;
+  }
+}
+
+.mt-countdown {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 36px;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 10px 0;
+  }
+}
+
+.mt-countdown__message {
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  margin-top: 12px;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown__message {
+    font-size: 14pt;
+    margin-top: 0;
+  }
+}
+
+.mt-countdown__timer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown__timer {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown__timer::before {
+    color: #000;
+    content: "•";
+    display: inline-block;
+    font-size: 15pt;
+    margin-left: 10px;
+    margin-right: 5px;
+    position: relative;
+  }
+}
+
+.mt-countdown .mt_tickerElem {
+  color: #000;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 769px) {
+  .mt-countdown .mt_tickerElem {
+    font-size: 14pt;
+  }
+}
+
+.mt-countdown .mt_tickerElem .mt_time {
+  font-variant-numeric: tabular-nums;
+  margin-right: 4px;
+}

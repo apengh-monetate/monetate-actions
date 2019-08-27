@@ -1,0 +1,249 @@
+@import "../../../variables";
+
+.mt_lightbox {
+    background: #eff5ff;
+
+
+    h1, h2, h3, h4, p {
+        color: $black;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        // color: $blue;
+        font-weight: 600;
+    }
+
+
+
+    ul {
+        font-size: 12px;
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 12px;
+        li:first-child {
+            margin-top: 4px;
+        }
+    }
+
+    // ==================================================================
+    // Images
+    // ==================================================================
+    img {
+        max-width: 100%;
+    }
+    .img {
+        img {
+            border: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        &-16x9 {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+    }
+
+
+    // ==================================================================
+    // Buttons
+    // ==================================================================
+    // button[name="next"],
+    // button[data-guide-action="next"] {
+    //     [class^="micon-"] {
+    //         padding-right: 0;
+    //     }
+    // }
+
+    button {
+        [class^="micon-"] {
+            padding-right: 0;
+        }
+    }
+
+
+    // ==================================================================
+    // Tables
+    // ==================================================================
+    table {
+        font-size: 12px;
+        margin-bottom: 20px;
+        code {
+            font-size: 12px;
+        }
+    }
+
+
+
+    // ==================================================================
+    // Header
+    // ==================================================================
+    &__header {
+        color: #1D1D1B;
+        padding: 20px;
+        h2 {
+            margin-bottom: 4px !important;
+        }
+    }
+
+
+
+    // ==================================================================
+    // Content
+    // ==================================================================
+    &__content {
+        padding: 0 20px;
+    }
+
+
+    // ------------------------------------------------------------------
+    // Video
+    // ------------------------------------------------------------------
+    &__video {
+        margin-bottom: 20px;
+        margin-top: 12px;
+        overflow: hidden;
+        padding-top: 56.25%;
+        position: relative;
+        iframe {
+            border: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+
+
+
+    // ==================================================================
+    // Additional Resources / Use Cases
+    // ==================================================================
+    &__resources {
+        background: #fff;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 10px 20px;
+        & > .column {
+            flex: 1;
+        }
+        h1, h2, h3, h4 {
+            margin-bottom: 5px;
+        }
+    }
+
+
+
+
+    // ==================================================================
+    // Footer
+    // ==================================================================
+    &__footer {
+        background: #26374d;
+        &-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            list-style: none;
+            margin-right: 20px;
+            padding-bottom: 8px;
+            padding-top: 8px;
+            li {
+                border-right: 1px solid rgba(124,142,174,0.35);
+                line-height: 16px;
+                margin-top: 0 !important;
+                padding-left: 20px;
+                padding-right: 20px;
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    border-right: none;
+                    padding-right: 0;
+                }
+                a {
+                    border-bottom: 1px solid rgba(45,180,232,0.35);
+                    color: #2db4e8;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+
+
+    // ==================================================================
+    // Flexbox
+    // ==================================================================
+    .flex {
+        align-content:       stretch;
+        align-items:         stretch;
+        display:             flex;
+        flex-direction:      row;
+        flex-wrap:           wrap;
+        justify-content:     flex-start;
+
+        @each $value in $flex-direction {
+            &__#{$value} {
+                display: flex;
+                flex-direction: #{$value};
+            }
+        }
+
+        &.nowrap {
+            flex-wrap: nowrap;
+        }
+
+        &__item {
+            flex: 0 1 100%;
+            width: 100%;
+        }
+
+        // ------------------------------------------------------------------
+        // Container Properties
+        // ------------------------------------------------------------------
+        @each $property, $values in $flex-container {
+            @each $key, $value in $values {
+                &.#{$property}--#{$key} {
+                    #{$property}: #{$value};
+                }
+            }
+        }
+
+
+        // ------------------------------------------------------------------
+        // Item Properties
+        // ------------------------------------------------------------------
+        @each $key, $value in $align-self {
+            .align-self--#{$key} {
+                align-self: #{$value};
+            }
+        }
+
+    }
+
+
+
+    // ==================================================================
+    // Utility Classes
+    // ==================================================================
+    .hide {
+        display: none !important;
+    }
+}

@@ -1,0 +1,73 @@
+.mt_closable {
+    background: #343434;
+    display: block;
+    padding: 11px 20px;
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__close {
+        align-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #666;
+        display: inline-flex;
+        font-size: 24px;
+        height: 21px;
+        justify-content: center;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 18px;
+        &:hover,
+        &:active,
+        &:focus {
+            background: none;
+            border: none;
+        }
+    }
+
+    &__content {
+        align-content: center;
+        align-items: center;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 14px;
+        justify-content: center;
+        line-height: 16px;
+        padding: 0;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    &__text {
+        display: block;
+        margin: 0 4px;
+    }
+
+
+    &__link {
+        color: #80bade;
+        display: block;
+        font-weight: bold;
+        margin: 0 4px;
+        text-decoration: none;
+        &:hover,
+        &:active,
+        &:focus {
+            color: #80bade;
+            text-decoration: underline;
+        }
+    }
+}

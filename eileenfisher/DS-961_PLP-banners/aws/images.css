@@ -1,0 +1,95 @@
+.products.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.products.list > .product.item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .products.list > .product.item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(100% / 3);
+            flex: 0 1 calc(100% / 3);
+    padding-left: 1.28205128%;
+    padding-right: 1.28205128%;
+  }
+}
+
+/* ===================================================== */
+/* Mobile Banners
+/* ===================================================== */
+.mt_plp-banner__mobile {
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 1.28205128%;
+  padding-right: 1.28205128%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_plp-banner__mobile {
+    display: none;
+  }
+}
+
+.mt_plp-banner__mobile.one-across {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.mt_plp-banner__mobile.two-across {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.mt_plp-banner__mobile.three-across {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+/* ===================================================== */
+/* Desktop Banners
+/* ===================================================== */
+.mt_plp-banner__desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_plp-banner__desktop {
+    display: block;
+    margin-bottom: 20px;
+    padding-left: 1.28205128%;
+    padding-right: 1.28205128%;
+  }
+}
+
+.mt_plp-banner__desktop.one-across {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(100% / 3);
+          flex: 0 1 calc(100% / 3);
+}
+
+.mt_plp-banner__desktop.two-across {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc((100% / 3) * 2);
+          flex: 0 1 calc((100% / 3) * 2);
+}
+
+.mt_plp-banner__desktop.three-across {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}

@@ -6,13 +6,20 @@
   max-width: 1137px;
   opacity: 1;
   position: fixed;
-  touch-action: none;
+  -ms-touch-action: none;
+      touch-action: none;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   width: 100%;
-  z-index: 9999;
+  z-index: 999;
+}
+
+@media screen and (min-width: 768px) {
+  #mt-promo-drawer {
+    z-index: 1010;
+  }
 }
 
 #mt-promo-drawer.mt-expanded {
@@ -27,7 +34,7 @@
 
 #mt-promo-drawer .mt_drawer-tab__title {
   -webkit-box-align: center;
-  -webkit-align-items: center;
+      -ms-flex-align: center;
           align-items: center;
   background: #242424;
   border: none;
@@ -36,17 +43,17 @@
   color: #fff;
   cursor: pointer;
   display: -webkit-box;
-  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-          flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   height: 40px !important;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
+      -ms-flex-pack: center;
           justify-content: center;
   left: 50%;
   margin: 0;
@@ -76,15 +83,15 @@
 
 #mt-promo-drawer .mt_drawer-tab__icon {
   -webkit-box-align: center;
-  -webkit-align-items: center;
+      -ms-flex-align: center;
           align-items: center;
   border: 0;
   display: -webkit-inline-box;
-  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   height: 24px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
+      -ms-flex-pack: center;
           justify-content: center;
   margin-left: 10px;
   -webkit-transform: rotateX(180deg);
@@ -133,24 +140,24 @@
 }
 
 #mt-promo-drawer.mt-expanded .mt_drawer-tab__close {
-  -webkit-align-content: center;
-          align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
+      -ms-flex-align: center;
           align-items: center;
   background: none;
   border: none;
   display: -webkit-box;
-  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
           flex-direction: row;
   font-size: 42px;
   font-weight: normal;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
+      -ms-flex-pack: center;
           justify-content: center;
   letter-spacing: 0;
   margin: 0;
@@ -247,7 +254,8 @@
 }
 
 #mt-promo-drawer [data-slider-wrapper="horizontal"] [data-slider-mask] {
-  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
 }
 
 #mt-promo-drawer [data-prev-button],
@@ -257,16 +265,16 @@
   -o-user-select: none;
   -webkit-user-select: none;
   -webkit-box-align: center;
-  -webkit-align-items: center;
+      -ms-flex-align: center;
           align-items: center;
   background: none;
   border: none;
   display: -webkit-inline-box;
-  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   height: 40px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
+      -ms-flex-pack: center;
           justify-content: center;
   margin: 0;
   outline: none;

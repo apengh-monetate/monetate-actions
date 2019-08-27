@@ -1,0 +1,128 @@
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+.mt_hero {
+    display: block;
+    position: relative;
+
+    &__img {
+        background-image: url('https://www.myndspa.com/public/img/book_now/uber_nav.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        font-size: 0;
+        height: 480px;
+        line-height: 0;
+        width: 100%;
+        @media screen and (min-width: $breakpoint-lg) {
+            height: 600px;
+        }
+    }
+
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        @media screen and (min-width: $breakpoint-md) {
+            bottom: 80px;
+            top: auto;
+            transform: none;
+        }
+    }
+
+
+    &__heading {
+        color: #fff;
+        display: block;
+        font-family: "urw-din", sans-serif;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @media screen and (min-width: $breakpoint-md) {
+            flex-wrap: nowrap;
+        }
+    }
+    &__link {
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        flex: 0 0 50%;
+        font-family: "urw-din", sans-serif;
+        font-size: 160%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 50%;
+        @media screen and (min-width: $breakpoint-md) {
+            align-items: flex-end;
+            display: flex;
+            flex: 1 1;
+            font-size: 20px;
+            height: 200px;
+            justify-content: center;
+        }
+        // @media screen and (min-width: $breakpoint-lg) {
+        //     padding-bottom: 40px;
+        // }
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+            span {
+                border-bottom: 4px solid #fff;
+                font-weight: bold;
+            }
+        }
+
+
+        span {
+            border-bottom: 2px solid #fff;
+            font-weight: 300;
+        }
+
+
+        @media screen and (min-width: $breakpoint-md) {
+            &.facials {
+                order: 3;
+            }
+            &.hair {
+                order: 4;
+            }
+            &.massage {
+                order: 1;
+            }
+            &.body {
+                order: 2;
+            }
+            &.nails {
+                order: 5;
+            }
+            &.makeup {
+                order: 6;
+            }
+            &.wax {
+                order: 7;
+            }
+            &.gifts {
+                display: none;
+            }
+        }
+    }
+
+}

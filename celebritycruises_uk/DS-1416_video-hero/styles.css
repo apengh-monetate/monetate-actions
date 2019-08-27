@@ -1,0 +1,118 @@
+.mt_hero-video {
+  display: block;
+  height: 0;
+  margin-bottom: 50px;
+  margin-top: -3vw;
+  overflow: hidden;
+  padding-bottom: calc((660 / 1280) * 100vw);
+  position: relative;
+  width: 100vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt_hero-video {
+    padding-bottom: calc((500 / 1280) * 100vw);
+  }
+}
+
+.mt_hero-video video {
+  display: block;
+  width: 100%;
+}
+
+.mt_hero-video__text {
+  color: #fff;
+  left: 0;
+  left: 50%;
+  margin-top: 3vw;
+  max-width: 360px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt_hero-video__text {
+    margin-top: 1vw;
+  }
+}
+
+.mt_hero-video__header {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 14px;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt_hero-video__header {
+    font-size: 38px;
+    line-height: 34px;
+    margin-bottom: 25px;
+  }
+}
+
+.mt_hero-video__copy {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 320px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt_hero-video__copy {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 25px;
+  }
+}
+
+.mt_hero-video__button {
+  background-color: #A01939;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 15px;
+  text-decoration: none;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.mt_hero-video__button:visited {
+  color: #fff;
+}
+
+.mt_hero-video__button:hover, .mt_hero-video__button:focus {
+  background-color: #741229;
+}
+
+.mt_hero-video__mini-text {
+  font-size: 12px;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero-video__mini-text {
+    font-size: 14px;
+    margin-top: 25px;
+  }
+}

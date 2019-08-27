@@ -1,0 +1,113 @@
+$breakpoint-lg: 992px;
+
+#MONETATE-ID {
+    [mt-data-grid] {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: center;
+        @media screen and (min-width: $breakpoint-lg) {
+            width: 83.33333%;
+        }
+    }
+
+    .mt-merch-item {
+        box-sizing: border-box;
+        flex-basis: 50%;
+        max-width: 50%;
+        padding: 0 10px 20px;
+        @media screen and (min-width: 768px) {
+            flex-basis: 25%;
+            max-width: 25%;
+        }
+    }
+
+    // ==================================================================
+    // Grid Container Template
+    // ==================================================================
+    .mt_merch-grid {
+        &__header {
+            display: block;
+            font-family: 'BrandonGrotesque-Bold' !important;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+
+    // ==================================================================
+    // Grid Item Template
+    // ==================================================================
+    .mt_grid-item {
+        &:hover {
+            text-decoration: none;
+        }
+
+        // Image
+        &__img {
+            img {
+                border: 1px solid #bfbfbf;
+                display: block;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+
+        // Text Container
+        &__text {
+
+        }
+
+        // Title
+        &__title {
+            font-size: 1.3rem;
+            margin: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            @media screen and (min-width: 768px) {
+                font-size: 1.6rem;
+            }
+        }
+
+        // Price Container
+        &__price {
+            font-family: 'BrandonGrotesque-Regular' !important;
+            font-size: 1.2rem;
+            font-weight: normal;
+            @media screen and (min-width: 768px) {
+                font-size: 1.5rem;
+            }
+            &--reg {
+                color: #737373 !important;
+                text-decoration: line-through;
+                span.from {
+                    display: none;
+                }
+            }
+            &--sale {
+                color: #ba2235;
+            }
+        }
+    }
+
+    [data-missing-keys="salePrice"] {
+        .mt_grid-item {
+            &__price {
+                &--reg {
+                    text-decoration: none;
+                    span.from {
+                        display: inline;
+                    }
+                }
+                &--sale {
+                    display: none;
+                }
+            }
+        }
+    }
+} // #MONETATE-ID

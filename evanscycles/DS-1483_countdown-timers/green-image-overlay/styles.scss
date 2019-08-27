@@ -1,0 +1,118 @@
+$breakpoint-md: 769px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+$green: #13665A;
+
+
+.mt_countdown {
+    background-color: $green;
+    background-image: url("{{BKG_URL}}");
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: block;
+    left: 15px;
+    position: absolute;
+    top: 30px;
+    width: auto;
+}
+
+
+// ==================================================================
+// Countdown Timer
+// ==================================================================
+.mt-countdown {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-bottom: 6px;
+    padding-right: 7px;
+    padding-top: 6px;
+    @media screen and (min-width: $breakpoint-md) {
+        padding-right: 10px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-right: 11px;
+    }
+
+
+    // ------------------------------------------------------------------
+    // Icon
+    // ------------------------------------------------------------------
+    &__icon {
+        align-items: center;
+        display: flex;
+        padding-left: 9px;
+        padding-right: 1px;
+        @media screen and (min-width: $breakpoint-md) {
+            padding-left: 11px;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            padding-left: 12px;
+        }
+        img {
+            width: 14px;
+            @media screen and (min-width: $breakpoint-md) {
+                width: 18px;
+            }
+            @media screen and (min-width: $breakpoint-lg) {
+                width: 20px;
+            }
+        }
+    }
+
+
+
+    // ------------------------------------------------------------------
+    // Countdown
+    // ------------------------------------------------------------------
+    &__timer {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .mt_tickerElem {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        line-height: 1;
+        margin-left: 8px;
+        margin-right: 8px;
+        @media screen and (min-width: $breakpoint-md) {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            margin-left: 11px;
+            margin-right: 11px;
+        }
+
+        // Numbers
+        .mt_time {
+            font-size: 11pt;
+            @media screen and (min-width: $breakpoint-md) {
+                font-size: 16pt;
+            }
+            @media screen and (min-width: $breakpoint-lg) {
+                font-size: 16pt;
+            }
+        }
+
+        // Units
+        .mt_suffix {
+            font-size: 6px;
+            @media screen and (min-width: $breakpoint-md) {
+                font-size: 9px;
+            }
+            @media screen and (min-width: $breakpoint-lg) {
+                font-size: 9px;
+            }
+        }
+    }
+
+} // .mt-countdown
