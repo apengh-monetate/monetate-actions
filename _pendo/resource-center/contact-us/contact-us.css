@@ -67,17 +67,10 @@
   position: absolute;
   right: 0;
   text-align: center;
-  top: 100%;
+  top: 88px;
   transition: 300ms ease;
   width: 100%;
   z-index: 9;
-}
-.section__contact-body.is-toggled {
-  bottom: 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  cursor: default;
-  top: 0;
-  transform: translate3d(0, 0, 0);
 }
 .section__contact-modal {
   display: flex;
@@ -94,9 +87,9 @@
   position: relative;
 }
 .section__contact-modal h2 {
-  color: #ec2059;
+  color: #7D5F99;
   font: 500 26px/1.4em 'proxima-nova', sans-serif;
-  margin: 1em auto 0;
+  margin: 0 auto 0;
 }
 .section__contact-modal h3 {
   color: #9a9ca5;
@@ -113,6 +106,7 @@
   color: #ccc;
   cursor: pointer;
   display: inline;
+  display: none;
   font-family: 'proxima-nova', sans-serif !important;
   font-size: 32px;
   font-weight: 100;
@@ -137,7 +131,7 @@
   border-style: initial;
   border-width: 0px;
   bottom: 15px;
-  color: #ec2059;
+  color: #7D5F99;
   cursor: pointer;
   display: inline;
   font-family: 'proxima-nova', sans-serif !important;
@@ -241,10 +235,10 @@
   stroke-dashoffset: 0;
 }
 ._pendo-contact-form__drop-zone-overlay_ ._pendo-contact-form__drop-zone-overlay__inner_ ._pendo-contact-form__drop-zone-overlay__progress_ ._pendo-contact-form__drop-zone-progress_.__failure_ ._pendo-contact-form__drop-zone-progress__background_ {
-  fill: #ec2059;
+  fill: #7D5F99;
 }
 ._pendo-contact-form__drop-zone-overlay_ ._pendo-contact-form__drop-zone-overlay__inner_ ._pendo-contact-form__drop-zone-overlay__progress_ ._pendo-contact-form__drop-zone-progress_.__failure_ ._pendo-contact-form__drop-zone-progress__fill_ {
-  stroke: #ec2059;
+  stroke: #7D5F99;
   stroke-dashoffset: 0;
 }
 ._pendo-contact-form__drop-zone-overlay_ ._pendo-contact-form__drop-zone-overlay__inner_ ._pendo-contact-form__drop-zone-overlay__progress_ ._pendo-contact-form__drop-zone-progress_ ._pendo-contact-form__drop-zone-progress__background_ {
@@ -360,6 +354,7 @@
 }
 ._pendo-contact-form_ {
   margin: 5% auto;
+  margin-bottom: 120px;
   max-width: 680px;
   width: 90%;
 }
@@ -400,7 +395,7 @@
 }
 ._pendo-contact-form__notifications_ ._pendo-contact-form__notice_.is-error {
   background-color: rgba(236, 32, 89, 0.1);
-  border-left-color: #ec2059;
+  border-left-color: #7D5F99;
 }
 ._pendo-contact-form__notifications_ ._pendo-contact-form__notice_.is-error:before {
   background-image: url("data:image/svg+xml,%3Csvg width='79px' height='70px' viewBox='0 0 79 70' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='noun_1073619_cc' fill-rule='nonzero' fill='%23EC2059'%3E%3Cg id='Group'%3E%3Cpath d='M78.2,60.5 L45.1,3.5 C44,1.6 42.1,0.5 39.9,0.5 C37.7,0.5 35.8,1.6 34.7,3.5 L1.6,60.5 C0.5,62.4 0.5,64.6 1.6,66.5 C2.7,68.4 4.6,69.5 6.8,69.5 L72.9,69.5 C75.1,69.5 77,68.4 78.1,66.5 C79.2,64.6 79.3,62.4 78.2,60.5 Z M74.8,64.5 C74.6,64.8 74.1,65.5 73.1,65.5 L6.9,65.5 C5.9,65.5 5.3,64.8 5.2,64.5 C5,64.2 4.7,63.4 5.2,62.5 L38.3,5.5 C38.8,4.6 39.7,4.5 40,4.5 C40.3,4.5 41.2,4.6 41.7,5.5 L74.8,62.5 C75.3,63.4 75,64.2 74.8,64.5 Z' id='Shape'%3E%3C/path%3E%3Crect id='Rectangle-path' x='38' y='25.5' width='4' height='23' rx='2'%3E%3C/rect%3E%3Crect id='Rectangle-path' x='38' y='52.5' width='4' height='5' rx='2'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -453,7 +448,7 @@
 ._pendo-contact-form__container_ ._pendo-contact-form__select_:focus,
 ._pendo-contact-form__container_ ._pendo-contact-form__textarea_:focus {
   background-color: #fff;
-  border: 1px solid #ff3467;
+  border: 1px solid #7D5F99;
   color: #2a2c35;
   transition: all 300ms;
 }
@@ -463,7 +458,7 @@
 }
 ._pendo-contact-form__container_ ._pendo-contact-form__textarea_:focus {
   background-color: #fff;
-  border: 1px solid #ff3467;
+  border: 1px solid #7D5F99;
   color: #2a2c35;
   transition: all 300ms;
 }
@@ -481,9 +476,9 @@
   -webkit-font-smoothing: antialiased;
   -webkit-transition: all 300ms ease;
   background-clip: padding-box;
-  background-color: #ec2059;
+  background-color: #7D5F99;
   border: 0;
-  border: 2px solid #ec2059;
+  border: 2px solid #7D5F99;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
@@ -496,7 +491,7 @@
   width: 100%;
 }
 ._pendo-contact-form__container_ ._pendo-contact-form__submit_:hover {
-  background-color: #ff3467;
+  background-color: #634b7a;
   cursor: pointer;
   transition: all 300ms;
 }
@@ -505,7 +500,7 @@
   animation: rotate 2s 0.25s linear infinite;
   background: #fff;
   border-color: #f4f4f7;
-  border-left-color: #ec2059;
+  border-left-color: #634b7a;
   border-radius: 40px;
   border-width: 3px;
   cursor: progress;
@@ -534,11 +529,11 @@
 ._pendo-contact-form__fail_ .checkmark {
   animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
   border-radius: 50%;
-  box-shadow: inset 0px 0px 0px #ec2059;
+  box-shadow: inset 0px 0px 0px #7D5F99;
   display: block;
   height: 150px;
   margin: auto;
-  stroke: #ec2059;
+  stroke: #7D5F99;
   stroke-miterlimit: 10;
   stroke-width: 2;
   width: 100px;
@@ -547,7 +542,7 @@
 ._pendo-contact-form__fail_ .checkmark .checkmark__circle {
   animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
   fill: none;
-  stroke: #ec2059;
+  stroke: #7D5F99;
   stroke-dasharray: 166;
   stroke-dashoffset: 166;
   stroke-miterlimit: 10;
@@ -572,11 +567,11 @@
 ._pendo-contact-form__fail_ .cross {
   animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
   border-radius: 50%;
-  box-shadow: inset 0px 0px 0px #ec2059;
+  box-shadow: inset 0px 0px 0px #7D5F99;
   display: block;
   height: 150px;
   margin: auto;
-  stroke: #ec2059;
+  stroke: #7D5F99;
   stroke-miterlimit: 10;
   stroke-width: 2;
   width: 100px;
@@ -585,7 +580,7 @@
 ._pendo-contact-form__fail_ .cross .cross__circle {
   animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
   fill: none;
-  stroke: #ec2059;
+  stroke: #7D5F99;
   stroke-dasharray: 166;
   stroke-dashoffset: 166;
   stroke-miterlimit: 10;

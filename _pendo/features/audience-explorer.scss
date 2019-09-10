@@ -37,11 +37,21 @@
 .segmentation-content-wrapper [data-test-id="create-experience-button"] // [Component] Audience Explorer > Explore and Create > Create Experience (Button)
 
 
+// Filter Predicate
+.attribute-filter-operator .button // [Component] Audience Explorer > Explore and Create > Filter Predicate (Dropdown)
+.attribute-filter-operator .menu-item:contains('≠ does not equal') // [Component] Audience Explorer > Explore and Create > Filter Predicate (Dropdown) > Does not equal
+.attribute-filter-operator .selected:contains('= equals') // [Component] Audience Explorer > Explore and Create > Filter Predicate (Dropdown) > Equals
+
 
 
 // Comparison Dropdowns
-.segmentation-content-wrapper .margin-top-l:nth-child(2) .grid-col-6:nth-child(2) div.button // [Component] Audience Explorer > Comparison Dropdowns > Compare Audience (Dropdown)
-.segmentation-content-wrapper .margin-top-l:nth-child(2) .grid-col-6:nth-child(2) li.menu-item // [Component] Audience Explorer > Comparison Dropdowns > Compare Audience > Menu Item
+.segmentation-content-wrapper .button.context-menu.menu-button // [Component] Audience Explorer > Comparison Dropdown > Data Timeframe (Dropdown)
+
+.segmentation-content-wrapper .margin-top-l:nth-child(2) .grid-col-6:nth-child(1) .menu-container .button // [Component] Audience Explorer > Comparison Dropdown > Split On (Dropdown)
+.segmentation-content-wrapper .margin-top-l:nth-child(2) .grid-col-6:nth-child(1) li.menu-item // [Component] Audience Explorer > Comparison Dropdown > Split On (Dropdown) > Menu Item
+
+.segmentation-content-wrapper .margin-top-l:nth-child(2) .grid-col-6:nth-child(2) div.button // [Component] Audience Explorer > Comparison Dropdown > Compare Audience (Dropdown)
+.segmentation-content-wrapper .margin-top-l:nth-child(2) .grid-col-6:nth-child(2) li.menu-item // [Component] Audience Explorer > Comparison Dropdown > Compare Audience > Menu Item
 
 //  Metric Accordions
 .segmentation-content-wrapper .card.expando-card:contains("Sessions") // [Component] Audience Explorer > Metric Accordions > Sessions

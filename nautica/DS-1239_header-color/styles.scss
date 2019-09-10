@@ -1,0 +1,208 @@
+$blue: #001745;
+
+
+/* ===================================================== */
+/* Global Header Styles
+/* ===================================================== */
+#header {
+    background-color: #fff !important;
+    .mob-nav-overlay {
+        background-color: #fff !important;
+    }
+    #pre-header {
+        background-color: #fff !important;
+
+        .systemControls > li > a {
+            color: #707070 !important;
+        }
+    }
+}
+
+
+
+/* ===================================================== */
+/* Mobile Only
+/* ===================================================== */
+@media screen and (max-width: 1025px) {
+
+    // Menu icon
+    .mobile-bar-icon .menu--bars-nav {
+        background-color: $blue !important;
+    }
+
+    // Close icon
+    .mobile-bar-btn .mobile--nav-close__btn {
+        &::before,
+        &::after {
+            background-color: $blue !important;
+        }
+    }
+
+
+    // Search icon
+    .mobile-bar-btn.mobile-search-icon {
+        background-image: url('https://www.nautica.com/on/demandware.static/Sites-nau-Site/-/default/dwf01cadbd/images/noun_Magnifying%20Glass_709198.png') !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 26px !important;
+        height: 26px !important;
+        margin-top: 6px !important;
+        width: 26px !important;
+
+        img {
+            display: none !important;
+        }
+    }
+
+    #header-search {
+        .wheelBtn {
+            background: #fff !important;
+            background-image: url('https://www.nautica.com/on/demandware.static/Sites-nau-Site/-/default/dwf01cadbd/images/noun_Magnifying%20Glass_709198.png') !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: 25px 25px !important;
+            height: 40px !important;
+            width: 25px !important;
+
+            img {
+                display: none !important;
+            }
+        }
+    }
+
+
+    // Mini-Cart
+    .mobile-cart-img-wrapper.hidden-desktop {
+        background-image: url('https://www.nautica.com/on/demandware.static/Sites-nau-Site/-/default/dwb72f782a/images/noun_Shopping%20Bag_1309876.png') !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 20px 28px !important;
+        height: 39px !important;
+        width: 26px !important;
+        img {
+            display: none !important;
+        }
+    }
+
+
+    // Mobile Menu
+    #slideMenu {
+        .wrapper {
+            background: #fff !important;
+        }
+        .link-bar-item {
+            border-color: #4c4c4c !important;
+            color: $blue !important;
+
+            & > a {
+                color: $blue !important;
+            }
+        }
+
+        .category-level-2 {
+            border-bottom: 1px solid $blue !important;
+        }
+
+        .link-bar-group {
+            background-color: #fff !important;
+        }
+
+        // Live Chat
+        .livechat-links a {
+            color: $blue !important;
+        }
+    }
+}
+
+
+
+
+
+
+/* ===================================================== */
+/* Desktop
+/* ===================================================== */
+@media screen and (min-width: 1025px) {
+    #header {
+
+
+
+        #navigation {
+            background: #fff !important;
+            a.home {
+                background: url('https://www.nautica.com/on/demandware.static/Sites-nau-Site/-/default/v1567604079806/images/nau-logo_navy.png') no-repeat !important;
+                background-size: 100% !important;
+                height: 35px !important;
+                width: 180px !important;
+            }
+        }
+
+        #navigation-menu {
+            background: transparent !important;
+            border-bottom: 1px solid #cacaca !important;
+            border-top: 1px solid #cacaca !important;
+            display: flex !important;
+            flex-flow: row nowrap !important;
+            font-family: 'AvenirBook' !important;
+            justify-content: center !important;
+            list-style-type: none !important;
+            margin: 10px 0 0 !important;
+            padding: 15px 0 !important;
+
+            > .level1 {
+                color: #464646 !important;
+                &:hover {
+                    a.level1 {
+                        color: #041c2c !important;
+                        font-family: 'AvenirBlack' !important;
+                    }
+                }
+            }
+        }
+
+
+        // Search bar
+        #header-search {
+            .wheelBtn {
+                background: #fff !important;
+                background-image: url('https://www.nautica.com/on/demandware.static/Sites-nau-Site/-/default/dwf01cadbd/images/noun_Magnifying%20Glass_709198.png') !important;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+                background-size: 17px 17px !important;
+                color: #464646 !important;
+                height: 19px !important;
+                margin: 0 8px 0 0 !important;
+                vertical-align: bottom !important;
+                width: 17px !important;
+
+                img {
+                    display: none !important;
+                }
+            }
+
+            .ovlb {
+                input {
+                    background: #fff !important;
+                    color: #000 !important;
+                }
+            }
+        }
+
+
+        // Mini-Cart
+        #pre-header .systemControls > li > a .icon-bag {
+            background-image: url('https://www.nautica.com/on/demandware.static/Sites-nau-Site/-/default/dwb72f782a/images/noun_Shopping%20Bag_1309876.png') !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: 20px 28px !important;
+            height: 29px !important;
+            width: 20px !important;
+            img {
+                display: none !important;
+            }
+        }
+
+
+
+    }
+}

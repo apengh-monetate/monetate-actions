@@ -1,0 +1,114 @@
+$breakpoint-md: 768px;
+$breakpoint-lg: 768px;
+
+.mt_warrantyBtns {
+	color: #333;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	font-size: .875rem;
+	letter-spacing: .03563rem;
+	line-height: 1.3125rem;
+    margin: 0;
+    padding: 0;
+	position: relative;
+    width: 100%;
+}
+
+.mt_warrantyText {
+    flex: 1 0 100%;
+	font-weight: bold;
+    margin-bottom: 10px;
+    order: 2;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.mt_warrantyBtn {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	cursor: pointer;
+	float: left;
+    margin-bottom: 10px;
+	overflow: hidden;
+	padding: 6px;
+	text-align: center;
+    &.active {
+    	border-color: #2a6496;
+    }
+
+    // Manufacturer's warranty only
+    &:nth-child(2) {
+        flex: 1 0 100%;
+        order: 1;
+        width: 100%;
+    }
+
+
+    &:nth-child(2n + 3) {
+        margin-right: 5px;
+        @media screen and (min-width: $breakpoint-lg) {
+            margin-right: 0;
+        }
+    }
+    &:nth-child(2n + 4) {
+        margin-left: 5px;
+        @media screen and (min-width: $breakpoint-lg) {
+            margin-left: 0;
+        }
+    }
+
+    // All price buttons
+    &:nth-child(n + 3) {
+        flex-basis: calc(50% - 5px);
+        order: 3;
+        width: calc(50% - 5px);
+        @media screen and (min-width: $breakpoint-lg) {
+            flex: 1 1 calc((100% / 3) - 10px);
+            margin-left: 5px;
+            margin-right: 5px;
+            width: calc(100% / 3);
+        }
+
+        & > div:last-child {
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 30px;
+            position: relative;
+            &::before {
+                content: "less than";
+                display: block;
+                left: 0;
+                position: absolute;
+                text-align: center;
+                top: -16px;
+                width: 100%;
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        @media screen and (min-width: $breakpoint-lg) {
+            margin-left: 0;
+        }
+    }
+
+    &:last-child {
+        @media screen and (min-width: $breakpoint-lg) {
+            margin-right: 0;
+        }
+    }
+
+}
+
+
+.prod-details-page .qm abbr {
+    margin-top: 0px !important;
+}
+
+
+.qm.warranty-modal-link {
+    position: absolute;
+    right: 0;
+    top: 50px;
+}

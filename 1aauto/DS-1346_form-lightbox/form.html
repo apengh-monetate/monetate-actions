@@ -1,4 +1,13 @@
-<form name="subscribeForm" id="next-one-footer-subscribe" method="POST" class="form-inline" action="https://www.1aauto.com/newsletter/subscribe/newsLetterSuccessYMM">
-    <input id="email" name="email" placeholder="" required="required" type="email" class="cool-gray">
+<form name="subscribeForm" id="next-one-footer-subscribe" method="GET" class="form-inline" action="https://www.1aauto.com/cart">
+    <input id="email" name="email" placeholder="Email Address" required="required" type="email" class="cool-gray">
+    <input name="csrfToken" type="hidden" value="{csrfToken}">
+    <input name="ONEA_RM" type="hidden" value="{cartCookie}">
+</form>
+
+
+
+<form action="/transfer-cart" id="transfer-cart-form" method="post">
+    <input type="hidden" readonly="readonly" id="urlToCart" name="urlToCart" value="https://www.1aauto.com/cart?{cartCookie}">
+    <input id="recipientEmail" type="email" name="recipientEmail" value="" placeholder="Email Address">
     <input name="csrfToken" type="hidden" value="{csrfToken}">
 </form>

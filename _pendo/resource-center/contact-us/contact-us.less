@@ -8,8 +8,8 @@
 * Form and it's corresponding animations. Defaulted to Pendo colors.
 */
 
-@uniform-color-scheme--primary: #ec2059;
-@uniform-color-scheme--secondary: #ff3467;
+@uniform-color-scheme--primary: #7D5F99;
+@uniform-color-scheme--secondary: #E2652C;
 
 #contact {
   border-bottom: none;
@@ -74,17 +74,10 @@
   position: absolute;
   right: 0;
   text-align: center;
-  top: 100%;
+  top: 88px;
   transition: 300ms ease;
   width: 100%;
   z-index: 9;
-  &.is-toggled {
-    bottom: 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    cursor: default;
-    top: 0;
-    transform: translate3d(0, 0, 0);
-  }
 }
 
 .section__contact-modal {
@@ -103,7 +96,7 @@
   h2 {
     color: @uniform-color-scheme--primary;
     font: 500 26px/1.4em 'proxima-nova', sans-serif;
-    margin: 1em auto 0;
+    margin: 0 auto 0;
   }
   h3 {
     color: #9a9ca5;
@@ -123,6 +116,7 @@
   color: #ccc;
   cursor: pointer;
   display: inline;
+  display: none;
   font-family: 'proxima-nova', sans-serif !important;
   font-size: 32px;
   font-weight: 100;
@@ -390,6 +384,7 @@
 
 ._pendo-contact-form_ {
   margin: 5% auto;
+  margin-bottom: 120px;
   max-width: 680px;
   width: 90%;
 }
@@ -481,7 +476,7 @@
     width: 100%;
     &:focus {
       background-color: #fff;
-      border: 1px solid @uniform-color-scheme--secondary;
+      border: 1px solid @uniform-color-scheme--primary;
       color: #2a2c35;
       transition: all 300ms;
     }
@@ -491,7 +486,7 @@
     resize: vertical;
     &:focus {
       background-color: #fff;
-      border: 1px solid @uniform-color-scheme--secondary;
+      border: 1px solid @uniform-color-scheme--primary;
       color: #2a2c35;
       transition: all 300ms;
     }
@@ -526,7 +521,7 @@
     transition: all 300ms ease;
     width: 100%;
     &:hover {
-      background-color: @uniform-color-scheme--secondary;
+      background-color: darken(@uniform-color-scheme--primary, 10%);
       cursor: pointer;
       transition: all 300ms;
     }
@@ -535,7 +530,7 @@
       animation: rotate 2s 0.25s linear infinite;
       background: #fff;
       border-color: #f4f4f7;
-      border-left-color: @uniform-color-scheme--primary;
+      border-left-color: darken(@uniform-color-scheme--primary, 10%);
       border-radius: 40px;
       border-width: 3px;
       cursor: progress;

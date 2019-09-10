@@ -1,0 +1,110 @@
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+#monetate_lightbox_content_container {
+  box-sizing: border-box;
+  height: 100% !important;
+  left: 0 !important;
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+}
+
+#monetate_allinone_lightbox {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.mt-lightbox {
+  background: #fff;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  left: 50%;
+  max-width: 80%;
+  min-width: 320px;
+  padding: 0;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-lightbox {
+    max-width: 600px;
+    min-width: 480px;
+    width: 600px;
+  }
+}
+
+.mt-lightbox * {
+  box-sizing: border-box;
+}
+
+.mt-lightbox__close {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 20px;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  text-decoration: none;
+  top: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.mt-lightbox__close:hover, .mt-lightbox__close:focus, .mt-lightbox__close:active {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #333;
+  text-decoration: none;
+}
+
+.mt-lightbox__content {
+  display: block;
+  position: relative;
+}
+
+@media screen and (orientation: landscape) and (max-width: 767px) {
+  .mt-lightbox__content {
+    display: none;
+  }
+}
+
+.mt-lightbox__recommendations {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}

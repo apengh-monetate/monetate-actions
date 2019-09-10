@@ -5,11 +5,11 @@ $gray: #D2D2D2;
 /* ===================================================== */
 /* ALL MENUS
 /* ===================================================== */
-#shopNav div.sub {
+#shopNav li.category div.sub {
     background: #fff !important;
 }
 
-.innerSub {
+#shopNav li.category .innerSub {
     align-content: stretch;
     align-items: stretch;
     background: #fff !important;

@@ -1,0 +1,294 @@
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#MONETATE-ID {
+  position: relative;
+}
+
+#MONETATE-ID li {
+  list-style: none;
+}
+
+#MONETATE-ID [data-slider-mask] {
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider-mask],
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slider-mask] {
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  -ms-touch-action: pan-x;
+      touch-action: pan-x;
+}
+
+#MONETATE-ID [data-slider] {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider] {
+  white-space: nowrap !important;
+}
+
+#MONETATE-ID [data-slide] {
+  float: none;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slide] {
+  display: inline-block !important;
+  vertical-align: top;
+  white-space: normal;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slide] {
+  display: block !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide],
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  cursor: pointer;
+  z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide] * {
+  pointer-events: none;
+}
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#MONETATE-ID {
+  box-sizing: border-box;
+  clear: both;
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 20px 10px 30px;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  #MONETATE-ID {
+    padding-top: 50px;
+  }
+}
+
+#MONETATE-ID [data-slider-mask] {
+  display: inline-block;
+  width: calc(100% - 78px);
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  height: 680px !important;
+  width: 100%;
+}
+
+#MONETATE-ID [data-slide] img {
+  max-width: 100%;
+}
+
+#MONETATE-ID [data-slide] a {
+  text-decoration: none;
+}
+
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  background: none;
+  border: none;
+  color: #000;
+  display: block;
+  font-size: 25px;
+  padding: 0;
+  position: absolute;
+  top: 45%;
+  user-select: none;
+}
+
+#MONETATE-ID [data-prev-button]:hover, #MONETATE-ID [data-prev-button]:active, #MONETATE-ID [data-prev-button]:focus,
+#MONETATE-ID [data-next-button]:hover,
+#MONETATE-ID [data-next-button]:active,
+#MONETATE-ID [data-next-button]:focus {
+  border: none;
+  outline: none;
+}
+
+#MONETATE-ID [data-prev-button] img,
+#MONETATE-ID [data-next-button] img {
+  border: none !important;
+  max-width: 100%;
+  padding: 0 !important;
+}
+
+#MONETATE-ID [data-prev-button] {
+  left: 10px;
+}
+
+#MONETATE-ID [data-next-button] {
+  right: 10px;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-prev-button] {
+  left: 50%;
+  top: -20px;
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-next-button] {
+  bottom: -60px;
+  left: 50%;
+  right: auto;
+  top: auto;
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+}
+
+#MONETATE-ID [data-pagination="thumbnails"] [data-pagination-slide] {
+  background: none;
+  border-radius: 0;
+  height: auto;
+  width: 40px;
+}
+
+#MONETATE-ID [disabled] {
+  background-color: transparent !important;
+  opacity: 0.5;
+}
+
+#MONETATE-ID [data-pagination-slide] {
+  background: #000;
+  border-radius: 6px;
+  display: inline-block;
+  height: 12px;
+  margin: 4px;
+  opacity: 0.5;
+  width: 12px;
+}
+
+#MONETATE-ID [data-pagination-slide][data-slide-active] {
+  opacity: 1;
+}
+
+#MONETATE-ID [data-pagination*="dots"] [data-pagination-slide] {
+  /* remove below for pagination numbers */
+  text-indent: -9999px;
+}
+
+#MONETATE-ID .mt_slider__container {
+  display: block;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+#MONETATE-ID .mt_slider__header {
+  position: relative;
+}
+
+#MONETATE-ID .mt_slider__header h3 {
+  color: #000;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+#MONETATE-ID .mt_slider__wrapper {
+  margin-top: 40px;
+  position: relative;
+}
+
+#MONETATE-ID .mt_slide {
+  display: block;
+  padding: 0 7px;
+  position: relative;
+}
+
+#MONETATE-ID .mt_slide__img {
+  font-size: 0;
+  line-height: 0;
+}
+
+#MONETATE-ID .mt_slide__img img {
+  border: none !important;
+  max-width: 100%;
+  padding: 0 !important;
+}
+
+#MONETATE-ID .mt_slide__text {
+  color: #000;
+  display: block;
+  font-size: 12px;
+  margin-top: 10px;
+  position: relative;
+}
+
+#MONETATE-ID .mt_slide__title {
+  font-size: 12px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+#MONETATE-ID .mt_slide__price {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 12px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#MONETATE-ID .mt_slide__price span {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+#MONETATE-ID .mt_slide__price span:empty {
+  display: none;
+}
+
+#MONETATE-ID .mt_slide__price--reg {
+  text-decoration: line-through;
+}
+
+#MONETATE-ID .mt_slide__price--sale {
+  color: #BD0304;
+}
+
+#MONETATE-ID [data-missing-keys="salePrice"] .mt_slide__price--reg {
+  text-decoration: none;
+}

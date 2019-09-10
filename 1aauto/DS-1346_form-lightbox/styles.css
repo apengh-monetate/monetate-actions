@@ -6,6 +6,26 @@
   font-weight: bold;
 }
 
+.mt_formlightbox input[type="email"]::-webkit-input-placeholder {
+  color: #0E66CB !important;
+}
+
+.mt_formlightbox input[type="email"]::-moz-placeholder {
+  color: #0E66CB !important;
+}
+
+.mt_formlightbox input[type="email"]:-ms-input-placeholder {
+  color: #0E66CB !important;
+}
+
+.mt_formlightbox input[type="email"]::-ms-input-placeholder {
+  color: #0E66CB !important;
+}
+
+.mt_formlightbox input[type="email"]::placeholder {
+  color: #0E66CB !important;
+}
+
 .mt_formlightbox input[type="email"].mtError {
   color: #f00 !important;
 }

@@ -1,5 +1,7 @@
 .mt_footer-recs {
+  clear: both;
   display: block;
+  padding-top: 32px;
   position: relative;
 }
 

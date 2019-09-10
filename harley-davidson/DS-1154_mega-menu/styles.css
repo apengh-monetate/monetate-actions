@@ -1,38 +1,38 @@
 /* ===================================================== */
 /* ALL MENUS
 /* ===================================================== */
-#shopNav div.sub {
+#shopNav li.category div.sub {
   background: #fff !important;
 }
 
-.innerSub {
-  -webkit-align-content: stretch;
-          align-content: stretch;
+#shopNav li.category .innerSub {
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
   -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
           align-items: stretch;
   background: #fff !important;
   display: -webkit-box;
-  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-          flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 0 !important;
 }
 
-.innerSub h2.categoryHeading {
+#shopNav li.category .innerSub h2.categoryHeading {
   color: #4C4C4C !important;
   text-shadow: none !important;
 }
 
-.innerSub ul {
+#shopNav li.category .innerSub ul {
   box-sizing: border-box;
   height: auto !important;
   margin-left: 0 !important;
@@ -43,11 +43,11 @@
   width: 25% !important;
 }
 
-.innerSub ul li a {
+#shopNav li.category .innerSub ul li a {
   color: #4C4C4C !important;
 }
 
-.innerSub ul li a:hover, .innerSub ul li a:active, .innerSub ul li a:focus {
+#shopNav li.category .innerSub ul li a:hover, #shopNav li.category .innerSub ul li a:active, #shopNav li.category .innerSub ul li a:focus {
   color: #fff !important;
 }
 
