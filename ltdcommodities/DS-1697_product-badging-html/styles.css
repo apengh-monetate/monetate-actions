@@ -1,0 +1,9 @@
+div[id*="monetate_badgeHTML"] {
+  color: #30619a;
+  display: inline;
+  float: right;
+  font-family: 'roboto', Helvetica, Arial, "Sans Serif";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 29px;
+}

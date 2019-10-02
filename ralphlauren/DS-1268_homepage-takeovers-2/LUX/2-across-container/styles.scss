@@ -1,0 +1,60 @@
+.mt_hp__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 2.5vw;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    max-width: 1920px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        font-size: 1.171303vw;
+        margin-bottom: 55px;
+    }
+    @media screen and (min-width: 1366px) {
+        font-size: 16px;
+    }
+
+
+
+    &.slider-left {
+        .container-1 {
+            position: relative;
+            width: 100%;
+            @media screen and (min-width: 768px) {
+                margin-right: 3.513909224011713%;
+                width: 33.15%;
+            }
+        }
+        .container-2 {
+            position: relative;
+            width: 100%;
+            @media screen and (min-width: 768px) {
+                width: 52.342%;
+            }
+        }
+    }
+
+    &.slider-right {
+        .container-1 {
+            position: relative;
+            width: 100%;
+            @media screen and (min-width: 768px) {
+                margin-right: 3.513909224011713%;
+                width: 52.342%;
+            }
+        }
+        .container-2 {
+            position: relative;
+            width: 100%;
+            @media screen and (min-width: 768px) {
+                width: 33.15%;
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+!function(){var e=document.querySelector('ul.product-grid > div[id*="monetate_selectorHTML"]');function t(){var t=document.querySelector("ul.product-grid > li.product-grid__cell").offsetHeight;e.style.height=t+"px"}t(),window.addEventListener("resize",t)}();

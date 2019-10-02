@@ -1,0 +1,40 @@
+#MONETATE-ID {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: slideUp;
+          animation-name: slideUp;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+  display: block;
+  position: fixed;
+  right: 0;
+  width: 300px;
+  z-index: 9999;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    bottom: -250px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -250px;
+  }
+  100% {
+    bottom: 0;
+  }
+}

@@ -1,0 +1,25 @@
+#MONETATE-ID {
+    animation-delay: 4s;
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-name: slideUp;
+    animation-timing-function: ease-in-out;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+    display: block;
+    position: fixed;
+    right: 0;
+    width: 300px;
+    z-index: 9999;
+}
+
+
+@keyframes slideUp {
+    0% {
+        bottom: -250px;
+    }
+    100% {
+        bottom: 0;
+    }
+}

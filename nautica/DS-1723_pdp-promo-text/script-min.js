@@ -1,0 +1,1 @@
+!function(){var e=document.querySelector("#pdp-main .product-discount-price"),t=new RegExp(/(\$\d*\.\d*)/,"g");if(e){var n=e.innerHTML;e.innerHTML=n.replace(t,'<span class="mt_pdp-promo-price" style="color: #ff0000;">$1</span>'),e.setAttribute("style","font-weight: bold !important")}}();

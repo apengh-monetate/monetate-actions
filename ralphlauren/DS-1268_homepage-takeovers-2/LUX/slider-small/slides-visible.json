@@ -1,0 +1,10 @@
+{
+    "Infinity": {
+        "visible": 1
+    },
+    "768": {
+        "peekLeft": 0.25,
+        "visible": 1,
+        "peekRight": 0.25
+    }
+}

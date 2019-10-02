@@ -1,0 +1,232 @@
+{
+  "id": 428905,
+  "title": "Estimated Delivery Timeframes in Cart",
+  "description": "Adds accordion with estimated delivery based on shipping to country.",
+  "op": "estimatedDelivery",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Cart",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "json",
+        "name": "deliveryTimesByCountryJSON",
+        "value": "{\n    \"deliveryTimes\": [\n        {\n            \"Country\": \"AD\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"AD\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \"2/3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"AE\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"AL\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"AR\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"AT\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"AT\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \"2/3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"AU\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"AZ\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"BA\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"BE\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"BE\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \"2/3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"BG\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"BG\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Standard\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"BH\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"BN\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"BR\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"BY\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"BZ\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express Saver\",\n            \"Days\": \"4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"CH\",\n            \"Carrier\": \"UPS\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"CH\",\n            \"Carrier\": \"UPS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \"2/3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"CL\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"CN\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"CO\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"CY\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"CZ\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"CZ\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Paket\",\n            \"Days\": \" 3/4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"DE\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"DE\",\n            \"Carrier\": \"DHP\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 3/5\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"DK\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"DK\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"DZ\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"EC\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"EE\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"EE\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 4/5\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"EG\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"ES\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"ES\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \"2/3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"FI\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"FI\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 4/5\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"FR\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"FR\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \"2/3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"GB\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"GB\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Economy Select\",\n            \"Days\": \"2/3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"GE\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"GL\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"GR\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"GR\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 4/5\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"GT\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"HK\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express Saver\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"HR\",\n            \"Carrier\": \"UPS\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"HR\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \"4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"HU\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"HU\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Economy Select\",\n            \"Days\": \" 3/4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"IC\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"ID\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express Saver\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"IE\",\n            \"Carrier\": \"UPS\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express Saver\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"IE\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Economy Select\",\n            \"Days\": \" 3/4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"IL\",\n            \"Carrier\": \"UPS\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"IN\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"IS\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"IT\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"IT\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Economy Select\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"JO\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"JP\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"KR\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"KW\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"KZ\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express Saver\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"LB\",\n            \"Carrier\": \"UPS\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"LI\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"LI\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \"2/3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"LT\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"LT\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 4/5\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"LU\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"LU\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \"2/3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"LV\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"LV\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Economy Select\",\n            \"Days\": \" 4/5\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"MA\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"MC\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"MC\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"MD\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"ME\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"MK\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"MO\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"MT\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"MX\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"MY\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"NL\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"NL\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Standard\",\n            \"Days\": \" 3/4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"NO\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"NO\",\n            \"Carrier\": \"UPS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 4/5\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"NZ\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express Saver\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"OM\",\n            \"Carrier\": \"UPS\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"PH\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"PL\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"PL\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 3/4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"PT\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"PT\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 3/4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"PY\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"QA\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"RO\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"RO\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 3/4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"RS\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"RU\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express Saver\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"SA\",\n            \"Carrier\": \"UPS\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"SE\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"SE\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 4/5\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"SG\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"SI\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"SI\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Parcel\",\n            \"Days\": \" 3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"SK\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"SK\",\n            \"Carrier\": \"GLS\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Economy Select\",\n            \"Days\": \" 3/4\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"SM\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"SM\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"Economy Select\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"SR\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"5\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"TH\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"TR\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Priority\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"TW\",\n            \"Carrier\": \"FDX\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"UA\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express Saver\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"UY\",\n            \"Carrier\": \"UPS\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"UZ\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"VA\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"1\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"VA\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Standard\",\n            \"Carrier Method\": \"\",\n            \"Days\": \"2\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"VE\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"VN\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Express WW\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        },\n        {\n            \"Country\": \"ZA\",\n            \"Carrier\": \"DHL\",\n            \"Method\": \"Express\",\n            \"Carrier Method\": \"Economy Select\",\n            \"Days\": \"3\",\n            \"Status\": \"Active\"\n        }\n    ]\n}"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "JsonCodeField",
+        "description": "JSON for the estimated delivery times by country.",
+        "label": "JSON"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "containerTemplate",
+        "value": "<div class=\"mt_cart-accordion\" data-accordion-status=\"closed\">\n    <div class=\"mt_cart-accordion__heading\" aria-label=\"Estimated Delivery\" role=\"link\" aria-expanded=\"false\" tabindex=\"0\">\n        <h5>Estimated Delivery</h5>\n    </div>\n    <div class=\"mt_cart-accordion__panel\">\n        <ul class=\"mt_cart-accordion__list\">\n            {{ITEMS}}\n        </ul>\n    </div>\n</div>"
+      },
+      "widget": {
+        "label": "Accordion Container Template",
+        "type": "HtmlCodeField",
+        "description": "Accordion container template HTML. Using the {{ITEMS}} placeholder will be replaced by the estimated delivery items.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "itemTemplate",
+        "value": "<li class=\"mt_cart-accordion__list-item\">{{Method}} - {{Days}} Business Days</li>"
+      },
+      "widget": {
+        "label": "Item Template",
+        "type": "HtmlCodeField",
+        "description": "HTML Template for each of the estimated delivery items. You can use any of the values from the JSON. Examples: {{Method}}, {{Days}}, {{Carrier}}, etc.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "sel",
+        "value": "#cart-sticky .checkout-bottom-content"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Supports CSS3 and Sizzle syntax.",
+        "label": "Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "before"
+      },
+      "widget": {
+        "description": "Function to use when inserting the banner relative to the selected node",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Function"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_style",
+        "value": null
+      },
+      "widget": {
+        "label": "Banner Div Inline Styles",
+        "type": "TextField",
+        "description": "A string of inline styles to set on the banner div.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_js",
+        "value": {
+          "content": "(function() {\n\n    var accordion = document.querySelector('.mt_cart-accordion');\n\n    if (accordion) {\n        var heading = accordion.querySelector('.mt_cart-accordion__heading');\n        var panel = accordion.querySelector('.mt_cart-accordion__panel');\n\n        heading.addEventListener('click', function() {\n            panel.classList.toggle('active');\n            if (panel.style.maxHeight) {\n                panel.style.maxHeight = null;\n            } else {\n                panel.style.maxHeight = panel.scrollHeight + 'px';\n            }\n            \n            var status = accordion.getAttribute('data-accordion-status');\n            if (status === 'closed') {\n                accordion.setAttribute('data-accordion-status', 'open');\n                heading.setAttribute('aria-expanded', 'true');\n            } else if (status === 'open') {\n                accordion.setAttribute('data-accordion-status', 'closed');\n                heading.setAttribute('aria-expanded', 'false');\n            }\n\n            \n        });\n    }\n\n})();\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "javascript"
+        }
+      },
+      "widget": {
+        "label": "Script",
+        "type": "JavaScriptCodeField",
+        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_css",
+        "value": {
+          "content": ".mt_cart-accordion {\n  background: #fff;\n  border-bottom: 1px solid #e1e1e1;\n  box-sizing: border-box;\n  display: block;\n  margin: 0 auto;\n  max-width: 100%;\n  padding: 15px 0;\n}\n\n.mt_cart-accordion[data-accordion-status=\"open\"] .mt_cart-accordion__heading {\n  background: url(\"https://eu.stuartweitzman.com/on/demandware.static/Sites-swEu-Site/-/en/images/svg-icons/icon-minus.svg\") no-repeat;\n  background-position: calc(100% - 6px) 40%;\n}\n\n.mt_cart-accordion__heading {\n  background: url(\"https://eu.stuartweitzman.com/on/demandware.static/Sites-swEu-Site/-/en/images/svg-icons/icon-plus.svg\") no-repeat;\n  background-position: calc(100% - 6px) 40%;\n  cursor: pointer;\n  text-align: left;\n}\n\n.mt_cart-accordion__heading h5 {\n  color: #000;\n  font-family: 'FuturaBTLight', Arial, Helvetica, sans-serif;\n  font-size: 13px;\n  font-weight: 400;\n  letter-spacing: 1.3px;\n  margin: 0;\n  text-transform: uppercase;\n}\n\n.mt_cart-accordion__panel {\n  max-height: 0;\n  overflow: hidden;\n  -webkit-transition: max-height 400ms ease;\n  transition: max-height 400ms ease;\n}\n\n.mt_cart-accordion__list {\n  display: block;\n  margin-bottom: 12px;\n  margin-top: 12px;\n  position: relative;\n}\n\n.mt_cart-accordion__list-item {\n  color: #000;\n  font-family: 'FuturaBTBook', Arial, Helvetica, sans-serif;\n  font-size: 11px;\n  font-weight: 400;\n  line-height: 14px;\n  margin: 0;\n  padding: 4px 0;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element. Use selector \"#MONETATE-ID\" to target the inserted element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multSel",
+        "value": false
+      },
+      "widget": {
+        "label": "Select multiple elements, if matched?",
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "label": "Re-check for Elements",
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_runOnce",
+        "value": true
+      },
+      "widget": {
+        "label": "Only run once?",
+        "type": "BooleanField",
+        "description": "If true, JS will only be inserted on first track and not on subsequent retracks.",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "cart"
+        ],
+        "id": 234135,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

@@ -1,0 +1,256 @@
+{
+  "id": 428892,
+  "title": "Closable Tippy Top Banner",
+  "description": "Closable Tippy Top Banner",
+  "op": "statefulHTML",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "page",
+  "category": "html",
+  "subcategory": "Any page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlString",
+        "value": "<section class=\"mt_closable-banner\">\n<div class=\"mt_closable-banner__inner\">\n<div class=\"mt_closable-banner__text\">Free Shipping On Orders Over &pound;50</div>\n<button class=\"mt_closable-banner__close\" name=\"button\" type=\"button\"></button></div>\n</section>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "id",
+        "value": 1
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "This ID can be any number between zero and 31, and determines the grouping of this lightbox to differentiate it from other lightboxes.",
+        "label": "Lightbox ID"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "showInterval",
+        "value": "page"
+      },
+      "widget": {
+        "description": "How long until the this banner is shown again. Based on ID.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "page",
+            "label": "Every page"
+          },
+          {
+            "name": "session",
+            "label": "Once per session"
+          },
+          {
+            "name": "once",
+            "label": "Once, ever"
+          },
+          {
+            "name": "custominterval",
+            "label": "Once every 'X' days"
+          }
+        ],
+        "label": "How often (per user) should this banner be shown?"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "stateApp",
+        "value": "close"
+      },
+      "widget": {
+        "label": "When should the display interval be applied?",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "first",
+            "label": "After the banner is first loaded"
+          },
+          {
+            "name": "close",
+            "label": "After the user closes the banner"
+          }
+        ],
+        "description": "If 'Every page' is selected this will not matter. For the other intervals, this setting determines when to stop showing the banner."
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": "#wrapper > div.l-top_banner.js-header-banner"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "CSS Selector to find the relative element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "replace"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "description": "Where to insert the banner in relation to the Relative Element Selector."
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "closeButtonClass",
+        "value": "mt_closable-banner__close"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "All elements in the HTML creative with this class will act as a close button for the lightbox.",
+        "label": "Close Button Class"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_divStyle",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Inline Styling refers to any CSS properties and values to be applied directly on the banner div element via a style attribute.",
+        "label": "Banner Div Inline Style"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": "@charset \"UTF-8\";\n.mt_closable-banner {\n  background: #252525;\n  color: #fff;\n  display: block;\n}\n\n.mt_closable-banner__inner {\n  display: block;\n  margin: 0 auto;\n  max-width: 1920px;\n  padding: 0 20px;\n  position: relative;\n}\n\n@media screen and (min-width: 1280px) {\n  .mt_closable-banner__inner {\n    padding: 0 42px;\n  }\n}\n\n.mt_closable-banner__text {\n  font-family: 'MaisonNeue-Bold', Arial, sans-serif;\n  font-size: 11px;\n  line-height: 1.5;\n  padding: 13px 0 9px;\n  position: relative;\n  text-align: center;\n  text-transform: uppercase;\n  white-space: nowrap;\n}\n\n@media screen and (min-width: 768px) {\n  .mt_closable-banner__text {\n    font-size: 12px;\n    padding: 13px 0 12px;\n  }\n}\n\n@media screen and (min-width: 1280) {\n  .mt_closable-banner__text {\n    padding: 18px 0 17px;\n  }\n}\n\n.mt_closable-banner__close {\n  background: none;\n  border: none;\n  color: #fff;\n  cursor: pointer;\n  padding: 0;\n  position: absolute;\n  right: 20px;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n}\n\n@media screen and (min-width: 1280px) {\n  .mt_closable-banner__close {\n    right: 42px;\n  }\n}\n\n.mt_closable-banner__close::before {\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased;\n  content: \"\";\n  display: inline-block;\n  font-family: iconfont;\n  font-size: 16px;\n  font-style: normal;\n  font-variant: normal;\n  font-weight: 400;\n  line-height: 1;\n  speak: none;\n  text-decoration: none;\n  text-rendering: optimizeLegibility;\n  text-transform: none;\n  vertical-align: middle;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_multiSel",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+        "label": "Select multiple elements, if matched?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_customInterval",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Days until the banner expires. Only to be used when 'Once every 'X' days' is selected from the frequency.",
+        "label": "Days until expiration"
+      },
+      "required": false
+    }
+  ],
+  "masks": [
+    {
+      "selector": "#wrapper > div.l-top_banner.js-header-banner",
+      "value": "/",
+      "op": "path_iprefix"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

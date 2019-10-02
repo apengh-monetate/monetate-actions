@@ -78,37 +78,6 @@
 /* ===================================================== */
 /* CUSTOM SLIDER STYES
 /* ===================================================== */
-#MONETATE-ID {
-  border-bottom: 1px solid #f6f6f6;
-  border-right: 1px solid #f6f6f6;
-  display: inline-block;
-  float: left;
-  min-height: 390px;
-  padding-bottom: 10px;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-@media screen and (min-width: 650px) {
-  #MONETATE-ID {
-    min-height: 540px;
-  }
-}
-
-@media screen and (min-width: 1051px) {
-  #MONETATE-ID {
-    min-height: 375px;
-    width: 33.33%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  #MONETATE-ID {
-    height: 495px;
-  }
-}
-
 #MONETATE-ID [data-slider-mask] {
   display: inline-block;
   width: 100%;
@@ -118,8 +87,13 @@
   height: 400px !important;
 }
 
+#MONETATE-ID [data-slide] {
+  width: 100% !important;
+}
+
 #MONETATE-ID [data-slide] img {
   max-width: 100%;
+  width: 100%;
 }
 
 #MONETATE-ID [data-slide] a {
@@ -205,8 +179,33 @@
 }
 
 #MONETATE-ID .mt_slider__container {
+  border-bottom: 1px solid #f6f6f6;
+  border-right: 1px solid #f6f6f6;
   display: block;
+  float: left;
+  min-height: 390px;
   position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 650px) {
+  #MONETATE-ID .mt_slider__container {
+    min-height: 540px;
+  }
+}
+
+@media screen and (min-width: 1051px) {
+  #MONETATE-ID .mt_slider__container {
+    min-height: 375px;
+    width: 33.33%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #MONETATE-ID .mt_slider__container {
+    min-height: 495px;
+  }
 }
 
 #MONETATE-ID .mt_slider__heading {
@@ -220,12 +219,23 @@
 
 #MONETATE-ID .mt_slider__wrapper {
   display: block;
+  font-size: 0;
+  line-height: 0;
   position: relative;
 }
 
 #MONETATE-ID .mt_slide {
   display: block;
   position: relative;
+}
+
+#MONETATE-ID .mt_slide__img {
+  font-size: 0;
+  line-height: 0;
+}
+
+#MONETATE-ID .mt_slide__spacer {
+  height: 21.25px;
 }
 
 #MONETATE-ID .mt_slide__text {
@@ -238,16 +248,23 @@
 #MONETATE-ID .mt_slide__brand {
   color: #000;
   font-family: "Montserrat";
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
+  line-height: 1.1;
   margin-bottom: 10.5px;
   margin-top: 10.5px;
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 1051px) {
+@media screen and (max-width: 1050px) {
   #MONETATE-ID .mt_slide__brand {
-    font-size: 18px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #MONETATE-ID .mt_slide__brand {
+    font-size: 14px;
   }
 }
 
@@ -255,8 +272,8 @@
   color: #000;
   font-size: 14px;
   font-weight: 600;
+  line-height: 15.4px;
   margin: 7px 0;
-  text-transform: uppercase;
   text-transform: uppercase;
 }
 
@@ -265,7 +282,9 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+  margin-right: 15px;
   min-width: 82px;
+  text-align: left;
 }
 
 #MONETATE-ID .mt_slide__price--reg {

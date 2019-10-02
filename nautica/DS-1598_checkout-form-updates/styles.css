@@ -1,0 +1,193 @@
+#address-form .form-row {
+  position: relative;
+}
+
+#address-form .form-row label {
+  display: none !important;
+}
+
+#address-form .form-row .indent-helper {
+  display: none !important;
+}
+
+#address-form .form-field-tooltip {
+  position: absolute;
+  right: 5px;
+  top: -45px;
+  vertical-align: top;
+  width: 24px;
+}
+
+@media screen and (min-width: 1025px) {
+  #address-form .form-field-tooltip {
+    right: -25px;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #address-form .form-field-tooltip .fa-question-circle-o {
+    top: 0 !important;
+  }
+}
+
+#address-form .tooltip .tooltip-content {
+  left: auto !important;
+  right: 0 !important;
+}
+
+@media screen and (min-width: 1025px) {
+  #address-form .tooltip .tooltip-content {
+    left: 0 !important;
+    right: auto !important;
+  }
+}
+
+#address-form .styled-select {
+  font-family: 'AvenirBook';
+  height: auto !important;
+}
+
+#PaymentMethod_CREDIT_CARD .form-row label {
+  display: none !important;
+}
+
+#PaymentMethod_CREDIT_CARD .form-row .indent-helper {
+  display: none !important;
+}
+
+#PaymentMethod_CREDIT_CARD .form-label-text {
+  display: none !important;
+}
+
+@media screen and (max-width: 1025px) {
+  #PaymentMethod_CREDIT_CARD .form-row.tel.required {
+    float: left !important;
+    width: auto !important;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #PaymentMethod_CREDIT_CARD .form-row.tel.required .input-text.cvn.required {
+    margin-bottom: 0 !important;
+    margin-right: 10px !important;
+    width: auto !important;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #PaymentMethod_CREDIT_CARD .form-row.tel.required + .form-row {
+    float: left !important;
+    width: auto !important;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #PaymentMethod_CREDIT_CARD .form-row.tel.required + .form-row .form-field-tooltip.cvn-tip {
+    margin-top: 10px !important;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #PaymentMethod_CREDIT_CARD .form-row.tel.required + .form-row .form-field-tooltip.cvn-tip .tooltip-content {
+    left: auto !important;
+    right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #PaymentMethod_CREDIT_CARD .form-row.month,
+  #PaymentMethod_CREDIT_CARD .form-row.year {
+    float: left !important;
+    margin-right: 0 !important;
+  }
+  #PaymentMethod_CREDIT_CARD .form-row.month {
+    margin-right: 10px !important;
+    width: calc(50% - 10px) !important;
+  }
+  #PaymentMethod_CREDIT_CARD .form-row.year {
+    margin-left: 5px !important;
+    width: calc(50% - 5px) !important;
+  }
+}
+
+#PaymentMethod_CREDIT_CARD .styled-select {
+  font-family: 'AvenirBook';
+  height: auto !important;
+}
+
+.payment-method-options .CREDIT_CARD {
+  margin-top: 0 !important;
+}
+
+@media screen and (max-width: 1025px) {
+  .credit-card--icon {
+    top: 34px !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .credit-card--icon {
+    top: -3px !important;
+  }
+}
+
+.form-row.cc-number .form-caption {
+  display: none !important;
+}
+
+.form-row-container.email-container label[for="dwfrm_billing_billingAddress_email_emailAddress"] {
+  display: none !important;
+}
+
+@media screen and (max-width: 1025px) {
+  .pt_checkout .address .form-field .form-row {
+    margin-bottom: 0 !important;
+    padding-bottom: 5px !important;
+  }
+}
+
+body .pt_checkout .address .form-row .input-text {
+  background: white;
+  border: 1px solid #111841;
+  font-family: 'AvenirBook';
+}
+
+@media screen and (min-width: 1025px) {
+  body .pt_checkout .address .form-row .input-text {
+    margin-bottom: 6px !important;
+  }
+}
+
+body .pt_checkout .address .form-row .input-select {
+  background: white;
+}
+
+@media screen and (max-width: 1025px) {
+  body .pt_checkout .address .form-row .input-select {
+    border: 1px solid #111841 !important;
+    margin-bottom: 5px;
+  }
+}
+
+.custom-chevron:before {
+  border-color: #111841 !important;
+}
+
+@media screen and (min-width: 1025px) {
+  #address-form .select2-container {
+    min-width: 0;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #address-form .select2-container .select2-choice {
+    max-width: 125px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .pt_checkout .address .small .form-row .input-text.firstName {
+    width: 125px !important;
+  }
+}

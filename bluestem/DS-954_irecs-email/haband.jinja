@@ -1,5 +1,5 @@
 {% set columns = 3 %}
-{% set rows = 1 %}
+{% set rows = 2 %}
 
 
 {# CALCULATE MAX PRODUCTS TO RETURN BASED ON ROWS/COLUMNS #}
@@ -19,29 +19,19 @@
 body {margin:0; padding:0;}
 </style>
 
-<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="max-width: 640px;">
-	<tr>
-		<td align="center" valign="top" style="padding: 0 0 0 0;">
-            {% for product in recommended_products[:fetch] %}
-			<table width="33%" align="left" cellpadding="0" cellspacing="0" border="0" class="full-width" data-product-id="{{ product.id }}">
-				<!-- IMAGE -->
-				<tr>
-					<td align="center" style="padding: 0 0 5px 0;">
-						<a href="{{ product.link }}" target="_blank">
-							<img src="{{ product.imageLink }}&$thumbnail300$" width="150" border="0" style="display: block; width: 100%; max-width: 600px; height: auto; outline: none;">
-						</a>
-					</td>
-				</tr>
-				<!-- TITLE -->
-				<tr>
-					<td align="center" valign="top" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.2; color: #009bdd; -webkit-text-size-adjust: none; padding: 0 5px 0 10px;">
-						<a href="{{ product.link }}" target="_blank" style="color: #009bdd; text-decoration: none; text-transform: capitalize;">
-						{{ product.title }}
-						</a>
-					</td>
-				</tr>
-			</table>
-            {% endfor %}
-		</td>
-	</tr>
-</table>
+<div style="box-sizing:border-box; display:block; max-width:640px; margin:0 auto;">
+    {% for product in recommended_products[:fetch] %}
+	<div data-product-id="{{ product.id }}" style="display: inline-block; width: 33.33333%; float: left; clear: none; margin-bottom: 20px;">
+		<!-- IMAGE -->
+		<a href="{{ product.link }}" target="_blank" style="display: inline-block; padding-bottom: 5px;">
+			<img src="{{ product.imageLink }}" border="0" style="display: block; max-width: 100%; height: auto; outline: none;">
+		</a>
+		<!-- TITLE -->
+        <div style="text-align: center;">
+            <a href="{{ product.link }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.2; color: #000; -webkit-text-size-adjust: none; padding: 0 10px; text-decoration: none; text-transform: capitalize;">
+    			{{ product.title }}
+    		</a>
+        </div>
+	</div>
+    {% endfor %}
+</div>

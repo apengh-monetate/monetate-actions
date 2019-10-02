@@ -1,0 +1,92 @@
+.mt_slide_form_banner {
+  background-color: #f4f4f4;
+  bottom: 0;
+  color: black;
+  font-family: 'SophiaPro',sans-serif;
+  left: calc(50% - 175px);
+  padding: 10px 20px;
+  position: fixed;
+  text-align: center;
+  width: 350px;
+  z-index: 5000;
+}
+
+.mt_slide_form_banner .email-subscribe-form {
+  background-color: white;
+}
+
+.mt_slide_form_banner p {
+  font-size: 15px;
+  margin: 15px auto;
+  width: 90%;
+}
+
+.mt_slide_form_banner h2 {
+  color: black;
+  font-family: 'SofiaProBold', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.mt_slide_form_banner .close {
+  display: block;
+  text-align: right;
+}
+
+.mt_slide_form_banner .close:hover {
+  text-decoration: none;
+}
+
+.mt_slide_form_banner .input-text {
+  border: 1px solid;
+  margin: 0;
+  padding: 10px;
+}
+
+.mt_slide_form_banner .submit {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: 40px;
+}
+
+.mt_slide_form_banner .submit:hover, .mt_slide_form_banner .submit:active {
+  background: none !important;
+  border: none;
+}
+
+.mt_slide_form_banner .submit img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.mt_slide_form_banner .close-button {
+  background: #000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'WorkSansSemiBold', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  height: auto;
+  letter-spacing: normal;
+  line-height: 3.4;
+  text-align: center;
+  text-decoration: none;
+  width: 16.5em;
+}
+
+.mt_slide_form_banner .close-button:hover, .mt_slide_form_banner .close-button:active {
+  background: #000 !important;
+  border: none;
+  color: #677789;
+}
+
+.mt_slide_form_banner form.newsletter-form {
+  position: relative;
+}

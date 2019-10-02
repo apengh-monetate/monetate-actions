@@ -1,0 +1,10 @@
+@media screen and (max-width: 767px) {
+  .header-information {
+    display: none !important;
+  }
+  .top-banner button.menu-toggle,
+  .top-banner li.headerstore,
+  .top-banner button.mobile-search-button {
+    display: none !important;
+  }
+}

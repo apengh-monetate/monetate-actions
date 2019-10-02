@@ -1,0 +1,45 @@
+.top-banner.checkout-header {
+    position: relative !important;
+}
+
+.mt_mini-cart {
+    display: block;
+    height: 27px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    @media screen and (min-width: 768px) {
+        right: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+        right: calc((100vw - 1096px) / 2);
+    }
+
+    &__link {
+        display: inline-block;
+        height: 100%;
+        overflow: visible;
+        position: relative;
+        text-decoration: none;
+        width: 100%;
+        &::after {
+            content: "";
+            font-family: 'cm-icon';
+            font-size: 24px;
+        }
+    }
+
+
+    &__qty {
+        font-size: 11px;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 8px;
+        width: 100%;
+        z-index: 99;
+    }
+
+}

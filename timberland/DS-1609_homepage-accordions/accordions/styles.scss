@@ -1,0 +1,115 @@
+/* ===================================================== */
+/* Accordions
+/* ===================================================== */
+.mt_accordion {
+    border-top: 1px solid #ccc;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    &:last-child {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+
+    [data-accordion-status="closed"] {
+
+    }
+    [data-accordion-status="open"] {
+
+    }
+
+
+    // ------------------------------------------------------------------
+    // Trigger
+    // ------------------------------------------------------------------
+    &__trigger {
+        background: #fff;
+        cursor: pointer;
+        display: block;
+        padding: 14px 10px;
+        position: relative;
+    }
+
+    &__heading {
+        font-weight: 400;
+        margin: 0;
+        &::after {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            content: "";
+            font-family: 'icomoon' !important;
+            font-size: 1.14286em;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 700;
+            line-height: 1;
+            margin-top: 0;
+            position: absolute;
+            right: 24px;
+            speak: none;
+            text-transform: none;
+            top: 50%;
+            transform: translateY(-50%);
+            transform-origin: top;
+        }
+    }
+
+    &__shop-all {
+        display: none;
+        font-size: 12px;
+        margin: 0;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    [data-trigger-status="open"] {
+        background: #F6F5F3;
+        padding-bottom: 12px;
+        .mt_accordion__heading {
+            color: #f5a019;
+            &::after {
+                transform: rotateX(-180deg) translateY(-50%);
+            }
+        }
+        .mt_accordion__shop-all {
+            display: block;
+        }
+    }
+
+
+    // ------------------------------------------------------------------
+    // Panel
+    // ------------------------------------------------------------------
+    &__panel {
+
+    }
+
+    [data-panel-status="closed"] {
+        display: none;
+    }
+    [data-panel-status="open"] {
+        display: block;
+    }
+
+
+    &__list {
+        background: #F6F5F3;
+        margin: 0;
+        padding: 0;
+
+        &-item {
+            border-top: 1px solid #ccc;
+            margin: 0;
+            padding: 0;
+        }
+        &-link {
+            display: block;
+            margin: 0;
+            padding: 8px 10px 8px 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+} // .mt_accordion

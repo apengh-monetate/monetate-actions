@@ -1,0 +1,55 @@
+.mt_cart-accordion {
+  background: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 15px 0;
+}
+
+.mt_cart-accordion[data-accordion-status="open"] .mt_cart-accordion__heading {
+  background: url("https://eu.stuartweitzman.com/on/demandware.static/Sites-swEu-Site/-/en/images/svg-icons/icon-minus.svg") no-repeat;
+  background-position: calc(100% - 6px) 40%;
+}
+
+.mt_cart-accordion__heading {
+  background: url("https://eu.stuartweitzman.com/on/demandware.static/Sites-swEu-Site/-/en/images/svg-icons/icon-plus.svg") no-repeat;
+  background-position: calc(100% - 6px) 40%;
+  cursor: pointer;
+  text-align: left;
+}
+
+.mt_cart-accordion__heading h5 {
+  color: #000;
+  font-family: 'FuturaBTLight', Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.mt_cart-accordion__panel {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 400ms ease;
+  transition: max-height 400ms ease;
+}
+
+.mt_cart-accordion__list {
+  display: block;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  position: relative;
+}
+
+.mt_cart-accordion__list-item {
+  color: #000;
+  font-family: 'FuturaBTBook', Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+  margin: 0;
+  padding: 4px 0;
+}

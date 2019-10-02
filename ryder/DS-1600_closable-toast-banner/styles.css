@@ -1,0 +1,97 @@
+#MONETATE-ID {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: slideUp;
+          animation-name: slideUp;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  background: #ce1126;
+  display: block;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: auto;
+  width: 100%;
+  z-index: 99;
+}
+
+.mt_toast {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.mt_toast__mobile {
+  display: block;
+}
+
+@media screen and (min-width: 53em) {
+  .mt_toast__mobile {
+    display: none;
+  }
+}
+
+.mt_toast__tablet {
+  display: none;
+}
+
+@media screen and (min-width: 53em) {
+  .mt_toast__tablet {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .mt_toast__tablet {
+    display: none;
+  }
+}
+
+.mt_toast__desktop {
+  display: none;
+}
+
+@media screen and (min-width: 75em) {
+  .mt_toast__desktop {
+    display: block;
+  }
+}
+
+.mt_toast__close {
+  background: none;
+  border: none;
+  color: #fff;
+  display: block;
+  font-size: 24px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    bottom: -51px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -51px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}

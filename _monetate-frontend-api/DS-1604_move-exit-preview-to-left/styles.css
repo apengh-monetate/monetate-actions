@@ -1,0 +1,55 @@
+a.mt-preview-exit-button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #142135;
+  background-image: none;
+  border-radius: 0;
+  bottom: 0;
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-size: 13px;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  padding: 0;
+  position: absolute;
+  right: auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+  width: 180px;
+}
+
+a.mt-preview-exit-button:hover {
+  background: #142135;
+  text-decoration: none;
+}
+
+a.mt-preview-exit-button:hover .mt-preview-exit-text {
+  border-bottom: 1px solid #fff;
+}
+
+.mt-preview-exit-close {
+  background-image: url("{$contentServer}/controls-sprite.png");
+  background-position: -2px -62px;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: inline-block;
+  height: 16px;
+  margin-right: 5px;
+  width: 16px;
+}
+
+.mt-preview-exit-text {
+  border-bottom: 1px solid transparent;
+}

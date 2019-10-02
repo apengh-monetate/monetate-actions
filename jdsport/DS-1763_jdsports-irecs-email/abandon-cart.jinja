@@ -1,0 +1,47 @@
+{% set columns = 3 %}
+{% set rows = 1 %}
+
+
+{# CALCULATE MAX PRODUCTS TO RETURN BASED ON ROWS/COLUMNS #}
+{% set maxProducts = columns * rows %}
+{% set products = recommended_products | length %}
+
+{# CALCULATE # OF PRODUCTS TO RETURN #}
+{% if products < maxProducts %}
+    {% set results = (products / columns) | round(0,'floor') | int %}
+    {% set fetch = results * columns %}
+{% else %}
+    {% set fetch = maxProducts %}
+{% endif %}
+
+{# CSS CALCULATIONS #}
+{% set columnWidth = 100 / columns | round(5) %}
+
+
+<style>
+body {margin:0; padding:0;}
+</style>
+
+<div class="mt-container" style="
+    box-sizing: border-box;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: auto;
+    padding-top: 20px;">
+
+    <div class="mt-product__grid" style="box-sizing: border-box; display: block; max-width: 600px; margin: 0 auto;">
+        {% for product in recommended_products[:fetch] %}
+        <div class="mt-product__wrapper" style="box-sizing: border-box; position: relative; width: {{columnWidth}}%; float: left; padding: 5px 20px; padding-bottom: 20px;" data-product-id="{{product.id}}">
+            <div class="mt-product" style="box-sizing: border-box; display: block; text-align: center;">
+                <a class="mt-product__link" href="{{ product.link }}&sampleParameter=true" style="color: #333; display: block; text-decoration: none; margin-bottom: 4px;">
+                    <img class="mt-product__img" src="{{product.imageLink }}" style="display: block; margin-bottom: 10px; max-width: 100%;">
+                    <div class="mt-product__brand" style="display: block; font-size: 16px; margin-bottom: 4px;">Shop Now</div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>

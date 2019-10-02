@@ -1,0 +1,82 @@
+.mt_hero {
+  -webkit-font-smoothing: antialiased;
+  border: 0;
+  clear: both;
+  display: block;
+  font-size: 2.5vw;
+  line-height: initial;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  max-width: 1920px;
+  overflow: hidden;
+  overflow-x: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero {
+    font-size: 1.171303vw;
+    margin-bottom: 55px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .mt_hero {
+    font-size: 16px;
+  }
+}
+
+.mt_hero__picture--img {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 360px) {
+  .mt_hero__picture--img {
+    max-width: 100%;
+  }
+}
+
+.mt_hero__video video {
+  height: auto;
+  width: 100%;
+}
+
+.mt_hero__video--mobile {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero__video--mobile {
+    display: none;
+  }
+}
+
+.mt_hero__video--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero__video--desktop {
+    display: block;
+  }
+}
+
+.mt_hero__link {
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: visible;
+  pointer-events: auto;
+  position: absolute;
+  text-decoration: none !important;
+  top: 0;
+  width: 100%;
+  z-index: auto;
+}
+
+.mt_hero__link:hover {
+  text-decoration: none !important;
+}

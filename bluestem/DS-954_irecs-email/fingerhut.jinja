@@ -9,7 +9,6 @@
 {# CALCULATE # OF PRODUCTS TO RETURN #}
 {% if products < maxProducts %}
   {% set results = (products / columns) | round(0,'floor') | int %}
-  {{ results * columns }}
   {% set fetch = results * columns %}
 {% else %}
   {% set fetch = maxProducts %}

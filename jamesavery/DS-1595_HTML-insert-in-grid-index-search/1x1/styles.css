@@ -1,0 +1,100 @@
+/* ===================================================== */
+/* Monetate Container
+/* ===================================================== */
+#MONETATE-ID {
+  border-left: none;
+  display: inline-block;
+  margin: 0 0 -1px 0;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID {
+    width: 33.33%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #MONETATE-ID {
+    width: 25%;
+  }
+}
+
+.mt_grid-item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding: 16px 0;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.mt_grid-item__text {
+  bottom: 10%;
+  left: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  right: 0;
+  top: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_grid-item__text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.mt_grid-item__heading {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 240px;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_grid-item__heading {
+    font-size: 22px;
+  }
+}
+
+.mt_grid-item__button {
+  background: #f05a50;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  padding: 12px;
+  text-decoration: none;
+  -webkit-transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s;
+}
+
+.mt_grid-item__button:hover {
+  background: #e1463c;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_grid-item__button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mt_grid-item__button {
+    font-size: 16px;
+    padding: 12px 56px;
+  }
+}

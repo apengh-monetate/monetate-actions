@@ -36,6 +36,7 @@
   border-radius: 4px;
   cursor: pointer;
   float: left;
+  font-weight: 400;
   margin-bottom: 10px;
   overflow: hidden;
   padding: 6px;
@@ -99,7 +100,7 @@
 .mt_warrantyBtn:nth-child(n + 3) > div:last-child {
   font-size: 12px;
   line-height: 16px;
-  margin-top: 30px;
+  padding-top: 30px;
   position: relative;
 }
 
@@ -109,7 +110,7 @@
   left: 0;
   position: absolute;
   text-align: center;
-  top: -16px;
+  top: 14px;
   width: 100%;
 }
 

@@ -1,0 +1,73 @@
+// ==================================================================
+// Hero
+// ==================================================================
+#rlc-hp-hero a.rlc-hotspot // Image
+#rlc-hp-hero a.rlc-link // Shop Now
+
+// ==================================================================
+// Bucket - Left
+// ==================================================================
+#bucket-group-1 .rlc-bucket.rlc-bucket-left a.rlc-hotspot // Image
+#bucket-group-1 .rlc-bucket.rlc-bucket-left a.rlc-link // Shop Now
+
+// ==================================================================
+// Small Slider - Right
+// ==================================================================
+#bucket-group-1 .rlc-bucket.rlc-bucket-right .rlc-slide[aria-posinset="1"] a.rlc-hotspot
+#bucket-group-1 .rlc-bucket.rlc-bucket-right .rlc-slide[aria-posinset="2"] a.rlc-hotspot
+#bucket-group-1 .rlc-bucket.rlc-bucket-right .rlc-slide[aria-posinset="3"] a.rlc-hotspot
+#bucket-group-1 .rlc-bucket.rlc-bucket-right .rlc-slide[aria-posinset="4"] a.rlc-hotspot
+#bucket-group-1 .rlc-bucket.rlc-bucket-right .rlc-slide[aria-posinset="5"] a.rlc-hotspot
+#bucket-group-1 .rlc-bucket.rlc-bucket-right .rlc-slide[aria-posinset="6"] a.rlc-hotspot
+
+// ==================================================================
+// Large Slider
+// ==================================================================
+#rlc-modernheritage-slider .rlc-slider .rlc-slide[aria-posinset="1"] a.rlc-hotspot // Image
+#rlc-modernheritage-slider .rlc-slider .rlc-slide[aria-posinset="1"] .rlc-link // Shop Now
+
+#rlc-modernheritage-slider .rlc-slider .rlc-slide[aria-posinset="2"] a.rlc-hotspot // Image
+#rlc-modernheritage-slider .rlc-slider .rlc-slide[aria-posinset="2"] .rlc-link // Shop Now
+
+#rlc-modernheritage-slider .rlc-slider .rlc-slide[aria-posinset="3"] a.rlc-hotspot // Image
+#rlc-modernheritage-slider .rlc-slider .rlc-slide[aria-posinset="3"] .rlc-link // Shop Now
+
+
+// ==================================================================
+// Hero 2
+// ==================================================================
+#rlc-hp-hero-3 a.rlc-hotspot.rlc-hotspot1 // Image
+#rlc-hp-hero-3 a.rlc-link:nth-child(1) // Shop Boys
+#rlc-hp-hero-3 a.rlc-link:nth-child(2) // Shop Girls
+
+// ==================================================================
+// Small Slider - Left
+// ==================================================================
+#bucket-group-2 .rlc-bucket.rlc-bucket-left .rlc-slide[aria-posinset="1"] a.rlc-hotspot
+#bucket-group-2 .rlc-bucket.rlc-bucket-left .rlc-slide[aria-posinset="2"] a.rlc-hotspot
+#bucket-group-2 .rlc-bucket.rlc-bucket-left .rlc-slide[aria-posinset="3"] a.rlc-hotspot
+#bucket-group-2 .rlc-bucket.rlc-bucket-left .rlc-slide[aria-posinset="4"] a.rlc-hotspot
+#bucket-group-2 .rlc-bucket.rlc-bucket-left .rlc-slide[aria-posinset="5"] a.rlc-hotspot
+#bucket-group-2 .rlc-bucket.rlc-bucket-left .rlc-slide[aria-posinset="6"] a.rlc-hotspot
+
+// ==================================================================
+// Bucket - Right
+// ==================================================================
+#bucket-group-2 .rlc-bucket.rlc-bucket-right a.rlc-hotspot // Image
+#bucket-group-2 .rlc-bucket.rlc-bucket-right a.rlc-link // Shop Now
+
+// ==================================================================
+// Large Slider 2
+// ==================================================================
+#rlc-polobearshop-slider .rlc-slider .rlc-slide[aria-posinset="1"] a.rlc-hotspot // Image
+#rlc-polobearshop-slider .rlc-slider .rlc-slide[aria-posinset="1"] a.rlc-link:nth-child(1) // Shop Boys
+#rlc-polobearshop-slider .rlc-slider .rlc-slide[aria-posinset="1"] a.rlc-link:nth-child(2) // Shop Girls
+
+#rlc-polobearshop-slider .rlc-slider .rlc-slide[aria-posinset="2"] a.rlc-hotspot // Image
+#rlc-polobearshop-slider .rlc-slider .rlc-slide[aria-posinset="2"] a.rlc-link:nth-child(1) // Shop Girls
+#rlc-polobearshop-slider .rlc-slider .rlc-slide[aria-posinset="2"] a.rlc-link:nth-child(2) // Shop Boys
+
+#rlc-polobearshop-slider .rlc-slider .rlc-slide[aria-posinset="3"] a.rlc-hotspot.rlc-hotspot1 // Shop Girls Image
+#rlc-polobearshop-slider .rlc-slider .rlc-slide[aria-posinset="3"] a.rlc-hotspot.rlc-hotspot2 // Shop Boys image
+#rlc-polobearshop-slider .rlc-slider .rlc-slide[aria-posinset="3"] a.rlc-link:nth-child(1) // Shop Girls
+#rlc-polobearshop-slider .rlc-slider .rlc-slide[aria-posinset="3"] a.rlc-link:nth-child(2) // Shop Boys

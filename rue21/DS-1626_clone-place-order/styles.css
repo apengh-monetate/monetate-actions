@@ -1,0 +1,45 @@
+/* ===================================================== */
+/* Hide the top Place Order button
+/* ===================================================== */
+#commitOrder-topBtn {
+  display: none !important;
+}
+
+/* ===================================================== */
+/* Cloned Button Container
+/* ===================================================== */
+.monetate_cloneNode_f9d4e3b0 {
+  background: #fff;
+  bottom: 0;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.4);
+  display: block;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  top: auto;
+  width: 100%;
+  z-index: 2147483638;
+}
+
+@media screen and (min-width: 1025px) {
+  .monetate_cloneNode_f9d4e3b0 {
+    display: none;
+  }
+}
+
+/* ===================================================== */
+/* Cloned Place Button
+/* ===================================================== */
+#monetate_commitOrder {
+  width: 100%;
+}
+
+/* ===================================================== */
+/* Add some padding to the bottom of the page
+/* ===================================================== */
+@media screen and (max-width: 1025px) {
+  body#checkout {
+    padding-bottom: 50px !important;
+  }
+}

@@ -14,7 +14,7 @@ body.mt_fixed-header {
 body.mt_fixed-header {
     @media screen and (max-width: 1024px) {
         #wrapper {
-            margin-top: 96px;
+            margin-top: 64px;
         }
         #header {
             left: 0;
@@ -24,9 +24,9 @@ body.mt_fixed-header {
         }
         .post-header-banner {
             left: 0;
-            position: fixed;
+            position: relative;
             right: 0;
-            top: 64px;
+            top: 0;
             z-index: 10;
         }
 
@@ -40,7 +40,7 @@ body.mt_fixed-header {
 body.mt_fixed-header > div.bxc {
     & ~ #wrapper {
         @media screen and (max-width: 1024px) {
-            margin-top: 96px;
+            margin-top: 64px;
         }
 
         #header {
@@ -54,9 +54,9 @@ body.mt_fixed-header > div.bxc {
         .post-header-banner {
             @media screen and (max-width: 1024px) {
                 left: 0;
-                position: fixed;
+                position: relative;
                 right: 0;
-                top: calc(64px + 76px);
+                top: 0;
                 z-index: 10;
             }
         }
@@ -79,7 +79,7 @@ body.mt_fixed-header.mt_search-open {
 
         .post-header-banner {
             @media screen and (max-width: 1024px) {
-                top: 110px !important;
+                // top: 110px !important;
             }
         }
     }
@@ -96,7 +96,7 @@ body.mt_fixed-header.mt_search-open > div.bxc {
 
         .post-header-banner {
             @media screen and (max-width: 1024px) {
-                top: calc(110px + 76px) !important;
+                // top: calc(110px + 76px) !important;
             }
         }
     }

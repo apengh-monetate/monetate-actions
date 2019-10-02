@@ -1,0 +1,1012 @@
+{
+    "deliveryTimes": [
+        {
+            "Country": "AD",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "AD",
+            "Carrier": "DHL",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": "2/3",
+            "Status": "Active"
+        },
+        {
+            "Country": "AE",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "AL",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "AR",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "AT",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "AT",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": "2/3",
+            "Status": "Active"
+        },
+        {
+            "Country": "AU",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "4",
+            "Status": "Active"
+        },
+        {
+            "Country": "AZ",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "BA",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "BE",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "BE",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": "2/3",
+            "Status": "Active"
+        },
+        {
+            "Country": "BG",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "BG",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Standard",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "BH",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "BN",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "4",
+            "Status": "Active"
+        },
+        {
+            "Country": "BR",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "4",
+            "Status": "Active"
+        },
+        {
+            "Country": "BY",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "BZ",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express Saver",
+            "Days": "4",
+            "Status": "Active"
+        },
+        {
+            "Country": "CH",
+            "Carrier": "UPS",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "CH",
+            "Carrier": "UPS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": "2/3",
+            "Status": "Active"
+        },
+        {
+            "Country": "CL",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "CN",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "CO",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "CY",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "CZ",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "CZ",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Paket",
+            "Days": " 3/4",
+            "Status": "Active"
+        },
+        {
+            "Country": "DE",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "DE",
+            "Carrier": "DHP",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 3/5",
+            "Status": "Active"
+        },
+        {
+            "Country": "DK",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "DK",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 3",
+            "Status": "Active"
+        },
+        {
+            "Country": "DZ",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "EC",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "EE",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "EE",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 4/5",
+            "Status": "Active"
+        },
+        {
+            "Country": "EG",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "ES",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "ES",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": "2/3",
+            "Status": "Active"
+        },
+        {
+            "Country": "FI",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "FI",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 4/5",
+            "Status": "Active"
+        },
+        {
+            "Country": "FR",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "FR",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": "2/3",
+            "Status": "Active"
+        },
+        {
+            "Country": "GB",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "GB",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Economy Select",
+            "Days": "2/3",
+            "Status": "Active"
+        },
+        {
+            "Country": "GE",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "GL",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "GR",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "GR",
+            "Carrier": "DHL",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 4/5",
+            "Status": "Active"
+        },
+        {
+            "Country": "GT",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "HK",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Express Saver",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "HR",
+            "Carrier": "UPS",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "HR",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": "4",
+            "Status": "Active"
+        },
+        {
+            "Country": "HU",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "HU",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Economy Select",
+            "Days": " 3/4",
+            "Status": "Active"
+        },
+        {
+            "Country": "IC",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "ID",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express Saver",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "IE",
+            "Carrier": "UPS",
+            "Method": "Express",
+            "Carrier Method": "Express Saver",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "IE",
+            "Carrier": "DHL",
+            "Method": "Standard",
+            "Carrier Method": "Economy Select",
+            "Days": " 3/4",
+            "Status": "Active"
+        },
+        {
+            "Country": "IL",
+            "Carrier": "UPS",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "IN",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "IS",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "IT",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "IT",
+            "Carrier": "DHL",
+            "Method": "Standard",
+            "Carrier Method": "Economy Select",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "JO",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "JP",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "KR",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "KW",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "KZ",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express Saver",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "LB",
+            "Carrier": "UPS",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "LI",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "LI",
+            "Carrier": "DHL",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": "2/3",
+            "Status": "Active"
+        },
+        {
+            "Country": "LT",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "LT",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 4/5",
+            "Status": "Active"
+        },
+        {
+            "Country": "LU",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "LU",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": "2/3",
+            "Status": "Active"
+        },
+        {
+            "Country": "LV",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "LV",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Economy Select",
+            "Days": " 4/5",
+            "Status": "Active"
+        },
+        {
+            "Country": "MA",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "MC",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "MC",
+            "Carrier": "DHL",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 3",
+            "Status": "Active"
+        },
+        {
+            "Country": "MD",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "ME",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "MK",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "MO",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "MT",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "MX",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "MY",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "NL",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "NL",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Standard",
+            "Days": " 3/4",
+            "Status": "Active"
+        },
+        {
+            "Country": "NO",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "NO",
+            "Carrier": "UPS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 4/5",
+            "Status": "Active"
+        },
+        {
+            "Country": "NZ",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express Saver",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "OM",
+            "Carrier": "UPS",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "PH",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "PL",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "PL",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 3/4",
+            "Status": "Active"
+        },
+        {
+            "Country": "PT",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "PT",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 3/4",
+            "Status": "Active"
+        },
+        {
+            "Country": "PY",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "QA",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "RO",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "RO",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 3/4",
+            "Status": "Active"
+        },
+        {
+            "Country": "RS",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "RU",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express Saver",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "SA",
+            "Carrier": "UPS",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "SE",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "SE",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 4/5",
+            "Status": "Active"
+        },
+        {
+            "Country": "SG",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "SI",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "SI",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Parcel",
+            "Days": " 3",
+            "Status": "Active"
+        },
+        {
+            "Country": "SK",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "SK",
+            "Carrier": "GLS",
+            "Method": "Standard",
+            "Carrier Method": "Economy Select",
+            "Days": " 3/4",
+            "Status": "Active"
+        },
+        {
+            "Country": "SM",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "SM",
+            "Carrier": "DHL",
+            "Method": "Standard",
+            "Carrier Method": "Economy Select",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "SR",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "5",
+            "Status": "Active"
+        },
+        {
+            "Country": "TH",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "TR",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Priority",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "TW",
+            "Carrier": "FDX",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "UA",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express Saver",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "UY",
+            "Carrier": "UPS",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "UZ",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "VA",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "1",
+            "Status": "Active"
+        },
+        {
+            "Country": "VA",
+            "Carrier": "DHL",
+            "Method": "Standard",
+            "Carrier Method": "",
+            "Days": "2",
+            "Status": "Active"
+        },
+        {
+            "Country": "VE",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "VN",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Express WW",
+            "Days": "3",
+            "Status": "Active"
+        },
+        {
+            "Country": "ZA",
+            "Carrier": "DHL",
+            "Method": "Express",
+            "Carrier Method": "Economy Select",
+            "Days": "3",
+            "Status": "Active"
+        }
+    ]
+}

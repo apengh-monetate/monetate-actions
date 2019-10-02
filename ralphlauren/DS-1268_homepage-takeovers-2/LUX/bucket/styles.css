@@ -1,0 +1,48 @@
+.mt_bucket {
+  -webkit-font-smoothing: antialiased;
+  border: 0;
+  clear: both;
+  display: block;
+  font-size: 2.5vw;
+  line-height: initial;
+  margin: 0 auto;
+  max-width: 1920px;
+  overflow: hidden;
+  overflow-x: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .mt_bucket {
+    padding-bottom: 7.8125vw;
+  }
+}
+
+.mt_bucket__picture--img {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 360px) {
+  .mt_bucket__picture--img {
+    max-width: 100%;
+  }
+}
+
+.mt_bucket__link {
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: visible;
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: auto;
+}
+
+.mt_bucket__link:hover {
+  text-decoration: none;
+}

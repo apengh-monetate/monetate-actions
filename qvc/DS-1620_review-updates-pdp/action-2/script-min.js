@@ -1,0 +1,1 @@
+document.getElementById("mtScrollToReviews").addEventListener("click",function(){document.getElementById("divProductDetailsCustomerReviewWrapper").scrollIntoView({behavior:"smooth"})});

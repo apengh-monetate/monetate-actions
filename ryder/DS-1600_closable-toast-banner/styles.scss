@@ -1,0 +1,74 @@
+#MONETATE-ID {
+    animation-delay: 3s;
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-name: slideUp;
+    animation-timing-function: ease-in-out;
+    background: #ce1126;
+    display: block;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: auto;
+    width: 100%;
+    z-index: 99;
+}
+
+
+.mt_toast {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: center;
+
+    &__mobile {
+        display: block;
+        @media screen and (min-width: 53em) {
+            display: none;
+        }
+    }
+
+
+    &__tablet {
+        display: none;
+        @media screen and (min-width: 53em) {
+            display: block;
+        }
+        @media screen and (min-width: 75em) {
+            display: none;
+        }
+    }
+
+
+    &__desktop {
+        display: none;
+        @media screen and (min-width: 75em) {
+            display: block;
+        }
+    }
+
+
+    &__close {
+        background: none;
+        border: none;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}
+
+
+@keyframes slideUp {
+    0% {
+        bottom: -51px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}

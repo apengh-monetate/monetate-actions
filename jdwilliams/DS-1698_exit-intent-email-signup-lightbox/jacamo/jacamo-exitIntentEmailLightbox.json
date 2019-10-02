@@ -1,0 +1,321 @@
+{
+  "id": 428938,
+  "title": "Exit Intent Email Signup Lightbox",
+  "description": "Displays an HTML form lightbox with optional exit intent functionality",
+  "op": "exitIntentEmailLightbox",
+  "slot": "lightbox",
+  "slot_type": "page",
+  "category": "lightbox",
+  "subcategory": "Any Page",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "htmlstring",
+        "value": "<section class=\"mt_email-lightbox\">\n<div class=\"mt_email-lightbox__text\">\n<div class=\"mt_email-lightbox__heading\">\n<h1>Sign up<br />\nfor our emails</h1>\n</div>\n\n<div class=\"mt_email-lightbox__subheading\">\n<p>Sign up for the latest in fashion, footwear and home that&rsquo;s perfect for you.<br />\n<br />\nSimply enter your details and you&#39;ll be receiving emails from JD Williams in no time.</p>\n</div>\n</div>\n\n<div class=\"mt_email-lightbox__form\">\n<p class=\"mt_email-lightbox__form-info\"><span>*</span> Please complete all boxes</p>\n\n<form action=\"/shop/emailsignup/save.action\" id=\"emailForm\" method=\"post\" name=\"emailCollectionForm\">\n<div><label id=\"personalTitleLabel\">Title <span>*</span></label> <select errormsg=\"Title\" id=\"personalTitle\" label=\"personalTitleLabel\" name=\"Title\" tabindex=\"0\"><option value=\"\">Please select</option><option value=\"Mrs\">Mrs</option><option value=\"Ms\">Ms</option><option value=\"Miss\">Miss</option><option value=\"Mr\">Mr</option> </select></div>\n\n<div><label id=\"personalFirstnameLabel\">First Name <span>*</span></label> <input autocomplete=\"off\" defaulttext=\"Type your First Name here\" errormsg=\"First Name\" id=\"personalFirstName\" label=\"personalFirstnameLabel\" maxlength=\"30\" name=\"FirstName\" required=\"1\" tabindex=\"0\" type=\"text\" /></div>\n\n<div><label id=\"personalSurnameLabel\">Surname <span>*</span></label> <input autocomplete=\"off\" defaulttext=\"Type your Surname here\" errormsg=\"Surname\" id=\"personalSurname\" label=\"personalSurnameLabel\" maxlength=\"30\" name=\"Surname\" required=\"1\" tabindex=\"0\" type=\"text\" /></div>\n\n<div><label id=\"emailLabel\">Email Address <span>*</span></label> <input autocomplete=\"off\" defaulttext=\"Type your Email Address here\" errormsg=\"Email Address\" id=\"inputemail\" label=\"emailLabel\" maxlength=\"250\" name=\"EmailAddress\" required=\"1\" tabindex=\"0\" type=\"text\" /></div>\n\n<div><label id=\"emailConfirmLabel\">Re-type Email Address <span>*</span></label> <input autocomplete=\"off\" defaulttext=\"Re-type your Email Address here\" errormsg=\"Re-type Email Address\" id=\"emailConfirm\" label=\"emailConfirmLabel\" maxlength=\"250\" name=\"EmailAddressConfirm\" required=\"1\" tabindex=\"0\" type=\"text\" /></div>\n\n<div style=\"display: none;\"><label id=\"mobileLabel\">Mobile</label> <input defaulttext=\"Type your mobile number in here\" errormsg=\"Mobile Number\" id=\"mobile\" label=\"mobileLabel\" name=\"MobilePhone\" tabindex=\"0\" type=\"mobile\" /></div>\n\n<div class=\"mt_email-lightbox__form-btn\" id=\"eMeSignUpBtn\"><button class=\"btn primaryBtn submit\" tabindex=\"0\" type=\"submit\">Sign Up</button></div>\n\n<p class=\"mt_email-lightbox__form-footer\">You may unsubscribe from this mailing at any time as detailed in the emails sent to you.</p>\n</form>\n</div>\n<button class=\"mt-close\" name=\"button\" type=\"button\">&times;</button></section>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "HTML to be inserted in the lightbox. Elements within the HTML that have a class of \"lb-close\" will act as close buttons.",
+        "label": "HTML String"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "lightboxId",
+        "value": 10
+      },
+      "widget": {
+        "label": "Lightbox id (0-31 only)",
+        "type": "IntegerField",
+        "description": "The id of this lightbox.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "showInterval",
+        "value": "page"
+      },
+      "widget": {
+        "description": "How long until the this lightbox is shown again. Based on lightboxId.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "page",
+            "label": "Every page"
+          },
+          {
+            "name": "session",
+            "label": "Once per session"
+          },
+          {
+            "name": "once",
+            "label": "Once, ever"
+          },
+          {
+            "name": "30days",
+            "label": "30 Days"
+          },
+          {
+            "name": "custominterval",
+            "label": "Once every 'X' days"
+          }
+        ],
+        "label": "How often (per user) should this lightbox be shown?"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "submitMethod",
+        "value": "iframe"
+      },
+      "widget": {
+        "label": "Which submission method is preferred?",
+        "options": [
+          {
+            "name": "iframe",
+            "label": "iframe"
+          },
+          {
+            "name": "jQuery",
+            "label": "jQuery.ajax"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "What form submission method should we use?",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_showOnRollout",
+        "value": true
+      },
+      "widget": {
+        "label": "Open lightbox on mouseout.",
+        "type": "BooleanField",
+        "description": "Should the lightbox open when the mouse leaves the window?",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_receiptHtmlCreative",
+        "value": "<section class=\"mt_email-lightbox thank-you\">\n<h1>Thank you!</h1>\n\n<p>Welcome, keep your eyes peeled on your inbox.</p>\n<a class=\"btn primaryBtn\" href=\"https://www.jdwilliams.co.uk/\">Take me Shopping</a><button class=\"mt-close\" name=\"button\" type=\"button\">&times;</button></section>\n"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlField",
+        "description": "Displays upon successful email collection.",
+        "label": "Optional Thank You HTML Creative"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_lightboxClass",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "A class to add to the lightbox for styling purposes.",
+        "label": "Lightbox Class"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_appendCSS",
+        "value": "#monetate_lightbox_content_container * {\n  box-sizing: border-box;\n}\n\n/* ===================================================== */\n/* Default Styles\n/* ===================================================== */\n.mt_email-lightbox {\n  background: #fff;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  left: 50%;\n  padding: 0;\n  position: fixed;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  width: 850px !important;\n}\n\n.mt_email-lightbox__text {\n  align-content: center;\n  align-items: center;\n  background: #E7963B;\n  color: #fff;\n  display: block;\n  display: flex;\n  flex-wrap: wrap;\n  padding: 40px;\n  width: 40%;\n}\n\n.mt_email-lightbox__text h1 {\n  color: #fff;\n  font-family: \"GalanoGrotesque-SemiBold\", Arial, sans-serif;\n  font-size: 43px;\n  font-weight: normal;\n  letter-spacing: 0.864px;\n  line-height: 43px;\n  margin: 0;\n  margin-bottom: 15px;\n  padding: 0;\n  text-transform: uppercase;\n}\n\n.mt_email-lightbox__text p {\n  color: #fff;\n  font-family: \"GalanoGrotesque-Regular\", Arial, Helvetica, sans-serif;\n  font-size: 12px;\n  letter-spacing: 0.24px;\n  line-height: 16px;\n}\n\n.mt_email-lightbox__form {\n  background: #fff;\n  display: block;\n  padding: 40px 20px;\n  width: 60%;\n}\n\n.mt_email-lightbox__form span {\n  color: #f00;\n}\n\n.mt_email-lightbox__form label {\n  display: inline-block;\n  font-family: \"GalanoGrotesque-Medium\";\n  font-size: 13px;\n  font-weight: 400;\n  line-height: 16px;\n  width: 200px;\n}\n\n.mt_email-lightbox__form select {\n  height: 35px;\n  margin: 5px 0 10px;\n  padding: 2px 30px 2px 5px;\n}\n\n.mt_email-lightbox__form input {\n  border: 1px #dadada solid;\n  border-radius: 3px;\n  height: 22px;\n  margin: 5px 0 10px;\n  padding: 1px 0 1px 5px;\n  width: 250px;\n}\n\n.mt_email-lightbox__form-info {\n  display: block;\n  font-family: \"GalanoGrotesque-Regular\", Arial, Helvetica, sans-serif;\n  font-size: 12px;\n  font-weight: 400;\n  line-height: 15px;\n  padding-bottom: 5%;\n}\n\n.mt_email-lightbox__form-btn {\n  float: right;\n  margin: 7% 2% 0;\n}\n\n.mt_email-lightbox__form-btn button {\n  background: #3a981e;\n  border: none;\n  color: #fff;\n  font-family: \"GalanoGrotesque-Medium\";\n  font-size: 1.2em;\n  font-weight: normal;\n  margin: 0;\n  padding: 0.6em 4.55em;\n  text-decoration: none;\n  text-transform: uppercase;\n}\n\n.mt_email-lightbox__form-footer {\n  clear: left;\n  display: block;\n  float: left;\n  font-family: \"GalanoGrotesque-Regular\", Arial, Helvetica, sans-serif;\n  font-size: 10px;\n  letter-spacing: .005em;\n  line-height: 14px;\n  padding-top: 40px;\n}\n\n.mt_email-lightbox .mt-close {\n  background: none;\n  border: none;\n  color: #000;\n  font-size: 28px;\n  font-weight: 100;\n  height: 36px;\n  line-height: 1;\n  margin: 0;\n  padding: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  width: 36px;\n}\n\n/* ===================================================== */\n/* Thank You Styles\n/* ===================================================== */\n.mt_email-lightbox.thank-you {\n  align-content: center;\n  align-items: center;\n  background: #E7963B;\n  flex-direction: column;\n  flex-wrap: wrap;\n  justify-content: center;\n  padding: 100px 0;\n  width: 600px !important;\n}\n\n.mt_email-lightbox.thank-you h1 {\n  color: #fff;\n  font-family: \"GalanoGrotesque-SemiBold\", Arial, sans-serif;\n  font-size: 48px;\n  line-height: 24px;\n  text-align: center;\n  text-transform: uppercase;\n}\n\n.mt_email-lightbox.thank-you p {\n  color: #fff;\n  font: 0.9em/1.6em \"GalanoGrotesque-Regular\",Arial,Helvetica,sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  margin: 16px auto;\n}\n\n.mt_email-lightbox.thank-you a.btn.primaryBtn {\n  background: #3a981e;\n  color: #fff;\n  display: inline-block;\n  font-family: \"GalanoGrotesque-Medium\",Arial,Helvetica,sans-serif;\n  font-size: 15px;\n  font-weight: normal;\n  line-height: 21px;\n  margin: 0 auto;\n  padding: 10px;\n  text-transform: uppercase;\n  text-transform: uppercase;\n}"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "CSS stylesheet to append.",
+        "label": "CSS Styles"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_top",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "The top offset of the lightbox (in pixels).",
+        "label": "Top Position"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_left",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "The left offset of the lightbox (in pixels).",
+        "label": "Left Position"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_pinned",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Is the lightbox pinned to its position on screen, or does it scroll with the page?",
+        "label": "Pin Lightbox Position?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_color",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CharField",
+        "description": "Color of the lightbox overlay. Defaults to \"#000\".",
+        "label": "Overlay Color"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "float",
+        "name": "opt_opacity",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "FloatField",
+        "description": "Opacity of the lightbox overlay. Defaults to \"0.6\".",
+        "label": "Overlay Opacity"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_closeable",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Is the lightbox closeable by clicking on the overlay?",
+        "label": "Closeable?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_refreshAfter",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Should the page reload after closing the thank you lightbox? (This is useful for sign-in lightboxes!)",
+        "label": "Refresh After?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_responsiveCZ",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Are the clickzones responsive?",
+        "label": "Responsive clickzones?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_responsive",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Select yes to make the lightbox responsive.",
+        "label": "Responsive?"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_emailError",
+        "value": null
+      },
+      "widget": {
+        "label": "Specific error for not valid email input.",
+        "type": "CharField",
+        "description": "Defaults to 'Valid email address required.' if no error message is provided.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_genericError",
+        "value": null
+      },
+      "widget": {
+        "label": "Generic error for required inputs.",
+        "type": "CharField",
+        "description": "Defaults to 'This field is required.' if no error message is provided.",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}
