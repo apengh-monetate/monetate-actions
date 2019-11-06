@@ -1,0 +1,64 @@
+/* ===================================================== */
+/* Add to Cart Lightbox
+/* ===================================================== */
+#monetate_lightbox_content_container {
+  height: auto !important;
+  margin: 2.5rem auto !important;
+  max-width: 600px !important;
+  top: auto !important;
+  width: auto !important;
+}
+
+.mt_atc-modal {
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  max-width: calc(100vw - 40px);
+  padding: 25px 20px;
+  position: relative;
+  width: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_atc-modal {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 600px !important;
+  }
+}
+
+.mt_atc-modal h2 {
+  border-bottom: 1px solid #000;
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.mt-close {
+  position: absolute;
+  right: -2rem;
+  top: -2rem;
+}
+
+.mt-close > .fa-close {
+  background: #000;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+/* ===================================================== */
+/* Error Lightbox
+/* ===================================================== */
+.mt_atc-modal.error h2 {
+  border-bottom: 1px solid #000;
+  box-shadow: none;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: none;
+}

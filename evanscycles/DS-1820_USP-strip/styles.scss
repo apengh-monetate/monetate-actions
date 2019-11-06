@@ -1,0 +1,120 @@
+$breakpoint-sm:     576px;
+$breakpoint-md:     768px;
+$breakpoint-lg:     992px;
+$breakpoint-xl:     1200px;
+
+$green:             #005350;
+$green-light:       #025b55;
+
+.mt_usp {
+    border-bottom: 1px solid #d9d9d9;
+    display: block !important;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    width: 100%;
+
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0;
+        @media screen and (min-width: $breakpoint-xl) {
+            font-size: 18px;
+        }
+    }
+
+
+    // ==================================================================
+    // List
+    // ==================================================================
+    &__list {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1140px;
+        padding: 0;
+        &-item,
+        &-link {
+            align-content: center;
+            align-items: center;
+            color: $green;
+            display: inline-flex;
+            flex: 1 1 auto;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            text-align: center;
+            width: auto;
+            &:not(:last-child)::after {
+                background-color: #ccc;
+                content: " ";
+                display: block;
+                height: 60%;
+                position: absolute;
+                right: 0;
+                top: 20%;
+                width: 1px;
+            }
+        }
+    }
+
+
+    // ==================================================================
+    // Icon
+    // ==================================================================
+    &__icon {
+        font-size: 0;
+        line-height: 0;
+        &-svg {
+            fill: $green;
+            height: 32px;
+            max-width: 48px;
+            width: auto;
+            @media screen and (min-width: $breakpoint-md) {
+                height: 36px;
+                max-width: 56px;
+            }
+        }
+    }
+
+
+
+    // ==================================================================
+    // Helper Classes
+    // ==================================================================
+    .uppercase {
+        text-transform: uppercase;
+    }
+    .hidden {
+        display: none;
+    }
+    .mobile-hidden {
+        @media screen and (max-width: ($breakpoint-md - 1)) {
+            display: none;
+        }
+    }
+    .tablet-hidden {
+        @media screen and (min-width: $breakpoint-md) and (max-width: ($breakpoint-lg - 1)) {
+            display: none;
+        }
+    }
+    .desktop-hidden {
+        @media screen and (min-width: $breakpoint-lg) {
+            display: none;
+        }
+    }
+}

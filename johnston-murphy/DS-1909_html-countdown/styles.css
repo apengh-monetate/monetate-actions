@@ -1,0 +1,283 @@
+.mt-countdown {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.mt-countdown * {
+  box-sizing: border-box;
+}
+
+.mt-countdown p {
+  margin: 0;
+}
+
+.mt-countdown .bold {
+  font-weight: bold;
+}
+
+.mt-countdown__timer {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  background: #fff;
+  border: 3px solid #000;
+  border-right: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 45%;
+          flex: 1 1 45%;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding-right: 10px;
+  position: relative;
+  text-align: center;
+  width: 45%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown__timer {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 33%;
+            flex: 1 1 33%;
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown__timer {
+    font-size: 24px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mt-countdown__timer {
+    font-size: 32px;
+  }
+}
+
+.mt-countdown__timer::after {
+  background: #000;
+  content: "";
+  display: block;
+  height: 200%;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-15deg);
+          transform: translate(-50%, -50%) rotate(-15deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  width: 20px;
+}
+
+.mt-countdown__timer span {
+  margin-top: -12px;
+  min-width: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown__timer span {
+    min-width: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mt-countdown__timer span {
+    min-width: 40px;
+  }
+}
+
+.mt-countdown .mt_tickerElem {
+  color: #000;
+  font-variant: tabular-nums;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown .mt_tickerElem {
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .mt-countdown .mt_tickerElem.mt_hours .mt_suffix::after {
+    content: "HRS";
+  }
+  .mt-countdown .mt_tickerElem.mt_minutes .mt_suffix::after {
+    content: "MINS";
+  }
+  .mt-countdown .mt_tickerElem.mt_seconds .mt_suffix::after {
+    content: "SECS";
+  }
+}
+
+.mt-countdown .mt_suffix {
+  bottom: 0;
+  font-size: 0;
+  font-weight: normal;
+  left: 50%;
+  position: absolute;
+  text-transform: uppercase;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown .mt_suffix {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .mt-countdown .mt_suffix::after {
+    font-size: 10px;
+  }
+}
+
+.mt-countdown__text {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid #000;
+  border-left: none;
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 55%;
+          flex: 1 1 55%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 1px;
+  overflow: hidden;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 55%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown__text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown__text {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.mt-countdown__text p {
+  font-size: 10px;
+  font-weight: lighter;
+  line-height: 1;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown__text p {
+    font-size: 14px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mt-countdown__text p {
+    font-size: 20px;
+  }
+}
+
+.mt-countdown__text a {
+  color: #fff;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 1;
+  padding-top: 4px;
+  text-decoration: underline;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown__text a {
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 0;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mt-countdown__text a {
+    padding-top: 2px;
+  }
+}
+
+/* ===================================================== */
+/* Adjust #header for Mobile
+/* ===================================================== */
+@media screen and (max-width: 767px) {
+  body.mt-relative #header {
+    position: relative !important;
+  }
+}
+
+/* ===================================================== */
+/* Adjust Padding on #main for Mobile
+/* ===================================================== */
+@media screen and (max-width: 767px) {
+  body.mt-relative #main {
+    padding-top: 0 !important;
+  }
+}

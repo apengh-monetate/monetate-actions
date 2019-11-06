@@ -1,0 +1,203 @@
+@media (min-width: 2000px) {
+  .monetate-product-grid .mpg-text {
+    background: url(https://staging-webstore-aeropostale.demandware.net/on/demandware.static/-/Sites-aeropostale-Library/default/dw04f7cafe/images/Rectangle.png) repeat-x;
+    background-size: cover;
+    color: #fff;
+    font-family: "Avenir",sans-serif;
+    /* background-repeat: no-repeat; */
+    /* background-position: right top; */
+    /* background-attachment: fixed; */
+    font-size: 14px;
+    font-weight: 500;
+    height: 6%;
+    line-height: 85%;
+    margin-left: .25%;
+    padding-left: .3vw;
+    /*
+    position: absolute;
+  */
+    /* margin-top: -11%; */
+    /*
+    margin-left: 0.5%;
+    top: 77.45% !important;
+    width: 20.5% !important;
+    height: 6%;
+    background-size: cover !important;
+    background: url(https://staging-webstore-aeropostale.demandware.net/on/demandware.static/-/Sites-aeropostale-Library/default/dw04f7cafe/images/Gradient_2.png) repeat-x;
+  */
+    position: absolute;
+    text-transform: uppercase;
+    top: 94%;
+    width: 20.45% !important;
+    z-index: 25;
+  }
+}
+
+/*Title*/
+.monetate-product-grid:before {
+  MARGIN-LEFT: 1%;
+  MARGIN-TOP: 8%;
+  content: "WE CAN'T KEEP THESE IN STOCK";
+  display: inline-block;
+  font-family: "Avenir",sans-serif;
+  font-size: 2VW;
+  font-weight: 500;
+  text-align: RIGHT;
+  top: 15%;
+  width: 11%;
+}
+
+@media (min-width: 1025px) {
+  .monetate-product-grid .mpg-page {
+    float: right !important;
+    width: 87% !important;
+  }
+}
+
+/*Styling*/
+.monetate-product-grid .mpg-image-container {
+  padding: 0 5px;
+}
+
+.monetate-product-grid .mpg-image {
+  display: inline-block;
+  height: auto;
+  margin: 0 auto;
+  width: calc(100% - 10px);
+}
+
+.monetate-product-grid .mpg-text {
+  background: url(https://staging-webstore-aeropostale.demandware.net/on/demandware.static/-/Sites-aeropostale-Library/default/dw04f7cafe/images/Rectangle.png) repeat-x;
+  background-size: cover;
+  color: #fff;
+  font-family: "Avenir",sans-serif;
+  /* background-repeat: no-repeat; */
+  /* background-position: right top; */
+  /* background-attachment: fixed; */
+  font-size: .85vw;
+  font-weight: 500;
+  height: 6%;
+  line-height: 85%;
+  margin-left: .25%;
+  padding-left: .3vw;
+  /*
+    position: absolute;
+  */
+  /* margin-top: -11%; */
+  /*
+    margin-left: 0.5%;
+    top: 77.45% !important;
+    width: 20.5% !important;
+    height: 6%;
+    background-size: cover !important;
+    background: url(https://staging-webstore-aeropostale.demandware.net/on/demandware.static/-/Sites-aeropostale-Library/default/dw04f7cafe/images/Gradient_2.png) repeat-x;
+  */
+  position: absolute;
+  text-transform: uppercase;
+  top: 94%;
+  width: 20.29%;
+  z-index: 25;
+}
+
+.monetate-product-grid .mpg-name {
+  display: inline-block;
+  height: 85%;
+  margin-bottom: -21%;
+  margin-top: 13%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.monetate-product-grid .mpg-price {
+  display: inline-block;
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.mpg-alternate-price {
+  margin-right: 5px;
+  text-decoration: line-through;
+}
+
+.mpg-alternate-price + .mpg-price {
+  color: #f00;
+}
+
+.mpg-row-border {
+  display: none;
+}
+
+@media (max-width: 1025px) and (orientation: portrait) {
+  .monetate-product-grid .mpg-item {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 1025px) and (orientation: landscape) {
+  .monetate-product-grid .mpg-item {
+    width: 25% !important;
+  }
+}
+
+#monetate_product_grid_d05f7d7f {
+  margin-left: 15px;
+}
+
+.fakeCategoryMobile-girls-name {
+  text-decoration: underline;
+  text-transform: none;
+}
+
+@media (max-width: 1025px) {
+  .monetate-product-grid:before {
+    MARGIN-TOP: 8%;
+    content: "WE CAN'T KEEP THESE IN STOCK";
+    display: inline-block;
+    font-family: "Avenir",sans-serif;
+    font-size: 4VW;
+    font-weight: 500;
+    margin-bottom: 5%;
+    text-align: center;
+    top: 15%;
+    width: 100%;
+  }
+  .monetate-product-grid .mpg-text {
+    background: url(https://staging-webstore-aeropostale.demandware.net/on/demandware.static/-/Sites-aeropostale-Library/default/dw04f7cafe/images/Rectangle.png);
+    background-size: cover;
+    color: #fff;
+    font-family: "Avenir",sans-serif;
+    /* background-repeat: no-repeat; */
+    /* background-position: right top; */
+    /* background-attachment: fixed; */
+    font-size: 11px;
+    height: 8%;
+    line-height: 15px;
+    margin-left: 1.5%;
+    margin-top: -54%;
+    padding: 5px;
+    position: absolute;
+    text-transform: uppercase;
+    /* top: 93.5%; */
+    width: 44.5%;
+  }
+  .mpg-item-2 .mpg-text {
+    margin-top: -7%;
+  }
+  .mpg-item-3 .mpg-text {
+    margin-top: -7%;
+  }
+  .monetate-product-grid .mpg-name {
+    display: inline-block;
+    height: 35px;
+    margin-bottom: -5px;
+    margin-top: 20%;
+    overflow: hidden;
+    /* margin: 0 auto; */
+    width: 100%;
+  }
+  .monetate-product-grid .mpg-price {
+    display: inline-block;
+    height: 20px;
+    /* margin-bottom: 5px; */
+  }
+}

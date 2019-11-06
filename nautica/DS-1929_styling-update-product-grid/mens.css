@@ -1,0 +1,191 @@
+.monetate-product-grid {
+  box-sizing: border-box;
+  clear: both;
+  position: relative;
+}
+
+@media screen and (min-width: 1025px) {
+  .monetate-product-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.monetate-product-grid * {
+  box-sizing: border-box;
+}
+
+.monetate-product-grid::before {
+  content: "We Can\2019t Keep These In Stock";
+  display: inline-block;
+  font-family: "Didot", sans-serif;
+  font-size: 4vw;
+  margin-top: 8%;
+  text-align: center;
+  text-transform: uppercase;
+  top: 15%;
+  width: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+  .monetate-product-grid::before {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 2vw;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-right: 10px;
+    text-align: right;
+    width: 15%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .monetate-product-grid .mpg-page {
+    float: right !important;
+    width: 80%;
+  }
+}
+
+.monetate-product-grid .mpg-row {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 1025px) and (orientation: landscape) {
+  .monetate-product-grid .mpg-row {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .monetate-product-grid .mpg-row {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.monetate-product-grid .mpg-item {
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 1 50% !important;
+          flex: 1 1 50% !important;
+  padding: 10px;
+  position: relative;
+  width: 50% !important;
+}
+
+@media screen and (max-width: 1025px) and (orientation: landscape) {
+  .monetate-product-grid .mpg-item {
+    -webkit-box-flex: 1 !important;
+        -ms-flex: 1 1 25% !important;
+            flex: 1 1 25% !important;
+    width: 25% !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .monetate-product-grid .mpg-item {
+    -webkit-box-flex: 1 !important;
+        -ms-flex: 1 1 25% !important;
+            flex: 1 1 25% !important;
+    width: 25% !important;
+  }
+}
+
+.monetate-product-grid .mpg-item-link {
+  display: block;
+  position: relative;
+}
+
+.monetate-product-grid .mpg-image-container {
+  font-size: 0;
+  line-height: 0;
+}
+
+.monetate-product-grid .mpg-image-container::after {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.75)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+@media screen and (max-width: 1025px) and (orientation: landscape) {
+  .monetate-product-grid .mpg-image-container::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.75)));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    top: 33%;
+  }
+}
+
+.monetate-product-grid .mpg-image {
+  display: block;
+  max-width: 100%;
+}
+
+.monetate-product-grid .mpg-text {
+  bottom: 0;
+  color: #fff;
+  font-family: "Avenir", sans-serif;
+  font-size: 11px;
+  left: 0;
+  line-height: 15px;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+}
+
+.monetate-product-grid .mpg-name {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.monetate-product-grid .mpg-price {
+  display: inline-block;
+}
+
+.monetate-product-grid .mpg-alternate-price {
+  margin-right: 5px;
+  text-decoration: line-through;
+}
+
+.monetate-product-grid .mpg-alternate-price + .mpg-price {
+  color: #f00;
+}
+
+.monetate-product-grid .fakeCategoryMobile-girls-name {
+  text-decoration: underline;
+  text-transform: none;
+}
+
+.monetate-product-grid .mpg-row-border {
+  display: none;
+}

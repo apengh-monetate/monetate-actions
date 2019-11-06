@@ -1,0 +1,411 @@
+
+$monetateId: #MONETATE-ID;
+// $monetateId: #mt-slider-3091677-0;
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#{$monetateId} {
+    position: relative;
+
+    li {
+        list-style: none;
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        margin: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider-mask],
+    &[data-slider-wrapper="fade"] [data-slider-mask] {
+        touch-action: pan-y;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        touch-action: pan-x;
+    }
+
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider] {
+        white-space: nowrap !important;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        float: none;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slide] {
+        display: inline-block !important;
+        vertical-align: top;
+        white-space: normal;
+    }
+    &[data-slider-wrapper="vertical"] [data-slide] {
+        display: block !important;
+    }
+    &[data-slider-wrapper="fade"] [data-slide] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+    &[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+    // ==================================================================
+    // Buttons / Pagination
+    // ==================================================================
+    [data-pagination-slide],
+    [data-prev-button],
+    [data-next-button]{
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    [data-pagination-slide] * {
+        pointer-events: none;
+    }
+
+} // MONETATE-ID
+
+
+
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#{$monetateId} {
+    background: #fafafa;
+    box-sizing: border-box;
+    clear: both;
+    color: #191919;
+    display: block;
+    margin: 10px 2.5%;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    @media screen and (min-width: $breakpoint-lg) {
+        background: #e5e5e5;
+        float: left;
+        margin: 0;
+        margin-bottom: 30px;
+        margin-top: 40px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    & * {
+        box-sizing: border-box;
+    }
+
+    // ==================================================================
+    // Slider Container Template
+    // ==================================================================
+    .mt_slider {
+        &__container {
+            clear: both;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            @media screen and (min-width: $breakpoint-lg) {
+                margin: 0 auto;
+                padding: 0;
+                padding-bottom: 40px;
+                width: 980px;
+            }
+        }
+        &__header {
+            display: inline-block;
+            font-family: 'Saira Extra Condensed',sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 12px;
+            margin: 0;
+            margin-bottom: 25px;
+            padding: 0;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            position: relative;
+            text-transform: uppercase;
+            @media screen and (min-width: $breakpoint-lg) {
+                font-size: 39px;
+                font-weight: 600;
+                letter-spacing: .06em;
+                line-height: normal;
+                margin: 0;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                position: relative;
+                text-align: center;
+                text-transform: uppercase;
+                top: -40px;
+                width: 100%;
+            }
+            &::after {
+                background: #00b663;
+                bottom: -5px;
+                content: "";
+                height: 5px;
+                left: 0;
+                position: absolute;
+                width: 100%;
+                @media screen and (min-width: $breakpoint-lg) {
+                    background: #000;
+                    bottom: -5px;
+                    content: "";
+                    height: 1px;
+                    left: calc(50% - 75px);
+                    position: absolute;
+                    width: 150px;
+                }
+            }
+        }
+        &__wrapper {
+            clear: both;
+            position: relative;
+        }
+    }
+
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        display: inline-block;
+        width: 100%;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        height: 400px!important;
+    }
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+
+    }
+
+
+
+
+    // ==================================================================
+    // Buttons
+    // ==================================================================
+    [data-prev-button],
+    [data-next-button] {
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        -webkit-user-select: none;
+        background: none;
+        border: none;
+        color: #000;
+        cursor: pointer;
+        height: 28px;
+        margin-top: -14px;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        user-select: none;
+        width: 27px;
+        @media screen and (max-width: ($breakpoint-lg - 1)) {
+            svg {
+                display: none;
+            }
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            top: 35%;
+        }
+    }
+    [data-prev-button] {
+        background: url('/mobile/images/core/arrow_left.png') no-repeat;
+        left: 5px;
+        @media screen and (min-width: $breakpoint-lg) {
+            background: none;
+            left: -30px;
+        }
+
+    }
+    [data-next-button] {
+        background: url('/mobile/images/core/arrow_right.png') no-repeat;
+        right: 5px;
+        @media screen and (min-width: $breakpoint-lg) {
+            background: none;
+            right: -30px;
+        }
+
+    }
+    &[data-slider-wrapper="vertical"] [data-prev-button] {
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    &[data-slider-wrapper="vertical"] [data-next-button] {
+        bottom: 0;
+        left: 50%;
+        right: auto;
+        top: auto;
+        transform: translateX(-50%);
+    }
+
+
+    // ==================================================================
+    // Pagination
+    // ==================================================================
+    [data-pagination="thumbnails"] [data-pagination-slide] {
+        background: none;
+        border-radius: 0;
+        height: auto;
+        width: 40px;
+    }
+
+    [disabled] {
+        opacity: 0.5;
+    }
+
+    [data-pagination-slide] {
+        background: #000;
+        border-radius: 6px;
+        display: inline-block;
+        height: 12px;
+        margin: 4px;
+        opacity: 0.5;
+        width: 12px;
+        &[data-slide-active] {
+            opacity: 1;
+        }
+    }
+    [data-pagination*="dots"] [data-pagination-slide] {
+        /* remove below for pagination numbers */
+        text-indent: -9999px;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        > div {
+            -webkit-box-shadow: -1px 0 0 #fff;
+            background: #fff;
+            box-shadow: -1px 0 0 #fff;
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            width: 100%;
+            @media screen and (min-width: $breakpoint-lg) {
+                background: none;
+                box-shadow: none;
+                padding: 10px 8px;
+            }
+        }
+        img {
+            max-width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+
+    // ==================================================================
+    // Slide Template
+    // ==================================================================
+    .mt_slide {
+        &__img {
+            background: #EFEFF1;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            @media screen and (min-width: $breakpoint-lg) {
+                background: none;
+                padding: 0;
+            }
+        }
+
+        &__text {
+            display: none;
+            @media screen and (min-width: $breakpoint-lg) {
+                clear: both;
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+                & > * {
+                    line-height: 150%;
+                }
+            }
+        }
+
+        &__brand {
+            display: block;
+            font-size: 11px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        &__title {
+            color: #212121;
+            display: block;
+            font-size: 11px;
+            font-weight: 400;
+            margin-bottom: 5px;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &__price {
+            display: block;
+            font-weight: 700;
+            &--reg {
+                font-weight: normal;
+            }
+            &--sale {
+                color: #F11;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    [data-missing-keys*="salePrice"] {
+        .mt_slide {
+            &__price {
+                font-size: 12px;
+                font-weight: bold;
+                &--reg {
+                    font-weight: bold;
+                }
+                &--sale {
+                    display: none;
+                }
+            }
+        }
+    }
+}

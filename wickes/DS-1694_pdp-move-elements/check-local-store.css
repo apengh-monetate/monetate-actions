@@ -1,0 +1,28 @@
+.prods-stock > div {
+  display: inline !important;
+}
+
+.prods-stock > div::after {
+  color: #000;
+  content: " - ";
+  display: inline;
+  position: relative;
+}
+
+.delivery-action-item__check-in-store {
+  display: inline;
+  font-size: 0;
+}
+
+.delivery-action-item__check-in-store::after {
+  color: #0277bd;
+  content: "Check your local store";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.delivery-action-item__check-in-store:hover::after {
+  color: #0a3055;
+  text-decoration: underline;
+}

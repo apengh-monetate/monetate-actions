@@ -1,0 +1,174 @@
+{
+  "id": 428954,
+  "title": "Move \"Save to Project List\" on PDP",
+  "description": "Move \"Save to Project List\" on PDP",
+  "op": "moveNode",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Product Page",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selA",
+        "value": ".pdp-price > .pdp-price__control-holder"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Selector to find the element that is being moved.",
+        "label": "Element to Move"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selB",
+        "value": ".product-main-info__share"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Place the Moved Element in relation to this element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "before"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the Moved Element in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleA",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Adds inline CSS style to Moved Element.",
+        "label": "Style for Moved Element"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleB",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Adds inline CSS style to the Relative Element.",
+        "label": "Style for Relative Element"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".save-shop-list,\n.saved-shop-list {\n  -webkit-box-pack: start !important;\n      -ms-flex-pack: start !important;\n          justify-content: flex-start !important;\n}\n\n.save-shop-list .btn,\n.saved-shop-list .btn {\n  height: 37px !important;\n  padding: 5px 8px 3px !important;\n  width: 37px !important;\n}\n\n.save-shop-list .btn .fa-clipboard-list-check,\n.saved-shop-list .btn .fa-clipboard-list-check {\n  margin-left: 2px !important;\n  margin-top: -4px !important;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [
+    {
+      "selector": ".product-main-info",
+      "value": "/",
+      "op": "path_iprefix"
+    }
+  ],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 234187,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

@@ -1,0 +1,332 @@
+{
+    "id": 423932,
+    "title": "HTML Flyout Banner",
+    "description": "Insert an HTML flyout banner",
+    "op": "flyoutBanner",
+    "slot": "none",
+    "slot_type": "none",
+    "category": "html",
+    "subcategory": "Flyout",
+    "action_events": [
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "img_creative",
+                "name": "creativeOpen",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "ImageCreative",
+                "description": "Upload an open image creative.",
+                "label": "Open Image Creative"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "img_creative",
+                "name": "creativeClose",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "ImageCreative",
+                "description": "Upload a close image creative.",
+                "label": "Close Image Creative"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "htmlString",
+                "value": "<div class=\"flyout-content\">\n<div id=\"mtEndcapRight\">&nbsp;</div>\n<span class=\"mt-collapse\"><a class=\"collapse-banner\">x</a></span>\n\n<div class=\"endcapWrapper\">&nbsp;</div>\n</div>\n"
+            },
+            "widget": {
+                "label": "HTML String",
+                "type": "HtmlField",
+                "description": "HTML to be inserted",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "sel",
+                "value": "body"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CssSelectorField",
+                "description": "Selector to find the relative node.",
+                "label": "CSS3 Selector"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "imeth",
+                "value": "first"
+            },
+            "widget": {
+                "description": "Function to use when inserting the banner relative to the selected node.",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "label": "Insert Function"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "side",
+                "value": "right"
+            },
+            "widget": {
+                "description": "Which side of the window should the banner be placed?",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "left",
+                        "label": "Left"
+                    },
+                    {
+                        "name": "right",
+                        "label": "Right"
+                    },
+                    {
+                        "name": "top",
+                        "label": "Top"
+                    },
+                    {
+                        "name": "bottom",
+                        "label": "Bottom"
+                    }
+                ],
+                "label": "Banner Location"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "speed",
+                "value": 40
+            },
+            "widget": {
+                "description": "How fast should the slide animation be?",
+                "action_visible": true,
+                "type": "IntegerSelectField",
+                "options": [
+                    {
+                        "name": 1,
+                        "label": "Fastest"
+                    },
+                    {
+                        "name": 20,
+                        "label": "Fast"
+                    },
+                    {
+                        "name": 40,
+                        "label": "Normal"
+                    },
+                    {
+                        "name": 60,
+                        "label": "Slow"
+                    },
+                    {
+                        "name": 80,
+                        "label": "Slowest"
+                    }
+                ],
+                "label": "Slide Speed"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_opened",
+                "value": true
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "BooleanField",
+                "description": "Should the banner be open on landing.",
+                "label": "Opened?"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_push",
+                "value": false
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "BooleanField",
+                "description": "Should the action push the page down depending (only works for top position)?",
+                "label": "Push page"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_saveState",
+                "value": false
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "BooleanField",
+                "description": "Should the banners state (opened / closed) be saved?",
+                "label": "Save banner state"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_divStyle",
+                "value": "position: fixed;\nz-index: 999996;\nvisibility: visible;\nright: 0px;\nwidth:15vw;\n\n"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CssValueAsString",
+                "description": "Sets the cssText value of the banner div element.",
+                "label": "Containing Div Style for banner creative"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_arrowCss",
+                "value": "cursor: pointer;"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CssValueAsString",
+                "description": "Sets the cssText value of the arrow div element.",
+                "label": "Containing Div Style for arrow creative"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_style",
+                "value": ".flyout-content{\nbackground-color:white;\nmargin-left:80px;\nfloat: none !important;\ntext-align: center;\nalign-content: center;\nheight:100vh;\n}\nspan.mt-collapse{\n    float: right;\n    top: 0px;\n    position: absolute;\n    right: 0px;\n    padding-right: 10px;\n}\na.collapse-banner{\ntext-decoration:none;\nfont-size:20px;\n}\n.flyout-button{\nbackground-color:black;\ncolor:white;\nmargin-top:20px;\n}\n.flyout-label{\nfont-size:12px;\n}\n\n #mtEndcapRight { \n        background: url('https://grandinroad.com/wcsstore/images/GrandinRoad/_media/new_homepage/2016/img/certona-header.png') no-repeat center center;\n        background-size: 80%;\n        width: 100%;\n        height: 20vh\n    }"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "TextField",
+                "description": "CSS style to append as stylesheet.",
+                "label": "CSS Style"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_poll",
+                "value": false
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "BooleanField",
+                "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+                "label": "Re-check for Elements"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "opt_delayOpen",
+                "value": 0
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "IntegerField",
+                "description": "Delay open after inserted on page by 'x' amount of seconds. Only once per session. Banner need to start closed in order to open.",
+                "label": "Delay Open"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "opt_delayClose",
+                "value": 0
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "IntegerField",
+                "description": "Delay close after inserted on page by 'x' amount of seconds. Only once per session. Banner need to start open in order to close.",
+                "label": "Delay Close"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "opt_js",
+                "value": {
+                    "content": "",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "javascript"
+                }
+            },
+            "widget": {
+                "label": "Script",
+                "type": "JavaScriptCodeField",
+                "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+                "action_visible": true
+            },
+            "required": false
+        }
+    ],
+    "masks": [],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [],
+        "required": []
+    },
+    "integration_type": "js-tag",
+    "manage_impressions": false
+}

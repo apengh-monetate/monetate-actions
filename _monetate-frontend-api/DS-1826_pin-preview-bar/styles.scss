@@ -1,0 +1,39 @@
+monetatepreview .mt-preview-pin {
+    align-items: center;
+    background: none
+    ;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    fill: #fff;
+    height: 24px;
+    justify-content: center;
+    left: 188px;
+    margin: 0;
+    padding: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    width: 28px;
+}
+monetatepreview .mt-preview-pin:hover {
+    background: #237AAF;
+}
+
+monetatepreview .mt-preview-pin svg {
+    fill: #fff;
+    height: 16px;
+    width: 16px;
+}
+
+
+
+
+monetatepreview.mt-preview.top {
+    bottom: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 10px;
+    top: 0;
+}

@@ -1,0 +1,66 @@
+#MONETATE-ID {
+  position: fixed;
+  right: 0px;
+  visibility: visible;
+  width: 55vw;
+  z-index: 999996;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID {
+    margin-top: -15px;
+    width: 15vw;
+  }
+}
+
+.flyout-content {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: white;
+  float: none !important;
+  height: 100vh;
+  margin-left: 80px;
+  text-align: center;
+}
+
+span.mt-collapse {
+  float: right;
+  padding-right: 10px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+a.collapse-banner {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.flyout-button {
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+}
+
+.flyout-label {
+  font-size: 12px;
+}
+
+#mtEndcapRight {
+  background: url("https://grandinroad.com/wcsstore/images/GrandinRoad/_media/new_homepage/2016/img/certona-header.png") no-repeat center center;
+  background-size: 80%;
+  height: 20vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  #mtEndcapRight {
+    margin: 0 auto;
+    width: 40%;
+  }
+}
+
+.mt_flyout_collapsed > div[id*=monetate_selectorHTML] {
+  -webkit-transform: translateX(32px);
+          transform: translateX(32px);
+}

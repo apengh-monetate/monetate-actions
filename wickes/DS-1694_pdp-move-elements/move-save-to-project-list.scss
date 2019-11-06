@@ -1,0 +1,14 @@
+.save-shop-list,
+.saved-shop-list {
+    justify-content: flex-start !important;
+
+    .btn {
+        height: 37px !important;
+        padding: 5px 8px 3px !important;
+        width: 37px !important;
+        .fa-clipboard-list-check {
+            margin-left: 2px !important;
+            margin-top: -4px !important;
+        }
+    }
+}

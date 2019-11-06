@@ -1,0 +1,65 @@
+#monetate_lightbox_content_container {
+    height: auto !important;
+    width: auto !important;
+}
+
+
+/* ===================================================== */
+/* Full-Screen Lightbox
+/* ===================================================== */
+.mt-lightbox.full-screen {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+
+.mt-lightbox {
+    background: #fff;
+    border: none;
+    display: block;
+    height: 400px;
+    left: 50%;
+    padding: 30px;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    width: 400px !important;
+    z-index: 9999;
+
+    &__close {
+        align-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #666;
+        cursor: pointer;
+        display: flex;
+        font-size: 24px;
+        font-weight: 100;
+        justify-content: center;
+        line-height: 36px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        text-decoration: none;
+        top: 0;
+        transition: all 0.3s ease;
+        width: 36px;
+        z-index: 1;
+        &:hover,
+        &:focus,
+        &:active {
+            background: none !important;
+            color: #333;
+            text-decoration: none;
+        }
+    }
+
+    &__content {
+        display: block;
+        position: relative;
+    }
+
+}

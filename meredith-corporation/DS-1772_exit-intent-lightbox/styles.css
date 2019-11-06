@@ -1,0 +1,70 @@
+#monetate_lightbox_content_container {
+  height: auto !important;
+  width: auto !important;
+}
+
+/* ===================================================== */
+/* Full-Screen Lightbox
+/* ===================================================== */
+.mt-lightbox.full-screen {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.mt-lightbox {
+  background: #fff;
+  border: none;
+  display: block;
+  height: 400px;
+  left: 50%;
+  padding: 30px;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: auto;
+  width: 400px !important;
+  z-index: 9999;
+}
+
+.mt-lightbox__close {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 24px;
+  font-weight: 100;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 36px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 36px;
+  z-index: 1;
+}
+
+.mt-lightbox__close:hover, .mt-lightbox__close:focus, .mt-lightbox__close:active {
+  background: none !important;
+  color: #333;
+  text-decoration: none;
+}
+
+.mt-lightbox__content {
+  display: block;
+  position: relative;
+}

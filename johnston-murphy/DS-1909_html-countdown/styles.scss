@@ -1,0 +1,236 @@
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// ==================================================================
+// Countdown
+// ==================================================================
+.mt-countdown {
+    align-content: center;
+    align-items: center;
+    background: #000;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media screen and (min-width: $breakpoint-lg) {
+        flex-direction: row;
+    }
+
+
+
+    & * {
+        box-sizing: border-box;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    a {
+
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    // ------------------------------------------------------------------
+    // Timer
+    // ------------------------------------------------------------------
+    &__timer {
+        align-content: center;
+        align-items: center;
+        align-self: stretch;
+        background: #fff;
+        border: 3px solid #000;
+        border-right: none;
+        display: inline-flex;
+        flex: 1 1 45%;
+        font-size: 16px;
+        font-weight: bold;
+        justify-content: center;
+        overflow: hidden;
+        padding-right: 10px;
+        position: relative;
+        text-align: center;
+        width: 45%;
+        @media screen and (min-width: $breakpoint-md) {
+            flex: 1 1 33%;
+            width: 33%;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: 24px;
+            padding-bottom: 24px;
+            padding-top: 24px;
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            font-size: 32px;
+        }
+
+        &::after {
+            background: #000;
+            content: "";
+            display: block;
+            height: 200%;
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            transform-origin: center;
+            width: 20px;
+        }
+
+        span {
+            margin-top: -12px;
+            min-width: 20px;
+            @media screen and (min-width: $breakpoint-lg) {
+                min-width: 32px;
+            }
+            @media screen and (min-width: $breakpoint-xl) {
+                min-width: 40px;
+            }
+        }
+    }
+
+
+    .mt_tickerElem {
+        color: #000;
+        font-variant: tabular-nums;
+        padding-bottom: 12px;
+        position: relative;
+        @media screen and (min-width: $breakpoint-lg) {
+            padding-bottom: 15px;
+        }
+
+        @media screen and (max-width: ($breakpoint-lg - 1)) {
+            &.mt_hours .mt_suffix {
+                &::after {
+                    content: "HRS";
+                }
+            }
+            &.mt_minutes  .mt_suffix {
+                &::after {
+                    content: "MINS";
+                }
+            }
+            &.mt_seconds  .mt_suffix {
+                &::after {
+                    content: "SECS";
+                }
+            }
+        }
+    }
+
+    .mt_time {
+
+    }
+    .mt_suffix {
+        bottom: 0;
+        font-size: 0;
+        font-weight: normal;
+        left: 50%;
+        position: absolute;
+        text-transform: uppercase;
+        transform: translateX(-50%);
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: 12px;
+        }
+        @media screen and (max-width: ($breakpoint-lg - 1)) {
+            &::after {
+                font-size: 10px;
+            }
+        }
+    }
+
+
+    // ------------------------------------------------------------------
+    // Text
+    // ------------------------------------------------------------------
+    &__text {
+        align-content: center;
+        align-items: center;
+        border: 3px solid #000;
+        border-left: none;
+        color: #fff;
+        display: inline-flex;
+        flex: 1 1 55%;
+        flex-wrap: wrap;
+        justify-content: center;
+        letter-spacing: 1px;
+        overflow: hidden;
+        padding: 5px 10px;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        width: 55%;
+        @media screen and (min-width: $breakpoint-md) {
+            flex: 1 1 100%;
+            width: 100%;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            flex-wrap: nowrap;
+        }
+
+        p {
+            font-size: 10px;
+            font-weight: lighter;
+            line-height: 1;
+            width: 100%;
+            @media screen and (min-width: $breakpoint-lg) {
+                font-size: 14px;
+                margin-left: 5px;
+                margin-right: 5px;
+                width: auto;
+            }
+            @media screen and (min-width: $breakpoint-xl) {
+                font-size: 20px;
+            }
+        }
+
+        a {
+            color: #fff;
+            display: inline-block;
+            font-size: 10px;
+            line-height: 1;
+            padding-top: 4px;
+            text-decoration: underline;
+            width: 100%;
+            @media screen and (min-width: $breakpoint-lg) {
+                font-size: 12px;
+                margin-left: 5px;
+                margin-right: 5px;
+                padding-top: 0;
+                width: auto;
+            }
+            @media screen and (min-width: $breakpoint-xl) {
+                padding-top: 2px;
+            }
+        }
+    }
+
+
+
+
+
+
+} // .mt-countdown
+
+
+
+/* ===================================================== */
+/* Adjust #header for Mobile
+/* ===================================================== */
+body.mt-relative #header {
+    @media screen and (max-width: ($breakpoint-md - 1)) {
+        position: relative !important;
+    }
+}
+/* ===================================================== */
+/* Adjust Padding on #main for Mobile
+/* ===================================================== */
+body.mt-relative #main {
+    @media screen and (max-width: ($breakpoint-md - 1)) {
+        padding-top: 0 !important;
+    }
+}

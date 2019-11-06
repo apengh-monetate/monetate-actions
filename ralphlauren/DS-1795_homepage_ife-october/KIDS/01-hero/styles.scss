@@ -1,0 +1,126 @@
+.mt_hero {
+    -webkit-font-smoothing: antialiased;
+    border: 0;
+    clear: both;
+    display: block;
+    font-size: 2.5vw;
+    line-height: initial;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    max-width: 1920px;
+    overflow: hidden;
+    overflow-x: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        font-size: 1.171303vw;
+        margin-bottom: 55px;
+    }
+    @media screen and (min-width: 1366px) {
+        font-size: 16px;
+    }
+
+
+    &__picture {
+        &--desktop {
+
+        }
+        &--mobile {
+
+        }
+        &--img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            @media screen and (max-width: 360px) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__video {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+
+        &.mobile {
+            display: block;
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+        &.desktop {
+            display: none;
+            @media screen and (min-width: 768px) {
+                display: block;
+            }
+        }
+    }
+
+
+    &__link {
+        display: block;
+        height: 100%;
+        left: 0;
+        overflow: visible;
+        pointer-events: auto;
+        position: absolute;
+        text-decoration: none !important;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        &:hover {
+            text-decoration: none !important;
+        }
+
+        &.boys {
+            // background: rgba(255, 0, 0, 0.3);
+            bottom: 0;
+            left: 30%;
+            top: 90%;
+            width: 20%;
+            z-index: 2;
+            @media screen and (min-width: 768px) {
+                left: 11%;
+                top: 57%;
+                width: 10%;
+            }
+        }
+    }
+
+
+    // Video Button
+    &__video-btn {
+        bottom: auto;
+        cursor: pointer;
+        height: 2.5em;
+        opacity: 0.5;
+        position: absolute;
+        right: 1em;
+        top: 28em;
+        width: 2.5em;
+        z-index: 99;
+        @media screen and (min-width: 768px) {
+            bottom: 1.5em;
+            top: auto;
+        }
+    }
+
+    // Playing
+    &.playing {
+        .mt_hero__video-btn {
+            background: url('https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/default/dw433aa447/images/special/runway/2018spring/02142018-w-runway-hub-the-show/new_pause_1.svg') no-repeat 50% 50%;
+        }
+    }
+
+    // Paused
+    &.paused {
+        .mt_hero__video-btn {
+            background: url('https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/default/dwc4d36b9a/images/special/runway/2018spring/02142018-w-runway-hub-the-show/new_play_1.svg') no-repeat 50% 50%;
+        }
+    }
+
+} // .mt_hero

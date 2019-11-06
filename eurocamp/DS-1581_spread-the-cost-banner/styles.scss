@@ -1,0 +1,98 @@
+$breakpoint-xs: 480px;
+$breakpoint-sm: 600px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+#r-payment-options .olb-radio-boxes {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $breakpoint-xs) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: $breakpoint-sm) {
+        width: 440px;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+        width: 520px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        width: 75%;
+    }
+
+    .radio-btn {
+        width: 100%;
+        @media screen and (min-width: $breakpoint-xs) {
+            border-radius: 10px !important;
+            border-width: 1px;
+            width: calc(50% - 10px);
+        }
+        @media screen and (min-width: $breakpoint-md) {
+            align-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        @media screen and (min-width: $breakpoint-xs) {
+            &:nth-child(1) {
+                margin-left: 0;
+                margin-right: 10px;
+            }
+            &:nth-child(2) {
+                border-color: #999;
+                margin-left: 10px;
+                margin-right: 0;
+            }
+            &.selected {
+                border-color: #f2b67a;
+            }
+        }
+
+        label {
+            @media screen and (min-width: $breakpoint-md) {
+                &::after {
+                    content: " - ";
+                    display: inline-block;
+                    margin-left: 4px;
+                }
+            }
+        }
+
+        input[type="radio"] {
+            @media screen and (min-width: $breakpoint-md) {
+                margin-right: 6px;
+                margin-top: 6px;
+                order: -1;
+            }
+        }
+
+        strong {
+            @media screen and (min-width: $breakpoint-md) {
+                line-height: 24px;
+                margin-left: 4px;
+            }
+        }
+    }
+}
+
+.mt_spread-cost {
+    color: #e0700a;
+    display: block;
+    flex: 1 0 100%;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 12px;
+    padding: 10px;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: 12px;
+        line-height: 15px;
+        padding-left: 16px;
+        text-align: left;
+    }
+}

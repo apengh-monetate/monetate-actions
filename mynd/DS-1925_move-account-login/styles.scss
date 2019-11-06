@@ -1,0 +1,35 @@
+/* ===================================================== */
+/* Move 'Sign In' Link
+/* ===================================================== */
+@media screen and (min-width: 992px) {
+    .nav-container .nav-right {
+        & > a[href="/accounts/sign-in"] {
+            margin-left: 115px !important;
+            & ~ #cart-dropdown {
+                margin-left: 10px !important;
+                & > div.cart {
+                    margin-left: 10px !important;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* ===================================================== */
+/* Move 'Account' Link
+/* ===================================================== */
+@media screen and (min-width: 992px) {
+    .nav-container {
+        .desktop-only.nav-dropdown {
+            margin-left: 115px !important;
+            & ~ #cart-dropdown {
+                margin-left: 10px !important;
+                & > div.cart {
+                    margin-left: 10px !important;
+                }
+            }
+        }
+    }
+}

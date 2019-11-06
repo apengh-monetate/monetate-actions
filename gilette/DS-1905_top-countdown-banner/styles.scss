@@ -1,0 +1,53 @@
+.mt-countdown {
+    align-items: center;
+    background: #00C2DF;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 14px;
+    justify-content: center;
+    line-height: 1.2;
+    padding: 5px;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        font-size: 18px;
+    }
+    @media screen and (min-width: 992px) {
+        font-size: 22px;
+    }
+
+    &__msg {
+        font-family: Gilroy-SemiBold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+        margin: 0;
+    }
+
+
+    &__timer {
+        @media screen and (min-width: 768px) {
+            margin-left: 20px;
+        }
+    }
+
+    .mt_tickerElem {
+        font-family: Gilroy-SemiBold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-variant: tabular-nums;
+    }
+    .mt_time,
+    .mt_suffix {
+        font-family: Gilroy-SemiBold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    .mobile-only {
+        display: block;
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+}
+
+
+.body {
+    padding-top: 30px;
+}

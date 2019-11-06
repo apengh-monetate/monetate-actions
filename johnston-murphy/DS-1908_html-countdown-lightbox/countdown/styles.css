@@ -1,0 +1,112 @@
+/* ===================================================== */
+/* Custom Styles
+/* ===================================================== */
+.mt-countdown {
+  background-color: #fff;
+  background-image: url("{{BKG_URL}}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 200px;
+  position: relative;
+  width: 290px;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown {
+    height: 320px;
+    width: 480px;
+  }
+}
+
+.mt-countdown__inner {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 25%;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown__inner {
+    left: 45%;
+    top: 25%;
+  }
+}
+
+.mt-countdown__heading {
+  font-size: 14px;
+  font-weight: normal;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown__heading {
+    margin-bottom: 24px;
+  }
+}
+
+.mt-countdown__timer {
+  padding-bottom: 12px;
+}
+
+.mt-countdown__colon {
+  font-size: 24px;
+}
+
+.mt-countdown .mt_tickerElem {
+  position: relative;
+}
+
+.mt-countdown .mt_tickerElem .mt_time {
+  background: #fff;
+  font-size: 24px;
+  font-variant: tabular-nums;
+  font-weight: 100;
+  line-height: 1;
+  padding: 4px 8px;
+}
+
+.mt-countdown .mt_tickerElem .mt_suffix {
+  bottom: -24px;
+  font-size: 10px;
+  left: 50%;
+  position: absolute;
+  text-transform: uppercase;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mt-countdown__disclaimer {
+  font-size: 11px;
+  line-height: 14px;
+  margin: 0;
+  margin-top: 24px;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown__disclaimer {
+    margin-top: 36px;
+  }
+}

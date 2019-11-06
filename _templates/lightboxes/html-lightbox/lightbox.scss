@@ -2,56 +2,56 @@ $brand: #e90606;
 $black: #282f2f;
 
 .mt-lightbox {
-  background: #fff;
-  border: none;
-  display: block;
-  left: 50%;
-  min-width: 320px;
-  padding: 0;
-  position: fixed;
-  text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: auto;
-  z-index: 9999;
-  @media screen and (min-width: 768px) {
-    min-width: 480px;
-  }
-
-  &__close {
-    align-content: center;
-    align-items: center;
-    background: none;
+    background: #fff;
     border: none;
-    color: #666;
-    cursor: pointer;
-    display: flex;
-    font-size: 24px;
-    font-weight: 100;
-    justify-content: center;
-    line-height: 36px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    text-decoration: none;
-    top: 0;
-    transition: all 0.3s ease;
-    width: 36px;
-    z-index: 1;
-    &:hover,
-    &:focus,
-    &:active {
-      background: none;
-      color: #333;
-      text-decoration: none;
-    }
-  }
-
-  &__content {
     display: block;
-    padding-bottom: 100px;
-    padding-top: 100px;
-    position: relative;
-  }
+    left: 50%;
+    min-width: 320px;
+    padding: 0;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    z-index: 9999;
+    @media screen and (min-width: 768px) {
+        min-width: 480px;
+    }
+
+    &__close {
+        align-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #666;
+        cursor: pointer;
+        display: flex;
+        font-size: 24px;
+        font-weight: 100;
+        justify-content: center;
+        line-height: 36px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        text-decoration: none;
+        top: 0;
+        transition: all 0.3s ease;
+        width: 36px;
+        z-index: 1;
+        &:hover,
+        &:focus,
+        &:active {
+            background: none;
+            color: #333;
+            text-decoration: none;
+        }
+    }
+
+    &__content {
+        display: block;
+        padding-bottom: 100px;
+        padding-top: 100px;
+        position: relative;
+    }
 
 }

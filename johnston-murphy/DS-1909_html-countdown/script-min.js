@@ -1,0 +1,1 @@
+!function(){var e=document.querySelector("body"),t=document.querySelector("#wrapper > .mt_countdown"),n=t.offsetHeight;window.addEventListener("resize",(function(){n=t.offsetHeight}));var o=function(){return window.scrollY},r=function(){0===o()||o()<=n?e.classList.add("mt-relative"):o()>0&&o()>n&&e.classList.remove("mt-relative")};r(),window.addEventListener("scroll",r)}();

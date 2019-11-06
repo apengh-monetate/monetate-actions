@@ -1,0 +1,52 @@
+$breakpoint-lg: 75em;
+
+@media screen and (min-width: $breakpoint-lg) {
+    .nav.nav--external .nav__children {
+        .visuallyhide--large {
+            display: none !important;
+        }
+        ul {
+            background: #fff;
+            margin: 0;
+            padding: 0 2rem 0 1.5rem;
+        }
+
+        li {
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            margin: 0;
+            padding: 0;
+        }
+
+        a.nav--link {
+            border-bottom: none;
+            margin: 0;
+            padding: 0;
+            > span {
+                display: block;
+                padding: 6px 6px 6px 36px;
+            }
+            .icon--arrow--right {
+                svg {
+                    fill: #ce1126;
+                    height: 16px;
+                    margin: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 16px;
+                }
+            }
+        }
+
+    }
+
+
+    .nav.nav--primary {
+        .nav__children-wrap {
+            padding-top: 0 !important;
+        }
+    }
+
+}

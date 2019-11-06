@@ -1,0 +1,175 @@
+.monetate-product-grid {
+    box-sizing: border-box;
+    clear: both;
+    position: relative;
+    @media screen and (min-width: 1025px) {
+        display: flex;
+    }
+
+    & * {
+        box-sizing: border-box;
+    }
+
+    // ------------------------------------------------------------------
+    // Title
+    // ------------------------------------------------------------------
+    &::before {
+        content: "We Can\2019t Keep These In Stock";
+        display: inline-block;
+        font-family: "Didot", sans-serif;
+        font-size: 4vw;
+        margin-top: 8%;
+        text-align: center;
+        text-transform: uppercase;
+        top: 15%;
+        width: 100%;
+        @media screen and (min-width: 1025px) {
+            align-content: center;
+            align-items: center;
+            display: inline-flex;
+            font-size: 2vw;
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-right: 10px;
+            text-align: right;
+            width: 15%;
+        }
+    }
+
+
+    // ------------------------------------------------------------------
+    // Page
+    // ------------------------------------------------------------------
+    .mpg-page {
+        @media screen and (min-width: 1025px) {
+            float: right !important;
+            width: 80%;
+        }
+    }
+
+
+    // ------------------------------------------------------------------
+    // Row
+    // ------------------------------------------------------------------
+    .mpg-row {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media screen and (max-width: 1025px) and (orientation: landscape) {
+            flex-wrap: nowrap;
+        }
+        @media screen and (min-width: 1025px) {
+            flex-wrap: nowrap;
+        }
+    }
+
+
+    // ------------------------------------------------------------------
+    // Item
+    // ------------------------------------------------------------------
+    .mpg-item {
+        flex: 1 1 50% !important;
+        padding: 10px;
+        position: relative;
+        width: 50% !important;
+        @media screen and (max-width: 1025px) and (orientation: landscape) {
+            flex: 1 1 25% !important;
+            width: 25% !important;
+        }
+        @media screen and (min-width: 768px) {
+            flex: 1 1 25% !important;
+            width: 25% !important;
+        }
+    }
+
+
+    // ------------------------------------------------------------------
+    // Link
+    // ------------------------------------------------------------------
+    .mpg-item-link {
+        display: block;
+        position: relative;
+    }
+
+    // ------------------------------------------------------------------
+    // Image
+    // ------------------------------------------------------------------
+    .mpg-image-container {
+        font-size: 0;
+        line-height: 0;
+        &::after {
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+            bottom: 0;
+            content: "";
+            display: block;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            @media screen and (max-width: 1025px) and (orientation: landscape) {
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+                top: 33%;
+            }
+        }
+    }
+    .mpg-image {
+        display: block;
+        max-width: 100%;;
+    }
+
+
+
+    // ------------------------------------------------------------------
+    // Text
+    // ------------------------------------------------------------------
+    .mpg-text {
+        bottom: 0;
+        color: #fff;
+        font-family: "Avenir", sans-serif;
+        font-size: 11px;
+        left: 0;
+        line-height: 15px;
+        padding: 10px;
+        position: absolute;
+        right: 0;
+    }
+
+
+    // ------------------------------------------------------------------
+    // Name
+    // ------------------------------------------------------------------
+    .mpg-name {
+        display: inline-block;
+        overflow: hidden;
+        width: 100%;
+    }
+
+
+    // ------------------------------------------------------------------
+    // Price
+    // ------------------------------------------------------------------
+    .mpg-price {
+        display: inline-block;
+    }
+
+    .mpg-alternate-price {
+        margin-right: 5px;
+        text-decoration: line-through;
+        & + .mpg-price {
+           color: #f00;
+       }
+    }
+
+
+    .fakeCategoryMobile-girls-name {
+        text-decoration: underline;
+        text-transform: none;
+    }
+
+    .mpg-row-border {
+        display: none;
+    }
+
+}

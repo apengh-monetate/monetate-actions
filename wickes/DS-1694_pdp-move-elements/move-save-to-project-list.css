@@ -1,0 +1,19 @@
+.save-shop-list,
+.saved-shop-list {
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+}
+
+.save-shop-list .btn,
+.saved-shop-list .btn {
+  height: 37px !important;
+  padding: 5px 8px 3px !important;
+  width: 37px !important;
+}
+
+.save-shop-list .btn .fa-clipboard-list-check,
+.saved-shop-list .btn .fa-clipboard-list-check {
+  margin-left: 2px !important;
+  margin-top: -4px !important;
+}

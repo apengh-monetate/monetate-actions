@@ -1,0 +1,300 @@
+$monetateId: #MONETATE-ID;
+// $monetateId: #mt-slider-3111734-0;
+
+
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#{$monetateId} {
+    position: relative;
+
+    li {
+        list-style: none;
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        margin: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider-mask],
+    &[data-slider-wrapper="fade"] [data-slider-mask] {
+        touch-action: pan-y;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        touch-action: pan-x;
+    }
+
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider] {
+        white-space: nowrap !important;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        float: none;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slide] {
+        display: inline-block !important;
+        vertical-align: top;
+        white-space: normal;
+    }
+    &[data-slider-wrapper="vertical"] [data-slide] {
+        display: block !important;
+    }
+    &[data-slider-wrapper="fade"] [data-slide] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+    &[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+    // ==================================================================
+    // Buttons / Pagination
+    // ==================================================================
+    [data-pagination-slide],
+    [data-prev-button],
+    [data-next-button]{
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    [data-pagination-slide] * {
+        pointer-events: none;
+    }
+
+} // MONETATE-ID
+
+
+
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#{$monetateId} {
+    text-align: center;
+
+
+    // ==================================================================
+    // Slider Container Template
+    // ==================================================================
+    .mt_slider {
+        &__container {
+
+        }
+        &__header {
+            font-size: 16px;
+            height: 15px;
+            margin: 20px 0 10px 0;
+            text-align: center;
+            h3 {
+                color: #040404 !important;
+                display: inline-block;
+                font-size: 1.2em;
+                font-weight: 600;
+                letter-spacing: 2px;
+                margin: 0;
+                padding: 4px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+        &__wrapper {
+            align-items: center;
+            border: 1px solid #000;
+            display: flex;
+            margin-top: 15px;
+            padding: 10px;
+            @media screen and (max-width: 767px) {
+                border: none;
+            }
+        }
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        display: inline-block;
+        margin: 0 auto !important;
+        width: calc(100% - 60px);
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        height: 400px!important;
+    }
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+
+    }
+
+
+    // ==================================================================
+    // Buttons
+    // ==================================================================
+    [data-prev-button],
+    [data-next-button] {
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        -webkit-user-select: none;
+        background: none;
+        border: none;
+        color: #000;
+        font-size: 25px;
+        padding: 0;
+        position: absolute;
+        top: 45%;
+        user-select: none;
+    }
+    [data-prev-button] {
+        left: 10px;
+    }
+    [data-next-button] {
+        right: 10px;
+    }
+    &[data-slider-wrapper="vertical"] [data-prev-button] {
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    &[data-slider-wrapper="vertical"] [data-next-button] {
+        bottom: 0;
+        left: 50%;
+        right: auto;
+        top: auto;
+        transform: translateX(-50%);
+    }
+
+
+    // ==================================================================
+    // Pagination
+    // ==================================================================
+    [data-pagination="thumbnails"] [data-pagination-slide] {
+        background: none;
+        border-radius: 0;
+        height: auto;
+        width: 40px;
+    }
+
+    [disabled] {
+        opacity: 0.5;
+    }
+
+    [data-pagination-slide] {
+        background: #000;
+        border-radius: 6px;
+        display: inline-block;
+        height: 12px;
+        margin: 4px;
+        opacity: 0.5;
+        width: 12px;
+        &[data-slide-active] {
+            opacity: 1;
+        }
+    }
+    [data-pagination*="dots"] [data-pagination-slide] {
+        /* remove below for pagination numbers */
+        text-indent: -9999px;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        > div {
+            padding: 10px;
+        }
+        img {
+            max-width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+
+    // ==================================================================
+    // Slide Template
+    // ==================================================================
+    .mt_slide {
+        &:hover {
+            .mt_slide__title {
+                text-decoration: underline;
+            }
+        }
+
+
+        &__img {
+            img {
+
+            }
+        }
+
+        &__text {
+            color: #111;
+            letter-spacing: .5px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        &__title {
+
+        }
+
+        &__price {
+            display: none;
+            &--reg {
+                font-weight: 400;
+                text-decoration: line-through;
+            }
+            &--sale {
+                color: #f00;
+            }
+        }
+
+    }
+
+    [data-missing-keys*="salePrice"] {
+        .mt_slide {
+            &__price {
+                &--reg {
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+                &--sale {
+                    display: none;
+                }
+            }
+        }
+    }
+}

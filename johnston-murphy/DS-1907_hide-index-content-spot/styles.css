@@ -1,0 +1,9 @@
+.grid-item.ca-item.top-left-item.showDesktop.grid-item-height2 {
+  display: none !important;
+}
+
+.ic-grid .grid-item {
+  left: 0 !important;
+  position: relative !important;
+  top: 0 !important;
+}

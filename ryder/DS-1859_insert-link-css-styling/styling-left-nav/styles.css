@@ -1,0 +1,39 @@
+@media screen and (min-width: 75em) {
+  .nav.nav--external .nav__children .visuallyhide--large {
+    display: none !important;
+  }
+  .nav.nav--external .nav__children ul {
+    background: #fff;
+    margin: 0;
+    padding: 0 2rem 0 1.5rem;
+  }
+  .nav.nav--external .nav__children li {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    padding: 0;
+  }
+  .nav.nav--external .nav__children a.nav--link {
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav.nav--external .nav__children a.nav--link > span {
+    display: block;
+    padding: 6px 6px 6px 36px;
+  }
+  .nav.nav--external .nav__children a.nav--link .icon--arrow--right svg {
+    fill: #ce1126;
+    height: 16px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 16px;
+  }
+  .nav.nav--primary .nav__children-wrap {
+    padding-top: 0 !important;
+  }
+}

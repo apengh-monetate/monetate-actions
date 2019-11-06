@@ -1,0 +1,17 @@
+<section class="mt_slide" data-pid="{{id}}">
+    <a class="mt_slide__img" href="{{link}}">
+      <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+    </a>
+    <div class="mt_slide__text">
+        <a class="mt_slide__title" href="{{link}}">{{title}}</a>
+        <div class="mt_slide__price">
+            <span class="mt_slide__price--reg">{{price|priceFormat: $1,000.00}}</span>
+            <span class="mt_slide__price--sale">{{salePrice|priceFormat: $1,000.00}}</span>
+        </div>
+    </div>
+    <div class="mt_slide__ratings">
+        <span class="mt_slide__ratings-stars" data-average-rating="{{avgRating}}"></span>
+        <span class="mt_slide__ratings-decimal">{{avgRating}}</span>
+        <a class="mt_slide__ratings-count" href="{{link}}">({{reviewCount}})</a>
+    </div>
+</section>

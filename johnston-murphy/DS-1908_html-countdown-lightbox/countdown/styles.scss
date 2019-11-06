@@ -1,0 +1,106 @@
+$breakpoint-md: 768px;
+
+
+
+/* ===================================================== */
+/* Custom Styles
+/* ===================================================== */
+.mt-countdown {
+    background-color: #fff;
+    background-image: url("{{BKG_URL}}");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 200px;
+    position: relative;
+    width: 290px;
+    @media screen and (min-width: $breakpoint-md) {
+        height: 320px;
+        width: 480px;
+    }
+
+    // ------------------------------------------------------------------
+    // Inner
+    // ------------------------------------------------------------------
+    &__inner {
+        align-content: center;
+        align-items: center;
+        bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        left: 25%;
+        padding: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        @media screen and (min-width: $breakpoint-md) {
+            left: 45%;
+            top: 25%;
+        }
+    }
+
+    // ------------------------------------------------------------------
+    // Heading
+    // ------------------------------------------------------------------
+    &__heading {
+        font-size: 14px;
+        font-weight: normal;
+        font-weight: 100;
+        letter-spacing: 3px;
+        margin: 0;
+        margin-bottom: 16px;
+        padding: 0;
+        text-transform: uppercase;
+        @media screen and (min-width: $breakpoint-md) {
+            margin-bottom: 24px;
+        }
+    }
+
+    // ------------------------------------------------------------------
+    // Timer
+    // ------------------------------------------------------------------
+    &__timer {
+        padding-bottom: 12px;
+    }
+    &__colon {
+        font-size: 24px;
+    }
+    .mt_tickerElem {
+        position: relative;
+        .mt_time {
+            background: #fff;
+            font-size: 24px;
+            font-variant: tabular-nums;
+            font-weight: 100;
+            line-height: 1;
+            padding: 4px 8px;
+        }
+        .mt_suffix {
+            bottom: -24px;
+            font-size: 10px;
+            left: 50%;
+            position: absolute;
+            text-transform: uppercase;
+            transform: translateX(-50%);
+        }
+    }
+
+
+
+    // ------------------------------------------------------------------
+    // Disclaimer
+    // ------------------------------------------------------------------
+    &__disclaimer {
+        font-size: 11px;
+        line-height: 14px;
+        margin: 0;
+        margin-top: 24px;
+        padding: 0;
+        @media screen and (min-width: $breakpoint-md) {
+            margin-top: 36px;
+        }
+    }
+
+}

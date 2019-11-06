@@ -14,10 +14,10 @@
 
     <div class="mt_email-lightbox__form">
         <p class="mt_email-lightbox__form-info"><span>*</span> Please complete all boxes</p>
-        <form id="emailForm" name="emailCollectionForm" method="post" action="/shop/emailsignup/save.action">
+        <form method="post" action="/shop/emailsignup/save.action">
             <div>
-                <label id="personalTitleLabel" class="">Title <span>*</span></label>
-                <select tabindex="0" name="Title" id="personalTitle" errormsg="Title" label="personalTitleLabel">
+                <label id="mtPersonalTitleLabel" class="">Title <span>*</span></label>
+                <select tabindex="0" name="Title" id="mtPersonalTitle" errormsg="Title" label="mtPersonalTitleLabel">
                     <option value="">Please select</option>
                     <option value="Mrs">Mrs</option>
                     <option value="Ms">Ms</option>
@@ -27,32 +27,32 @@
             </div>
 
             <div>
-                <label id="personalFirstnameLabel">First Name <span>*</span></label>
-                <input type="text" maxlength="30" tabindex="0" name="FirstName" autocomplete="off" id="personalFirstName" required="1" errormsg="First Name" defaulttext="Type your First Name here" label="personalFirstnameLabel">
+                <label for="mtPersonalFirstname">First Name <span>*</span></label>
+                <input type="text" maxlength="30" tabindex="0" name="FirstName" autocomplete="off" id="mtPersonalFirstname" mtrequired="true" />
             </div>
 
             <div>
-                <label id="personalSurnameLabel">Surname <span>*</span></label>
-                <input type="text" maxlength="30" tabindex="0" name="Surname" autocomplete="off" id="personalSurname" required="1" errormsg="Surname" defaulttext="Type your Surname here" label="personalSurnameLabel">
+                <label for="mtPersonalSurname">Surname <span>*</span></label>
+                <input type="text" maxlength="30" tabindex="0" name="Surname" autocomplete="off" id="mtPersonalSurname" mtrequired="true" />
             </div>
 
             <div>
-                <label id="emailLabel">Email Address <span>*</span></label>
-                <input type="text" id="inputemail" defaulttext="Type your Email Address here" errormsg="Email Address" label="emailLabel" required="1" autocomplete="off" name="EmailAddress" tabindex="0" maxlength="250">
+                <label id="mtEmail">Email Address <span>*</span></label>
+                <input type="email" id="mtEmail" autocomplete="off" name="EmailAddress" tabindex="0" maxlength="250" />
             </div>
 
             <div>
-                <label id="emailConfirmLabel">Re-type Email Address <span>*</span></label>
-                <input type="text" id="emailConfirm" defaulttext="Re-type your Email Address here" errormsg="Re-type Email Address" required="1" label="emailConfirmLabel" autocomplete="off" name="EmailAddressConfirm" tabindex="0" maxlength="250">
+                <label id="mtEmailConfirm">Re-type Email Address <span>*</span></label>
+                <input type="email" id="mtEmailConfirm" autocomplete="off" name="EmailAddressConfirm" tabindex="0" maxlength="250" />
             </div>
 
             <div style="display: none;">
                 <label id="mobileLabel">Mobile</label>
-                <input type="mobile" id="mobile" defaulttext="Type your mobile number in here" errormsg="Mobile Number" label="mobileLabel" name="MobilePhone" tabindex="0">
+                <input type="mobile" id="mobile" defaulttext="Type your mobile number in here" errormsg="Mobile Number" label="mobileLabel" name="MobilePhone" tabindex="0" />
             </div>
 
             <div id="eMeSignUpBtn" class="mt_email-lightbox__form-btn">
-                <button type="submit" class="btn primaryBtn submit" tabindex="0">Sign Up</button>
+                <button type="submit" class="submit" tabindex="0">Sign Up</button>
             </div>
 
             <p class="mt_email-lightbox__form-footer">You may unsubscribe from this mailing at any time as detailed in the emails sent to you.</p>

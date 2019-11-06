@@ -1,0 +1,255 @@
+{
+    "id": 433905,
+    "title": "Recommendation Slider with Ratings Stars (Vertical)",
+    "description": "Inserts a slider with reco items.",
+    "op": "iRecSlider",
+    "slot": "none",
+    "slot_type": "none",
+    "category": "endcap",
+    "subcategory": "other",
+    "action_events": [
+        "op_click",
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "str",
+                "name": "selector",
+                "value": "#right_nav"
+            },
+            "widget": {
+                "label": "Insert Selector",
+                "type": "CssSelectorField",
+                "description": "Selector to find the node where the slider will be inserted.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "imeth",
+                "value": "takeover"
+            },
+            "widget": {
+                "label": "Insert Method",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "type": "StringSelectField",
+                "description": "Method to use when inserting the slider relative to the selected node.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "insertOptions",
+                "value": "RecheckForElement"
+            },
+            "widget": {
+                "description": "RecheckForElement: If the selector is not found, wait up to 3 seconds for it to show up. SelectMultipleElements: If the selector matches multiple places, do you want to insert at each of them?",
+                "label": "Insert Options",
+                "action_visible": true,
+                "hiddenMenu": true,
+                "allIsValid": true,
+                "type": "CheckboxArrayAsString",
+                "options": [
+                    "RecheckForElement",
+                    "SelectMultipleElements"
+                ]
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "recommendation_set_dict",
+                "name": "productsJson",
+                "value": {
+                    "fallback_rec_set_ids": [],
+                    "max_items": 1000,
+                    "pinned_product_ids": [],
+                    "min_items": 1,
+                    "custom_return_fields": [
+                        "avg_rating",
+                        "review_count"
+                    ],
+                    "rec_set_ids": [
+                        3672
+                    ]
+                }
+            },
+            "widget": {
+                "label": "Recommendation Set",
+                "type": "RecommendationSet",
+                "description": "Group of products to put in the endcap.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "maxItems",
+                "value": 12
+            },
+            "widget": {
+                "label": "Maximum Number of Items",
+                "type": "IntegerField",
+                "description": "Maximum number of merch items to have in the slider.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "orientation",
+                "value": "vertical"
+            },
+            "widget": {
+                "label": "Orientation",
+                "options": [
+                    {
+                        "name": "horizontal",
+                        "label": "Horizontal - Left to Right"
+                    },
+                    {
+                        "name": "horizontal-rtl",
+                        "label": "Horizontal - Right to Left"
+                    },
+                    {
+                        "name": "vertical",
+                        "label": "Vertical"
+                    }
+                ],
+                "type": "StringSelectField",
+                "description": "Orientation of the slider.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "sliderTemplate",
+                "value": "<section class=\"mt_slider__container\">\n    <div class=\"mt_slider__header\">\n        <h3>You May Also Like...</h3>\n    </div>\n\n    <div class=\"mt_slider__wrapper\">\n        <button data-prev-button></button>\n        {{SLIDER}}\n        {{PAGINATION}}\n        <button data-next-button></button>\n    </div>\n</section>"
+            },
+            "widget": {
+                "label": "Slider Container Template",
+                "type": "HtmlCodeField",
+                "description": "Include an HTML template to build the slider structure. Placeholder example: '{{slider}}'. Possible placeholders: slider, pagination. Optionally, add the attributes 'data-prev-button' and 'data-next-button' to add previous and next slide buttons. If optional arrow images are included, elements with the attribute 'data-prev-button' and 'data-next-button' are required for them to display.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "itemTemplate",
+                "value": "<section class=\"mt_slide\" data-pid=\"{{id}}\">\n    <a class=\"mt_slide__img\" href=\"{{link}}\">\n      <img src=\"{{imageLink}}\" alt=\"{{id}} - {{title}}\">\n    </a>\n    <div class=\"mt_slide__text\">\n        <a class=\"mt_slide__title\" href=\"{{link}}\">{{title}}</a>\n        <div class=\"mt_slide__price\">\n            <span class=\"mt_slide__price--reg\">{{price|priceFormat: $1,000.00}}</span>\n            <span class=\"mt_slide__price--sale\">{{salePrice|priceFormat: $1,000.00}}</span>\n        </div>\n    </div>\n    <div class=\"mt_slide__ratings\">\n        <span class=\"mt_slide__ratings-stars\" data-average-rating=\"{{avgRating}}\"></span>\n        <span class=\"mt_slide__ratings-decimal\">{{avgRating}}</span>\n        <a class=\"mt_slide__ratings-count\" href=\"{{link}}\">({{reviewCount}})</a>\n    </div>\n</section>"
+            },
+            "widget": {
+                "label": "Slide Template",
+                "type": "HtmlCodeField",
+                "description": "Placeholder example: '{{price}}'. Possible placeholders include all product catalog fields. Examples: title, id, itemGroupId, price, salePrice, link, imageLink",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "css",
+                "value": {
+                    "content": "/* ===================================================== */\n/* DEFAULT SLIDER STYLES\n/* Edit at your own risk!\n/* ===================================================== */\n#MONETATE-ID {\n  position: relative;\n}\n\n#MONETATE-ID li {\n  list-style: none;\n}\n\n#MONETATE-ID [data-slider-mask] {\n  margin: 0 !important;\n  overflow: hidden !important;\n  padding: 0 !important;\n  position: relative !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider-mask],\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slider-mask] {\n  -ms-touch-action: pan-y;\n      touch-action: pan-y;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  -ms-touch-action: pan-x;\n      touch-action: pan-x;\n}\n\n#MONETATE-ID [data-slider] {\n  display: block;\n  margin: 0 !important;\n  padding: 0 !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider] {\n  white-space: nowrap !important;\n}\n\n#MONETATE-ID [data-slide] {\n  float: none;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slide] {\n  display: inline-block !important;\n  vertical-align: top;\n  white-space: normal;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slide] {\n  display: block !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide] {\n  opacity: 0;\n  position: absolute;\n  top: 0;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide][data-slide-active] {\n  opacity: 1;\n  position: relative;\n  z-index: 1;\n}\n\n#MONETATE-ID [data-pagination-slide],\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n  cursor: pointer;\n  z-index: 1;\n}\n\n#MONETATE-ID [data-pagination-slide] * {\n  pointer-events: none;\n}\n\n/* ===================================================== */\n/* CUSTOM SLIDER STYES\n/* ===================================================== */\n#MONETATE-ID {\n  box-sizing: border-box;\n  clear: both;\n  margin: 0 auto;\n  max-width: 1040px;\n  padding: 0;\n  padding-bottom: 50px;\n  text-align: center;\n  width: 100%;\n}\n\n#MONETATE-ID [data-slider-mask] {\n  display: inline-block;\n  width: calc(100% - 78px);\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  height: 720px !important;\n  width: 100%;\n}\n\n#MONETATE-ID [data-slide] img {\n  max-width: 100%;\n}\n\n#MONETATE-ID [data-slide] a {\n  text-decoration: none;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slide] {\n  height: 240px !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slide] > div {\n  padding-bottom: 15px;\n}\n\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -o-user-select: none;\n  -webkit-user-select: none;\n  background: none;\n  border: none;\n  color: #000;\n  display: block;\n  font-size: 25px;\n  padding: 0;\n  position: absolute;\n  top: 45%;\n  user-select: none;\n}\n\n#MONETATE-ID [data-prev-button]:hover, #MONETATE-ID [data-prev-button]:active, #MONETATE-ID [data-prev-button]:focus,\n#MONETATE-ID [data-next-button]:hover,\n#MONETATE-ID [data-next-button]:active,\n#MONETATE-ID [data-next-button]:focus {\n  border: none;\n  outline: none;\n}\n\n#MONETATE-ID [data-prev-button] img,\n#MONETATE-ID [data-next-button] img {\n  border: none !important;\n  max-width: 100%;\n  padding: 0 !important;\n}\n\n#MONETATE-ID [data-prev-button] {\n  left: 10px;\n}\n\n#MONETATE-ID [data-next-button] {\n  right: 10px;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-prev-button] {\n  left: 50%;\n  top: -20px;\n  -webkit-transform: translate(-50%, -50%) rotate(90deg);\n          transform: translate(-50%, -50%) rotate(90deg);\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-next-button] {\n  bottom: -60px;\n  left: 50%;\n  right: auto;\n  top: auto;\n  -webkit-transform: translate(-50%, -50%) rotate(90deg);\n          transform: translate(-50%, -50%) rotate(90deg);\n}\n\n#MONETATE-ID [data-pagination=\"thumbnails\"] [data-pagination-slide] {\n  background: none;\n  border-radius: 0;\n  height: auto;\n  width: 40px;\n}\n\n#MONETATE-ID [disabled] {\n  background-color: transparent !important;\n  opacity: 0.5;\n}\n\n#MONETATE-ID [data-pagination-slide] {\n  background: #000;\n  border-radius: 6px;\n  display: inline-block;\n  height: 12px;\n  margin: 4px;\n  opacity: 0.5;\n  width: 12px;\n}\n\n#MONETATE-ID [data-pagination-slide][data-slide-active] {\n  opacity: 1;\n}\n\n#MONETATE-ID [data-pagination*=\"dots\"] [data-pagination-slide] {\n  /* remove below for pagination numbers */\n  text-indent: -9999px;\n}\n\n#MONETATE-ID .mt_slider__container {\n  display: block;\n  margin: 0 auto;\n  padding: 0;\n}\n\n#MONETATE-ID .mt_slider__header {\n  border-bottom: thin solid #444;\n  margin-bottom: 8px;\n  position: relative;\n}\n\n#MONETATE-ID .mt_slider__header h3 {\n  color: #000;\n  display: inline-block;\n  font-size: 12px;\n  line-height: 26px;\n  margin: 0;\n  padding: 0;\n  white-space: nowrap;\n}\n\n#MONETATE-ID .mt_slider__wrapper {\n  margin-top: 40px;\n  position: relative;\n}\n\n#MONETATE-ID .mt_slide {\n  display: block;\n  padding: 0 7px;\n  position: relative;\n}\n\n#MONETATE-ID .mt_slide__img {\n  font-size: 0;\n  line-height: 0;\n}\n\n#MONETATE-ID .mt_slide__img img {\n  border-bottom: thin solid black;\n  max-width: 100%;\n  padding: 0;\n  padding-bottom: 3px;\n}\n\n#MONETATE-ID .mt_slide__text {\n  color: #000;\n  display: block;\n  font-size: 12px;\n  margin-top: 10px;\n  position: relative;\n}\n\n#MONETATE-ID .mt_slide__title {\n  font-size: 12px;\n  line-height: 1.2;\n  margin-bottom: 12px;\n  margin-left: auto;\n  margin-right: auto;\n  width: 100px;\n}\n\n#MONETATE-ID .mt_slide__price {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  font-size: 12px;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n\n#MONETATE-ID .mt_slide__price span {\n  margin-left: 4px;\n  margin-right: 4px;\n}\n\n#MONETATE-ID .mt_slide__price span:empty {\n  display: none;\n}\n\n#MONETATE-ID .mt_slide__price--reg {\n  text-decoration: line-through;\n}\n\n#MONETATE-ID .mt_slide__price--sale {\n  color: #BD0304;\n}\n\n#MONETATE-ID [data-missing-keys*=\"salePrice\"] .mt_slide__price--reg {\n  text-decoration: none;\n}\n\n#MONETATE-ID .mt_slide__ratings {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-size: 12px;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  line-height: 20px;\n  margin-top: 12px;\n}\n\n#MONETATE-ID .mt_slide__ratings-stars {\n  background-image: url(\"/tfm-images/stars_small_pink.gif\");\n  background-repeat: no-repeat;\n  display: inline-block;\n  height: 15px;\n  max-height: 15px;\n  width: 85px;\n}\n\n#MONETATE-ID .mt_slide__ratings-decimal {\n  border: 0;\n  clip: rect(0, 0, 0, 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}\n\n#MONETATE-ID .mt_slide__ratings-count {\n  margin-left: 2px;\n}\n\n#MONETATE-ID [data-missing-keys*=\"avgRating\"] .mt_slide__ratings {\n  display: none;\n}\n\n/* ===================================================== */\n/* Stars positioning\n/* ===================================================== */\n.mt_slide__ratings-stars[data-average-rating=\"0\"], \n.mt_slide__ratings-stars[data-average-rating=\"0.1\"], \n.mt_slide__ratings-stars[data-average-rating=\"0.2\"] {\n  background-position: 0 0;\n}\n\n.mt_slide__ratings-stars[data-average-rating=\"0.3\"], \n.mt_slide__ratings-stars[data-average-rating=\"0.4\"], \n.mt_slide__ratings-stars[data-average-rating=\"0.5\"], \n.mt_slide__ratings-stars[data-average-rating=\"0.6\"], \n.mt_slide__ratings-stars[data-average-rating=\"0.7\"] {\n  background-position: 0 -18px;\n}\n\n.mt_slide__ratings-stars[data-average-rating=\"0.8\"], \n.mt_slide__ratings-stars[data-average-rating=\"0.9\"], \n.mt_slide__ratings-stars[data-average-rating=\"1\"], \n.mt_slide__ratings-stars[data-average-rating=\"1.0\"], \n.mt_slide__ratings-stars[data-average-rating=\"1.1\"], \n.mt_slide__ratings-stars[data-average-rating=\"1.2\"] {\n  background-position: 0 -36px;\n}\n\n.mt_slide__ratings-stars[data-average-rating=\"1.3\"], \n.mt_slide__ratings-stars[data-average-rating=\"1.4\"], \n.mt_slide__ratings-stars[data-average-rating=\"1.5\"], \n.mt_slide__ratings-stars[data-average-rating=\"1.6\"], \n.mt_slide__ratings-stars[data-average-rating=\"1.7\"] {\n  background-position: 0 -54px;\n}\n\n.mt_slide__ratings-stars[data-average-rating=\"1.8\"], \n.mt_slide__ratings-stars[data-average-rating=\"1.9\"], \n.mt_slide__ratings-stars[data-average-rating=\"2\"], \n.mt_slide__ratings-stars[data-average-rating=\"2.0\"], \n.mt_slide__ratings-stars[data-average-rating=\"2.1\"], \n.mt_slide__ratings-stars[data-average-rating=\"2.2\"] {\n  background-position: 0 -72px;\n}\n\n.mt_slide__ratings-stars[data-average-rating=\"2.3\"], \n.mt_slide__ratings-stars[data-average-rating=\"2.4\"], \n.mt_slide__ratings-stars[data-average-rating=\"2.5\"], \n.mt_slide__ratings-stars[data-average-rating=\"2.6\"], \n.mt_slide__ratings-stars[data-average-rating=\"2.7\"] {\n  background-position: 0 -90px;\n}\n\n.mt_slide__ratings-stars[data-average-rating=\"2.8\"], \n.mt_slide__ratings-stars[data-average-rating=\"2.9\"], \n.mt_slide__ratings-stars[data-average-rating=\"3\"], \n.mt_slide__ratings-stars[data-average-rating=\"3.0\"], \n.mt_slide__ratings-stars[data-average-rating=\"3.1\"], \n.mt_slide__ratings-stars[data-average-rating=\"3.2\"] {\n  background-position: 0 -108px;\n}\n\n.mt_slide__ratings-stars[data-average-rating=\"3.3\"], \n.mt_slide__ratings-stars[data-average-rating=\"3.4\"], \n.mt_slide__ratings-stars[data-average-rating=\"3.5\"], \n.mt_slide__ratings-stars[data-average-rating=\"3.6\"], \n.mt_slide__ratings-stars[data-average-rating=\"3.7\"] {\n  background-position: 0 -126px;\n}\n\n.mt_slide__ratings-stars[data-average-rating=\"3.8\"], \n.mt_slide__ratings-stars[data-average-rating=\"3.9\"], \n.mt_slide__ratings-stars[data-average-rating=\"4\"], \n.mt_slide__ratings-stars[data-average-rating=\"4.0\"], \n.mt_slide__ratings-stars[data-average-rating=\"4.1\"], \n.mt_slide__ratings-stars[data-average-rating=\"4.2\"] {\n  background-position: 0 -144px;\n}\n\n.mt_slide__ratings-stars[data-average-rating=\"4.3\"], \n.mt_slide__ratings-stars[data-average-rating=\"4.4\"], \n.mt_slide__ratings-stars[data-average-rating=\"4.5\"], \n.mt_slide__ratings-stars[data-average-rating=\"4.6\"], \n.mt_slide__ratings-stars[data-average-rating=\"4.7\"] {\n  background-position: 0 -162px;\n}\n\n.mt_slide__ratings-stars[data-average-rating=\"4.8\"], \n.mt_slide__ratings-stars[data-average-rating=\"4.9\"], \n.mt_slide__ratings-stars[data-average-rating=\"5\"], \n.mt_slide__ratings-stars[data-average-rating=\"5.0\"] {\n  background-position: 0 -180px;\n}\n",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CSSCodeField",
+                "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+                "label": "CSS"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "json",
+                "name": "settings",
+                "value": "{\n    \"autoRotateDuration\": 0,\n    \"breakpoints\": {\n        \"Infinity\": {\n            \"visible\": 3\n        },\n        \"768\": {\n            \"visible\": 4\n        },\n        \"480\": {\n            \"visible\": 2\n        }\n    },\n    \"gridSize\": 1,\n    \"infiniteSlide\": true,\n    \"pagination\": \"none\",\n    \"pauseOnHover\": false,\n    \"slideIncrement\": \"single\",\n    \"stopOnInteraction\": false,\n    \"transitionAnimation\": \"push\",\n    \"transitionDuration\": 250\n}"
+            },
+            "widget": {
+                "label": "Slides Visible",
+                "type": "JsonCodeField",
+                "description": "Settings object.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_prev",
+                "value": null
+            },
+            "widget": {
+                "label": "Previous Button Creative",
+                "type": "RawImageCreative",
+                "description": "Previous button creative. Must include element with the attribute [data-prev-button] Slider Container Template.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_next",
+                "value": null
+            },
+            "widget": {
+                "label": "Next Button Creative",
+                "type": "RawImageCreative",
+                "description": "Next button creative. Must include element with the attribute [data-next-button] Slider Container Template.",
+                "action_visible": true
+            },
+            "required": false
+        }
+    ],
+    "masks": [],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [],
+        "required": []
+    },
+    "integration_type": "js-tag",
+    "manage_impressions": false
+}

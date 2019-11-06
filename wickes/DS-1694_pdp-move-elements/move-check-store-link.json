@@ -1,0 +1,168 @@
+{
+  "id": 428955,
+  "title": "Move \"Check Stock\" Link on PDP",
+  "description": "Move \"Check Stock\" Link on PDP",
+  "op": "moveNode",
+  "slot": "actionbuilder_ag_0",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Product Page",
+  "action_events": [],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "selA",
+        "value": ".delivery-action-item__check-in-store"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Selector to find the element that is being moved.",
+        "label": "Element to Move"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selB",
+        "value": ".prods-stock"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Place the Moved Element in relation to this element.",
+        "label": "Relative Element Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "last"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Where to insert the Moved Element in relation to the Relative Element Selector.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleA",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Adds inline CSS style to Moved Element.",
+        "label": "Style for Moved Element"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_styleB",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "TextField",
+        "description": "Adds inline CSS style to the Relative Element.",
+        "label": "Style for Relative Element"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_styleSheet",
+        "value": {
+          "content": ".prods-stock > div {\n  display: inline !important;\n}\n\n.prods-stock > div::after {\n  color: #000;\n  content: \" - \";\n  display: inline;\n  position: relative;\n}\n\n.delivery-action-item__check-in-store {\n  display: inline;\n  font-size: 0;\n}\n\n.delivery-action-item__check-in-store::after {\n  color: #0277bd;\n  content: \"Check your local store\";\n  font-size: 14px;\n  font-weight: 500;\n  line-height: 22px;\n}\n\n.delivery-action-item__check-in-store:hover::after {\n  color: #0a3055;\n  text-decoration: underline;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element.",
+        "label": "CSS"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_poll",
+        "value": true
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+        "label": "Re-check for Elements"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "product"
+        ],
+        "id": 234188,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

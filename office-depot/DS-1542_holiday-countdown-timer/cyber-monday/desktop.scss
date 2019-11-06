@@ -1,0 +1,63 @@
+.mt_countdown {
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    margin: 12px auto;
+    padding: 12px 0;
+    position: relative;
+    width: 90%;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.mt-countdown {
+    background-image: url({{BKG_URL}});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 0;
+    padding-bottom: calc((798 / 2572) * 100%);
+    position: relative;
+    width: 100%;
+
+    &__timer {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        font-variant: tabular-nums;
+        justify-content: space-between;
+        left: 39%;
+        position: absolute;
+        right: 15%;
+        top: 54%;
+        transform: translate(0%, -50%);
+    }
+}
+
+
+
+.mt_tickerElem {
+    display: block;
+    position: relative;
+    text-align: center;
+
+    .mt_time {
+        color: #fff;
+        font-size: 6vw;
+        font-weight: bold;
+    }
+
+    .mt_suffix {
+        color: #fff;
+        font-size: 1.5vw;
+        font-weight: bold;
+        left: 50%;
+        position: absolute;
+        text-transform: uppercase;
+        top: 100%;
+        transform: translate(-50%, 0);
+    }
+}
