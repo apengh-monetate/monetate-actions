@@ -1,0 +1,19 @@
+@media screen and (max-width: 1025px) {
+    .mt-nav-category {
+        .category-level-1.mt-active-bar-item {
+            .arrow-cat {
+                margin: 0 20px 0 0;
+                transform: rotate(180deg);
+                transition: .2s ease;
+            }
+        }
+        .category-level-2.mt-active-category {
+            & > ul {
+                display: block !important;
+            }
+            li {
+                display: block !important;
+            }
+        }
+    }
+}
