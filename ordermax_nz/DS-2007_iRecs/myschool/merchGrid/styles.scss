@@ -1,0 +1,185 @@
+$monetate-id: #MONETATE-ID;
+// $monetate-id: #mt-grid-3145723-0;
+
+$breakpoint-md: 500px;
+
+#{$monetate-id} [mt-data-grid] {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+
+    .mt-merch-item {
+        background: #fff;
+        border: 2px solid #ebebeb;
+        box-sizing: border-box;
+        flex-basis: 49%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin: 0;
+        margin-bottom: 10px;
+        margin-left: 0.5%;
+        @media screen and (min-width: $breakpoint-md) {
+            flex-basis: 24%;
+            width: 24%;
+        }
+        margin-right: 0.5%;
+        padding: 5px;
+        position: relative;
+        width: 49%
+    }
+
+
+
+    .mt_grid-item {
+        &__img {
+            img {
+                display: block;
+                padding: 20px;
+                width: 100%;
+            }
+        }
+        &__title {
+            clear: both;
+            display: block;
+            min-height: 95px;
+            a {
+                color: #000;
+                display: block;
+                font-size: 13px;
+                font-weight: 500;
+                padding-bottom: 5px;
+            }
+        }
+
+        // Product Code
+        &__code {
+            color: #999;
+            display: inline-block;
+            float: left;
+            font-size: 10px;
+            padding-top: 22px;
+            text-transform: uppercase;
+        }
+
+        // Price
+        &__price {
+            clear: right;
+            color: #f7921e;
+            display: inline-block;
+            float: right;
+            font-size: 18px;
+            font-weight: 500;
+            min-width: 60px;
+            text-align: right;
+        }
+
+        // Add to cart
+        &__atc {
+            align-items: center;
+            clear: both;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            padding-top: 5px;
+            position: relative;
+            width: 100%;
+        }
+
+
+        // Quantity
+        &__qty {
+            background: #fff;
+            display: block;
+            margin: 0 auto;
+            min-height: 36px;
+            padding: 0;
+            position: relative;
+            width: 40%;
+            &--minus,
+            &--plus {
+                color: #333;
+                font-size: 0;
+                height: 100%;
+                padding: 0;
+                position: absolute;
+                top: 0;
+                width: 25%;
+                &::before {
+                    -webkit-font-smoothing: antialiased;
+                    display: inline-block;
+                    font-family: 'Glyphicons Halflings';
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 1;
+                    position: relative;
+                    top: 1px;
+                }
+                &:hover {
+                    &::before {
+                        color: #000;
+                    }
+                }
+            }
+
+            &--minus {
+                left: 0;
+                &::before {
+                    content: "−";
+                    font-size: 14px;
+                }
+            }
+            &--plus {
+                right: 0;
+                &::before {
+                    content: "+";
+                    font-size: 14px;
+                }
+            }
+
+            &--input {
+                left: 25%;
+                line-height: 23px;
+                padding: 7px 0 !important;
+                position: absolute;
+                text-align: center;
+                text-indent: 5px;
+                width: 50%;
+            }
+        }
+
+        // ATC Button
+        &__btn {
+            background: #f7921e;
+            border: 1px solid #f7921e;
+            border-radius: 3px;
+            color: #fff;
+            display: block;
+            font-size: 12px;
+            font-weight: 500;
+            margin: 0;
+            padding: 10px 15px;
+            text-align: center;
+            width: 58%;
+            &:hover {
+                background: #eab818;
+                border-color: #eab818;
+            }
+            &::before {
+                -webkit-font-smoothing: antialiased;
+                content: "";
+                display: inline-block;
+                float: left;
+                font-family: 'Glyphicons Halflings';
+                font-style: normal;
+                font-weight: normal;
+                line-height: 1;
+                margin-right: 5px;
+                position: relative;
+                top: 1px;
+            }
+        }
+    }
+}

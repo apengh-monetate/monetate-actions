@@ -1,0 +1,52 @@
+/* ===================================================== */
+/* Monetate Container
+/* ===================================================== */
+#MONETATE-ID {
+  border: 1px solid #eaeef5;
+  border-left: none;
+  display: inline-block;
+  margin: 0 0 -1px 0;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID {
+    width: 33.33%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #MONETATE-ID {
+    width: 25%;
+  }
+}
+
+.mt_grid-item {
+  height: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+.mt_grid-item__video {
+  height: 100%;
+  width: 100%;
+}
+
+.mt_grid-item__video iframe {
+  height: 175%;
+  left: 50%;
+  position: absolute;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt_grid-item__video iframe {
+    top: 50%;
+  }
+}

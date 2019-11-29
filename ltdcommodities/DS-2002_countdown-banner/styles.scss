@@ -1,0 +1,134 @@
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+
+/* ===================================================== */
+/* Custom Styling
+/* ===================================================== */
+.mt-countdown {
+    background-color: #fff;
+    background-image: url("{{BKG_URL}}");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 0;
+    padding-bottom: calc((800 / 1600) * 100%);
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    h3, p {
+        margin: 0;
+    }
+
+    // ==================================================================
+    // Text
+    // ==================================================================
+    &__text {
+        position: absolute;
+        text-align: center;
+        top: 40%;
+        transform: translateY(-50%);
+        width: 100%;
+        @media screen and (min-width: $breakpoint-lg) {
+            left: 40%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+        }
+    }
+
+    &__heading {
+        font-size: 24px;
+        font-weight: 100;
+        text-transform: uppercase;
+        @media screen and (min-width: $breakpoint-md) {
+            font-size: 36px;
+        }
+    }
+
+    &__subheading {
+        font-size: 16px;
+        font-weight: 400;
+        @media screen and (min-width: $breakpoint-md) {
+            font-size: 24px;
+            margin-top: 8px;
+        }
+    }
+
+    &__button {
+        border: 1px solid #30609A;
+        border-radius: 4px;
+        color: #30609A;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 4px;
+        padding: 8px 16px;
+        text-decoration: none;
+        @media screen and (min-width: $breakpoint-md) {
+            margin-top: 12px;
+        }
+    }
+
+
+    // ==================================================================
+    // Countdown timer
+    // ==================================================================
+    &__timer {
+        position: absolute;
+        text-align: center;
+        top: calc(40% + 60px);
+        transform: translateY(-50%);
+        width: 100%;
+        @media screen and (min-width: $breakpoint-md) {
+            top: calc(40% + 90px);
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            right: 0;
+            top: 50%;
+            width: 50%;
+        }
+    }
+
+    &__colon {
+        display: none;
+    }
+
+
+    .mt_tickerElem {
+        display: inline-block;
+        font-variant: tabular-nums;
+        margin-right: 10px;
+        position: relative;
+        &:not(:last-child) {
+            &::after {
+                content: ":";
+                position: absolute;
+                right: -8px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .mt_time {
+            font-size: 16px;
+            font-weight: bold;
+            @media screen and (min-width: $breakpoint-md) {
+                font-size: 36px;
+            }
+        }
+        .mt_suffix {
+            font-size: 6px;
+            left: 50%;
+            margin-top: 4px;
+            position: absolute;
+            text-transform: uppercase;
+            top: 100%;
+            transform: translate(-50%, -50%);
+            @media screen and (min-width: $breakpoint-md) {
+                font-size: 10px;
+            }
+        }
+    }
+
+}

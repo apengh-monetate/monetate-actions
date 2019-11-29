@@ -1,0 +1,1 @@
+!function(){for(var e=['#navigation a[href*="/kids"]'],n=0;n<e.length;n++){var t=e[n];if(document.querySelector(t))document.querySelector(t).addEventListener("click",(function(){window.monetateQ=window.monetateQ||[],window.monetateQ.push(["trackEvent",["FamilyMainMenuLink"]])}))}}();

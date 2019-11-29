@@ -1,0 +1,491 @@
+$monetate-id: #MONETATE-ID;
+// $monetate-id: #mt-slider-3145686-0;
+
+
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#{$monetate-id} {
+    position: relative;
+
+    li {
+        list-style: none;
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        margin: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider-mask],
+    &[data-slider-wrapper="fade"] [data-slider-mask] {
+        touch-action: pan-y;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        touch-action: pan-x;
+    }
+
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider] {
+        white-space: nowrap !important;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        float: none;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slide] {
+        display: inline-block !important;
+        vertical-align: top;
+        white-space: normal;
+    }
+    &[data-slider-wrapper="vertical"] [data-slide] {
+        display: block !important;
+    }
+    &[data-slider-wrapper="fade"] [data-slide] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+    &[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+    // ==================================================================
+    // Buttons / Pagination
+    // ==================================================================
+    [data-pagination-slide],
+    [data-prev-button],
+    [data-next-button]{
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    [data-pagination-slide] * {
+        pointer-events: none;
+    }
+
+} // MONETATE-ID
+
+
+
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#{$monetate-id} {
+    box-sizing: border-box;
+    clear: both;
+    margin: 0 auto;
+    max-width: 1040px;
+    padding: 0;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 100%;
+
+
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        display: inline-block;
+        width: calc(100% - 78px);
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        height: 600px !important;
+        width: 100%;
+    }
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+
+    }
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        > div {
+        }
+        img {
+            max-width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+    &[data-slider-wrapper="vertical"] [data-slide] {
+        > div {
+            padding-bottom: 15px;
+        }
+    }
+
+
+
+    // ==================================================================
+    // Buttons
+    // ==================================================================
+    [data-prev-button],
+    [data-next-button] {
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        -webkit-user-select: none;
+        background: none;
+        border: none;
+        color: #000;
+        display: block;
+        font-size: 25px;
+        padding: 0;
+        position: absolute;
+        top: 45%;
+        user-select: none;
+        &:hover,
+        &:active,
+        &:focus {
+            border: none;
+            outline: none;
+        }
+
+        img {
+            border: none !important;
+            max-width: 100%;
+            padding: 0 !important;
+        }
+    }
+    [data-prev-button] {
+        left: 10px;
+    }
+    [data-next-button] {
+        right: 10px;
+    }
+    &[data-slider-wrapper="vertical"] [data-prev-button] {
+        left: 50%;
+        top: 16px;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+    &[data-slider-wrapper="vertical"] [data-next-button] {
+        bottom: -32px;
+        left: 50%;
+        right: auto;
+        top: auto;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+
+    // ==================================================================
+    // Pagination
+    // ==================================================================
+    [data-pagination="thumbnails"] [data-pagination-slide] {
+        background: none;
+        border-radius: 0;
+        height: auto;
+        width: 40px;
+    }
+
+    [disabled] {
+        background-color: transparent !important;
+        opacity: 0.5;
+    }
+
+    [data-pagination-slide] {
+        background: #000;
+        border-radius: 6px;
+        display: inline-block;
+        height: 12px;
+        margin: 4px;
+        opacity: 0.5;
+        width: 12px;
+        &[data-slide-active] {
+            opacity: 1;
+        }
+    }
+    [data-pagination*="dots"] [data-pagination-slide] {
+        /* remove below for pagination numbers */
+        text-indent: -9999px;
+    }
+
+
+    // ==================================================================
+    // Slider Container Template
+    // ==================================================================
+    .mt_slider {
+        &__container {
+            display: block;
+            margin: 0 auto;
+            padding: 0;
+        }
+        &__header {
+            background: #4AB297;
+            border-bottom: none;
+            height: 31px;
+            line-height: 31px;
+            h3 {
+                color: #fff;
+                display: inline-block;
+                font-size: 12px;
+                margin: 0;
+                padding: 0;
+                white-space: nowrap;
+            }
+        }
+        &__wrapper {
+            border: 1px dotted #B7B5B5;
+            border-top: none;
+            padding-bottom: 32px;
+            padding-top: 32px;
+            position: relative;
+        }
+    }
+
+
+    // ==================================================================
+    // Slide Template
+    // ==================================================================
+    .mt_slide {
+        color: #777;
+        display: block;
+        padding: 5px;
+        position: relative;
+        text-align: center;
+
+        a {
+            color: #777;
+            display: inline-block;
+            max-width: 114px;
+            overflow: hidden;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        // Image
+        &__img {
+            font-size: 0;
+            line-height: 0;
+            img {
+                height: auto;
+                width: 85px;
+            }
+        }
+
+
+        // Text container
+        &__text {
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        &__title {
+
+        }
+
+        &__price {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            font-size: 12px;
+            justify-content: center;
+            margin-top: 4px;
+            span {
+                margin-left: 4px;
+                margin-right: 4px;
+            }
+            span:empty {
+                display: none;
+            }
+
+            &--reg {
+                text-decoration: line-through;
+            }
+            &--sale {
+                color: #BD0304;
+            }
+        }
+
+    }
+
+    [data-missing-keys*="salePrice"] {
+        .mt_slide__price {
+            &--reg {
+                text-decoration: none;
+            }
+        }
+    }
+
+    // ------------------------------------------------------------------
+    // Ratings
+    // ------------------------------------------------------------------
+    .mt_slide {
+        &__ratings {
+            align-items: center;
+            display: inline-flex;
+            font-size: 12px;
+            justify-content: center;
+            line-height: 20px;
+            margin-top: 4px;
+
+            &-stars {
+                background-image: url('/pr/pwr/engine/images/stars_small.gif');
+                background-repeat: no-repeat;
+                display: inline-block;
+                height: 15px;
+                max-height: 15px;
+                width: 85px;
+            }
+            &-decimal {
+                background-color: #414142;
+                border-radius: 0.2em;
+                color: #fff;
+                font-size: 10.2px;
+                line-height: 15px;
+                margin-left: 2px;
+                padding: 0 0.2em 0;
+                text-align: center;
+            }
+            &-count {
+                margin-left: 2px;
+            }
+        }
+    }
+
+    [data-missing-keys*="avgRating"] {
+        .mt_slide__ratings {
+            display: none;
+        }
+    }
+}
+
+
+/* ===================================================== */
+/* Stars positioning
+/* ===================================================== */
+.mt_slide__ratings-stars {
+    // 0 stars
+    &[data-average-rating="0"],
+    &[data-average-rating="0.1"],
+    &[data-average-rating="0.2"] {
+        background-position: 0 0;
+    }
+
+    // 0.5 stars
+    &[data-average-rating="0.3"],
+    &[data-average-rating="0.4"],
+    &[data-average-rating="0.5"],
+    &[data-average-rating="0.6"],
+    &[data-average-rating="0.7"] {
+        background-position: 0 -18px;
+    }
+
+    // 1 star
+    &[data-average-rating="0.8"],
+    &[data-average-rating="0.9"],
+    &[data-average-rating="1"],
+    &[data-average-rating="1.0"],
+    &[data-average-rating="1.1"],
+    &[data-average-rating="1.2"] {
+        background-position: 0 -36px;
+    }
+
+    // 1.5 stars
+    &[data-average-rating="1.3"],
+    &[data-average-rating="1.4"],
+    &[data-average-rating="1.5"],
+    &[data-average-rating="1.6"],
+    &[data-average-rating="1.7"] {
+        background-position: 0 -54px;
+    }
+
+    // 2 stars
+    &[data-average-rating="1.8"],
+    &[data-average-rating="1.9"],
+    &[data-average-rating="2"],
+    &[data-average-rating="2.0"],
+    &[data-average-rating="2.1"],
+    &[data-average-rating="2.2"] {
+        background-position: 0 -72px;
+    }
+
+    // 2.5 stars
+    &[data-average-rating="2.3"],
+    &[data-average-rating="2.4"],
+    &[data-average-rating="2.5"],
+    &[data-average-rating="2.6"],
+    &[data-average-rating="2.7"] {
+        background-position: 0 -90px;
+    }
+
+    // 3 stars
+    &[data-average-rating="2.8"],
+    &[data-average-rating="2.9"],
+    &[data-average-rating="3"],
+    &[data-average-rating="3.0"],
+    &[data-average-rating="3.1"],
+    &[data-average-rating="3.2"] {
+        background-position: 0 -108px;
+    }
+
+    // 3.5 stars
+    &[data-average-rating="3.3"],
+    &[data-average-rating="3.4"],
+    &[data-average-rating="3.5"],
+    &[data-average-rating="3.6"],
+    &[data-average-rating="3.7"] {
+        background-position: 0 -126px;
+    }
+
+    // 4 stars
+    &[data-average-rating="3.8"],
+    &[data-average-rating="3.9"],
+    &[data-average-rating="4"],
+    &[data-average-rating="4.0"],
+    &[data-average-rating="4.1"],
+    &[data-average-rating="4.2"] {
+        background-position: 0 -144px;
+    }
+
+    // 4.5 stars
+    &[data-average-rating="4.3"],
+    &[data-average-rating="4.4"],
+    &[data-average-rating="4.5"],
+    &[data-average-rating="4.6"],
+    &[data-average-rating="4.7"] {
+        background-position: 0 -162px;
+    }
+
+    // 5 stars
+    &[data-average-rating="4.8"],
+    &[data-average-rating="4.9"],
+    &[data-average-rating="5"],
+    &[data-average-rating="5.0"] {
+        background-position: 0 -180px;
+    }
+
+}

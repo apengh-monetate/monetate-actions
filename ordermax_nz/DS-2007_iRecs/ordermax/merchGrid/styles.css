@@ -1,0 +1,367 @@
+@charset "UTF-8";
+#MONETATE-ID {
+  box-sizing: border-box;
+}
+
+#MONETATE-ID .mt_recs-grid__heading a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f5f5f5;
+  color: #ff8400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+
+#MONETATE-ID .mt_recs-grid__heading a:hover {
+  color: #009fe3;
+}
+
+#MONETATE-ID .mt_recs-grid__heading-title {
+  font-size: 100%;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt_recs-grid__heading-title {
+    font-size: 28px;
+  }
+}
+
+#MONETATE-ID .mt_recs-grid__heading-action {
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt_recs-grid__heading-action {
+    font-size: 28px;
+  }
+}
+
+#MONETATE-ID .mt_recs-grid__heading-action::before {
+  -webkit-font-smoothing: antialiased;
+  content: "";
+  display: inline-block;
+  float: right;
+  font-family: 'cv-ico-general';
+  font-size: 22px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  margin-left: 10px;
+  position: relative;
+  speak: none;
+  text-transform: none;
+}
+
+#MONETATE-ID [mt-data-grid] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 5px;
+  padding-top: 25px;
+}
+
+#MONETATE-ID .mt-merch-item {
+  border-right: 1px dashed #999;
+  display: block;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin-bottom: 20px;
+  padding: 5px;
+  position: relative;
+  width: 50%;
+}
+
+@media screen and (max-width: 591px) {
+  #MONETATE-ID .mt-merch-item:nth-child(2n - 1) {
+    border-left: 1px dashed #999;
+  }
+}
+
+@media screen and (min-width: 592px) {
+  #MONETATE-ID .mt-merch-item {
+    -ms-flex-preferred-size: calc(100% / 3);
+        flex-basis: calc(100% / 3);
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (min-width: 592px) and (max-width: 939px) {
+  #MONETATE-ID .mt-merch-item:nth-child(3n - 2) {
+    border-left: 1px dashed #999;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  #MONETATE-ID .mt-merch-item {
+    -ms-flex-preferred-size: calc(100% / 4);
+        flex-basis: calc(100% / 4);
+    width: calc(100% / 4);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #MONETATE-ID .mt-merch-item {
+    -ms-flex-preferred-size: calc(100% / 6);
+        flex-basis: calc(100% / 6);
+    width: calc(100% / 6);
+  }
+}
+
+#MONETATE-ID .mt_grid-item {
+  padding-bottom: 48px;
+}
+
+@media screen and (min-width: 592px) {
+  #MONETATE-ID .mt_grid-item {
+    padding-bottom: 0;
+  }
+}
+
+#MONETATE-ID .mt_grid-item__img img {
+  background: #fff;
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+
+#MONETATE-ID .mt_grid-item__title {
+  display: block;
+  padding-top: 5px;
+}
+
+#MONETATE-ID .mt_grid-item__title a {
+  color: #000;
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  height: 75px;
+  text-decoration: none;
+}
+
+#MONETATE-ID .mt_grid-item__code {
+  color: #6f6f6f;
+  display: block;
+  font-size: 12px;
+  padding: 0 0 2px 0;
+  position: relative;
+  text-transform: uppercase;
+}
+
+#MONETATE-ID .mt_grid-item__attributes {
+  display: block;
+  height: 100px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  position: relative;
+  width: 100%;
+}
+
+#MONETATE-ID .mt_grid-item__attributes span {
+  color: #83ba22;
+  display: block;
+  font-size: 12px;
+  padding-top: 12px;
+}
+
+#MONETATE-ID .mt_grid-item__attributes span::before {
+  -webkit-font-smoothing: antialiased;
+  background: #83ba22 !important;
+  border-radius: 10px;
+  color: #fff;
+  content: "";
+  display: inline-block;
+  font-family: 'cv-ico-general';
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 10px;
+  line-height: 1;
+  margin-right: 5px;
+  padding: 3px;
+  position: relative;
+  speak: none;
+  text-align: center;
+  text-transform: none;
+  width: 10px;
+}
+
+#MONETATE-ID .mt_grid-item__price {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  position: relative;
+}
+
+#MONETATE-ID .mt_grid-item__price .price {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+#MONETATE-ID .mt_grid-item__atc {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5px;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 940px) {
+  #MONETATE-ID .mt_grid-item__atc {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+#MONETATE-ID .mt_grid-item__qty {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5px 0;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 940px) {
+  #MONETATE-ID .mt_grid-item__qty {
+    width: 48%;
+  }
+}
+
+#MONETATE-ID .mt_grid-item__qty--minus, #MONETATE-ID .mt_grid-item__qty--plus {
+  background: #f0f0f0;
+  color: #6f6f6f;
+  cursor: pointer;
+  font-size: 0;
+  height: 39px;
+  padding: 0;
+  top: 0;
+  width: 30%;
+}
+
+#MONETATE-ID .mt_grid-item__qty--minus::before, #MONETATE-ID .mt_grid-item__qty--plus::before {
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  position: relative;
+  top: 1px;
+}
+
+#MONETATE-ID .mt_grid-item__qty--minus:hover::before, #MONETATE-ID .mt_grid-item__qty--plus:hover::before {
+  color: #000;
+}
+
+#MONETATE-ID .mt_grid-item__qty--minus {
+  left: 0;
+}
+
+#MONETATE-ID .mt_grid-item__qty--minus::before {
+  content: "−";
+}
+
+#MONETATE-ID .mt_grid-item__qty--plus {
+  right: 0;
+}
+
+#MONETATE-ID .mt_grid-item__qty--plus::before {
+  content: "+";
+}
+
+#MONETATE-ID .mt_grid-item__qty--input {
+  border: none;
+  height: 39px;
+  line-height: 23px;
+  margin: 0 auto;
+  padding: 7px 0 !important;
+  text-align: center;
+  text-indent: 5px;
+  width: 40%;
+}
+
+#MONETATE-ID .mt_grid-item__btn {
+  background: #f7921e;
+  border: 1px solid #f7921e;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  height: 41px;
+  margin: 0 0 5px;
+  max-height: 45px;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media screen and (min-width: 940px) {
+  #MONETATE-ID .mt_grid-item__btn {
+    margin: 5px 0;
+    width: 48%;
+  }
+}
+
+#MONETATE-ID .mt_grid-item__btn:hover {
+  background: #eab818;
+  border-color: #eab818;
+}
+
+#MONETATE-ID .mt_grid-item__btn::before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  content: "f";
+  display: inline;
+  font-family: "omx-iconfont" !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  font-weight: normal !important;
+  line-height: 1;
+  margin-right: 5px;
+  position: relative;
+  speak: none;
+  text-transform: none !important;
+}

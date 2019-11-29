@@ -1,0 +1,63 @@
+.mt_closable {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    &__close {
+        align-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #666;
+        display: inline-flex;
+        font-size: 24px;
+        height: 28px;
+        justify-content: center;
+        line-height: 1;
+        margin: 0;
+        min-height: 1px;
+        padding: 0;
+        padding-bottom: 4px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 28px;
+        @media screen and (min-width: 768px) {
+            right: 8px;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            background: rgba(0, 0, 0, 0.1);
+            color: #000;
+        }
+    }
+
+    &__content {
+        background-color: #fff;
+        border-bottom: 1px solid #cacaca;
+        padding: 6px 36px;
+        text-align: center;
+        text-transform: uppercase;
+        @media screen and (min-width: 768px) {
+            padding: 12px 0;
+        }
+        p {
+            font-size: 12px;
+            font-weight: 400;
+            margin: 0;
+            @media screen and (min-width: 768px) {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+/* ===================================================== */
+/* Hide the close button in cart
+/* ===================================================== */
+#wrapper.pt_cart .mt_closable__close {
+    display: none !important;
+}

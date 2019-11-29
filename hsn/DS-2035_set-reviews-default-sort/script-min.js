@@ -1,0 +1,1 @@
+!function(){var e=function(t,n){document.querySelector(t)?n():setTimeout((function(){e(t,n)}),100)};e("#product-detail-reviews",(function(){document.getElementById("template-product-detail-reviews-sort").querySelector('option[value="Descending,Date"]')}))}();

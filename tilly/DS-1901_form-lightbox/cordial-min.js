@@ -1,0 +1,1 @@
+cordial.event("monetate_event"),cordial.identify("apengh@monetate.com");var contactData={channels:{}};contactData.channels.email={},contactData.channels.email.subscribeStatus="subscribed",contactData.channels.email.address="apengh@monetate.com",contactData.promotions=!0,contactData.lightbox_monetate=!0,contactData.list_name=!0,cordial.contact(contactData);

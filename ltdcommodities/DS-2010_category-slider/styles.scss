@@ -1,0 +1,285 @@
+$monetate-id: #MONETATE-ID;
+// $monetate-id: #mt-slider-3111789-0;
+
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#{$monetate-id} {
+    position: relative;
+
+    li {
+        list-style: none;
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        margin: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider-mask],
+    &[data-slider-wrapper="fade"] [data-slider-mask] {
+        touch-action: pan-y;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        touch-action: pan-x;
+    }
+
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider] {
+        white-space: nowrap !important;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        float: none;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slide] {
+        display: inline-block !important;
+        vertical-align: top;
+        white-space: normal;
+    }
+    &[data-slider-wrapper="vertical"] [data-slide] {
+        display: block !important;
+    }
+    &[data-slider-wrapper="fade"] [data-slide] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+    &[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+    // ==================================================================
+    // Buttons / Pagination
+    // ==================================================================
+    [data-pagination-slide],
+    [data-prev-button],
+    [data-next-button]{
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    [data-pagination-slide] * {
+        pointer-events: none;
+    }
+
+} // MONETATE-ID
+
+
+
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#{$monetate-id} {
+    display: block;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    @media screen and (min-width: $breakpoint-md) {
+        margin-bottom: 20px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+
+    // ==================================================================
+    // Slider Container Template
+    // ==================================================================
+    .mt_slider {
+        &__container {
+
+        }
+        &__header {
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            @media screen and (min-width: $breakpoint-md) {
+                font-size: 24px;
+            }
+        }
+        &__wrapper {
+
+        }
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        display: inline-block;
+        width: calc(100% - 64px);
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        height: 400px!important;
+    }
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+
+    }
+
+
+    // ==================================================================
+    // Buttons
+    // ==================================================================
+    [data-prev-button],
+    [data-next-button] {
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        -webkit-user-select: none;
+        background: none;
+        border: none;
+        color: #000;
+        display: block;
+        font-size: 25px;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        user-select: none;
+        width: 32px;
+        @media screen and (min-width: $breakpoint-md) {
+            top: 54%;
+            width: 48px;
+        }
+    }
+    [data-prev-button] {
+        left: 0;
+    }
+    [data-next-button] {
+        right: 0;
+    }
+
+
+
+    // ==================================================================
+    // Pagination
+    // ==================================================================
+    [data-pagination="thumbnails"] [data-pagination-slide] {
+        background: none;
+        border-radius: 0;
+        height: auto;
+        width: 40px;
+    }
+
+    [disabled] {
+        opacity: 0.5;
+    }
+
+    [data-pagination-slide] {
+        background: #000;
+        border-radius: 6px;
+        display: inline-block;
+        height: 12px;
+        margin: 4px;
+        opacity: 0.5;
+        width: 12px;
+        &[data-slide-active] {
+            opacity: 1;
+        }
+    }
+    [data-pagination*="dots"] [data-pagination-slide] {
+        /* remove below for pagination numbers */
+        text-indent: -9999px;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        > div {
+            padding: 10px;
+        }
+        img {
+            max-width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+
+    // ==================================================================
+    // Slide Template
+    // ==================================================================
+    .mt_slide {
+        color: #333;
+        &__img {
+            img {
+
+            }
+        }
+
+        &__text {
+            color: #333;
+            font-size: 14px;
+            margin-top: 8px;
+            @media screen and (min-width: $breakpoint-md) {
+                font-size: 16px;
+            }
+        }
+
+        &__title {
+
+        }
+
+        &__price {
+            &--reg {
+
+            }
+            &--sale {
+
+            }
+        }
+
+    }
+
+    [data-missing-keys*="salePrice"] {
+        .mt_slide {
+            &__price {
+                &--reg {
+
+                }
+                &--sale {
+
+                }
+            }
+        }
+    }
+}

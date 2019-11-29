@@ -1,0 +1,437 @@
+$monetate-id: #MONETATE-ID;
+// $monetate-id: #mt-slider-3145727-0;
+
+
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#{$monetate-id} {
+    position: relative;
+
+    li {
+        list-style: none;
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        margin: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider-mask],
+    &[data-slider-wrapper="fade"] [data-slider-mask] {
+        touch-action: pan-y;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        touch-action: pan-x;
+    }
+
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider] {
+        white-space: nowrap !important;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        float: none;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slide] {
+        display: inline-block !important;
+        vertical-align: top;
+        white-space: normal;
+    }
+    &[data-slider-wrapper="vertical"] [data-slide] {
+        display: block !important;
+    }
+    &[data-slider-wrapper="fade"] [data-slide] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+    &[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+    // ==================================================================
+    // Buttons / Pagination
+    // ==================================================================
+    [data-pagination-slide],
+    [data-prev-button],
+    [data-next-button]{
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    [data-pagination-slide] * {
+        pointer-events: none;
+    }
+
+} // MONETATE-ID
+
+
+
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#{$monetate-id} {
+    padding-top: 25px;
+
+
+    // ==================================================================
+    // Slider Container Template
+    // ==================================================================
+    .mt_slider {
+        &__container {
+
+        }
+        &__header {
+            color: #333;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            margin: 0;
+            padding: 0 0 15px;
+            text-align: left;
+            @media screen and (min-width: 48em) {
+                font-size: 24px;
+            }
+        }
+        &__wrapper {
+            display: block;
+            margin: 0 auto 10px !important;
+            position: relative;
+            width: 60%;
+            @media screen and (min-width: 37em) {
+                width: 70%;
+            }
+            @media screen and (min-width: 48em) {
+                width: 80%;
+            }
+            @media screen and (min-width: 940px) {
+                width: 90%;
+            }
+        }
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        display: inline-block;
+        width: 100%;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        height: 400px!important;
+    }
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+
+    }
+
+
+    // ==================================================================
+    // Buttons
+    // ==================================================================
+    [data-prev-button],
+    [data-next-button] {
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        -webkit-user-select: none;
+        background: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 0;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        user-select: none;
+        &::before {
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-family: 'Glyphicons Halflings';
+            font-size: 22px;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1;
+            position: relative;
+            top: 1px;
+        }
+        &:hover {
+            &::before {
+                color: #f7921e;
+            }
+        }
+    }
+    [data-prev-button] {
+        left: -30px;
+        &::before {
+            color: #4e4e4e;
+            content: "";
+        }
+    }
+    [data-next-button] {
+        right: -30px;
+        &::before {
+            color: #4e4e4e;
+            content: "";
+        }
+    }
+
+
+
+    // ==================================================================
+    // Pagination
+    // ==================================================================
+    [data-pagination="thumbnails"] [data-pagination-slide] {
+        background: none;
+        border-radius: 0;
+        height: auto;
+        width: 40px;
+    }
+
+    [data-pagination] {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 10px;
+        text-align: center;
+        @media screen and (min-width: 500px) {
+            margin-top: 20px;
+        }
+    }
+
+    [disabled] {
+        opacity: 0.5;
+    }
+
+    [data-pagination-slide] {
+        background: #ddd;
+        border-radius: 5px;
+        display: inline-block;
+        height: 10px;
+        margin: 0 4px;
+        opacity: 1;
+        width: 10px;
+        &[data-slide-active] {
+            background: #eab818;
+        }
+    }
+    [data-pagination*="dots"] [data-pagination-slide] {
+        /* remove below for pagination numbers */
+        text-indent: -9999px;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        > div {
+            height: 100%;
+            padding: 0;
+            @media screen and (min-width: 37em) {
+                margin: 0 2.5px;
+            }
+        }
+        img {
+            max-width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+
+    // ==================================================================
+    // Slide Template
+    // ==================================================================
+    .mt_slide {
+        border: 2px solid #ebebeb;
+        display: inline-block;
+        padding: 5px;
+        position: relative;
+
+        &__img {
+            img {
+                display: block;
+                padding: 20px;
+                width: 100%;
+            }
+        }
+
+        &__text {
+
+        }
+
+        &__title {
+            clear: both;
+            display: block;
+            min-height: 95px;
+            a {
+                color: #000;
+                display: block;
+                font-size: 13px;
+                font-weight: 500;
+                padding-bottom: 5px;
+            }
+        }
+
+        // Product Code
+        &__code {
+            color: #999;
+            display: inline-block;
+            float: left;
+            font-size: 10px;
+            padding-top: 22px;
+            text-transform: uppercase;
+        }
+
+        // Price
+        &__price {
+            clear: right;
+            color: #f7921e;
+            display: inline-block;
+            float: right;
+            font-size: 18px;
+            font-weight: 500;
+            min-width: 60px;
+            text-align: right;
+        }
+
+        // Add to cart
+        &__atc {
+            align-items: center;
+            clear: both;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            padding-top: 5px;
+            position: relative;
+            width: 100%;
+        }
+
+
+        // Quantity
+        &__qty {
+            background: #fff;
+            display: block;
+            margin: 0 auto;
+            min-height: 36px;
+            padding: 0;
+            position: relative;
+            width: 40%;
+            &--minus,
+            &--plus {
+                color: #333;
+                font-size: 0;
+                height: 100%;
+                padding: 0;
+                position: absolute;
+                top: 0;
+                width: 25%;
+                &::before {
+                    -webkit-font-smoothing: antialiased;
+                    display: inline-block;
+                    font-family: 'Glyphicons Halflings';
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 1;
+                    position: relative;
+                    top: 1px;
+                }
+                &:hover {
+                    &::before {
+                        color: #000;
+                    }
+                }
+            }
+
+            &--minus {
+                left: 0;
+                &::before {
+                    content: "−";
+                    font-size: 14px;
+                }
+            }
+            &--plus {
+                right: 0;
+                &::before {
+                    content: "+";
+                    font-size: 14px;
+                }
+            }
+
+            &--input {
+                left: 25%;
+                line-height: 23px;
+                padding: 7px 0 !important;
+                position: absolute;
+                text-align: center;
+                text-indent: 5px;
+                width: 50%;
+            }
+        }
+
+        // ATC Button
+        &__btn {
+            background: #f7921e;
+            border: 1px solid #f7921e;
+            border-radius: 3px;
+            color: #fff;
+            display: block;
+            font-size: 12px;
+            font-weight: 500;
+            margin: 0;
+            padding: 10px 15px;
+            text-align: center;
+            width: 58%;
+            &:hover {
+                background: #eab818;
+                border-color: #eab818;
+            }
+            &::before {
+                -webkit-font-smoothing: antialiased;
+                content: "";
+                display: inline-block;
+                float: left;
+                font-family: 'Glyphicons Halflings';
+                font-style: normal;
+                font-weight: normal;
+                line-height: 1;
+                margin-right: 5px;
+                position: relative;
+                top: 1px;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,35 @@
+<section class="mt_slide" data-pid="{{id}}">
+    <div class="mt_slide__img">
+        <a href="{{link}}">
+            <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+        </a>
+    </div>
+
+    <div class="mt_slide__text">
+        <div class="mt_slide__details">
+            <span class="mt_slide__title">
+                <a href="{{link}}">{{title}}</a>
+            </span>
+            <span class="mt_slide__code">{{id}}</span>
+        </div>
+
+        <div class="mt_slide__attributes">
+            <span class="in-stock">In Stock Online</span>
+            <span class="next-day-delivery">Next business day delivery</span>
+        </div>
+
+        <div class="mt_slide__price">
+            <span class="price">{{price|priceFormat: $1,000.00}}</span>
+            <span>ex GST</span>
+        </div>
+
+        <div class="mt_slide__atc">
+            <div class="mt_slide__qty">
+                <button class="mt_slide__qty--minus" type="button" name="decrease" title="Decrease value" data-mt-decrement>Decrease value</button>
+                <input class="mt_slide__qty--input" type="text" tabindex="0" aria-disabled="false" aria-readonly="false" min="0" max="99999999" value="1" data-mt-quantity />
+                <button class="mt_slide__qty--plus" type="button" name="increase" title="Increase value" data-mt-increment>Increase value</button>
+            </div>
+            <button class="mt_slide__btn" type="button" name="mtAddToCart" data-mt-add-to-cart="{{id}}">Add to Cart</button>
+        </div>
+    </div>
+</section>

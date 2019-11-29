@@ -1,0 +1,16 @@
+{
+    "Infinity": {
+        "visible": 4
+    },
+    "1024": {
+        "visible": 4
+    },
+    "768": {
+        "visible": 2,
+        "peekRight": 0.5
+    },
+    "414": {
+        "visible": 1,
+        "peekRight": 0.5
+    }
+}

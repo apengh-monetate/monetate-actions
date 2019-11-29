@@ -1,0 +1,32 @@
+#mtClonedCheckoutBtn {
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1025px) {
+  #mtClonedCheckoutBtn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #mtClonedCheckoutBtn .cart-action-checkout {
+    float: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #mtClonedCheckoutBtn button.bfx-checkout {
+    background: url("/on/demandware.static/Sites-nau-Site/-/default/v1574436708381/images/checkout_btn_bg.png") 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .rColContainer.cart-order-summary {
+    margin-top: 60px !important;
+  }
+}

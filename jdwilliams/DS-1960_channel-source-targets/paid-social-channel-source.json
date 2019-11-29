@@ -1,0 +1,56 @@
+{
+  "category": "cookie",
+  "create_time": "2019-11-07T15:32:12",
+  "create_user": "apengh@monetate.com",
+  "description": "Paid Social Channel Source",
+  "id": 49350,
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "name",
+        "value": "mt.sc"
+      },
+      "widget": {
+        "type": "CookieTypeAheadField",
+        "description": "",
+        "label": "Cookie Name"
+      }
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "compare",
+        "value": "contain"
+      },
+      "widget": {
+        "type": "StringSelectField",
+        "description": "",
+        "label": "Cookie Value"
+      }
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "value",
+        "value": "PaidSocialAO"
+      },
+      "widget": {
+        "type": "CharField",
+        "description": "Leave empty to match against a cookie that exists but has no value.",
+        "label": "Value"
+      }
+    }
+  ],
+  "is_archived": false,
+  "is_identifier": false,
+  "is_collector": false,
+  "named_identifier": null,
+  "op": "targetCookie",
+  "path": {
+    "value": "",
+    "op": ""
+  },
+  "subcategory": "Other",
+  "title": "Paid Social Channel Source"
+}

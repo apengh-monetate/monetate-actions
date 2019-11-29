@@ -1,0 +1,56 @@
+$red: #f05a50;
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+/* ===================================================== */
+/* Monetate Container
+/* ===================================================== */
+#MONETATE-ID {
+    border: 1px solid #eaeef5;
+    border-left: none;
+    display: inline-block;
+    margin: 0 0 -1px 0;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 50%;
+    @media screen and (min-width: $breakpoint-md) {
+        width: 33.33%;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        width: 25%;
+    }
+}
+
+
+
+// ==================================================================
+// Grid Item
+// ==================================================================
+.mt_grid-item {
+    height: 100%;
+    padding: 0;
+    text-align: center;
+
+
+    &__video {
+        height: 100%;
+        width: 100%;
+        iframe {
+            height: 175%;
+            left: 50%;
+            position: absolute;
+            top: 45%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            @media screen and (min-width: $breakpoint-md) {
+
+            }
+            @media screen and (min-width: $breakpoint-lg) {
+                top: 50%;
+            }
+        }
+    }
+
+} // .mt_grid-item

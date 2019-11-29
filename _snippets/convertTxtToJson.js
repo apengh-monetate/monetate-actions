@@ -1,7 +1,7 @@
 const args = process.argv.slice(2);
 
 // Default Values
-let lines = 20;
+let lines = 100000;
 let search = '';
 
 const flags = {
@@ -37,8 +37,6 @@ args.forEach((arg) => {
 
 
 console.log('input', file_name);
-console.log('lines', lines);
-console.log('text', search);
 
 const readline = require('readline');
 const fs = require('fs');

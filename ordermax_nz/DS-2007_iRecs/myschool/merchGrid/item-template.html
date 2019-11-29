@@ -1,0 +1,39 @@
+<!-- <a class="mt_grid-item" href="{{link}}" data-pid="{{id}}">
+    <div class="mt_grid-item">
+      <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+    </div>
+    <div class="mt_grid-item__text">
+        <div class="mt_grid-item__title">{{title|truncate: 20}}</div>
+        <div class="mt_grid-item__price">
+            <span>{{price|priceFormat: $1,000.00}}</span>
+            <span>{{salePrice|priceFormat: $1,000.00}}</span>
+        </div>
+    </div>
+</a> -->
+
+<section class="mt_grid-item" data-pid="{{id}}">
+    <div class="mt_grid-item__img">
+        <a href="{{link}}">
+            <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+        </a>
+    </div>
+    <div class="mt_grid-item__text">
+        <div class="mt_grid-item__details">
+            <span class="mt_grid-item__title">
+                <a href="{{link}}">{{title}}</a>
+            </span>
+            <span class="mt_grid-item__code">code: {{id}}</span>
+        </div>
+        <div class="mt_grid-item__price">
+            <span>{{price|priceFormat: $1,000.00}}</span>
+        </div>
+        <div class="mt_grid-item__atc">
+            <div class="mt_grid-item__qty">
+                <button class="mt_grid-item__qty--minus" type="button" name="decrease" title="Decrease value" data-mt-decrement>Decrease value</button>
+                <input class="mt_grid-item__qty--input" type="text" tabindex="0" aria-disabled="false" aria-readonly="false" min="0" max="99999999" value="1" data-mt-quantity />
+                <button class="mt_grid-item__qty--plus" type="button" name="increase" title="Increase value" data-mt-increment>Increase value</button>
+            </div>
+            <button class="mt_grid-item__btn" type="button" name="mtAddToCart" data-mt-add-to-cart="{{id}}">Add to Cart</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,151 @@
+/* ===================================================== */
+/* Custom Styling
+/* ===================================================== */
+.mt-countdown {
+  background-color: #fff;
+  background-image: url("{{BKG_URL}}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 0;
+  padding-bottom: calc((800 / 1600) * 100%);
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.mt-countdown h3, .mt-countdown p {
+  margin: 0;
+}
+
+.mt-countdown__text {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown__text {
+    left: 40%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 50%;
+  }
+}
+
+.mt-countdown__heading {
+  font-size: 24px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown__heading {
+    font-size: 36px;
+  }
+}
+
+.mt-countdown__subheading {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown__subheading {
+    font-size: 24px;
+    margin-top: 8px;
+  }
+}
+
+.mt-countdown__button {
+  border: 1px solid #30609A;
+  border-radius: 4px;
+  color: #30609A;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 4px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown__button {
+    margin-top: 12px;
+  }
+}
+
+.mt-countdown__timer {
+  position: absolute;
+  text-align: center;
+  top: calc(40% + 60px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown__timer {
+    top: calc(40% + 90px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mt-countdown__timer {
+    right: 0;
+    top: 50%;
+    width: 50%;
+  }
+}
+
+.mt-countdown__colon {
+  display: none;
+}
+
+.mt-countdown .mt_tickerElem {
+  display: inline-block;
+  font-variant: tabular-nums;
+  margin-right: 10px;
+  position: relative;
+}
+
+.mt-countdown .mt_tickerElem:not(:last-child)::after {
+  content: ":";
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.mt-countdown .mt_tickerElem .mt_time {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown .mt_tickerElem .mt_time {
+    font-size: 36px;
+  }
+}
+
+.mt-countdown .mt_tickerElem .mt_suffix {
+  font-size: 6px;
+  left: 50%;
+  margin-top: 4px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  .mt-countdown .mt_tickerElem .mt_suffix {
+    font-size: 10px;
+  }
+}

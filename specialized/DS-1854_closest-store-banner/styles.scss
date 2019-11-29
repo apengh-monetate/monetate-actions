@@ -1,0 +1,37 @@
+// https://marketer.monetate.net/control/a-d522ce7d/p/specialized.com/experience/1161016
+
+$monetate-id: #monetate_selectorBanner_cccac292_00;
+
+#{$monetate-id} {
+    display: block;
+    height: 32px;
+    padding-top: 5px;
+    position: absolute;
+    right: 360px;
+    top: 0;
+    z-index: 9999;
+}
+
+#{$monetate-id}:hover {
+    height: 64px;
+}
+
+#{$monetate-id}::before {
+    background: #262625;
+    content: "";
+    display: none;
+    height: 32px;
+    left: 110px;
+    position: absolute;
+    right: 60px;
+    top: 32px;
+    width: auto;
+}
+
+#{$monetate-id}:hover::before {
+    display: block;
+}
+
+#{$monetate-id} img {
+    position: relative;
+}

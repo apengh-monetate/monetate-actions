@@ -1,0 +1,33 @@
+#monetate_selectorBanner_cccac292_00 {
+  display: block;
+  height: 32px;
+  padding-top: 5px;
+  position: absolute;
+  right: 360px;
+  top: 0;
+  z-index: 9999;
+}
+
+#monetate_selectorBanner_cccac292_00:hover {
+  height: 64px;
+}
+
+#monetate_selectorBanner_cccac292_00::before {
+  background: #262625;
+  content: "";
+  display: none;
+  height: 32px;
+  left: 110px;
+  position: absolute;
+  right: 60px;
+  top: 32px;
+  width: auto;
+}
+
+#monetate_selectorBanner_cccac292_00:hover::before {
+  display: block;
+}
+
+#monetate_selectorBanner_cccac292_00 img {
+  position: relative;
+}

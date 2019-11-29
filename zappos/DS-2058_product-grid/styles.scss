@@ -1,0 +1,355 @@
+$breakpoint-md: 651px;
+$breakpoint-lg: 1025px;
+$breakpoint-xl: 1441px;
+
+.mt_product-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto 64px;
+    max-width: 1440px;
+    padding: 0 24px;
+    width: 100%;
+    @media screen and (max-width: ($breakpoint-lg - 1)) {
+        margin: 0 auto 32px;
+    }
+    @media screen and (max-width: ($breakpoint-md - 1)) {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto 16px;
+        padding: 0 8px;
+    }
+
+
+    figure {
+        margin: 0 12px 0 8px;
+        width: calc(33.33333% - 12px);
+        @media screen and (max-width: ($breakpoint-lg - 1)) {
+            width: 50%;
+        }
+        @media screen and (max-width: ($breakpoint-md - 1)) {
+            width: calc(100% - 8px;);
+        }
+
+        a {
+            display: block;
+            div {
+                color: #212121;
+                display: block;
+                text-align: left;
+                &::after {
+                    bottom: 0;
+                    content: "";
+                    height: 130px;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                    z-index: 1;
+                }
+            }
+            &:hover {
+                button {
+                    background-color: #1f1f1f;
+                    border-color: #1f1f1f;
+                    box-shadow: none;
+                    color: #fff;
+                }
+            }
+        }
+
+        figcaption {
+            color: #1f1f1f;
+            font: 600 24px "Open Sans", sans-serif;
+            margin-bottom: 16px;
+            @media screen and (max-width: ($breakpoint-md - 1)) {
+                font-size: 20px;
+            }
+        }
+        button {
+            background: transparent;
+            border: 2px solid #1f1f1f;
+            border-radius: 4px;
+            color: #1f1f1f;
+            cursor: pointer;
+            display: inline-block;
+            font: 700 14px/120% "Open Sans", sans-serif;
+            margin-bottom: 12px;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transition: all 0.3s ease 0s;
+            user-select: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+
+
+    // ==================================================================
+    // Product Grid (8 products)
+    // ==================================================================
+    &__grid {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        width: 66.66667%;
+        @media screen and (max-width: ($breakpoint-lg - 1)) {
+            width: 50%;
+        }
+        @media screen and (max-width: ($breakpoint-md - 1)) {
+            width: 100%;
+        }
+
+
+    }
+
+
+    // ------------------------------------------------------------------
+    // Product
+    // ------------------------------------------------------------------
+    &__product {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        margin: 0;
+        padding-top: 277px;
+        position: relative;
+        width: 25%;
+        @media screen and (max-width: ($breakpoint-xl - 1)) {
+            padding-top: 18.5vw;
+        }
+        @media screen and (max-width: ($breakpoint-lg - 1)) {
+            padding-top: 28.5vw;
+            width: 50%;
+        }
+        @media screen and (max-width: ($breakpoint-md - 1)) {
+            margin: 0;
+            padding-top: 56.5vw;
+            width: 50%;
+        }
+
+        &:nth-child(n+5) {
+            @media screen and (max-width: ($breakpoint-lg - 1)) {
+                display: none;
+            }
+            @media screen and (max-width: ($breakpoint-md - 1)) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            p[itemprop="brand"],
+            p[itemprop="name"] {
+                color: #0076bd;
+                text-decoration: underline;
+            }
+        }
+
+
+        a {
+            display: block;
+            &::after {
+                bottom: 0;
+                content: "";
+                height: 130px;
+                left: 0;
+                position: absolute;
+                width: 100%;
+                z-index: 1;
+            }
+
+            div {
+                bottom: 132px;
+                left: 8px;
+                position: absolute;
+                right: 8px;
+                top: 8px;
+                @media screen and (max-width: ($breakpoint-lg - 1)) {
+                    bottom: 120px;
+                }
+                @media screen and (max-width: ($breakpoint-md - 1)) {
+                    bottom: 114px;
+                    left: 4px;
+                    right: 4px;
+                    top: 4px;
+                }
+                &::before {
+                    background: rgba(0,0,0,.04);
+                    bottom: 0;
+                    content: "";
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 1;
+                }
+            }
+            span {
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+            img {
+                backface-visibility: hidden;
+                left: 50%;
+                max-height: calc(100% - 8px);
+                max-width: calc(100% - 24px);
+                opacity: 1;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: opacity .25s ease-in-out;
+            }
+        } // link
+
+
+        // ------------------------------------------------------------------
+        // Product - Text
+        // ------------------------------------------------------------------
+        &-text {
+            box-sizing: border-box;
+            height: 147px;
+            padding: 12px;
+            text-align: left;
+            @media screen and (max-width: ($breakpoint-lg - 1)) {
+                height: 135px;
+                padding: 6px;
+            }
+            @media screen and (max-width: ($breakpoint-md - 1)) {
+                padding: 3px;
+            }
+
+            button {
+                background: transparent;
+                border: none;
+                color: #707070;
+                cursor: pointer;
+                display: block;
+                font-size: 16px;
+                height: 44px;
+                max-width: 100px;
+                min-width: 44px;
+                overflow: hidden;
+                padding: 0;
+                position: relative;
+                text-align: left;
+                text-indent: 22px;
+                width: 100%;
+                z-index: 2;
+                @media screen and (max-width: ($breakpoint-md - 1)) {
+                    margin-top: 0.75em;
+                }
+
+                &::before {
+                    background-image: url('https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2019.08.26._TTH_.svg');
+                    background-position: -4px -140px;
+                    background-repeat: no-repeat;
+                    border: none;
+                    content: "";
+                    cursor: pointer;
+                    display: block;
+                    height: 14px;
+                    position: absolute;
+                    top: calc(50% - 6px);
+                    width: 16px;
+                }
+            }
+
+            p[itemprop="brand"] {
+                background-color: transparent;
+                border-width: 0;
+                color: #1f1f1f;
+                cursor: pointer;
+                font: 400 14px Open Sans,sans-serif;
+                font-size: 100%;
+                line-height: normal;
+                margin: 0;
+                max-width: 100%;
+                overflow: hidden;
+                padding: 0;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            p[itemprop="name"] {
+                background-color: transparent;
+                border-width: 0;
+                color: #1f1f1f;
+                cursor: pointer;
+                font: 400 14px Open Sans,sans-serif;
+                font-size: 100%;
+                font-weight: 600;
+                line-height: normal;
+                margin: 0;
+                max-width: 100%;
+                overflow: hidden;
+                padding: 0;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        } // Text
+
+
+        &-price {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            height: 20px;
+            line-height: normal;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            span {
+                color: #035d59;
+                font: 400 14px Open Sans,sans-serif;
+                line-height: 1.5;
+            }
+        }
+
+        &-reviews {
+            line-height: normal;
+            margin: 0;
+            > span {
+                display: inline-block;
+                @media screen and (max-width: ($breakpoint-md - 1)) {
+                    transform: scale(.75) !important;;
+                }
+                &[data-star-rating="1"],
+                &[data-star-rating="2"],
+                &[data-star-rating="3"],
+                &[data-star-rating="4"],
+                &[data-star-rating="5"] {
+                    background-image: url('https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2019.08.26._TTH_.svg');
+                    background-repeat: no-repeat;
+                    height: 18px;
+                    transform: scale(1.04);
+                    width: 95px;
+                }
+
+                &[data-star-rating="1"] {
+                    background-position: -78px -252px;
+                }
+                &[data-star-rating="2"] {
+                    background-position: -59px -252px;
+                }
+                &[data-star-rating="3"] {
+                    background-position: -40px -252px;
+                }
+                &[data-star-rating="4"] {
+                    background-position: -21px -252px;
+                }
+                &[data-star-rating="5"] {
+                    background-position: -2px -252px;
+                }
+            }
+        }
+
+    } // Product
+}

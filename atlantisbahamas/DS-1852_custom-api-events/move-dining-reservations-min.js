@@ -1,0 +1,1 @@
+!function(){for(var n=['#navigation li.px-2 a[href*="dining/dining-reservations"]','footer a[href*="dining/dining-reservations"]'],e=0;e<n.length;e++){var i=n[e];if(document.querySelector(i))document.querySelector(i).addEventListener("click",(function(){window.monetateQ=window.monetateQ||[],window.monetateQ.push(["trackEvent",["DiningReservationsLink"]])}))}}();

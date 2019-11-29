@@ -1,0 +1,124 @@
+{
+    "products_data": [
+        {
+            "title": "Collins A5 Hardcover Spiral Notebook Black 200 Pages",
+            "price": 8.52,
+            "itemGroupId": "1916815",
+            "imageLink": "https://www.myschool.co.nz/images/ProductImages/1916815.jpg",
+            "link": "https://www.myschool.co.nz/book-note-collins-a5-wiro-hard-cover-225x175mm-black",
+            "salePrice": null,
+            "productType": "Notebooks",
+            "id": "1916815"
+        },
+        {
+            "title": "FM Pastel A4 Display Book 20 Pocket Sunset Orange",
+            "price": 5.83,
+            "itemGroupId": "2420848",
+            "imageLink": "https://www.myschool.co.nz/images/ProductImages/2420848.jpg",
+            "link": "https://www.myschool.co.nz/Office-Products/Filing-and-Storage/Display-Books/FM-Pastel-A4-Display-Book-20-Pocket-Sunset-Orange-2420848",
+            "salePrice": null,
+            "productType": "Display Books",
+            "id": "2420848"
+        },
+        {
+            "title": "Sistema Squeeze Drink Bottle Blue 620ml",
+            "price": 5.39,
+            "itemGroupId": "2431351",
+            "imageLink": "https://www.myschool.co.nz/images/ProductImages/2431351.jpg",
+            "link": "https://www.myschool.co.nz/Cafe-and-Catering-Supplies/Cafe-and-Catering-Supplies/Lunch-Boxes-and-Drink-Bottles/Sistema-Squeeze-Drink-Bottle-Blue-620ml-2431351",
+            "salePrice": null,
+            "productType": "Lunch Boxes & Drink Bottles",
+            "id": "2431351"
+        },
+        {
+            "title": "Help-It Instant Ice Pack Disposable",
+            "price": 3.04,
+            "itemGroupId": "1425080",
+            "imageLink": "https://www.myschool.co.nz/images/ProductImages/1425080.jpg",
+            "link": "https://www.myschool.co.nz/Safety-and-First-Aid/First-Aid-Kit-Supplies/Hot-and-Cold-Packs/Help-It-Instant-Ice-Pack-Disposable-1425080",
+            "salePrice": null,
+            "productType": "Hot & Cold Packs",
+            "id": "1425080"
+        },
+        {
+            "title": "OfficeMax Eco Assorted Colours Highlighter Chisel Tip, Pack of 4",
+            "price": 10.43,
+            "itemGroupId": "2017148",
+            "imageLink": "https://www.myschool.co.nz/images/ProductImages/2017148.jpg",
+            "link": "https://www.myschool.co.nz/Office-Products/Markers-and-Highlighters/Highlighters/OfficeMax-Eco-Assorted-Colours-Highlighter-Chisel-Tip-Pack-of-4-2017148",
+            "salePrice": null,
+            "productType": "Highlighters",
+            "id": "2017148"
+        },
+        {
+            "title": "OfficeMax Scissors 158mm Lime",
+            "price": 7.22,
+            "itemGroupId": "2014505",
+            "imageLink": "https://www.myschool.co.nz/images/ProductImages/2014505.jpg",
+            "link": "https://www.myschool.co.nz/Office-Products/Measure-Cut-and-Trim/Scissors/OfficeMax-Scissors-158mm-Lime-2014505",
+            "salePrice": null,
+            "productType": "Scissors",
+            "id": "2014505"
+        },
+        {
+            "title": "Biopak Compostable Plastic Spork White 152.5mm, Pack of 50",
+            "price": 5.21,
+            "itemGroupId": "2517698",
+            "imageLink": "https://www.myschool.co.nz/images/ProductImages/2517698.jpg",
+            "link": "https://www.myschool.co.nz/Cafe-and-Catering-Supplies/Cafe-and-Catering-Supplies/Disposable-Plates-and-Cutlery/Biopak-Compostable-Plastic-Spork-White-152-5mm-Pack-of-50-2517698",
+            "salePrice": null,
+            "productType": "Disposable Plates & Cutlery",
+            "id": "2517698"
+        },
+        {
+            "title": "FM Vivid Ringbinder A4 2 Ring Ice Blue",
+            "price": 7.65,
+            "itemGroupId": "2896230",
+            "imageLink": "https://www.myschool.co.nz/images/ProductImages/2896230.jpg",
+            "link": "https://www.myschool.co.nz/file-ringbinder-fm-vivid-a4-2d-26mm-ice-blue",
+            "salePrice": null,
+            "productType": "Ring Binders",
+            "id": "2896230"
+        },
+        {
+            "title": "OfficeMax Notes Self-Stick 76x76mm Assorted Bright Colours, Pack of 6",
+            "price": 18.69,
+            "itemGroupId": "1951157",
+            "imageLink": "https://www.myschool.co.nz/images/ProductImages/1951157.jpg",
+            "link": "https://www.myschool.co.nz/pad-note-officemax-76x76mm-bright-colours-pk-6",
+            "salePrice": null,
+            "productType": "Sticky Notes",
+            "id": "1951157"
+        },
+        {
+            "title": "OfficeMax Magnetic Weekly Planner & Pen Assorted Design",
+            "price": 4.34,
+            "itemGroupId": "2478994",
+            "imageLink": "https://www.myschool.co.nz/images/ProductImages/2478994.jpg",
+            "link": "https://www.myschool.co.nz/Clearance/Clearance/Office-Supplies/OfficeMax-Magnetic-Weekly-Planner-and-Pen-Assorted-Design-2478994",
+            "salePrice": null,
+            "productType": "Office Supplies",
+            "id": "2478994"
+        },
+        {
+            "title": "OfficeMax Transparent Clipboard A4 Neon Yellow Plastic",
+            "price": 7.65,
+            "itemGroupId": "2177994",
+            "imageLink": "https://www.myschool.co.nz/images/ProductImages/2177994.jpg",
+            "link": "https://www.myschool.co.nz/Office-Products/Desk-Accessories-and-Organisers/Clipboards/OfficeMax-Transparent-Clipboard-A4-Neon-Yellow-Plastic-2177994",
+            "salePrice": null,
+            "productType": "Clipboards",
+            "id": "2177994"
+        },
+        {
+            "title": "FM Vivid Document Wallet A4 Ice Blue",
+            "price": 5.83,
+            "itemGroupId": "2638436",
+            "imageLink": "https://www.myschool.co.nz/images/ProductImages/2638436.jpg",
+            "link": "https://www.myschool.co.nz/wallet-document-fm-vivid-a4-ice-blue",
+            "salePrice": null,
+            "productType": "Document Wallets",
+            "id": "2638436"
+        }
+    ]
+}

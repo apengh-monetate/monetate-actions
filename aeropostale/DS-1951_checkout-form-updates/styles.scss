@@ -1,0 +1,92 @@
+
+/* ===================================================== */
+/* Shipping Fields
+/* ===================================================== */
+.checkout-shipping.address > fieldset {
+
+    // Hide labels
+    label {
+        display: none !important;
+    }
+
+    // Hide .form-caption
+    .form-caption {
+        display: none !important;
+    }
+
+    .field-wrapper {
+        @media screen and (min-width: 1025px) {
+            margin-left: 0 !important;
+        }
+    }
+}
+
+
+
+/* ===================================================== */
+/* Contact Email
+/* ===================================================== */
+#dwfrm_billing > fieldset:nth-child(1) {
+    .form-row.required {
+        // Hide labels
+        label {
+            display: none !important;
+        }
+        .field-wrapper {
+            @media screen and (min-width: 1025px) {
+                margin-left: 0 !important;
+            }
+        }
+    }
+
+    .form-row.form-indent.checkbox .field-wrapper {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .form-caption.form-indent.billing-email-info {
+        margin-left: 0 !important;
+    }
+
+    .same-as-shipping .field-wrapper {
+        @media screen and (min-width: 1025px) {
+            margin-left: 0 !important;
+            padding-left: 0 !important;
+        }
+    }
+}
+
+
+
+/* ===================================================== */
+/* Payment Method
+/* ===================================================== */
+#dwfrm_billing > fieldset:nth-child(3) {
+    .payment-method-options-list {
+        @media screen and (min-width: 1025px) {
+            margin-left: 0 !important;
+        }
+    }
+    .payment-method.payment-method-expanded {
+        // Hide labels
+        label {
+            display: none !important;
+        }
+        .field-wrapper {
+            @media screen and (min-width: 1025px) {
+                margin-left: 0 !important;
+            }
+        }
+        .form-caption {
+            @media screen and (min-width: 1025px) {
+                margin-left: 0 !important;
+            }
+        }
+    }
+
+    .form-row.month.required.selectbox {
+        @media screen and (min-width: 1025px) {
+            padding-left: 0 !important;
+        }
+    }
+}

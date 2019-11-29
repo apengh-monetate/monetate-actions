@@ -1,0 +1,1 @@
+!function(){var i=jQuery("#altViewsWrapper .alt-views-carousel.slick-initialized"),e=i.slick("getSlick").originalSettings;i.slick("unslick");var s=i.find("a:last");i.find("a:first").before(s),i.slick(e),i.slick("refresh")}(jQuery);const imageSrc="https://images.journeys.com/images/products/1_5122_FS_B-LIFESTYLE1.JPG",regexp=new RegExp("lifestyle1.jpg","gi");

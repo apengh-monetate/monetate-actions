@@ -1,0 +1,11 @@
+cordial.event('monetate_event');
+cordial.identify({{email}});
+var contactData = {};
+contactData.channels = {};
+contactData.channels.email = {};
+contactData.channels.email.subscribeStatus = "subscribed";
+contactData.channels.email.address = {{email}};
+contactData.promotions = true;
+contactData.lightbox_monetate = true;
+contactData.list_name = true;
+cordial.contact(contactData);
