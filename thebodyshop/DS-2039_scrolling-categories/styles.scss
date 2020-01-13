@@ -1,0 +1,61 @@
+.mt_scrolling-cat {
+    margin-top: 30px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 42px;
+    position: relative;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        left: 0;
+        overflow-x: scroll;
+        padding-bottom: 12px;
+        position: absolute;
+        top: 0;
+
+        &-item {
+            display: block;
+            white-space: nowrap;
+        }
+
+        &-link {
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+        }
+
+        .arrow.arrow-right {
+            display: none;
+        }
+    }
+
+
+    a {
+        text-decoration: none;
+    }
+
+    &__active {
+        background: #029310;
+        position: relative;
+        &::after {
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 12px solid #029310;
+            content: "";
+            height: 0px;
+            left: 50%;
+            position: absolute;
+            top: 100%;
+            transform: translateX(-50%);
+            width: 0px;
+        }
+    }
+}
+
+
+.breadcrumb .wrapper-breadcrumb {
+    padding-left: 10px !important;
+    padding-top: 0 !important;
+}

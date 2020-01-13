@@ -1,0 +1,56 @@
+/* Wrapper */
+.mt_countdown {
+  color: #000;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .mt_countdown {
+    text-align: center;
+  }
+}
+
+/*Hides the plural parameter on any suffixes when counting down.*/
+.mt_countdown .mt_hide_plural {
+  display: none;
+}
+
+.mt_countdown .mt_tickerElem {
+  color: #001689;
+  display: inline-block;
+  font-size: 24px;
+  font-variant: tabular-nums;
+  margin-left: 4px;
+  margin-right: 4px;
+  position: relative;
+  text-align: center;
+  width: 72px;
+}
+
+.mt_countdown .mt_time {
+  border: 1px solid #001689;
+  display: block;
+  font-family: 'LL Brown Regular', sans-serif;
+  padding: 2px 0;
+  width: 100%;
+}
+
+.mt_countdown .mt_suffix {
+  color: #333;
+  font-family: 'LL Brown Regular', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  left: 50%;
+  position: absolute;
+  text-transform: uppercase;
+  top: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}

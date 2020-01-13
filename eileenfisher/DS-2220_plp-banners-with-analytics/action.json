@@ -1,0 +1,403 @@
+{
+    "id": 455130,
+    "title": "PLP Image Banner with Analytics Attributes",
+    "description": "Inserts a mobile and/or desktop image banner using CSS3 style selectors",
+    "op": "plpImageBanner",
+    "slot": "none",
+    "slot_type": "none",
+    "category": "image",
+    "subcategory": "Any Page",
+    "action_events": [
+        "op_click",
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "str",
+                "name": "columnSpan",
+                "value": "one-across"
+            },
+            "widget": {
+                "description": "Number of columns to span",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "one-across",
+                        "label": "1x1"
+                    },
+                    {
+                        "name": "two-across",
+                        "label": "2x1"
+                    },
+                    {
+                        "name": "three-across",
+                        "label": "3x1"
+                    }
+                ],
+                "label": "Image Version Size"
+            },
+            "required": true
+        },
+        {
+        	"input": {
+        		"name": "opt_creativeMobile",
+        		"type": "raw_img_creative",
+        		"value": null
+        	},
+        	"widget": {
+        		"action_visible": true,
+        		"type": "RawImageCreative",
+        		"description": "Mobile Image Creative.",
+        		"label": "Image"
+        	},
+        	"required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_selectorMobile",
+                "value": ".products.items > .product.item:nth-child(9)"
+            },
+            "widget": {
+                "label": "Mobile Relative Element Selector",
+                "type": "CssSelectorField",
+                "description": "Supports CSS3 and Sizzle syntax",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_imethMobile",
+                "value": "after"
+            },
+            "widget": {
+                "description": "Function to use when inserting the banner relative to the selected node",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First Child"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last Child"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "label": "Mobile Image Insert Function"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_divStyleMobile",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "TextField",
+                "description": "Sets the cssText value of the created Mobile Banner Div element",
+                "label": "Mobile Banner Div Style"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_imgStyleMobile",
+                "value": "max-width: 100%;"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "TextField",
+                "description": "Sets the cssText value of the Mobile Image element",
+                "label": "Mobile Image Element Style"
+            },
+            "required": false
+        },
+        {
+        	"input": {
+        		"name": "opt_linkMobile",
+        		"type": "str",
+        		"value": ""
+        	},
+        	"widget": {
+        		"action_visible": true,
+        		"description": "Link URL for the mobile image.",
+        		"label": "Mobile Image Link URL",
+        		"type": "CharField"
+        	},
+        	"required": false
+        },
+        {
+        	"input": {
+        		"name": "opt_altTextMobile",
+        		"type": "str",
+        		"value": ""
+        	},
+        	"widget": {
+        		"action_visible": true,
+        		"description": "Alt text for the mobile image.",
+        		"label": "Mobile Image Alt Text",
+        		"type": "CharField"
+        	},
+        	"required": false
+        },
+        {
+        	"input": {
+        		"name": "opt_titleTextMobile",
+        		"type": "str",
+        		"value": ""
+        	},
+        	"widget": {
+        		"action_visible": true,
+        		"description": "Title text for the mobile image.",
+        		"label": "Mobile Image Title Text",
+        		"type": "CharField"
+        	},
+        	"required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_attributesMobile",
+                "value": "data-promoid=\"mobile promoid\"\ndata-promoname=\"mobile promoname\"\ndata-promocreative=\"mobile promocreative\"\ndata-promoposition=\"mobile promoposition\""
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "TextField",
+                "description": "Attributes to be added to the mobile creative. One attribute per line in the format of attribute=\"value\"",
+                "label": "Mobile Analytics Attributes"
+            },
+            "required": false
+        },
+        {
+        	"input": {
+        		"name": "opt_creativeDesktop",
+        		"type": "raw_img_creative",
+        		"value": null
+        	},
+        	"widget": {
+        		"action_visible": true,
+        		"type": "RawImageCreative",
+        		"description": "Mobile Image Creative.",
+        		"label": "Image"
+        	},
+        	"required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_selectorDesktop",
+                "value": ".products.items > .product.item:nth-child(12)"
+            },
+            "widget": {
+                "label": "Desktop Relative Element Selector",
+                "type": "CssSelectorField",
+                "description": "Supports CSS3 and Sizzle syntax",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_imethDesktop",
+                "value": "after"
+            },
+            "widget": {
+                "description": "Function to use when inserting the banner relative to the selected node",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First Child"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last Child"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "label": "Desktop Image Insert Function"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_divStyleDesktop",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "TextField",
+                "description": "Sets the cssText value of the created Desktop Banner Div element",
+                "label": "Desktop Banner Div Style"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_imgStyleDesktop",
+                "value": "max-width: 100%;"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "TextField",
+                "description": "Sets the cssText value of the Desktop Image element",
+                "label": "Desktop Image Element Style"
+            },
+            "required": false
+        },
+        {
+        	"input": {
+        		"name": "opt_linkDesktop",
+        		"type": "str",
+        		"value": ""
+        	},
+        	"widget": {
+        		"action_visible": true,
+        		"description": "Link URL for the desktop image.",
+        		"label": "Desktop Image Link URL",
+        		"type": "CharField"
+        	},
+        	"required": false
+        },
+        {
+        	"input": {
+        		"name": "opt_altTextDesktop",
+        		"type": "str",
+        		"value": ""
+        	},
+        	"widget": {
+        		"action_visible": true,
+        		"description": "Alt text for the desktop image.",
+        		"label": "Desktop Image Alt Text",
+        		"type": "CharField"
+        	},
+        	"required": false
+        },
+        {
+        	"input": {
+        		"name": "opt_titleTextDesktop",
+        		"type": "str",
+        		"value": ""
+        	},
+        	"widget": {
+        		"action_visible": true,
+        		"description": "Title text for the desktop image.",
+        		"label": "Desktop Image Title Text",
+        		"type": "CharField"
+        	},
+        	"required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_attributesDesktop",
+                "value": "data-promoid=\"desktop promoid\"\ndata-promoname=\"desktop promoname\"\ndata-promocreative=\"desktop promocreative\"\ndata-promoposition=\"desktop promoposition\""
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "TextField",
+                "description": "Attributes to be added to the desktop creative. One attribute per line in the format of attribute=\"value\"",
+                "label": "Desktop Analytics Attributes"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "opt_stylesheet",
+                "value": {
+                    "content": ".products.list {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n\n.products.list > .product.item {\n  -webkit-box-flex: 0;\n      -ms-flex: 0 1 50%;\n          flex: 0 1 50%;\n}\n\n@media screen and (min-width: 768px) {\n  .products.list > .product.item {\n    -webkit-box-flex: 0;\n        -ms-flex: 0 1 calc(100% / 3);\n            flex: 0 1 calc(100% / 3);\n    padding-left: 1.28205128%;\n    padding-right: 1.28205128%;\n  }\n}\n\n/* ===================================================== */\n/* Mobile Banners\n/* ===================================================== */\n.mt_plp-banner__mobile {\n  display: block;\n  margin-bottom: 20px;\n  padding-left: 1.28205128%;\n  padding-right: 1.28205128%;\n}\n\n@media screen and (min-width: 768px) {\n  .mt_plp-banner__mobile {\n    display: none;\n  }\n}\n\n.mt_plp-banner__mobile.one-across {\n  -webkit-box-flex: 0;\n      -ms-flex: 0 1 50%;\n          flex: 0 1 50%;\n}\n\n.mt_plp-banner__mobile.two-across {\n  -webkit-box-flex: 0;\n      -ms-flex: 0 1 100%;\n          flex: 0 1 100%;\n}\n\n.mt_plp-banner__mobile.three-across {\n  -webkit-box-flex: 0;\n      -ms-flex: 0 1 100%;\n          flex: 0 1 100%;\n}\n\n/* ===================================================== */\n/* Desktop Banners\n/* ===================================================== */\n.mt_plp-banner__desktop {\n  display: none;\n}\n\n@media screen and (min-width: 768px) {\n  .mt_plp-banner__desktop {\n    display: block;\n    margin-bottom: 20px;\n    padding-left: 1.28205128%;\n    padding-right: 1.28205128%;\n  }\n}\n\n.mt_plp-banner__desktop.one-across {\n  -webkit-box-flex: 0;\n      -ms-flex: 0 1 calc(100% / 3);\n          flex: 0 1 calc(100% / 3);\n}\n\n.mt_plp-banner__desktop.two-across {\n  -webkit-box-flex: 0;\n      -ms-flex: 0 1 calc((100% / 3) * 2);\n          flex: 0 1 calc((100% / 3) * 2);\n}\n\n.mt_plp-banner__desktop.three-across {\n  -webkit-box-flex: 0;\n      -ms-flex: 0 1 100%;\n          flex: 0 1 100%;\n}\n",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CSSCodeField",
+                "description": "CSS appended to the DOM in a <style> or <link> element. Use selector \"#MONETATE-ID\" to target the inserted element.",
+                "label": "CSS"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_multiSel",
+                "value": true
+            },
+            "widget": {
+                "label": "Select multiple elements, if matched?",
+                "type": "BooleanField",
+                "description": "If multiple elements match the specified CSS3 selector, should the change be applied to all of them, or just the first one?",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_poll",
+                "value": true
+            },
+            "widget": {
+                "label": "Re-check for Elements",
+                "type": "BooleanField",
+                "description": "If elements are not found, keep checking every 50ms for up to 3 seconds. Useful for content loaded asynchronously (ajax).",
+                "action_visible": true
+            },
+            "required": false
+        }
+    ],
+    "masks": [],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [],
+        "required": []
+    },
+    "integration_type": "js-tag",
+    "manage_impressions": false
+}

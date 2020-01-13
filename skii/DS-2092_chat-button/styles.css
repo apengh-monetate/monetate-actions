@@ -1,0 +1,125 @@
+/* ===================================================== */
+/* Delay Display
+/* ===================================================== */
+.mt_chat {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: delayShow;
+          animation-name: delayShow;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  opacity: 0;
+}
+
+.mt_chat {
+  bottom: 10px;
+  display: block;
+  height: 88px;
+  position: fixed;
+  right: 10px;
+  width: 68px;
+  z-index: 2147483647;
+}
+
+.mt_chat__button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #c20430;
+  border: none;
+  border-radius: 50%;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  height: 48px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  width: 48px;
+}
+
+.mt_chat__button img {
+  margin-top: 2px;
+  max-width: 20px;
+}
+
+.mt_chat__bubble {
+  background: #fff;
+  border-bottom-left-radius: 36px;
+  border-top-left-radius: 36px;
+  border-top-right-radius: 36px;
+  box-sizing: border-box;
+  display: none;
+  padding-bottom: 12px;
+  padding-left: 32px;
+  padding-right: 48px;
+  padding-top: 12px;
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 300px;
+}
+
+.mt_chat__bubble p {
+  font-family: "Camphor W01 Medium";
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.mt_chat__bubble a {
+  color: #c20430 !important;
+}
+
+.mt_chat__close {
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 24px;
+  padding: 4px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+}
+
+.mt_chat__close img {
+  height: auto;
+  width: 100%;
+}
+
+@-webkit-keyframes delayShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes delayShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

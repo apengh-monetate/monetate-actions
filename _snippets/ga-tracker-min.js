@@ -1,0 +1,1 @@
+ga((function(){var o=ga.getAll();console.log(o);var a={};o.forEach(o=>{var e=o.get("name"),l=o.b.data.keys,g={};l.forEach(a=>{console.log(a,o.get(a));var e=o.get(a);console.log(a,e),g[a]=e}),console.log("trackerData",g),a[e]=a[e]||[],a[e].push(g)}),console.log(a)}));

@@ -1,0 +1,20 @@
+.mt_search-checkbox {
+    align-content: center;
+    align-items: center;
+    clear: both;
+    display: flex;
+    position: relative;
+    text-align: left;
+
+    &__label {
+        margin-top: -6px;
+    }
+
+    &__input {
+        margin-top: 6px !important;
+    }
+
+    &__text {
+        margin-left: 4px;
+    }
+}

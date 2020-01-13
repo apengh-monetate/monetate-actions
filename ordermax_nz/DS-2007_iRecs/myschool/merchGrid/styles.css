@@ -1,6 +1,13 @@
 @charset "UTF-8";
-#MONETATE-ID [mt-data-grid] {
+#MONETATE-ID {
   box-sizing: border-box;
+}
+
+#MONETATE-ID * {
+  box-sizing: border-box;
+}
+
+#MONETATE-ID [mt-data-grid] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,12 +22,11 @@
           justify-content: flex-start;
 }
 
-#MONETATE-ID [mt-data-grid] .mt-merch-item {
+#MONETATE-ID .mt-merch-item {
   background: #fff;
-  border: 2px solid #ebebeb;
   box-sizing: border-box;
-  -ms-flex-preferred-size: 49%;
-      flex-basis: 49%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
@@ -28,34 +34,41 @@
       flex-shrink: 0;
   margin: 0;
   margin-bottom: 10px;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
-  padding: 5px;
+  padding: 0;
   position: relative;
-  width: 49%;
+  width: 50%;
 }
 
 @media screen and (min-width: 500px) {
-  #MONETATE-ID [mt-data-grid] .mt-merch-item {
-    -ms-flex-preferred-size: 24%;
-        flex-basis: 24%;
-    width: 24%;
+  #MONETATE-ID .mt-merch-item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    width: 25%;
   }
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__img img {
+#MONETATE-ID .mt_grid-item {
+  padding: 0 2%;
+}
+
+#MONETATE-ID .mt_grid-item__inner {
+  border: 2px solid #ebebeb;
+  padding: 5px;
+}
+
+#MONETATE-ID .mt_grid-item__img img {
   display: block;
   padding: 20px;
   width: 100%;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__title {
+#MONETATE-ID .mt_grid-item__title {
   clear: both;
   display: block;
   min-height: 95px;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__title a {
+#MONETATE-ID .mt_grid-item__title a {
   color: #000;
   display: block;
   font-size: 13px;
@@ -63,7 +76,7 @@
   padding-bottom: 5px;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__code {
+#MONETATE-ID .mt_grid-item__code {
   color: #999;
   display: inline-block;
   float: left;
@@ -72,7 +85,7 @@
   text-transform: uppercase;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__price {
+#MONETATE-ID .mt_grid-item__price {
   clear: right;
   color: #f7921e;
   display: inline-block;
@@ -83,7 +96,7 @@
   text-align: right;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__atc {
+#MONETATE-ID .mt_grid-item__atc {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -100,7 +113,7 @@
   width: 100%;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__qty {
+#MONETATE-ID .mt_grid-item__qty {
   background: #fff;
   display: block;
   margin: 0 auto;
@@ -110,7 +123,8 @@
   width: 40%;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__qty--minus, #MONETATE-ID [mt-data-grid] .mt_grid-item__qty--plus {
+#MONETATE-ID .mt_grid-item__qty--minus, #MONETATE-ID .mt_grid-item__qty--plus {
+  background: none;
   color: #333;
   font-size: 0;
   height: 100%;
@@ -120,7 +134,7 @@
   width: 25%;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__qty--minus::before, #MONETATE-ID [mt-data-grid] .mt_grid-item__qty--plus::before {
+#MONETATE-ID .mt_grid-item__qty--minus::before, #MONETATE-ID .mt_grid-item__qty--plus::before {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-family: 'Glyphicons Halflings';
@@ -131,29 +145,29 @@
   top: 1px;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__qty--minus:hover::before, #MONETATE-ID [mt-data-grid] .mt_grid-item__qty--plus:hover::before {
+#MONETATE-ID .mt_grid-item__qty--minus:hover::before, #MONETATE-ID .mt_grid-item__qty--plus:hover::before {
   color: #000;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__qty--minus {
+#MONETATE-ID .mt_grid-item__qty--minus {
   left: 0;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__qty--minus::before {
+#MONETATE-ID .mt_grid-item__qty--minus::before {
   content: "−";
   font-size: 14px;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__qty--plus {
+#MONETATE-ID .mt_grid-item__qty--plus {
   right: 0;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__qty--plus::before {
+#MONETATE-ID .mt_grid-item__qty--plus::before {
   content: "+";
   font-size: 14px;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__qty--input {
+#MONETATE-ID .mt_grid-item__qty--input {
   left: 25%;
   line-height: 23px;
   padding: 7px 0 !important;
@@ -163,7 +177,7 @@
   width: 50%;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__btn {
+#MONETATE-ID .mt_grid-item__btn {
   background: #f7921e;
   border: 1px solid #f7921e;
   border-radius: 3px;
@@ -177,12 +191,12 @@
   width: 58%;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__btn:hover {
+#MONETATE-ID .mt_grid-item__btn:hover {
   background: #eab818;
   border-color: #eab818;
 }
 
-#MONETATE-ID [mt-data-grid] .mt_grid-item__btn::before {
+#MONETATE-ID .mt_grid-item__btn::before {
   -webkit-font-smoothing: antialiased;
   content: "";
   display: inline-block;

@@ -1,0 +1,1 @@
+!function(){var e=document.querySelector("button.apple-pay-button"),t=document.querySelector("#mtClonedApplePay");e&&t&&t.addEventListener("click",(function(t){t.preventDefault(),e.click()}))}();

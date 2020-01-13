@@ -1,0 +1,41 @@
+div.hero .hero-content {
+  padding-bottom: 140px !important;
+}
+
+@media screen and (min-width: 768px) {
+  div.hero .hero-content {
+    padding-bottom: 90px !important;
+  }
+}
+
+.mt_quote {
+  border: none !important;
+  font-family: "urw-din", sans-serif;
+  margin: 0 !important;
+  margin-top: 30px !important;
+  padding: 0 !important;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_quote {
+    margin-top: 80px !important;
+  }
+}
+
+.mt_quote__text {
+  font-family: "urw-din", sans-serif;
+  font-size: 100% !important;
+  margin: 0 !important;
+  min-height: auto !important;
+}
+
+.mt_quote__footer {
+  color: #fff !important;
+  font-family: "urw-din", sans-serif;
+  font-size: 100% !important;
+  margin-top: 10px !important;
+}
+
+.mt_quote__footer::before {
+  display: none !important;
+}

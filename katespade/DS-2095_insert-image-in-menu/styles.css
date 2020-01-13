@@ -1,0 +1,12 @@
+@media screen and (min-width: 1025px) {
+  ul.menu-category li[data-template="themes/katespade/rendering/category/categorylanding-noleft"] > a img {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  ul.menu-category li[data-template="themes/katespade/rendering/category/categorylanding-noleft"]:hover > a {
+    border-color: transparent !important;
+  }
+  ul.menu-category li[data-template="themes/katespade/rendering/category/categorylanding-noleft"]:hover > a img {
+    background-color: #51002A !important;
+  }
+}

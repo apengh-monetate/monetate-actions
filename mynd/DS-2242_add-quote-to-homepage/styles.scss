@@ -1,0 +1,36 @@
+div.hero .hero-content {
+    padding-bottom: 140px !important;
+    @media screen and (min-width: 768px) {
+        padding-bottom: 90px !important;
+    }
+}
+
+.mt_quote {
+    border: none !important;
+    font-family: "urw-din", sans-serif;
+    margin: 0 !important;
+    margin-top: 30px !important;
+    padding: 0 !important;
+    @media screen and (min-width: 768px) {
+        margin-top: 80px !important;
+    }
+
+    &__text {
+        font-family: "urw-din", sans-serif;
+        font-size: 100% !important;
+        margin: 0 !important;
+        min-height: auto !important;
+    }
+
+
+    &__footer {
+        color: #fff !important;
+        font-family: "urw-din", sans-serif;
+        font-size: 100% !important;
+        margin-top: 10px !important;
+        &::before {
+            display: none !important;
+        }
+    }
+
+}

@@ -1,0 +1,1 @@
+!function(){var t=$(".mt_chat");if(t){var n=$(".mt_chat__button")||$('[name="mtChatButton"]'),o=$(".mt_chat__bubble"),c=$(".mt_chat__close")||$('[name="mtChatClose"]');n.on("click",(function(){o.toggle()})),c.on("click",(function(){o.hide()})),t.hover((function(){$(window).width()>=1025&&o.show()}),(function(){$(window).width()>=1025&&o.hide()}))}}();

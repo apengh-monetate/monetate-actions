@@ -1,2 +1,3 @@
 *.codekit*
 node_modules/
+_convert-product-feed/product-feeds/

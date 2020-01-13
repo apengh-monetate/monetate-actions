@@ -1,0 +1,55 @@
+$breakpoint-md: 768px;
+
+$monetate-id: #MONETATE-ID;
+// $monetate-id: #monetate_selectorHTML_2d2b5e0a_0;
+
+#EarringExchange {
+    background-color: #ffffff;
+    border: 1px solid #5a5a5c;
+    color: #5a5a5c;
+    margin: auto;
+    padding: 10px;
+    &_Copy{
+        font-family: "Proxima-Nova", sans-serif;
+        font-size: 1.1em;
+        font-weight: 400;
+        line-height: 18px;
+        margin: auto;
+    }
+    &_header{
+        display: block;
+        font-family: "Proxima-Nova", sans-serif;
+        font-size: 1em;
+        font-weight: 600;
+        line-height: 18px;
+        padding-bottom: 15px;
+    }
+}
+
+#{$monetate-id} {
+    @media screen and (max-width: ($breakpoint-md - 1)) {
+        padding: 0 16px;
+        padding-bottom: 32px;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+        left: calc(50% + 16px);
+        position: absolute;
+        right: 16px;
+        top: -130px;
+    }
+}
+
+.product-details__right {
+    @media screen and (min-width: $breakpoint-md) {
+        padding-bottom: 130px;
+    }
+}
+
+#curalate-fan-reel-wrapper {
+    @media screen and (max-width: ($breakpoint-md - 1)) {
+        padding-top: 0 !important;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+
+    }
+}

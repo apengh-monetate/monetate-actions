@@ -1,0 +1,84 @@
+.mt_nav-image {
+      -ms-flex-align: start;
+      -ms-flex-direction: row;
+      -ms-flex-pack: justify;
+  -ms-flex-wrap: nowrap;
+  -webkit-box-align: start;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: justify;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+          flex-direction: row;
+      flex-wrap: nowrap;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 1025px) {
+  .mt_nav-image {
+    display: none;
+  }
+}
+
+.mt_nav-image__item {
+      -ms-flex-align: center;
+      -ms-flex-direction: column;
+      -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+          flex-direction: column;
+          justify-content: center;
+}
+
+.mt_nav-image__item:first-child {
+  padding-right: 20px;
+}
+
+.mt_nav-image__item:last-child {
+  padding-left: 20px;
+}
+
+.mt_nav-image__img {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  margin-bottom: 12px;
+}
+
+.mt_nav-image img {
+  max-width: 100%;
+}
+
+.mt_nav-image__button {
+  background: none;
+  border: 2px solid #001745;
+  color: #001745 !important;
+  display: inline-block;
+  font-family: "AvenirBook";
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 24px;
+  text-transform: uppercase;
+}
+
+/* ===================================================== */
+/* Need to update this to the appropriate menu
+/* ===================================================== */
+/* MENS */
+ul#navigation-menu .hoverMenu.columnCount3.mens .slotView {
+  max-width: 440px;
+  width: calc(94.595vw - 620px);
+}
+
+/* WOMENS */
+ul#navigation-menu .hoverMenu.columnCount3.womens .slotView {
+
+}

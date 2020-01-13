@@ -1,0 +1,12 @@
+.mt_top-banner {
+  background: #182f6e;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.mt_top-banner p {
+  font-family: latobold, arial, sans-serif;
+  margin: 0;
+}

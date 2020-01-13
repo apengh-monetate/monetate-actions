@@ -1,0 +1,11 @@
+<section class="mt_slide" href="{{link}}" data-pid="{{id}}" title="{{title}}">
+    <a class="mt_slide__img" href="{{link}}">
+        <img src="{{imageLink}}" alt="{{id}} - {{name}}">
+    </a>
+    <h3 class="mt_slide__title">
+        <a href="{{link}}" title="{{title}}">{{title}}</a>
+    </h3>
+    <p class="mt_slide__price">{{price|priceFormat: £1,000.00}}</p>
+    <p class="mt_slide__extras">In Stock</p>
+    <button class="mt_slide__add-to-cart ng-binding" id="item_{{id}}" type="button" onclick="angular.element($('body').scope().addToBasket({id:'{{id}}'})); window.location.replace('/basket-page');">Add To Basket</button>
+</section>

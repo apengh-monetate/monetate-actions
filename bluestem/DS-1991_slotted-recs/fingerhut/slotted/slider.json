@@ -1,0 +1,582 @@
+{
+    "title": "Slotted Intelligent Recommendation Slider - MASTER TEMPLATE",
+    "description": "Displays an Intelligent Recommendation Slider using data from multiple specified strategies.",
+    "op": "slottedSlider",
+    "slot": "none",
+    "slot_type": "none",
+    "category": "endcap",
+    "subcategory": "other",
+    "action_events": [
+        "op_click",
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "str",
+                "name": "selector",
+                "value": null
+            },
+            "widget": {
+                "label": "Insert Selector",
+                "type": "CssSelectorField",
+                "description": "Selector to find the node where the slider will be inserted.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "insertMethod",
+                "value": "first"
+            },
+            "widget": {
+                "label": "Insert Method",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "type": "StringSelectField",
+                "description": "Method to use when inserting the slider relative to the selected node.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "insertOptions",
+                "value": "RecheckForElement"
+            },
+            "widget": {
+                "description": "RecheckForElement: If the selector is not found, wait up to 3 seconds for it to show up. SelectMultipleElements: If the selector matches multiple places, do you want to insert at each of them?",
+                "label": "Insert Options",
+                "action_visible": true,
+                "hiddenMenu": true,
+                "allIsValid": true,
+                "type": "CheckboxArrayAsString",
+                "options": [
+                    "RecheckForElement",
+                    "SelectMultipleElements"
+                ]
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "maxItems",
+                "value": 40
+            },
+            "widget": {
+                "label": "Maximum Number of Items",
+                "type": "IntegerField",
+                "description": "Maximum number of merch items to have in the slider.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "orientation",
+                "value": null
+            },
+            "widget": {
+                "description": "Orientation of the slider.",
+                "label": "Orientation",
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "horizontal",
+                        "label": "Horizontal - Left to Right"
+                    },
+                    {
+                        "name": "horizontal-rtl",
+                        "label": "Horizontal - Right to Left"
+                    },
+                    {
+                        "name": "vertical",
+                        "label": "Vertical"
+                    }
+                ],
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "sliderTemplate",
+                "value": "<div>Merch Slider</div>\n<button data-prev-button>&#9664;</button>\n{{SLIDER}}\n{{PAGINATION}}\n<button data-next-button>&#9654;</button>"
+            },
+            "widget": {
+                "label": "Slider Container Template",
+                "type": "HtmlCodeField",
+                "description": "Include an HTML template to build the slider structure. Placeholder example: '{{slider}}'. Possible placeholders: slider, pagination. Optionally, add the attributes 'data-prev-button' and 'data-next-button' to add previous and next slide buttons. If optional arrow images are included, elements with the attribute 'data-prev-button' and 'data-next-button' are required for them to display.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "itemTemplate",
+                "value": "<!-- Unformatted item tokens - Default return fields-->\n{{title}}\n{{price}}\n{{itemGroupId}}\n{{imageLink}}\n{{automationType}}\n{{link}}\n{{salePrice}}\n{{productType}}\n{{id}}\n{{brand_name}}\n{{name}}\n{{pid}}\n<!--  Unformatted item tokens - Custom return fields -->\n{{description}}\n{{additional_image_link}}\n{{availability_date}}\n{{expiration_date}}\n{{main_family}}\n{{inventory}}\n{{shop_keyword}}\n{{shop_subtitle}}\n{{shop_details}}\n{{shop_promocode}}\n{{shop_modal}}\n{{shop_disclaimercopy}}\n{{shop_savingsmessage}}\n{{shop_salesmessage}}\n{{shop_eventstatus}}\n{{category_parent}}\n{{category_parent_url}}\n{{product_ppm}}\n{{product_starrating}}\n{{product_ratingcount}}\n\n\n\n\n<!-- example slide template -->\n<!--\n<a href=\"{{link}}\" data-pid=\"{{id}}\">\n    <div>\n      <img src=\"{{imageLink}}\" alt=\"{{id}} - {{title}}\">\n    </div>\n    <div>\n        <div>{{title|truncate: 20}}</div>\n                <div>\n            <span>{{price|priceFormat: $1,000.00}}</span>\n            <span>{{salePrice|priceFormat: $1,000.00}}</span>\n        </div>\n    </div>\n</a>\n-->\n\n<!-- monetate custom functionality -- lazy-loaded image -- format as below-->\n<!--\n\n<img class=\"img-responsive mt-lazy\" \n         data-original=\"{{imageLink}}\" \n         data-shopimg=\"{{imageLink}}\" \n         alt=\"{{title}}\" \n         style=\"display: block;\">\n-->"
+            },
+            "widget": {
+                "label": "Slide Template",
+                "type": "HtmlCodeField",
+                "description": "Placeholder example: '{{price}}'. Possible placeholders include all product catalog fields. Examples: title, id, itemGroupId, price, salePrice, link, imageLink",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "css",
+                "value": {
+                    "content": "/**\n * DEFAULT SLIDER STYLES\n * Edit at your own risk!\n */\n#MONETATE-ID {\n  position: relative;\n}\n\n#MONETATE-ID [data-slider-mask] {\n  overflow: hidden!important;\n  position: relative!important;\n  padding: 0!important;\n  margin: 0!important;\n}\n\n#MONETATE-ID li {\n  list-style: none;\n}\n\n#MONETATE-ID [data-slider] {\n  padding: 0!important;\n  margin: 0!important;\n  display: block;\n}\n\n#MONETATE-ID [data-slide] {\n  float: none;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider] {\n  white-space: nowrap!important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slide] {\n  display: inline-block!important;\n  white-space: normal;\n  vertical-align: top;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slide] {\n  display: block!important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide] {\n  position: absolute;\n  top: 0;\n  opacity: 0;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide][data-slide-active] {\n  position: relative;\n  z-index: 1;\n  opacity: 1;\n}\n\n#MONETATE-ID [data-pagination-slide],\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button]{\n  cursor: pointer;\n  z-index: 1;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  touch-action: pan-x;\n}\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider-mask],\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slider-mask] {\n  touch-action: pan-y;\n}\n\n#MONETATE-ID [data-pagination-slide] * {\n  pointer-events: none;\n}\n\n/** ----END DEFAULT STYLES---- */\n\n\n/**\n * CUSTOM SLIDER STYLING\n */\n#MONETATE-ID [data-pagination=\"thumbnails\"] [data-pagination-slide] {\n  border-radius: 0;\n  background: none;\n  width: 40px;\n  height: auto;\n}\n\n#MONETATE-ID [disabled] {\n  opacity: 0.5;\n}\n\n#MONETATE-ID [data-pagination-slide] {\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  background: #000;\n  margin: 4px;\n  border-radius: 6px;\n  opacity: 0.5;\n}\n\n#MONETATE-ID [data-pagination-slide][data-slide-active] {\n  opacity: 1;\n}\n\n#MONETATE-ID [data-slide] > div {\n  padding: 10px;\n  height: 100%;\n}\n\n\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n  top: 45%;\n  position: absolute;\n  font-size: 25px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -o-user-select: none;\n  user-select: none;\n  padding: 0;\n  background: none;\n  color: #000;\n}\n\n#MONETATE-ID [data-prev-button] {\n  left: 10px;\n}\n\n#MONETATE-ID [data-next-button] {\n  right: 10px;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-prev-button] {\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-next-button]{\n  top: auto;\n  bottom: 0;\n  left: 50%;\n  right: auto;\n  transform: translateX(-50%);\n}\n\n#MONETATE-ID [data-slider-mask] {\n  display: inline-block;\n  width: calc(100% - 106px);\n}\n\n#MONETATE-ID {\n  text-align: center;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  height: 400px!important;\n}\n\n#MONETATE-ID [data-slide] img {\n  max-height: 100%;\n}\n\n#MONETATE-ID [data-slide] a {\n  text-decoration: none;\n}\n\n#MONETATE-ID [data-pagination*=\"dots\"] [data-pagination-slide] {\n  /* remove below for pagination numbers */\n  text-indent: -9999px;\n}",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CSSCodeField",
+                "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+                "label": "CSS"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "json",
+                "name": "settings",
+                "value": "{\r\n  \"autoRotateDuration\": 0,\r\n  \"breakpoints\": {\r\n    \"Infinity\": {\r\n        \"visible\": 5\r\n    },\r\n    \"768\": {\r\n        \"visible\": 3\r\n    },\r\n    \"414\": {\r\n      \"peekRight\": 0.5,\r\n      \"visible\": 1,\r\n      \"peekLeft\": 0.5\r\n    }\r\n  },\r\n  \"gridSize\": 1,\r\n  \"infiniteSlide\": false,\r\n  \"pagination\": \"none\",\r\n  \"pauseOnHover\": false,\r\n  \"slideIncrement\": \"page\",\r\n  \"stopOnInteraction\": false,\r\n  \"transitionAnimation\": \"push\",\r\n  \"transitionDuration\": 250\r\n}"
+            },
+            "widget": {
+                "label": "Slides Visible",
+                "type": "JsonCodeField",
+                "description": "Settings object.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_prev",
+                "value": null
+            },
+            "widget": {
+                "label": "Previous Button Creative",
+                "type": "RawImageCreative",
+                "description": "Previous button creative. Must include element with the attribute [data-prev-button] Slider Container Template.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_next",
+                "value": null
+            },
+            "widget": {
+                "label": "Next Button Creative",
+                "type": "RawImageCreative",
+                "description": "Next button creative. Must include element with the attribute [data-next-button] Slider Container Template.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "opt_strategyArrangement",
+                "value": null
+            },
+            "widget": {
+                "label": "Strategy Arrangement",
+                "options": [
+                    {
+                        "name": "alternate",
+                        "label": "Alternate items from each strategy"
+                    },
+                    {
+                        "name": "sequential",
+                        "label": "Display each strategy sequentially"
+                    }
+                ],
+                "type": "StringSelectField",
+                "description": "Orientation of the slider.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "recommendation_set_dict",
+                "name": "opt_strategy1",
+                "value": {
+                    "min_items": 0,
+                    "rec_set_ids": [],
+                    "fallback_rec_set_ids": [],
+                    "custom_return_fields": [
+                        "description",
+                        "additional_image_link",
+                        "availability_date",
+                        "expiration_date",
+                        "main_family",
+                        "inventory",
+                        "shop_keyword",
+                        "shop_subtitle",
+                        "shop_details",
+                        "shop_promocode",
+                        "shop_modal",
+                        "shop_disclaimercopy",
+                        "shop_savingsmessage",
+                        "shop_salesmessage",
+                        "shop_eventstatus",
+                        "category_parent",
+                        "category_parent_url",
+                        "product_ppm",
+                        "product_starrating",
+                        "product_ratingcount"
+                    ],
+                    "pinned_product_ids": []
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "RecommendationSet",
+                "description": "Recommendation set.",
+                "label": "Strategy 1"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "opt_display1",
+                "value": null
+            },
+            "widget": {
+                "label": "Display1",
+                "type": "IntegerField",
+                "description": "How many items from this recommendation set should be displayed?",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "recommendation_set_dict",
+                "name": "opt_strategy2",
+                "value": {
+                    "min_items": 0,
+                    "rec_set_ids": [],
+                    "fallback_rec_set_ids": [],
+                    "custom_return_fields": [
+                        "description",
+                        "additional_image_link",
+                        "availability_date",
+                        "expiration_date",
+                        "main_family",
+                        "inventory",
+                        "shop_keyword",
+                        "shop_subtitle",
+                        "shop_details",
+                        "shop_promocode",
+                        "shop_modal",
+                        "shop_disclaimercopy",
+                        "shop_savingsmessage",
+                        "shop_salesmessage",
+                        "shop_eventstatus",
+                        "category_parent",
+                        "category_parent_url",
+                        "product_ppm",
+                        "product_starrating",
+                        "product_ratingcount"
+                    ],
+                    "pinned_product_ids": []
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "RecommendationSet",
+                "description": "Recommendation set.",
+                "label": "Strategy 2"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "opt_display2",
+                "value": null
+            },
+            "widget": {
+                "label": "Display2",
+                "type": "IntegerField",
+                "description": "How many items from this recommendation set should be displayed?",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "recommendation_set_dict",
+                "name": "opt_strategy3",
+                "value": {
+                    "min_items": 0,
+                    "rec_set_ids": [],
+                    "fallback_rec_set_ids": [],
+                    "custom_return_fields": [
+                        "description",
+                        "additional_image_link",
+                        "availability_date",
+                        "expiration_date",
+                        "main_family",
+                        "inventory",
+                        "shop_keyword",
+                        "shop_subtitle",
+                        "shop_details",
+                        "shop_promocode",
+                        "shop_modal",
+                        "shop_disclaimercopy",
+                        "shop_savingsmessage",
+                        "shop_salesmessage",
+                        "shop_eventstatus",
+                        "category_parent",
+                        "category_parent_url",
+                        "product_ppm",
+                        "product_starrating",
+                        "product_ratingcount"
+                    ],
+                    "pinned_product_ids": []
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "RecommendationSet",
+                "description": "Recommendation set.",
+                "label": "Strategy 3"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "opt_display3",
+                "value": null
+            },
+            "widget": {
+                "label": "Display3",
+                "type": "IntegerField",
+                "description": "How many items from this recommendation set should be displayed?",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "recommendation_set_dict",
+                "name": "opt_strategy4",
+                "value": {
+                    "min_items": 0,
+                    "rec_set_ids": [],
+                    "fallback_rec_set_ids": [],
+                    "custom_return_fields": [
+                        "description",
+                        "additional_image_link",
+                        "availability_date",
+                        "expiration_date",
+                        "main_family",
+                        "inventory",
+                        "shop_keyword",
+                        "shop_subtitle",
+                        "shop_details",
+                        "shop_promocode",
+                        "shop_modal",
+                        "shop_disclaimercopy",
+                        "shop_savingsmessage",
+                        "shop_salesmessage",
+                        "shop_eventstatus",
+                        "category_parent",
+                        "category_parent_url",
+                        "product_ppm",
+                        "product_starrating",
+                        "product_ratingcount"
+                    ],
+                    "pinned_product_ids": []
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "RecommendationSet",
+                "description": "Recommendation set.",
+                "label": "Strategy 4"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "opt_display4",
+                "value": null
+            },
+            "widget": {
+                "label": "Display4",
+                "type": "IntegerField",
+                "description": "How many items from this recommendation set should be displayed?",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "recommendation_set_dict",
+                "name": "opt_strategy5",
+                "value": {
+                    "min_items": 0,
+                    "rec_set_ids": [],
+                    "fallback_rec_set_ids": [],
+                    "custom_return_fields": [
+                        "description",
+                        "additional_image_link",
+                        "availability_date",
+                        "expiration_date",
+                        "main_family",
+                        "inventory",
+                        "shop_keyword",
+                        "shop_subtitle",
+                        "shop_details",
+                        "shop_promocode",
+                        "shop_modal",
+                        "shop_disclaimercopy",
+                        "shop_savingsmessage",
+                        "shop_salesmessage",
+                        "shop_eventstatus",
+                        "category_parent",
+                        "category_parent_url",
+                        "product_ppm",
+                        "product_starrating",
+                        "product_ratingcount"
+                    ],
+                    "pinned_product_ids": []
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "RecommendationSet",
+                "description": "Recommendation set.",
+                "label": "Strategy 5"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "opt_display5",
+                "value": null
+            },
+            "widget": {
+                "label": "Display5",
+                "type": "IntegerField",
+                "description": "How many items from this recommendation set should be displayed?",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "recommendation_set_dict",
+                "name": "opt_strategy6",
+                "value": {
+                    "min_items": 0,
+                    "rec_set_ids": [],
+                    "fallback_rec_set_ids": [],
+                    "custom_return_fields": [
+                        "description",
+                        "additional_image_link",
+                        "availability_date",
+                        "expiration_date",
+                        "main_family",
+                        "inventory",
+                        "shop_keyword",
+                        "shop_subtitle",
+                        "shop_details",
+                        "shop_promocode",
+                        "shop_modal",
+                        "shop_disclaimercopy",
+                        "shop_savingsmessage",
+                        "shop_salesmessage",
+                        "shop_eventstatus",
+                        "category_parent",
+                        "category_parent_url",
+                        "product_ppm",
+                        "product_starrating",
+                        "product_ratingcount"
+                    ],
+                    "pinned_product_ids": []
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "RecommendationSet",
+                "description": "Recommendation set.",
+                "label": "Strategy 6"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "opt_display6",
+                "value": null
+            },
+            "widget": {
+                "label": "Display6",
+                "type": "IntegerField",
+                "description": "How many items from this recommendation set should be displayed?",
+                "action_visible": true
+            },
+            "required": false
+        }
+    ],
+    "masks": [],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [],
+        "required": []
+    },
+    "integration_type": "js-tag",
+    "manage_impressions": false
+}

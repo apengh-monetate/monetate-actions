@@ -1,0 +1,317 @@
+#mt-promo-drawer {
+  bottom: 0;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  opacity: 1;
+  position: fixed;
+  -ms-touch-action: none;
+  touch-action: none;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  width: 100%;
+  z-index: 21;
+}
+
+#mt-promo-drawer .mt-title-wrapper {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #000;
+  border-radius: 4px 4px 0 0 !important;
+  /*Changed these from 5 to 4 to match Zappos button styles -BR*/
+  box-sizing: border-box;
+  /*  cursor: pointer; */
+  /*Removing this -BR*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 42px !important;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: 50%;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  vertical-align: bottom;
+  white-space: nowrap;
+  width: 260px;
+}
+
+#mt-promo-drawer .mt-title-wrapper svg {
+  fill: #fff;
+  height: 14px;
+  width: 14px;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  margin-left: 12px;
+}
+
+#mt-promo-drawer .mt-title-wrapper h3 {
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  /*Added this -BR*/
+  letter-spacing: 0;
+  /*Changed this from 2px to 0 -BR*/
+  line-height: 0;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#mt-promo-drawer.mt-expanded .mt-title-wrapper svg {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#mt-promo-drawer .mt-body-wrapper {
+  background: #fff;
+  color: #1f1f1f;
+  height: auto !important;
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  width: 100%;
+}
+
+#mt-promo-drawer.mt-expanded .mt-body-wrapper {
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.5);
+  max-height: 600px;
+}
+
+#mt-promo-drawer [data-slider-wrapper] {
+  margin: 0 auto;
+  max-width: 1392px;
+  /*Reduced width of tile space from 1440 to 1392 (1376+16margin) -BR*/
+  position: relative;
+}
+
+#mt-promo-drawer [data-slider-mask] {
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+#mt-promo-drawer li {
+  list-style: none;
+}
+
+#mt-promo-drawer img {
+  max-width: 100%;
+}
+
+#mt-promo-drawer [data-slider] {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+}
+
+#mt-promo-drawer [data-slide] {
+  float: none;
+}
+
+#mt-promo-drawer [data-slider-wrapper="horizontal"] [data-slider] {
+  white-space: nowrap !important;
+}
+
+#mt-promo-drawer [data-slider-wrapper="horizontal"] [data-slide] {
+  display: inline-block !important;
+  vertical-align: top;
+  white-space: normal;
+}
+
+#mt-promo-drawer [data-prev-button],
+#mt-promo-drawer [data-next-button] {
+  /*  cursor: pointer; */
+  /*Removing this -BR*/
+  position: absolute;
+  z-index: 1;
+}
+
+#mt-promo-drawer [data-prev-button][disabled],
+#mt-promo-drawer [data-next-button][disabled] {
+  display: none;
+}
+
+#mt-promo-drawer [data-slider-wrapper="horizontal"] [data-slider-mask] {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+#mt-promo-drawer [data-prev-button],
+#mt-promo-drawer [data-next-button] {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: none;
+  border: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  /*Changed this from 36px -BR*/
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  user-select: none;
+  width: 48px;
+  /*Changed this from 36px -BR*/
+  border: 2px solid #ddd;
+  /*Added this -BR*/
+  background-color: rgba(255, 255, 255, 0.8);
+  /*Added this -BR*/
+  color: #1f1f1f;
+  /*Added this -BR*/
+  border-radius: 4px;
+  /*Added this -BR*/
+}
+
+#mt-promo-drawer [data-prev-button] svg,
+#mt-promo-drawer [data-next-button] svg {
+  fill: #707070;
+  /*Changed this from #000 -BR*/
+  height: 32px;
+  width: 24px;
+}
+
+#mt-promo-drawer .mt-body-wrapper [data-prev-button],
+#mt-promo-drawer .mt-body-wrapper [data-next-button] {
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#mt-promo-drawer .mt-body-wrapper [data-prev-button] {
+  left: -16px;
+  /*Changed this from 6px -BR*/
+  background-color: #fff;
+  /*Added this -BR*/
+  display: none;
+  /*Removing the prev button -BR*/
+}
+
+#mt-promo-drawer .mt-body-wrapper [data-next-button] {
+  right: 12px;
+  /*Changed this from 6px to -16px to 12px -BR*/
+  background-color: rgba(255, 255, 255, 0.8);
+  /*Added this -BR*/
+}
+
+#mt-promo-drawer .mt-view-all-offers {
+  margin-bottom: 20px;
+  margin-top: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#mt-promo-drawer .mt-view-all-offers a {
+  color: #1f1f1f;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
+#mt-promo-drawer .mt-promo {
+  font-size: 18px;
+  /*Increased font size from 14 to 18 -BR*/
+  font-weight: 600;
+  /*Decreased weight from 700 to 600 -BR*/
+  line-height: 120%;
+  padding: 0 8px 20px;
+  /*Decreased L/R padding from 10 to 8 and added 20px bottom padding-BR*/
+  /*  text-transform: uppercase;*/
+  /*Removed all-caps -BR*/
+}
+
+#mt-promo-drawer .mt-promo a {
+  color: #1f1f1f;
+  /*  cursor: pointer; */
+  /*Removing this -BR*/
+  /*  text-decoration: none; */
+  /*Removing this -BR*/
+}
+
+#mt-promo-drawer .mt-promo__title {
+  background: #fff;
+  color: #1f1f1f;
+  padding: 16px 0 4px 0;
+  /*Changed from 4px 0 -BR*/
+}
+
+#mt-promo-drawer .mt-promo__code {
+  background: #fff;
+  color: #003953;
+  /*Changed this from #1f1f1f -BR*/
+  font-size: 14px;
+  /*Decreased from 18 to 14 -BR*/
+  font-weight: 700;
+  /*Added this -BR*/
+  padding: 8px 0 4px 0;
+  /*Changed from 4px 0 -BR*/
+  text-decoration: underline;
+  text-transform: uppercase;
+  /*Added this -BR*/
+  text-align: center;
+  /*Added this -BR*/
+}
+
+#mt-promo-drawer .mt-promo__code:hover {
+  /*Added this section -BR*/
+  color: #0076BD;
+}
+
+/*Added this section to hide arrows on mobile -BR*/
+@media screen and (max-width: 768px) {
+  #mt-promo-drawer .mt-body-wrapper [data-next-button] {
+    right: 0px;
+    /*Reducing margin on smaller screensizes where partial promo is peeking on right -BR*/
+  }
+  #mt-promo-drawer .mt-promo {
+    padding: 0 0 20px 16px;
+    /*Improving left padding on mobile -BR*/
+  }
+}
+
+#mt-promo-drawer .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

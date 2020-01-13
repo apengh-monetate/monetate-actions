@@ -99,6 +99,15 @@
   }
 }
 
+#MONETATE-ID .mt_slider__pagination {
+  color: #9c9c9c;
+  display: block;
+  font-size: 12px;
+  padding: 0 0 10px;
+  position: relative;
+  top: -10px;
+}
+
 #MONETATE-ID .mt_slider__wrapper {
   display: block;
   margin: 0 auto 10px !important;

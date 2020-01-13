@@ -118,6 +118,15 @@ $monetate-id: #MONETATE-ID;
                 font-size: 24px;
             }
         }
+        &__pagination {
+            color: #707271;
+            display: block;
+            font-size: 12px;
+            padding: 0 0 10px;
+            position: relative;
+            top: -10px;
+        }
+
         &__wrapper {
             display: block;
             margin: 0 auto 10px !important;
@@ -133,6 +142,7 @@ $monetate-id: #MONETATE-ID;
                 width: 90%;
             }
         }
+
     }
 
     // ==================================================================
@@ -345,12 +355,14 @@ $monetate-id: #MONETATE-ID;
             background: #fff;
             display: block;
             margin: 0 auto;
+            max-width: 90px;
             min-height: 36px;
             padding: 0;
             position: relative;
             width: 40%;
             &--minus,
             &--plus {
+                background: none;
                 color: #333;
                 font-size: 0;
                 height: 100%;
@@ -391,6 +403,7 @@ $monetate-id: #MONETATE-ID;
             }
 
             &--input {
+                border: 1px solid #ccc;
                 left: 25%;
                 line-height: 23px;
                 padding: 7px 0 !important;
@@ -412,6 +425,8 @@ $monetate-id: #MONETATE-ID;
             font-weight: 500;
             margin: 0;
             padding: 10px 15px;
+            padding-left: 8px;
+            padding-right: 3px;
             text-align: center;
             width: 58%;
             &:hover {

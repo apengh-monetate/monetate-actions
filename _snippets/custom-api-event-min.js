@@ -1,0 +1,1 @@
+!function(){var e=document.querySelectorAll(["#dwfrm_login .dwfrm_login_rememberme input#dwfrm_login_rememberme"]);if(e.length)for(var n=0;n<e.length;n++){var r=e[n];e[n].addEventListener("click",(function(){r.checked||(window.monetateQ=window.monetateQ||[],window.monetateQ.push(["trackEvent",["remember_click"]]))}))}}();

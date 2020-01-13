@@ -1,7 +1,10 @@
 {
-    "autoRotateDuration": 0,
+    "autoRotateDuration": 3000,
     "breakpoints": {
         "Infinity": {
+            "visible": 5
+        },
+        "1440": {
             "visible": 4
         },
         "940": {
@@ -15,7 +18,7 @@
         }
     },
     "gridSize": 1,
-    "infiniteSlide": true,
+    "infiniteSlide": false,
     "pagination": "dots-page",
     "pauseOnHover": false,
     "slideIncrement": "single",

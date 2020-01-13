@@ -1,0 +1,1 @@
+!function(){var t=document.querySelector(".mt_scrolling-cat"),i=$(".mt_scrolling-cat__active");if(t&&i){var c=i.closest("li"),l=i.width(),o=c.position().left,e=$(window).width();t.scrollLeft=o-e/2+l/2}}();

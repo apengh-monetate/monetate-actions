@@ -1,0 +1,200 @@
+{
+  "id": 408622,
+  "title": "Intelligent Recommendations Grid - MASTER TEMPLATE",
+  "description": "Inserts a grid of iRec items.",
+  "op": "iRecGrid",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "endcap",
+  "subcategory": "other",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "sel",
+        "value": null
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Selector to find the node where the grid will be inserted.",
+        "label": "Insert Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "first"
+      },
+      "widget": {
+        "description": "Method to use when inserting the grid relative to the selected node.",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "first",
+            "label": "First"
+          },
+          {
+            "name": "last",
+            "label": "Last"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Method"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "insertOptions",
+        "value": "RecheckForElement"
+      },
+      "widget": {
+        "description": "RecheckForElement: If the selector is not found, wait up to 3 seconds for it to show up. SelectMultipleElements: If the selector matches multiple places, do you want to insert at each of them?",
+        "label": "Insert Options",
+        "action_visible": true,
+        "hiddenMenu": true,
+        "allIsValid": true,
+        "type": "CheckboxArrayAsString",
+        "options": [
+          "RecheckForElement",
+          "SelectMultipleElements"
+        ]
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "recommendation_set_dict",
+        "name": "productsJson",
+        "value": {
+          "min_items": 0,
+          "rec_set_ids": [],
+          "fallback_rec_set_ids": [],
+          "custom_return_fields": [
+            "description",
+            "additional_image_link",
+            "availability_date",
+            "expiration_date",
+            "main_family",
+            "inventory",
+            "shop_keyword",
+            "shop_subtitle",
+            "shop_details",
+            "shop_promocode",
+            "shop_modal",
+            "shop_disclaimercopy",
+            "shop_savingsmessage",
+            "shop_salesmessage",
+            "shop_eventstatus",
+            "category_parent",
+            "category_parent_url",
+            "product_ppm",
+            "product_starrating",
+            "product_ratingcount"
+          ],
+          "pinned_product_ids": []
+        }
+      },
+      "widget": {
+        "label": "Recommendation Set",
+        "type": "RecommendationSet",
+        "description": "Group of products to put in the endcap.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "maxItems",
+        "value": 8
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Maximum number of merch items to have in the grid.",
+        "label": "Maximum Number of Items"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "gridTemplate",
+        "value": "<div>Merch Grid</div>\n{{GRID}}"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "HtmlCodeField",
+        "description": "Include an HTML template to build the grid structure. Use the placeholder '{{grid}}' to place the gird of items.",
+        "label": "Grid Container Template"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "itemTemplate",
+        "value": "<!-- Unformatted item tokens - Default return fields-->\n{{title}}\n{{price}}\n{{itemGroupId}}\n{{imageLink}}\n{{automationType}}\n{{link}}\n{{salePrice}}\n{{productType}}\n{{id}}\n{{brand_name}}\n{{name}}\n{{pid}}\n<!--  Unformatted item tokens - Custom return fields -->\n{{description}}\n{{additional_image_link}}\n{{availability_date}}\n{{expiration_date}}\n{{main_family}}\n{{inventory}}\n{{shop_keyword}}\n{{shop_subtitle}}\n{{shop_details}}\n{{shop_promocode}}\n{{shop_modal}}\n{{shop_disclaimercopy}}\n{{shop_savingsmessage}}\n{{shop_salesmessage}}\n{{shop_eventstatus}}\n{{category_parent}}\n{{category_parent_url}}\n{{product_ppm}}\n{{product_starrating}}\n{{product_ratingcount}}\n\n\n\n\n<!-- example slide template -->\n<!--\n<a href=\"{{link}}\" data-pid=\"{{id}}\">\n    <div>\n      <img src=\"{{imageLink}}\" alt=\"{{id}} - {{title}}\">\n    </div>\n    <div>\n        <div>{{title|truncate: 20}}</div>\n                <div>\n            <span>{{price|priceFormat: $1,000.00}}</span>\n            <span>{{salePrice|priceFormat: $1,000.00}}</span>\n        </div>\n    </div>\n</a>\n-->\n\n<!-- monetate custom functionality -- lazy-loaded image -- format as below-->\n<!--\n\n<img class=\"img-responsive mt-lazy\" \n         data-original=\"{{imageLink}}\" \n         data-shopimg=\"{{imageLink}}\" \n         alt=\"{{title}}\" \n         style=\"display: block;\">\n-->"
+      },
+      "widget": {
+        "label": "Slide Template",
+        "type": "HtmlCodeField",
+        "description": "Placeholder example: '{{price}}'. Possible placeholders include all product catalog fields. Examples: title, id, itemGroupId, price, salePrice, link, imageLink",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "css",
+        "value": {
+          "content": "#MONETATE-ID [mt-data-grid] {\n    box-sizing: border-box;\n    display: -ms-flexbox;\n    display: -webkit-box;\n    display: flex;\n    -ms-flex-direction: row;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    flex-direction: row;\n    -ms-flex-wrap: wrap;\n    flex-wrap: wrap;\n}\n\n#MONETATE-ID .mt-merch-item {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n    box-sizing: border-box;\n    padding: 10px;\n}\n\n@media (max-width: 768px) {\n    #MONETATE-ID .mt-merch-item {\n        -ms-flex-preferred-size: 50%;\n        flex-basis: 50%;\n        max-width: 50%;\n    }\n}\n\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "label": "CSS",
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+        "action_visible": true
+      },
+      "required": true
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

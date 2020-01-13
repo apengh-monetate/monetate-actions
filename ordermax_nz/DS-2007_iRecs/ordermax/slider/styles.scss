@@ -121,6 +121,14 @@ $breakpoint-xl: 1440px;
                 font-size: 28px;
             }
         }
+        &__pagination {
+            color: #9c9c9c;
+            display: block;
+            font-size: 12px;
+            padding: 0 0 10px;
+            position: relative;
+            top: -10px;
+        }
         &__wrapper {
             display: block;
             margin: 0 auto 10px !important;

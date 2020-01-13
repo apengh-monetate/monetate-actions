@@ -1,0 +1,138 @@
+{
+  "id": 449189,
+  "title": "Scrolling Categories Copied From Mobile Menu",
+  "description": "Inserts scrolling categories under the nav on mobile devices.",
+  "op": "scrollingCategories",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Category",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "menuLevel",
+        "value": "subMenu"
+      },
+      "widget": {
+        "description": "The menu level to copy. Options are Sub-Nav Menu or Top-Level Menu",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "subMenu",
+            "label": "Sub-Nav Menu"
+          },
+          {
+            "name": "topLevel",
+            "label": "Top-Level Menu"
+          }
+        ],
+        "label": "Menu Level"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "selector",
+        "value": ".main-content"
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CssSelectorField",
+        "description": "Selector to find the relative node.",
+        "label": "CSS3 Selector"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "insertMethod",
+        "value": "first"
+      },
+      "widget": {
+        "description": "Function to use when inserting the banner relative to the selected node",
+        "action_visible": true,
+        "type": "StringSelectField",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "first",
+            "label": "First Child"
+          },
+          {
+            "name": "last",
+            "label": "Last Child"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "label": "Insert Function"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "opt_css",
+        "value": {
+          "content": ".mt_scrolling-cat {\n  margin-top: 30px;\n  overflow-x: scroll;\n  overflow-y: hidden;\n  padding-bottom: 42px;\n  position: relative;\n}\n\n.mt_scrolling-cat__list {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: nowrap;\n      flex-wrap: nowrap;\n  left: 0;\n  overflow-x: scroll;\n  padding-bottom: 12px;\n  position: absolute;\n  top: 0;\n}\n\n.mt_scrolling-cat__list-item {\n  display: block;\n  white-space: nowrap;\n}\n\n.mt_scrolling-cat__list-link {\n  display: block;\n  padding: 5px 10px;\n  text-decoration: none;\n}\n\n.mt_scrolling-cat__list .arrow.arrow-right {\n  display: none;\n}\n\n.mt_scrolling-cat a {\n  text-decoration: none;\n}\n\n.mt_scrolling-cat__active {\n  background: #029310;\n  position: relative;\n}\n\n.mt_scrolling-cat__active::after {\n  border-left: 20px solid transparent;\n  border-right: 20px solid transparent;\n  border-top: 12px solid #029310;\n  content: \"\";\n  height: 0px;\n  left: 50%;\n  position: absolute;\n  top: 100%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  width: 0px;\n}\n\n.breadcrumb .wrapper-breadcrumb {\n  padding-left: 10px !important;\n  padding-top: 0 !important;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element. Use selector \"#MONETATE-ID\" to target the inserted element.",
+        "label": "CSS"
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "category"
+        ],
+        "id": 241655,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

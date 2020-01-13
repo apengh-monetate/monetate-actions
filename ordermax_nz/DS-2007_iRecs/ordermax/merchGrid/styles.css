@@ -81,53 +81,53 @@
 }
 
 #MONETATE-ID .mt-merch-item {
-  border-right: 1px dashed #999;
   display: block;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   margin-bottom: 20px;
-  padding: 5px;
   position: relative;
   width: 50%;
 }
 
 @media screen and (max-width: 591px) {
-  #MONETATE-ID .mt-merch-item:nth-child(2n - 1) {
+  #MONETATE-ID .mt-merch-item:nth-child(2n - 1) .mt_grid-item {
     border-left: 1px dashed #999;
   }
 }
 
 @media screen and (min-width: 592px) {
   #MONETATE-ID .mt-merch-item {
-    -ms-flex-preferred-size: calc(100% / 3);
-        flex-basis: calc(100% / 3);
-    width: calc(100% / 3);
+    -ms-flex-preferred-size: 33.33333%;
+        flex-basis: 33.33333%;
+    width: 33.33333;
   }
 }
 
 @media screen and (min-width: 592px) and (max-width: 939px) {
-  #MONETATE-ID .mt-merch-item:nth-child(3n - 2) {
+  #MONETATE-ID .mt-merch-item:nth-child(3n - 2) .mt_grid-item {
     border-left: 1px dashed #999;
   }
 }
 
 @media screen and (min-width: 940px) {
   #MONETATE-ID .mt-merch-item {
-    -ms-flex-preferred-size: calc(100% / 4);
-        flex-basis: calc(100% / 4);
-    width: calc(100% / 4);
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    width: 25%;
   }
 }
 
 @media screen and (min-width: 1440px) {
   #MONETATE-ID .mt-merch-item {
-    -ms-flex-preferred-size: calc(100% / 6);
-        flex-basis: calc(100% / 6);
-    width: calc(100% / 6);
+    -ms-flex-preferred-size: 16.66667%;
+        flex-basis: 16.66667%;
+    width: 16.66667%;
   }
 }
 
 #MONETATE-ID .mt_grid-item {
+  border-right: 1px dashed #999;
+  padding: 5px;
   padding-bottom: 48px;
 }
 

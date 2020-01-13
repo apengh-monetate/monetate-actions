@@ -1,0 +1,53 @@
+$blue: #001689;
+
+
+/* For desktop, the slide needs a background image set - 4000x1386 */
+@media (min-width: 992px) {
+  #home-slider div[class*="mt-slide"] {
+    background-color: #f3f5f6 !important;
+    background-image: url('https://dummyimage.com/4000x1386/9e9e9e/fff.png') !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 480px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  #home-slider div[class*="mt-slide"] {
+    height: 510px !important;
+    padding-top: 70px !important;
+  }
+}
+
+
+
+#home-slider div[class*="mt-slide"] {
+    .content-block {
+        background: #fff;
+        color: #333;
+    }
+    h1 {
+        @media screen and (min-width: 992px) {
+            font-size: 44px;
+            text-align: center;
+        }
+    }
+
+    .hvr-bounce-to-right-white-outline {
+        background-color: $blue;
+        border-color: $blue;
+        color: #fff;
+        &:active,
+        &:hover,
+        &:focus {
+            color: $blue;
+        }
+    }
+
+    .text-lg-left {
+        @media screen and (min-width: 992px) {
+            text-align: center !important;
+        }
+    }
+}

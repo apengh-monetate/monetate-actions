@@ -1,0 +1,52 @@
+#EarringExchange {
+  background-color: #ffffff;
+  border: 1px solid #5a5a5c;
+  color: #5a5a5c;
+  margin: auto;
+  padding: 10px;
+}
+
+#EarringExchange_Copy {
+  font-family: "Proxima-Nova", sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
+  line-height: 18px;
+  margin: auto;
+}
+
+#EarringExchange_header {
+  display: block;
+  font-family: "Proxima-Nova", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 18px;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  #MONETATE-ID {
+    padding: 0 16px;
+    padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID {
+    left: calc(50% + 16px);
+    position: absolute;
+    right: 16px;
+    top: -130px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product-details__right {
+    padding-bottom: 130px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #curalate-fan-reel-wrapper {
+    padding-top: 0 !important;
+  }
+}

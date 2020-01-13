@@ -40,28 +40,32 @@ json[jsonKey] = [];
 // ------------------------------------------------------------------
 const convertCSV = (file) => {
     csv()
-    .fromFile(file)
-    .then((jsonObj) => {
-        jsonObj.forEach((product, index) => {
-            if (index <= lines) {
-                const keys = Object.keys(product);
-                let newKeys = [];
-                keys.forEach((key) => {
-                    key = key.split('_');
-                    key.forEach((item, index) => {
-                        if (index > 0) {
-                            item = item.charAt(0).toUpperCase() + item.slice(1);
+        .fromFile(file)
+        .then((jsonObj) => {
+            jsonObj.forEach((product, index) => {
+                if (index <= lines) {
+                    const keys = Object.keys(product);
+                    keys.forEach((key) => {
+                        const keyArray = key.split('_');
+                        let newKey = '';
+                        keyArray.forEach((item, index) => {
+                            if (index > 0) {
+                                item = item.charAt(0).toUpperCase() + item.slice(1);
+                            }
+                            newKey += item;
+                        });
+                        if (key !== newKey) {
+                            Object.defineProperty(product, newKey, Object.getOwnPropertyDescriptor(product, key));
+                            delete product[key];
                         }
-                        newKeys += item;
                     });
-                });
-                json[jsonKey].push(product);
-            }
-        });
+                    json[jsonKey].push(product);
+                }
+            });
 
-        console.log(`Converted ${file} to ${fileName}.json`);
-        fs.writeFileSync(fileName + '.json', JSON.stringify(json, null, 4));
-    });
+            console.log(`Converted ${file} to ${fileName}.json`);
+            fs.writeFileSync(fileName + '.json', JSON.stringify(json, null, 4));
+        });
 };
 
 // ------------------------------------------------------------------

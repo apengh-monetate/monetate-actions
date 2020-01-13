@@ -11,584 +11,588 @@
         "op_impression"
     ],
     "inputs": [
-{
-    "input": {
-        "name": "pids",
-        "type": "thumbnail_filter"
-    },
-    "widget": null,
-    "required": true
-},
-{
-    "input": {
-        "name": "pids",
-        "type": "detail_filter"
-    },
-    "widget": null,
-    "required": true
-},
-{
-    "input": {
-        "name": "product_feed",
-        "type": "productfeed",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Product Feed",
-        "label": "Product Feed",
-        "options": [],
-        "type": "ProductFeedSelectField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "product_list",
-        "type": "recommendation_set_dict",
-        "value": {
-            "rec_set_ids": []
+        {
+            "input": {
+                "name": "pids",
+                "type": "thumbnail_filter"
+            },
+            "widget": null,
+            "required": true
+        },
+        {
+            "input": {
+                "name": "pids",
+                "type": "detail_filter"
+            },
+            "widget": null,
+            "required": true
+        },
+        {
+            "input": {
+                "name": "product_feed",
+                "type": "productfeed",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Product Feed",
+                "label": "Product Feed",
+                "options": [],
+                "type": "ProductFeedSelectField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "product_list",
+                "type": "recommendation_set_dict",
+                "value": {
+                    "rec_set_ids": []
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Recommendation set.",
+                "label": "Recommendation Set",
+                "type": "RecommendationSet"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "products",
+                "type": "list",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Products.",
+                "label": "Products",
+                "type": "ProductList"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "selector",
+                "type": "str",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Supports CSS3 and Sizzle syntax.",
+                "label": "Element Selector",
+                "type": "CssSelectorField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "selector",
+                "type": "str",
+                "value": null
+            },
+            "widget": {
+                "type": "CssSelectorButtonField",
+                "description": "Supports CSS3 and Sizzle syntax.",
+                "label": "Element Selector",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "option",
+                "type": "str",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Option.",
+                "label": "Option",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "type": "StringSelectField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "options",
+                "type": "str",
+                "value": "Image, Name, Description, Price, AlternatePrice, BrandName"
+            },
+            "widget": {
+                "action_visible": true,
+                "allIsValid": true,
+                "description": "Select options.",
+                "hiddenMenu": true,
+                "label": "Options",
+                "options": [
+                    "Image",
+                    "Name",
+                    "Description",
+                    "Price",
+                    "AlternatePrice",
+                    "BrandName"
+                ],
+                "type": "CheckboxArrayAsString"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "boolVar",
+                "type": "bool",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "True or false?",
+                "label": "Boolean",
+                "type": "BooleanField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "number",
+                "type": "int",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Number Description.",
+                "label": "Number",
+                "type": "IntegerField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "positiveNumber",
+                "type": "int",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Positive Number.",
+                "label": "Number",
+                "type": "PositiveIntegerField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "floatNumber",
+                "type": "float",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Number.",
+                "label": "Number",
+                "type": "FloatField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "number",
+                "type": "int",
+                "value": 2
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Number.",
+                "label": "Number",
+                "options": [
+                    {
+                        "label": "GMT - one deadline",
+                        "name": 2
+                    },
+                    {
+                        "label": "User's Local - deadline local to timezone",
+                        "name": 1
+                    }
+                ],
+                "type": "IntegerSelectField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "text",
+                "type": "str",
+                "value": ""
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Text.",
+                "label": "Text",
+                "type": "TextField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "text",
+                "type": "str",
+                "value": ""
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Text.",
+                "label": "Text",
+                "type": "CharField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "text",
+                "type": "str",
+                "value": ""
+            },
+            "widget": {
+                "action_visible": true,
+                "label": "Text",
+                "description": "Text.",
+                "type": "PreventSpacesNullableCharField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "time",
+                "type": "str",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Time",
+                "label": "Time",
+                "type": "DateTimeField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "time",
+                "type": "str",
+                "value": ""
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Time",
+                "label": "Time",
+                "type": "LocaleDateTimeField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "creative",
+                "type": "img_creative",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Image Creative",
+                "label": "Image",
+                "type": "ImageCreative"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "creative",
+                "type": "raw_img_creative",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "RawImageCreative",
+                "description": "Image Creative.",
+                "label": "Image"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "creative",
+                "type": "pos_img_creative",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Upload an image creative.",
+                "height": "208",
+                "label": "Positioned Image Creative",
+                "type": "PositionedImageCreative",
+                "width": "208"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "htmlString",
+                "type": "str",
+                "value": ""
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "HTML.",
+                "label": "HTML String",
+                "type": "HtmlField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "htmlCreative",
+                "type": "html_creative",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Select an HTML creative",
+                "label": "HTML Creative",
+                "type": "HtmlCreative"
+            },
+            "required": true
+        },
+        {
+            "input":{
+                "type": "str",
+                "name": "html",
+                "value": null
+            },
+            "widget":{
+                "label":"HTML Content",
+                "type":"HtmlCodeField",
+                "description":"Banner html.",
+                "action_visible":true
+            },
+            "required":true
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "css",
+                "value": {
+                    "content": "",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "CSS appended to the DOM in a <style> or <link> element.",
+                "label": "CSS",
+                "type": "CSSCodeField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "css",
+                "type": "str",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "CSS appended to the DOM in a <style> element.",
+                "label": "CSS",
+                "type": "CSSTextField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "inlineCss",
+                "type": "str",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Inline Styles.",
+                "label": "Styles",
+                "type": "CssValueAsString"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "inlineCss",
+                "type": "font_style_dict",
+                "value": {
+                    "fontStyle": "normal",
+                    "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+                    "color": "#CE2A35",
+                    "fontWeight": "bold",
+                    "fontSize": "46px",
+                    "lineHeight": "105%"
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "The font, color and style.",
+                "label": "Style",
+                "type": "FontStyleField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "inlineStyle",
+                "type": "str",
+                "value": "22px"
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Style.",
+                "label": "Style",
+                "type": "StyleSizeField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "javascript",
+                "value": {
+                    "content": null,
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "javascript"
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
+                "label": "Script",
+                "type": "JavaScriptCodeField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "json",
+                "name": "jsonString",
+                "value": "{}"
+            },
+            "widget": {
+                "action_visible": true,
+                "description": "JSON to be returned",
+                "label": "JSON",
+                "type": "JsonCodeField"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "city",
+                "type": "session_value",
+                "value": "geo_city"
+            },
+            "widget": null,
+            "required": true
+        },
+        {
+            "input": {
+                "name": "zipcode",
+                "type": "session_value",
+                "value": "geo_zip"
+            },
+            "widget": null,
+            "required": true
         }
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Recommendation set.",
-        "label": "Recommendation Set",
-        "type": "RecommendationSet"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "products",
-        "type": "list",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Products.",
-        "label": "Products",
-        "type": "ProductList"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "selector",
-        "type": "str",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Supports CSS3 and Sizzle syntax.",
-        "label": "Element Selector",
-        "type": "CssSelectorField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "selector",
-        "type": "str",
-        "value": null
-    },
-    "widget": {
-        "type": "CssSelectorButtonField",
-        "description": "Supports CSS3 and Sizzle syntax.",
-        "label": "Element Selector",
-        "action_visible": true
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "option",
-        "type": "str",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Option.",
-        "label": "Option",
-        "options": [
-            {
-                "name": "after",
-                "label": "After"
-            },
-            {
-                "name": "before",
-                "label": "Before"
-            },
-            {
-                "name": "first",
-                "label": "First"
-            },
-            {
-                "name": "last",
-                "label": "Last"
-            },
-            {
-                "name": "replace",
-                "label": "Replace"
-            },
-            {
-                "name": "takeover",
-                "label": "Takeover"
-            }
-        ],
-        "type": "StringSelectField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "options",
-        "type": "str",
-        "value": "Image, Name, Description, Price, AlternatePrice, BrandName"
-    },
-    "widget": {
-        "action_visible": true,
-        "allIsValid": true,
-        "description": "Select options.",
-        "hiddenMenu": true,
-        "label": "Options",
-        "options": [
-            "Image",
-            "Name",
-            "Description",
-            "Price",
-            "AlternatePrice",
-            "BrandName"
-        ],
-        "type": "CheckboxArrayAsString"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "boolVar",
-        "type": "bool",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "True or false?",
-        "label": "Boolean",
-        "type": "BooleanField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "number",
-        "type": "int",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Number Description.",
-        "label": "Number",
-        "type": "IntegerField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "positiveNumber",
-        "type": "int",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Positive Number.",
-        "label": "Number",
-        "type": "PositiveIntegerField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "floatNumber",
-        "type": "float",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Number.",
-        "label": "Number",
-        "type": "FloatField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "number",
-        "type": "int",
-        "value": 2
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Number.",
-        "label": "Number",
-        "options": [
-            {
-                "label": "GMT - one deadline",
-                "name": 2
-            },
-            {
-                "label": "User's Local - deadline local to timezone",
-                "name": 1
-            }
-        ],
-        "type": "IntegerSelectField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "text",
-        "type": "str",
-        "value": ""
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Text.",
-        "label": "Text",
-        "type": "TextField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "text",
-        "type": "str",
-        "value": ""
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Text.",
-        "label": "Text",
-        "type": "CharField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "text",
-        "type": "str",
-        "value": ""
-    },
-    "widget": {
-        "action_visible": true,
-        "label": "Text",
-        "description": "Text.",
-        "type": "PreventSpacesNullableCharField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "time",
-        "type": "str",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Time",
-        "label": "Time",
-        "type": "DateTimeField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "time",
-        "type": "str",
-        "value": ""
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Time",
-        "label": "Time",
-        "type": "LocaleDateTimeField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "creative",
-        "type": "img_creative",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Image Creative",
-        "label": "Image",
-        "type": "ImageCreative"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "creative",
-        "type": "raw_img_creative",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "type": "RawImageCreative",
-        "description": "Image Creative.",
-        "label": "Image"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "creative",
-        "type": "pos_img_creative",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Upload an image creative.",
-        "height": "208",
-        "label": "Positioned Image Creative",
-        "type": "PositionedImageCreative",
-        "width": "208"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "htmlString",
-        "type": "str",
-        "value": ""
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "HTML.",
-        "label": "HTML String",
-        "type": "HtmlField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "htmlCreative",
-        "type": "html_creative",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Select an HTML creative",
-        "label": "HTML Creative",
-        "type": "HtmlCreative"
-    },
-    "required": true
-},
-{
-    "input":{
-        "type": "str",
-        "name": "html",
-        "value": null
-    },
-    "widget":{
-        "label":"HTML Content",
-        "type":"HtmlCodeField",
-        "description":"Banner html.",
-        "action_visible":true
-    },
-    "required":true
-},
-{
-    "input": {
-        "type": "flexible_creative",
-        "name": "css",
-        "value": {
-            "content": "",
-            "discriminator": "content",
-            "ref": null,
-            "type": "css"
-        }
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "CSS appended to the DOM in a <style> or <link> element.",
-        "label": "CSS",
-        "type": "CSSCodeField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "css",
-        "type": "str",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "CSS appended to the DOM in a <style> element.",
-        "label": "CSS",
-        "type": "CSSTextField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "inlineCss",
-        "type": "str",
-        "value": null
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Inline Styles.",
-        "label": "Styles",
-        "type": "CssValueAsString"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "inlineCss",
-        "type": "font_style_dict",
-        "value": {
-            "fontStyle": "normal",
-            "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-            "color": "#CE2A35",
-            "fontWeight": "bold",
-            "fontSize": "46px",
-            "lineHeight": "105%"
-        }
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "The font, color and style.",
-        "label": "Style",
-        "type": "FontStyleField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "inlineStyle",
-        "type": "str",
-        "value": "22px"
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Style.",
-        "label": "Style",
-        "type": "StyleSizeField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "type": "flexible_creative",
-        "name": "javascript",
-        "value": {
-            "content": null,
-            "discriminator": "content",
-            "ref": null,
-            "type": "javascript"
-        }
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "Please enter valid JavaScript. Note that changes you make to existing JavaScript creatives will not be saved for use in other actions.",
-        "label": "Script",
-        "type": "JavaScriptCodeField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "type": "json",
-        "name": "jsonString",
-        "value": "{}"
-    },
-    "widget": {
-        "action_visible": true,
-        "description": "JSON to be returned",
-        "label": "JSON",
-        "type": "JsonCodeField"
-    },
-    "required": true
-},
-{
-    "input": {
-        "name": "city",
-        "type": "session_value",
-        "value": "geo_city"
-    },
-    "widget": null,
-    "required": true
-},
-{
-    "input": {
-        "name": "zipcode",
-        "type": "session_value",
-        "value": "geo_zip"
-    },
-    "widget": null,
-    "required": true
-}
     ],
     "masks": [{
         "selector": "#global__promo",
         "value": "/",
         "op": "full_iregex"
-        }, {
-            "selector": "#global__promo",
-            "value": "/",
-            "op": "path_iregex"
-            }, {
-                "selector": "#global__promo",
-                "value": "/",
-                "op": "url_iregex"
-                }, {
-                    "selector": "#global__promo",
-                    "value": "/",
-                    "op": "url_iequal"
-                    }, {
-                        "selector": "#global__promo",
-                        "value": "/",
-                        "op": "path_isuffix"
-                        }, {
-                            "selector": "#global__promo",
-                            "value": "/",
-                            "op": "path_iprefix"
-                            }],
-                            "rule_operator": "or|and",
-                            "rules": {
-                                "builtin": [{
-                                    "rule_tmpl": {
-                                        "is_included": true,
-                                        "rule_name": "page_type",
-                                        "rule_op": "equal|iequal|iprefix|iregex|isuffix|prefix|icontains"
-                                    },
-                                    "values": [
-                                        ""
-                                    ]
-                                    }, {
-                                        "rule_tmpl": {
-                                            "is_included": true,
-                                            "rule_name": "page_cid",
-                                            "rule_op": "equal|iequal|iprefix|iregex|isuffix|prefix|icontains"
-                                        },
-                                        "values": [
-                                            ""
-                                        ]
-                                        }, {
-                                            "rule_tmpl": {
-                                                "is_included": true,
-                                                "rule_name": "page_url",
-                                                "rule_op": "equal|iequal|iprefix|iregex|isuffix|prefix|icontains"
-                                            },
-                                            "values": [
-                                                ""
-                                            ]
-                                            }],
-                                            "required": []
-                                        }
-                                    }
+    },
+    {
+        "selector": "#global__promo",
+        "value": "/",
+        "op": "path_iregex"
+    },
+    {
+        "selector": "#global__promo",
+        "value": "/",
+        "op": "url_iregex"
+    },
+    {
+        "selector": "#global__promo",
+        "value": "/",
+        "op": "url_iequal"
+    },
+    {
+        "selector": "#global__promo",
+        "value": "/",
+        "op": "path_isuffix"
+    },
+    {
+        "selector": "#global__promo",
+        "value": "/",
+        "op": "path_iprefix"
+    }
+],
+"rule_operator": "or|and",
+"rules": {
+    "builtin": [
+        {
+            "rule_tmpl": {
+                "is_included": true,
+                "rule_name": "page_type",
+                "rule_op": "equal|iequal|iprefix|iregex|isuffix|prefix|icontains"
+            },
+            "values": [""]
+        },
+        {
+            "rule_tmpl": {
+                "is_included": true,
+                "rule_name": "page_cid",
+                "rule_op": "equal|iequal|iprefix|iregex|isuffix|prefix|icontains"
+            },
+            "values": [""]
+        },
+        {
+            "rule_tmpl": {
+                "is_included": true,
+                "rule_name": "page_url",
+                "rule_op": "equal|iequal|iprefix|iregex|isuffix|prefix|icontains"
+            },
+            "values": [""]
+        }
+    ],
+    "required": []
+}
+}
