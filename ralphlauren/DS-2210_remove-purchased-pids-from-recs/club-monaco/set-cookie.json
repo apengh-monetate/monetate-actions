@@ -1,0 +1,13 @@
+{
+    "customerNo": "100001",
+    "EP_RID": "",
+    "productsAbandonedMonth": "",
+    "productsOrdered": "500865,437592,482060,434803",
+    "productsViewedMonth": "",
+    "topCategoriesOrdered": "",
+    "gender": 0
+}
+
+{"customerNo":"100001","EP_RID":"","productsAbandonedMonth":"","productsOrdered":"500865,437592,482060,434803","productsViewedMonth":"","topCategoriesOrdered":"","gender": 0}
+
+"{\"customerNo\":\"100001\",\"EP_RID\":\"\",\"productsAbandonedMonth\":\"\",\"productsOrdered\":\"500865,437592,482060,434803\",\"productsViewedMonth\":\"\",\"topCategoriesOrdered\":\"\",\"gender\": 0}"

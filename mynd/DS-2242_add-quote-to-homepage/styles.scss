@@ -3,6 +3,13 @@ div.hero .hero-content {
     @media screen and (min-width: 768px) {
         padding-bottom: 90px !important;
     }
+    @media screen and (max-width: 767px) {
+        height: auto !important;
+        padding-bottom: 0 !important;
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
 }
 
 .mt_quote {
@@ -20,6 +27,9 @@ div.hero .hero-content {
         font-size: 100% !important;
         margin: 0 !important;
         min-height: auto !important;
+        @media screen and (max-width: 767px) {
+            font-size: 80% !important;
+        }
     }
 
 
@@ -30,6 +40,9 @@ div.hero .hero-content {
         margin-top: 10px !important;
         &::before {
             display: none !important;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 80% !important;
         }
     }
 

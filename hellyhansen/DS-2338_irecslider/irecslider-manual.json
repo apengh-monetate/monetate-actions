@@ -1,0 +1,243 @@
+{
+    "id": 437151,
+    "title": "Intelligent Recommendation Slider (Manual)",
+    "description": "Inserts a slider with intelligent recommendation items.",
+    "op": "iRecSlider",
+    "slot": "none",
+    "slot_type": "none",
+    "category": "endcap",
+    "subcategory": "other",
+    "action_events": [
+        "op_click",
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "str",
+                "name": "selector",
+                "value": "body"
+            },
+            "widget": {
+                "label": "Insert Selector",
+                "type": "CssSelectorField",
+                "description": "Selector to find the node where the slider will be inserted.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "imeth",
+                "value": "first"
+            },
+            "widget": {
+                "label": "Insert Method",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "type": "StringSelectField",
+                "description": "Method to use when inserting the slider relative to the selected node.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "insertOptions",
+                "value": "RecheckForElement"
+            },
+            "widget": {
+                "description": "RecheckForElement: If the selector is not found, wait up to 3 seconds for it to show up. SelectMultipleElements: If the selector matches multiple places, do you want to insert at each of them?",
+                "label": "Insert Options",
+                "action_visible": true,
+                "hiddenMenu": true,
+                "allIsValid": true,
+                "type": "CheckboxArrayAsString",
+                "options": [
+                    "RecheckForElement",
+                    "SelectMultipleElements"
+                ]
+            },
+            "required": true
+        },
+        {
+            "widget": {
+                "action_visible": true,
+                "type": "JsonCodeField",
+                "description": "Manually Add product data.",
+                "label": "JSON Products Input"
+            },
+            "input": {
+                "name": "json",
+                "type": "json",
+                "value": "{\n    \"products_data\": [{\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 1\",\n        \"price\": 18,\n        \"imageLink\": \"https://dummyimage.com/300x400/010/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"1\",\n        \"itemGroupId\": \"1\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 2\",\n        \"price\": 89.71,\n        \"imageLink\": \"https://dummyimage.com/300x400/020/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 28.12,\n        \"id\": \"2\",\n        \"itemGroupId\": \"2\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 3\",\n        \"price\": 51.47,\n        \"imageLink\": \"https://dummyimage.com/300x400/030/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 34.65,\n        \"id\": \"3\",\n        \"itemGroupId\": \"3\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 4\",\n        \"price\": 16.12,\n        \"imageLink\": \"https://dummyimage.com/300x400/040/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"4\",\n        \"itemGroupId\": \"4\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 5\",\n        \"price\": 99.25,\n        \"imageLink\": \"https://dummyimage.com/300x400/050/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 94.15,\n        \"id\": \"5\",\n        \"itemGroupId\": \"5\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 6\",\n        \"price\": 77.98,\n        \"imageLink\": \"https://dummyimage.com/300x400/060/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"6\",\n        \"itemGroupId\": \"6\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 7\",\n        \"price\": 48.9,\n        \"imageLink\": \"https://dummyimage.com/300x400/070/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 22.12,\n        \"id\": \"7\",\n        \"itemGroupId\": \"7\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 8\",\n        \"price\": 62.98,\n        \"imageLink\": \"https://dummyimage.com/300x400/080/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 4.76,\n        \"id\": \"8\",\n        \"itemGroupId\": \"8\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 9\",\n        \"price\": 53.52,\n        \"imageLink\": \"https://dummyimage.com/300x400/090/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 49.61,\n        \"id\": \"9\",\n        \"itemGroupId\": \"9\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 10\",\n        \"price\": 40.34,\n        \"imageLink\": \"https://dummyimage.com/300x400/100/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 23.68,\n        \"id\": \"10\",\n        \"itemGroupId\": \"10\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 11\",\n        \"price\": 20.08,\n        \"imageLink\": \"https://dummyimage.com/300x400/110/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"11\",\n        \"itemGroupId\": \"11\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 12\",\n        \"price\": 71.29,\n        \"imageLink\": \"https://dummyimage.com/300x400/120/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 47.17,\n        \"id\": \"12\",\n        \"itemGroupId\": \"12\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 13\",\n        \"price\": 76.85,\n        \"imageLink\": \"https://dummyimage.com/300x400/130/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 42.91,\n        \"id\": \"13\",\n        \"itemGroupId\": \"13\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 14\",\n        \"price\": 34.78,\n        \"imageLink\": \"https://dummyimage.com/300x400/140/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"14\",\n        \"itemGroupId\": \"14\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 15\",\n        \"price\": 25.76,\n        \"imageLink\": \"https://dummyimage.com/300x400/150/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"15\",\n        \"itemGroupId\": \"15\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 16\",\n        \"price\": 38.1,\n        \"imageLink\": \"https://dummyimage.com/300x400/160/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 22.24,\n        \"id\": \"16\",\n        \"itemGroupId\": \"16\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 17\",\n        \"price\": 99.96,\n        \"imageLink\": \"https://dummyimage.com/300x400/170/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 83.92,\n        \"id\": \"17\",\n        \"itemGroupId\": \"17\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 18\",\n        \"price\": 24.15,\n        \"imageLink\": \"https://dummyimage.com/300x400/180/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"18\",\n        \"itemGroupId\": \"18\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 19\",\n        \"price\": 62.53,\n        \"imageLink\": \"https://dummyimage.com/300x400/190/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 52.44,\n        \"id\": \"19\",\n        \"itemGroupId\": \"19\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 20\",\n        \"price\": 5.56,\n        \"imageLink\": \"https://dummyimage.com/300x400/200/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"20\",\n        \"itemGroupId\": \"20\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 21\",\n        \"price\": 29,\n        \"imageLink\": \"https://dummyimage.com/300x400/210/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"21\",\n        \"itemGroupId\": \"21\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 22\",\n        \"price\": 98.2,\n        \"imageLink\": \"https://dummyimage.com/300x400/220/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 37.79,\n        \"id\": \"22\",\n        \"itemGroupId\": \"22\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 23\",\n        \"price\": 55.99,\n        \"imageLink\": \"https://dummyimage.com/300x400/230/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 22.65,\n        \"id\": \"23\",\n        \"itemGroupId\": \"23\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 24\",\n        \"price\": 59.27,\n        \"imageLink\": \"https://dummyimage.com/300x400/240/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 7.64,\n        \"id\": \"24\",\n        \"itemGroupId\": \"24\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 25\",\n        \"price\": 1.01,\n        \"imageLink\": \"https://dummyimage.com/300x400/250/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"25\",\n        \"itemGroupId\": \"25\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 26\",\n        \"price\": 6.03,\n        \"imageLink\": \"https://dummyimage.com/300x400/260/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"26\",\n        \"itemGroupId\": \"26\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 27\",\n        \"price\": 36.64,\n        \"imageLink\": \"https://dummyimage.com/300x400/270/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"27\",\n        \"itemGroupId\": \"27\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 28\",\n        \"price\": 71.29,\n        \"imageLink\": \"https://dummyimage.com/300x400/280/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 38.97,\n        \"id\": \"28\",\n        \"itemGroupId\": \"28\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 29\",\n        \"price\": 73.19,\n        \"imageLink\": \"https://dummyimage.com/300x400/290/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 22.04,\n        \"id\": \"29\",\n        \"itemGroupId\": \"29\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 30\",\n        \"price\": 34.89,\n        \"imageLink\": \"https://dummyimage.com/300x400/300/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"30\",\n        \"itemGroupId\": \"30\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 31\",\n        \"price\": 55.32,\n        \"imageLink\": \"https://dummyimage.com/300x400/310/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 6.64,\n        \"id\": \"31\",\n        \"itemGroupId\": \"31\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 32\",\n        \"price\": 75.94,\n        \"imageLink\": \"https://dummyimage.com/300x400/320/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 72.25,\n        \"id\": \"32\",\n        \"itemGroupId\": \"32\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 33\",\n        \"price\": 46.18,\n        \"imageLink\": \"https://dummyimage.com/300x400/330/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"33\",\n        \"itemGroupId\": \"33\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 34\",\n        \"price\": 47.64,\n        \"imageLink\": \"https://dummyimage.com/300x400/340/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"34\",\n        \"itemGroupId\": \"34\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 35\",\n        \"price\": 52.39,\n        \"imageLink\": \"https://dummyimage.com/300x400/350/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"35\",\n        \"itemGroupId\": \"35\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 36\",\n        \"price\": 77.24,\n        \"imageLink\": \"https://dummyimage.com/300x400/360/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": null,\n        \"id\": \"36\",\n        \"itemGroupId\": \"36\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 37\",\n        \"price\": 54.32,\n        \"imageLink\": \"https://dummyimage.com/300x400/370/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 34.42,\n        \"id\": \"37\",\n        \"itemGroupId\": \"37\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 38\",\n        \"price\": 86.57,\n        \"imageLink\": \"https://dummyimage.com/300x400/380/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 19.05,\n        \"id\": \"38\",\n        \"itemGroupId\": \"38\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 39\",\n        \"price\": 18.03,\n        \"imageLink\": \"https://dummyimage.com/300x400/390/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 11.39,\n        \"id\": \"39\",\n        \"itemGroupId\": \"39\"\n    }, {\n        \"productType\": \"Test Data > Products\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id dolor nulla. In nec arcu quis mi ullamcorper malesuada. Vivamus aliquam nisl non pulvinar fermentum. Phasellus euismod velit elit, vel molestie leo cursus eget. Quisque porta pharetra lorem, ac tincidunt massa pharetra a.\",\n        \"title\": \"Test Item 40\",\n        \"price\": 69.21,\n        \"imageLink\": \"https://dummyimage.com/300x400/400/fff.jpg\",\n        \"link\": \"https://www.monetate.com\",\n        \"salePrice\": 6.65,\n        \"id\": \"40\",\n        \"itemGroupId\": \"40\"\n    }]\n}\n"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "maxItems",
+                "value": 16
+            },
+            "widget": {
+                "label": "Maximum Number of Items",
+                "type": "IntegerField",
+                "description": "Maximum number of merch items to have in the slider.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "orientation",
+                "value": "horizontal"
+            },
+            "widget": {
+                "label": "Orientation",
+                "options": [
+                    {
+                        "name": "horizontal",
+                        "label": "Horizontal - Left to Right"
+                    },
+                    {
+                        "name": "horizontal-rtl",
+                        "label": "Horizontal - Right to Left"
+                    },
+                    {
+                        "name": "vertical",
+                        "label": "Vertical"
+                    }
+                ],
+                "type": "StringSelectField",
+                "description": "Orientation of the slider.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "sliderTemplate",
+                "value": "<div class=\"mt-title\">{{translate_title}}</div>\n{{SLIDER}}"
+            },
+            "widget": {
+                "label": "Slider Container Template",
+                "type": "HtmlCodeField",
+                "description": "Include an HTML template to build the slider structure. Placeholder example: '{{slider}}'. Possible placeholders: slider, pagination. Optionally, add the attributes 'data-prev-button' and 'data-next-button' to add previous and next slide buttons. If optional arrow images are included, elements with the attribute 'data-prev-button' and 'data-next-button' are required for them to display.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "itemTemplate",
+                "value": "<a href=\"{{link}}\" data-pid=\"{{id}}\">\n    <div>\n      <img src=\"{{imageLink}}\" alt=\"{{id}} - {{title}}\" class=\"mt-image\">\n    </div>\n    <div class=\"mt-item-text\">\n        <div class=\"mt-product-title\">{{title|truncate: 20}}</div>\n        <div class=\"mt-price-text\">\n            <span class=\"mt-sale-price\">{{salePrice}}</span>\n            <span class=\"mt-price\">{{price}}</span>\n        </div>\n    </div>\n</a>"
+            },
+            "widget": {
+                "label": "Slide Template",
+                "type": "HtmlCodeField",
+                "description": "Placeholder example: '{{price}}'. Possible placeholders include all product catalog fields. Examples: title, id, itemGroupId, price, salePrice, link, imageLink",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "css",
+                "value": {
+                    "content": "/**\n * DEFAULT SLIDER STYLES\n * Edit at your own risk!\n */\n\n#MONETATE-ID {\n    position: relative;\n    max-width: 140rem;\n    margin: 0 auto;\n}\n\n#MONETATE-ID [data-slider-mask] {\n    overflow: hidden!important;\n    position: relative!important;\n    padding: 0!important;\n    margin: 0!important;\n}\n\n#MONETATE-ID li {\n    list-style: none;\n}\n\n#MONETATE-ID [data-slider] {\n    padding: 0!important;\n    margin: 0!important;\n    display: block;\n}\n\n#MONETATE-ID [data-slide] {\n    float: none;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider] {\n    white-space: nowrap!important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slide] {\n    display: inline-block!important;\n    white-space: normal;\n    vertical-align: top;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slide] {\n    display: block!important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide] {\n    position: absolute;\n    top: 0;\n    opacity: 0;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide][data-slide-active] {\n    position: relative;\n    z-index: 1;\n    opacity: 1;\n}\n\n#MONETATE-ID [data-pagination-slide],\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n    cursor: pointer;\n    z-index: 1;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n    touch-action: pan-x;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider-mask],\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slider-mask] {\n    touch-action: pan-y;\n}\n\n#MONETATE-ID [data-pagination-slide] * {\n    pointer-events: none;\n}\n\n/** ----END DEFAULT STYLES---- */\n\n/**\n * CUSTOM SLIDER STYLING\n */\n\n#MONETATE-ID [data-pagination=\"thumbnails\"] [data-pagination-slide] {\n    border-radius: 0;\n    background: none;\n    width: 40px;\n    height: auto;\n}\n\n#MONETATE-ID [disabled] {\n    opacity: 0.5;\n}\n\n#MONETATE-ID [data-pagination-slide] {\n    display: inline-block;\n    width: 12px;\n    height: 12px;\n    background: #000;\n    margin: 4px;\n    border-radius: 6px;\n    opacity: 0.5;\n}\n\n#MONETATE-ID [data-pagination-slide][data-slide-active] {\n    opacity: 1;\n}\n\n#MONETATE-ID [data-slide]>div {\n    padding: 10px 10px 44px;\n    height: 100%;\n}\n\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n    top: 45%;\n    position: absolute;\n    font-size: 25px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    -o-user-select: none;\n    user-select: none;\n    padding: 0;\n    background: none;\n    color: #000;\n}\n\n#MONETATE-ID [data-prev-button] {\n    left: 10px;\n}\n\n#MONETATE-ID [data-next-button] {\n    right: 10px;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-prev-button] {\n    top: 0;\n    left: 50%;\n    transform: translateX(-50%);\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-next-button] {\n    top: auto;\n    bottom: 0;\n    left: 50%;\n    right: auto;\n    transform: translateX(-50%);\n}\n\n#MONETATE-ID [data-slider-mask] {\n    display: inline-block;\n    width: 100%;\n}\n\n#MONETATE-ID {\n    text-align: left;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n    height: 400px!important;\n}\n\n#MONETATE-ID [data-slide] img {\n    max-height: 100%;\n}\n\n#MONETATE-ID [data-slide] a {\n    text-decoration: none;\n    color: #575353;\n}\n\n#MONETATE-ID [data-pagination*=\"dots\"] [data-pagination-slide] {\n    /* remove below for pagination numbers */\n    text-indent: -9999px;\n}\n\n#MONETATE-ID .mt-title,\n#MONETATE-ID .mt-product-title {\n    font-family: 'DINPro-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n\n#MONETATE-ID .mt-title {\n    font-size: 1.8rem;\n    font-weight: 500;\n    text-align: center;\n    margin-bottom: 22px;\n}\n\n#MONETATE-ID .mt-merch-item {\n    border: 1px solid transparent;\n}\n\n#MONETATE-ID .mt-merch-item:hover {\n    border-color: #e5e5e5;\n}\n\n#MONETATE-ID .mt-product-title {\n    text-transform: uppercase;\n    border-top: .2rem solid #e5e5e5;\n    margin-top: 8px;\n    padding-top: 16px;\n    font-size: 1.2rem;\n    color: #222;\n}\n\n#MONETATE-ID .mt-price-text {\n    margin-top: 0.8em;\n}\n\n#MONETATE-ID .mt-price {\n    text-decoration: line-through;\n    color: #9e9e9e;\n    margin-left: .8rem;\n}\n\n#MONETATE-ID .mt-merch-item[data-missing-keys*=\"salePrice\"] .mt-price {\n    text-decoration: none;\n    margin-left: 0;\n    color: #575353;\n    font-weight: normal;\n    display: inline-block;\n}\n\n#MONETATE-ID .mt-label {\n    font-family: 'DINPro-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 1.2rem;\n    color: #575353;\n    display: none;\n}\n\n@media only screen and (max-width: 767px) {\n    #MONETATE-ID .mt-swatch-images>img {\n        border: .1rem solid #FFF;\n        border-radius: 100%;\n        box-shadow: 0 0 0 .1rem #d6d6d6 !important;\n        width: 21px;\n        margin-right: 8px;\n    }\n}\n\n@media only screen and (min-width: 768px) {\n    #MONETATE-ID .mt-title {\n        font-size: 2.4rem;\n    }\n    #MONETATE-ID .mt-swatch-images,\n    #MONETATE-ID .mt-merch-item:hover .mt-label {\n        display: none;\n    }\n    #MONETATE-ID .mt-label,\n    #MONETATE-ID .mt-merch-item:hover .mt-swatch-images {\n        display: block;\n    }\n    #MONETATE-ID .mt-merch-item:hover {\n        padding-bottom: 10px !important;\n    }\n    #MONETATE-ID .mt-swatch-images>img {\n        width: 40px;\n        margin: 0 10px;\n    }\n}",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CSSCodeField",
+                "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+                "label": "CSS"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "json",
+                "name": "settings",
+                "value": "{\n    \"autoRotateDuration\":0,\n    \"breakpoints\":{\n        \"Infinity\":{\n            \"visible\":4\n        },\n        \"767\":{\n            \"visible\":2\n        }\n    },\n    \"gridSize\":1,\n    \"infiniteSlide\":false,\n    \"pagination\":false,\n    \"pauseOnHover\":false,\n    \"slideIncrement\":\"page\",\n    \"stopOnInteraction\":false,\n    \"transitionAnimation\":\"push\",\n    \"transitionDuration\":250,\n    \"translations\":{\n        \"en\":{\n            \"colour\":\"colour\",\n            \"colours\":\"colours\",\n            \"title\":\"Test EN\"\n        },\n        \"de\":{\n            \"colour\":\"Farbe\",\n            \"colours\":\"Farben\",\n            \"title\":\"Test DE\"\n        },\n        \"fr\":{\n            \"colour\":\"Couleur\",\n            \"colours\":\"Couleurs\",\n            \"title\":\"Test FR\"\n        },\n        \"es\": {\n            \"colour\":\"Colores\",\n            \"colours\":\"Color\",\n            \"title\":\"Test ES\"\n        },\n       \"it\": {\n            \"colour\":\"Colore\",\n            \"colours\":\"Colori\",\n            \"title\":\"Test IT\"\n        },\n       \"no\":{\n            \"colour\":\"Farge\",\n            \"colours\":\"Farger\",\n            \"title\":\"Test NO\"\n        },\n       \"sv\":{\n            \"colour\":\"Färg\",\n            \"colours\":\"Färger\",\n            \"title\":\"Test sv\"\n        }\n    }\n}"
+            },
+            "widget": {
+                "label": "Slides Visible",
+                "type": "JsonCodeField",
+                "description": "Settings object.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_prev",
+                "value": null
+            },
+            "widget": {
+                "label": "Previous Button Creative",
+                "type": "RawImageCreative",
+                "description": "Previous button creative. Must include element with the attribute [data-prev-button] Slider Container Template.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_next",
+                "value": null
+            },
+            "widget": {
+                "label": "Next Button Creative",
+                "type": "RawImageCreative",
+                "description": "Next button creative. Must include element with the attribute [data-next-button] Slider Container Template.",
+                "action_visible": true
+            },
+            "required": false
+        }
+    ],
+    "masks": [],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [],
+        "required": []
+    },
+    "integration_type": "js-tag",
+    "manage_impressions": false
+}

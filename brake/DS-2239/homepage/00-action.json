@@ -1,0 +1,211 @@
+{
+  "title": "Intelligent Recommendations Grid (Search)",
+  "description": "Inserts a grid of iRec items.",
+  "op": "iRecGrid",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "endcap",
+  "subcategory": "other",
+  "action_events": [
+    "op_click",
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "sel",
+        "value": ".product__listing.product__grid"
+      },
+      "widget": {
+        "label": "Insert Selector",
+        "type": "CssSelectorField",
+        "description": "Selector to find the node where the grid will be inserted.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "imeth",
+        "value": "first"
+      },
+      "widget": {
+        "label": "Insert Method",
+        "options": [
+          {
+            "name": "after",
+            "label": "After"
+          },
+          {
+            "name": "before",
+            "label": "Before"
+          },
+          {
+            "name": "first",
+            "label": "First"
+          },
+          {
+            "name": "last",
+            "label": "Last"
+          },
+          {
+            "name": "replace",
+            "label": "Replace"
+          },
+          {
+            "name": "takeover",
+            "label": "Takeover"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Method to use when inserting the grid relative to the selected node.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "insertOptions",
+        "value": "RecheckForElement"
+      },
+      "widget": {
+        "description": "RecheckForElement: If the selector is not found, wait up to 3 seconds for it to show up. SelectMultipleElements: If the selector matches multiple places, do you want to insert at each of them?",
+        "label": "Insert Options",
+        "action_visible": true,
+        "hiddenMenu": true,
+        "allIsValid": true,
+        "type": "CheckboxArrayAsString",
+        "options": [
+          "RecheckForElement",
+          "SelectMultipleElements"
+        ]
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "recommendation_set_dict",
+        "name": "productsJson",
+        "value": {
+          "fallback_rec_set_ids": [],
+          "max_items": 1000,
+          "pinned_product_ids": [],
+          "min_items": 1,
+          "custom_return_fields": [
+            "Country_Of_Origin_British",
+            "Country_Of_Origin_Scottish",
+            "Freedom_Food",
+            "MSC",
+            "Nett_prices",
+            "Number_of_Portions_Units",
+            "Pack_size",
+            "RedTractor",
+            "Suitable_for_Vegetarians",
+            "Temperature",
+            "Unit_Price_Descriptor"
+          ],
+          "rec_set_ids": [
+            5863
+          ]
+        }
+      },
+      "widget": {
+        "label": "Recommendation Set",
+        "type": "RecommendationSet",
+        "description": "Group of products to put in the endcap.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "maxItems",
+        "value": 4
+      },
+      "widget": {
+        "label": "Maximum Number of Items",
+        "type": "IntegerField",
+        "description": "Maximum number of merch items to have in the grid.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "gridTemplate",
+        "value": "{{GRID}}"
+      },
+      "widget": {
+        "label": "Grid Container Template",
+        "type": "HtmlCodeField",
+        "description": "Include an HTML template to build the grid structure. Use the placeholder '{{grid}}' to place the gird of items.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "itemTemplate",
+        "value": "<div class=\"product-item--border\">\n    <div class=\"product-item__icons product-item__icons--top\">\n        <div class=\"item-icons item-icons--promo item-icons--first hidden js-productPromoIcon\" data-code=\"{{id}}\">\n            <span class=\"icon icon-promo-alt icon-promo-alt--red\">\n                <span class=\"path1\"></span>\n                <span class=\"path2\"></span>\n            </span>\n        </div>\n        <div class=\"item-icons item-icons--user-actions text-right js-userActions\">\n            <div class=\"add-to-favourites js-displayWishlist\" data-product-id=\"{{id}}\">\n                <a href=\"/sign-in\">\n                    <span class=\" icon icon-Heart js-wishlistIcon\" title=\"Add to favourites\"></span>\n                </a>\n            </div>\n            <div class=\"js-productWishlistHolder product-wishlist-holder \"></div>\n        </div>\n    </div>\n\n    <!-- Product Thumbnail -->\n    <a class=\"product-item__thumb\" href=\"{{link}}\" title=\"{{title}}\">\n        <span class=\"product-item__qty-overlay\"><span class=\"js-qtyOverlayValue\">{0}</span> in basket</span>\n        <picture class=\"product-item__picture\">\n            <source data-size=\"desktop\" srcset=\"{{imageLink}}?img404=image-not-available&amp;$plp-desktop$\" media=\"(min-width: 1240px)\" />\n            <source data-size=\"tablet\" srcset=\"{{imageLink}}?img404=image-not-available&amp;$plp-tablet$\" media=\"(min-width: 768px)\" />\n            <source data-size=\"mobile\" srcset=\"{{imageLink}}?img404=image-not-available&amp;$plp-mobile$\" />\n            <img class=\"product-item__image product-image js-fallbackImage\" src=\"{{imageLink}}?img404=image-not-available&amp;$plp-desktop$\" alt=\"{{title}}\" title=\"{{title}}\" />\n        </picture>\n    </a>\n\n    <!-- Use following to get the alternatives flag false -->\n    <div class=\"product-item__info\">\n        <div class=\"product-item__code\">\n            <a href=\"{{link}}\">\n                <span class=\"mt-temperature {{Temperature}}\"></span>&nbsp;{{id}}\n            </a>\n        </div>\n        <div class=\"product-item__advice-icons text-right\">\n            <span title=\"MSC\" data-monetate-show=\"{{MSC}}\">\n                <img class=\"product-item__advice-icons-img\" src=\"https://brakes.a.bigcontent.io/v1/static/icon-E62\" alt=\"icon-E62\">\n            </span>\n            <span title=\"Freedom Food\" data-monetate-show=\"{{FreedomFood}}\">\n                <img class=\"product-item__advice-icons-img\" src=\"https://brakes.a.bigcontent.io/v1/static/icon-E60\" alt=\"icon-E60\">\n            </span>\n            <span title=\"Net Price\" data-monetate-show=\"{{NettPrices}}\">\n                <img class=\"product-item__advice-icons-img\" src=\"https://brakes.a.bigcontent.io/v1/static/icon-E24\" alt=\"icon-E24\">\n            </span>\n            <span title=\"Suitable for Vegetarians\" data-monetate-show=\"{{SuitableForVegetarians}}\">\n                <img class=\"product-item__advice-icons-img\" src=\"https://brakes.a.bigcontent.io/v1/static/icon-E55\" alt=\"icon-E55\">\n            </span>\n            <span title=\"Red Tractor\" data-monetate-show=\"{{RedTractor}}\">\n                <img class=\"product-item__advice-icons-img\" src=\"https://brakes.a.bigcontent.io/v1/static/icon-E59\" alt=\"icon-E59\">\n            </span>\n            <span title=\"Provenance\\ Country Of Origin - British\" data-monetate-show=\"{{CountryOfOriginBritish}}\">\n                <img class=\"product-item__advice-icons-img\" src=\"https://brakes.a.bigcontent.io/v1/static/icon-PP19\" alt=\"icon-PP19\">\n            </span>\n            <span title=\"Provenance\\ Country Of Origin - Scottish\" data-monetate-show=\"{{CountryOfOriginScottish}}\">\n                <img class=\"product-item__advice-icons-img\" src=\"https://brakes.a.bigcontent.io/v1/static/icon-PP15\" alt=\"icon-PP15\">\n            </span>\n        </div>\n    </div>\n\n    <!-- Product Title -->\n    <a class=\"product-item__name product-name\" title=\"{{title}}\" href=\"{{link}}\">{{title}}</a>\n\n    <!-- Product Details -->\n    <div class=\"product-item__qty\">&nbsp;<!-- Full case quantity: 1 --></div>\n    <div class=\"product-item__price js-productItemPrice \">\n        <div class=\"product-price product-price--current-price\">\n            <span class=\"js-productPrice product-price__value product-price__value--current\" data-price=\"{{price}}\" data-productid=\"{{id}}\" data-currency-symbol=\"£\">\n                <span class=\"js-productPrice\" data-price=\"{{price}}\" data-currency-symbol=\"£\">£{{price}}</span>\n            </span>\n            <span class=\"js-productPrice product-price__price-each\" data-price=\"£0.99{{UnitPriceDescriptor}}\" data-productid=\"{{id}}\" data-currency-symbol=\"£\" data-price-descriptor=\"{{UnitPriceDescriptor}}\">£{{pricePerUnit}}{{UnitPriceDescriptor}}</span>\n        </div>\n    </div>\n    <div class=\"product-item__size\">Pack size: {{PackSize}}</div>\n\n    <!-- Add to Cart -->\n    <div class=\"addtocart\">\n        <div class=\"actions-container-for-ProductGridComponent\">\n            <div class=\"ProductGridComponent-ListPickUpInStoreAction\" data-index=\"1\"></div>\n            <div class=\"ProductGridComponent-ListAddToCartAction\" data-index=\"2\">\n                <input type=\"hidden\" id=\"cartLargeQuantity\" value=\"100\">\n                <input type=\"hidden\" id=\"cartMaximumQuantity\" value=\"999\">\n                <input type=\"hidden\" value=\"false\" class=\"js-cartViewPromotion\">\n                <form id=\"addToCartForm{{id}}\" data-id=\"{{id}}\" class=\"cart__add add_to_cart_form js-addToCartForm \" action=\"/cart/add\" method=\"post\">\n                    <input type=\"hidden\" name=\"productCodePost\" value=\"{{id}}\">\n                    <input type=\"hidden\" name=\"entryNumber\" value=\"\">\n                    <input type=\"hidden\" name=\"productNamePost\" value=\"{{title}}\">\n                    <input type=\"hidden\" name=\"productPostPrice\" value=\"{{price}}\">\n                    <input type=\"hidden\" name=\"qty\" class=\"js-productCartQty\" value=\"0\">\n                    <input type=\"hidden\" name=\"productCartQty\" class=\"js-productCartQty\" value=\"0\">\n                    <div class=\"js-productQtyUpdate quantity-update cart__quantity col-xs-12 col-sm-12\">\n                        <button type=\"button\" class=\"btn btn-success quantity-update__btn quantity-update__btn--minus icon icon-minus js-qtyBtn\" data-action=\"remove\" aria-label=\"Remove from cart\"></button>\n                        <input class=\"quantity-update__input js-productQtyInput\" type=\"number\" inputmode=\"numeric\" aria-label=\"Quantity\" value=\"1\" min=\"0\" max=\"1000\">\n                        <button type=\"button\" class=\"btn btn-success quantity-update__btn icon quantity-update__btn--plus icon-plus js-qtyBtn\" data-action=\"add\" aria-label=\"Add to cart\"></button>\n                    </div>\n                    <button type=\"button\" class=\"col-sm-12 col-xs-12 btn btn-primary btn-block js-enable-btn js-addToCartBtn js-qtyChangeBtn cart__add-button\" data-action=\"add\" data-product-code=\"{{id}}\">Add</button>\n                    <div>\n                        <input type=\"hidden\" name=\"CSRFToken\" value=\"\">\n                    </div>\n                </form>\n                <form id=\"configureForm{{id}}\" class=\"configure_form\" action=\"{{link}}/configuratorPage/\" method=\"get\"></form>\n            </div>\n        </div>\n    </div>\n</div>"
+      },
+      "widget": {
+        "label": "Item Template",
+        "type": "HtmlCodeField",
+        "description": "Placeholder example: '{{price}}'. Possible placeholders include all product catalog fields. Examples: title, id, itemGroupId, price, salePrice, link, imageLink",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "css",
+        "value": {
+          "content": "/* ===================================================== */\n/* Override some existing CSS\n/* ===================================================== */\n.product__listing.product__grid {\n  margin-left: -3.33333% !important;\n  margin-right: -3.33333% !important;\n}\n\n@media screen and (min-width: 768px) {\n  .product__listing.product__grid {\n    margin-right: -2.1%;\n    margin-right: -2.1%;\n  }\n}\n\n@media screen and (min-width: 1240px) {\n  .product__listing.product__grid {\n    margin-left: -1.06% !important;\n    margin-right: -1.06% !important;\n  }\n}\n\n.product__listing.product__grid .product-item--noborder {\n  clear: none !important;\n  margin-left: 3.33333% !important;\n  margin-right: 3.33333% !important;\n  width: 43.33333% !important;\n}\n\n@media screen and (min-width: 768px) {\n  .product__listing.product__grid .product-item--noborder {\n    margin-left: 2.1% !important;\n    margin-right: 2.1% !important;\n    width: 29.13333% !important;\n  }\n}\n\n@media screen and (min-width: 1240px) {\n  .product__listing.product__grid .product-item--noborder {\n    margin-left: 1.06% !important;\n    margin-right: 1.06% !important;\n    width: 22.88% !important;\n  }\n}\n\n.mt_grid-items--one {\n  margin-left: 3.33333% !important;\n  margin-right: 3.33333% !important;\n  width: 43.33333% !important;\n}\n\n@media screen and (min-width: 768px) {\n  .mt_grid-items--one {\n    margin-left: 2.1% !important;\n    margin-right: 2.1% !important;\n    width: 29.13333% !important;\n  }\n}\n\n@media screen and (min-width: 1240px) {\n  .mt_grid-items--one {\n    margin-left: 1.06% !important;\n    margin-right: 1.06% !important;\n    width: 22.88% !important;\n  }\n}\n\n.mt_grid-items--two {\n  width: 100%;\n}\n\n@media screen and (min-width: 768px) {\n  .mt_grid-items--two {\n    width: 66.66667%;\n  }\n}\n\n@media screen and (min-width: 1240px) {\n  .mt_grid-items--two {\n    width: 50%;\n  }\n}\n\n.mt_grid-items--two .mt-merch-item {\n  margin-left: 3.33333%;\n  margin-right: 3.33333%;\n  width: 43.33333%;\n}\n\n.mt_grid-items--three {\n  width: 100%;\n}\n\n@media screen and (min-width: 1240px) {\n  .mt_grid-items--three {\n    width: 75%;\n  }\n}\n\n.mt_grid-items--three .mt-merch-item {\n  margin-left: 3.33333%;\n  margin-right: 3.33333%;\n  width: 43.33333%;\n}\n\n@media screen and (min-width: 768px) {\n  .mt_grid-items--three .mt-merch-item {\n    margin-left: 2.1% !important;\n    margin-right: 2.1% !important;\n    width: 29.13333% !important;\n  }\n}\n\n@media screen and (max-width: 767px) {\n  .mt_grid-items--three .mt-merch-item:nth-child(3) {\n    display: none;\n  }\n}\n\n.mt_grid-items--four {\n  width: 100%;\n}\n\n.mt_grid-items--four .mt-merch-item {\n  margin-left: 3.33333%;\n  margin-right: 3.33333%;\n  width: 43.33333%;\n}\n\n@media screen and (min-width: 768px) {\n  .mt_grid-items--four .mt-merch-item {\n    margin-left: 2.1% !important;\n    margin-right: 2.1% !important;\n    width: 29.13333% !important;\n  }\n}\n\n@media screen and (min-width: 1240px) {\n  .mt_grid-items--four .mt-merch-item {\n    margin-left: 1.06% !important;\n    margin-right: 1.06% !important;\n    width: 22.88% !important;\n  }\n}\n\n@media screen and (min-width: 768px) and (max-width: 1239px) {\n  .mt_grid-items--four .mt-merch-item:nth-child(4) {\n    display: none;\n  }\n}\n\n#MONETATE-ID {\n  box-sizing: border-box;\n}\n\n#MONETATE-ID * {\n  box-sizing: border-box;\n}\n\n#MONETATE-ID [mt-data-grid] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  height: 100%;\n}\n\n#MONETATE-ID .mt-merch-item {\n  padding-bottom: 20px;\n  padding-top: 23px;\n}\n\n#MONETATE-ID .mt-temperature.Ambient::after {\n  content: \"A\";\n}\n\n#MONETATE-ID .mt-temperature.Chilled::after {\n  content: \"C\";\n}\n\n#MONETATE-ID .mt-temperature.Frozen::after {\n  content: \"F\";\n}\n\n#MONETATE-ID [data-monetate-show] {\n  display: none;\n}\n\n#MONETATE-ID [data-monetate-show=\"TRUE\"],\n#MONETATE-ID [data-monetate-show=\"1\"] {\n  display: inline;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+        "label": "CSS"
+      },
+      "required": true
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "productGrid"
+        ],
+        "id": 247460,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

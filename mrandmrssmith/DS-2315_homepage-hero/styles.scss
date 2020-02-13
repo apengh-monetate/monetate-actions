@@ -1,0 +1,88 @@
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+
+.mt_hero {
+    // height: 16.5rem;
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    @media screen and (min-width: $breakpoint-md) {
+        height: 26.5rem;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        height: 39.5rem;
+    }
+    @media screen and (min-width: $breakpoint-xl) {
+        height: 32.5rem;
+    }
+
+    &__picture {
+
+    }
+    &__image {
+        width: 100%;
+    }
+
+    // Overlay Text
+    &__text {
+        padding-left: 20px;
+        padding-right: 20px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: calc(100% - 40px);
+        @media screen and (min-width: $breakpoint-md) {
+            top: 45%;
+        }
+    }
+    &__heading {
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__subheading {
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__button {
+        background-color: #fff;
+        border: none;
+        border-radius: 3px;
+        box-sizing: border-box;
+        color: #000;
+        cursor: pointer;
+        display: inline-block;
+        font-size: .75rem;
+        font-weight: 600;
+        letter-spacing: .07rem;
+        line-height: 1.5rem;
+        margin-top: 1rem;
+        min-width: 3rem;
+        padding: .75rem 1.5rem;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: background-color 500ms;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: darken(#fff, 20%);
+            color: #000;
+        }
+    }
+
+
+}
+
+
+#site-search {
+    @media screen and (min-width: $breakpoint-lg) {
+        top: 48.25rem !important;
+    }
+    @media screen and (min-width: $breakpoint-xl) {
+        top: 41.75rem !important;
+    }
+}

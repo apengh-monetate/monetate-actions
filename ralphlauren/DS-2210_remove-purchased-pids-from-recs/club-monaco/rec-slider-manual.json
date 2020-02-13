@@ -1,0 +1,243 @@
+{
+    "id": 458244,
+    "title": "Intelligent Recommendation Slider - Manual",
+    "description": "Inserts a slider with intelligent recommendation items.",
+    "op": "iRecSlider",
+    "slot": "none",
+    "slot_type": "none",
+    "category": "endcap",
+    "subcategory": "other",
+    "action_events": [
+        "op_click",
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "str",
+                "name": "selector",
+                "value": "#footer"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CssSelectorField",
+                "description": "Selector to find the node where the slider will be inserted.",
+                "label": "Insert Selector"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "imeth",
+                "value": "before"
+            },
+            "widget": {
+                "description": "Method to use when inserting the slider relative to the selected node.",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "label": "Insert Method"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "insertOptions",
+                "value": "RecheckForElement"
+            },
+            "widget": {
+                "description": "RecheckForElement: If the selector is not found, wait up to 3 seconds for it to show up. SelectMultipleElements: If the selector matches multiple places, do you want to insert at each of them?",
+                "label": "Insert Options",
+                "action_visible": true,
+                "hiddenMenu": true,
+                "allIsValid": true,
+                "type": "CheckboxArrayAsString",
+                "options": [
+                    "RecheckForElement",
+                    "SelectMultipleElements"
+                ]
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "json",
+                "name": "json",
+                "value": "{\n    \"products_data\": [\n        {\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1297304_lifestyle?$rl_392_pdp$\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"White\",\n            \"condition\": \"new\",\n            \"description\": \"The Club Monaco sneaker. A modern, clean-lined design in smooth leather with refined detailing. Made to be worn everyday, with everything.\",\n            \"gender\": \"Male\",\n            \"googleProductCategory\": \"Apparel & Accessories > Shoes\",\n            \"id\": \"0004147344\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1297304_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"500865\",\n            \"link\": \"/en/men-shoes-casual-shoes/club-monaco-leather-sneaker/0004147344.html\",\n            \"price\": \"98.5\",\n            \"productType\": \"mens > accessories > shoes > sneakers\",\n            \"retailerId\": \"620\",\n            \"salePrice\": \"98.5\",\n            \"schemaId\": \"14949\",\n            \"size\": \"8\",\n            \"title\": \"Club Monaco Leather Sneaker\"\n        },\n        {\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1296950_lifestyle?$rl_392_pdp$\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Black\",\n            \"condition\": \"new\",\n            \"description\": \"The best version of a necessity. In rich Italian leather with a supple sueded effect.\",\n            \"gender\": \"Male\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing Accessories > Belts\",\n            \"id\": \"0004146775\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1296953_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"437592\",\n            \"link\": \"/en/men-accessories-belts/laird-suede-belt/0004146775.html\",\n            \"price\": \"69.5\",\n            \"productType\": \"mens > accessories > bags and small accessories > belts\",\n            \"retailerId\": \"620\",\n            \"salePrice\": \"69.5\",\n            \"schemaId\": \"14949\",\n            \"size\": \"30\",\n            \"title\": \"Laird Suede Belt\"\n        },\n        {\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1296935_lifestyle?$rl_392_pdp$\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Black\",\n            \"condition\": \"new\",\n            \"description\": \"Good sport. A clean-lined baseball cap in cotton twill with a subtle stitched logo on the side.\",\n            \"gender\": \"Male\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing Accessories > Hats\",\n            \"id\": \"0004146304\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1296935_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"482060\",\n            \"link\": \"/en/men-accessories-hats/cotton-twill-baseball-cap/0004146304.html\",\n            \"price\": \"39.5\",\n            \"productType\": \"mens > accessories > hats scarves and gloves > hats\",\n            \"retailerId\": \"620\",\n            \"salePrice\": \"39.5\",\n            \"schemaId\": \"14949\",\n            \"size\": \"One Size\",\n            \"title\": \"Cotton Twill Baseball Cap\"\n        },\n        {\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1294832_lifestyle?$rl_392_pdp$\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"White/Blue\",\n            \"condition\": \"new\",\n            \"description\": \"For every day. The essential button-down precisely tailored in our signature slim fit. Cut in a washed cotton Oxford cloth for a soft structure.\",\n            \"gender\": \"Male\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Shirts & Tops\",\n            \"id\": \"0004138889\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1294832_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"434803\",\n            \"link\": \"/en/men-clothing-shirts/oxford-stripe-shirt/0004138889.html\",\n            \"price\": \"79.5\",\n            \"productType\": \"mens > clothing > tops > shirts > oxford shirts\",\n            \"retailerId\": \"620\",\n            \"salePrice\": \"79.5\",\n            \"schemaId\": \"14949\",\n            \"size\": \"M\",\n            \"title\": \"Oxford Stripe Shirt\"\n        },\n        {\n            \"id\": \"0004271052\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Navy\",\n            \"condition\": \"new\",\n            \"description\": \"The Club Monaco sneaker. A modern, clean-lined design in smooth leather with refined detailing. Made to be worn everyday, with everything.\",\n            \"gender\": \"Male\",\n            \"link\": \"/en/new-arrivals-men-new-arrivals/club-monaco-leather-sneaker/0004271052.html\",\n            \"price\": \"98.5\",\n            \"size\": \"10\",\n            \"title\": \"Club Monaco Leather Sneaker\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1331795_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1331795_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"482692\",\n            \"productType\": \"mens >\",\n            \"salePrice\": \"79\"\n        },\n        {\n            \"id\": \"0004269908\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Charcoal Multi\",\n            \"condition\": \"new\",\n            \"description\": \"Texture play. Soft, nubby boucle turns a military-inspired staple into something cozier. Instead of a cardigan.\",\n            \"gender\": \"Male\",\n            \"link\": \"/en/men-clothing-sweaters/boucle-bomber/0004269908.html\",\n            \"price\": \"169.5\",\n            \"size\": \"M\",\n            \"title\": \"Boucle Bomber\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1331298_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Shirts & Tops\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1331298_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"482086\",\n            \"productType\": \"mens > clothing > tops > sweaters\",\n            \"salePrice\": \"99\"\n        },\n        {\n            \"id\": \"0004357430\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Navy Multi\",\n            \"condition\": \"new\",\n            \"description\": \"Dress-up, dressed down. An elastic waistband gives a tailored pair of dress pants a touch of ease. Instead of your other trousers.\",\n            \"gender\": \"Male\",\n            \"link\": \"/en/men-clothing-pants/elasticated-pinstripe-pant/0004357430.html\",\n            \"price\": \"159.5\",\n            \"size\": \"XL\",\n            \"title\": \"Elasticated Pinstripe Pant\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1346454_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Pants\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1346454_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"502140\",\n            \"productType\": \"mens > clothing > bottoms > pants\",\n            \"salePrice\": \"129.99\"\n        },\n        {\n            \"id\": \"0004387460\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Fossil Beige\",\n            \"condition\": \"new\",\n            \"description\": \"Light layer.  An easy zip-front jacket in a neutral tone for cooler weather.\",\n            \"gender\": \"Male\",\n            \"link\": \"/en/men-clothing-outerwear/flap-zip-jacket/0004387460.html\",\n            \"price\": \"198.5\",\n            \"size\": \"XL\",\n            \"title\": \"Flap Zip Jacket\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1358828_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Outerwear > Coats & Jackets\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1358828_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"518259\",\n            \"productType\": \"mens > clothing > outerwear > jackets\",\n            \"salePrice\": \"159.99\"\n        },\n        {\n            \"id\": \"0004379319\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Fossil Beige\",\n            \"condition\": \"new\",\n            \"description\": \"With texture. With a straighter hem and a fit that lands somewhere in between our Slim and Standard fits.\",\n            \"gender\": \"Male\",\n            \"link\": \"/en/men-clothing-shirts/loop-collar-texture-shirt/0004379319.html\",\n            \"price\": \"98.5\",\n            \"size\": \"XL\",\n            \"title\": \"Loop Collar Texture Shirt\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1346437_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Shirts & Tops\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1346438_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"502170\",\n            \"productType\": \"mens > clothing > tops > shirts\",\n            \"salePrice\": \"98.5\"\n        },\n        {\n            \"id\": \"0004286811\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Light Blue\",\n            \"condition\": \"new\",\n            \"description\": \"Linen season. Our signature slim shirting updated in soft, lightweight linen for the warmer months with a floral bandana pattern. For a day at the beach or dinner out.\",\n            \"gender\": \"Male\",\n            \"link\": \"/en/men-clothing-shirts/slim-bandana-ditsy-linen-shirt/0004286811.html\",\n            \"price\": \"119.5\",\n            \"size\": \"XS\",\n            \"title\": \"Slim Bandana Ditsy Linen Shirt\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1330477_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Shirts & Tops\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1330477_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"481175\",\n            \"productType\": \"mens > clothing > tops > shirts > linen shirts\",\n            \"salePrice\": \"39\"\n        },\n        {\n            \"id\": \"0004320552\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Black\",\n            \"condition\": \"new\",\n            \"description\": \"To mean business. Inspired by our signature Borrem blazer, this smartly tailored double-breasted blazer is suited for every day of the week and then some.\",\n            \"gender\": \"Female\",\n            \"link\": \"/en/women-clothing-jackets-and-vests/liyahh-blazer/0004320552.html\",\n            \"price\": \"298\",\n            \"size\": \"4\",\n            \"title\": \"Liyahh Blazer\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1331867_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Outerwear\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1331867_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"483308\",\n            \"productType\": \"womens > clothing > outerwear > blazers\",\n            \"salePrice\": \"169\"\n        },\n        {\n            \"id\": \"0004384251\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Gold\",\n            \"condition\": \"new\",\n            \"description\": \"Circle back. A rounded charm offers an airy take on geometry. From artisanal jewelry line Serefina&#39;s collection of vintage-inspired pieces.\",\n            \"gender\": \"Female\",\n            \"link\": \"/en/women-accessories-jewelry/serefina-long-circle-necklace/0004384251.html\",\n            \"price\": \"49.5\",\n            \"size\": \"One Size\",\n            \"title\": \"Serefina Long Circle Necklace\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1346378_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Jewelry > Necklaces\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1346378_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"501967\",\n            \"productType\": \"womens > accessories > jewelry > necklaces\",\n            \"salePrice\": \"49.5\"\n        },\n        {\n            \"id\": \"0004399408\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Winter Pink\",\n            \"condition\": \"new\",\n            \"description\": \"Easy outfitter. A generous rib-knit collar offers added warmth and dimension. In 100% merino wool.\",\n            \"gender\": \"Female\",\n            \"link\": \"/en/women-clothing-sweaters/malona-merino-sweater/0004399408.html\",\n            \"price\": \"129.5\",\n            \"size\": \"M\",\n            \"title\": \"Malona Merino Sweater\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1352359_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Shirts & Tops\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1352360_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"510440\",\n            \"productType\": \"womens > clothing > tops > sweaters\",\n            \"salePrice\": \"129.5\"\n        },\n        {\n            \"id\": \"0004363214\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Black\",\n            \"condition\": \"new\",\n            \"description\": \"Buckle up. A belted waist and slouchy fit give a pair of wool blend pants a fresh update for the season. For building a fall wardrobe with. In a light wool blend.\",\n            \"gender\": \"Female\",\n            \"link\": \"/en/women-clothing-pants/belted-wool-pant/0004363214.html\",\n            \"price\": \"198.5\",\n            \"size\": \"6\",\n            \"title\": \"Belted Wool Pant\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1346110_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Pants\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1346110_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"501769\",\n            \"productType\": \"womens > clothing > bottoms > pants\",\n            \"salePrice\": \"198.5\"\n        },\n        {\n            \"id\": \"0004246955\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Navy\",\n            \"condition\": \"new\",\n            \"description\": \"The last layer. In a timeless wool twill for a polished finish that feels sharp and pulled-together. For wearing now and through seasons to come.\",\n            \"gender\": \"Male\",\n            \"link\": \"/en/men-clothing-outerwear/twill-topcoat/0004246955.html\",\n            \"price\": \"398\",\n            \"size\": \"36\",\n            \"title\": \"Twill Topcoat\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1318295_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Outerwear > Coats & Jackets\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1318295_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"465883\",\n            \"productType\": \"mens > clothing > outerwear > coats\",\n            \"salePrice\": \"398\"\n        },\n        {\n            \"id\": \"0004410320\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Honey\",\n            \"condition\": \"new\",\n            \"description\": \"Get a kick out of. A pair of slim-fitting pants with an understated flare works for every day of the week. A blazer and a blouse add polish.\",\n            \"gender\": \"Female\",\n            \"link\": \"/en/women-clothing-pants/slim-kick-flare-pant/0004410320.html\",\n            \"price\": \"189.5\",\n            \"size\": \"6\",\n            \"title\": \"Slim Kick Flare Pant\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1352467_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Pants\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1352468_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"510525\",\n            \"productType\": \"womens > clothing > bottoms > pants\",\n            \"salePrice\": \"189.5\"\n        },\n        {\n            \"id\": \"0004269379\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Olive\",\n            \"condition\": \"new\",\n            \"description\": \"Carry all. A tote in go-everywhere nylon big enough for all the essentials. With an interior zip pocket for added storage.\",\n            \"gender\": \"Male\",\n            \"link\": \"/en/men-accessories-bags/club-monaco-nylon-tote/0004269379.html\",\n            \"price\": \"98.5\",\n            \"size\": \"One Size\",\n            \"title\": \"Club Monaco Nylon Tote\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1331619_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Handbags, Wallets & Cases\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1331619_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"482586\",\n            \"productType\": \"mens > accessories > bags and small accessories > bags\",\n            \"salePrice\": \"79\"\n        },\n        {\n            \"id\": \"0004385662\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Black\",\n            \"condition\": \"new\",\n            \"description\": \"Bell out. Flared sleeves with split cuffs give an easy black top a striking silhouette.\",\n            \"gender\": \"Female\",\n            \"link\": \"/en/women-clothing-knits-and-tees/flare-sleeve-top/0004385662.html\",\n            \"price\": \"98.5\",\n            \"size\": \"XS\",\n            \"title\": \"Flare Sleeve Top\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1346203_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1346203_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"501879\",\n            \"productType\": \"womens >\",\n            \"salePrice\": \"98.5\"\n        },\n        {\n            \"id\": \"0004290763\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Navy\",\n            \"condition\": \"new\",\n            \"description\": \"Slip on. Durable canvas updates a perennial summer favorite. Instead of flip flops.\",\n            \"gender\": \"Male\",\n            \"link\": \"/en/men-shoes-casual-shoes/cm-flat-espadrille/0004290763.html\",\n            \"price\": \"79.5\",\n            \"size\": \"12\",\n            \"title\": \"CM Flat Espadrille\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1335734_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Shoes\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1335734_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"500869\",\n            \"productType\": \"mens > accessories > shoes > espadrilles\",\n            \"salePrice\": \"49\"\n        },\n        {\n            \"id\": \"0004382479\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Green\",\n            \"condition\": \"new\",\n            \"description\": \"The staple. A fall favorite returns with a wide textured wale and a modern fit. Instead of jeans.\",\n            \"gender\": \"Male\",\n            \"link\": \"/en/men-clothing-pants/corduroy-pant/0004382479.html\",\n            \"price\": \"129.5\",\n            \"size\": \"34\",\n            \"title\": \"Corduroy Pant\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1346472_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Pants\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1346473_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"502136\",\n            \"productType\": \"mens > clothing > bottoms > pants\",\n            \"salePrice\": \"99.99\"\n        },\n        {\n            \"id\": \"0004275319\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Silver Multi\",\n            \"condition\": \"new\",\n            \"description\": \"Split decision. A split neck gives a soft sweater the relaxed feel of a tunic. In 100% cashmere.\",\n            \"gender\": \"Female\",\n            \"link\": \"/en/women-clothing-sweaters/mereelie-cashmere-sweater/0004275319.html\",\n            \"price\": \"279\",\n            \"size\": \"M\",\n            \"title\": \"Mereelie Cashmere Sweater\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1331892_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Shirts & Tops\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1331892_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"483310\",\n            \"productType\": \"womens > clothing > tops > sweaters\",\n            \"salePrice\": \"219\"\n        },\n        {\n            \"id\": \"0004280616\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Green\",\n            \"condition\": \"new\",\n            \"description\": \"About a stitch. A pretty pointelle stitch and ruffled detail at the neck feels both sweet and approachable. For adding a little bit of feeling.\",\n            \"gender\": \"Female\",\n            \"link\": \"/en/women-clothing-sweaters/kavie-sweater/0004280616.html\",\n            \"price\": \"159.5\",\n            \"size\": \"L\",\n            \"title\": \"Kavie Sweater\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1331900_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Shirts & Tops\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1331901_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"482788\",\n            \"productType\": \"womens > clothing > tops > sweaters\",\n            \"salePrice\": \"129\"\n        },\n        {\n            \"id\": \"0004437182\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Camel Multi\",\n            \"condition\": \"new\",\n            \"description\": \"Make it plaid. Soft, brushed wool finds form in a tailored coat, while gold-rimmed buttons add a polished finish. Meant to be worn with everything from tall boots and skirts to jeans and slouchy sweaters.\",\n            \"gender\": \"Female\",\n            \"link\": \"/en/women-clothing-coats-and-trench-coats/jemma-plaid-coat/0004437182.html\",\n            \"price\": \"479\",\n            \"size\": \"S\",\n            \"title\": \"Jemma Plaid Coat\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1352442_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1352442_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"510478\",\n            \"productType\": \"womens >\",\n            \"salePrice\": \"479\"\n        },\n        {\n            \"id\": \"0004317806\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Bone\",\n            \"condition\": \"new\",\n            \"description\": \"Our slimmest denim. A close fit and classic styling bring a polished, streamlined update to the traditional blue jean. Updated in a Southwestern-inspired neutral for the warmer months.\",\n            \"gender\": \"Male\",\n            \"link\": \"/en/men-clothing-pants/super-slim-denim/0004317806.html\",\n            \"price\": \"129.5\",\n            \"size\": \"33\",\n            \"title\": \"Super Slim Denim\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1335590_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Pants\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1335590_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"488509\",\n            \"productType\": \"mens > clothing > bottoms > pants\",\n            \"salePrice\": \"129.5\"\n        },\n        {\n            \"id\": \"0004398244\",\n            \"availability\": \"in stock\",\n            \"brand\": \"Club Monaco\",\n            \"color\": \"Currant\",\n            \"condition\": \"new\",\n            \"description\": \"The throwback. A vintage-inspired rollneck detail updates the wardrobe staple. In 100% cashmere.\",\n            \"gender\": \"Female\",\n            \"link\": \"/en/women-clothing-sweaters/cady-cashmere-sweater/0004398244.html\",\n            \"price\": \"169.5\",\n            \"size\": \"XS\",\n            \"title\": \"Cady Cashmere Sweater\",\n            \"additionalImageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1352353_lifestyle?$rl_392_pdp$\",\n            \"ageGroup\": \"\",\n            \"googleProductCategory\": \"Apparel & Accessories > Clothing > Shirts & Tops\",\n            \"imageLink\": \"http://cm.rlmedia.io/is/image/PoloGSI/s7-1352355_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"510416\",\n            \"productType\": \"womens > clothing > tops > sweaters\",\n            \"salePrice\": \"169.5\"\n        }\n    ]\n}\n"
+            },
+            "widget": {
+                "label": "JSON Products Input",
+                "type": "JsonCodeField",
+                "description": "Manually Add product data.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "maxItems",
+                "value": 20
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "IntegerField",
+                "description": "Maximum number of merch items to have in the slider.",
+                "label": "Maximum Number of Items"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "orientation",
+                "value": "horizontal"
+            },
+            "widget": {
+                "description": "Orientation of the slider.",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "horizontal",
+                        "label": "Horizontal - Left to Right"
+                    },
+                    {
+                        "name": "horizontal-rtl",
+                        "label": "Horizontal - Right to Left"
+                    },
+                    {
+                        "name": "vertical",
+                        "label": "Vertical"
+                    }
+                ],
+                "label": "Orientation"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "sliderTemplate",
+                "value": "<h2 id=\"mt-ymal\">You May Also Like</h2>\n<button data-prev-button></button>\n{{SLIDER}}\n<button data-next-button></button>"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "HtmlCodeField",
+                "description": "Include an HTML template to build the slider structure. Placeholder example: '{{slider}}'. Possible placeholders: slider, pagination. Optionally, add the attributes 'data-prev-button' and 'data-next-button' to add previous and next slide buttons. If optional arrow images are included, elements with the attribute 'data-prev-button' and 'data-next-button' are required for them to display.",
+                "label": "Slider Container Template"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "itemTemplate",
+                "value": "<a href=\"{{link}}\" data-pid=\"{{id}}\">\n  <div class=\"mt-product-image\">\n    <img src=\"{{imageLink}}\" alt=\"{{id}} - {{title}}\">\n  </div>\n</a>\n<div class=\"mt-text-container\">\n  <div>\n    <span class=\"mt-brand\">{{brand}}</span>\n  </div>\n  <div class=\"product-name\">\n    <a href=\"{{link}}\" class=\"mt-title\">{{title|truncate: 50}}</a>\n    </div>\n  <div class=\"product-pricing\">\n    <span class=\"product-standard-price\">{{price|priceFormat: $1,000.00}}</span>\n    <span class=\"product-sales-price\">{{salePrice|priceFormat: $1,000.00}}</span>\n  </div>\n</div>"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "HtmlCodeField",
+                "description": "Placeholder example: '{{price}}'. Possible placeholders include all product catalog fields. Examples: title, id, itemGroupId, price, salePrice, link, imageLink",
+                "label": "Slide Template"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "css",
+                "value": {
+                    "content": "/**\n * DEFAULT SLIDER STYLES\n * Edit at your own risk!\n */\n#MONETATE-ID {\n  position: relative;\n}\n\n#MONETATE-ID [data-slider-mask] {\n  overflow: hidden!important;\n  position: relative!important;\n  padding: 0!important;\n  margin: 0!important;\n}\n\n#MONETATE-ID li {\n  list-style: none;\n}\n\n#MONETATE-ID [data-slider] {\n  padding: 0!important;\n  margin: 0!important;\n  display: block;\n}\n\n#MONETATE-ID [data-slide] {\n  float: none;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider] {\n  white-space: nowrap!important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slide] {\n  display: inline-block!important;\n  white-space: normal;\n  vertical-align: top;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide] {\n  position: absolute;\n  top: 0;\n  opacity: 0;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide][data-slide-active] {\n  position: relative;\n  z-index: 1;\n  opacity: 1;\n}\n\n#MONETATE-ID [data-pagination-slide],\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button]{\n  cursor: pointer;\n  z-index: 1;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider-mask],\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slider-mask] {\n  touch-action: pan-y;\n}\n\n#MONETATE-ID [data-pagination-slide] * {\n  pointer-events: none;\n}\n\n/** ----END DEFAULT STYLES---- */\n\n\n/**\n * CUSTOM SLIDER STYLING\n */\n\n#MONETATE-ID {\n  text-align: center;\n  width: 100%;\n  margin-top: 2.1875rem;\n}\n\n#MONETATE-ID [data-pagination=\"thumbnails\"] [data-pagination-slide] {\n  border-radius: 0;\n  background: none;\n  width: 40px;\n  height: auto;\n}\n\n#MONETATE-ID [disabled] {\n  opacity: .35;\n  cursor: auto;\n  pointer-events: none;\n}\n\n#MONETATE-ID [data-pagination-slide] {\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  background: #000;\n  margin: 4px;\n  border-radius: 6px;\n  opacity: 0.5;\n}\n\n#MONETATE-ID [data-pagination-slide][data-slide-active] {\n  opacity: 1;\n}\n\n#MONETATE-ID [data-slide] > div {\n  padding: 0 12px;\n  height: 100%;\n}\n\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n  top: 45%;\n  position: absolute;\n  font-size: 25px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -o-user-select: none;\n  user-select: none;\n  padding: 0;\n  background: none;\n  color: #000;\n}\n\n#MONETATE-ID [data-prev-button] {\n  left: -4.4%;\n}\n\n#MONETATE-ID [data-next-button] {\n  right: -4.4%;\n}\n\n#MONETATE-ID [data-slider-mask] {\n  display: inline-block;\n  width: calc(100% + 10px);\n  margin-left: -5px !important;\n}\n\n#MONETATE-ID [data-slide] img {\n  max-height: 100%;\n  width: 100%;\n}\n\n#MONETATE-ID [data-slide] a {\n  text-decoration: none;\n}\n\n#MONETATE-ID [data-pagination*=\"dots\"] [data-pagination-slide] {\n  /* remove below for pagination numbers */\n  text-indent: -9999px;\n}\n\n#MONETATE-ID h2 {\n  font-family: freightdisp_prolight;\n  font-size: 26px;\n  letter-spacing: 0;\n  line-height: 30px;\n  margin-bottom: 30px;\n}\n\n#MONETATE-ID .mt-product-image {\n  position: relative;\n  margin-bottom: 1.25rem;\n}\n\n#MONETATE-ID .mt-text-container {\n  text-align: center;\n}\n\n#MONETATE-ID .mt-brand {\n  text-transform: uppercase;\n}\n\n#MONETATE-ID .product-name {\n  text-align: center !important;\n  font-size: 15px;\n}\n\n#MONETATE-ID .product-pricing {\n  margin: 1.125rem 0 0;\n}\n\n#MONETATE-ID .product-standard-price {\n  text-decoration: line-through;\n  color: #aaa;\n  font-size: 15px;\n}\n\n#MONETATE-ID .product-sales-price {\n  font-size: 15px;\n  color: #d22630;\n}\n\n#MONETATE-ID [data-missing-keys*=\"salePrice\"] .product-standard-price {\n  color: #000;\n  text-decoration: none;\n}\n\n#MONETATE-ID [data-prev-button], \n#MONETATE-ID [data-next-button] {\n  border: none;\n  outline: 0;\n  position: absolute;\n  top: 39.5%;\n  width: 1.5625rem;\n  height: 1.5625rem;\n  background: inherit;\n  text-decoration: none;\n  text-align: center;\n  z-index: 1;\n  font-family: cm-icon;\n  font-size: 25px;\n}\n\n#MONETATE-ID [data-prev-button]:after {\n  content: \"\";\n}\n\n#MONETATE-ID [data-next-button]:after {\n  content: \"\";\n}\n\n@media only screen and (max-width: 959px) {\n  #MONETATE-ID {\n    overflow: hidden;\n  }\n  #MONETATE-ID [data-slide] > div {\n    padding: 0 5px;\n  }\n  #MONETATE-ID [data-prev-button] {\n    display: none;\n  }\n  #MONETATE-ID [data-next-button] {\n    display: none;\n  }\n}\n\n@media screen and (min-width: 768px) {\n  #MONETATE-ID [data-slider-mask] {\n    width: 100%;\n    margin-left: 0 !important;\n  }\n  #MONETATE-ID {\n    margin: auto;\n    max-width: 41.125rem;\n  }\n}\n\n@media screen and (min-width: 960px) {\n  #MONETATE-ID {\n    max-width: 53.5rem;\n    margin-top: 5.125rem;\n  }\n  #MONETATE-ID .mt-product-image {\n    margin-bottom: 1.8125rem;\n  }\n}\n\n@media screen and (min-width: 1180px) {\n  #MONETATE-ID {\n    max-width: 63rem;\n  }\n}\n\n@media only screen and (width: 960px) {\n  #MONETATE-ID {\n    max-width: 52.325rem !important;\n  }\n  #MONETATE-ID [data-slide] > div {\n    padding: 0 5px !important;\n  }\n}\n\n#ymal {\n  display: none;\n}",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "label": "CSS",
+                "type": "CSSCodeField",
+                "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "json",
+                "name": "settings",
+                "value": "{\n  \"autoRotateDuration\": 0,\n  \"breakpoints\": {\n    \"Infinity\": {\n        \"visible\": 3\n    },\n    \"601\": {\n      \"visible\": 1,\n      \"peekRight\": 0.75\n    }\n  },\n  \"gridSize\": 1,\n  \"infiniteSlide\": false,\n  \"pagination\": \"none\",\n  \"pauseOnHover\": false,\n  \"slideIncrement\": \"page\",\n  \"stopOnInteraction\": false,\n  \"transitionAnimation\": \"push\",\n  \"transitionDuration\": 250\n}"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "JsonCodeField",
+                "description": "Settings object.",
+                "label": "Slides Visible"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_prev",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "RawImageCreative",
+                "description": "Previous button creative. Must include element with the attribute [data-prev-button] Slider Container Template.",
+                "label": "Previous Button Creative"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_next",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "RawImageCreative",
+                "description": "Next button creative. Must include element with the attribute [data-next-button] Slider Container Template.",
+                "label": "Next Button Creative"
+            },
+            "required": false
+        }
+    ],
+    "masks": [],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [],
+        "required": []
+    },
+    "integration_type": "js-tag",
+    "manage_impressions": false
+}

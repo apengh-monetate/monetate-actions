@@ -1,0 +1,96 @@
+.mt_hero {
+  overflow: hidden;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero {
+    height: 26.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mt_hero {
+    height: 39.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .mt_hero {
+    height: 32.5rem;
+  }
+}
+
+.mt_hero__image {
+  width: 100%;
+}
+
+.mt_hero__text {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: calc(100% - 40px);
+}
+
+@media screen and (min-width: 768px) {
+  .mt_hero__text {
+    top: 45%;
+  }
+}
+
+.mt_hero__heading {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mt_hero__subheading {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mt_hero__button {
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .07rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  min-width: 3rem;
+  padding: .75rem 1.5rem;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+.mt_hero__button:hover, .mt_hero__button:active, .mt_hero__button:focus {
+  background-color: #cccccc;
+  color: #000;
+}
+
+@media screen and (min-width: 1024px) {
+  #site-search {
+    top: 48.25rem !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #site-search {
+    top: 41.75rem !important;
+  }
+}

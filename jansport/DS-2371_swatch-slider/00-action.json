@@ -1,0 +1,389 @@
+{
+  "id": 460617,
+  "title": "Color Swatch Slider (Index/Search)",
+  "description": "Convert the color swatchs to a slider for each product on index/search pages.",
+  "op": "indexSwatchesSlider",
+  "slot": "none",
+  "slot_type": "none",
+  "category": "other",
+  "subcategory": "Index/Search",
+  "action_events": [
+    "op_impression"
+  ],
+  "inputs": [
+    {
+      "input": {
+        "type": "str",
+        "name": "template",
+        "value": "<button data-prev-button></button>\n{{SLIDER}}\n{{PAGINATION}}\n<button data-next-button></button>"
+      },
+      "widget": {
+        "label": "Slider Container Template",
+        "type": "HtmlCodeField",
+        "description": "Include an HTML template to build the slider structure. Placeholder example: '{{slider}}'. Possible placeholders: slider, pagination. Optionally, add the attributes 'data-prev-button' and 'data-next-button' to add previous and next slide buttons. If optional arrow images are included, elements with the attribute 'data-prev-button' and 'data-next-button' are required for them to display.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "flexible_creative",
+        "name": "css",
+        "value": {
+          "content": "/* ===================================================== */\n/* DEFAULT SLIDER STYLES\n/* Edit at your own risk!\n/* ===================================================== */\n#MONETATE-ID {\n  position: relative;\n}\n\n#MONETATE-ID li {\n  list-style: none;\n}\n\n#MONETATE-ID [data-slider-mask] {\n  margin: 0 !important;\n  overflow: hidden !important;\n  padding: 0 !important;\n  position: relative !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider-mask],\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slider-mask] {\n  -ms-touch-action: pan-y;\n      touch-action: pan-y;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  -ms-touch-action: pan-x;\n      touch-action: pan-x;\n}\n\n#MONETATE-ID [data-slider] {\n  display: block;\n  margin: 0 !important;\n  padding: 0 !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider] {\n  white-space: nowrap !important;\n}\n\n#MONETATE-ID [data-slide] {\n  float: none;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slide] {\n  display: inline-block !important;\n  vertical-align: top;\n  white-space: normal;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slide] {\n  display: block !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide] {\n  opacity: 0;\n  position: absolute;\n  top: 0;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide][data-slide-active] {\n  opacity: 1;\n  position: relative;\n  z-index: 1;\n}\n\n#MONETATE-ID [data-pagination-slide],\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n  cursor: pointer;\n  z-index: 1;\n}\n\n#MONETATE-ID [data-pagination-slide] * {\n  pointer-events: none;\n}\n\n/* ===================================================== */\n/* CUSTOM SLIDER STYES\n/* ===================================================== */\n#MONETATE-ID {\n  font-size: 0;\n  line-height: 0;\n  margin: 0 auto;\n  text-align: center;\n}\n\n#MONETATE-ID [data-slider-mask] {\n  display: inline-block;\n  width: 100%;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  height: 400px !important;\n}\n\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -o-user-select: none;\n  -webkit-user-select: none;\n  background: none;\n  color: #000;\n  font-size: 20px;\n  height: 20px;\n  margin: 0;\n  padding: 0;\n  position: absolute;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n  user-select: none;\n  width: 20px;\n}\n\n#MONETATE-ID [data-prev-button] {\n  left: -20px;\n}\n\n#MONETATE-ID [data-next-button] {\n  right: -20px;\n}\n\n#MONETATE-ID [data-pagination=\"thumbnails\"] [data-pagination-slide] {\n  background: none;\n  border-radius: 0;\n  height: auto;\n  width: 40px;\n}\n\n#MONETATE-ID [disabled] {\n  opacity: 0.5;\n}\n\n#MONETATE-ID [data-pagination-slide] {\n  background: #000;\n  border-radius: 6px;\n  display: inline-block;\n  height: 12px;\n  margin: 4px;\n  opacity: 0.5;\n  width: 12px;\n}\n\n#MONETATE-ID [data-pagination-slide][data-slide-active] {\n  opacity: 1;\n}\n\n#MONETATE-ID [data-pagination*=\"dots\"] [data-pagination-slide] {\n  /* remove below for pagination numbers */\n  text-indent: -9999px;\n}\n\n#MONETATE-ID [data-slide] img {\n  max-width: 100%;\n}\n\n#MONETATE-ID [data-slide] a {\n  text-decoration: none;\n}\n\n#MONETATE-ID [data-slide] .swatch.swatch-js {\n  text-align: center !important;\n  width: 100% !important;\n}\n\n.color-swatches #MONETATE-ID {\n  width: 85%;\n}\n\n@media screen and (max-width: 639px) {\n  .color-swatches #MONETATE-ID {\n    width: 75%;\n  }\n}\n\n#catalog-container .catalog-results-small-set .product-block .info .color-swatches #MONETATE-ID {\n  width: 81%;\n}\n\n@media screen and (max-width: 639px) {\n  #catalog-container .catalog-results-small-set .product-block .info .color-swatches #MONETATE-ID {\n    width: 75%;\n  }\n}\n\n.color-swatches.color-swatches-js.has-show-more {\n  height: auto !important;\n  width: 100% !important;\n}\n\n.color-swatches.color-swatches-js.has-show-more .swatches-container,\n.color-swatches.color-swatches-js.has-show-more .more-swatches {\n  display: none;\n}\n",
+          "discriminator": "content",
+          "ref": null,
+          "type": "css"
+        }
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "CSSCodeField",
+        "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+        "label": "CSS"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "orientation",
+        "value": "horizontal"
+      },
+      "widget": {
+        "label": "Orientation",
+        "options": [
+          {
+            "name": "horizontal",
+            "label": "Horizontal - Left to Right"
+          },
+          {
+            "name": "horizontal-rtl",
+            "label": "Horizontal - Right to Left"
+          },
+          {
+            "name": "vertical",
+            "label": "Vertical"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Orientation of the slider.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "infiniteSlide",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Should this slide infinitely or stop at the end of the slider?",
+        "label": "Infinite Slide"
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "json",
+        "name": "slidesVisible",
+        "value": "{\n    \"Infinity\": {\n        \"visible\": 6\n    },\n    \"640\": {\n        \"visible\": 4\n    }\n}"
+      },
+      "widget": {
+        "label": "Slides Visible",
+        "type": "JsonCodeField",
+        "description": "Slides visible by browser width. 'Infinity' breakpoint is required. Example: {\"Infinity\": {\"peekLeft\": 0.5, \"visible\": 5, \"peekRight\": 0.5}}",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "slideInc",
+        "value": "page"
+      },
+      "widget": {
+        "label": "Slide By Increment",
+        "options": [
+          {
+            "name": "page",
+            "label": "Page"
+          },
+          {
+            "name": "single",
+            "label": "Single"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Number of items to slide on navigation button click.",
+        "action_visible": true
+      },
+      "required": true
+    },
+    {
+      "input": {
+        "type": "raw_img_creative",
+        "name": "opt_prev",
+        "value": {
+          "discriminator": "raw_img_creative",
+          "dyntexts": [],
+          "creative": {
+            "last_updated": "2019-11-14T19:16:54",
+            "tags": {
+              "builtin": [
+                "image"
+              ],
+              "custom": []
+            },
+            "height": 50,
+            "generated": false,
+            "id": 1456702,
+            "archived": false,
+            "name": "arrow-prev.png",
+            "extension": ".png",
+            "sha": "3fe3394fd1f13cd8472dfe085f737b14ab574d50",
+            "ref": "392/1456702.png",
+            "notes": "",
+            "width": 50,
+            "image_url": "https://int-apengh-1.monetate.org/img/1/392/1456702.png",
+            "type": "image"
+          }
+        }
+      },
+      "widget": {
+        "label": "Previous Button Creative",
+        "type": "RawImageCreative",
+        "description": "Previous button creative. Must include element with the attribute [data-prev-button] Slider Container Template.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "raw_img_creative",
+        "name": "opt_next",
+        "value": {
+          "discriminator": "raw_img_creative",
+          "dyntexts": [],
+          "creative": {
+            "last_updated": "2019-11-14T19:16:54",
+            "tags": {
+              "builtin": [
+                "image"
+              ],
+              "custom": []
+            },
+            "height": 50,
+            "generated": false,
+            "id": 1456703,
+            "archived": false,
+            "name": "arrow-next.png",
+            "extension": ".png",
+            "sha": "07be9e605461d2d4c78bd3496d76cc1665610163",
+            "ref": "392/1456703.png",
+            "notes": "",
+            "width": 50,
+            "image_url": "https://int-apengh-1.monetate.org/img/1/392/1456703.png",
+            "type": "image"
+          }
+        }
+      },
+      "widget": {
+        "label": "Next Button Creative",
+        "type": "RawImageCreative",
+        "description": "Next button creative. Must include element with the attribute [data-next-button] Slider Container Template.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_gridSizeMobile",
+        "value": 2
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "How many rows (horizontal) or columns (vertical) should the slider have on mobile?",
+        "label": "Mobile Rows/Columns"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_gridSizeDesktop",
+        "value": 1
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "How many rows (horizontal) or columns (vertical) should the slider have on desktop?",
+        "label": "Desktop Rows/Columns"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_gridSizeBreakpoint",
+        "value": 768
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "IntegerField",
+        "description": "Breakpoint (in pixels) for Mobile/Destkop Rows/Columns",
+        "label": "Breakpoint for Mobile/Destkop Rows/Columns"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_autoRotateDuration",
+        "value": null
+      },
+      "widget": {
+        "label": "Auto-Rotate Duration",
+        "type": "IntegerField",
+        "description": "Number of milliseconds before auto-rotating to the next slide. Leave blank or use 0 to prevent auto-rotation.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_pauseOnHover",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Should auto-rotation pause on slider hover?",
+        "label": "Pause Auto-rotation on Hover"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "bool",
+        "name": "opt_stopOnInteraction",
+        "value": false
+      },
+      "widget": {
+        "action_visible": true,
+        "type": "BooleanField",
+        "description": "Should auto-rotation stop on slider interaction?",
+        "label": "Stop Auto-rotation on Interaction"
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "int",
+        "name": "opt_transitionDuration",
+        "value": 250
+      },
+      "widget": {
+        "label": "Animation Transition Duration",
+        "type": "IntegerField",
+        "description": "Duration in milliseconds of slide animation. Leave blank or use 0 to prevent animations.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_transitionAnimation",
+        "value": "push"
+      },
+      "widget": {
+        "label": "Transition Animation",
+        "options": [
+          {
+            "name": "push",
+            "label": "Push"
+          },
+          {
+            "name": "fade",
+            "label": "Fade"
+          },
+          {
+            "name": "none",
+            "label": "None"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Type of slide transition animation to use.",
+        "action_visible": true
+      },
+      "required": false
+    },
+    {
+      "input": {
+        "type": "str",
+        "name": "opt_pagination",
+        "value": "none"
+      },
+      "widget": {
+        "label": "Pagination",
+        "options": [
+          {
+            "name": "dots",
+            "label": "Dots"
+          },
+          {
+            "name": "dots-page",
+            "label": "Dots - Page"
+          },
+          {
+            "name": "thumbnails",
+            "label": "Slide thumbnails"
+          },
+          {
+            "name": "none",
+            "label": "None"
+          }
+        ],
+        "type": "StringSelectField",
+        "description": "Type of slide pagination to use.",
+        "action_visible": true
+      },
+      "required": false
+    }
+  ],
+  "masks": [],
+  "rule_operator": "and",
+  "rules": {
+    "builtin": [
+      {
+        "values": [
+          "index",
+          "search"
+        ],
+        "id": 247469,
+        "rule_tmpl": {
+          "widget": "itemlist",
+          "description": null,
+          "is_included": true,
+          "verb": "=",
+          "label": "Page type",
+          "rule_name": "page_type",
+          "rule_op": "equal",
+          "value_type": "string",
+          "filter_name": "page_filter"
+        }
+      }
+    ],
+    "required": []
+  },
+  "integration_type": "js-tag",
+  "manage_impressions": false
+}

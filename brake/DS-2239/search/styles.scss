@@ -1,0 +1,176 @@
+$monetate-id: #MONETATE-ID;
+// $monetate-id: #mt-grid-3292663-0;
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1240px;
+
+
+/* ===================================================== */
+/* Override some existing CSS
+/* ===================================================== */
+
+// ------------------------------------------------------------------
+// Grid
+// ------------------------------------------------------------------
+.product__listing.product__grid {
+    margin-left: -3.33333% !important;
+    margin-right: -3.33333% !important;
+    @media screen and (min-width: $breakpoint-md) {
+        margin-right: -2.1%;
+        margin-right: -2.1%;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        margin-left: -1.06% !important;
+        margin-right: -1.06% !important;
+    }
+
+    // ------------------------------------------------------------------
+    // Items
+    // ------------------------------------------------------------------
+    .product-item--noborder {
+        clear: none !important;
+        margin-left: 3.33333% !important;
+        margin-right: 3.33333% !important;
+        width: 43.33333% !important;
+        @media screen and (min-width: $breakpoint-md) {
+            margin-left: 2.1% !important;
+            margin-right: 2.1% !important;
+            width: 29.13333% !important;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            margin-left: 1.06% !important;
+            margin-right: 1.06% !important;
+            width: 22.88% !important;
+        }
+    }
+}
+
+
+.mt_grid-items {
+    &--one {
+        margin-left: 3.33333% !important;
+        margin-right: 3.33333% !important;
+        width: 43.33333% !important;
+        @media screen and (min-width: $breakpoint-md) {
+            margin-left: 2.1% !important;
+            margin-right: 2.1% !important;
+            width: 29.13333% !important;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            margin-left: 1.06% !important;
+            margin-right: 1.06% !important;
+            width: 22.88% !important;
+        }
+    }
+    &--two {
+        width: 100%;
+        @media screen and (min-width: $breakpoint-md) {
+            width: 66.66667%;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            width: 50%;
+        }
+
+        .mt-merch-item {
+            margin-left: 3.33333%;
+            margin-right: 3.33333%;
+            width: 43.33333%;
+        }
+    }
+    &--three {
+        width: 100%;
+        @media screen and (min-width: $breakpoint-lg) {
+            width: 75%;
+        }
+
+        .mt-merch-item {
+            margin-left: 3.33333%;
+            margin-right: 3.33333%;
+            width: 43.33333%;
+            @media screen and (min-width: $breakpoint-md) {
+                margin-left: 2.1% !important;
+                margin-right: 2.1% !important;
+                width: 29.13333% !important;
+            }
+            &:nth-child(3) {
+                @media screen and (max-width: ($breakpoint-md - 1)) {
+                    display: none;
+                }
+            }
+        }
+    }
+    &--four {
+        width: 100%;
+        .mt-merch-item {
+            margin-left: 3.33333%;
+            margin-right: 3.33333%;
+            width: 43.33333%;
+            @media screen and (min-width: $breakpoint-md) {
+                margin-left: 2.1% !important;
+                margin-right: 2.1% !important;
+                width: 29.13333% !important;
+            }
+            @media screen and (min-width: $breakpoint-lg) {
+                margin-left: 1.06% !important;
+                margin-right: 1.06% !important;
+                width: 22.88% !important;
+            }
+            &:nth-child(4) {
+                @media screen and (min-width: $breakpoint-md) and (max-width: ($breakpoint-lg - 1)) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+#{$monetate-id} {
+    box-sizing: border-box;
+
+    & * {
+        box-sizing: border-box;
+    }
+
+
+    [mt-data-grid] {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .mt-merch-item {
+        padding-bottom: 20px;
+        padding-top: 23px;
+    }
+
+
+    .mt-temperature {
+        &.Ambient {
+            &::after {
+                content: "A";
+            }
+        }
+        &.Chilled {
+            &::after {
+                content: "C";
+            }
+        }
+        &.Frozen {
+            &::after {
+                content: "F";
+            }
+        }
+    }
+
+    [data-monetate-show] {
+        display: none;
+    }
+
+    [data-monetate-show="TRUE"],
+    [data-monetate-show="1"] {
+        display: inline;
+    }
+}

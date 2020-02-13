@@ -1,0 +1,106 @@
+<div class="product-item--border">
+    <div class="product-item__icons product-item__icons--top">
+        <div class="item-icons item-icons--promo item-icons--first hidden js-productPromoIcon" data-code="{{id}}">
+            <span class="icon icon-promo-alt icon-promo-alt--red">
+                <span class="path1"></span>
+                <span class="path2"></span>
+            </span>
+        </div>
+        <div class="item-icons item-icons--user-actions text-right js-userActions">
+            <div class="add-to-favourites js-displayWishlist" data-product-id="{{id}}">
+                <a href="/sign-in">
+                    <span class=" icon icon-Heart js-wishlistIcon" title="Add to favourites"></span>
+                </a>
+            </div>
+            <div class="js-productWishlistHolder product-wishlist-holder "></div>
+        </div>
+    </div>
+
+    <!-- Product Thumbnail -->
+    <a class="product-item__thumb" href="{{link}}" title="{{title}}">
+        <span class="product-item__qty-overlay"><span class="js-qtyOverlayValue">{0}</span> in basket</span>
+        <picture class="product-item__picture">
+            <source data-size="desktop" srcset="{{imageLink}}?img404=image-not-available&amp;$plp-desktop$" media="(min-width: 1240px)" />
+            <source data-size="tablet" srcset="{{imageLink}}?img404=image-not-available&amp;$plp-tablet$" media="(min-width: 768px)" />
+            <source data-size="mobile" srcset="{{imageLink}}?img404=image-not-available&amp;$plp-mobile$" />
+            <img class="product-item__image product-image js-fallbackImage" src="{{imageLink}}?img404=image-not-available&amp;$plp-desktop$" alt="{{title}}" title="{{title}}" />
+        </picture>
+    </a>
+
+    <!-- Use following to get the alternatives flag false -->
+    <div class="product-item__info">
+        <div class="product-item__code">
+            <a href="{{link}}">
+                <span class="mt-temperature {{Temperature}}"></span>&nbsp;{{id}}
+            </a>
+        </div>
+        <div class="product-item__advice-icons text-right">
+            <span title="MSC" data-monetate-show="{{MSC}}">
+                <img class="product-item__advice-icons-img" src="https://brakes.a.bigcontent.io/v1/static/icon-E62" alt="icon-E62">
+            </span>
+            <span title="Freedom Food" data-monetate-show="{{FreedomFood}}">
+                <img class="product-item__advice-icons-img" src="https://brakes.a.bigcontent.io/v1/static/icon-E60" alt="icon-E60">
+            </span>
+            <span title="Net Price" data-monetate-show="{{NettPrices}}">
+				<img class="product-item__advice-icons-img" src="https://brakes.a.bigcontent.io/v1/static/icon-E24" alt="icon-E24">
+			</span>
+            <span title="Suitable for Vegetarians" data-monetate-show="{{SuitableForVegetarians}}">
+                <img class="product-item__advice-icons-img" src="https://brakes.a.bigcontent.io/v1/static/icon-E55" alt="icon-E55">
+            </span>
+            <span title="Red Tractor" data-monetate-show="{{RedTractor}}">
+                <img class="product-item__advice-icons-img" src="https://brakes.a.bigcontent.io/v1/static/icon-E59" alt="icon-E59">
+            </span>
+            <span title="Provenance\ Country Of Origin - British" data-monetate-show="{{CountryOfOriginBritish}}">
+                <img class="product-item__advice-icons-img" src="https://brakes.a.bigcontent.io/v1/static/icon-PP19" alt="icon-PP19">
+            </span>
+            <span title="Provenance\ Country Of Origin - Scottish" data-monetate-show="{{CountryOfOriginScottish}}">
+                <img class="product-item__advice-icons-img" src="https://brakes.a.bigcontent.io/v1/static/icon-PP15" alt="icon-PP15">
+            </span>
+        </div>
+    </div>
+
+    <!-- Product Title -->
+    <a class="product-item__name product-name" title="{{title}}" href="{{link}}">{{title}}</a>
+
+    <!-- Product Details -->
+    <div class="product-item__qty">&nbsp;<!-- Full case quantity: 1 --></div>
+    <div class="product-item__price js-productItemPrice ">
+        <div class="product-price product-price--current-price">
+            <span class="js-productPrice product-price__value product-price__value--current" data-price="{{price}}" data-productid="{{id}}" data-currency-symbol="£">
+                <span class="js-productPrice" data-price="{{price}}" data-currency-symbol="£">£{{price}}</span>
+            </span>
+            <span class="js-productPrice product-price__price-each" data-price="£0.99{{UnitPriceDescriptor}}" data-productid="{{id}}" data-currency-symbol="£" data-price-descriptor="{{UnitPriceDescriptor}}">£{{pricePerUnit}}{{UnitPriceDescriptor}}</span>
+        </div>
+    </div>
+    <div class="product-item__size">Pack size: {{PackSize}}</div>
+
+    <!-- Add to Cart -->
+    <div class="addtocart">
+        <div class="actions-container-for-ProductGridComponent">
+            <div class="ProductGridComponent-ListPickUpInStoreAction" data-index="1"></div>
+            <div class="ProductGridComponent-ListAddToCartAction" data-index="2">
+                <input type="hidden" id="cartLargeQuantity" value="100">
+                <input type="hidden" id="cartMaximumQuantity" value="999">
+                <input type="hidden" value="false" class="js-cartViewPromotion">
+                <form id="addToCartForm{{id}}" data-id="{{id}}" class="cart__add add_to_cart_form js-addToCartForm " action="/cart/add" method="post">
+                    <input type="hidden" name="productCodePost" value="{{id}}">
+                    <input type="hidden" name="entryNumber" value="">
+                    <input type="hidden" name="productNamePost" value="{{title}}">
+                    <input type="hidden" name="productPostPrice" value="{{price}}">
+                    <input type="hidden" name="qty" class="js-productCartQty" value="0">
+                    <input type="hidden" name="productCartQty" class="js-productCartQty" value="0">
+                    <div class="js-productQtyUpdate quantity-update cart__quantity col-xs-12 col-sm-12">
+                        <button type="button" class="btn btn-success quantity-update__btn quantity-update__btn--minus icon icon-minus js-qtyBtn" data-action="remove" aria-label="Remove from cart"></button>
+                        <input class="quantity-update__input js-productQtyInput" type="number" inputmode="numeric" aria-label="Quantity" value="1" min="0" max="1000">
+                        <button type="button" class="btn btn-success quantity-update__btn icon quantity-update__btn--plus icon-plus js-qtyBtn" data-action="add" aria-label="Add to cart"></button>
+                    </div>
+                    <button type="button" class="col-sm-12 col-xs-12 btn btn-primary btn-block js-enable-btn js-addToCartBtn js-qtyChangeBtn cart__add-button" data-action="add" data-product-code="{{id}}">Add</button>
+                    <div>
+                        <input type="hidden" name="CSRFToken" value="">
+                    </div>
+                </form>
+                <form id="configureForm{{id}}" class="configure_form" action="{{link}}/configuratorPage/" method="get"></form>
+            </div>
+        </div>
+    </div>
+</div>

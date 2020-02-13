@@ -1,0 +1,243 @@
+{
+    "id": 458242,
+    "title": "Intelligent Recommendation Slider (UK) - Manual",
+    "description": "Inserts a slider with intelligent recommendation items.",
+    "op": "recommendationSlider",
+    "slot": "none",
+    "slot_type": "none",
+    "category": "endcap",
+    "subcategory": "other",
+    "action_events": [
+        "op_click",
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "str",
+                "name": "selector",
+                "value": "#footer"
+            },
+            "widget": {
+                "label": "Insert Selector",
+                "type": "CssSelectorField",
+                "description": "Selector to find the node where the slider will be inserted.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "imeth",
+                "value": "before"
+            },
+            "widget": {
+                "label": "Insert Method",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "type": "StringSelectField",
+                "description": "Method to use when inserting the slider relative to the selected node.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "insertOptions",
+                "value": "RecheckForElement"
+            },
+            "widget": {
+                "description": "RecheckForElement: If the selector is not found, wait up to 3 seconds for it to show up. SelectMultipleElements: If the selector matches multiple places, do you want to insert at each of them?",
+                "label": "Insert Options",
+                "action_visible": true,
+                "hiddenMenu": true,
+                "allIsValid": true,
+                "type": "CheckboxArrayAsString",
+                "options": [
+                    "RecheckForElement",
+                    "SelectMultipleElements"
+                ]
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "json",
+                "name": "json",
+                "value": "{\n    \"products_data\": [\n        {\n            \"availability\": \"In Stock\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"description\": \"In soft cotton jersey, this slightly fitted T-shirt combines a rugby-inspired shield graphic and a banner that nods to Ralph Lauren&#39;s founding year.\",\n            \"gender\": \"Male\",\n            \"id\": \"3615735779014\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1330283_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"480962\",\n            \"link\": \"/en/custom-slim-fit-graphic-tee-3615735779014.html\",\n            \"price\": \"69\",\n            \"productType\": \"MEN>Clothing>T-Shirts\",\n            \"retailerId\": \"165\",\n            \"salePrice\": \"34.5\",\n            \"schemaId\": \"14460\",\n            \"title\": \"Custom Slim Fit Graphic Tee\"\n        },\n        {\n            \"availability\": \"In Stock\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"description\": \"This striped shirt merges lightweight cotton poplin and a club collar for a smart look that&#39;s quintessential Polo.\",\n            \"gender\": \"Male\",\n            \"id\": \"3615738307900\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1337374_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"489643\",\n            \"link\": \"/en/custom-fit-striped-shirt-3615738307900.html\",\n            \"price\": \"129\",\n            \"productType\": \"Sale>Men>Shop All\",\n            \"retailerId\": \"165\",\n            \"salePrice\": \"64.5\",\n            \"schemaId\": \"14460\",\n            \"title\": \"Custom Fit Striped Shirt\"\n        },\n        {\n            \"availability\": \"In Stock\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"description\": \"This medium-wash cotton denim cap features Ralph Lauren&#39;s iconic Polo Sport logo at the front.\",\n            \"gender\": \"Male\",\n            \"id\": \"3615735718495\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1347473_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"503291\",\n            \"link\": \"/en/limited-edition-denim-cap-3615735718495.html\",\n            \"price\": \"59\",\n            \"productType\": \"MEN>Accessories>Scarves, Hats & Gloves>Caps\",\n            \"retailerId\": \"165\",\n            \"schemaId\": \"14460\",\n            \"title\": \"Limited-Edition Denim Cap\"\n        },\n        {\n            \"availability\": \"out of stock\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"description\": \"With its weathered &quot;U.S.A. Athletic Team&quot; print and a shield patch, these drawstring shorts nod to vintage American sportswear.\",\n            \"gender\": \"Male\",\n            \"id\": \"3615735771452\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1329960_lifestyle?$rl_470_grid$\",\n            \"itemGroupId\": \"480612\",\n            \"link\": \"/en/cotton-blend-fleece-short-3615735771452.html\",\n            \"price\": \"109\",\n            \"productType\": \"MEN>Clothing>Shorts\",\n            \"retailerId\": \"165\",\n            \"salePrice\": \"54.5\",\n            \"schemaId\": \"14460\",\n            \"title\": \"Cotton-Blend-Fleece Short\"\n        },\n        {\n            \"price\": \"79.00\",\n            \"id\": \"3603750512389\",\n            \"title\": \"Custom-Fit Mesh Polo Shirt\",\n            \"link\": \"/en/custom-fit-mesh-polo-shirt-3603750512389.html\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"availability\": \"out of stock\",\n            \"description\": \"This short-sleeved polo shirt is made from soft cotton mesh and tailored for a trim, modern fit.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-309470_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Clothing>Polo Shirts\",\n            \"itemGroupId\": \"10827\"\n        },\n        {\n            \"price\": \"125.00\",\n            \"id\": \"3603755579868\",\n            \"title\": \"Cotton-Blend-Fleece Hoodie\",\n            \"link\": \"/en/cotton-blend-fleece-hoodie-3603755579868.html\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"availability\": \"In Stock\",\n            \"description\": \"Whether you&#39;re off to the gym or running weekend errands, this hoodie is an easy toss-and-go layer thanks to its washed cotton-blend fleece.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1312844_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Clothing>Hoodies & Sweatshirts\",\n            \"itemGroupId\": \"458755\"\n        },\n        {\n            \"price\": \"29.95\",\n            \"id\": \"3603758963978\",\n            \"title\": \"Dress Trouser Sock 3-Pack\",\n            \"link\": \"/en/dress-trouser-sock-3-pack-3603758963978.html\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"availability\": \"out of stock\",\n            \"description\": \"A stretch cotton blend and our signature embroidered pony make this three-pack of socks an easy choice for pairing with your workweek looks.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1269476_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Accessories>Underwear & Socks>Socks\",\n            \"itemGroupId\": \"404088\"\n        },\n        {\n            \"price\": \"825.00\",\n            \"id\": \"3607990309907\",\n            \"title\": \"Dalvin Calfskin Oxford\",\n            \"link\": \"/en/dalvin-calfskin-oxford-3607990309907.html\",\n            \"brand\": \"Purple Label\",\n            \"availability\": \"out of stock\",\n            \"description\": \"True to our dedication to craftsmanship, this streamlined men&#39;s oxford is constructed by artisans in Italy from calfskin that is hand-burnished to achieve a rich depth of colour.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1183683_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Shoes>Formal Shoes\",\n            \"itemGroupId\": \"409233\"\n        },\n        {\n            \"price\": \"770.00\",\n            \"id\": \"3607992166065\",\n            \"title\": \"Chalmers Calfskin Penny Loafer\",\n            \"link\": \"/en/chalmers-calfskin-penny-loafer-3607992166065.html\",\n            \"brand\": \"Purple Label\",\n            \"availability\": \"out of stock\",\n            \"description\": \"Created by skilled artisans in Italy from burnished calfskin, the Chalmers penny loafer is a refined style that offers long-lasting comfort. The soft rounded toe is constructed from the bottom up and sewn by hand, a time-consuming process that results in an ultra-flexible shoe.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1183691_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Shoes>Casual Shoes\",\n            \"itemGroupId\": \"312603\"\n        },\n        {\n            \"price\": \"45.00\",\n            \"id\": \"3607993823387\",\n            \"title\": \"Custom Slim Fit Cotton T-shirt\",\n            \"link\": \"/en/custom-slim-fit-cotton-tshirt-3607993823387.html\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"availability\": \"out of stock\",\n            \"description\": \"A trim silhouette and our signature embroidered pony give this classic crewneck T-shirt a fresh update.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-312141_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Clothing>T-Shirts\",\n            \"itemGroupId\": \"357586\"\n        },\n        {\n            \"price\": \"85.00\",\n            \"id\": \"3607994529394\",\n            \"title\": \"Reversible Leather Belt\",\n            \"link\": \"/en/reversible-leather-belt-3607994529394.html\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"availability\": \"out of stock\",\n            \"description\": \"This sleek reversible belt is crafted from smooth saddle leather, and features one black side and one brown side for added versatility. It&#39;s a tried-and-true essential for any man&#39;s office wardrobe.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-305834_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Accessories>Belts & Braces\",\n            \"itemGroupId\": \"72864\"\n        },\n        {\n            \"price\": \"195.00\",\n            \"id\": \"3607995093832\",\n            \"title\": \"Montgomery Cocktail Shaker\",\n            \"link\": \"/en/montgomery-cocktail-shaker-3607995093832.html\",\n            \"brand\": \"Ralph Lauren Home\",\n            \"availability\": \"In Stock\",\n            \"description\": \"This sophisticated cocktail shaker is designed with sleek horizontal lines around its chic cylindrical silhouette.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1054694_lifestyle?$rl_470_grid$\",\n            \"productType\": \"HOME>Dining & Entertainment>Barware & Accessories\",\n            \"itemGroupId\": \"183424\"\n        },\n        {\n            \"price\": \"109.00\",\n            \"id\": \"3607997210558\",\n            \"title\": \"Slim Fit Denim Sport Shirt\",\n            \"link\": \"/en/slim-fit-denim-shirt-3607997210558.html\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"availability\": \"In Stock\",\n            \"description\": \"Cut from rugged denim and tailored for a modern slim fit, this sport shirt is a versatile go-to for off-duty days. Finished with our multicoloured signature embroidered pony for added Polo style.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1181837_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Clothing>Casual Shirts\",\n            \"itemGroupId\": \"310609\"\n        },\n        {\n            \"price\": \"59.00\",\n            \"id\": \"3607997677368\",\n            \"title\": \"Reversible Leather Belt\",\n            \"link\": \"/en/reversible-leather-belt-3607997677368.html\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"availability\": \"out of stock\",\n            \"description\": \"Our signature embroidered pony is debossed at the tip of this reversible leather belt, adding a subtle heritage-inspired touch to this wardrobe essential. Features one black side and one brown side for added versatility.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1022637_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Accessories>Belts & Braces\",\n            \"itemGroupId\": \"153389\"\n        },\n        {\n            \"price\": \"27.00\",\n            \"id\": \"3607997921140\",\n            \"title\": \"Cotton Jersey Crewneck T-Shirt\",\n            \"link\": \"/en/cotton-jersey-crewneck-t-shirt-3607997921140.html\",\n            \"brand\": \"BOYS 6-14 YEARS\",\n            \"availability\": \"out of stock\",\n            \"description\": \"This timelessly preppy tee is crafted from durable, soft cotton jersey.\",\n            \"gender\": \"Boy\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-327708_lifestyle?$rl_470_grid$\",\n            \"productType\": \"KIDS>Boys 6-14 Years>T-Shirts\",\n            \"itemGroupId\": \"83319\"\n        },\n        {\n            \"price\": \"16960.00\",\n            \"id\": \"3607999381713\",\n            \"title\": \"Alligator Commuter Bag\",\n            \"link\": \"/en/alligator-commuter-bag-3607999381713.html\",\n            \"brand\": \"Ralph Lauren\",\n            \"availability\": \"In Stock\",\n            \"description\": \"Constructed in Italy from hand-selected American alligator, this elegant bag is an ultra-luxurious way to carry your documents, magazines and laptop. It features a high-gloss finish, exterior piping made from hand-cut-and-stained leather and a soft cowhide interior with multiple pockets for storing important items.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1185307_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Accessories>Bags\",\n            \"itemGroupId\": \"314287\"\n        },\n        {\n            \"price\": \"460.00\",\n            \"id\": \"3607999488481\",\n            \"title\": \"Gosforth Calf Lace-Up Shoe\",\n            \"link\": \"/en/gosforth-calf-lace-up-shoe-3607999488481.html\",\n            \"brand\": \"Ralph Lauren\",\n            \"availability\": \"In Stock\",\n            \"description\": \"The Gosforth dress shoe is exquisitely crafted in Italy from calfskin leather and designed with a rounded toe.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-383370_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Shoes>Formal Shoes\",\n            \"itemGroupId\": \"120608\"\n        },\n        {\n            \"price\": \"159.00\",\n            \"id\": \"3611580990482\",\n            \"title\": \"Bi-Swing Windbreaker\",\n            \"link\": \"/en/bi-swing-windbreaker-3611580990482.html\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"availability\": \"In Stock\",\n            \"description\": \"This lightweight windbreaker is designed with a bi-swing construction that allows for enhanced mobility. The crisp-weather essential also has a peached microfibre shell that&#39;s water repellent and incredibly soft. Wear it over a button-down and dark jeans for a go-anywhere off-duty look.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1151208_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Clothing>Coats & Jackets>Jackets\",\n            \"itemGroupId\": \"279040\"\n        },\n        {\n            \"price\": \"69.00\",\n            \"id\": \"3611581348527\",\n            \"title\": \"Sander Boat Shoe\",\n            \"link\": \"/en/sander-boat-shoe-3611581348527.html\",\n            \"brand\": \"Junior\",\n            \"availability\": \"out of stock\",\n            \"description\": \"This iconic, preppy deck shoe is crafted from bold-hued cotton canvas and is perfect for a day on the boat or at the club.\",\n            \"gender\": \"Boy\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1011114_lifestyle?$rl_470_grid$\",\n            \"productType\": \"KIDS>Boys 6-14 Years>Shoes\",\n            \"itemGroupId\": \"181825\"\n        },\n        {\n            \"price\": \"2135.00\",\n            \"id\": \"3611582146047\",\n            \"title\": \"Nappa Leather Soft Ricky 33\",\n            \"link\": \"/en/nappa-leather-soft-ricky-33-3611582146047.html\",\n            \"brand\": \"Ralph Lauren\",\n            \"availability\": \"In Stock\",\n            \"description\": \"This Soft Ricky is made in Italy from layers of hand-stitched Italian nappa leather and features a contrasting bonded-calfskin lining that adds a rich pop of colour. This lightweight version of our iconic Ricky Bag takes up to eight hours to construct and is finished with our custom logo-embossed leather-covered signature lock.\",\n            \"gender\": \"Female\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1037838_lifestyle?$rl_470_grid$\",\n            \"productType\": \"WOMEN>Accessories>Bags\",\n            \"itemGroupId\": \"177084\"\n        },\n        {\n            \"price\": \"110.00\",\n            \"id\": \"3611582474263\",\n            \"title\": \"Custom-Fit Lightweight Chino\",\n            \"link\": \"/en/custom-fit-lightweight-chino-3611582474263.html\",\n            \"brand\": \"Polo Ralph Lauren\",\n            \"availability\": \"out of stock\",\n            \"description\": \"This essential trouser is crafted from lightweight washed cotton chino and cut for a trim-fitting silhouette.\",\n            \"gender\": \"Male\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1143481_lifestyle?$rl_470_grid$\",\n            \"productType\": \"MEN>Clothing>Trousers\",\n            \"itemGroupId\": \"271408\"\n        },\n        {\n            \"price\": \"115.00\",\n            \"id\": \"3611582846985\",\n            \"title\": \"Telly Leather Penny Loafer\",\n            \"link\": \"/en/telly-leather-penny-loafer-3611582846985.html\",\n            \"brand\": \"Child\",\n            \"availability\": \"out of stock\",\n            \"description\": \"This classic penny loafer is dressed up enough to wear with a blazer, while a flexible rubber outsole makes it comfortable enough for every day.\",\n            \"gender\": \"Boy\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1010345_lifestyle?$rl_470_grid$\",\n            \"productType\": \"KIDS>Boys 1½-6 Years>Shoes\",\n            \"itemGroupId\": \"140913\"\n        },\n        {\n            \"price\": \"495.00\",\n            \"id\": \"3611583244322\",\n            \"title\": \"Pinyon Fringe Throw Pillow\",\n            \"link\": \"/en/pinyon-fringe-throw-pillow-3611583244322.html\",\n            \"brand\": \"Ralph Lauren Home\",\n            \"availability\": \"out of stock\",\n            \"description\": \"This handsome throw pillow features intricate Western-style embossing and fringe, which gives it a rugged look.\",\n            \"gender\": \"Unisex\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1037195_lifestyle?$rl_470_grid$\",\n            \"productType\": \"HOME>Bedding>Pillows & Cushions\",\n            \"itemGroupId\": \"165794\"\n        },\n        {\n            \"price\": \"85.00\",\n            \"id\": \"3611583767258\",\n            \"title\": \"Brittany II Nappa Flat\",\n            \"link\": \"/en/brittany-ii-nappa-flat-3611583767258.html\",\n            \"brand\": \"Lauren\",\n            \"availability\": \"out of stock\",\n            \"description\": \"This chic ballet flat is crafted from rich nappa leather and designed with a rubber outsole that provides superior traction.\",\n            \"gender\": \"Female\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1064841_lifestyle?$rl_470_grid$\",\n            \"productType\": \"WOMEN>Shoes>Flats\",\n            \"itemGroupId\": \"193077\"\n        },\n        {\n            \"price\": \"90.00\",\n            \"id\": \"3611584034649\",\n            \"title\": \"Palmer Sham\",\n            \"link\": \"/en/palmer-sham-3611584034649.html\",\n            \"brand\": \"Ralph Lauren Home\",\n            \"availability\": \"out of stock\",\n            \"description\": \"Our Palmer sham is crafted from luxuriously soft 464-thread-count cotton percale and designed with elegant cream piping. Make it uniquely your own by adding an embroidered monogram to this sham for an additional £10.\",\n            \"gender\": \"Unisex\",\n            \"salePrice\": \"\",\n            \"imageLink\": \"https://www.rlmedia.io/is/image/PoloGSI/s7-1038151_lifestyle?$rl_470_grid$\",\n            \"productType\": \"HOME>Bedding>Shams & Pillowcases>Shams\",\n            \"itemGroupId\": \"167147\"\n        }\n    ]\n}\n"
+            },
+            "widget": {
+                "label": "JSON Products Input",
+                "type": "JsonCodeField",
+                "description": "Manually Add product data.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "maxItems",
+                "value": 20
+            },
+            "widget": {
+                "label": "Maximum Number of Items",
+                "type": "IntegerField",
+                "description": "Maximum number of merch items to have in the slider.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "orientation",
+                "value": "horizontal"
+            },
+            "widget": {
+                "label": "Orientation",
+                "options": [
+                    {
+                        "name": "horizontal",
+                        "label": "Horizontal - Left to Right"
+                    },
+                    {
+                        "name": "horizontal-rtl",
+                        "label": "Horizontal - Right to Left"
+                    },
+                    {
+                        "name": "vertical",
+                        "label": "Vertical"
+                    }
+                ],
+                "type": "StringSelectField",
+                "description": "Orientation of the slider.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "sliderTemplate",
+                "value": "<h2 id=\"mt-ymal\">You May Also Like</h2>\n<button data-prev-button></button>\n{{SLIDER}}\n<button data-next-button></button>\n"
+            },
+            "widget": {
+                "label": "Slider Container Template",
+                "type": "HtmlCodeField",
+                "description": "Include an HTML template to build the slider structure. Placeholder example: '{{slider}}'. Possible placeholders: slider, pagination. Optionally, add the attributes 'data-prev-button' and 'data-next-button' to add previous and next slide buttons. If optional arrow images are included, elements with the attribute 'data-prev-button' and 'data-next-button' are required for them to display.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "itemTemplate",
+                "value": "<a href=\"{{link}}\" data-pid=\"{{id}}\">\n  <div class=\"mt-image-container\">\n    <img src=\"{{imageLink}}\" alt=\"{{id}} - {{title}}\">\n  </div>\n</a>\n<div class=\"mt-text-container\">\n  <div>\n    <span class=\"mt-brand\">{{brand}}</span>\n  </div>\n  <div>\n    <a href=\"{{link}}\" class=\"mt-title\">{{title|truncate: 50}}</a>\n    </div>\n  <div>\n    <span class=\"mt-alt-price\">{{altPrice|priceFormat: £1,000.00 <span class=\"mt-black\">-</span> }}</span>\n    <span class=\"mt-price\">{{price|priceFormat: £1,000.00}}</span>\n  </div>\n</div>\n"
+            },
+            "widget": {
+                "label": "Slide Template",
+                "type": "HtmlCodeField",
+                "description": "Placeholder example: '{{price}}'. Possible placeholders include all product catalog fields. Examples: title, id, itemGroupId, price, salePrice, link, imageLink",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "css",
+                "value": {
+                    "content": "/**\n * DEFAULT SLIDER STYLES\n * Edit at your own risk!\n */\n#MONETATE-ID {\n  position: relative;\n}\n\n#MONETATE-ID [data-slider-mask] {\n  overflow: hidden!important;\n  position: relative!important;\n  padding: 0!important;\n  margin: 0!important;\n}\n\n#MONETATE-ID li {\n  list-style: none;\n}\n\n#MONETATE-ID [data-slider] {\n  padding: 0!important;\n  margin: 0!important;\n  display: block;\n}\n\n#MONETATE-ID [data-slide] {\n  float: none;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider] {\n  white-space: nowrap!important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slide] {\n  display: inline-block!important;\n  white-space: normal;\n  vertical-align: top;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slide] {\n  display: block!important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide] {\n  position: absolute;\n  top: 0;\n  opacity: 0;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide][data-slide-active] {\n  position: relative;\n  z-index: 1;\n  opacity: 1;\n}\n\n#MONETATE-ID [data-pagination-slide],\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button]{\n  cursor: pointer;\n  z-index: 1;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  touch-action: pan-x;\n}\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider-mask],\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slider-mask] {\n  touch-action: pan-y;\n}\n\n#MONETATE-ID [data-pagination-slide] * {\n  pointer-events: none;\n}\n\n/** ----END DEFAULT STYLES---- */\n\n\n/**\n * CUSTOM SLIDER STYLING\n */\n#MONETATE-ID .mt-slider-container {\n  max-width: 1192px;\n}\n\n#MONETATE-ID [data-pagination=\"thumbnails\"] [data-pagination-slide] {\n  border-radius: 0;\n  background: none;\n  width: 40px;\n  height: auto;\n}\n\n#MONETATE-ID [disabled] {\n  opacity: 0.5;\n}\n\n#MONETATE-ID [data-pagination-slide] {\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  background: #000;\n  margin: 4px;\n  border-radius: 6px;\n  opacity: 0.5;\n}\n\n#MONETATE-ID [data-pagination-slide][data-slide-active] {\n  opacity: 1;\n}\n\n#MONETATE-ID [data-slide] > div {\n  padding: 10px;\n  height: 100%;\n}\n\n\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n  top: 45%;\n  position: absolute;\n  font-size: 25px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -o-user-select: none;\n  user-select: none;\n  padding: 0;\n  background: none;\n  color: #000;\n}\n\n\n#MONETATE-ID [data-prev-button] {\n  margin-left: -40px;\n}\n\n/*\n#MONETATE-ID [data-next-button] {\n  right: 10px;\n}\n*/\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-prev-button] {\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-next-button]{\n  top: auto;\n  bottom: 0;\n  left: 50%;\n  right: auto;\n  transform: translateX(-50%);\n}\n\n#MONETATE-ID [data-slider-mask] {\n  display: inline-block;\n  width: calc(100% - 106px);\n  max-width: 1072px;\n  max-height: 462px;\n}\n\n#MONETATE-ID {\n  text-align: center;\n  padding: 6.25rem 8% 0 15%;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  height: 400px!important;\n}\n\n#MONETATE-ID [data-slide] img {\n  max-height: 100%;\n  width: 100%;\n}\n\n/*\n#MONETATE-ID [data-slide] a {\n  text-decoration: none;\n}\n*/\n\n#MONETATE-ID [data-pagination*=\"dots\"] [data-pagination-slide] {\n  /* remove below for pagination numbers */\n  text-indent: -9999px;\n}\n\n/*\n#MONETATE-ID .mt-text-container {\n  text-align: left;\n  padding: 0 10px;\n}\n*/\n\n#MONETATE-ID h2 {\n  width: 100%;\n  font-family: didot w01 italic;\n  font-style: Normal;\n  color: #474747;\n  font-size: 1.5rem;\n  line-height: 1em;\n  letter-spacing: .05rem;\n  text-transform: capitalize;\n}\n\n#MONETATE-ID .mt-brand {\n  text-transform: uppercase;\n}\n\n#MONETATE-ID .mt-text-container > div {\n  overflow: visible;\n  max-width: 14.375rem;\n  padding: 0 .625rem;\n  margin: .1875rem 0 0;\n  line-height: 11px;\n  text-align: left;\n  font-size: .6875rem;\n}\n\n#MONETATE-ID .mt-text-container > a:hover {\n  text-decoration: underline;\n}\n\n#MONETATE-ID .mt-alt-price {\n  color: #ef001b;\n  font-family: hco gotham bold;\n  font-style: Normal;\n  font-weight: 500;\n}\n\n#MONETATE-ID .mt-black {\n  color: #051e39;\n}\n\n#MONETATE-ID .mt-price {\n  color: #051e39;\n  font-family: hco gotham bold;\n  font-style: Normal;\n  font-weight: 500;\n}\n\n#MONETATE-ID [data-prev-button], #MONETATE-ID [data-next-button] {\n  border: none;\n  position: absolute;\n  width: 1.875rem;\n  height: 1.875rem;\n  background: inherit;\n  text-decoration: none;\n  text-align: center;\n  z-index: 1;\n  font: normal normal normal 24px/1 FontAwesome;\n  color: #474747;\n}\n\n#MONETATE-ID [data-prev-button]:after {\n  content: \"\\f104\";\n}\n\n#MONETATE-ID [data-next-button]:after {\n  content: \"\\f105\";\n}\n\n@media only screen and (max-width: 959px) {\n  #MONETATE-ID {\n    text-align: center;\n    padding: 6.25rem 0 0 0;\n  }\n  \n  #MONETATE-ID [data-slider-mask]  {\n    width: 100%;\n  }\n  \n  #MONETATE-ID [data-prev-button] {\n    display: none;\n  }\n\n  #MONETATE-ID [data-next-button] {\n    display: none;\n  }\n  \n  #MONETATE-ID .mt-text-container > div {\n    font-weight: 400;\n    font-size: .5625rem;\n  }\n\n}\n\n#ymal {\n  display: none;\n}",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CSSCodeField",
+                "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+                "label": "CSS"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "json",
+                "name": "settings",
+                "value": "{\n  \"autoRotateDuration\": 0,\n  \"breakpoints\": {\n    \"Infinity\": {\n        \"visible\": 3\n    },\n    \"600\": {\n      \"visible\": 2\n    }\n  },\n  \"gridSize\": 1,\n  \"infiniteSlide\": false,\n  \"pagination\": \"none\",\n  \"pauseOnHover\": false,\n  \"slideIncrement\": \"page\",\n  \"stopOnInteraction\": false,\n  \"transitionAnimation\": \"push\",\n  \"transitionDuration\": 250\n}"
+            },
+            "widget": {
+                "label": "Slides Visible",
+                "type": "JsonCodeField",
+                "description": "Settings object.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_prev",
+                "value": null
+            },
+            "widget": {
+                "label": "Previous Button Creative",
+                "type": "RawImageCreative",
+                "description": "Previous button creative. Must include element with the attribute [data-prev-button] Slider Container Template.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_next",
+                "value": null
+            },
+            "widget": {
+                "label": "Next Button Creative",
+                "type": "RawImageCreative",
+                "description": "Next button creative. Must include element with the attribute [data-next-button] Slider Container Template.",
+                "action_visible": true
+            },
+            "required": false
+        }
+    ],
+    "masks": [],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [],
+        "required": []
+    },
+    "integration_type": "js-tag",
+    "manage_impressions": false
+}
