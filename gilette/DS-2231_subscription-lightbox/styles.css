@@ -1,0 +1,150 @@
+#monetate_lightbox_content_container {
+  background: #fff;
+  max-width: 320px;
+  width: 100% !important;
+}
+
+@media screen and (min-width: 768px) {
+  #monetate_lightbox_content_container {
+    max-width: 680px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #monetate_lightbox_content_container {
+    max-width: 840px;
+  }
+}
+
+.mt_subscription-lightbox {
+  background: #fff;
+  border: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  display: block;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+.mt_subscription-lightbox__heading {
+  color: #182f6e;
+  font-family: lato_blackregular,arial,sans-serif;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  max-width: 480px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_subscription-lightbox__heading {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.mt_subscription-lightbox__subheader {
+  color: #666;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_subscription-lightbox__subheader {
+    font-size: 16px;
+  }
+}
+
+.mt_subscription-lightbox__buttons {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+
+.mt_subscription-lightbox__buttons a {
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 8px;
+  margin-right: 8px;
+  min-width: 96px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_subscription-lightbox__buttons a {
+    padding: 8px 32px;
+  }
+}
+
+.mt_subscription-lightbox__no-thanks {
+  background: #fff !important;
+  border: 1px solid #182f6e;
+  color: #182f6e !important;
+}
+
+.mt_subscription-lightbox__subscribe {
+  background: #182f6e !important;
+  border: 1px solid #182f6e;
+  color: #fff !important;
+}
+
+.mt_subscription-lightbox__close {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: none;
+  color: #182f6e;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 32px;
+  font-weight: 100;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 36px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 36px;
+  z-index: 1;
+}
+
+.mt_subscription-lightbox__close:hover, .mt_subscription-lightbox__close:focus, .mt_subscription-lightbox__close:active {
+  background: none;
+  color: #182f6e;
+  text-decoration: none;
+}
+
+.mt_subscription-lightbox__content {
+  display: block;
+  padding: 30px 20px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .mt_subscription-lightbox__content {
+    padding: 60px 120px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mt_subscription-lightbox__content {
+    padding: 60px 180px;
+  }
+}

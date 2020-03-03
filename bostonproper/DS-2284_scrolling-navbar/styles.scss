@@ -1,0 +1,49 @@
+.mt_scrolling-navbar {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    &__list {
+        background: #fff;
+        margin: 0;
+        overflow: auto;
+        padding: 0;
+        white-space: nowrap;
+        &-item {
+            display: inline-block;
+            padding-left: calc(125px / 2);
+            padding-right: calc(125px / 2);
+            text-align: center;
+            &:first-child {
+                padding-left: 75px;
+            }
+            &:last-child {
+                padding-right: 75px;
+            }
+        }
+
+        &-link {
+            color: #000;
+            display: block;
+            font-family: Avenir Medium,sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            padding-bottom: 12px;
+            padding-top: 12px;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover,
+            &:active {
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+
+.navbar {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 0 !important;
+    }
+}

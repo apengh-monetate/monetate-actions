@@ -1,0 +1,160 @@
+#MONETATE-ID {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  max-width: 1320px;
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 960px) {
+  #MONETATE-ID {
+    margin-bottom: 80px;
+    margin-top: 40px;
+  }
+}
+
+#MONETATE-ID a {
+  text-decoration: none;
+}
+
+#MONETATE-ID img {
+  max-width: 100%;
+}
+
+#MONETATE-ID [mt-data-grid] {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#MONETATE-ID .mt-merch-item {
+  box-sizing: border-box;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 10px;
+  width: 50%;
+}
+
+@media screen and (min-width: 960px) {
+  #MONETATE-ID .mt-merch-item {
+    -ms-flex-preferred-size: calc(100% / 3);
+        flex-basis: calc(100% / 3);
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 959px) {
+  #MONETATE-ID .mt-merch-item:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #MONETATE-ID .mt-merch-item:nth-child(n + 7) {
+    display: none;
+  }
+}
+
+#MONETATE-ID .mt_grid__header {
+  color: #AE7C5B;
+  font-family: 'freightdisp_prolight';
+  font-size: 26px;
+  letter-spacing: 0;
+  line-height: 33px;
+  margin-bottom: 20px;
+  padding: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 960px) {
+  #MONETATE-ID .mt_grid__header {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+}
+
+#MONETATE-ID .mt_grid__cta {
+  background-color: #F0EFED;
+  color: #AE7C5B;
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.120em;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  width: calc(100% - 20px);
+}
+
+@media screen and (min-width: 960px) {
+  #MONETATE-ID .mt_grid__cta {
+    font-size: 15px;
+  }
+}
+
+#MONETATE-ID .mt_grid__cta::after {
+  border-color: transparent transparent transparent currentColor;
+  border-style: solid;
+  border-width: .321em 0 .321em .357em;
+  content: "";
+  display: inline-block;
+  height: 0;
+  line-height: 1em;
+  margin: 0 0 0 .286em;
+  width: 0;
+}
+
+#MONETATE-ID .mt_grid-item {
+  font-family: "ll brown light web";
+  font-size: 13px;
+  margin: 0 0 30px;
+}
+
+@media screen and (min-width: 960px) {
+  #MONETATE-ID .mt_grid-item {
+    font-size: 15px;
+  }
+}
+
+#MONETATE-ID .mt_grid-item__img {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+#MONETATE-ID .mt_grid-item__title {
+  text-align: center;
+}
+
+#MONETATE-ID .mt_grid-item__title-link {
+  color: #000;
+}
+
+#MONETATE-ID .mt_grid-item__price {
+  margin: 1.125rem 0 0;
+  text-align: center;
+}
+
+#MONETATE-ID .mt_grid-item__price--reg {
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+#MONETATE-ID .mt_grid-item__price--sale {
+  color: #d22630;
+}
+
+#MONETATE-ID .mt-merch-item[data-missing-keys*="salePrice"] .mt_grid-item__price--reg {
+  color: #000;
+  text-decoration: none;
+}
+
+#MONETATE-ID .mt-merch-item[data-missing-keys*="salePrice"] .mt_grid-item__price--sale {
+  display: none;
+}

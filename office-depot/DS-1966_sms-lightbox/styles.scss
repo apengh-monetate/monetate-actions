@@ -1,0 +1,188 @@
+#monetate_lightbox_mask {
+    background-color: #FFF !important;
+    opacity: .8 !important;
+}
+
+#monetate_lightbox_content_container {
+    height: 100% !important;
+    top: 20px !important;
+    width: 100% !important;
+}
+
+.mt-lightbox {
+    &-section {
+        background-color: #FFF;
+        box-shadow: 0 0 14px rgba(0, 0, 0,.75);
+        box-sizing: border-box;
+        color: #000;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+        margin: 0 auto;
+        max-width: 320px;
+        overflow: auto;
+        position: relative;
+        text-align: center;
+        width: calc(100vw - 20px) !important;
+        &.entrance {
+        }
+        &.success {
+            display: none;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    &-button {
+        background-color: #fff;
+        border: 1px solid #2d5a95;
+        border-radius: 4px;
+        color: #2d5a95;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 16px;
+        padding: 16px 0;
+        text-align: center;
+    }
+
+    &-button.submit {
+        background-color: #2d5a95;
+        border-color: #2d5a95;
+        color: #fff;
+    }
+
+
+    &-checkmark {
+        background-image: url('http://sb.monetate.net/img/1/407/2568464.png');
+        background-size: 60px 60px;
+        height: 60px;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 60px;
+    }
+
+    &-close {
+        align-content: center;
+        align-items: center;
+        color: #888;
+        display: flex;
+        font-size: 36px;
+        height: 36px;
+        justify-content: center;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 36px;
+    }
+
+    &-content {
+        padding: 30px 20px 20px;
+        width: 100%;
+    }
+
+    &-sms {
+        font-size: 16px;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+
+    &-error[style="display: block;"] {
+        color: #a52b22;
+        display: none;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        margin-top: -4px;
+        &-container {
+        }
+    }
+
+    &-fineprint {
+        display: block;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 28px;
+        padding-bottom: 8px;
+        position: relative;
+        width: 100%;
+        p {
+            font-size: 10px;
+            letter-spacing: 0.25px;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+    &-inputs {
+        margin: 0 auto;
+        margin-top: 16px;
+
+        input {
+            border: 1px solid #666 !important;
+            border-radius: 4px !important;
+            height: 45px;
+        }
+    }
+
+    &-lead {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        margin: 0;
+    }
+
+    &-logo {
+        background-image: url('http://sb.monetate.net/img/1/407/2568467.png');
+        background-position: 0 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 60px;
+        margin: 0 auto;
+        width: 160px;
+    }
+
+    &-title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 42px;
+        margin: 0;
+    }
+
+    &-subtitle {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        line-height: 18px;
+        margin: 0;
+    }
+}
+
+
+.mt-lightbox-section.entrance .mt-lightbox-button.close {
+    border: 1px solid #2d5a95;
+    color: #2d5a95;
+}
+
+.mt-lightbox-section.success {
+    padding: 30px 20px 40px;
+}
+
+
+.mt-lightbox-section.success .mt-lightbox-button {
+    background-color: #2d5a95;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 15px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 195px;
+}

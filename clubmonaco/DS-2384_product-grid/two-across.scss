@@ -1,0 +1,12 @@
+@media screen and (max-width: (960px - 1)) {
+    .search-result-content .search-result-items li {
+        margin: 0 0 30px !important;
+        width: 50% !important;
+        &:nth-child(odd) {
+            padding: 0 8px 0 0 !important;
+        }
+        &:nth-child(even) {
+            padding: 0 0 0 8px !important;
+        }
+    }
+}

@@ -1,0 +1,225 @@
+#monetate_lightbox {
+  z-index: 20000 !important;
+}
+
+#monetate_lightbox_content_container {
+  max-width: 440px;
+  width: 100% !important;
+}
+
+.mt_form-lightbox {
+  background: #fff;
+  color: #000;
+  display: block;
+  padding: 100px 67px 80px;
+  position: relative;
+}
+
+.mt_form-lightbox__close {
+  background: url("https://media1.calvinklein.com/images/newsletter-overlay-close-2.gif");
+  background-color: transparent;
+  background-size: 100% 100%;
+  border: none;
+  cursor: pointer;
+  height: 60px;
+  left: auto;
+  outline: none;
+  padding-left: 10px;
+  position: absolute;
+  right: 7px;
+  text-align: center;
+  top: 7px;
+  width: 60px;
+  z-index: 2;
+}
+
+.mt_form-lightbox__content {
+  text-align: center;
+}
+
+.mt_form-lightbox__brand-logo {
+  background: url("//media.partnerbrands.com/images/static/logos/vh-logo-594x55.png");
+  background-position-x: center;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: 20px;
+  margin: 0 0 30px 0;
+  padding: 0;
+  position: relative;
+}
+
+.mt_form-lightbox__heading {
+  color: #515151;
+  font-family: "Nolan Bd";
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  line-height: 28px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.mt_form-lightbox__description {
+  color: #515151;
+  font-family: "Proxima Nova Rg";
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin: 0;
+}
+
+.mt_form-lightbox__checkbox {
+  margin-top: 20px;
+}
+
+.mt_form-lightbox__checkbox input {
+  box-sizing: border-box;
+  float: left;
+  margin-top: 4px;
+  padding: 0;
+}
+
+.mt_form-lightbox__checkbox input.mtError {
+  outline: 1px solid red !important;
+}
+
+.mt_form-lightbox__checkbox input.mtError ~ p {
+  color: red !important;
+}
+
+.mt_form-lightbox__checkbox p {
+  color: #666;
+  display: inline;
+  float: right;
+  font-family: "Proxima Nova Rg";
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 17px;
+  margin-top: 0;
+  padding: 0;
+  text-align: left;
+  width: 92%;
+}
+
+.mt_form-lightbox__checkbox a {
+  cursor: pointer;
+  outline: 0;
+  text-decoration: underline;
+}
+
+.mt_form-lightbox__form input[type="email"],
+.mt_form-lightbox__form input[type="text"] {
+  font-weight: normal;
+  height: 46px;
+  margin: 0 !important;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.mt_form-lightbox__form input[type="email"].mtError,
+.mt_form-lightbox__form input[type="text"].mtError {
+  border: 1px solid red !important;
+  color: red !important;
+}
+
+.mt_form-lightbox__button {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Proxima Nova Bd";
+  font-size: 17px;
+  font-weight: 600;
+  height: 45px;
+  letter-spacing: 0.4px;
+  line-height: 44px;
+  margin-top: 10px;
+  outline: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.mt_form-lightbox__button:hover, .mt_form-lightbox__button:active, .mt_form-lightbox__button:focus {
+  background-color: #515151;
+}
+
+.mt_form-lightbox__disclaimer {
+  color: #515151;
+  font-family: "Proxima Nova Rg";
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin: 20px 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.mt_form-lightbox.success {
+  text-align: center;
+}
+
+.mt_form-lightbox.success .mt_form-lightbox__heading {
+  color: #000;
+  display: block;
+  font-family: "Nolan Bd";
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  line-height: 28px;
+  margin: 0;
+  padding: 0 0 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mt_form-lightbox.success .mt_form-lightbox__button {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Proxima Nova Bd";
+  font-size: 15px;
+  font-weight: 600;
+  height: 45px;
+  letter-spacing: 0.4px;
+  line-height: 44px;
+  margin: 0 auto;
+  margin-top: 10px;
+  outline: 0;
+  padding: 0 20px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+  white-space: nowrap;
+  width: auto;
+}
+
+.mt_form-lightbox.success .mt_form-lightbox__button:hover, .mt_form-lightbox.success .mt_form-lightbox__button:active, .mt_form-lightbox.success .mt_form-lightbox__button:focus {
+  background-color: #515151;
+}
+
+#mtSubmitMessage {
+  clear: both;
+  color: #000;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px;
+  text-align: center;
+}
+
+#mtSubmitMessage:empty {
+  display: none;
+}

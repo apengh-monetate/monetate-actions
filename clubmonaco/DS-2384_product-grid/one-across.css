@@ -1,0 +1,6 @@
+@media screen and (max-width: 959px) {
+  .search-result-content .search-result-items li {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+}

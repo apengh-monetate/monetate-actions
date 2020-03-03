@@ -1,0 +1,27 @@
+<section class="mt_form-lightbox" aria-modal="true" tabindex="-1" role="dialog">
+    <button class="mt_form-lightbox__close close" type="button" aria-label="Close" role="button" tabindex="0"></button>
+
+    <div class="mt_form-lightbox__content">
+        <div class="mt_form-lightbox__brand-logo"></div>
+        <h3 class="mt_form-lightbox__heading">Work Your Style</h3>
+        <p class="mt_form-lightbox__description">Discover the newest trends, style tips, special promos, and... GET 15% OFF</p>
+    </div>
+
+    <form class="mt_form-lightbox__form" action="https://vanheusen.partnerbrands.com/AjaxSubscribeNewsletter" method="POST">
+        <input type="hidden" name="sourceCode" value="01" />
+        <input type="hidden" name="brandName" value="Van Heusen" />
+        <input type="hidden" name="storeId" value="12501" />
+
+        <div class="mt_form-lightbox__checkbox">
+            <input class="mt_form_lightbox__input checkbox required" maxlength="50" name="email-consent" type="checkbox" value="" aria-labelledby="newsletterSubtext" />
+            <p id="newsletterSubtext">I would like to receive updates on the latest products and promotions from Van Heusen via email or other channels. Please see our <a onclick="javascript:PBOverlay.open('CS_Privacy_vh_3_DTMB');" title="Opens a dialog" role="button" tabindex="0">Privacy Policy</a> for more information.</p>
+        </div>
+
+        <div id="mtSubmitMessage"><!-- error messages go here --></div>
+        <input class="mt_form-lightbox__input email" maxlength="50" name="Email Address" placeholder="enter your email" size="35" type="email" value="" aria-label="enter your email" />
+
+        <button class="mt_form-lightbox__button submit" onclick="javascript:invokeService(false); var date = new Date(); date.setDate(date.getDate() + 1825); document.cookie='mt.newsletterCookie=true;expires=' + date.toGMTString() + ';';" role="button" tabindex="0">Get My Code Now</button>
+    </form>
+
+    <p class="mt_form-lightbox__disclaimer">*Offer is subject to change without notice.<br>Will be used in accordance with our <a onclick="PBOverlay.open('CS_Privacy_vh_3_DTMB');" role="button" tabindex="0">Privacy Policy</a>.</p>
+</section>

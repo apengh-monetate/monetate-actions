@@ -1,0 +1,14 @@
+<div class="mt_grid-item">
+    <div class="mt_grid-item__img">
+        <a href="{{link}}">
+            <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+        </a>
+    </div>
+    <div class="mt_grid-item__title">
+        <a class="mt_grid-item__title-link" href="{{link}}">{{title}}</a>
+    </div>
+    <div class="mt_grid-item__price">
+        <span class="mt_grid-item__price--reg">{{price|priceFormat: $1,000.00}}</span>
+        <span class="mt_grid-item__price--sale">{{salePrice|priceFormat: $1,000.00}}</span>
+    </div>
+</div>

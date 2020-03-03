@@ -1,0 +1,123 @@
+$blue: #182f6e;
+
+#monetate_lightbox_content_container {
+    background: #fff;
+
+    max-width: 320px;
+    width: 100% !important;
+    @media screen and (min-width: 768px) {
+        max-width: 680px;
+    }
+    @media screen and (min-width: 1024px) {
+        max-width: 840px;
+    }
+}
+
+
+.mt_subscription-lightbox {
+    background: #fff;
+    border: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    display: block;
+    padding: 0;
+    position: relative;
+    text-align: center;
+
+    &__heading {
+        color: $blue;
+        font-family: lato_blackregular,arial,sans-serif;
+        font-weight: bold;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        max-width: 480px;
+        text-transform: uppercase;
+        @media screen and (min-width: 768px) {
+            font-size: 32px;
+            line-height: 36px;
+        }
+    }
+
+
+    &__subheader {
+        color: #666;
+        font-size: 14px;
+        @media screen and (min-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    &__buttons {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+
+        a {
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 8px;
+            margin-right: 8px;
+            min-width: 96px;
+            padding: 8px 16px;
+            text-decoration: none;
+            @media screen and (min-width: 768px) {
+                padding: 8px 32px;
+            }
+        }
+    }
+
+    &__no-thanks {
+        background: #fff !important;
+        border: 1px solid $blue;
+        color: $blue !important;
+    }
+
+    &__subscribe {
+        background: $blue !important;
+        border: 1px solid $blue;
+        color: #fff !important;
+    }
+
+
+    &__close {
+        align-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        color: $blue;
+        cursor: pointer;
+        display: flex;
+        font-size: 32px;
+        font-weight: 100;
+        justify-content: center;
+        line-height: 36px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        text-decoration: none;
+        top: 0;
+        transition: all 0.3s ease;
+        width: 36px;
+        z-index: 1;
+        &:hover,
+        &:focus,
+        &:active {
+            background: none;
+            color: $blue;
+            text-decoration: none;
+        }
+    }
+
+    &__content {
+        display: block;
+        padding: 30px 20px;
+        position: relative;
+        @media screen and (min-width: 768px) {
+            padding: 60px 120px;
+        }
+        @media screen and (min-width: 1024px) {
+            padding: 60px 180px;
+        }
+    }
+
+}

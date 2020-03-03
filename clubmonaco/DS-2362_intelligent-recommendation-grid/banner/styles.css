@@ -1,0 +1,59 @@
+.mt_category-banner {
+  background: #F0EFEC;
+  padding: 30px;
+  text-align: center;
+}
+
+.mt_category-banner__heading {
+  color: #fff;
+  color: #AA9385;
+  font-family: 'LL Brown Light Web', Helvetica, sans-serif;
+  font-size: 72px;
+  letter-spacing: .05em;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 960px) {
+  .mt_category-banner__heading {
+    font-size: 96px;
+  }
+}
+
+.mt_category-banner__links {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mt_category-banner__link {
+  color: #AA9385;
+  display: inline-block;
+  font-family: 'LL Brown Web', Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .1em;
+  margin: 0 auto;
+  margin-left: 8px;
+  margin-right: 8px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 960px) {
+  .mt_category-banner__link {
+    font-size: 13px;
+  }
+}
+
+.mt_category-banner__link::after {
+  border-color: transparent transparent transparent currentColor;
+  border-style: solid;
+  border-width: .321em 0 .321em .357em;
+  content: "";
+  display: inline-block;
+  height: 0;
+  line-height: 1em;
+  margin: 0 0 0 .286em;
+  width: 0;
+}

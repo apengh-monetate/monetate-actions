@@ -1,0 +1,45 @@
+#monetate_lightbox_content_container {
+  background: #fff;
+  height: auto !important;
+  max-width: 700px !important;
+  width: 100% !important;
+}
+
+#monetate_allinone_lightbox {
+  box-shadow: 0 0 16px black;
+  padding-top: 20px;
+}
+
+#monetate_allinone_lightbox .row {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#monetate_allinone_lightbox .mt_close {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 30px;
+  font-weight: 100;
+  height: 36px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 36px;
+}
+
+#monetate_allinone_lightbox .btnMajor {
+  background: #000 !important;
+  border-color: #000 !important;
+}

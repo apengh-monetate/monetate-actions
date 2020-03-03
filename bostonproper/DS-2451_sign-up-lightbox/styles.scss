@@ -1,0 +1,41 @@
+#monetate_lightbox_content_container {
+    background: #fff;
+    height: auto !important;
+    max-width: 700px !important;
+    width: 100% !important;
+
+
+}
+
+#monetate_allinone_lightbox {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 1);
+    padding-top: 20px;
+
+    .row {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .mt_close {
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        font-size: 30px;
+        font-weight: 100;
+        height: 36px;
+        justify-content: center;
+        line-height: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: 36px;
+    }
+
+    .btnMajor {
+        background: #000 !important;
+        border-color: #000 !important;
+    }
+}

@@ -1,0 +1,164 @@
+$breakpoint-lg: 960px;
+
+$monetate-id: #MONETATE-ID;
+// $monetate-id: #mt-grid-3292706-0;
+
+#{$monetate-id} {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    max-width: 1320px;
+    padding: 0 10px;
+    @media screen and (min-width: $breakpoint-lg) {
+        margin-bottom: 80px;
+        margin-top: 40px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    [mt-data-grid] {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .mt-merch-item {
+        box-sizing: border-box;
+        flex-basis: 50%;
+        padding: 10px;
+        width: 50%;
+        @media screen and (min-width: $breakpoint-lg) {
+            flex-basis: calc(100% / 3);
+            width: calc(100% / 3);
+        }
+
+        &:nth-child(n + 5) {
+            @media screen and (max-width: ($breakpoint-lg - 1)) {
+                display: none;
+            }
+        }
+
+        &:nth-child(n + 7) {
+            @media screen and (min-width: $breakpoint-lg) {
+                display: none;
+            }
+        }
+    }
+
+
+    .mt_grid {
+        &__header {
+            color: #AE7C5B;
+            font-family: 'freightdisp_prolight';
+            font-size: 26px;
+            letter-spacing: 0;
+            line-height: 33px;
+            margin-bottom: 20px;
+            padding: 0;
+            text-align: center;
+            @media screen and (min-width: $breakpoint-lg) {
+                font-size: 42px;
+                margin-bottom: 40px;
+            }
+        }
+        &__cta {
+            background-color: #F0EFED;
+            color: #AE7C5B;
+            display: block;
+            font-size: 13px;
+            letter-spacing: 0.120em;
+            margin: 0 auto;
+            padding: 12px;
+            text-align: center;
+            text-transform: uppercase;
+            width: calc(100% - 20px);
+            @media screen and (min-width: $breakpoint-lg) {
+                font-size: 15px;
+            }
+            &::after {
+                border-color: transparent transparent transparent currentColor;
+                border-style: solid;
+                border-width: .321em 0 .321em .357em;
+                content: "";
+                display: inline-block;
+                height: 0;
+                line-height: 1em;
+                margin: 0 0 0 .286em;
+                width: 0;
+            }
+        }
+
+        // ==================================================================
+        // Grid Item
+        // ==================================================================
+        &-item {
+            font-family: "ll brown light web";
+            font-size: 13px;
+            margin: 0 0 30px;
+            @media screen and (min-width: $breakpoint-lg) {
+                font-size: 15px;
+            }
+
+            &__img {
+                margin-bottom: 1.25rem;
+                position: relative;
+            }
+
+
+
+            &__title {
+                text-align: center;
+                &-link {
+                    color: #000;
+                }
+            }
+
+            &__price {
+                margin: 1.125rem 0 0;
+                text-align: center;
+                &--reg {
+                    color: #aaa;
+                    text-decoration: line-through;
+                }
+                &--sale {
+                    color: #d22630;
+                }
+            }
+        }
+    }
+
+    .mt-merch-item[data-missing-keys*="salePrice"] {
+        .mt_grid-item {
+            &__price {
+                &--reg {
+                    color: #000;
+                    text-decoration: none
+                }
+                &--sale {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // .save-To-favorites {
+    //     background-image: url('/on/demandware.static/Sites-ClubMonaco_US-Site/-/en_US/v1582036685610/images/heart-favorite.svg');
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     background-size: 18px 16px;
+    //     display: block;
+    //     height: 16px;
+    //     position: absolute;
+    //     right: 12px;
+    //     text-indent: -9999px;
+    //     top: 9px;
+    //     width: 18px;
+    // }
+}

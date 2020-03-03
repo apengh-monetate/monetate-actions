@@ -1,0 +1,17 @@
+<section class="mt_grid-item" data-pid="{{id}}">
+    <a class="mt_grid-item__img" href="{{link}}">
+      <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+    </a>
+    <div class="mt_grid-item__text">
+        <a class="mt_grid-item__title" href="{{link}}">{{title}}</a>
+        <div class="mt_grid-item__price">
+            <span class="mt_grid-item__price--reg">{{price|priceFormat: $1,000.00}}</span>
+            <span class="mt_grid-item__price--sale">{{salePrice|priceFormat: $1,000.00}}</span>
+        </div>
+    </div>
+    <div class="mt_grid-item__ratings">
+        <span class="mt_grid-item__ratings-stars" data-average-rating="{{avgRating}}"></span>
+        <span class="mt_grid-item__ratings-decimal">{{avgRating}}</span>
+        <a class="mt_grid-item__ratings-count" href="{{link}}">({{reviewCount}})</a>
+    </div>
+</section>
