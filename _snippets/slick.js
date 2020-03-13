@@ -1,6 +1,6 @@
 (function() {
     // Get Slider
-    var slider = jQuery('.alt-views-carousel.slick-initialized');
+    var slider = jQuery('.product-primary-image.slick-initialized.slick-slider');
 
     // Get Original Settings
     var slickSettings = slider.slick('getSlick')['originalSettings'];
@@ -9,9 +9,7 @@
     slider.slick('unslick');
 
     // Make changes
-    var slide = slider.find('a:last');
-    var target = slider.find('a:first');
-    target.before(slide);
+    slickSettings['arrows'] = true;
 
     // Re-initialize
     slider.slick(slickSettings);

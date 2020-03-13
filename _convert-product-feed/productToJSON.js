@@ -31,6 +31,7 @@ const productToJson = () => {
     });
 
     console.log(sorted);
+    copy(sorted);
 };
 
 productToJson();

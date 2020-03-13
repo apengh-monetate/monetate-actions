@@ -1,0 +1,32 @@
+body {
+    padding-top: 0 !important;
+
+    #siteHeader {
+        position: relative !important;
+    }
+
+    &.mt-fixed-filter {
+        #mobilefilter-btn {
+            box-sizing: border-box;
+            left: 0;
+            padding: 0 !important;
+            position: fixed !important;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+            &.filter {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+        }
+    }
+
+    &.mt-fixed-filter.mt-scroll-up {
+        #siteHeader {
+            position: fixed !important;
+        }
+        #mobilefilter-btn {
+            top: 86px !important;
+        }
+    }
+}

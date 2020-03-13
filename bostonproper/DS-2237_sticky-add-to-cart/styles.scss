@@ -1,0 +1,83 @@
+body {
+    // padding-top: 0 !important;
+
+    &.mt-fixed-filter {
+        #ayb {
+            background-color: #cc0066 !important;
+            border-color: #cc0066 !important;
+            bottom: 0;
+            box-sizing: border-box;
+            left: 0;
+            position: fixed !important;
+            right: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        // #dtlFrm {
+        //     background-color: rgba(255, 255, 255, 1);
+        //     bottom: 0;
+        //     box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+        //     box-sizing: border-box;
+        //     display: flex;
+        //     flex-direction: row;
+        //     flex-wrap: wrap;
+        //     justify-content: flex-start;
+        //     left: 0;
+        //     padding: 8px;
+        //     position: fixed !important;
+        //     right: 0;
+        //     width: 100%;
+        //     z-index: 9999;
+        //     .dtlContentRow {
+        //         padding-bottom: 4px;
+        //         &:nth-of-type(2) {
+        //             // background-color: rgba(0, 255, 0, 0.2);
+        //             display: inline-block;
+        //             flex: 1 1 auto;
+        //             width: auto;
+        //         }
+        //         &:nth-of-type(3) {
+        //             align-self: flex-end;
+        //             // background-color: rgba(0, 0, 255, 0.2);
+        //             display: inline-block;
+        //             flex: 1 1 auto;
+        //             width: auto;
+        //         }
+        //         &:nth-of-type(4) {
+        //             // background-color: rgba(255, 0, 0, 0.2);
+        //             flex: 1 0 100%;
+        //             width: 100%;
+        //         }
+        //         &:nth-of-type(6) {
+        //             // background-color: rgba(0, 0, 0, 0.2);
+        //             padding-bottom: 0;
+        //         }
+        //         #ayb {
+        //             background-color: #cc0066 !important;
+        //             border-color: #cc0066 !important;
+        //             margin-bottom: -14px;
+        //
+        //         }
+        //     }
+        //
+        //     .dtlSpacer {
+        //         margin: 0 !important;
+        //     }
+        //
+        //     #fitanalytics__button {
+        //         display: none !important;
+        //     }
+        //
+        //     #srd_pd {
+        //         display: none !important;
+        //     }
+        //
+        //     a.wlbtn-inactive {
+        //         display: none !important;
+        //     }
+        // }
+
+
+    }
+}

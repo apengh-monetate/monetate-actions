@@ -1,0 +1,11 @@
+body.mt-fixed-filter #ayb {
+  background-color: #cc0066 !important;
+  border-color: #cc0066 !important;
+  bottom: 0;
+  box-sizing: border-box;
+  left: 0;
+  position: fixed !important;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+}

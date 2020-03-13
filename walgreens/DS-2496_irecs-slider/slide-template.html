@@ -1,0 +1,15 @@
+<a class="mt_slide" href="{{link}}" data-pid="{{id}}">
+    <figure class="mt_slide__img">
+      <img src="{{imageLink}}" alt="{{id}} - {{title}}">
+    </figure>
+    <figcaption class="mt_slide__text">
+        <div class="mt_slide__title">{{title|truncate: 30}}</div>
+        <div class="mt_slide__sale-price">
+            <span>{{salePrice|priceSuperscript}}</span>
+            <span>{{price|priceFormat: $1,000.00}}</span>
+        </div>
+        <div class="mt_slide__regular-price">
+            <span>{{price|priceSuperscript}}</span>
+        </div>
+    </figcaption>
+</a>

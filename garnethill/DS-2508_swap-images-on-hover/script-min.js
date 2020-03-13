@@ -1,0 +1,1 @@
+jQuery(".unbxd-grid-product-image:not(.mt-swapped)").each((function(){var t=this.getAttribute("data-alternative");t=t.replace(/([\d]*)(_alt1)/g,"$1_alt4"),this.setAttribute("data-alternative",t),this.classList.add("mt-swapped")}));
