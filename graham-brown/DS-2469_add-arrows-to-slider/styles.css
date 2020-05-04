@@ -1,0 +1,13 @@
+@media screen and (max-width: 767px) {
+  button.slick-arrow {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    height: 32px !important;
+    width: 24px !important;
+  }
+  button.slick-arrow.slick-prev {
+    background-position: -367px -156px !important;
+  }
+  button.slick-arrow.slick-next {
+    background-position: -324px -130px !important;
+  }
+}

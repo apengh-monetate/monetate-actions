@@ -1,0 +1,36 @@
+/* ===================================================== */
+/* Cart
+/* ===================================================== */
+.pt_cart {
+    .cart-coupon-code {
+        border-top: 1px solid #000;
+        clear: both;
+        margin-top: 0 !important;
+        padding-top:  0;
+        width: 100% !important;
+        @media screen and (min-width: 768px) {
+            clear: none;
+            padding-top: 16px;
+        }
+    }
+
+    .mobile-coupon {
+        display: block;
+    }
+
+    h5.coupon-header {
+        margin-bottom: 8px;
+    }
+
+    button#add-coupon {
+        display: inline-block;
+        float: right;
+        width: 29%;
+    }
+
+    input#dwfrm_cart_couponCode {
+        display: inline-block;
+        float: left;
+        width: 69% !important;
+    }
+}

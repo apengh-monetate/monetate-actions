@@ -1,0 +1,69 @@
+
+@media screen and (max-width: 767px) {
+    // Shop by category
+    .mobile-category-refiment-container {
+        float: left;
+        margin-right: 2%;
+        position: relative;
+        width: 58%;
+        .category-refiment-button {
+            margin: 0 !important;
+            padding: 9.5px .75em !important;
+        }
+    }
+    .category-refiment-result-container {
+        background: #fff;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        z-index: 9999;
+    }
+    .mobile-refinements-container.active #secondary {
+        background: #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 90%;
+        z-index: 9999;
+    }
+
+    // Filters
+    .search-result-options {
+        display: inline-block;
+        width: 40%;
+        .filters-button {
+            width: 100%;
+        }
+    }
+
+    // Sort by
+    .sort-by {
+        margin-left: -1px !important;
+        margin-right: -1px !important;
+        margin-top: 30px !important;
+        position: relative !important;
+        width: calc(100% + 2px) !important;
+        label {
+            display: block !important;
+            font-size: 15.4px !important;
+            letter-spacing: 0.125em;
+            padding: 0 1.25rem;
+            position: absolute;
+            text-transform: uppercase;
+            top: -20px;
+            &::after {
+                background: #fff;
+                content: "";
+                display: inline-block;
+                height: 16px;
+                position: absolute;
+                right: 7px;
+                transform: translateX(-100%);
+                width: 10px;
+            }
+        }
+        select {
+            padding-left: 1.25rem !important;
+        }
+    }
+}

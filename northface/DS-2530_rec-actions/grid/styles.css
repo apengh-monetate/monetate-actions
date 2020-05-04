@@ -1,0 +1,98 @@
+#MONETATE-ID {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 32px;
+  padding-top: 16px;
+  width: 98%;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID {
+    border-top: 1px solid #d4d4d4;
+  }
+}
+
+#MONETATE-ID [mt-data-grid] {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID [mt-data-grid] {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+#MONETATE-ID [mt-data-grid] .mt-merch-item {
+  box-sizing: border-box;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin: 0;
+  max-width: 50%;
+  padding: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID [mt-data-grid] .mt-merch-item {
+    -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
+    width: 24%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #MONETATE-ID [mt-data-grid] .mt-merch-item {
+    -ms-flex-preferred-size: 19%;
+        flex-basis: 19%;
+    width: 19%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #MONETATE-ID [mt-data-grid] .mt-merch-item:nth-child(n+5) {
+    display: none;
+  }
+}
+
+#MONETATE-ID .mt_rec-grid img {
+  max-width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt_rec-grid img {
+    max-width: 100%;
+  }
+}
+
+#MONETATE-ID .mt_rec-grid__header {
+  color: #2a2a2a;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#MONETATE-ID .mt_rec-grid__wrapper {
+  margin-top: 12px;
+}
+
+#MONETATE-ID .mt_rec-grid-item__title {
+  color: #2a2a2a;
+  font-family: 'HelveticaNeueW02-77BdCn_694066', helvetica, sans-serif;
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: center;
+  width: 95%;
+}

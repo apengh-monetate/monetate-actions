@@ -1,0 +1,1 @@
+!function(){var a=document.querySelector(".mt_quick-links"),t=window.digitalData.search.Goesto;if(a&&t){var e=a.querySelector('a[data-category-name="'+t+'"]');e&&e.classList.add("mt_active")}}();

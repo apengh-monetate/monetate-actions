@@ -1,0 +1,55 @@
+$breakpoint-lg: 1025px;
+
+
+/* ===================================================== */
+/* Shipping Page
+/* ===================================================== */
+.checkout-shipping {
+    .form-row {
+        margin: 0 0 12px !important;
+    }
+    .section-header.shipping-methods {
+        padding-top: 30px !important;
+    }
+}
+
+
+/* ===================================================== */
+/* Billing Page
+/* ===================================================== */
+.checkout-billing {
+    .billing-address-set .form-row {
+        margin: 0 0 12px !important;
+    }
+
+    .billing-collapsible {
+        margin: 0 0 30px !important;
+    }
+}
+
+
+/* ===================================================== */
+/* Review Order
+/* ===================================================== */
+.order-review-summary {
+    @media screen and (max-width: ($breakpoint-lg - 1)) {
+        .primary-content .order-component-block.mini-billing-address {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        .order-component-block.egc .details,
+        .order-component-block.review .details {
+            padding-bottom: 0 !important;
+        }
+        .order-component-block.egc .shipment-label,
+        .order-component-block.review .shipment-label,
+        .summary-payment .summary-payment-label {
+            margin-top: 30px !important;
+        }
+
+        .pt_cart.loaylty-account #secondary.summary.order-review-summary,
+        .pt_checkout #secondary.summary.order-review-summary {
+            padding-top: 30px !important;
+        }
+    }
+}

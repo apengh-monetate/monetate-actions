@@ -1,0 +1,85 @@
+$monetate-id: #MONETATE-ID;
+// $monetate-id: #monetate_selectorHTML_9b59ede7_0;
+
+#{$monetate-id} {
+    display: block;
+    height: 49px;
+    @media screen and (min-width: 768px) {
+        display: inline-block;
+        height: auto;
+    }
+    @media screen and (min-width: 1025px) {
+
+    }
+
+    li {
+        border-bottom: 1px solid #d8d8d8 !important;
+        box-sizing: border-box;
+        display: block;
+        height: 49px;
+        @media screen and (min-width: 768px) {
+            border: none !important;
+            display: inline-block;
+            height: auto;
+        }
+        @media screen and (min-width: 1025px) {
+
+        }
+        > a {
+            border-bottom: none;
+            display: block;
+            font-size: 13px !important;
+            font-size: .8125rem !important;
+            line-height: 49px;
+            margin: 0 auto;
+            margin-top: 2px;
+            padding: 0;
+            padding-bottom: 2px;
+            width: calc(100% - 34px) !important;
+            @media screen and (min-width: 768px) {
+                border-bottom: 2px solid #fff;
+                font-size: 12px !important;
+                line-height: 21px;
+                margin-bottom: 3px;
+                padding-bottom: 2px;
+                width: auto !important;
+            }
+            @media screen and (min-width: 1025px) {
+                line-height: 15px;
+                margin-right: 1.75rem;
+                &:hover {
+                    border-color: #000;
+                }
+            }
+        }
+    }
+}
+
+
+//
+// #MONETATE-ID li > a {
+//   border-bottom: 2px solid #fff;
+//   margin: 0;
+//   margin-bottom: 3px;
+//   padding: 0;
+//   padding-bottom: 2px;
+// }
+//
+// @media screen and (max-width: 1024px) {
+//   #MONETATE-ID li > a {
+//     border-bottom: none;
+//     font-size: 13px !important;
+//     font-size: .8125rem !important;
+//     line-height: 49px;
+//     margin: 0 auto;
+//     margin-top: 2px;
+//     padding-bottom: 2px;
+//     width: calc(100% - 34px) !important;
+//   }
+// }
+//
+// @media screen and (min-width: 1025px) {
+//   #MONETATE-ID li > a:hover {
+//     border-bottom: 2px solid #000;
+//   }
+// }

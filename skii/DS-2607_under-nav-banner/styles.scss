@@ -1,0 +1,37 @@
+.mt_nav-banner {
+    background: #c20430;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Camphor W01 Regular';
+    margin: auto;
+    overflow: hidden;
+    padding: 14px 14px 13px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    @media screen and (min-width: 681px) {
+        padding: 11px 62px;
+    }
+    
+    p {
+        color: #fff;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0;
+        padding: 0;
+        @media screen and (min-width: 681px) {
+            font-size: 16px;
+        }
+    }
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+    }
+}
+
+
+/* Hide native banner, if exists */
+.homepage-promotional-banner > .promo-parent {
+  display: none !important;
+}

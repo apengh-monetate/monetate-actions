@@ -1,0 +1,37 @@
+/* ===================================================== */
+/* Cart
+/* ===================================================== */
+.pt_cart .cart-coupon-code {
+  border-top: 1px solid #000;
+  clear: both;
+  margin-top: 0 !important;
+  padding-top: 0;
+  width: 100% !important;
+}
+
+@media screen and (min-width: 768px) {
+  .pt_cart .cart-coupon-code {
+    clear: none;
+    padding-top: 16px;
+  }
+}
+
+.pt_cart .mobile-coupon {
+  display: block;
+}
+
+.pt_cart h5.coupon-header {
+  margin-bottom: 8px;
+}
+
+.pt_cart button#add-coupon {
+  display: inline-block;
+  float: right;
+  width: 29%;
+}
+
+.pt_cart input#dwfrm_cart_couponCode {
+  display: inline-block;
+  float: left;
+  width: 69% !important;
+}

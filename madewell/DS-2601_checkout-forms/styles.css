@@ -1,0 +1,44 @@
+/* ===================================================== */
+/* Shipping Page
+/* ===================================================== */
+.checkout-shipping .form-row {
+  margin: 0 0 12px !important;
+}
+
+.checkout-shipping .section-header.shipping-methods {
+  padding-top: 30px !important;
+}
+
+/* ===================================================== */
+/* Billing Page
+/* ===================================================== */
+.checkout-billing .billing-address-set .form-row {
+  margin: 0 0 12px !important;
+}
+
+.checkout-billing .billing-collapsible {
+  margin: 0 0 30px !important;
+}
+
+/* ===================================================== */
+/* Review Order
+/* ===================================================== */
+@media screen and (max-width: 1024px) {
+  .order-review-summary .primary-content .order-component-block.mini-billing-address {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  .order-review-summary .order-component-block.egc .details,
+.order-review-summary .order-component-block.review .details {
+    padding-bottom: 0 !important;
+  }
+  .order-review-summary .order-component-block.egc .shipment-label,
+.order-review-summary .order-component-block.review .shipment-label,
+.order-review-summary .summary-payment .summary-payment-label {
+    margin-top: 30px !important;
+  }
+  .order-review-summary .pt_cart.loaylty-account #secondary.summary.order-review-summary,
+.order-review-summary .pt_checkout #secondary.summary.order-review-summary {
+    padding-top: 30px !important;
+  }
+}

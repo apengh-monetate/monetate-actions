@@ -1,0 +1,14 @@
+.mt_swatch-badge {
+  background-color: #ececec;
+  display: inline-block;
+  font-family: abchanel-corpo, sans-serif;
+  font-size: .5rem;
+  font-weight: 600 !important;
+  letter-spacing: normal;
+  line-height: 1.125;
+  margin-bottom: .125rem !important;
+  padding: .15625rem .625rem;
+  padding-top: .125rem;
+  text-transform: uppercase;
+  word-break: keep-all;
+}

@@ -1,0 +1,39 @@
+.mt_dynamic-banner {
+  box-sizing: border-box;
+  display: block;
+  line-height: 0;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.mt_dynamic-banner__picture img {
+  width: 100%;
+}
+
+.mt_dynamic-banner__text {
+  color: #fff;
+  font-family: "adelle-condensed";
+  font-size: 1.75em;
+  font-style: italic;
+  left: 10px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-transform: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .mt_dynamic-banner__text {
+    font-size: 2.25em;
+  }
+}
+
+.mt_dynamic-banner .fa {
+  font-size: .7em !important;
+  font-weight: 400 !important;
+}

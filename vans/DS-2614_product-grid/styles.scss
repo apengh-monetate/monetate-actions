@@ -1,0 +1,113 @@
+
+.mt-product-grid-container-open {
+    .monetate-product-grid {
+        position: relative;
+
+        &::before {
+            color: #fff;
+            content: 'May We Suggest' !important;
+            display: block !important;
+            font-family: "franklin-gothic-urw-cond", "Arial Narrow Bold", Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            left: 50%;
+            position: absolute;
+            text-align: center;
+            text-transform: uppercase;
+            top: 0;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            z-index: 99999;
+        }
+
+        a {
+            color: #2b2b2b !important;
+        }
+    }
+
+
+    .mpg-page {
+        margin: 0 auto;
+        max-width: 1274px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 30px;
+        &::before,
+        &::after {
+            border: 50px solid transparent;
+            content: '';
+            display: block;
+            height: 0;
+            position: absolute;
+            width: 0;
+        }
+        &::before {
+            border-bottom: 30px solid #000;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, -100%);
+        }
+        &::after {
+            border-top: 30px solid #000;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    .mpg-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        width: calc(100% - 60px);
+    }
+
+
+    .mpg-item {
+        padding: 10px;
+        position: relative;
+        text-align: center;
+        width: 50% !important;
+        @media screen and (min-width: 414px) {
+            width: calc(100% / 3) !important;
+        }
+        @media screen and (min-width: 768px) {
+            width: calc(100% / 6) !important;
+        }
+    }
+
+
+    .mpg-text {
+        color: #2B2B2B;
+        font-family: "franklin-gothic-urw-cond", "Arial Narrow Bold", Arial, sans-serif;
+        font-weight: normal;
+        br {
+            display: none;
+        }
+    }
+
+
+    .mpg-name {
+        color: #2B2B2B;
+        display: block;
+        font-family: Helvetica Neue,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    .mpg-image {
+        display: inline-block;
+        max-width: 100%;
+    }
+
+
+    .mpg-price {
+        color: #C9192E;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+}

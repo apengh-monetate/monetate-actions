@@ -1,0 +1,53 @@
+{
+    "title": "Organic Channel Source (Organic)",
+    "description": "Organic Channel Source",
+    "category": "cookie",
+    "subcategory": "Other",
+    "op": "targetCookie",
+    "inputs": [
+        {
+            "input": {
+                "type": "str",
+                "name": "name",
+                "value": "mt.sc"
+            },
+            "widget": {
+                "type": "CookieTypeAheadField",
+                "description": "",
+                "label": "Cookie Name"
+            }
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "compare",
+                "value": "contain"
+            },
+            "widget": {
+                "type": "StringSelectField",
+                "description": "",
+                "label": "Cookie Value"
+            }
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "value",
+                "value": "cs;organic"
+            },
+            "widget": {
+                "type": "CharField",
+                "description": "Leave empty to match against a cookie that exists but has no value.",
+                "label": "Value"
+            }
+        }
+    ],
+    "is_archived": false,
+    "is_identifier": false,
+    "is_collector": false,
+    "named_identifier": null,
+    "path": {
+        "value": "",
+        "op": ""
+    }
+}

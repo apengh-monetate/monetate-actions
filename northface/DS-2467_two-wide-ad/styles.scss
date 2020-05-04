@@ -1,0 +1,15 @@
+$breakpoint-md: 40em;
+$breakpoint-lg: 64em;
+
+#MONETATE-ID {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0 -4px 32px 0;
+    margin-bottom: 32px;
+    margin-top: 28px;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    @media screen and (max-width: ($breakpoint-lg - 1)) {
+        display: none;
+    }
+}

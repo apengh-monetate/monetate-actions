@@ -1,0 +1,39 @@
+body {
+  padding-top: 0 !important;
+}
+
+/* Make the filter button fixed */
+body.mt-fixed-filter #mobilefilter-btn {
+  box-sizing: border-box;
+  left: 0;
+  padding: 0 !important;
+  position: fixed !important;
+  top: 0;
+  transition: transform 0.2s ease;
+  width: 100%;
+  z-index: 99;
+}
+
+/* Slide the filter/sort button down when scrolling up */
+body.mt-fixed-filter.mt-scroll-up #mobilefilter-btn {
+  transform: translateY(51px);
+}
+
+body.mt-fixed-filter.mt-scroll-up #mobilefilter-btn.filter {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Adjust the filter button to be below the fixed header */
+#siteTopBanner {
+  transition: transform 0.2s ease;
+}
+
+/* When scrolled down beyond the top banner, slide the top banner up out of view */
+body.mt-hide-top-banner #siteTopBanner {
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translateY(-35px);
+  width: 100%;
+}

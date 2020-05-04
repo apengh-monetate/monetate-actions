@@ -1,0 +1,233 @@
+/**
+* DEFAULT SLIDER STYLES
+* Edit at your own risk!
+*/
+#MONETATE-ID {
+    position: relative;
+}
+
+#MONETATE-ID [data-slider-mask] {
+    border-bottom: 1px solid rgb(236, 230, 223);
+    margin: 0!important;
+    overflow: hidden!important;
+    padding: 0!important;
+    position: relative!important;
+}
+
+#MONETATE-ID li {
+    height: auto !important;
+    list-style: none;
+}
+
+#MONETATE-ID .product-tile {
+    height: auto !important;
+}
+
+#MONETATE-ID [data-slider] {
+    display: block;
+    margin: 0!important;
+    padding: 0!important;
+}
+
+#MONETATE-ID [data-slide] {
+    float: none;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider] {
+    white-space: nowrap!important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slide] {
+    display: inline-block!important;
+    vertical-align: top;
+    white-space: normal;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slide] {
+    display: block!important;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide],
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button]{
+    cursor: pointer;
+    z-index: 1;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+    touch-action: pan-x;
+}
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider-mask],
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slider-mask] {
+    touch-action: pan-y;
+}
+
+#MONETATE-ID [data-pagination-slide] * {
+    pointer-events: none;
+}
+
+/** ----END DEFAULT STYLES---- */
+
+
+/**
+* CUSTOM SLIDER STYLING
+*/
+#MONETATE-ID [data-pagination="thumbnails"] [data-pagination-slide] {
+    background: none;
+    border-radius: 0;
+    height: auto;
+    width: 40px;
+}
+
+#MONETATE-ID [disabled] {
+    opacity: 0.5;
+}
+
+#MONETATE-ID [data-pagination-slide] {
+    background: #000;
+    border-radius: 6px;
+    display: inline-block;
+    height: 12px;
+    margin: 4px;
+    opacity: 0.5;
+    width: 12px;
+}
+
+#MONETATE-ID [data-pagination-slide][data-slide-active] {
+    opacity: 1;
+}
+
+#MONETATE-ID [data-slide] > div {
+    height: 100%;
+    padding: 5px;
+}
+
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    background: none;
+    border: none;
+    color: #7e551b;
+    padding: 0;
+    position: absolute;
+    top: 40%;
+    user-select: none;
+}
+
+#MONETATE-ID [data-prev-button] i,
+#MONETATE-ID [data-next-button] i {
+    font-size: 75px !important;
+}
+
+#MONETATE-ID [data-prev-button] {
+    left: -2.5em;
+}
+
+#MONETATE-ID [data-next-button] {
+    right: -2.5em;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-prev-button] {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-next-button]{
+    bottom: 0;
+    left: 50%;
+    right: auto;
+    top: auto;
+    transform: translateX(-50%);
+}
+
+#MONETATE-ID [data-slider-mask] {
+    display: inline-block;
+    width: 100%;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+    height: 400px!important;
+}
+
+#MONETATE-ID [data-slide] a {
+    text-decoration: none;
+}
+
+#MONETATE-ID [data-pagination*="dots"] [data-pagination-slide] {
+    /* remove below for pagination numbers */
+    text-indent: -9999px;
+}
+
+#MONETATE-ID h3 {
+    color: #7e551b;
+    font-family: 'adelle-sans' !important;
+    font-size: 1.75em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 0 0.2em !important;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    #MONETATE-ID h3 {
+        font-size: 1.25em;
+        margin-top: 1em;
+    }
+}
+
+#MONETATE-ID .product-tile {
+    padding: 0px;
+}
+
+/* Fixes for different sized images */
+#MONETATE-ID .product-tile .product-image {
+    height: auto !important;
+    margin: auto;
+    max-width: 230px;
+    /* increase or decrease this to get ratio you want */
+    padding-bottom: 132.5%;
+    position: relative;
+    width: 100%;
+}
+/* Fixes for different sized images */
+#MONETATE-ID img {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#MONETATE-ID [data-missing-keys*="salePrice"] .product-pricing .product-standard-price {
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+/* Star Ratings accessible text */
+#MONETATE-ID .mt-reco-stars-accessible-text {
+    color: #404040;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+}

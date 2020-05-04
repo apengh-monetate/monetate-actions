@@ -1,0 +1,66 @@
+.pt_checkout .checkout-order-totals-wrapper .billing-collapsible {
+  border-top: 1px solid #000;
+  margin-top: 12px;
+  padding-top: 24px;
+}
+
+.pt_checkout .checkout-order-totals-wrapper .billing-collapsible legend {
+  display: none;
+}
+
+.pt_checkout .checkout-order-totals-wrapper .billing-collapsible .billing-coupon {
+  margin-bottom: 0;
+}
+
+.pt_checkout .checkout-order-totals-wrapper .billing-collapsible .form-row.label-above {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  width: 48%;
+}
+
+.pt_checkout .checkout-order-totals-wrapper .billing-collapsible .form-row.label-above .field-wrapper {
+  width: 100% !important;
+}
+
+.pt_checkout .checkout-order-totals-wrapper .billing-collapsible .form-row.label-above .field-wrapper input {
+  border: 1px solid #ccc !important;
+}
+
+.pt_checkout .checkout-order-totals-wrapper .billing-collapsible .form-row.coupon-apply {
+  display: inline-block;
+  float: right;
+  margin: 0;
+  margin-top: calc(18px + .3rem);
+  width: 48%;
+}
+
+.pt_checkout .checkout-order-totals-wrapper .billing-collapsible #add-coupon {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: p22-underground,sans-serif;
+  font-size: 12px;
+  font-size: .75rem;
+  font-weight: 700;
+  height: 40px;
+  letter-spacing: .08em;
+  line-height: 40px;
+  padding: 0 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  width: 100% !important;
+}
+
+.pt_checkout .checkout-order-totals-wrapper .billing-collapsible #add-coupon:hover, .pt_checkout .checkout-order-totals-wrapper .billing-collapsible #add-coupon:focus {
+  background-color: #4c4c4c;
+  border-color: #4c4c4c;
+  color: #fff;
+}
