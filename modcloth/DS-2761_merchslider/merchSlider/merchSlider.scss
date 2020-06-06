@@ -1,0 +1,309 @@
+$MONETATE-ID: #MONETATE-ID;
+// $MONETATE-ID: #mt-slider-3451473-0;
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#{$MONETATE-ID} {
+    position: relative;
+
+    li {
+        list-style: none;
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        margin: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider-mask],
+    &[data-slider-wrapper="fade"] [data-slider-mask] {
+        touch-action: pan-y;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        touch-action: pan-x;
+    }
+
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider] {
+        white-space: nowrap !important;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        float: none;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slide] {
+        display: inline-block !important;
+        vertical-align: top;
+        white-space: normal;
+    }
+    &[data-slider-wrapper="vertical"] [data-slide] {
+        display: block !important;
+    }
+    &[data-slider-wrapper="fade"] [data-slide] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+    &[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+    // ==================================================================
+    // Buttons / Pagination
+    // ==================================================================
+    [data-pagination-slide],
+    [data-prev-button],
+    [data-next-button]{
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    [data-pagination-slide] * {
+        pointer-events: none;
+    }
+
+} // MONETATE-ID
+
+
+
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#{$MONETATE-ID} {
+    background-color: #f0eeeb;
+    margin: 0 auto;
+    margin-bottom: 4vw;
+    max-width: 1800px;
+    overflow: hidden;
+    padding: 8vw 0;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-md) {
+        margin-bottom: 2.22222%;
+        padding: 0;
+    }
+
+
+    // ==================================================================
+    // Slider Container Template
+    // ==================================================================
+    .mt_slider {
+        &__container {
+            margin: 0 15%;
+            width: 70%;
+            @media screen and (min-width: $breakpoint-md) {
+                margin: 0 10.55556%;
+                padding: 4.44444% 0;
+                width: 78.88889%;
+            }
+        }
+        &__header {
+            font-family: "FuturaPTWeb", "Mod Futura PT", "Futura PT", "Arial Bold", sans-serif;
+            text-align: center;
+            h3 {
+                color: #48505f;
+                font-size: 9vw;
+                font-weight: 500;
+                letter-spacing: 0.15em;
+                line-height: 1.35em;
+                margin: 0 auto;
+                text-transform: uppercase;
+                width: 100%;
+                @media screen and (min-width: $breakpoint-md) {
+                    font-size: 2.778vw;
+                }
+            }
+        }
+        &__wrapper {
+            margin: 5vw 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            @media screen and (min-width: $breakpoint-md) {
+                margin: 2.22222% 0;
+            }
+        }
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        display: inline-block;
+        width: 100%;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        height: 400px!important;
+    }
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+
+    }
+
+
+    // ==================================================================
+    // Buttons
+    // ==================================================================
+    [data-prev-button],
+    [data-next-button] {
+        background-color: transparent;
+        background-image: url('//marketing.modcloth.com/site-assets/2020/02/wk1/img/arrow.png');
+        background-position: 50% 45%;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        border: .115em solid #1e1e1e;
+        border-radius: 50%;
+        box-sizing: border-box;
+        cursor: pointer;
+        height: 12vw;
+        min-width: unset;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        width: 12vw;
+        @media screen and (min-width: $breakpoint-md) {
+            height: 4vw;
+            width: 4vw;
+        }
+    }
+    [data-prev-button] {
+        left: 0;
+        transform: translate(-13vw, -50%) rotate(-90deg);
+        @media screen and (min-width: $breakpoint-md) {
+            transform: translate(-5.25vw, -50%) rotate(-90deg);
+        }
+    }
+    [data-next-button] {
+        right: 0;
+        transform: translate(13vw, -50%) rotate(90deg);
+        @media screen and (min-width: $breakpoint-md) {
+            transform: translate(5.25vw, -50%) rotate(90deg);
+        }
+    }
+
+
+
+    // ==================================================================
+    // Pagination
+    // ==================================================================
+    [data-pagination="thumbnails"] [data-pagination-slide] {
+        background: none;
+        border-radius: 0;
+        height: auto;
+        width: 40px;
+    }
+
+    [disabled] {
+        opacity: 0.5;
+    }
+
+    [data-pagination-slide] {
+        background: #000;
+        border-radius: 6px;
+        display: inline-block;
+        height: 12px;
+        margin: 4px;
+        opacity: 0.5;
+        width: 12px;
+        &[data-slide-active] {
+            opacity: 1;
+        }
+    }
+    [data-pagination*="dots"] [data-pagination-slide] {
+        /* remove below for pagination numbers */
+        text-indent: -9999px;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        > div {
+            height: 100%;
+            padding: 0 10px;
+        }
+        img {
+            max-width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+
+    // ==================================================================
+    // Slide Template
+    // ==================================================================
+    .mt_slide {
+        &__img {
+            img {
+
+            }
+        }
+
+        &__text {
+
+        }
+
+        &__title {
+
+        }
+
+        &__price {
+            &--reg {
+
+            }
+            &--sale {
+
+            }
+        }
+
+    }
+
+    [data-missing-keys*="salePrice"] {
+        .mt_slide {
+            &__price {
+                &--reg {
+
+                }
+                &--sale {
+
+                }
+            }
+        }
+    }
+}

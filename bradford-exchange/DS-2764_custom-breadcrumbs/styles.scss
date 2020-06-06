@@ -1,0 +1,199 @@
+$MONETATE-ID: #MONETATE-ID;
+// $MONETATE-ID: #monetate_selectorHTML_702cdd3b_0;
+
+$orange: #F26102;
+
+
+.breadcrumbs__mob {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & > a {
+        flex: 1;
+    }
+    .breadcrumbs__tap {
+        text-align: right;
+    }
+}
+
+#{$MONETATE-ID} {
+    background: rgba(255, 0, 0, 0.1);
+    display: block;
+    flex: 1 1 100%;
+    margin-top: 8px;
+    width: 100%;
+
+    #mt-shop-category-link {
+        background-color: #E26102;
+        background-image: linear-gradient(to bottom, $orange 0%, rgba(255, 255, 255, 0.5) 50%, $orange 50%, $orange 100%);
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        color: #fff;
+        display: block;
+        padding: 5px 6px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        a {
+            color: #fff;
+            font-family: 'Verdana', helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            position: relative;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            &::after {
+                border-color: transparent transparent transparent #fff;
+                border-style: solid;
+                border-width: 4px 0 4px 7px;
+                bottom: 0;
+                content: '';
+                height: 0;
+                margin: auto;
+                position: absolute;
+                right: -10px;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+                top: 0;
+                width: 0;
+            }
+        }
+    }
+}
+
+
+
+// .back-button-wrapper {
+//     box-sizing: border-box;
+//     display: block;
+//     margin: 0 auto;
+//     max-width: 360px;
+//     padding-top:0;
+//     position: relative;
+//     width: 100%;
+//     @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+//         max-width: 395px !important;
+//     }
+//
+//     .back-link,
+//     .details-link {
+//         box-sizing: border-box !important;
+//         display: inline-block !important;
+//         float: left;
+//         left: initial !important;
+//         margin: 0 !important;
+//         position: relative !important;
+//         right: initial !important;
+//         top:  initial !important;
+//         width: 33% !important;
+//     }
+//
+//     .back-link {
+//         font-size: 0 !important;
+//         &:after {
+//             content: "Back to homepage";
+//             display: inline-block;
+//             font-size: 12px !important;
+//         }
+//     }
+//
+//     .details-link:after {
+//         background: url(https://www.bradfordexchange.com/store/20091217001/mobile/images/ArrowDownWhite.png) no-repeat 4px 4px;
+//         background-size: 100%;
+//         content: '';
+//         display: inline-block;
+//         height: 15px;
+//         margin-left: 2px;
+//         position: relative;
+//         top: 2px;
+//         width: 20px;
+//     }
+//
+//     .page-title,
+//     .page-title ~ * {
+//         display: inline-block !important;
+//         position: relative;
+//         width: 100% !important;
+//     }
+//
+//     .page-title {
+//         margin-top: 15px !important;
+//     }
+// }
+//
+// #monetate_selectorHTML_2eeb300d_0 {
+//     box-sizing: border-box !important;
+//     display: inline-block !important;
+//     float: left;
+//     left: initial !important;
+//     margin: 0 !important;
+//     position: relative !important;
+//     right: initial !important;
+//     text-align: left;
+//     top:  initial !important;
+// }
+// #mt-shop-category-link {
+//     box-sizing: border-box !important;
+//     display: inline-block !important;
+//     float: left;
+//     left: initial !important;
+//     margin: 0 !important;
+//     position: relative !important;
+//     right: initial !important;
+//     text-align: left;
+//     top:  initial !important;
+//     width: 100% !important;
+//     a {
+//         color: #fff;
+//         font-size: 12px;
+//         height: 25px;
+//         overflow: hidden;
+//         text-align: center;
+//     }
+// }
+//
+//
+// #mt-shop-category-link,
+// .back-button-wrapper .back-link,
+// .back-button-wrapper .details-link {
+//     -moz-box-shadow: 0px 2px 2px #32465a;
+//     -webkit-box-shadow: 0px 2px 2px #32465a;
+//     -webkit-border-radius: 10px;
+//     -moz-border-radius: 10px;
+//     background: -moz-linear-gradient(top, #647d9c 0%, #657e9d 50%, #516a8b 51%, #516a8b 100%);
+//     background: -o-linear-gradient(top, #647d9c 0%,#657e9d 50%,#516a8b 51%,#516a8b 100%);
+//     background: -ms-linear-gradient(top, #647d9c 0%,#657e9d 50%,#516a8b 51%,#516a8b 100%);
+//     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #647d9c), color-stop(50%, #657e9d), color-stop(51%, #516a8b), color-stop(100%, #516a8b));
+//     background-image: -webkit-linear-gradient(top, #647d9c, #657e9d 50%, #516a8b 51%, #516a8b) !important;
+//     background-image: linear-gradient(top, #647d9c, #657e9d 50%, #516a8b 51%, #516a8b) !important;
+//     background-size: 100% 100% !important;
+//     border-radius: 10px;
+//     box-shadow: 0px 2px 2px #32465a;
+//     box-sizing: border-box !important;
+//     color: #fff;
+//     cursor: pointer;
+//     font-family: verdana;
+//     font-size: 12px;
+//     height: 50px;
+//     line-height: 18px;
+//     margin: 0 5px !important;
+//     max-width: 100px;
+//     padding: 8px 8px 0 !important;
+//     text-align: center;
+//     width: 100% !important;
+//     @media screen and (max-width: 667px) {
+//         max-width: 108px !important;
+//         padding: 7px 12px 0 !important;
+//     }
+//     @media screen and (max-width: 367px) {
+//         max-width: 90px !important;
+//         padding: 7px 4px !important;
+//     }
+//     @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+//         max-width: 121px !important;
+//         padding: 7px 12px !important;
+//     }
+// }
+//
+// .product-title {
+//     clear: both;
+//     padding-top: 18px;
+// }

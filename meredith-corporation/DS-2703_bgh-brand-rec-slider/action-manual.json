@@ -1,0 +1,243 @@
+{
+    "id": 474340,
+    "title": "Intelligent Recommendation Slider (Brand) - MANUAL",
+    "description": "Inserts a slider with intelligent recommendation items.",
+    "op": "iRecSlider",
+    "slot": "none",
+    "slot_type": "none",
+    "category": "endcap",
+    "subcategory": "other",
+    "action_events": [
+        "op_click",
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "type": "str",
+                "name": "selector",
+                "value": ".product-container.js-product-container"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "CssSelectorField",
+                "description": "Selector to find the node where the slider will be inserted.",
+                "label": "Insert Selector"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "imeth",
+                "value": "before"
+            },
+            "widget": {
+                "description": "Method to use when inserting the slider relative to the selected node.",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "after",
+                        "label": "After"
+                    },
+                    {
+                        "name": "before",
+                        "label": "Before"
+                    },
+                    {
+                        "name": "first",
+                        "label": "First"
+                    },
+                    {
+                        "name": "last",
+                        "label": "Last"
+                    },
+                    {
+                        "name": "replace",
+                        "label": "Replace"
+                    },
+                    {
+                        "name": "takeover",
+                        "label": "Takeover"
+                    }
+                ],
+                "label": "Insert Method"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "insertOptions",
+                "value": "RecheckForElement"
+            },
+            "widget": {
+                "description": "RecheckForElement: If the selector is not found, wait up to 3 seconds for it to show up. SelectMultipleElements: If the selector matches multiple places, do you want to insert at each of them?",
+                "label": "Insert Options",
+                "action_visible": true,
+                "hiddenMenu": true,
+                "allIsValid": true,
+                "type": "CheckboxArrayAsString",
+                "options": [
+                    "RecheckForElement",
+                    "SelectMultipleElements"
+                ]
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "json",
+                "name": "json",
+                "value": "{\n    \"products_data\": [\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"Clean lines, sleek finishes, and a unique design make this 2-Tiered Glass with Gold Metal Frame Accent Table the epitome of your modern decor. This piece is sure to give your living room a bold, glamorous update. Table measures 17L x 15W x 32H in. Crafted with a metal frame Gold/bronze finish Clear glass tabletop Features two (2) shelves for storage and display Shelves features mirrored finish Triangle rod side panels Assembly required Not intended for commercial use Care: Dust with a soft, dry cloth. This item is available at Kirklands.com only, not available in stores. Please note: this item cannot be shipped to APO/FPO addresses.|https://www.bhg.com/shop/kirklands-2-tiered-glass-accent-table-with-gold-metal-frame-p6b61ee3f581537d66c5818f3d0404eda.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"6b61ee3f581537d66c5818f3d0404eda\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/6b61ee3f581537d66c5818f3d0404eda/1577160979339/m/2-tiered-glass-accent-table-with-gold-metal-frame\",\n            \"itemGroupId\": \"6b61ee3f581537d66c5818f3d0404eda\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=6b61ee3f581537d66c5818f3d0404eda&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"139.99\",\n            \"productType\": \"Furniture|Living Room Furniture|Accent Furniture|Accent Tables|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"104.99\",\n            \"schemaId\": \"12581\",\n            \"title\": \"2-Tiered Glass Accent Table with Gold Metal Frame\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"Our 3-Shelf Wood and Chicken Wire Plant Stand blurs the lines between farm and function! Its wood craftsmanship and chicken wire detail make it the perfect piece for your greenhouse display! Plant stand measures 15L x 15W x 46H in. Crafted of wood composite and metal Gray wood finish Chicken wire screens Features three (3) shelves Care: Safe for outdoor use. This item is available at Kirklands.com only, not available in stores. Please note: this item cannot be shipped to APO/FPO addresses.|https://www.bhg.com/shop/kirklands-3-shelf-wood-and-chicken-wire-plant-stand-p704fe3945f54d4be0bb8b0f1760e2742.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"704fe3945f54d4be0bb8b0f1760e2742\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/704fe3945f54d4be0bb8b0f1760e2742/1583229728569/m/3-shelf-wood-and-chicken-wire-plant-stand\",\n            \"itemGroupId\": \"704fe3945f54d4be0bb8b0f1760e2742\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=704fe3945f54d4be0bb8b0f1760e2742&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"129.99\",\n            \"productType\": \"Outdoor & Garden Supplies|Lawn & Garden Supplies|Outdoor Pots & Planters|Outdoor Plant Stands|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"schemaId\": \"12581\",\n            \"title\": \"3-Shelf Wood and Chicken Wire Plant Stand\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"Add a grand gesture to your current decor with our Aged Walnut Louis Arched Mirror! This stunning piece will give your entryway an extravagant look. Mirror measures 30L x 1W x 42H in. Crafted of wood and glass Walnut frame finish Rounded arch mirror design Weight: 20 lbs. Comes ready for wall mount; no additional hanging hardware required Care: Dust with a soft, dry cloth. To clean mirror, spray a small amount of glass cleaner onto a lint-free cloth and wipe clean. Contact your local Kirkland’s store for availability. Quantities and selection may vary by location.|https://www.bhg.com/shop/kirklands-aged-walnut-louis-arched-mirror-pfe8c369b4dee78fa785585fc1d554dd7.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"fe8c369b4dee78fa785585fc1d554dd7\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/fe8c369b4dee78fa785585fc1d554dd7/1578134101923/m/aged-walnut-louis-arched-mirror\",\n            \"itemGroupId\": \"fe8c369b4dee78fa785585fc1d554dd7\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=fe8c369b4dee78fa785585fc1d554dd7&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"99.99\",\n            \"productType\": \"Decor|Mirrors|Wall Mirrors|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"64.97\",\n            \"schemaId\": \"12581\",\n            \"title\": \"Aged Walnut Louis Arched Mirror\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"The wooden cabinet door with metal detailing gives this accent table a vintage look that would spice up any space. Our Antique Black Weathered Accent Table has both a shelf and a cabinet for all your storage needs. Accent table measures 19L x 14W x 27H in. Crafted of wood and wood composite Weathered black wooden finish Features one (1) shelf and one (1) cabinet for storage Light wood cabinet door with black metal accent and hardware Some assembly required Not intended for commercial use Care: Dust with a soft, dry cloth. This item is available at Kirklands.com only, not available in stores. Please note: this item cannot be shipped to APO/FPO addresses.|https://www.bhg.com/shop/kirklands-antique-black-weathered-accent-table-pa2fa7ffd6a7a366bf2effab559922d77.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"a2fa7ffd6a7a366bf2effab559922d77\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/a2fa7ffd6a7a366bf2effab559922d77/1577161365186/m/antique-black-weathered-accent-table\",\n            \"itemGroupId\": \"a2fa7ffd6a7a366bf2effab559922d77\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=a2fa7ffd6a7a366bf2effab559922d77&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"229.99\",\n            \"productType\": \"Furniture|Living Room Furniture|Accent Furniture|Accent Tables|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"172.49\",\n            \"schemaId\": \"12581\",\n            \"title\": \"Antique Black Weathered Accent Table\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"This Antique Cream Beaded Chandelier makes a statement in any room. Guests will marvel at the natural appeal of its draped wood beads and curved metal frame. Chandelier measures 23.5H x 19 in. in diameter Crafted of metal, rope, and wood Natural wood bead finish Aged black metal frame with wrapped rope details Accommodates three (3) 60-watt, type-B candelabra bulbs Direct hardwire installation required Features a 7 ft. aged black chain Care: Dust with a soft, dry cloth. Do not exceed specified wattage. Contact your local Kirkland's store for availability. Quantities and selection may vary by location.|https://www.bhg.com/shop/kirklands-antique-cream-beaded-chandelier-p95efa1af5e5ab5a228a0a05d7ddeaee6.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"95efa1af5e5ab5a228a0a05d7ddeaee6\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/95efa1af5e5ab5a228a0a05d7ddeaee6/1577160107845/m/antique-cream-beaded-chandelier\",\n            \"itemGroupId\": \"95efa1af5e5ab5a228a0a05d7ddeaee6\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=95efa1af5e5ab5a228a0a05d7ddeaee6&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"199.99\",\n            \"productType\": \"Decor|Lighting|Ceiling Lights|Chandeliers|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"99.97\",\n            \"schemaId\": \"12581\",\n            \"title\": \"Antique Cream Beaded Chandelier\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"Create a glowing elegant design with our Antique Gold Metal Lantern! This lantern combines modern style with a vintage finish, making it perfect for any home. Lantern measures 10L x 10W x 42.5H in. Crafted of glass and metal Antique gold finish Crisscross design Features a handle Lantern accommodates one (1) 3 in. pillar candle; candle sold separately Care: Dust with a soft, dry cloth. This item is available at Kirklands.com only, not available in stores. Please note: this item cannot be shipped to APO/FPO addresses.|https://www.bhg.com/shop/kirklands-antique-gold-metal-lantern-42-5-in-p36c43f1b85ac1cf76e89f4fe72ac8478.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"36c43f1b85ac1cf76e89f4fe72ac8478\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/36c43f1b85ac1cf76e89f4fe72ac8478/1577166711276/m/antique-gold-metal-lantern-42-5-in\",\n            \"itemGroupId\": \"36c43f1b85ac1cf76e89f4fe72ac8478\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=36c43f1b85ac1cf76e89f4fe72ac8478&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"119.99\",\n            \"productType\": \"Decor|Home Accents|Candles & Home Fragrance|Indoor Lanterns|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"95.99\",\n            \"schemaId\": \"12581\",\n            \"title\": \"Antique Gold Metal Lantern, 42.5 in.\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"Our Antique Navy Simplicity Oval Side Table is a decorating essential for any look! Whether it's by your bedside on in your reading nook, this table has a classic design that’s the perfect fit for any style and any space! Table measures 19.5L x 15.5W x 27H in. Crafted of wood Antique navy finish Features one (1) lower fixed shelf for storage Spooled leg accents Holds up to 75 lbs. Some assembly required Not intended for commercial use Care: Dust with a soft, dry cloth. Avoid using chemical and abrasive cleaners as they may damage the finish. This item is available at Kirklands.com only, not available in stores. Please note: this item cannot be shipped to APO/FPO addresses.|https://www.bhg.com/shop/kirklands-antique-navy-simplicity-oval-side-table-pd84f3502cd70d5fddae60e5c225a0e3e.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"d84f3502cd70d5fddae60e5c225a0e3e\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/d84f3502cd70d5fddae60e5c225a0e3e/1577161757842/m/antique-navy-simplicity-oval-side-table\",\n            \"itemGroupId\": \"d84f3502cd70d5fddae60e5c225a0e3e\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=d84f3502cd70d5fddae60e5c225a0e3e&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"119.99\",\n            \"productType\": \"Furniture|Living Room Furniture|Accent Furniture|Accent Tables|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"89.99\",\n            \"schemaId\": \"12581\",\n            \"title\": \"Antique Navy Simplicity Oval Side Table\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"This Antique Pearl Scarlett 1-Drawer Accent Table features a classic design and neutral finish. It would look great beside your sofa or serving as a nightstand by your bed. Table measures 14L x 14W x 28H in. Crafted of wood Antique pearl finish Features one (1) drawer and one (1) lower fixed shelf for storage Spindle leg design Wood slat accents Easy, no-tool assembly Not intended for commercial use Care: Dust with a soft, dry cloth. This item is available at Kirklands.com only, not available in stores. Please note: this item cannot be shipped to APO/FPO addresses.|https://www.bhg.com/shop/kirklands-antique-pearl-scarlett-1-drawer-accent-table-pdf9a21d50021e544ec4fb779f02c9af6.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"df9a21d50021e544ec4fb779f02c9af6\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/df9a21d50021e544ec4fb779f02c9af6/1579126079433/m/antique-pearl-scarlett-1-drawer-accent-table\",\n            \"itemGroupId\": \"df9a21d50021e544ec4fb779f02c9af6\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=df9a21d50021e544ec4fb779f02c9af6&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"169.99\",\n            \"productType\": \"Furniture|Living Room Furniture|Accent Furniture|Accent Tables|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"127.49\",\n            \"schemaId\": \"12581\",\n            \"title\": \"Antique Pearl Scarlett 1-Drawer Accent Table\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"Bring a modern touch to your home with our Black Metal and Glass Magazine Holder Accent Table. The sleek, eye-catching design of this table looks lovely in any space. Table measures 17L x 17W x 24.25H in. Crafted of glass and metal Black finish Features tempered glass tabletop Features x-silhouette design Features magazine rack Weight: 11 lbs. Some assembly required Not intended for commercial use Care: Dust with a soft, dry cloth. This item is available at Kirklands.com only, not available in stores. Please note: this item cannot be shipped to APO/FPO addresses. WARNING: Cancer and Reproductive Harm - For more information go to www.P65Warnings.ca.gov .|https://www.bhg.com/shop/kirklands-black-metal-and-glass-magazine-holder-accent-table-p9f5937dddfb3ddcb74d58350f32e43e8.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"9f5937dddfb3ddcb74d58350f32e43e8\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/9f5937dddfb3ddcb74d58350f32e43e8/1587722500217/m/black-metal-and-glass-magazine-holder-accent-table\",\n            \"itemGroupId\": \"9f5937dddfb3ddcb74d58350f32e43e8\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=9f5937dddfb3ddcb74d58350f32e43e8&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"199.99\",\n            \"productType\": \"Furniture|Living Room Furniture|Accent Furniture|Accent Tables|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"149.99\",\n            \"schemaId\": \"12581\",\n            \"title\": \"Black Metal and Glass Magazine Holder Accent Table\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"Our Black Mid-Century Modern Accent Table offers a sleek finish with golden hardware that will stun in your minimalist décor. Whether it's set bedside or sofa adjacent, this simple boxed design will help organize your clutter and complement your mid-century modern home! Table measures 20L x 15W x 26H in. Crafted of wood composite Black finish Features two (2) pullout drawers Gold handle hardware Some assembly required Not intended for commercial use Care: Dust with a soft, dry cloth. This item is available at Kirklands.com only, not available in stores. Please note: this item cannot be shipped to APO/FPO addresses.|https://www.bhg.com/shop/kirklands-black-mid-century-modern-accent-table-p70a4850b37b0bc70cd98ef6aa8349008.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"70a4850b37b0bc70cd98ef6aa8349008\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/70a4850b37b0bc70cd98ef6aa8349008/1577161019084/m/black-mid-century-modern-accent-table\",\n            \"itemGroupId\": \"70a4850b37b0bc70cd98ef6aa8349008\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=70a4850b37b0bc70cd98ef6aa8349008&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"199.99\",\n            \"productType\": \"Furniture|Living Room Furniture|Accent Furniture|Accent Tables|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"149.99\",\n            \"schemaId\": \"12581\",\n            \"title\": \"Black Mid-Century Modern Accent Table\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"Our Black Night Glow Outdoor Clock is the perfect addition to your patio. This clock goes above and beyond its counterparts by not only including thermometer and hygrometer, but also illuminating at night. Clock measures 2W x 18 in. in diameter Crafted of plastic Black finish White clock face Black hands and black numerals Features thermometer and hygrometer LED technology senses low light levels and automatically illuminates at dusk Requires four (4) D batteries and one (1) AA battery; batteries not included Weight: 6.1 lbs. Safe for outdoor use Comes ready for wall mount; no additional hanging hardware required Care: Dust with a soft, dry cloth. This item is available at Kirklands.com only, not available in stores. Please note: this item cannot be shipped to APO/FPO addresses.|https://www.bhg.com/shop/kirklands-black-night-glow-outdoor-clock-p8784f920932269fbf94510c3d3ac1103.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"8784f920932269fbf94510c3d3ac1103\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/8784f920932269fbf94510c3d3ac1103/1587117879407/m/black-night-glow-outdoor-clock\",\n            \"itemGroupId\": \"8784f920932269fbf94510c3d3ac1103\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=8784f920932269fbf94510c3d3ac1103&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"139.99\",\n            \"productType\": \"Outdoor & Garden Supplies|Outdoor & Patio Decor|Outdoor Clocks|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"118.99\",\n            \"schemaId\": \"12581\",\n            \"title\": \"Black Night Glow Outdoor Clock\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"Our Black Rectangle Antique Framed Wall Mirror will make your home look stunning. The unique open frame and classic finish gives this a full vintage look. Mirror measures 12L x 1.25W x 35H in. Black metal frame finish Crafted of metal and glass Rectangle shaped mirror Small top mirror panel, large middle mirror panel, open bottom panel Comes ready for wall mount; no additional hanging hardware required Care: Dust with a soft, dry cloth. To clean mirror, spray a small amount of glass cleaner onto a lint-free cloth and wipe clean. This item is available at Kirklands.com only, not available in stores.|https://www.bhg.com/shop/kirklands-black-rectangle-antique-framed-wall-mirror-p6ee4f0eeaf65de875f989d2626698cb9.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"6ee4f0eeaf65de875f989d2626698cb9\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/6ee4f0eeaf65de875f989d2626698cb9/1577161004705/m/black-rectangle-antique-framed-wall-mirror\",\n            \"itemGroupId\": \"6ee4f0eeaf65de875f989d2626698cb9\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=6ee4f0eeaf65de875f989d2626698cb9&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"89.99\",\n            \"productType\": \"Sales|Home Decor Essentials 30% Off|30% Off Home Mirrors|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"55.97\",\n            \"schemaId\": \"12581\",\n            \"title\": \"Black Rectangle Antique Framed Wall Mirror\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"Our classically elegant Black Santa Anna 3-Tier Bookshelf will make for a fashionable addition to your home. It is a stylish way to keep any room organized. Bookshelf measures 32L x 13.5W x 36.25H in. Crafted of wood Solid black finish Features three (3) shelves for storage Some assembly required Not intended for commercial use Care: Dust with a soft, dry cloth. This item is available at Kirklands.com only, not available in stores. Please note: this item cannot be shipped to APO/FPO addresses.|https://www.bhg.com/shop/kirklands-black-santa-anna-3-tier-bookshelf-p22112ceadeb6060809e6b70b1ca26825.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"22112ceadeb6060809e6b70b1ca26825\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/22112ceadeb6060809e6b70b1ca26825/1577163079278/m/black-santa-anna-3-tier-bookshelf\",\n            \"itemGroupId\": \"22112ceadeb6060809e6b70b1ca26825\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=22112ceadeb6060809e6b70b1ca26825&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"199.99\",\n            \"productType\": \"Furniture|Home Office|Bookshelves|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"149.99\",\n            \"schemaId\": \"12581\",\n            \"title\": \"Black Santa Anna 3-Tier Bookshelf\"\n        },\n        {\n            \"brand\": \"Kirkland's Home\",\n            \"description\": \"Our classically elegant Black Santa Anna Coffee Table will make for a fashionable addition to your home. This spacious piece will work perfectly in front of your sofa. Table measures 18.25L x 44W x 22H in. Crafted of wood Solid black finish Features two (2) tiers Some assembly required Not intended for commercial use Care: Dust with a soft, dry cloth. This item is available at Kirklands.com only, not available in stores. Please note: this item cannot be shipped to APO/FPO addresses.|https://www.bhg.com/shop/kirklands-black-santa-anna-coffee-table-pa53dbc17b95003f6d51fcc513c4e905a.html?ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate|0\",\n            \"id\": \"a53dbc17b95003f6d51fcc513c4e905a\",\n            \"imageLink\": \"https://images.prod.meredith.com/product/a53dbc17b95003f6d51fcc513c4e905a/1577161380664/m/black-santa-anna-coffee-table\",\n            \"itemGroupId\": \"a53dbc17b95003f6d51fcc513c4e905a\",\n            \"link\": \"https://www.bhg.com/shop/go.html?p=a53dbc17b95003f6d51fcc513c4e905a&ordersrc=paid&source=sem&engine=monetate&cmp=bhgMonetate&utm_source=monetate&utm_medium=cpc&utm_campaign=bhgMonetate\",\n            \"price\": \"269.99\",\n            \"productType\": \"Sales|Furniture Deals|Living Room Furniture Deals|Kirkland's Home|cj\",\n            \"retailerId\": \"321\",\n            \"salePrice\": \"202.49\",\n            \"schemaId\": \"12581\",\n            \"title\": \"Black Santa Anna Coffee Table\"\n        }\n    ]\n}\n"
+            },
+            "widget": {
+                "label": "JSON Products Input",
+                "type": "JsonCodeField",
+                "description": "Manually Add product data.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "int",
+                "name": "maxItems",
+                "value": 40
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "IntegerField",
+                "description": "Maximum number of merch items to have in the slider.",
+                "label": "Maximum Number of Items"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "orientation",
+                "value": "horizontal"
+            },
+            "widget": {
+                "description": "Orientation of the slider.",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "horizontal",
+                        "label": "Horizontal - Left to Right"
+                    },
+                    {
+                        "name": "horizontal-rtl",
+                        "label": "Horizontal - Right to Left"
+                    },
+                    {
+                        "name": "vertical",
+                        "label": "Vertical"
+                    }
+                ],
+                "label": "Orientation"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "sliderTemplate",
+                "value": "<section class=\"mt_slider__container\">\n    <h3 class=\"mt_slider__header\">Recommendation Slider</h3>\n    <div class=\"mt_slider__wrapper\">\n        <button data-prev-button>\n            <i class=\"fa fa-chevron-left\"></i>\n        </button>\n        {{SLIDER}}\n        {{PAGINATION}}\n        <button data-next-button>\n            <i class=\"fa fa-chevron-right\"></i>\n        </button>\n    </div>\n</section>"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "HtmlCodeField",
+                "description": "Include an HTML template to build the slider structure. Placeholder example: '{{slider}}'. Possible placeholders: slider, pagination. Optionally, add the attributes 'data-prev-button' and 'data-next-button' to add previous and next slide buttons. If optional arrow images are included, elements with the attribute 'data-prev-button' and 'data-next-button' are required for them to display.",
+                "label": "Slider Container Template"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "str",
+                "name": "itemTemplate",
+                "value": "<a class=\"mt_slide\" href=\"{{link}}\" data-pid=\"{{id}}\">\n    <div class=\"mt_slide__img\">\n      <img src=\"{{imageLink}}\" alt=\"{{id}} - {{title}}\">\n    </div>\n    <div class=\"mt_slide__text\">\n        <p class=\"mt_slide__brand\">{{brand}}</p>\n        <h4 class=\"mt_slide__title\">{{title|truncate: 30}}</h4>\n        <div class=\"mt_slide__price\">\n            <span class=\"mt_slide__price--sale\">{{salePrice|priceFormat: $1,000.00}}</span>\n            <span class=\"mt_slide__price--reg\">{{price|priceFormat: $1,000.00}}</span>\n        </div>\n    </div>\n</a>"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "HtmlCodeField",
+                "description": "Placeholder example: '{{price}}'. Possible placeholders include all product catalog fields. Examples: brand, title, id, itemGroupId, price, salePrice, link, imageLink",
+                "label": "Slide Template"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "flexible_creative",
+                "name": "css",
+                "value": {
+                    "content": "/* ===================================================== */\n/* DEFAULT SLIDER STYLES\n/* Edit at your own risk!\n/* ===================================================== */\n#MONETATE-ID {\n  position: relative;\n}\n\n#MONETATE-ID li {\n  list-style: none;\n}\n\n#MONETATE-ID [data-slider-mask] {\n  margin: 0 !important;\n  overflow: hidden !important;\n  padding: 0 !important;\n  position: relative !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider-mask], #MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slider-mask] {\n  touch-action: pan-y;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  touch-action: pan-x;\n}\n\n#MONETATE-ID [data-slider] {\n  display: block;\n  margin: 0 !important;\n  padding: 0 !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slider] {\n  white-space: nowrap !important;\n}\n\n#MONETATE-ID [data-slide] {\n  float: none;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"horizontal\"] [data-slide] {\n  display: inline-block !important;\n  vertical-align: top;\n  white-space: normal;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slide] {\n  display: block !important;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide] {\n  opacity: 0;\n  position: absolute;\n  top: 0;\n}\n\n#MONETATE-ID[data-slider-wrapper=\"fade\"] [data-slide][data-slide-active] {\n  opacity: 1;\n  position: relative;\n  z-index: 1;\n}\n\n#MONETATE-ID [data-pagination-slide],\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n  cursor: pointer;\n  z-index: 1;\n}\n\n#MONETATE-ID [data-pagination-slide] * {\n  pointer-events: none;\n}\n\n/* ===================================================== */\n/* CUSTOM SLIDER STYES\n/* ===================================================== */\n#MONETATE-ID {\n  text-align: center;\n}\n\n#MONETATE-ID .mt_slider__header {\n  margin-left: 12px;\n  text-align: left;\n}\n\n#MONETATE-ID .mt_slider__wrapper {\n  position: relative;\n}\n\n#MONETATE-ID [data-slider-mask] {\n  display: inline-block;\n  width: calc(100% - 64px);\n}\n\n#MONETATE-ID[data-slider-wrapper=\"vertical\"] [data-slider-mask] {\n  height: 400px !important;\n}\n\n#MONETATE-ID [data-prev-button],\n#MONETATE-ID [data-next-button] {\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -o-user-select: none;\n  -webkit-user-select: none;\n  background: none;\n  color: #000;\n  font-size: 25px;\n  height: 32px;\n  padding: 0;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  user-select: none;\n  width: 32px;\n}\n\n#MONETATE-ID [data-prev-button] {\n  left: 0;\n}\n\n#MONETATE-ID [data-next-button] {\n  right: 0;\n}\n\n#MONETATE-ID [data-pagination=\"thumbnails\"] [data-pagination-slide] {\n  background: none;\n  border-radius: 0;\n  height: auto;\n  width: 40px;\n}\n\n#MONETATE-ID [disabled] {\n  opacity: 0.5;\n}\n\n#MONETATE-ID [data-pagination-slide] {\n  background: #000;\n  border-radius: 6px;\n  display: inline-block;\n  height: 12px;\n  margin: 4px;\n  opacity: 0.5;\n  width: 12px;\n}\n\n#MONETATE-ID [data-pagination-slide][data-slide-active] {\n  opacity: 1;\n}\n\n#MONETATE-ID [data-pagination*=\"dots\"] [data-pagination-slide] {\n  /* remove below for pagination numbers */\n  text-indent: -9999px;\n}\n\n#MONETATE-ID [data-slide] > div {\n  padding: 0 6px 4px;\n  text-align: left;\n}\n\n#MONETATE-ID [data-slide] img {\n  max-width: 100%;\n}\n\n#MONETATE-ID [data-slide] a {\n  text-decoration: none;\n}\n\n#MONETATE-ID .mt_slide__img {\n  padding: 5px;\n}\n\n#MONETATE-ID .mt_slide__text {\n  color: #282828;\n  font-family: Nunito\\ Sans;\n}\n\n#MONETATE-ID .mt_slide__brand {\n  font-size: 12px;\n  font-weight: 400;\n  line-height: 19px;\n  margin: 0;\n  max-height: 19px;\n  overflow: hidden;\n  padding: 0;\n  text-transform: capitalize;\n}\n\n#MONETATE-ID .mt_slide__title {\n  color: #000;\n  font-size: 14px;\n  line-height: 18px;\n  margin: 0;\n  max-height: 36px;\n  overflow-wrap: break-word;\n  padding: 0;\n  position: relative;\n  text-transform: capitalize;\n  white-space: normal;\n}\n\n#MONETATE-ID .mt_slide__price {\n  color: #000;\n  font-size: 14px;\n  font-weight: 800;\n  line-height: 24px;\n}\n\n#MONETATE-ID .mt_slide__price--reg {\n  color: rgba(0, 0, 0, 0.6);\n  font-size: 12px;\n  text-decoration: line-through;\n}\n\n#MONETATE-ID [data-missing-keys*=\"salePrice\"] .mt_slide__price--reg {\n  color: #000;\n  font-size: 14px;\n  text-decoration: none;\n}\n",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget": {
+                "label": "CSS",
+                "type": "CSSCodeField",
+                "description": "CSS appended to the DOM in a <style> or <link> element. Use the placeholder '#MONETATE-ID' as the selector for action's wrapper id.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "json",
+                "name": "settings",
+                "value": "{\n    \"autoRotateDuration\": 0,\n    \"breakpoints\": {\n        \"Infinity\": {\n            \"visible\": 8\n        },\n        \"1542\": {\n            \"visible\": 7\n        },\n        \"1376\": {\n            \"visible\": 6\n        },\n        \"1208\": {\n            \"visible\": 5\n        },\n        \"1040\": {\n            \"visible\": 4\n        },\n        \"874\": {\n            \"visible\": 3\n        },\n        \"530\": {\n            \"visible\": 2\n        },\n        \"360\": {\n            \"visible\": 1\n        }\n    },\n    \"gridSize\": 1,\n    \"infiniteSlide\": false,\n    \"pagination\": \"none\",\n    \"pauseOnHover\": false,\n    \"slideIncrement\": \"single\",\n    \"stopOnInteraction\": false,\n    \"transitionAnimation\": \"push\",\n    \"transitionDuration\": 250\n}"
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "JsonCodeField",
+                "description": "Settings object.",
+                "label": "Slides Visible"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_prev",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "RawImageCreative",
+                "description": "Previous button creative. Must include element with the attribute [data-prev-button] Slider Container Template.",
+                "label": "Previous Button Creative"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "raw_img_creative",
+                "name": "opt_next",
+                "value": null
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "RawImageCreative",
+                "description": "Next button creative. Must include element with the attribute [data-next-button] Slider Container Template.",
+                "label": "Next Button Creative"
+            },
+            "required": false
+        }
+    ],
+    "masks": [],
+    "rule_operator": "and",
+    "rules": {
+        "builtin": [],
+        "required": []
+    },
+    "integration_type": "js-tag",
+    "manage_impressions": false
+}

@@ -1,0 +1,289 @@
+
+
+$monetate-id: #MONETATE-ID;
+// $monetate-id: #mt-slider-3403645-0;
+
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#{$monetate-id} {
+    position: relative;
+
+    li {
+        list-style: none;
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        margin: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider-mask],
+    &[data-slider-wrapper="fade"] [data-slider-mask] {
+        touch-action: pan-y;
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        touch-action: pan-x;
+    }
+
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slider] {
+        white-space: nowrap !important;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        float: none;
+    }
+    &[data-slider-wrapper="horizontal"] [data-slide] {
+        display: inline-block !important;
+        vertical-align: top;
+        white-space: normal;
+    }
+    &[data-slider-wrapper="vertical"] [data-slide] {
+        display: block !important;
+    }
+    &[data-slider-wrapper="fade"] [data-slide] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+    &[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+    // ==================================================================
+    // Buttons / Pagination
+    // ==================================================================
+    [data-pagination-slide],
+    [data-prev-button],
+    [data-next-button]{
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    [data-pagination-slide] * {
+        pointer-events: none;
+    }
+
+} // MONETATE-ID
+
+
+
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#{$monetate-id} {
+    text-align: center;
+
+
+    // ==================================================================
+    // Slider Container Template
+    // ==================================================================
+    .mt_slider {
+        &__container {
+
+        }
+        &__header {
+            margin-left: 12px;
+            text-align: left;
+        }
+        &__wrapper {
+            position: relative;
+        }
+    }
+
+    // ==================================================================
+    // Slider Mask
+    // ==================================================================
+    [data-slider-mask] {
+        display: inline-block;
+        width: calc(100% - 64px;);
+    }
+    &[data-slider-wrapper="vertical"] [data-slider-mask] {
+        height: 400px !important;
+    }
+
+
+    // ==================================================================
+    // Slider
+    // ==================================================================
+    [data-slider] {
+
+    }
+
+
+    // ==================================================================
+    // Buttons
+    // ==================================================================
+    [data-prev-button],
+    [data-next-button] {
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        -webkit-user-select: none;
+        background: none;
+        color: #000;
+        font-size: 25px;
+        height: 32px;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        user-select: none;
+        width: 32px;
+    }
+    [data-prev-button] {
+        left: 0;
+    }
+    [data-next-button] {
+        right: 0;
+    }
+
+
+
+    // ==================================================================
+    // Pagination
+    // ==================================================================
+    [data-pagination="thumbnails"] [data-pagination-slide] {
+        background: none;
+        border-radius: 0;
+        height: auto;
+        width: 40px;
+    }
+
+    [disabled] {
+        opacity: 0.5;
+    }
+
+    [data-pagination-slide] {
+        background: #000;
+        border-radius: 6px;
+        display: inline-block;
+        height: 12px;
+        margin: 4px;
+        opacity: 0.5;
+        width: 12px;
+        &[data-slide-active] {
+            opacity: 1;
+        }
+    }
+    [data-pagination*="dots"] [data-pagination-slide] {
+        /* remove below for pagination numbers */
+        text-indent: -9999px;
+    }
+
+
+
+    // ==================================================================
+    // Slide
+    // ==================================================================
+    [data-slide] {
+        > div {
+            padding: 0 6px 4px;
+            text-align: left;
+        }
+        img {
+            max-width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+
+    // ==================================================================
+    // Slide Template
+    // ==================================================================
+    .mt_slide {
+        &__img {
+            padding: 5px;
+            img {
+
+            }
+        }
+
+        &__text {
+            color: #282828;
+            font-family: Nunito\ Sans;
+        }
+
+        &__brand {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 19px;
+            margin: 0;
+            max-height: 19px;
+            overflow: hidden;
+            padding: 0;
+            text-transform: capitalize;
+        }
+
+        &__title {
+            color: #000;
+            font-size: 14px;
+            line-height: 18px;
+            margin: 0;
+            max-height: 36px;
+            overflow-wrap: break-word;
+            padding: 0;
+            position: relative;
+            text-transform: capitalize;
+            white-space: normal;
+        }
+
+        &__price {
+            color: #000;
+            font-size: 14px;
+            font-weight: 800;
+            line-height: 24px;
+            &--reg {
+                color: rgba(0, 0, 0, 0.6);
+                font-size: 12px;
+                text-decoration: line-through;
+            }
+            &--sale {
+
+            }
+        }
+
+    }
+
+    [data-missing-keys*="salePrice"] {
+        .mt_slide {
+            &__price {
+                &--reg {
+                    color: #000;
+                    font-size: 14px;
+                    text-decoration: none;
+                }
+                &--sale {
+
+                }
+            }
+        }
+    }
+}

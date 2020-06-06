@@ -1,0 +1,61 @@
+.sticky-header-mobile {
+
+    .autocomplete-wrapper  {
+        padding: 0 10px;
+        position: relative !important;
+        top: 0px !important;
+        z-index: auto !important;
+    }
+
+
+    .input-wrapper {
+        display: block !important;
+        &::before {
+            border-left: 2px solid #e1e1e1;
+            content: "";
+            display: inline-block;
+            height: 25px;
+            left: 45px;
+            position: absolute;
+            top: 14px;
+        }
+
+        a {
+            display: none !important;
+        }
+
+        input {
+            font-size: 16px !important;
+            padding-left: 40px !important;
+        }
+
+        .search-icon {
+            left: 20px !important;
+            z-index: auto !important;
+        }
+    }
+
+    .input-autocomplete {
+        position: relative;
+        top: 0px;
+        z-index: 999;
+    }
+
+    &-spacer {
+        height: 130px !important;
+    }
+
+    .col-header.head-menu-item[aria-label="Search here"] {
+        visibility: hidden !important;
+    }
+
+}
+
+
+.mt-account {
+    background: url("https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/body-shop-icons-thick_sign_in.svg") 0 0 no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+}

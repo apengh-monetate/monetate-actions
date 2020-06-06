@@ -1,0 +1,305 @@
+{
+    "title": "HTML Form Lightbox",
+    "description": "Form lightbox with one image creative and an optional thank you creative.",
+    "op": "htmlFormLightbox",
+    "slot": "lightbox",
+    "slot_type": "page",
+    "category": "lightbox",
+    "subcategory": "Any page",
+    "action_events": [
+        "op_click",
+        "op_impression"
+    ],
+    "inputs": [
+        {
+            "input": {
+                "name": "htmlstring",
+                "type": "str",
+                "value": ""
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "HtmlCodeField",
+                "description": "HTML to be inserted.",
+                "label": "HTML String"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "lightboxId",
+                "type": "int",
+                "value": null
+            },
+            "widget": {
+                "label": "Lightbox ID - Pick a number that is distinct from other lightboxes (0-31 only)",
+                "type": "IntegerField",
+                "description": "Differentiates this lightbox from others for this retailer.",
+                "action_visible": true
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "showInterval",
+                "type": "str",
+                "value": "page"
+            },
+            "widget": {
+                "description": "How long until the this lightbox is shown again. Based on lightboxId.",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "page",
+                        "label": "Every page"
+                    },
+                    {
+                        "name": "session",
+                        "label": "Once per session"
+                    },
+                    {
+                        "name": "30days",
+                        "label": "Once per thirty days"
+                    },
+                    {
+                        "name": "once",
+                        "label": "Once, ever"
+                    }
+                ],
+                "label": "How often (per user) should this lightbox be shown?"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "submitMethod",
+                "type": "str",
+                "value": "iframe"
+            },
+            "widget": {
+                "description": "What form submission method should we use?",
+                "action_visible": true,
+                "type": "StringSelectField",
+                "options": [
+                    {
+                        "name": "iframe",
+                        "label": "iframe"
+                    },
+                    {
+                        "name": "jQuery",
+                        "label": "jQuery.ajax"
+                    }
+                ],
+                "label": "Which submission method is preferred?"
+            },
+            "required": true
+        },
+        {
+            "input": {
+                "name": "opt_receiptHtmlCreative",
+                "type": "str",
+                "value": ""
+            },
+            "widget": {
+                "action_visible": true,
+                "type": "HtmlCodeField",
+                "description": "Displays upon successful email collection. Optional #close clickzone. Lightbox will automatically close on submit without any creative.",
+                "label": "Thank You Creative (#close)"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "name": "opt_lightboxClass",
+                "type": "str",
+                "value": null
+            },
+            "widget": {
+                "type": "CharField",
+                "label": "Lightbox Class",
+                "description": "A class to add to the lightbox for styling purposes.",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input":{
+                "name": "opt_appendCSS",
+                "type": "flexible_creative",
+                "value": {
+                    "content": "",
+                    "discriminator": "content",
+                    "ref": null,
+                    "type": "css"
+                }
+            },
+            "widget":{
+                "action_visible": true,
+                "description": "CSS stylesheet to append.",
+                "label": "CSS",
+                "type": "CSSCodeField"
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "name": "opt_top",
+                "type": "int",
+                "value": null
+            },
+            "widget": {
+                "type": "IntegerField",
+                "label": "Top Position",
+                "description": "The top offset of the lightbox (in pixels).",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "name": "opt_left",
+                "type": "int",
+                "value": null
+            },
+            "widget": {
+                "type": "IntegerField",
+                "label": "Left Position",
+                "description": "The left offset of the lightbox (in pixels).",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "name": "opt_pinned",
+                "type": "bool",
+                "value": false
+            },
+            "widget": {
+                "type": "BooleanField",
+                "label": "Pin Lightbox Position?",
+                "description": "Is the lightbox pinned to its position on screen, or does it scroll with the page?",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "name": "opt_color",
+                "type": "str",
+                "value": null
+            },
+            "widget": {
+                "type": "CharField",
+                "label": "Overlay Color",
+                "description": "Color of the lightbox overlay. Defaults to \"#000\".",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "name": "opt_opacity",
+                "type": "float",
+                "value": null
+            },
+            "widget": {
+                "type": "FloatField",
+                "label": "Overlay Opacity",
+                "description": "Opacity of the lightbox overlay. Defaults to \"0.6\".",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "name": "opt_closeable",
+                "type": "bool",
+                "value": true
+            },
+            "widget": {
+                "type": "BooleanField",
+                "label": "Closeable?",
+                "description": "Is the lightbox closeable by clicking on the overlay?",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "name": "opt_refreshAfter",
+                "type": "bool",
+                "value": false
+            },
+            "widget": {
+                "type": "BooleanField",
+                "label": "Refresh After?",
+                "description": "Should the page reload after closing the thank you lightbox? (This is useful for sign-in lightboxes!)",
+                "action_visible": true
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "type": "bool",
+                "name": "opt_responsiveCZ",
+                "value": true
+            },
+            "widget": {
+                "label": "Responsive clickzones?",
+                "type": "BooleanField",
+                "description": "Are the clickzones responsive?",
+                "action_visible": false
+            },
+            "required": false
+        },
+        {
+            "widget": {
+                "label": "Responsive?",
+                "type": "BooleanField",
+                "description": "Select yes to make the lightbox responsive.",
+                "action_visible": true
+            },
+            "input": {
+                "name": "opt_responsive",
+                "type": "bool",
+                "value": false
+            },
+            "required": false
+        },
+        {
+            "input": {
+                "name": "opt_emailError",
+                "type": "str",
+                "value": ""
+            },
+            "required": false,
+            "widget": {
+                "action_visible": true,
+                "type": "CharField",
+                "description": "Defaults to 'Valid email address required.' if no error message is provided.",
+                "label": "Specific error for not valid email input."
+            }
+        },
+        {
+            "input": {
+                "name": "opt_genericError",
+                "type": "str",
+                "value": ""
+            },
+            "required": false,
+            "widget": {
+                "action_visible": true,
+                "type": "CharField",
+                "description": "Defaults to 'This field is required.' if no error message is provided.",
+                "label": "Generic error for required inputs."
+            }
+        }
+    ],
+    "masks": [],
+    "rules": {
+        "builtin": [],
+        "required": []
+    }
+}

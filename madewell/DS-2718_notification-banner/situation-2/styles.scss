@@ -1,0 +1,106 @@
+
+$monetate-id: #MONETATE-ID;
+// $monetate-id: #monetate_selectorHTML_c4df21f7_0;
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1025px;
+
+
+#{$monetate-id} {
+    .mt_notification {
+        bottom: 40px;
+        left: auto;
+        position: fixed;
+        right: 10px;
+        transition: right .3s ease;
+        @media screen and (max-width: (414px - 1)) {
+            left: 10px;
+        }
+
+        &.mt_desktop-right {
+            @media screen and (min-width: $breakpoint-lg) {
+                left: auto;
+                right: 30px;
+            }
+        }
+        &.mt_desktop-left {
+            @media screen and (min-width: $breakpoint-lg) {
+                left: 30px;
+                right: auto;
+            }
+        }
+    }
+}
+.back-to-top-btn[style*="block"] {
+    + #{$monetate-id} {
+        .mt_notification {
+            right: calc(10px + 55px + 18px);
+            &.mt_desktop-right {
+                @media screen and (min-width: $breakpoint-lg) {
+                    // right: calc(30px + 44px + 8px);
+                }
+            }
+            &.mt_desktop-left {
+                @media screen and (min-width: $breakpoint-lg) {
+                    right: auto;
+                }
+            }
+        }
+    }
+}
+
+
+#{$monetate-id} {
+    .mt_notification {
+        align-content: center;
+        align-items: center;
+        background: #000;
+        border-radius: 100px;
+        color: #fff;
+        display: flex;
+        flex-wrap: nowrap;
+        height: 55px;
+        justify-content: space-between;
+        padding-left: 24px;
+        padding-right: 48px;
+        @media screen and (min-width: $breakpoint-md) {
+            height: 44px;
+        }
+
+
+        // ==================================================================
+        // Close
+        // ==================================================================
+        &__close {
+            align-items: center;
+            background: none;
+            border: none;
+            display: inline-flex;
+            height: 12px;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            right: 20px;
+            width: 12px;
+            svg {
+                fill: #fff;
+                height: 12px;
+                width: 12px;
+            }
+        }
+
+
+
+        // ==================================================================
+        // Content
+        // ==================================================================
+        &__content {
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: .08em;
+            line-height: 16px;
+            text-transform: uppercase;
+        }
+    }
+}

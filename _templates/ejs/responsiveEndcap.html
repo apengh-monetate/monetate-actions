@@ -1,0 +1,113 @@
+<div class="mt_sliderTop">
+  <span class="mt_title">
+      <%= title %>
+  </span>
+  <% if (creatives.top) { %>
+      <img src="<%= creatives.top %>"/>
+  <% } %>
+</div>
+<div class="mt_sliderMiddle">
+  <div class="mt_backArrow mt_arrowContainer">
+    <div class="mt_arrowBtn">
+      <% if (creatives.previous) { %>
+          <img src="<%= creatives.previous %>"/>
+      <% } %>
+    </div>
+  </div>
+  <div class="mt_sliderMask">
+    <ul class="mt_animate">
+      <% for (var i = 0; i < items.length; i++) { %>
+          <% var item = items[i]; %>
+          <li class="mt_item mt_item_<%= i %>">
+              <div class="mt_itemWrapper">
+                  <a href="<%= item.product_url %>"
+                      data-pid="<%= item.pid %>"
+                      <% if (item.id) { %>
+                          data-sku="<%= item.id %>"
+                      <% } %>
+                  >
+                      <% if (productDetails.image) { %>
+                          <div class="mt_itemImageContainer">
+                              <img class="mt_image"
+                                  src="<%= item.thumbnail_image %>"
+                                  alt="<%= item.pid %> - <%= item.name %>">
+                          </div>
+                      <% } %>
+
+                      <div class="mt_itemText">
+                          <% if (productDetails.brandname) { %>
+                              <span class="mt_brandName"><%= item.brand_name || '' %></span>
+                          <% } %>
+                          <% if (productDetails.name) { %>
+                              <div class="mt_prodName"><%= item.name %></div>
+                          <% } %>
+                          <% if (productDetails.description) { %>
+                              <div class="mt_description"><%= item.description %></div>
+                          <% } %>
+                          <% if (elements.price) { %>
+                              <div class="mt_priceText">
+                                  <% if (elements.alternateprice && item.alternate_price &&
+                                          item.alternate_price !== 'None' && item.alternate_price !== item.price) { %>
+                                      <div class="mt_altPrice">
+                                          <% if (priceText && priceTextLocation == 'before') { %>
+                                              <span class="mt_currency"><%= priceText %></span>
+                                          <% } %>
+                                          <span class="mt_amount"><%= item.alternate_price %></span>
+                                          <% if (priceText && priceTextLocation == 'after') { %>
+                                              <span class="mt_currency"><%= priceText %></span>
+                                          <% } %>
+                                      </div>
+                                  <% } %>
+                                  <div class="mt_altPrice">
+                                      <% if (priceText && priceTextLocation == 'before') { %>
+                                          <span class="mt_currency"><%= priceText %></span>
+                                      <% } %>
+                                      <span class="mt_amount"><%= item.price %></span>
+                                      <% if (priceText && priceTextLocation == 'after') { %>
+                                          <span class="mt_currency"><%= priceText %></span>
+                                      <% } %>
+                                  </div>
+                              </div>
+                          <% } %>
+                      </div>
+
+                      <% if (item.fullStars && item.starRating >= 0) { %>
+                          <div class="mt_ratings">
+                              <div class="mt_rating full" style="width: <%= item.starRating %>%;">
+                                  <%= item.fullStars %>
+                              </div>
+                              <div class="mt_rating empty">
+                                  <%= item.emptyStars %>
+                              </div>
+                          </div>
+                          <% if (item.numReviews >= 0) { %>
+                              <div class="mt_reviews
+                                  <% if (item.numReviews == 0) { %>
+                                      mt_zero_reviews
+                                  <% } %>">
+                                  <%= item.numReviews %>
+                              </div>
+                          <% } %>
+                      <% } %>
+                  </a>
+              </div>
+          </li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="mt_nextArrow mt_arrowContainer">
+    <div class="mt_arrowBtn">
+      <% if (creatives.next) { %>
+          <img src="<%= creatives.next %>"/>
+      <% } %>
+    </div>
+  </div>
+</div>
+<%= if (pagination) { %>
+  <div class="mt_pagination"></div>
+<% } %>
+<div class="mt_sliderBottom">
+  <% if (creatives.bottom) { %>
+      <img src="<%= creatives.bottom %>"/>
+  <% } %>
+</div>

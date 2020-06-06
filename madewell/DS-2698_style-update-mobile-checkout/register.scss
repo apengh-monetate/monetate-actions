@@ -1,0 +1,35 @@
+.checkoutregistration {
+    .registration-form-container {
+        display: flex;
+        flex-direction: column;
+        & > * {
+            max-width: 300px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 0 !important;
+            &::after {
+                color: #000;
+                content: "Create an Account";
+                font-size: 18px;
+                font-weight: 900;
+                letter-spacing: 1.44px;
+                line-height: 24px;
+            }
+        }
+
+        p.description {
+            font-size: 0 !important;
+            &::after {
+                content: "(It'll only take a minute)";
+                font-size: 13px;
+            }
+        }
+
+        .disclaimer {
+            margin-top: 8px;
+            order: 1;
+        }
+    }
+}

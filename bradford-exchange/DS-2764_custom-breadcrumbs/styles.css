@@ -1,0 +1,58 @@
+.breadcrumbs__mob {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.breadcrumbs__mob > a {
+  flex: 1;
+}
+
+.breadcrumbs__mob .breadcrumbs__tap {
+  text-align: right;
+}
+
+#MONETATE-ID {
+  background: rgba(255, 0, 0, 0.1);
+  display: block;
+  flex: 1 1 100%;
+  margin-top: 8px;
+  width: 100%;
+}
+
+#MONETATE-ID #mt-shop-category-link {
+  background-color: #E26102;
+  background-image: linear-gradient(to bottom, #F26102 0%, rgba(255, 255, 255, 0.5) 50%, #F26102 50%, #F26102 100%);
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: block;
+  padding: 5px 6px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+#MONETATE-ID #mt-shop-category-link a {
+  color: #fff;
+  font-family: 'Verdana', helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  position: relative;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#MONETATE-ID #mt-shop-category-link a::after {
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+  border-width: 4px 0 4px 7px;
+  bottom: 0;
+  content: '';
+  height: 0;
+  margin: auto;
+  position: absolute;
+  right: -10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  top: 0;
+  width: 0;
+}

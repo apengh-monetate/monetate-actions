@@ -1,0 +1,91 @@
+#MONETATE-ID {
+  transition: all .3s ease;
+}
+
+#MONETATE-ID .mt_notification {
+  bottom: 40px;
+  left: auto;
+  position: fixed;
+  right: calc(10px + 55px + 18px);
+}
+
+@media screen and (max-width: 413px) {
+  #MONETATE-ID .mt_notification {
+    left: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #MONETATE-ID .mt_notification.mt_desktop-right {
+    left: auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #MONETATE-ID .mt_notification.mt_desktop-left {
+    left: 30px;
+    right: auto;
+  }
+}
+
+.back-to-top-btn[style*="block"] + #MONETATE-ID {
+  display: block !important;
+}
+
+.back-to-top-btn[style*="block"] + #MONETATE-ID .mt_notification {
+  right: calc(10px + 55px + 18px);
+}
+
+@media screen and (min-width: 1025px) {
+  .back-to-top-btn[style*="block"] + #MONETATE-ID .mt_notification.mt_desktop-left {
+    right: auto;
+  }
+}
+
+#MONETATE-ID .mt_notification {
+  align-content: center;
+  align-items: center;
+  background: #000;
+  border-radius: 100px;
+  color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 55px;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt_notification {
+    height: 44px;
+  }
+}
+
+#MONETATE-ID .mt_notification__close {
+  align-items: center;
+  background: none;
+  border: none;
+  display: inline-flex;
+  height: 12px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 20px;
+  width: 12px;
+}
+
+#MONETATE-ID .mt_notification__close svg {
+  fill: #fff;
+  height: 12px;
+  width: 12px;
+}
+
+#MONETATE-ID .mt_notification__content {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: .08em;
+  line-height: 16px;
+  text-transform: uppercase;
+}
