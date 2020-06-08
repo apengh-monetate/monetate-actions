@@ -1,3 +1,7 @@
+/** 
+ * The video on the homepage uses the THEOplayer plugin
+ * https://docs.portal.theoplayer.com/
+ */
 (function() {
     // Polling function
     var pollingFunction = function(interval, timeout, isReady, onReady, opt_onTimeout) {
@@ -19,24 +23,14 @@
 
     // Poll for the video element
     var isReady = function() {
-        return document.querySelectorAll('#tCt3_THEOplayerpCt video').length;
+        var video = window.THEOplayer && window.THEOplayer.players[0];
+        return video;
     };
 
     // Function for when the video element is present
     var onReady = function() {
-        // Get the video element
-        var video = document.querySelector('#tCt3_THEOplayerpCt video');
-        video.setAttribute('muted', 'muted'); // Set the video to muted
-
-        // In order to use the play() method on the video, we need to interact with the page first
-        document.body.click();
-
-        // Check if the video is playing
-        // If not, call the play method on the video
-        const isVideoPlaying = (video) => !!(video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2);
-        if (!isVideoPlaying(video)) {
-            video.play();
-        }
+        // Mute the video
+        window.THEOplayer.players[0].muted = true;
     };
 
     pollingFunction(50, 10000, isReady, onReady);
