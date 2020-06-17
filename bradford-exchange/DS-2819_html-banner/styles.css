@@ -1,0 +1,48 @@
+.mt_html-banner {
+  color: #686664;
+  display: flex;
+  align-items: center;
+  font-family: cronos-pro-subhead, sans-serif;
+  position: relative;
+  background-color: #F2F1F0;
+  border: 1px solid #E2E2E2;
+  border-top: none;
+  text-align: center;
+  margin: 20px auto;
+  justify-content: center;
+  max-width: 970px;
+}
+
+.mt_html-banner__link {
+  color: #686664;
+  display: block;
+  width: 100%;
+  padding: 12px;
+}
+
+.mt_html-banner__link:hover {
+  text-decoration: none;
+}
+
+.mt_html-banner__message {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .mt_html-banner__message {
+    max-width: 240px;
+  }
+}
+
+.mt_html-banner__message span {
+  color: #4360AE;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .mt_html-banner__message span {
+    display: block;
+  }
+}

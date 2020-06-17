@@ -1,0 +1,30 @@
+<article class="mt_slide" data-pid="{{itemGroupId}}" data-sku="{{id}}">
+    <figure class="mt_slide__figure">
+        <a href="{{link}}">
+            <div class="mt_slide__img">
+                <img src="{{imageLink}}" alt="{{title}}" />
+            </div>
+        </a>
+    </figure>
+    
+    <div class="mt_slide__text">
+        <h4 class="mt_slide__title">
+            <a src="{{link}}">{{title}}</a>
+        </h4>
+        <div class="mt_slide__choose-options">
+            <a data-action-detail="{{itemGroupId}}" href="{{link}}" data-event-type="product-click" class="button button--small card-figcaption-button" data-product-id="{{id}}">Choose Options</a>
+        </div>
+        <div class="mt_slide__add-to-cart">
+            <a data-action-detail="{{itemGroupId}}" href="/cart.php?action=add&product_id={{id}}" data-event-type="product-click" class="button button--small button--primary event_buy_now_add_to_cart" data-product-id="{{id}}">Add to Bag</a>
+        </div>
+        <div class="mt_slide__price">
+            <div class="mt_slide__price--reg"><span>Was: </span>{{price|priceFormat: $1,000.00}}</div>
+            <div class="mt_slide__price--sale"><span>Now: </span>{{salePrice|priceFormat: $1,000.00}}</div>
+        </div>
+        <a data-product-id="{{id}}" title="Add To Your Olay Wishlist" class="wishlist-icon event_buy_now_add_to_wishlist" data-action-detail="{{itemGroupId}}" href="/wishlist.php?action=add&amp;product_id={{id}}">
+            <svg>
+                <use xlink:href="#icon-heart-icon" alt="Add To Your Olay Wishlist"></use>
+            </svg>
+        </a>
+    </div>
+</article>

@@ -1,0 +1,48 @@
+$monetate-id: '#MONETATE-ID';
+// $monetate-id: '#monetate_tabContainer_6559781f';
+
+
+#{$monetate-id} {
+    background-color: #fff;
+    padding: 10px;
+    @media screen and (min-width: 768px) {
+        padding: 40px 70px 50px;
+    }
+
+    ul.mt-tabs {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        color: #fff;
+        padding: 0;
+        margin: 0;
+        li {
+            background-color: rgba(0, 0, 0, 0.1);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            max-width: 200px;
+            &.mt-open {
+                background-color: #215f8b;
+            }
+        }
+    }
+
+    .mt-tab-content {
+        padding: 40px 0;
+        > div {
+            display: none;
+            transition: display 0.3s ease;
+            &.mt-open {
+                display: block;
+            }
+        }
+    }
+}

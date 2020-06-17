@@ -1,0 +1,40 @@
+.mt_html-banner {
+	color: #686664;
+    display: flex;
+    align-items: center;
+	font-family: cronos-pro-subhead, sans-serif;
+    position: relative;
+    background-color: #F2F1F0;
+    border: 1px solid #E2E2E2;
+    border-top: none;
+    text-align: center;
+    margin: 20px auto;
+    justify-content: center;
+    max-width: 970px;
+    
+	&__link {
+        color: #686664;
+        display: block;
+        width: 100%;
+        padding: 12px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+	&__message {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 18px;
+        @media screen and (max-width: 600px) {
+            max-width: 240px;
+        }
+        span {
+            color: #4360AE;
+            text-decoration: underline;
+            @media screen and (max-width: 600px) {
+                display: block;
+            }
+        }
+	}
+}

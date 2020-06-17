@@ -1,0 +1,316 @@
+/* ===================================================== */
+/* DEFAULT SLIDER STYLES
+/* Edit at your own risk!
+/* ===================================================== */
+#MONETATE-ID {
+  position: relative;
+}
+
+#MONETATE-ID li {
+  list-style: none;
+}
+
+#MONETATE-ID [data-slider-mask] {
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider-mask], #MONETATE-ID[data-slider-wrapper="fade"] [data-slider-mask] {
+  touch-action: pan-y;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  touch-action: pan-x;
+}
+
+#MONETATE-ID [data-slider] {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slider] {
+  white-space: nowrap !important;
+}
+
+#MONETATE-ID [data-slide] {
+  float: none;
+}
+
+#MONETATE-ID[data-slider-wrapper="horizontal"] [data-slide] {
+  display: inline-block !important;
+  vertical-align: top;
+  white-space: normal;
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slide] {
+  display: block !important;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+#MONETATE-ID[data-slider-wrapper="fade"] [data-slide][data-slide-active] {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide],
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  cursor: pointer;
+  z-index: 1;
+}
+
+#MONETATE-ID [data-pagination-slide] * {
+  pointer-events: none;
+}
+
+/* ===================================================== */
+/* CUSTOM SLIDER STYES
+/* ===================================================== */
+#MONETATE-ID {
+  text-align: center;
+  position: relative;
+  display: block;
+  background: #60AAD0;
+  font-size: 0;
+}
+
+#MONETATE-ID .mt_slider__container {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+#MONETATE-ID .mt_slider__wrapper {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 720px;
+  min-height: 96px;
+}
+
+@media screen and (min-width: 414px) {
+  #MONETATE-ID .mt_slider__wrapper {
+    min-height: 78px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt_slider__wrapper {
+    min-height: 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #MONETATE-ID .mt_slider__wrapper {
+    min-height: 0;
+    max-width: 840px;
+  }
+}
+
+#MONETATE-ID .mt_slider__close {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  z-index: 9999;
+  padding: 0;
+  margin: 0;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt_slider__close {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+#MONETATE-ID [data-slider-mask] {
+  display: inline-block;
+  width: calc(100% - 64px);
+}
+
+@media screen and (min-width: 1024px) {
+  #MONETATE-ID [data-slider-mask] {
+    width: calc(100% - 32px);
+  }
+}
+
+#MONETATE-ID[data-slider-wrapper="vertical"] [data-slider-mask] {
+  height: 400px !important;
+}
+
+#MONETATE-ID [data-prev-button],
+#MONETATE-ID [data-next-button] {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  background: none;
+  border: none;
+  color: #000;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  user-select: none;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-50%);
+}
+
+#MONETATE-ID [data-prev-button] img,
+#MONETATE-ID [data-next-button] img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#MONETATE-ID [data-prev-button] {
+  left: 0;
+}
+
+@media screen and (min-width: 414px) {
+  #MONETATE-ID [data-prev-button] {
+    left: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #MONETATE-ID [data-prev-button] {
+    left: 0;
+  }
+}
+
+#MONETATE-ID [data-next-button] {
+  right: 0;
+}
+
+@media screen and (min-width: 414px) {
+  #MONETATE-ID [data-next-button] {
+    right: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #MONETATE-ID [data-next-button] {
+    right: 0;
+  }
+}
+
+#MONETATE-ID [data-pagination="thumbnails"] [data-pagination-slide] {
+  background: none;
+  border-radius: 0;
+  height: auto;
+  width: 40px;
+}
+
+#MONETATE-ID [disabled] {
+  opacity: 0.5;
+}
+
+#MONETATE-ID [data-pagination-slide] {
+  background: #000;
+  border-radius: 6px;
+  display: inline-block;
+  height: 12px;
+  margin: 4px;
+  opacity: 0.5;
+  width: 12px;
+}
+
+#MONETATE-ID [data-pagination-slide][data-slide-active] {
+  opacity: 1;
+}
+
+#MONETATE-ID [data-pagination*="dots"] [data-pagination-slide] {
+  /* remove below for pagination numbers */
+  text-indent: -9999px;
+}
+
+#MONETATE-ID [data-slide] > div {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+#MONETATE-ID [data-slide] img {
+  max-width: 100%;
+}
+
+#MONETATE-ID [data-slide] a {
+  text-decoration: none;
+}
+
+#MONETATE-ID .mt_slide {
+  text-align: center;
+  font-weight: 500;
+  padding: 12px 10px;
+  color: #000;
+  position: relative;
+}
+
+#MONETATE-ID .mt_slide p {
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+#MONETATE-ID .mt_slide a {
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: none;
+  text-decoration: underline;
+  color: #000;
+}
+
+#MONETATE-ID .mt_slide span {
+  font-size: 11px;
+}
+
+#MONETATE-ID .mt_mobile-only {
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt_mobile-only {
+    display: none;
+  }
+}
+
+#MONETATE-ID .mt_desktop-only {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt_desktop-only {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,51 @@
+#MONETATE-ID {
+  background-color: #fff;
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID {
+    padding: 40px 70px 50px;
+  }
+}
+
+#MONETATE-ID ul.mt-tabs {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+#MONETATE-ID ul.mt-tabs li {
+  background-color: rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  max-width: 200px;
+}
+
+#MONETATE-ID ul.mt-tabs li.mt-open {
+  background-color: #215f8b;
+}
+
+#MONETATE-ID .mt-tab-content {
+  padding: 40px 0;
+}
+
+#MONETATE-ID .mt-tab-content > div {
+  display: none;
+  transition: display 0.3s ease;
+}
+
+#MONETATE-ID .mt-tab-content > div.mt-open {
+  display: block;
+}
