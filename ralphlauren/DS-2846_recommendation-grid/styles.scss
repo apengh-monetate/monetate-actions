@@ -1,0 +1,114 @@
+$monetate-id: '#MONETATE-ID';
+// $monetate-id: '#mt-grid-3451613-0';
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 960px;
+$breakpoint-xl: 1200px;
+
+$red: #ef001b;
+$blue: #041e3a;
+
+#{$monetate-id} {
+    box-sizing: border-box;
+    clear: both;
+    display: block;
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    img {
+        max-width: 100%;
+    }
+
+    a {
+        text-decoration: none;;
+    }
+
+    [mt-data-grid] {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .mt-merch-item {
+        flex-basis: 50%;
+        padding: 10px 10px 40px;
+        width: 50%;
+        @media screen and (min-width: $breakpoint-md) {
+            flex-basis: 25%;
+            width: 25%;
+        }
+    }
+
+
+    // ==================================================================
+    // Grid Container
+    // ==================================================================
+    .mt_recommendation-grid {
+        &__heading {
+            color: $blue;
+            font-family: LeJeuneDeck-Regular, times new roman, Times, serif;
+            font-size: 18px;
+            letter-spacing: .5px;
+            line-height: 20px;
+            text-transform: capitalize;
+            width: 100%;
+        }
+        &__wrapper {
+
+        }
+        &__load-more {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            button {
+                padding: .9375rem 2.5rem;
+            }
+        }
+    }
+
+    // ==================================================================
+    // Grid Item
+    // ==================================================================
+    .mt_grid-item {
+        &__image {
+            font-size: 0;
+        }
+
+        &__details {
+            font-size: 11px;
+            line-height: 11px;
+        }
+        &__brand {
+            font-size: 11px;
+            line-height: 11px;
+            margin: 0;
+            margin-top: 3px;
+            text-transform: uppercase;
+        }
+        &__title {
+            font-size: 11px;
+            line-height: 11px;
+            margin: 0;
+            margin-top: 3px;
+        }
+        &__price {
+            display: block;
+            font-size: 11px;
+            line-height: 11px;
+            margin: 0;
+            margin-top: 3px;
+            &-sale {
+                color: $red;
+                span {
+                    color: $blue;
+                }
+            }
+            &-reg {
+
+            }
+        }
+    }
+}

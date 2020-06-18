@@ -1,0 +1,97 @@
+#MONETATE-ID {
+  box-sizing: border-box;
+  clear: both;
+  display: block;
+  float: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#MONETATE-ID img {
+  max-width: 100%;
+}
+
+#MONETATE-ID a {
+  text-decoration: none;
+}
+
+#MONETATE-ID [mt-data-grid] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#MONETATE-ID .mt-merch-item {
+  flex-basis: 50%;
+  padding: 10px 10px 40px;
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  #MONETATE-ID .mt-merch-item {
+    flex-basis: 25%;
+    width: 25%;
+  }
+}
+
+#MONETATE-ID .mt_recommendation-grid__heading {
+  color: #041e3a;
+  font-family: LeJeuneDeck-Regular, times new roman, Times, serif;
+  font-size: 18px;
+  letter-spacing: .5px;
+  line-height: 20px;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+#MONETATE-ID .mt_recommendation-grid__load-more {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+#MONETATE-ID .mt_recommendation-grid__load-more button {
+  padding: .9375rem 2.5rem;
+}
+
+#MONETATE-ID .mt_grid-item__image {
+  font-size: 0;
+}
+
+#MONETATE-ID .mt_grid-item__details {
+  font-size: 11px;
+  line-height: 11px;
+}
+
+#MONETATE-ID .mt_grid-item__brand {
+  font-size: 11px;
+  line-height: 11px;
+  margin: 0;
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+
+#MONETATE-ID .mt_grid-item__title {
+  font-size: 11px;
+  line-height: 11px;
+  margin: 0;
+  margin-top: 3px;
+}
+
+#MONETATE-ID .mt_grid-item__price {
+  display: block;
+  font-size: 11px;
+  line-height: 11px;
+  margin: 0;
+  margin-top: 3px;
+}
+
+#MONETATE-ID .mt_grid-item__price-sale {
+  color: #ef001b;
+}
+
+#MONETATE-ID .mt_grid-item__price-sale span {
+  color: #041e3a;
+}
